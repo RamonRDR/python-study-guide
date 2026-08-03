@@ -2,7 +2,7 @@
 
 [🇺🇸 English](roadmap.en.md) · [🇧🇷 Português](roadmap.pt-BR.md) · [🇪🇸 Español](roadmap.es.md)
 
-Este roadmap acompaña tanto la ruta educativa como la base del repositorio que la sostiene. La numeración de las fases representa la secuencia de aprendizaje prevista, pero el trabajo del repositorio puede preparar secciones posteriores antes cuando eso establezca estándares útiles para todo el proyecto.
+Este roadmap acompaña tanto la ruta educativa como la base del repositorio que la sostiene. La numeración de las fases representa la secuencia de aprendizaje prevista, pero el trabajo del repositorio puede anticipar la preparación de secciones posteriores cuando eso ayude a establecer estándares útiles para todo el proyecto.
 
 ## Leyenda de estados
 
@@ -30,7 +30,7 @@ Las Fases 0 y 6 están activas porque la base del repositorio y una primera secc
 
 ## Fase 0: Base del proyecto
 
-### Completado
+### Elementos completados
 
 - [x] READMEs principales multilingües
 - [x] Estructura inicial escalable
