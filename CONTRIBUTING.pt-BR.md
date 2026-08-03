@@ -29,11 +29,11 @@ Obrigado por ajudar a melhorar este projeto de aprendizagem.
 ## Nomes de branches
 
 ```text
-feat/nome-do-topico
-docs/nome-do-topico
-fix/nome-do-topico
-test/nome-do-topico
-refactor/nome-do-topico
+feat/topic-name
+docs/topic-name
+fix/topic-name
+test/topic-name
+refactor/topic-name
 ```
 
 Os nomes das branches devem permanecer em inglês para seguir o padrão internacional adotado pelo projeto.
