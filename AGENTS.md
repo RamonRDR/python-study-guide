@@ -8,6 +8,12 @@ Its purpose is to help people study Python, understand how its concepts connect,
 
 Assume that some readers have no previous programming experience. Explain necessary terms, avoid unexplained jumps, and never confuse brevity with clarity.
 
+## Project stewardship
+
+Python Study Guide was created and is maintained by [Ramon Estevez Rodriguez](https://github.com/RamonRDR).
+
+Preserve the project's authorship records and license notice. Do not remove, overwrite, or misrepresent contributor credit recorded in commit metadata, Git history, or pull requests. See [AUTHORS.md](AUTHORS.md) for the repository's attribution policy.
+
 ## Priority order
 
 When working on this repository, use the following order of priority:
