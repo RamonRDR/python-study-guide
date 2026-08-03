@@ -1,0 +1,54 @@
+name: Finalize comments learning path
+
+on:
+  push:
+    branches:
+      - docs/comments-learning-path
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: docs/comments-learning-path
+
+      - name: Add section navigation and validate examples
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          from pathlib import Path
+
+          navigation = {
+              Path('comments-and-documentation/01-comments/README.md'): '[← Back to the section overview](../README.md)',
+              Path('comments-and-documentation/01-comments/README.pt-BR.md'): '[← Voltar ao índice da seção](../README.pt-BR.md)',
+              Path('comments-and-documentation/01-comments/README.es.md'): '[← Volver al índice de la sección](../README.es.md)',
+          }
+
+          for path, link in navigation.items():
+              text = path.read_text(encoding='utf-8')
+              if link in text:
+                  continue
+              marker = '</div>\n'
+              if marker not in text:
+                  raise RuntimeError(f'Missing navigation insertion point in {path}')
+              text = text.replace(marker, marker + '\n' + link + '\n', 1)
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          python -m compileall -q comments-and-documentation/01-comments/examples
+          python comments-and-documentation/01-comments/examples/useful_comments.py
+          python comments-and-documentation/01-comments/examples/unnecessary_comments.py
+          python comments-and-documentation/01-comments/examples/business_rule_comments.py
+
+          git rm .github/workflows/finalize-comments-learning-path.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "docs: add section navigation and validate moved examples"
+          git push origin HEAD:docs/comments-learning-path
