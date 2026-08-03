@@ -74,6 +74,8 @@ This project uses AI tools, including ChatGPT and Codex, to support planning, re
 
 AI output is not accepted automatically. Every change must be understood, verified, and reviewed by the maintainer before it is incorporated into the `main` branch.
 
+Repository-wide working instructions for AI agents and contributors are recorded in [AGENTS.md](AGENTS.md).
+
 Read the [AI-assisted development guide](docs/ai-assisted-development/README.en.md) to learn how to write useful prompts, move from a ChatGPT conversation to a Codex implementation brief, review generated work, and protect private information.
 
 ## Contributing
