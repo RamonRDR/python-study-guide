@@ -18,13 +18,7 @@ No abras una issue pública para una vulnerabilidad que pueda exponer usuarios, 
 
 Cuando la pestaña **Security** del repositorio muestre la opción **Report a vulnerability**, utilízala para enviar el informe de forma privada mediante GitHub.
 
-Si el reporte privado de vulnerabilidades no está disponible, abre una issue pública con el título:
-
-```text
-[SECURITY CONTACT REQUEST]
-```
-
-Solicita a la persona responsable del mantenimiento un canal privado, pero **no** incluyas en esa issue detalles de la vulnerabilidad, secretos afectados, pasos de explotación, nombres, capturas de pantalla ni otra información sensible.
+Si el reporte privado de vulnerabilidades no está disponible, utiliza el formulario [**Private contact request**](https://github.com/RamonRDR/python-study-guide/issues/new?template=private-contact-request.yml). Este formulario existe únicamente para establecer un canal privado. **No** incluyas en la solicitud pública detalles de la vulnerabilidad, secretos afectados, pasos de explotación, nombres, capturas de pantalla ni otra información sensible.
 
 Incluye únicamente en el informe privado final la información necesaria para comprender el problema:
 
