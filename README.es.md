@@ -78,6 +78,12 @@ Las instrucciones generales de trabajo para agentes de IA y colaboradores están
 
 Lee la [guía de desarrollo asistido por IA](docs/ai-assisted-development/README.es.md) para aprender a escribir prompts útiles, transformar una conversación en ChatGPT en un brief de implementación para Codex, revisar el trabajo generado y proteger información privada.
 
+## Autoría y mantenimiento
+
+Python Study Guide fue creado y es mantenido por [Ramon Estevez Rodriguez](https://github.com/RamonRDR).
+
+Las contribuciones de la comunidad son bienvenidas y permanecen reconocidas en los metadatos de los commits, el historial de Git y los pull requests. Consulta el [registro de autoría del proyecto](AUTHORS.es.md) para conocer la política completa de atribución.
+
 ## Cómo contribuir
 
 Las contribuciones, correcciones, ejemplos y mejoras de traducción son bienvenidas. Lee la [guía de contribución en español](CONTRIBUTING.es.md) antes de abrir un pull request. También están disponibles las versiones en [inglés](CONTRIBUTING.md) y [portugués](CONTRIBUTING.pt-BR.md).
