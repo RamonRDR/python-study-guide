@@ -70,7 +70,7 @@ A fundação do repositório está sendo construída. A primeira seção complet
 
 ## Como contribuir
 
-Contribuições, correções, exemplos e melhorias de tradução serão bem-vindos. Leia o [CONTRIBUTING.md](CONTRIBUTING.md) antes de abrir um pull request.
+Contribuições, correções, exemplos e melhorias de tradução são bem-vindos. Leia o [guia de contribuição em português](CONTRIBUTING.pt-BR.md) antes de abrir um pull request. As versões em [inglês](CONTRIBUTING.md) e [espanhol](CONTRIBUTING.es.md) também estão disponíveis.
 
 ## Licença
 
