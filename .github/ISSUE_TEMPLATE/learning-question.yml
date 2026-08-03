@@ -1,0 +1,62 @@
+name: Learning question
+description: Ask for help understanding material published in Python Study Guide
+title: "[Question]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for a focused question about material already published in Python Study Guide.
+
+        You may write in English, Brazilian Portuguese, or Spanish. Keep repository paths, code, commands, and technical identifiers exactly as they appear.
+
+        Do not include passwords, tokens, private URLs, personal data, employer information, proprietary code, school answers to be completed on your behalf, or details from confidential projects.
+
+  - type: input
+    id: location
+    attributes:
+      label: Chapter, file, or section
+      description: Provide the repository path or public URL related to your question.
+      placeholder: comments-and-documentation/01-comments/README.pt-BR.md — section 6
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What are you trying to understand?
+      description: Ask one focused question and explain which part is unclear.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_understanding
+    attributes:
+      label: What do you understand so far?
+      description: Briefly describe your current interpretation or where your reasoning stops.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempted_steps
+    attributes:
+      label: What have you already tried?
+      description: Include safe commands, a minimal fictional example, or the documentation sections you reviewed.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: When execution is involved, provide the Python version and operating system. Leave blank when not applicable.
+      placeholder: Python 3.13, Windows 11
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: My question is about material published in this repository.
+          required: true
+        - label: I am asking for an explanation, not for someone to complete an assignment, interview, or professional task on my behalf.
+          required: true
+        - label: I removed confidential, proprietary, personal, credential, token, and private-project information.
+          required: true
