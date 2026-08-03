@@ -11,15 +11,17 @@ from urllib.parse import unquote, urlsplit
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED_DIRECTORIES = {".git", ".venv", "venv", "__pycache__"}
-EXTERNAL_SCHEMES = {"data", "http", "https", "javascript", "mailto", "tel"}
 
-MARKDOWN_LINK_PATTERN = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 REFERENCE_LINK_PATTERN = re.compile(r"^\s*\[[^\]]+\]:\s*(\S+)", re.MULTILINE)
 HTML_LINK_PATTERN = re.compile(
     r"<(?:a|img)\b[^>]*(?:href|src)=[\"']([^\"']+)[\"']",
     re.IGNORECASE,
 )
-INLINE_CODE_PATTERN = re.compile(r"`[^`]*`")
+FENCE_PATTERN = re.compile(r"^ {0,3}(`{3,}|~{3,})(.*)$")
+INLINE_CODE_PATTERN = re.compile(r"(`+)(.+?)\1")
+MARKDOWN_ESCAPE_PATTERN = re.compile(
+    r"\\([!\"#$%&'()*+,\-./:;<=>?@\[\\\]^_`{|}~])"
+)
 
 
 @dataclass(frozen=True)
@@ -43,55 +45,158 @@ def iter_markdown_files() -> list[Path]:
 
 
 def remove_fenced_code(text: str) -> str:
-    """Replace fenced code lines so example links are not treated as navigation."""
+    """Replace fenced code while preserving the opening delimiter requirements."""
 
     cleaned_lines: list[str] = []
-    fence_marker: str | None = None
+    open_fence: tuple[str, int] | None = None
 
     for line in text.splitlines():
-        stripped = line.lstrip()
-        marker = None
-        if stripped.startswith("```"):
-            marker = "```"
-        elif stripped.startswith("~~~"):
-            marker = "~~~"
+        match = FENCE_PATTERN.match(line)
 
-        if marker:
-            if fence_marker is None:
-                fence_marker = marker
-            elif fence_marker == marker:
-                fence_marker = None
+        if open_fence is not None:
+            fence_character, minimum_length = open_fence
+            if match:
+                marker = match.group(1)
+                trailing_text = match.group(2)
+                if (
+                    marker[0] == fence_character
+                    and len(marker) >= minimum_length
+                    and not trailing_text.strip()
+                ):
+                    open_fence = None
             cleaned_lines.append("")
             continue
 
-        cleaned_lines.append("" if fence_marker else INLINE_CODE_PATTERN.sub("", line))
+        if match:
+            marker = match.group(1)
+            open_fence = (marker[0], len(marker))
+            cleaned_lines.append("")
+            continue
+
+        cleaned_lines.append(INLINE_CODE_PATTERN.sub("", line))
 
     return "\n".join(cleaned_lines)
 
 
+def is_escaped(text: str, index: int) -> bool:
+    """Return whether the character at index is preceded by an odd slash count."""
+
+    slash_count = 0
+    current = index - 1
+    while current >= 0 and text[current] == "\\":
+        slash_count += 1
+        current -= 1
+    return slash_count % 2 == 1
+
+
+def iter_inline_markdown_destinations(text: str) -> list[tuple[int, str]]:
+    """Parse inline Markdown destinations with balanced parentheses and escapes."""
+
+    destinations: list[tuple[int, str]] = []
+    search_position = 0
+
+    while True:
+        opening = text.find("](", search_position)
+        if opening == -1:
+            break
+        if is_escaped(text, opening) or is_escaped(text, opening + 1):
+            search_position = opening + 2
+            continue
+
+        destination_start = opening + 2
+        position = destination_start
+        nested_parentheses = 0
+        quote_character: str | None = None
+        inside_angle_destination = False
+
+        while position < len(text):
+            character = text[position]
+            if character == "\\" and position + 1 < len(text):
+                position += 2
+                continue
+
+            if inside_angle_destination:
+                if character == ">":
+                    inside_angle_destination = False
+                position += 1
+                continue
+
+            if quote_character is not None:
+                if character == quote_character:
+                    quote_character = None
+                position += 1
+                continue
+
+            if character == "<" and not text[destination_start:position].strip():
+                inside_angle_destination = True
+            elif character in {'"', "'"}:
+                quote_character = character
+            elif character == "(":
+                nested_parentheses += 1
+            elif character == ")":
+                if nested_parentheses == 0:
+                    raw_target = text[destination_start:position]
+                    line_number = text.count("\n", 0, opening) + 1
+                    destinations.append((line_number, raw_target))
+                    position += 1
+                    break
+                nested_parentheses -= 1
+
+            position += 1
+        else:
+            search_position = opening + 2
+            continue
+
+        search_position = position
+
+    return destinations
+
+
+def first_unescaped_whitespace(text: str) -> int | None:
+    """Locate Markdown title separation without splitting escaped spaces."""
+
+    for index, character in enumerate(text):
+        if character.isspace() and not is_escaped(text, index):
+            return index
+    return None
+
+
+def unescape_markdown(text: str) -> str:
+    """Remove backslashes used to escape ASCII punctuation in destinations."""
+
+    return MARKDOWN_ESCAPE_PATTERN.sub(r"\1", text)
+
+
 def normalize_target(raw_target: str) -> str:
-    """Remove Markdown title syntax and angle brackets from one link target."""
+    """Remove Markdown title syntax, angle brackets, and escape markers."""
 
     target = raw_target.strip()
-    if target.startswith("<") and ">" in target:
-        return target[1 : target.index(">")].strip()
+    if target.startswith("<"):
+        closing_angle = target.find(">")
+        if closing_angle != -1:
+            return unescape_markdown(target[1:closing_angle].strip())
 
-    return target.split(maxsplit=1)[0].strip()
+    whitespace_index = first_unescaped_whitespace(target)
+    if whitespace_index is not None:
+        target = target[:whitespace_index]
+
+    return unescape_markdown(target.strip())
 
 
 def find_targets(text: str) -> list[tuple[int, str]]:
     """Find Markdown, reference-style, and simple HTML link targets."""
 
-    targets: list[tuple[int, str]] = []
-    for pattern in (
-        MARKDOWN_LINK_PATTERN,
-        REFERENCE_LINK_PATTERN,
-        HTML_LINK_PATTERN,
-    ):
+    targets = [
+        (line_number, normalize_target(raw_target))
+        for line_number, raw_target in iter_inline_markdown_destinations(text)
+    ]
+
+    for pattern in (REFERENCE_LINK_PATTERN, HTML_LINK_PATTERN):
         for match in pattern.finditer(text):
             line_number = text.count("\n", 0, match.start()) + 1
             targets.append((line_number, normalize_target(match.group(1))))
-    return targets
+
+    return sorted(targets, key=lambda item: item[0])
 
 
 def resolve_internal_target(source: Path, target: str) -> Path | None:
@@ -101,7 +206,7 @@ def resolve_internal_target(source: Path, target: str) -> Path | None:
         return None
 
     parsed = urlsplit(target)
-    if parsed.scheme.lower() in EXTERNAL_SCHEMES or parsed.netloc:
+    if parsed.scheme or parsed.netloc:
         return None
 
     decoded_path = unquote(parsed.path)
