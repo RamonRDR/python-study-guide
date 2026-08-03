@@ -2,13 +2,55 @@
 
 [🇺🇸 English](roadmap.en.md) · [🇧🇷 Português](roadmap.pt-BR.md) · [🇪🇸 Español](roadmap.es.md)
 
+This roadmap tracks both the educational curriculum and the repository foundation that supports it. Phase numbers describe the intended learning sequence, while repository work may prepare later sections earlier when doing so establishes useful standards.
+
+## Status legend
+
+- **Complete:** the planned scope is available and reviewed.
+- **In progress:** useful material exists, but the planned scope is not finished.
+- **Planned:** the phase has not started as a complete learning section.
+
+## Current progress
+
+| Phase | Status | Current result |
+|---|---|---|
+| 0. Project foundation | In progress | Core documentation, governance, authorship, licensing, and structure are available |
+| 1. Fundamentals | Planned | Curriculum not started |
+| 2. Strings and numbers | Planned | Curriculum not started |
+| 3. Collections | Planned | Curriculum not started |
+| 4. Program flow | Planned | Curriculum not started |
+| 5. Functions | Planned | Curriculum not started |
+| 6. Comments, documentation, and clean code | In progress | The comments chapter is complete and the section learning path is organized |
+| 7. Errors, files, and modules | Planned | Curriculum not started |
+| 8. Standard library | Planned | Curriculum not started |
+| 9. External libraries | Planned | Curriculum not started |
+| 10. Practical projects | Planned | Curriculum not started |
+
+Phases 0 and 6 are currently active because the repository foundation and an early pilot learning section were developed together. After Phase 0 is complete, the curriculum can continue from Phase 1 without losing the standards already established in Phase 6.
+
 ## Phase 0: Project foundation
 
-- Multilingual README files
-- Project structure
-- Contribution guidelines
-- Editorial chapter template
-- Visual identity and assets
+### Completed
+
+- [x] Multilingual root README files
+- [x] Initial scalable project structure
+- [x] Multilingual contribution guidelines
+- [x] Consistent editorial chapter format
+- [x] MIT License
+- [x] Project authorship and maintenance records
+- [x] Pull-request-based workflow and protected `main` branch
+- [x] Repository instructions for contributors and AI agents
+- [x] Responsible AI-assisted development guide
+- [x] Multilingual roadmap and project-structure documentation
+
+### Remaining before completion
+
+- [ ] GitHub pull request and issue templates
+- [ ] Community standards and reporting guidance
+- [ ] Automated quality checks for Python examples, tests, and internal links
+- [ ] Original visual identity and repository assets
+- [ ] Final navigation, terminology, and status audit
+- [ ] Officially mark Phase 0 as complete
 
 ## Phase 1: Fundamentals
 
@@ -55,15 +97,16 @@
 
 ## Phase 6: Comments, documentation, and clean code
 
-- When and why to comment
-- When not to comment
-- Useful and harmful comments
-- Docstrings
-- `TODO`, `FIXME`, and `NOTE`
-- Meaningful names
-- Comments versus logging
-- Self-explanatory code
-- PEP 8
+See the [section learning path](../comments-and-documentation/README.md).
+
+- [x] When and why to comment
+- [x] When not to comment
+- [x] Useful and harmful comments
+- [ ] Docstrings
+- [ ] Meaningful names and self-explanatory code
+- [ ] `TODO`, `FIXME`, `NOTE`, and related task markers
+- [ ] Comments versus logging
+- [ ] PEP 8 and readability
 
 ## Phase 7: Errors, files, and modules
 
