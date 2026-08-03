@@ -6,6 +6,8 @@
 
 </div>
 
+[← Back to the section overview](../README.md)
+
 Comments help readers understand decisions, constraints, and context that are not obvious from the code alone. They are valuable when they preserve reasoning. They become noise when they merely repeat what the code already says.
 
 > **Guiding principle:** Code should explain what happens. Comments should explain why it happens when the reason is not obvious.

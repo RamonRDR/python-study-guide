@@ -6,6 +6,8 @@
 
 </div>
 
+[← Volver al índice de la sección](../README.es.md)
+
 Los comentarios ayudan a quien lee a comprender decisiones, restricciones y contextos que no son evidentes solamente a partir del código. Son valiosos cuando conservan un razonamiento. Se convierten en ruido cuando solo repiten lo que el código ya dice.
 
 > **Principio orientador:** El código debe explicar qué sucede. Los comentarios deben explicar por qué sucede cuando la razón no es evidente.
