@@ -13,6 +13,8 @@ python-study-guide/
 │   │   ├── bug-report.yml
 │   │   ├── config.yml
 │   │   ├── content-suggestion.yml
+│   │   ├── learning-question.yml
+│   │   ├── private-contact-request.yml
 │   │   └── translation-improvement.yml
 │   └── pull_request_template.md
 ├── .gitignore
@@ -91,7 +93,7 @@ python-study-guide/
 
 ## Guia de diretórios
 
-- `.github/`: configuração de colaboração do GitHub. O template de pull request solicita escopo, validação, alinhamento entre idiomas, declaração de assistência por IA, verificações de privacidade e observações para revisão. Os formulários de issue separam relatos de erros, sugestões de conteúdo e melhorias de tradução, enquanto `config.yml` desativa issues em branco sem estrutura para colaboradores e direciona às orientações de contribuição, suporte, segurança e conduta.
+- `.github/`: configuração de colaboração do GitHub. O template de pull request solicita escopo, validação, alinhamento entre idiomas, declaração de assistência por IA, verificações de privacidade e observações para revisão. Os formulários de issue separam relatos de erros, sugestões de conteúdo, perguntas de aprendizagem, melhorias de tradução e solicitações seguras de um canal privado. O `config.yml` desativa issues em branco sem estrutura e direciona às orientações de contribuição, segurança e conduta.
 - `assets/`: política e futuro local de logos, banners, diagramas, capturas de tela e imagens de apresentação originais.
 - `comments-and-documentation/`: trilha sobre comentários, docstrings, nomes, marcadores de tarefas, decisões de logging, PEP 8 e código legível. O primeiro capítulo está disponível em `01-comments/`.
 - `docs/`: roadmaps, arquitetura do projeto, políticas e documentos multilíngues de referência. O diretório `ai-assisted-development/` explica o uso responsável de ChatGPT e Codex no fluxo do projeto.
