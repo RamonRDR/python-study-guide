@@ -252,7 +252,7 @@ Crea un ejemplo para principiantes que calcule el promedio de tres calificacione
 
 Requisitos
 
-- Utiliza solamente funciones integradas de Python.
+- Utiliza solamente funcionalidades integradas de Python.
 - Mantén el ejemplo pequeño y ejecutable.
 - Utiliza nombres de variables descriptivos en inglés.
 - Explica los conceptos necesarios antes del ejemplo.
