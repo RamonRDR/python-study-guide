@@ -51,15 +51,19 @@ This policy applies to project spaces and project-related interactions, includin
 
 ## Reporting conduct concerns
 
-Do not open a public issue when a report contains private information, harassment details, or material that could expose another person.
+Do not open a public issue containing private information, harassment details, names of affected people, screenshots, or material that could expose another person.
 
-Send the report to **ramoncorreka@hotmail.com** with the subject:
+Use a private contact method published on the [maintainer's GitHub profile](https://github.com/RamonRDR), when one is available.
+
+If no private contact method is available, open a public issue titled:
 
 ```text
-[CONDUCT] Python Study Guide
+[CONDUCT CONTACT REQUEST]
 ```
 
-Include, when safe and relevant:
+Ask the maintainer to establish a private channel, but include no incident details in the public issue.
+
+In the eventual private report, include only what is safe and relevant:
 
 - what happened;
 - where and when it happened;
