@@ -18,13 +18,7 @@ Do not open a public issue for a vulnerability that could expose users, credenti
 
 When the repository's **Security** tab displays **Report a vulnerability**, use that option to submit the report privately through GitHub.
 
-If private vulnerability reporting is not available, open a public issue titled:
-
-```text
-[SECURITY CONTACT REQUEST]
-```
-
-Ask the maintainer for a private reporting channel, but do **not** include vulnerability details, affected secrets, exploit steps, names, screenshots, or other sensitive information in that issue.
+If private vulnerability reporting is not available, open the [**Private contact request** form](https://github.com/RamonRDR/python-study-guide/issues/new?template=private-contact-request.yml). The form exists only to establish a private channel. Do **not** include vulnerability details, affected secrets, exploit steps, names, screenshots, or other sensitive information in the public request.
 
 Include only the information needed in the eventual private report:
 
