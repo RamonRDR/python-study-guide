@@ -68,6 +68,14 @@ Explicaciones detalladas:
 
 La base del repositorio está en construcción. La primera sección completa estará dedicada a comentarios, documentación y escritura de código autoexplicativo.
 
+## Desarrollo asistido por IA
+
+Este proyecto utiliza herramientas de inteligencia artificial, incluidas ChatGPT y Codex, para apoyar la planificación, la investigación, la redacción, la traducción, la revisión y el mantenimiento del repositorio.
+
+El contenido producido por IA no se acepta automáticamente. Cada cambio debe ser comprendido, verificado y revisado por la persona responsable del proyecto antes de incorporarse a la branch `main`.
+
+Lee la [guía de desarrollo asistido por IA](docs/ai-assisted-development/README.es.md) para aprender a escribir prompts útiles, transformar una conversación en ChatGPT en un brief de implementación para Codex, revisar el trabajo generado y proteger información privada.
+
 ## Cómo contribuir
 
 Las contribuciones, correcciones, ejemplos y mejoras de traducción son bienvenidas. Lee la [guía de contribución en español](CONTRIBUTING.es.md) antes de abrir un pull request. También están disponibles las versiones en [inglés](CONTRIBUTING.md) y [portugués](CONTRIBUTING.pt-BR.md).
