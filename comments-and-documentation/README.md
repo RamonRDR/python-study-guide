@@ -19,6 +19,17 @@ This section teaches how to make Python code easier to understand, explain, main
 | 05. Comments versus logging | Separate source-code explanation from runtime observation | Intermediate | Planned |
 | 06. PEP 8 and readability | Apply style guidance while understanding its purpose and limits | Beginner to intermediate | Planned |
 
+## Prerequisite guidance
+
+- **01. Comments:** no formal prerequisite. Basic familiarity with variables and conditionals is helpful, but not required.
+- **02. Docstrings:** basic familiarity with functions, modules, classes, and methods will make the examples easier to understand.
+- **03. Meaningful names:** basic knowledge of variables and functions is recommended.
+- **04. Task markers:** the comments chapter is recommended. Familiarity with issues and version control is helpful.
+- **05. Comments versus logging:** the comments chapter is recommended. Basic knowledge of program execution and exceptions will be helpful.
+- **06. PEP 8 and readability:** basic Python syntax plus the comments and meaningful-names chapters are recommended.
+
+Planned prerequisites may be refined when each chapter is written. Estimated study time is published only after a chapter has complete, reviewable content.
+
 ## Recommended sequence
 
 Study the chapters in numerical order. Each chapter can also be consulted independently after its prerequisites are understood.
