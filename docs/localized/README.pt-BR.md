@@ -4,7 +4,7 @@
 
 ### Estude. Entenda. Pratique.
 
-[🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
+[🇺🇸 English](../../README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 </div>
 
@@ -38,9 +38,9 @@ Cada capítulo seguirá uma estrutura consistente:
 
 O guia crescerá dos fundamentos do Python até funções, documentação, tratamento de erros, arquivos, biblioteca padrão, bibliotecas externas, testes e projetos práticos.
 
-- [Roadmap em Português](docs/roadmap.pt-BR.md)
-- [Roadmap in English](docs/roadmap.en.md)
-- [Roadmap en Español](docs/roadmap.es.md)
+- [Roadmap em Português](../roadmap.pt-BR.md)
+- [Roadmap in English](../roadmap.en.md)
+- [Roadmap en Español](../roadmap.es.md)
 
 ## Estrutura do projeto
 
@@ -62,15 +62,15 @@ python-study-guide/
 
 Explicações detalhadas:
 
-- [Estrutura do projeto em Português](docs/project-structure.pt-BR.md)
-- [Project structure in English](docs/project-structure.en.md)
-- [Estructura del proyecto en Español](docs/project-structure.es.md)
+- [Estrutura do projeto em Português](../project-structure.pt-BR.md)
+- [Project structure in English](../project-structure.en.md)
+- [Estructura del proyecto en Español](../project-structure.es.md)
 
 ## Status atual
 
 A fundação do projeto está em andamento. A documentação multilíngue, as orientações e os templates de contribuição, os padrões da comunidade, a autoria, a licença, a governança de IA e a estrutura escalável do repositório já estão disponíveis. Ainda faltam as validações automáticas e a identidade visual original para concluir a Fase 0.
 
-O primeiro capítulo completo de aprendizagem, [Comentários em Python](comments-and-documentation/01-comments/README.pt-BR.md), já está disponível. Sua seção está organizada e continuará futuramente com docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e legibilidade segundo a PEP 8. Consulte o [roadmap](docs/roadmap.pt-BR.md) para acompanhar o status atual de todas as fases.
+O primeiro capítulo completo de aprendizagem, [Comentários em Python](../../comments-and-documentation/01-comments/README.pt-BR.md), já está disponível. Sua seção está organizada e continuará futuramente com docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e legibilidade segundo a PEP 8. Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status atual de todas as fases.
 
 ## Desenvolvimento assistido por IA
 
@@ -78,9 +78,9 @@ Este projeto utiliza ferramentas de inteligência artificial, incluindo ChatGPT 
 
 O conteúdo produzido por IA não é aceito automaticamente. Toda alteração deve ser compreendida, verificada e revisada pelo mantenedor antes de ser incorporada à branch `main`.
 
-As instruções gerais de trabalho para agentes de IA e colaboradores estão registradas em [AGENTS.md](AGENTS.md).
+As instruções gerais de trabalho para agentes de IA e colaboradores estão registradas em [AGENTS.md](../../AGENTS.md).
 
-Leia o [guia de desenvolvimento assistido por IA](docs/ai-assisted-development/README.pt-BR.md) para aprender a escrever prompts úteis, transformar uma conversa no ChatGPT em um briefing de implementação para o Codex, revisar o trabalho gerado e proteger informações privadas.
+Leia o [guia de desenvolvimento assistido por IA](../ai-assisted-development/README.pt-BR.md) para aprender a escrever prompts úteis, transformar uma conversa no ChatGPT em um briefing de implementação para o Codex, revisar o trabalho gerado e proteger informações privadas.
 
 ## Autoria e manutenção
 
@@ -94,8 +94,8 @@ A participação segue o [Código de Conduta](CODE_OF_CONDUCT.pt-BR.md). O [Guia
 
 ## Como contribuir
 
-Contribuições, correções, exemplos e melhorias de tradução são bem-vindos. Leia o [guia de contribuição em português](CONTRIBUTING.pt-BR.md) antes de abrir um pull request. As versões em [inglês](CONTRIBUTING.md) e [espanhol](CONTRIBUTING.es.md) também estão disponíveis.
+Contribuições, correções, exemplos e melhorias de tradução são bem-vindos. Leia o [guia de contribuição em português](CONTRIBUTING.pt-BR.md) antes de abrir um pull request. As versões em [inglês](../../CONTRIBUTING.md) e [espanhol](CONTRIBUTING.es.md) também estão disponíveis.
 
 ## Licença
 
-Este projeto está disponível sob a [Licença MIT](LICENSE).
+Este projeto está disponível sob a [Licença MIT](../../LICENSE).

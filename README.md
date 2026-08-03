@@ -4,7 +4,7 @@
 
 ### Study. Understand. Practice.
 
-[🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
+[🇺🇸 English](README.md) · [🇧🇷 Português](docs/localized/README.pt-BR.md) · [🇪🇸 Español](docs/localized/README.es.md)
 
 </div>
 
@@ -94,7 +94,7 @@ Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). The [Sup
 
 ## Contributing
 
-Contributions, corrections, examples, and translation improvements are welcome. Read the contribution guide in [English](CONTRIBUTING.md), [Portuguese](CONTRIBUTING.pt-BR.md), or [Spanish](CONTRIBUTING.es.md) before opening a pull request.
+Contributions, corrections, examples, and translation improvements are welcome. Read the contribution guide in [English](CONTRIBUTING.md), [Portuguese](docs/localized/CONTRIBUTING.pt-BR.md), or [Spanish](docs/localized/CONTRIBUTING.es.md) before opening a pull request.
 
 ## License
 
