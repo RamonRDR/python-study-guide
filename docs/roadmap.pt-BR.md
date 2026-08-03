@@ -14,7 +14,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 
 | Fase | Status | Resultado atual |
 |---|---|---|
-| 0. Fundação do projeto | Em andamento | Documentação principal, governança, autoria, licença, estrutura e templates de colaboração já estão disponíveis |
+| 0. Fundação do projeto | Em andamento | Documentação principal, governança, autoria, licença, estrutura, templates de colaboração e padrões da comunidade já estão disponíveis |
 | 1. Fundamentos | Planejada | Conteúdo ainda não iniciado |
 | 2. Textos e números | Planejada | Conteúdo ainda não iniciado |
 | 3. Coleções | Planejada | Conteúdo ainda não iniciado |
@@ -36,6 +36,7 @@ As Fases 0 e 6 estão ativas porque a fundação do repositório e uma primeira 
 - [x] Estrutura inicial escalável
 - [x] Guias de contribuição multilíngues
 - [x] Templates de pull request e issues no GitHub
+- [x] Padrões da comunidade e orientações para relatos
 - [x] Formato editorial consistente para os capítulos
 - [x] Licença MIT
 - [x] Registros de autoria e manutenção
@@ -46,7 +47,6 @@ As Fases 0 e 6 estão ativas porque a fundação do repositório e uma primeira 
 
 ### Pendente antes da conclusão
 
-- [ ] Padrões da comunidade e orientações para relatos
 - [ ] Validações automáticas para exemplos Python, testes e links internos
 - [ ] Identidade visual original e recursos do repositório
 - [ ] Auditoria final de navegação, terminologia e status

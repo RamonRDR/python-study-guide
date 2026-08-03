@@ -3,3 +3,9 @@ contact_links:
   - name: Read the contribution guide
     url: https://github.com/RamonRDR/python-study-guide/blob/main/CONTRIBUTING.md
     about: Review the project workflow, quality expectations, privacy rules, and language guidance before contributing.
+  - name: Report a security vulnerability privately
+    url: https://github.com/RamonRDR/python-study-guide/blob/main/SECURITY.md
+    about: Use private vulnerability reporting or the privacy-safe contact-request form described in the policy.
+  - name: Report a conduct concern privately
+    url: https://github.com/RamonRDR/python-study-guide/blob/main/CODE_OF_CONDUCT.md
+    about: Review the community standards and the privacy-safe contact-request process.

@@ -68,7 +68,7 @@ Detailed explanations:
 
 ## Current status
 
-The project foundation is in progress. Multilingual documentation, contribution guidance, collaboration templates, authorship, licensing, AI governance, and the scalable repository structure are available. Community standards, automated quality checks, and the original visual identity remain before Phase 0 is complete.
+The project foundation is in progress. Multilingual documentation, contribution guidance, collaboration templates, community standards, authorship, licensing, AI governance, and the scalable repository structure are available. Automated quality checks and the original visual identity remain before Phase 0 is complete.
 
 The first complete learning chapter, [Comments in Python](comments-and-documentation/01-comments/README.md), is available. Its broader section is organized and will later continue with docstrings, meaningful names, task markers, comments versus logging, and PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
@@ -87,6 +87,10 @@ Read the [AI-assisted development guide](docs/ai-assisted-development/README.en.
 Python Study Guide was created and is maintained by [Ramon Estevez Rodriguez](https://github.com/RamonRDR).
 
 Community contributions are welcome and remain credited through commit metadata, Git history, and pull requests. Read the [project authorship record](AUTHORS.md) for the complete attribution policy.
+
+## Community and support
+
+Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). The [Support Guide](SUPPORT.md) explains where different questions and requests belong. Potential vulnerabilities must follow the private process in the [Security Policy](SECURITY.md), not a public issue.
 
 ## Contributing
 

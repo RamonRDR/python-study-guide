@@ -68,7 +68,7 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-La base del proyecto está en progreso. La documentación multilingüe, las orientaciones y plantillas de contribución, la autoría, la licencia, la gobernanza de IA y la estructura escalable del repositorio ya están disponibles. Todavía faltan los estándares de la comunidad, las validaciones automáticas y la identidad visual original para completar la Fase 0.
+La base del proyecto está en progreso. La documentación multilingüe, las orientaciones y plantillas de contribución, los estándares de la comunidad, la autoría, la licencia, la gobernanza de IA y la estructura escalable del repositorio ya están disponibles. Todavía faltan las validaciones automáticas y la identidad visual original para completar la Fase 0.
 
 El primer capítulo completo de aprendizaje, [Comentarios en Python](comments-and-documentation/01-comments/README.es.md), ya está disponible. Su sección está organizada y continuará más adelante con docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y legibilidad según PEP 8. Consulta el [roadmap](docs/roadmap.es.md) para seguir el estado actual de todas las fases.
 
@@ -87,6 +87,10 @@ Lee la [guía de desarrollo asistido por IA](docs/ai-assisted-development/README
 Python Study Guide fue creado y es mantenido por [Ramon Estevez Rodriguez](https://github.com/RamonRDR).
 
 Las contribuciones de la comunidad son bienvenidas y permanecen reconocidas en los metadatos de los commits, el historial de Git y los pull requests. Consulta el [registro de autoría del proyecto](AUTHORS.es.md) para conocer la política completa de atribución.
+
+## Comunidad y soporte
+
+La participación se rige por el [Código de Conducta](CODE_OF_CONDUCT.es.md). La [Guía de Soporte](SUPPORT.es.md) explica qué canal corresponde a cada pregunta o solicitud. Las posibles vulnerabilidades deben seguir el proceso privado de la [Política de Seguridad](SECURITY.es.md), no una issue pública.
 
 ## Cómo contribuir
 

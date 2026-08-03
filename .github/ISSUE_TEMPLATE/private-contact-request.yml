@@ -1,0 +1,34 @@
+name: Private contact request
+description: Request a private reporting channel without publishing sensitive details
+title: "[Private contact request]"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form only to request a private channel for a security vulnerability, conduct concern, or another sensitive project matter.
+
+        **Do not describe the incident, vulnerability, affected person, evidence, credentials, private data, or confidential details in this public issue.**
+
+        After the request is opened, the maintainer will provide or arrange an appropriate private contact method when possible.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Preferred language
+      description: Choose the language you prefer for the private follow-up.
+      options:
+        - English
+        - Brazilian Portuguese
+        - Spanish
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have not included any sensitive details in this public request.
+          required: true
+        - label: I understand that the report itself must be sent only after a private channel is established.
+          required: true

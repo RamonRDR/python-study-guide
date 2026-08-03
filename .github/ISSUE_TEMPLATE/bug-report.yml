@@ -11,6 +11,8 @@ body:
 
         Do not include passwords, tokens, private URLs, personal data, employer information, proprietary code, or details from confidential projects.
 
+        **Do not use this public form for security vulnerabilities or conduct concerns.** Follow [SECURITY.md](../../SECURITY.md) or [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md) and use the private reporting channel described there.
+
   - type: dropdown
     id: area
     attributes:
@@ -86,6 +88,8 @@ body:
         - label: I searched existing issues and did not find the same report.
           required: true
         - label: I checked the current repository content or identified the exact version I reviewed.
+          required: true
+        - label: This report is not a security vulnerability or a private conduct concern.
           required: true
         - label: I removed confidential, proprietary, personal, credential, token, and private-project information.
           required: true
