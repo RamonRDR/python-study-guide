@@ -68,6 +68,23 @@ English is the repository's default language. Brazilian Portuguese and Spanish t
 
 When changing translated documentation, update all affected language versions whenever possible. If a translation cannot be completed in the same pull request, clearly identify the missing version.
 
+## AI-assisted contributions
+
+AI tools may be used to support research, drafting, translation, programming, testing, and review.
+
+The contributor remains responsible for understanding, checking, testing, and verifying everything submitted. Do not send automatically generated content without meaningful human review.
+
+Before submitting AI-assisted work:
+
+- verify important technical claims with reliable sources;
+- run relevant examples and tests;
+- review every affected language version;
+- disclose uncertainty or anything that could not be verified;
+- remove confidential, personal, or proprietary material;
+- confirm that the contribution complies with applicable licenses.
+
+Read the [AI-assisted development guide](docs/ai-assisted-development/README.en.md) for the project's prompting, validation, privacy, and review practices.
+
 ## Code style
 
 - Use descriptive English names.
@@ -86,6 +103,7 @@ Before submitting, confirm that:
 - examples run as described;
 - terminology is consistent;
 - translated documents remain conceptually aligned;
+- AI-assisted material has been understood and verified;
 - no confidential or third-party proprietary material was included.
 
 ## License of contributions
