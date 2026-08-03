@@ -44,6 +44,8 @@ La guía crecerá desde los fundamentos de Python hasta funciones, documentació
 
 ## Estructura del proyecto
 
+El árbol siguiente destaca los principales directorios de aprendizaje y soporte. Los documentos detallados de estructura también muestran los archivos de gobernanza y los capítulos internos ya disponibles.
+
 ```text
 python-study-guide/
 ├── assets/
@@ -66,13 +68,15 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-La base del repositorio está lista. El primer capítulo completo, [Comentarios en Python](comments-and-documentation/01-comments/README.es.md), ya está disponible. La sección continuará con docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y legibilidad según PEP 8.
+La base del proyecto está en progreso. La documentación multilingüe, las orientaciones de contribución, la autoría, la licencia, la gobernanza de IA y la estructura escalable del repositorio ya están disponibles. Todavía faltan las plantillas de colaboración, los estándares de la comunidad, las validaciones automáticas y la identidad visual original para completar la Fase 0.
+
+El primer capítulo completo de aprendizaje, [Comentarios en Python](comments-and-documentation/01-comments/README.es.md), ya está disponible. Su sección está organizada y continuará más adelante con docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y legibilidad según PEP 8. Consulta el [roadmap](docs/roadmap.es.md) para seguir el estado actual de todas las fases.
 
 ## Desarrollo asistido por IA
 
 Este proyecto utiliza herramientas de inteligencia artificial, incluidas ChatGPT y Codex, para apoyar la planificación, la investigación, la redacción, la traducción, la revisión y el mantenimiento del repositorio.
 
-El contenido producido por IA no se acepta automáticamente. Cada cambio debe ser comprendido, verificado y revisado por la persona responsable del proyecto antes de incorporarse a la branch `main`.
+El contenido producido por IA no se acepta automáticamente. Cada cambio debe ser comprendido, verificado y revisado por la persona responsable del proyecto antes de incorporarse a la rama `main`.
 
 Las instrucciones generales de trabajo para agentes de IA y colaboradores están registradas en [AGENTS.md](AGENTS.md).
 

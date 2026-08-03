@@ -44,6 +44,8 @@ The guide will grow from Python fundamentals to functions, documentation, error 
 
 ## Project structure
 
+The tree below highlights the main learning and support directories. The detailed project-structure documents also list governance files and currently available nested chapters.
+
 ```text
 python-study-guide/
 ├── assets/
@@ -66,7 +68,9 @@ Detailed explanations:
 
 ## Current status
 
-The repository foundation is in place. The first complete chapter, [Comments in Python](comments-and-documentation/01-comments/README.md), is available. The broader section will continue with docstrings, meaningful names, task markers, comments versus logging, and PEP 8 readability.
+The project foundation is in progress. Multilingual documentation, contribution guidance, authorship, licensing, AI governance, and the scalable repository structure are available. Collaboration templates, community standards, automated quality checks, and the original visual identity remain before Phase 0 is complete.
+
+The first complete learning chapter, [Comments in Python](comments-and-documentation/01-comments/README.md), is available. Its broader section is organized and will later continue with docstrings, meaningful names, task markers, comments versus logging, and PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
 ## AI-assisted development
 
