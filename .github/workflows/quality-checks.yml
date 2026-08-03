@@ -35,6 +35,9 @@ jobs:
       - name: Compile Python files
         run: python -m compileall -q -x '(^|/)\.git/' .
 
+      - name: Run quality script tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
+
       - name: Run approved examples
         run: python scripts/run_examples.py
 
