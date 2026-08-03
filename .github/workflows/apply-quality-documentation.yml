@@ -1,0 +1,184 @@
+name: Apply quality documentation alignment
+
+on:
+  push:
+    branches:
+      - ci/repository-quality-checks
+
+permissions:
+  contents: write
+
+jobs:
+  apply-documentation:
+    if: ${{ !contains(github.event.head_commit.message, '[quality-docs-applied]') }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: ci/repository-quality-checks
+
+      - name: Align documentation
+        shell: python
+        run: |
+          from pathlib import Path
+
+          root = Path.cwd()
+
+          def replace(path_name, old, new):
+              path = root / path_name
+              text = path.read_text(encoding="utf-8")
+              if old not in text:
+                  raise RuntimeError(f"Expected text not found in {path_name}: {old!r}")
+              path.write_text(text.replace(old, new, 1), encoding="utf-8")
+
+          for path_name in (
+              "README.md",
+              "docs/localized/README.pt-BR.md",
+              "docs/localized/README.es.md",
+          ):
+              replace(
+                  path_name,
+                  "├── practical-projects/\n├── standard-library/",
+                  "├── practical-projects/\n├── scripts/\n├── standard-library/",
+              )
+
+          replace(
+              "README.md",
+              "Automated quality checks and the original visual identity remain before Phase 0 is complete.",
+              "Automated quality checks are now available. The original visual identity and a final foundation audit remain before Phase 0 is complete.",
+          )
+          replace(
+              "docs/localized/README.pt-BR.md",
+              "Ainda faltam as validações automáticas e a identidade visual original para concluir a Fase 0.",
+              "As validações automáticas já estão disponíveis. Ainda faltam a identidade visual original e uma auditoria final da fundação para concluir a Fase 0.",
+          )
+          replace(
+              "docs/localized/README.es.md",
+              "Todavía faltan las validaciones automáticas y la identidad visual original para completar la Fase 0.",
+              "Las validaciones automáticas ya están disponibles. Todavía faltan la identidad visual original y una auditoría final de la base para completar la Fase 0.",
+          )
+
+          roadmap_updates = {
+              "docs/roadmap.en.md": (
+                  "- [x] Multilingual roadmap and project-structure documentation",
+                  "- [x] Multilingual roadmap and project-structure documentation\n- [x] Automated quality checks for Python files, approved examples, internal links, and repository structure",
+                  "- [ ] Automated quality checks for Python examples, tests, and internal links\n",
+              ),
+              "docs/roadmap.pt-BR.md": (
+                  "- [x] Roadmap e documentação da estrutura em três idiomas",
+                  "- [x] Roadmap e documentação da estrutura em três idiomas\n- [x] Validações automáticas para arquivos Python, exemplos aprovados, links internos e estrutura do repositório",
+                  "- [ ] Validações automáticas para exemplos Python, testes e links internos\n",
+              ),
+              "docs/roadmap.es.md": (
+                  "- [x] Roadmap y documentación de la estructura en tres idiomas",
+                  "- [x] Roadmap y documentación de la estructura en tres idiomas\n- [x] Validaciones automáticas para archivos Python, ejemplos aprobados, enlaces internos y estructura del repositorio",
+                  "- [ ] Validaciones automáticas para ejemplos Python, pruebas y enlaces internos\n",
+              ),
+          }
+          for path_name, (completed_old, completed_new, remaining_line) in roadmap_updates.items():
+              replace(path_name, completed_old, completed_new)
+              replace(path_name, remaining_line, "")
+
+          quality_sections = {
+              "CONTRIBUTING.md": """## Quality checks
+
+Run the same dependency-free checks used by GitHub Actions from the repository root:
+
+```bash
+python -m compileall -q -x '(^|/)\\.git/' .
+python scripts/run_examples.py
+python scripts/check_internal_links.py
+python scripts/validate_repository_structure.py
+```
+
+Only examples listed in `scripts/example_manifest.txt` are executed automatically. Add a file to the manifest only when it is deterministic, non-interactive, network-free, free of external dependencies, and safe for public continuous integration.
+
+""",
+              "docs/localized/CONTRIBUTING.pt-BR.md": """## Validações de qualidade
+
+Execute, a partir da raiz do repositório, as mesmas verificações sem dependências externas utilizadas pelo GitHub Actions:
+
+```bash
+python -m compileall -q -x '(^|/)\\.git/' .
+python scripts/run_examples.py
+python scripts/check_internal_links.py
+python scripts/validate_repository_structure.py
+```
+
+Somente os exemplos listados em `scripts/example_manifest.txt` são executados automaticamente. Inclua um arquivo no manifesto apenas quando ele for determinístico, não interativo, sem acesso à rede, sem dependências externas e seguro para integração contínua pública.
+
+""",
+              "docs/localized/CONTRIBUTING.es.md": """## Validaciones de calidad
+
+Ejecuta desde la raíz del repositorio las mismas verificaciones sin dependencias externas utilizadas por GitHub Actions:
+
+```bash
+python -m compileall -q -x '(^|/)\\.git/' .
+python scripts/run_examples.py
+python scripts/check_internal_links.py
+python scripts/validate_repository_structure.py
+```
+
+Solo los ejemplos incluidos en `scripts/example_manifest.txt` se ejecutan automáticamente. Añade un archivo al manifiesto únicamente cuando sea determinista, no interactivo, sin acceso a la red, sin dependencias externas y seguro para la integración continua pública.
+
+""",
+          }
+          for path_name, section in quality_sections.items():
+              replace(path_name, "## Pull requests\n", section + "## Pull requests\n")
+
+          structure_files = (
+              "docs/project-structure.en.md",
+              "docs/project-structure.pt-BR.md",
+              "docs/project-structure.es.md",
+          )
+          workflow_tree = "│   ├── workflows/\n│   │   └── quality-checks.yml\n│   └── pull_request_template.md"
+          scripts_tree = "├── scripts/\n│   ├── check_internal_links.py\n│   ├── example_manifest.txt\n│   ├── run_examples.py\n│   └── validate_repository_structure.py\n├── standard-library/"
+          for path_name in structure_files:
+              replace(path_name, "│   └── pull_request_template.md", workflow_tree)
+              replace(path_name, "├── standard-library/", scripts_tree)
+
+          replace(
+              "docs/project-structure.en.md",
+              "`config.yml` disables unstructured blank issues for contributors and links to contribution, security, and conduct guidance.",
+              "`config.yml` disables unstructured blank issues for contributors and links to contribution, security, and conduct guidance. The `quality-checks.yml` workflow compiles Python files, runs approved examples, checks internal Markdown paths, and validates the repository structure on pull requests and pushes to `main`.",
+          )
+          replace(
+              "docs/project-structure.pt-BR.md",
+              "`config.yml` desativa issues em branco sem estrutura para colaboradores e direciona às orientações de contribuição, segurança e conduta.",
+              "`config.yml` desativa issues em branco sem estrutura para colaboradores e direciona às orientações de contribuição, segurança e conduta. O workflow `quality-checks.yml` compila arquivos Python, executa exemplos aprovados, verifica caminhos internos em Markdown e valida a estrutura do repositório em pull requests e envios para a `main`.",
+          )
+          replace(
+              "docs/project-structure.es.md",
+              "`config.yml` desactiva las issues en blanco sin estructura para colaboradores y dirige a las orientaciones de contribución, seguridad y conducta.",
+              "`config.yml` desactiva las issues en blanco sin estructura para colaboradores y dirige a las orientaciones de contribución, seguridad y conducta. El workflow `quality-checks.yml` compila archivos Python, ejecuta ejemplos aprobados, verifica rutas internas en Markdown y valida la estructura del repositorio en pull requests y envíos a `main`.",
+          )
+
+          replace(
+              "docs/project-structure.en.md",
+              "- `standard-library/`: future guides to modules distributed with Python.",
+              "- `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions to run approved examples, check internal links, and validate repository structure.\n- `standard-library/`: future guides to modules distributed with Python.",
+          )
+          replace(
+              "docs/project-structure.pt-BR.md",
+              "- `standard-library/`: futuros guias sobre módulos distribuídos com o Python.",
+              "- `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions para executar exemplos aprovados, verificar links internos e validar a estrutura do repositório.\n- `standard-library/`: futuros guias sobre módulos distribuídos com o Python.",
+          )
+          replace(
+              "docs/project-structure.es.md",
+              "- `standard-library/`: futuras guías sobre módulos distribuidos con Python.",
+              "- `scripts/`: herramientas de mantenimiento sin dependencias externas, utilizadas localmente y por GitHub Actions para ejecutar ejemplos aprobados, verificar enlaces internos y validar la estructura del repositorio.\n- `standard-library/`: futuras guías sobre módulos distribuidos con Python.",
+          )
+
+      - name: Remove temporary workflow
+        run: rm .github/workflows/apply-quality-documentation.yml
+
+      - name: Commit documentation updates
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "docs: align quality check documentation [quality-docs-applied]"
+          git push origin HEAD:ci/repository-quality-checks
