@@ -19,6 +19,17 @@ Esta seção ensina como tornar o código Python mais fácil de entender, explic
 | 05. Comentários versus logging | Separar explicações no código-fonte da observação durante a execução | Intermediário | Planejado |
 | 06. PEP 8 e legibilidade | Aplicar orientações de estilo compreendendo seus objetivos e limites | Iniciante a intermediário | Planejado |
 
+## Orientação sobre pré-requisitos
+
+- **01. Comentários:** não possui pré-requisito formal. Familiaridade básica com variáveis e condicionais ajuda, mas não é obrigatória.
+- **02. Docstrings:** familiaridade básica com funções, módulos, classes e métodos facilitará a compreensão dos exemplos.
+- **03. Nomes significativos:** conhecimentos básicos sobre variáveis e funções são recomendados.
+- **04. Marcadores de tarefas:** recomenda-se concluir o capítulo de comentários. Familiaridade com issues e controle de versão ajuda.
+- **05. Comentários versus logging:** recomenda-se concluir o capítulo de comentários. Conhecimentos básicos sobre execução de programas e exceções serão úteis.
+- **06. PEP 8 e legibilidade:** recomenda-se conhecer a sintaxe básica do Python e concluir os capítulos de comentários e nomes significativos.
+
+Os pré-requisitos planejados poderão ser refinados quando cada capítulo for escrito. O tempo estimado de estudo será publicado somente depois que o capítulo possuir conteúdo completo e revisável.
+
 ## Sequência recomendada
 
 Estude os capítulos em ordem numérica. Depois de compreender seus pré-requisitos, cada capítulo também poderá ser consultado de maneira independente.
