@@ -95,6 +95,19 @@ Leia o [guia de desenvolvimento assistido por IA](../ai-assisted-development/REA
 - Comente decisões, restrições e motivos que não sejam óbvios.
 - Não comente um código que já se explica sozinho.
 
+## Validações de qualidade
+
+Execute, a partir da raiz do repositório, as mesmas verificações sem dependências externas utilizadas pelo GitHub Actions:
+
+```bash
+python -m compileall -q -x '(^|/)\.git/' .
+python scripts/run_examples.py
+python scripts/check_internal_links.py
+python scripts/validate_repository_structure.py
+```
+
+Somente os exemplos listados em `scripts/example_manifest.txt` são executados automaticamente. Inclua um arquivo no manifesto apenas quando ele for determinístico, não interativo, sem acesso à rede, sem dependências externas e seguro para integração contínua pública.
+
 ## Pull requests
 
 Um pull request deve ser focado, fácil de revisar e livre de alterações não relacionadas. Capturas de tela podem ser incluídas quando o layout da documentação for afetado.
