@@ -46,16 +46,16 @@ The guide will grow from Python fundamentals to functions, documentation, error 
 
 ```text
 python-study-guide/
-├── fundamentals/
-├── functions/
+├── assets/
 ├── comments-and-documentation/
-├── standard-library/
-├── external-libraries/
-├── exercises/
-├── practical-projects/
-├── tests/
 ├── docs/
-└── assets/
+├── exercises/
+├── external-libraries/
+├── functions/
+├── fundamentals/
+├── practical-projects/
+├── standard-library/
+└── tests/
 ```
 
 Detailed explanations:
