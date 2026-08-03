@@ -16,15 +16,17 @@ Historical commits, deleted branches, forks, copied material, and unsupported th
 
 Do not open a public issue for a vulnerability that could expose users, credentials, private information, repository permissions, or supply-chain integrity.
 
-Send a report to **ramoncorreka@hotmail.com** with the subject:
+When the repository's **Security** tab displays **Report a vulnerability**, use that option to submit the report privately through GitHub.
+
+If private vulnerability reporting is not available, open a public issue titled:
 
 ```text
-[SECURITY] Python Study Guide
+[SECURITY CONTACT REQUEST]
 ```
 
-When GitHub private vulnerability reporting is available for the repository, it may also be used through the repository's **Security** tab.
+Ask the maintainer for a private reporting channel, but do **not** include vulnerability details, affected secrets, exploit steps, names, screenshots, or other sensitive information in that issue.
 
-Include only the information needed to understand the issue:
+Include only the information needed in the eventual private report:
 
 - affected file, workflow, dependency guidance, or repository feature;
 - potential impact;
