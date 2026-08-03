@@ -51,15 +51,19 @@ Esta política se aplica aos espaços e às interações relacionadas ao projeto
 
 ## Como relatar problemas de conduta
 
-Não abra uma issue pública quando o relato contiver informações privadas, detalhes de assédio ou materiais que possam expor outra pessoa.
+Não abra uma issue pública contendo informações privadas, detalhes de assédio, nomes de pessoas afetadas, capturas de tela ou materiais que possam expor outra pessoa.
 
-Envie o relato para **ramoncorreka@hotmail.com** com o assunto:
+Utilize um canal privado publicado no [perfil do mantenedor no GitHub](https://github.com/RamonRDR), quando houver um disponível.
+
+Caso não exista um canal privado publicado, abra uma issue pública com o título:
 
 ```text
-[CONDUCT] Python Study Guide
+[CONDUCT CONTACT REQUEST]
 ```
 
-Inclua, quando for seguro e relevante:
+Solicite ao mantenedor a criação de um canal privado, mas não inclua detalhes do ocorrido na issue pública.
+
+No relato privado final, inclua apenas o que for seguro e relevante:
 
 - o que aconteceu;
 - onde e quando aconteceu;
