@@ -16,15 +16,17 @@ Los commits históricos, las ramas eliminadas, los forks, los materiales copiado
 
 No abras una issue pública para una vulnerabilidad que pueda exponer usuarios, credenciales, información privada, permisos del repositorio o la integridad de la cadena de suministro.
 
-Envía el informe a **ramoncorreka@hotmail.com** con el asunto:
+Cuando la pestaña **Security** del repositorio muestre la opción **Report a vulnerability**, utilízala para enviar el informe de forma privada mediante GitHub.
+
+Si el reporte privado de vulnerabilidades no está disponible, abre una issue pública con el título:
 
 ```text
-[SECURITY] Python Study Guide
+[SECURITY CONTACT REQUEST]
 ```
 
-Cuando el reporte privado de vulnerabilidades esté disponible en el repositorio, también podrá utilizarse desde la pestaña **Security**.
+Solicita a la persona responsable del mantenimiento un canal privado, pero **no** incluyas en esa issue detalles de la vulnerabilidad, secretos afectados, pasos de explotación, nombres, capturas de pantalla ni otra información sensible.
 
-Incluye únicamente la información necesaria para comprender el problema:
+Incluye únicamente en el informe privado final la información necesaria para comprender el problema:
 
 - archivo, workflow, recomendación de dependencia o función del repositorio afectada;
 - impacto potencial;
