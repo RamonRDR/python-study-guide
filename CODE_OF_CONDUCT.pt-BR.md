@@ -55,13 +55,7 @@ Não abra uma issue pública contendo informações privadas, detalhes de asséd
 
 Utilize um canal privado publicado no [perfil do mantenedor no GitHub](https://github.com/RamonRDR), quando houver um disponível.
 
-Caso não exista um canal privado publicado, abra uma issue pública com o título:
-
-```text
-[CONDUCT CONTACT REQUEST]
-```
-
-Solicite ao mantenedor a criação de um canal privado, mas não inclua detalhes do ocorrido na issue pública.
+Caso não exista um canal privado publicado, utilize o formulário [**Private contact request**](https://github.com/RamonRDR/python-study-guide/issues/new?template=private-contact-request.yml). Esse formulário serve apenas para estabelecer um canal privado. Não inclua na solicitação pública detalhes do ocorrido, nomes, evidências, capturas de tela ou outras informações sensíveis.
 
 No relato privado final, inclua apenas o que for seguro e relevante:
 
