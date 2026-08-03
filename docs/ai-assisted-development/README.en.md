@@ -325,7 +325,7 @@ Remove or avoid:
 - passwords, API keys, tokens, cookies, and credentials;
 - financial, medical, employment, or customer data;
 - private URLs, hostnames, paths, and infrastructure details;
-- internal documents and source code;
+- internal documents and private or proprietary source code;
 - confidential business rules and workflows;
 - identifying details from personal, family, employer, or client projects.
 
