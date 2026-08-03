@@ -68,7 +68,7 @@ Detailed explanations:
 
 ## Current status
 
-The project foundation is in progress. Multilingual documentation, contribution guidance, authorship, licensing, AI governance, and the scalable repository structure are available. Collaboration templates, community standards, automated quality checks, and the original visual identity remain before Phase 0 is complete.
+The project foundation is in progress. Multilingual documentation, contribution guidance, collaboration templates, authorship, licensing, AI governance, and the scalable repository structure are available. Community standards, automated quality checks, and the original visual identity remain before Phase 0 is complete.
 
 The first complete learning chapter, [Comments in Python](comments-and-documentation/01-comments/README.md), is available. Its broader section is organized and will later continue with docstrings, meaningful names, task markers, comments versus logging, and PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
