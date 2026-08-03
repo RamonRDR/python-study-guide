@@ -1,0 +1,73 @@
+# Contributing to Python Study Guide
+
+Thank you for helping improve this learning project.
+
+## Core principles
+
+- Keep code identifiers and file names in English.
+- Prefer clear explanations over clever wording.
+- Explain why and when, not only how.
+- Use original examples created for this repository.
+- Keep the three language versions conceptually aligned.
+- Never include confidential, proprietary, or personal data.
+
+## Contribution workflow
+
+1. Create or choose an issue describing the improvement.
+2. Create a focused branch from `main`.
+3. Make small, reviewable commits.
+4. Update every affected language document.
+5. Run the examples and tests that were changed.
+6. Open a pull request describing what changed and why.
+
+## Branch naming
+
+```text
+feat/topic-name
+docs/topic-name
+fix/topic-name
+test/topic-name
+refactor/topic-name
+```
+
+## Commit messages
+
+Use concise Conventional Commit-style messages:
+
+```text
+docs: add chapter about comments
+feat: add string validation example
+fix: correct average calculation
+```
+
+## Chapter format
+
+New learning chapters should cover:
+
+1. What it is
+2. Why it exists
+3. Syntax
+4. When to use it
+5. When to avoid it
+6. How it connects to other resources
+7. Basic example
+8. Practical example
+9. Common mistakes
+10. Exercise
+11. Quick-reference summary
+
+## Languages
+
+English is the repository's default language. Brazilian Portuguese and Spanish translations should preserve the same technical meaning without forcing literal word-for-word translation.
+
+## Code style
+
+- Use descriptive English names.
+- Follow PEP 8.
+- Add type hints when they improve understanding.
+- Comment decisions, constraints, and non-obvious reasons.
+- Do not comment code that already explains itself.
+
+## Pull requests
+
+A pull request should be focused, easy to review, and free from unrelated changes. Screenshots may be included when documentation layout is affected.
