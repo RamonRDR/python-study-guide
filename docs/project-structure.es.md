@@ -8,6 +8,13 @@ Este documento describe la estructura actualmente versionada en el repositorio. 
 
 ```text
 python-study-guide/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug-report.yml
+│   │   ├── config.yml
+│   │   ├── content-suggestion.yml
+│   │   └── translation-improvement.yml
+│   └── pull_request_template.md
 ├── .gitignore
 ├── AGENTS.md
 ├── AUTHORS.md
@@ -72,6 +79,7 @@ python-study-guide/
 
 ## Guía de directorios
 
+- `.github/`: configuración de colaboración de GitHub. La plantilla de pull request solicita alcance, validación, alineación entre idiomas, declaración de asistencia por IA, verificaciones de privacidad y notas para la revisión. Los formularios de issue separan reportes de errores, sugerencias de contenido y mejoras de traducción, mientras que `config.yml` desactiva las issues en blanco sin estructura para colaboradores y dirige a la guía de contribución.
 - `assets/`: política y futuro espacio para logotipos, banners, diagramas, capturas de pantalla e imágenes de presentación originales.
 - `comments-and-documentation/`: ruta sobre comentarios, docstrings, nombres, marcadores de tareas, decisiones de logging, PEP 8 y código legible. El primer capítulo está disponible en `01-comments/`.
 - `docs/`: roadmaps, arquitectura del proyecto, políticas y documentos multilingües de referencia. El directorio `ai-assisted-development/` explica el uso responsable de ChatGPT y Codex en el flujo del proyecto.
@@ -88,6 +96,8 @@ python-study-guide/
 Los directorios, nombres de archivos, variables, funciones, clases y demás identificadores de código usan inglés. Los documentos explicativos se ofrecen en inglés, portugués de Brasil y español.
 
 El inglés se representa mediante el `README.md` predeterminado cuando el documento es un punto de entrada principal de GitHub. Los documentos dentro de `docs/` pueden utilizar los sufijos explícitos `.en.md`, `.pt-BR.md` y `.es.md`.
+
+Las plantillas de colaboración de GitHub utilizan inglés como idioma predeterminado del repositorio y permiten explícitamente que los envíos se escriban en inglés, portugués de Brasil o español.
 
 ## Regla de mantenimiento
 
