@@ -1,0 +1,46 @@
+name: Repository quality checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Repository quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Compile Python files
+        run: python -m compileall -q -x '(^|/)\.git/' .
+
+      - name: Run approved examples
+        run: python scripts/run_examples.py
+
+      - name: Check internal Markdown links
+        run: python scripts/check_internal_links.py
+
+      - name: Validate repository structure
+        run: python scripts/validate_repository_structure.py
