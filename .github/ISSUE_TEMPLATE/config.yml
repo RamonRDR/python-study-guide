@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the contribution guide
+    url: https://github.com/RamonRDR/python-study-guide/blob/main/CONTRIBUTING.md
+    about: Review the project workflow, quality expectations, privacy rules, and language guidance before contributing.
