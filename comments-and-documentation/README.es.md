@@ -19,6 +19,17 @@ Esta sección enseña cómo hacer que el código Python sea más fácil de compr
 | 05. Comentarios frente a logging | Separar las explicaciones del código fuente de la observación durante la ejecución | Intermedio | Planificado |
 | 06. PEP 8 y legibilidad | Aplicar orientaciones de estilo comprendiendo sus objetivos y límites | Principiante a intermedio | Planificado |
 
+## Orientación sobre requisitos previos
+
+- **01. Comentarios:** no tiene un requisito previo formal. La familiaridad básica con variables y condicionales ayuda, pero no es obligatoria.
+- **02. Docstrings:** la familiaridad básica con funciones, módulos, clases y métodos facilitará la comprensión de los ejemplos.
+- **03. Nombres significativos:** se recomiendan conocimientos básicos sobre variables y funciones.
+- **04. Marcadores de tareas:** se recomienda completar el capítulo de comentarios. La familiaridad con issues y control de versiones ayuda.
+- **05. Comentarios frente a logging:** se recomienda completar el capítulo de comentarios. Los conocimientos básicos sobre ejecución de programas y excepciones serán útiles.
+- **06. PEP 8 y legibilidad:** se recomienda conocer la sintaxis básica de Python y completar los capítulos de comentarios y nombres significativos.
+
+Los requisitos previos planificados podrán ajustarse cuando se escriba cada capítulo. El tiempo estimado de estudio se publicará solamente después de que el capítulo tenga contenido completo y revisable.
+
 ## Secuencia recomendada
 
 Estudia los capítulos en orden numérico. Después de comprender sus requisitos previos, cada capítulo también puede consultarse de forma independiente.
