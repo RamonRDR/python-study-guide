@@ -8,6 +8,13 @@ This document describes the structure currently tracked in the repository. Plann
 
 ```text
 python-study-guide/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug-report.yml
+│   │   ├── config.yml
+│   │   ├── content-suggestion.yml
+│   │   └── translation-improvement.yml
+│   └── pull_request_template.md
 ├── .gitignore
 ├── AGENTS.md
 ├── AUTHORS.md
@@ -72,6 +79,7 @@ python-study-guide/
 
 ## Directory guide
 
+- `.github/`: GitHub collaboration configuration. The pull request template requests scope, verification, language alignment, AI-assistance disclosure, privacy checks, and reviewer notes. The issue forms separate bug reports, content suggestions, and translation improvements, while `config.yml` disables unstructured blank issues for contributors and links to the contribution guide.
 - `assets/`: policy and future home for original logos, banners, diagrams, screenshots, and repository preview images.
 - `comments-and-documentation/`: learning path for comments, docstrings, naming, task markers, logging decisions, PEP 8, and readable code. The first chapter is available in `01-comments/`.
 - `docs/`: roadmaps, project architecture, policies, and multilingual reference documents. The `ai-assisted-development/` directory explains responsible use of ChatGPT and Codex in the project workflow.
@@ -88,6 +96,8 @@ python-study-guide/
 Repository directories, file names, variables, functions, classes, and other code identifiers use English. Explanatory documents are offered in English, Brazilian Portuguese, and Spanish.
 
 English is represented by the default `README.md` when the document is a primary GitHub entry point. Documents inside `docs/` may use the explicit `.en.md`, `.pt-BR.md`, and `.es.md` suffixes.
+
+GitHub collaboration templates use English as the repository's default language and explicitly allow submissions in English, Brazilian Portuguese, or Spanish.
 
 ## Maintenance rule
 
