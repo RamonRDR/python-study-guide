@@ -106,6 +106,12 @@ Before submitting, confirm that:
 - AI-assisted material has been understood and verified;
 - no confidential or third-party proprietary material was included.
 
+## Project authorship and contribution credit
+
+Python Study Guide was created and is maintained by [Ramon Estevez Rodriguez](https://github.com/RamonRDR).
+
+Submitting a contribution does not transfer or erase the authorship of individual changes. Contributor credit remains recorded through commit metadata, Git history, and pull requests. Read the [project authorship record](AUTHORS.md) for details.
+
 ## License of contributions
 
 By submitting a contribution, you agree that it may be distributed under the same [MIT License](LICENSE) used by this repository.

@@ -108,6 +108,12 @@ Antes de enviar, confirme que:
 - o material assistido por IA foi compreendido e verificado;
 - nenhum material confidencial ou proprietário de terceiros foi incluído.
 
+## Autoria do projeto e crédito das contribuições
+
+O Python Study Guide foi criado e é mantido por [Ramon Estevez Rodriguez](https://github.com/RamonRDR).
+
+O envio de uma contribuição não transfere nem apaga a autoria das alterações individuais. O crédito dos colaboradores permanece registrado nos metadados dos commits, no histórico do Git e nos pull requests. Consulte o [registro de autoria do projeto](AUTHORS.pt-BR.md) para conhecer os detalhes.
+
 ## Licença das contribuições
 
 Ao enviar uma contribuição, você concorda que ela poderá ser distribuída sob a mesma [Licença MIT](LICENSE) utilizada por este repositório.
