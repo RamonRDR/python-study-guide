@@ -12,6 +12,7 @@ Python Study Guide is maintained as a public educational project. Questions and 
 
 | Need | Preferred channel |
 |---|---|
+| Ask about material already published in this repository | Open a [**Learning question** issue](https://github.com/RamonRDR/python-study-guide/issues/new?template=learning-question.yml) |
 | Incorrect or broken repository content | Open a **Bug report** issue |
 | Suggest a new chapter, example, exercise, or improvement | Open a **Content suggestion** issue |
 | Correct or improve a translation | Open a **Translation improvement** issue |
