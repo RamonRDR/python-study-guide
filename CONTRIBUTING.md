@@ -1,4 +1,10 @@
+<div align="center">
+
 # Contributing to Python Study Guide
+
+[🇺🇸 English](CONTRIBUTING.md) · [🇧🇷 Português](CONTRIBUTING.pt-BR.md) · [🇪🇸 Español](CONTRIBUTING.es.md)
+
+</div>
 
 Thank you for helping improve this learning project.
 
@@ -60,6 +66,8 @@ New learning chapters should cover:
 
 English is the repository's default language. Brazilian Portuguese and Spanish translations should preserve the same technical meaning without forcing literal word-for-word translation.
 
+When changing translated documentation, update all affected language versions whenever possible. If a translation cannot be completed in the same pull request, clearly identify the missing version.
+
 ## Code style
 
 - Use descriptive English names.
@@ -71,3 +79,15 @@ English is the repository's default language. Brazilian Portuguese and Spanish t
 ## Pull requests
 
 A pull request should be focused, easy to review, and free from unrelated changes. Screenshots may be included when documentation layout is affected.
+
+Before submitting, confirm that:
+
+- links work correctly;
+- examples run as described;
+- terminology is consistent;
+- translated documents remain conceptually aligned;
+- no confidential or third-party proprietary material was included.
+
+## License of contributions
+
+By submitting a contribution, you agree that it may be distributed under the same [MIT License](LICENSE) used by this repository.

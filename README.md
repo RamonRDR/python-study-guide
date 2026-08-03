@@ -70,7 +70,7 @@ The repository foundation is under construction. The first complete learning sec
 
 ## Contributing
 
-Contributions, corrections, examples, and translation improvements are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+Contributions, corrections, examples, and translation improvements are welcome. Read the contribution guide in [English](CONTRIBUTING.md), [Portuguese](CONTRIBUTING.pt-BR.md), or [Spanish](CONTRIBUTING.es.md) before opening a pull request.
 
 ## License
 
