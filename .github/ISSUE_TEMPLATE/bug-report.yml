@@ -1,0 +1,91 @@
+name: Bug report
+description: Report incorrect, broken, misleading, or unexpected repository content
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Python Study Guide.
+
+        You may write in English, Brazilian Portuguese, or Spanish. Keep file paths, code, and technical identifiers exactly as they appear in the repository.
+
+        Do not include passwords, tokens, private URLs, personal data, employer information, proprietary code, or details from confidential projects.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      description: Choose the area that best matches the problem.
+      options:
+        - Documentation or explanation
+        - Python example
+        - Exercise or project
+        - Translation
+        - Navigation or internal link
+        - Repository configuration
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: File, page, or path
+      description: Provide the repository path or public URL where the problem appears.
+      placeholder: comments-and-documentation/01-comments/README.pt-BR.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: What is wrong?
+      description: Describe the incorrect, broken, misleading, or unexpected behavior.
+      placeholder: Explain what you observed and include a small relevant excerpt when useful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: What should happen instead?
+      description: Describe the expected explanation, result, link, translation, or behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce or verify
+      description: Explain how another person can observe the problem. For code, include safe commands and inputs. For documentation, describe the path followed.
+      placeholder: |
+        1. Open...
+        2. Run...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: For executable problems, provide the Python version, operating system, and relevant tool versions. Leave blank when not applicable.
+      placeholder: Python 3.13, Windows 11
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add public references, screenshots, or other non-confidential information that may help.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues and did not find the same report.
+          required: true
+        - label: I checked the current repository content or identified the exact version I reviewed.
+          required: true
+        - label: I removed confidential, proprietary, personal, credential, token, and private-project information.
+          required: true
