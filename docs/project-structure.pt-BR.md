@@ -8,6 +8,13 @@ Este documento descreve a estrutura atualmente versionada no repositório. Diret
 
 ```text
 python-study-guide/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug-report.yml
+│   │   ├── config.yml
+│   │   ├── content-suggestion.yml
+│   │   └── translation-improvement.yml
+│   └── pull_request_template.md
 ├── .gitignore
 ├── AGENTS.md
 ├── AUTHORS.md
@@ -72,6 +79,7 @@ python-study-guide/
 
 ## Guia de diretórios
 
+- `.github/`: configuração de colaboração do GitHub. O template de pull request solicita escopo, validação, alinhamento entre idiomas, declaração de assistência por IA, verificações de privacidade e observações para revisão. Os formulários de issue separam relatos de erros, sugestões de conteúdo e melhorias de tradução, enquanto `config.yml` desativa issues em branco sem estrutura para colaboradores e direciona ao guia de contribuição.
 - `assets/`: política e futuro local de logos, banners, diagramas, capturas de tela e imagens de apresentação originais.
 - `comments-and-documentation/`: trilha sobre comentários, docstrings, nomes, marcadores de tarefas, decisões de logging, PEP 8 e código legível. O primeiro capítulo está disponível em `01-comments/`.
 - `docs/`: roadmaps, arquitetura do projeto, políticas e documentos multilíngues de referência. O diretório `ai-assisted-development/` explica o uso responsável de ChatGPT e Codex no fluxo do projeto.
@@ -88,6 +96,8 @@ python-study-guide/
 Os diretórios, nomes de arquivos, variáveis, funções, classes e demais identificadores do código usam inglês. Os documentos explicativos são oferecidos em inglês, português brasileiro e espanhol.
 
 O inglês é representado pelo `README.md` padrão quando o documento é uma porta de entrada principal do GitHub. Documentos dentro de `docs/` podem utilizar os sufixos explícitos `.en.md`, `.pt-BR.md` e `.es.md`.
+
+Os templates de colaboração do GitHub utilizam inglês como idioma padrão do repositório e permitem explicitamente que os envios sejam escritos em inglês, português brasileiro ou espanhol.
 
 ## Regra de manutenção
 
