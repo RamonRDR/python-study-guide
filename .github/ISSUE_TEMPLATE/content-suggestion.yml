@@ -1,0 +1,105 @@
+name: Content suggestion
+description: Suggest a new topic, example, exercise, explanation, or learning improvement
+title: "[Content]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a learning improvement.
+
+        You may write in English, Brazilian Portuguese, or Spanish. Suggestions should support clear, accurate, original, beginner-friendly learning.
+
+        Do not submit copied proprietary material, confidential processes, private-project details, personal data, credentials, or unlicensed examples.
+
+  - type: input
+    id: topic
+    attributes:
+      label: Suggested topic
+      description: Name the concept, example, exercise, or improvement.
+      placeholder: Explain function return values with a small data-flow example
+    validations:
+      required: true
+
+  - type: dropdown
+    id: contribution_type
+    attributes:
+      label: Suggestion type
+      options:
+        - New learning chapter
+        - Expansion of an existing chapter
+        - New executable example
+        - New exercise
+        - New practical project
+        - Navigation or quick-reference improvement
+        - Repository documentation improvement
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Intended audience
+      options:
+        - Complete beginner
+        - Beginner
+        - Intermediate learner
+        - Advanced learner
+        - Multiple levels
+    validations:
+      required: true
+
+  - type: textarea
+    id: learning_need
+    attributes:
+      label: Learning need
+      description: Explain what the learner should understand or be able to do after this improvement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_scope
+    attributes:
+      label: Proposed scope
+      description: Describe what should be included and what should remain outside this suggestion.
+      placeholder: |
+        Include:
+        - ...
+
+        Avoid:
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: roadmap_connection
+    attributes:
+      label: Connection to the roadmap
+      description: Identify the phase, section, or existing chapter that this suggestion belongs to or supports.
+      placeholder: Phase 5, Functions
+    validations:
+      required: true
+
+  - type: textarea
+    id: example_idea
+    attributes:
+      label: Original example idea
+      description: Propose a generic and fictional example. Do not adapt private company, client, family, or personal-project rules.
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Reliable references
+      description: Add official Python documentation, PEPs, or other primary sources that may support the suggestion.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues and the roadmap for a similar suggestion.
+          required: true
+        - label: The proposal is original or uses material with a compatible license and proper attribution.
+          required: true
+        - label: The proposal contains no confidential, proprietary, personal, credential, token, or private-project information.
+          required: true
