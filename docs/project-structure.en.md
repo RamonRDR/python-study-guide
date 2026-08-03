@@ -13,6 +13,8 @@ python-study-guide/
 │   │   ├── bug-report.yml
 │   │   ├── config.yml
 │   │   ├── content-suggestion.yml
+│   │   ├── learning-question.yml
+│   │   ├── private-contact-request.yml
 │   │   └── translation-improvement.yml
 │   └── pull_request_template.md
 ├── .gitignore
@@ -82,16 +84,16 @@ python-study-guide/
 - `.gitignore`: prevents local Python artifacts and other generated files from being committed.
 - `AGENTS.md`: repository-wide instructions for contributors and AI agents.
 - `AUTHORS...`: multilingual project authorship, maintenance, and contribution-credit records.
-- `CODE_OF_CONDUCT...`: expected community behavior, unacceptable conduct, private reporting guidance, and proportionate enforcement principles.
+- `CODE_OF_CONDUCT...`: multilingual participation standards and private conduct-reporting guidance.
 - `CONTRIBUTING...`: multilingual contribution workflow and quality expectations.
 - `LICENSE`: the MIT License applied to the repository.
 - `README...`: multilingual entry points to the project.
-- `SECURITY...`: supported security scope, safe research expectations, and private vulnerability-reporting guidance.
-- `SUPPORT...`: routes questions and reports to the appropriate channel and defines the boundaries of project support.
+- `SECURITY...`: multilingual supported-scope, private vulnerability-reporting, and safe-research guidance.
+- `SUPPORT...`: multilingual support boundaries, channel selection, and question-preparation guidance.
 
 ## Directory guide
 
-- `.github/`: GitHub collaboration configuration. The pull request template requests scope, verification, language alignment, AI-assistance disclosure, privacy checks, and reviewer notes. The issue forms separate bug reports, content suggestions, and translation improvements, while `config.yml` disables unstructured blank issues for contributors and links to contribution, support, security, and conduct guidance.
+- `.github/`: GitHub collaboration configuration. The pull request template requests scope, verification, language alignment, AI-assistance disclosure, privacy checks, and reviewer notes. The issue forms separate bug reports, content suggestions, learning questions, translation improvements, and privacy-safe requests for a private reporting channel. `config.yml` disables unstructured blank issues for contributors and links to contribution, security, and conduct guidance.
 - `assets/`: policy and future home for original logos, banners, diagrams, screenshots, and repository preview images.
 - `comments-and-documentation/`: learning path for comments, docstrings, naming, task markers, logging decisions, PEP 8, and readable code. The first chapter is available in `01-comments/`.
 - `docs/`: roadmaps, project architecture, policies, and multilingual reference documents. The `ai-assisted-development/` directory explains responsible use of ChatGPT and Codex in the project workflow.
