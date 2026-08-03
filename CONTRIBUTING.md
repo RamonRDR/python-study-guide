@@ -93,6 +93,19 @@ Read the [AI-assisted development guide](docs/ai-assisted-development/README.en.
 - Comment decisions, constraints, and non-obvious reasons.
 - Do not comment code that already explains itself.
 
+## Quality checks
+
+Run the same dependency-free checks used by GitHub Actions from the repository root:
+
+```bash
+python -m compileall -q -x '(^|/)\.git/' .
+python scripts/run_examples.py
+python scripts/check_internal_links.py
+python scripts/validate_repository_structure.py
+```
+
+Only examples listed in `scripts/example_manifest.txt` are executed automatically. Add a file to the manifest only when it is deterministic, non-interactive, network-free, free of external dependencies, and safe to run in a public continuous integration environment.
+
 ## Pull requests
 
 A pull request should be focused, easy to review, and free from unrelated changes. Screenshots may be included when documentation layout is affected.
