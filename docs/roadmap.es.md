@@ -2,13 +2,55 @@
 
 [🇺🇸 English](roadmap.en.md) · [🇧🇷 Português](roadmap.pt-BR.md) · [🇪🇸 Español](roadmap.es.md)
 
+Este roadmap acompaña tanto la ruta educativa como la base del repositorio que la sostiene. La numeración de las fases representa la secuencia de aprendizaje prevista, pero el trabajo del repositorio puede preparar secciones posteriores antes cuando eso establezca estándares útiles para todo el proyecto.
+
+## Leyenda de estados
+
+- **Completada:** el alcance planificado está disponible y revisado.
+- **En progreso:** ya existe material útil, pero el alcance planificado todavía no está cerrado.
+- **Planificada:** la fase todavía no ha comenzado como una sección completa de aprendizaje.
+
+## Progreso actual
+
+| Fase | Estado | Resultado actual |
+|---|---|---|
+| 0. Base del proyecto | En progreso | La documentación principal, la gobernanza, la autoría, la licencia y la estructura ya están disponibles |
+| 1. Fundamentos | Planificada | Contenido todavía no iniciado |
+| 2. Textos y números | Planificada | Contenido todavía no iniciado |
+| 3. Colecciones | Planificada | Contenido todavía no iniciado |
+| 4. Flujo del programa | Planificada | Contenido todavía no iniciado |
+| 5. Funciones | Planificada | Contenido todavía no iniciado |
+| 6. Comentarios, documentación y código limpio | En progreso | El capítulo de comentarios está completo y la ruta de la sección está organizada |
+| 7. Errores, archivos y módulos | Planificada | Contenido todavía no iniciado |
+| 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
+| 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
+| 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
+
+Las Fases 0 y 6 están activas porque la base del repositorio y una primera sección piloto de aprendizaje se desarrollaron en conjunto. Después de completar la Fase 0, la ruta podrá continuar por la Fase 1 sin perder los estándares ya establecidos en la Fase 6.
+
 ## Fase 0: Base del proyecto
 
-- READMEs multilingües
-- Estructura del proyecto
-- Guía de contribución
-- Plantilla editorial para capítulos
-- Identidad visual y recursos
+### Completado
+
+- [x] READMEs principales multilingües
+- [x] Estructura inicial escalable
+- [x] Guías de contribución multilingües
+- [x] Formato editorial coherente para los capítulos
+- [x] Licencia MIT
+- [x] Registros de autoría y mantenimiento
+- [x] Flujo basado en pull requests y rama `main` protegida
+- [x] Instrucciones del repositorio para colaboradores y agentes de IA
+- [x] Guía de desarrollo responsable asistido por IA
+- [x] Roadmap y documentación de la estructura en tres idiomas
+
+### Pendiente antes de completarla
+
+- [ ] Plantillas de pull request e issues en GitHub
+- [ ] Estándares de la comunidad y orientaciones para reportes
+- [ ] Validaciones automáticas para ejemplos Python, pruebas y enlaces internos
+- [ ] Identidad visual original y recursos del repositorio
+- [ ] Auditoría final de navegación, terminología y estado
+- [ ] Marcar oficialmente la Fase 0 como completada
 
 ## Fase 1: Fundamentos
 
@@ -55,15 +97,16 @@
 
 ## Fase 6: Comentarios, documentación y código limpio
 
-- Cuándo y por qué comentar
-- Cuándo no comentar
-- Comentarios útiles y perjudiciales
-- Docstrings
-- `TODO`, `FIXME` y `NOTE`
-- Nombres significativos
-- Comentarios versus logging
-- Código autoexplicativo
-- PEP 8
+Consulta la [ruta de aprendizaje de la sección](../comments-and-documentation/README.es.md).
+
+- [x] Cuándo y por qué comentar
+- [x] Cuándo no comentar
+- [x] Comentarios útiles y perjudiciales
+- [ ] Docstrings
+- [ ] Nombres significativos y código autoexplicativo
+- [ ] `TODO`, `FIXME`, `NOTE` y marcadores relacionados
+- [ ] Comentarios frente a logging
+- [ ] PEP 8 y legibilidad
 
 ## Fase 7: Errores, archivos y módulos
 
