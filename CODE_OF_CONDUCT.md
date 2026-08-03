@@ -55,13 +55,7 @@ Do not open a public issue containing private information, harassment details, n
 
 Use a private contact method published on the [maintainer's GitHub profile](https://github.com/RamonRDR), when one is available.
 
-If no private contact method is available, open a public issue titled:
-
-```text
-[CONDUCT CONTACT REQUEST]
-```
-
-Ask the maintainer to establish a private channel, but include no incident details in the public issue.
+If no private contact method is available, open the [**Private contact request** form](https://github.com/RamonRDR/python-study-guide/issues/new?template=private-contact-request.yml). The form exists only to establish a private channel. Include no incident details, names, evidence, screenshots, or other sensitive information in the public request.
 
 In the eventual private report, include only what is safe and relevant:
 
