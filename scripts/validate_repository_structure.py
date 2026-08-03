@@ -58,6 +58,7 @@ REQUIRED_FILES = (
     "scripts/example_manifest.txt",
     "scripts/run_examples.py",
     "scripts/validate_repository_structure.py",
+    "tests/test_check_internal_links.py",
 )
 
 LOCALIZED_DOCUMENT_GROUPS = {
