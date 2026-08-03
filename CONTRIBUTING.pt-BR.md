@@ -70,6 +70,23 @@ O inglês é o idioma padrão do repositório. As traduções para português br
 
 Ao alterar uma documentação traduzida, atualize todas as versões de idioma afetadas sempre que possível. Caso uma tradução não possa ser concluída no mesmo pull request, identifique claramente qual versão está faltando.
 
+## Contribuições assistidas por IA
+
+Ferramentas de IA podem ser utilizadas para apoiar pesquisa, elaboração de textos, tradução, programação, testes e revisão.
+
+O colaborador continua responsável por compreender, conferir, testar e verificar tudo o que for enviado. Não envie conteúdo gerado automaticamente sem uma revisão humana significativa.
+
+Antes de enviar um trabalho assistido por IA:
+
+- verifique afirmações técnicas importantes em fontes confiáveis;
+- execute exemplos e testes relevantes;
+- revise todas as versões de idioma afetadas;
+- informe incertezas ou qualquer item que não pôde ser verificado;
+- remova materiais confidenciais, pessoais ou proprietários;
+- confirme que a contribuição respeita as licenças aplicáveis.
+
+Leia o [guia de desenvolvimento assistido por IA](docs/ai-assisted-development/README.pt-BR.md) para conhecer as práticas do projeto sobre prompts, validação, privacidade e revisão.
+
 ## Estilo do código
 
 - Utilize nomes descritivos em inglês.
@@ -88,6 +105,7 @@ Antes de enviar, confirme que:
 - os exemplos executam conforme descrito;
 - a terminologia está consistente;
 - os documentos traduzidos continuam conceitualmente alinhados;
+- o material assistido por IA foi compreendido e verificado;
 - nenhum material confidencial ou proprietário de terceiros foi incluído.
 
 ## Licença das contribuições

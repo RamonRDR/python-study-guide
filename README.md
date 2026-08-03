@@ -68,6 +68,16 @@ Detailed explanations:
 
 The repository foundation is under construction. The first complete learning section will focus on comments, documentation, and writing code that explains itself.
 
+## AI-assisted development
+
+This project uses AI tools, including ChatGPT and Codex, to support planning, research, drafting, translation, review, and repository maintenance.
+
+AI output is not accepted automatically. Every change must be understood, verified, and reviewed by the maintainer before it is incorporated into the `main` branch.
+
+Repository-wide working instructions for AI agents and contributors are recorded in [AGENTS.md](AGENTS.md).
+
+Read the [AI-assisted development guide](docs/ai-assisted-development/README.en.md) to learn how to write useful prompts, move from a ChatGPT conversation to a Codex implementation brief, review generated work, and protect private information.
+
 ## Contributing
 
 Contributions, corrections, examples, and translation improvements are welcome. Read the contribution guide in [English](CONTRIBUTING.md), [Portuguese](CONTRIBUTING.pt-BR.md), or [Spanish](CONTRIBUTING.es.md) before opening a pull request.
