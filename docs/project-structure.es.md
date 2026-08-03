@@ -20,6 +20,9 @@ python-study-guide/
 ├── AUTHORS.md
 ├── AUTHORS.pt-BR.md
 ├── AUTHORS.es.md
+├── CODE_OF_CONDUCT.md
+├── CODE_OF_CONDUCT.pt-BR.md
+├── CODE_OF_CONDUCT.es.md
 ├── CONTRIBUTING.md
 ├── CONTRIBUTING.pt-BR.md
 ├── CONTRIBUTING.es.md
@@ -27,6 +30,12 @@ python-study-guide/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
+├── SECURITY.md
+├── SECURITY.pt-BR.md
+├── SECURITY.es.md
+├── SUPPORT.md
+├── SUPPORT.pt-BR.md
+├── SUPPORT.es.md
 ├── assets/
 │   └── README.md
 ├── comments-and-documentation/
@@ -73,13 +82,16 @@ python-study-guide/
 - `.gitignore`: evita que se versionen artefactos locales de Python y otros archivos generados.
 - `AGENTS.md`: reúne las instrucciones generales del repositorio para colaboradores y agentes de IA.
 - `AUTHORS...`: registra, en los tres idiomas, la autoría, el mantenimiento y el reconocimiento de las contribuciones.
+- `CODE_OF_CONDUCT...`: define el comportamiento esperado, las conductas inaceptables, las orientaciones para informes privados y los principios de aplicación proporcional.
 - `CONTRIBUTING...`: describe el flujo de contribución y las expectativas de calidad en los tres idiomas.
 - `LICENSE`: contiene la Licencia MIT aplicada al repositorio.
 - `README...`: funciona como punto de entrada multilingüe del proyecto.
+- `SECURITY...`: define el alcance de seguridad cubierto, las expectativas para una investigación segura y las orientaciones para informar vulnerabilidades de forma privada.
+- `SUPPORT...`: dirige preguntas e informes al canal adecuado y define los límites del soporte ofrecido por el proyecto.
 
 ## Guía de directorios
 
-- `.github/`: configuración de colaboración de GitHub. La plantilla de pull request solicita alcance, validación, alineación entre idiomas, declaración de asistencia por IA, verificaciones de privacidad y notas para la revisión. Los formularios de issue separan reportes de errores, sugerencias de contenido y mejoras de traducción, mientras que `config.yml` desactiva las issues en blanco sin estructura para colaboradores y dirige a la guía de contribución.
+- `.github/`: configuración de colaboración de GitHub. La plantilla de pull request solicita alcance, validación, alineación entre idiomas, declaración de asistencia por IA, verificaciones de privacidad y notas para la revisión. Los formularios de issue separan reportes de errores, sugerencias de contenido y mejoras de traducción, mientras que `config.yml` desactiva las issues en blanco sin estructura para colaboradores y dirige a las orientaciones de contribución, soporte, seguridad y conducta.
 - `assets/`: política y futuro espacio para logotipos, banners, diagramas, capturas de pantalla e imágenes de presentación originales.
 - `comments-and-documentation/`: ruta sobre comentarios, docstrings, nombres, marcadores de tareas, decisiones de logging, PEP 8 y código legible. El primer capítulo está disponible en `01-comments/`.
 - `docs/`: roadmaps, arquitectura del proyecto, políticas y documentos multilingües de referencia. El directorio `ai-assisted-development/` explica el uso responsable de ChatGPT y Codex en el flujo del proyecto.
