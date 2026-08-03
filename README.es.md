@@ -66,7 +66,7 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-La base del repositorio está lista. El primer capítulo completo, [Comentarios en Python](comments-and-documentation/README.es.md), ya está disponible. La sección continuará con docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y legibilidad según PEP 8.
+La base del repositorio está lista. El primer capítulo completo, [Comentarios en Python](comments-and-documentation/01-comments/README.es.md), ya está disponible. La sección continuará con docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y legibilidad según PEP 8.
 
 ## Desarrollo asistido por IA
 

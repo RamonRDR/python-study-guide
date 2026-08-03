@@ -66,7 +66,7 @@ Detailed explanations:
 
 ## Current status
 
-The repository foundation is in place. The first complete chapter, [Comments in Python](comments-and-documentation/README.md), is available. The broader section will continue with docstrings, meaningful names, task markers, comments versus logging, and PEP 8 readability.
+The repository foundation is in place. The first complete chapter, [Comments in Python](comments-and-documentation/01-comments/README.md), is available. The broader section will continue with docstrings, meaningful names, task markers, comments versus logging, and PEP 8 readability.
 
 ## AI-assisted development
 
