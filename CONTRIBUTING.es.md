@@ -70,6 +70,23 @@ El inglés es el idioma predeterminado del repositorio. Las traducciones al port
 
 Al modificar documentación traducida, actualiza todas las versiones de idioma afectadas siempre que sea posible. Si una traducción no puede completarse en el mismo pull request, identifica claramente qué versión falta.
 
+## Contribuciones asistidas por IA
+
+Las herramientas de IA pueden utilizarse para apoyar la investigación, la redacción, la traducción, la programación, las pruebas y la revisión.
+
+Quien contribuye sigue siendo responsable de comprender, comprobar, probar y verificar todo lo enviado. No envíes contenido generado automáticamente sin una revisión humana significativa.
+
+Antes de enviar trabajo asistido por IA:
+
+- verifica las afirmaciones técnicas importantes en fuentes confiables;
+- ejecuta los ejemplos y las pruebas relevantes;
+- revisa todas las versiones de idioma afectadas;
+- informa las incertidumbres o cualquier elemento que no haya podido verificarse;
+- elimina material confidencial, personal o propietario;
+- confirma que la contribución cumple las licencias aplicables.
+
+Lee la [guía de desarrollo asistido por IA](docs/ai-assisted-development/README.es.md) para conocer las prácticas del proyecto sobre prompts, validación, privacidad y revisión.
+
 ## Estilo del código
 
 - Utiliza nombres descriptivos en inglés.
@@ -88,6 +105,7 @@ Antes de enviarlo, confirma que:
 - los ejemplos se ejecutan como se describe;
 - la terminología es coherente;
 - los documentos traducidos continúan conceptualmente alineados;
+- el material asistido por IA fue comprendido y verificado;
 - no se incluyó material confidencial o propietario de terceros.
 
 ## Licencia de las contribuciones
