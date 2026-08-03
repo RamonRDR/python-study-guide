@@ -74,6 +74,8 @@ Este proyecto utiliza herramientas de inteligencia artificial, incluidas ChatGPT
 
 El contenido producido por IA no se acepta automáticamente. Cada cambio debe ser comprendido, verificado y revisado por la persona responsable del proyecto antes de incorporarse a la branch `main`.
 
+Las instrucciones generales de trabajo para agentes de IA y colaboradores están registradas en [AGENTS.md](AGENTS.md).
+
 Lee la [guía de desarrollo asistido por IA](docs/ai-assisted-development/README.es.md) para aprender a escribir prompts útiles, transformar una conversación en ChatGPT en un brief de implementación para Codex, revisar el trabajo generado y proteger información privada.
 
 ## Cómo contribuir
