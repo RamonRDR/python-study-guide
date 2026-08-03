@@ -16,6 +16,8 @@ python-study-guide/
 │   │   ├── learning-question.yml
 │   │   ├── private-contact-request.yml
 │   │   └── translation-improvement.yml
+│   ├── workflows/
+│   │   └── quality-checks.yml
 │   └── pull_request_template.md
 ├── .gitignore
 ├── AGENTS.md
@@ -74,6 +76,11 @@ python-study-guide/
 │   └── README.md
 ├── practical-projects/
 │   └── README.md
+├── scripts/
+│   ├── check_internal_links.py
+│   ├── example_manifest.txt
+│   ├── run_examples.py
+│   └── validate_repository_structure.py
 ├── standard-library/
 │   └── README.md
 └── tests/
@@ -94,7 +101,7 @@ python-study-guide/
 
 ## Guia de diretórios
 
-- `.github/`: configuração de colaboração do GitHub. O template de pull request solicita escopo, validação, alinhamento entre idiomas, declaração de assistência por IA, verificações de privacidade e observações para revisão. Os formulários de issue separam relatos de erros, sugestões de conteúdo, perguntas de aprendizagem, melhorias de tradução e solicitações seguras de um canal privado. O `config.yml` desativa issues em branco sem estrutura e direciona às orientações de contribuição, segurança e conduta.
+- `.github/`: configuração de colaboração e automação do GitHub. O template de pull request solicita escopo, validação, alinhamento entre idiomas, declaração de assistência por IA, verificações de privacidade e observações para revisão. Os formulários de issue separam relatos de erros, sugestões de conteúdo, perguntas de aprendizagem, melhorias de tradução e solicitações seguras de um canal privado. O `config.yml` desativa issues em branco sem estrutura e direciona às orientações de contribuição, segurança e conduta. O workflow `quality-checks.yml` compila arquivos Python, executa exemplos aprovados, verifica caminhos internos em Markdown e valida a estrutura do repositório em pull requests e envios para a `main`.
 - `assets/`: política e futuro local de logos, banners, diagramas, capturas de tela e imagens de apresentação originais.
 - `comments-and-documentation/`: trilha sobre comentários, docstrings, nomes, marcadores de tarefas, decisões de logging, PEP 8 e código legível. O primeiro capítulo está disponível em `01-comments/`.
 - `docs/`: roadmaps, arquitetura do projeto, políticas e documentos multilíngues de referência. O diretório `ai-assisted-development/` explica o uso responsável de ChatGPT e Codex no fluxo do projeto. O diretório `localized/` contém as versões em português brasileiro e espanhol dos documentos principais do projeto, autoria, contribuição, conduta, segurança e suporte. Manter somente os arquivos canônicos em inglês na raiz evita detecção ambígua das abas automáticas do GitHub sem reduzir a navegação multilíngue.
@@ -103,6 +110,7 @@ python-study-guide/
 - `functions/`: futura trilha sobre criação de funções, parâmetros, argumentos, retornos, escopo, type hints e colaboração entre funções.
 - `fundamentals/`: futura trilha sobre variáveis, tipos de dados, entrada, saída, strings, números, coleções e controle de fluxo.
 - `practical-projects/`: futuros projetos pequenos que combinarão vários conceitos.
+- `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions para executar exemplos aprovados, verificar links internos e validar a estrutura do repositório.
 - `standard-library/`: futuros guias sobre módulos distribuídos com o Python.
 - `tests/`: testes automatizados dos exemplos executáveis e projetos à medida que forem adicionados.
 
