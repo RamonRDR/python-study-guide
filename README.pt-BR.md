@@ -66,7 +66,7 @@ Explicações detalhadas:
 
 ## Status atual
 
-A fundação do repositório está sendo construída. A primeira seção completa será dedicada a comentários, documentação e escrita de código autoexplicativo.
+A fundação do repositório está pronta. O primeiro capítulo completo, [Comentários em Python](comments-and-documentation/README.pt-BR.md), já está disponível. A seção continuará com docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e legibilidade segundo a PEP 8.
 
 ## Desenvolvimento assistido por IA
 
