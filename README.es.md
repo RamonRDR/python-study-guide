@@ -76,7 +76,7 @@ El primer capítulo completo de aprendizaje, [Comentarios en Python](comments-an
 
 Este proyecto utiliza herramientas de inteligencia artificial, incluidas ChatGPT y Codex, para apoyar la planificación, la investigación, la redacción, la traducción, la revisión y el mantenimiento del repositorio.
 
-El contenido producido por IA no se acepta automáticamente. Cada cambio debe ser comprendido, verificado y revisado por la persona responsable del proyecto antes de incorporarse a la branch `main`.
+El contenido producido por IA no se acepta automáticamente. Cada cambio debe ser comprendido, verificado y revisado por la persona responsable del proyecto antes de incorporarse a la rama `main`.
 
 Las instrucciones generales de trabajo para agentes de IA y colaboradores están registradas en [AGENTS.md](AGENTS.md).
 
