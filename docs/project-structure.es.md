@@ -4,30 +4,30 @@
 
 ```text
 python-study-guide/
-├── fundamentals/
-├── functions/
+├── assets/
 ├── comments-and-documentation/
-├── standard-library/
-├── external-libraries/
-├── exercises/
-├── practical-projects/
-├── tests/
 ├── docs/
-└── assets/
+├── exercises/
+├── external-libraries/
+├── functions/
+├── fundamentals/
+├── practical-projects/
+├── standard-library/
+└── tests/
 ```
 
 ## Guía de directorios
 
-- `fundamentals/`: variables, tipos de datos, entrada, salida, strings, números, colecciones y control de flujo.
-- `functions/`: creación de funciones, parámetros, argumentos, retornos, alcance, type hints y colaboración entre funciones.
-- `comments-and-documentation/`: comentarios, docstrings, nombres, logging, PEP 8 y código autoexplicativo.
-- `standard-library/`: módulos distribuidos con Python.
-- `external-libraries/`: paquetes externos instalados por separado.
-- `exercises/`: actividades prácticas relacionadas con los capítulos.
-- `practical-projects/`: pequeños proyectos que combinan varios conceptos.
-- `tests/`: pruebas automatizadas para ejemplos ejecutables y proyectos.
-- `docs/`: roadmaps, políticas, explicaciones de arquitectura y documentos multilingües.
 - `assets/`: logotipos, banners, diagramas, capturas de pantalla y otros recursos visuales originales.
+- `comments-and-documentation/`: comentarios, docstrings, nombres, logging, PEP 8 y código autoexplicativo.
+- `docs/`: roadmaps, políticas, explicaciones de arquitectura y documentos multilingües.
+- `exercises/`: actividades prácticas relacionadas con los capítulos.
+- `external-libraries/`: paquetes externos instalados por separado.
+- `functions/`: creación de funciones, parámetros, argumentos, retornos, alcance, type hints y colaboración entre funciones.
+- `fundamentals/`: variables, tipos de datos, entrada, salida, strings, números, colecciones y control de flujo.
+- `practical-projects/`: pequeños proyectos que combinan varios conceptos.
+- `standard-library/`: módulos distribuidos con Python.
+- `tests/`: pruebas automatizadas para ejemplos ejecutables y proyectos.
 
 ## Convención de nombres
 
