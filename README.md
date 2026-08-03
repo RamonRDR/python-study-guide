@@ -56,6 +56,7 @@ python-study-guide/
 ├── functions/
 ├── fundamentals/
 ├── practical-projects/
+├── scripts/
 ├── standard-library/
 └── tests/
 ```
@@ -68,7 +69,7 @@ Detailed explanations:
 
 ## Current status
 
-The project foundation is in progress. Multilingual documentation, contribution guidance, collaboration templates, community standards, authorship, licensing, AI governance, and the scalable repository structure are available. Automated quality checks and the original visual identity remain before Phase 0 is complete.
+The project foundation is in progress. Multilingual documentation, contribution guidance, collaboration templates, community standards, authorship, licensing, AI governance, automated quality checks, and the scalable repository structure are available. The original visual identity and a final foundation audit remain before Phase 0 is complete.
 
 The first complete learning chapter, [Comments in Python](comments-and-documentation/01-comments/README.md), is available. Its broader section is organized and will later continue with docstrings, meaningful names, task markers, comments versus logging, and PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 

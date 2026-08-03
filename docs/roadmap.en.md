@@ -14,7 +14,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 
 | Phase | Status | Current result |
 |---|---|---|
-| 0. Project foundation | In progress | Core documentation, governance, authorship, licensing, structure, collaboration templates, and community standards are available |
+| 0. Project foundation | In progress | Core documentation, governance, authorship, licensing, structure, collaboration templates, community standards, and automated quality checks are available |
 | 1. Fundamentals | Planned | Curriculum not started |
 | 2. Strings and numbers | Planned | Curriculum not started |
 | 3. Collections | Planned | Curriculum not started |
@@ -44,10 +44,10 @@ Phases 0 and 6 are currently active because the repository foundation and an ear
 - [x] Repository instructions for contributors and AI agents
 - [x] Responsible AI-assisted development guide
 - [x] Multilingual roadmap and project-structure documentation
+- [x] Automated quality checks for Python files, approved examples, internal links, and repository structure
 
 ### Remaining before completion
 
-- [ ] Automated quality checks for Python examples, tests, and internal links
 - [ ] Original visual identity and repository assets
 - [ ] Final navigation, terminology, and status audit
 - [ ] Officially mark Phase 0 as complete
