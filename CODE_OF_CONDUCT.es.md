@@ -51,15 +51,19 @@ Esta política se aplica a los espacios y las interacciones relacionadas con el 
 
 ## Cómo informar problemas de conducta
 
-No abras una issue pública cuando el informe contenga información privada, detalles de acoso o material que pueda exponer a otra persona.
+No abras una issue pública que contenga información privada, detalles de acoso, nombres de personas afectadas, capturas de pantalla ni material que pueda exponer a otra persona.
 
-Envía el informe a **ramoncorreka@hotmail.com** con el asunto:
+Utiliza un canal privado publicado en el [perfil de GitHub de la persona responsable del mantenimiento](https://github.com/RamonRDR), cuando exista uno disponible.
+
+Si no existe un canal privado publicado, abre una issue pública con el título:
 
 ```text
-[CONDUCT] Python Study Guide
+[CONDUCT CONTACT REQUEST]
 ```
 
-Incluye, cuando sea seguro y relevante:
+Solicita que se establezca un canal privado, pero no incluyas detalles del incidente en la issue pública.
+
+En el informe privado final, incluye únicamente lo que sea seguro y relevante:
 
 - qué ocurrió;
 - dónde y cuándo ocurrió;
