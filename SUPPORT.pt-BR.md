@@ -12,6 +12,7 @@ O Python Study Guide é mantido como um projeto educacional público. Dúvidas e
 
 | Necessidade | Canal recomendado |
 |---|---|
+| Fazer uma pergunta sobre conteúdo já publicado no repositório | Abra uma issue do tipo [**Learning question**](https://github.com/RamonRDR/python-study-guide/issues/new?template=learning-question.yml) |
 | Conteúdo incorreto ou quebrado no repositório | Abra uma issue do tipo **Bug report** |
 | Sugerir capítulo, exemplo, exercício ou melhoria | Abra uma issue do tipo **Content suggestion** |
 | Corrigir ou melhorar uma tradução | Abra uma issue do tipo **Translation improvement** |
