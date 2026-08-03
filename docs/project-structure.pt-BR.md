@@ -20,6 +20,9 @@ python-study-guide/
 ├── AUTHORS.md
 ├── AUTHORS.pt-BR.md
 ├── AUTHORS.es.md
+├── CODE_OF_CONDUCT.md
+├── CODE_OF_CONDUCT.pt-BR.md
+├── CODE_OF_CONDUCT.es.md
 ├── CONTRIBUTING.md
 ├── CONTRIBUTING.pt-BR.md
 ├── CONTRIBUTING.es.md
@@ -27,6 +30,12 @@ python-study-guide/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
+├── SECURITY.md
+├── SECURITY.pt-BR.md
+├── SECURITY.es.md
+├── SUPPORT.md
+├── SUPPORT.pt-BR.md
+├── SUPPORT.es.md
 ├── assets/
 │   └── README.md
 ├── comments-and-documentation/
@@ -73,13 +82,16 @@ python-study-guide/
 - `.gitignore`: impede que artefatos locais do Python e outros arquivos gerados sejam versionados.
 - `AGENTS.md`: reúne instruções gerais do repositório para colaboradores e agentes de IA.
 - `AUTHORS...`: registra, nos três idiomas, a autoria, a manutenção e o crédito das contribuições.
+- `CODE_OF_CONDUCT...`: define o comportamento esperado, condutas inaceitáveis, orientações para relatos privados e princípios de aplicação proporcional.
 - `CONTRIBUTING...`: descreve o fluxo de contribuição e os critérios de qualidade nos três idiomas.
 - `LICENSE`: contém a Licença MIT aplicada ao repositório.
 - `README...`: funciona como porta de entrada multilíngue do projeto.
+- `SECURITY...`: define o escopo de segurança contemplado, expectativas para pesquisa segura e orientações para relatos privados de vulnerabilidades.
+- `SUPPORT...`: direciona dúvidas e relatos ao canal adequado e define os limites do suporte oferecido pelo projeto.
 
 ## Guia de diretórios
 
-- `.github/`: configuração de colaboração do GitHub. O template de pull request solicita escopo, validação, alinhamento entre idiomas, declaração de assistência por IA, verificações de privacidade e observações para revisão. Os formulários de issue separam relatos de erros, sugestões de conteúdo e melhorias de tradução, enquanto `config.yml` desativa issues em branco sem estrutura para colaboradores e direciona ao guia de contribuição.
+- `.github/`: configuração de colaboração do GitHub. O template de pull request solicita escopo, validação, alinhamento entre idiomas, declaração de assistência por IA, verificações de privacidade e observações para revisão. Os formulários de issue separam relatos de erros, sugestões de conteúdo e melhorias de tradução, enquanto `config.yml` desativa issues em branco sem estrutura para colaboradores e direciona às orientações de contribuição, suporte, segurança e conduta.
 - `assets/`: política e futuro local de logos, banners, diagramas, capturas de tela e imagens de apresentação originais.
 - `comments-and-documentation/`: trilha sobre comentários, docstrings, nomes, marcadores de tarefas, decisões de logging, PEP 8 e código legível. O primeiro capítulo está disponível em `01-comments/`.
 - `docs/`: roadmaps, arquitetura do projeto, políticas e documentos multilíngues de referência. O diretório `ai-assisted-development/` explica o uso responsável de ChatGPT e Codex no fluxo do projeto.
