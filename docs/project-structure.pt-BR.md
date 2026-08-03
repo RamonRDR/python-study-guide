@@ -4,30 +4,30 @@
 
 ```text
 python-study-guide/
-├── fundamentals/
-├── functions/
+├── assets/
 ├── comments-and-documentation/
-├── standard-library/
-├── external-libraries/
-├── exercises/
-├── practical-projects/
-├── tests/
 ├── docs/
-└── assets/
+├── exercises/
+├── external-libraries/
+├── functions/
+├── fundamentals/
+├── practical-projects/
+├── standard-library/
+└── tests/
 ```
 
 ## Guia de diretórios
 
-- `fundamentals/`: variáveis, tipos de dados, entrada, saída, strings, números, coleções e controle de fluxo.
-- `functions/`: criação de funções, parâmetros, argumentos, retornos, escopo, type hints e colaboração entre funções.
-- `comments-and-documentation/`: comentários, docstrings, nomes, logging, PEP 8 e código autoexplicativo.
-- `standard-library/`: módulos distribuídos com o Python.
-- `external-libraries/`: pacotes externos instalados separadamente.
-- `exercises/`: atividades práticas relacionadas aos capítulos.
-- `practical-projects/`: pequenos projetos que combinam vários conceitos.
-- `tests/`: testes automatizados dos exemplos executáveis e projetos.
-- `docs/`: roadmaps, políticas, explicações de arquitetura e documentos multilíngues.
 - `assets/`: logos, banners, diagramas, capturas de tela e outros recursos visuais originais.
+- `comments-and-documentation/`: comentários, docstrings, nomes, logging, PEP 8 e código autoexplicativo.
+- `docs/`: roadmaps, políticas, explicações de arquitetura e documentos multilíngues.
+- `exercises/`: atividades práticas relacionadas aos capítulos.
+- `external-libraries/`: pacotes externos instalados separadamente.
+- `functions/`: criação de funções, parâmetros, argumentos, retornos, escopo, type hints e colaboração entre funções.
+- `fundamentals/`: variáveis, tipos de dados, entrada, saída, strings, números, coleções e controle de fluxo.
+- `practical-projects/`: pequenos projetos que combinam vários conceitos.
+- `standard-library/`: módulos distribuídos com o Python.
+- `tests/`: testes automatizados dos exemplos executáveis e projetos.
 
 ## Convenção de nomes
 
