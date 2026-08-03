@@ -1,0 +1,83 @@
+name: Translation improvement
+description: Report or propose a clearer English, Brazilian Portuguese, or Spanish translation
+title: "[Translation]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep the three language versions conceptually aligned.
+
+        A good translation preserves technical meaning, examples, warnings, prerequisites, learning goals, and links. It does not need to follow the source text word for word.
+
+        Do not include private documents, copied proprietary translations, personal data, credentials, or confidential terminology.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language to improve
+      options:
+        - English
+        - Brazilian Portuguese
+        - Spanish
+        - More than one language
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: File and section
+      description: Provide the repository path and heading or line context.
+      placeholder: docs/roadmap.pt-BR.md — Fase 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_text
+    attributes:
+      label: Current text
+      description: Quote only the small repository excerpt needed to understand the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_text
+    attributes:
+      label: Proposed text
+      description: Provide the improved wording in the target language.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why is this improvement better?
+      description: Explain the technical, grammatical, regional, accessibility, or clarity problem being solved.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alignment
+    attributes:
+      label: Cross-language alignment
+      description: Explain whether equivalent changes are needed in the other language versions.
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Terminology references
+      description: Add official documentation, glossaries, or primary sources when terminology needs verification.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I compared the relevant language versions and preserved their technical meaning.
+          required: true
+        - label: I avoided unnecessary literal translation and explained important terminology choices.
+          required: true
+        - label: I included no confidential, proprietary, personal, credential, token, or private-project information.
+          required: true
