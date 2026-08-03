@@ -2,7 +2,7 @@
 
 # Autoría del proyecto
 
-[🇺🇸 English](AUTHORS.md) · [🇧🇷 Português](AUTHORS.pt-BR.md) · [🇪🇸 Español](AUTHORS.es.md)
+[🇺🇸 English](../../AUTHORS.md) · [🇧🇷 Português](AUTHORS.pt-BR.md) · [🇪🇸 Español](AUTHORS.es.md)
 
 </div>
 
@@ -26,4 +26,4 @@ La persona responsable del mantenimiento continúa encargada de comprender, veri
 
 ## Principio de atribución
 
-Al reutilizar o distribuir partes sustanciales de este proyecto, conserva el aviso de derechos de autor y licencia exigido por la [Licencia MIT](LICENSE). Al contribuir a este repositorio, conserva la atribución existente del proyecto y permite que el historial de Git y de los pull requests registre correctamente cada contribución.
+Al reutilizar o distribuir partes sustanciales de este proyecto, conserva el aviso de derechos de autor y licencia exigido por la [Licencia MIT](../../LICENSE). Al contribuir a este repositorio, conserva la atribución existente del proyecto y permite que el historial de Git y de los pull requests registre correctamente cada contribución.

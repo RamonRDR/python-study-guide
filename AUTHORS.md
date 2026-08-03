@@ -2,7 +2,7 @@
 
 # Project Authorship
 
-[🇺🇸 English](AUTHORS.md) · [🇧🇷 Português](AUTHORS.pt-BR.md) · [🇪🇸 Español](AUTHORS.es.md)
+[🇺🇸 English](AUTHORS.md) · [🇧🇷 Português](docs/localized/AUTHORS.pt-BR.md) · [🇪🇸 Español](docs/localized/AUTHORS.es.md)
 
 </div>
 

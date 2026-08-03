@@ -2,7 +2,7 @@
 
 # Contributing to Python Study Guide
 
-[🇺🇸 English](CONTRIBUTING.md) · [🇧🇷 Português](CONTRIBUTING.pt-BR.md) · [🇪🇸 Español](CONTRIBUTING.es.md)
+[🇺🇸 English](CONTRIBUTING.md) · [🇧🇷 Português](docs/localized/CONTRIBUTING.pt-BR.md) · [🇪🇸 Español](docs/localized/CONTRIBUTING.es.md)
 
 </div>
 

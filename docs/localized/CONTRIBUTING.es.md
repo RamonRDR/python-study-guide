@@ -2,7 +2,7 @@
 
 # Cómo contribuir a Python Study Guide
 
-[🇺🇸 English](CONTRIBUTING.md) · [🇧🇷 Português](CONTRIBUTING.pt-BR.md) · [🇪🇸 Español](CONTRIBUTING.es.md)
+[🇺🇸 English](../../CONTRIBUTING.md) · [🇧🇷 Português](CONTRIBUTING.pt-BR.md) · [🇪🇸 Español](CONTRIBUTING.es.md)
 
 </div>
 
@@ -85,7 +85,7 @@ Antes de enviar trabajo asistido por IA:
 - elimina material confidencial, personal o propietario;
 - confirma que la contribución cumple las licencias aplicables.
 
-Lee la [guía de desarrollo asistido por IA](docs/ai-assisted-development/README.es.md) para conocer las prácticas del proyecto sobre prompts, validación, privacidad y revisión.
+Lee la [guía de desarrollo asistido por IA](../ai-assisted-development/README.es.md) para conocer las prácticas del proyecto sobre prompts, validación, privacidad y revisión.
 
 ## Estilo del código
 
@@ -116,4 +116,4 @@ Enviar una contribución no transfiere ni elimina la autoría de los cambios ind
 
 ## Licencia de las contribuciones
 
-Al enviar una contribución, aceptas que pueda distribuirse bajo la misma [Licencia MIT](LICENSE) utilizada por este repositorio.
+Al enviar una contribución, aceptas que pueda distribuirse bajo la misma [Licencia MIT](../../LICENSE) utilizada por este repositorio.

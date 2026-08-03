@@ -2,7 +2,7 @@
 
 # Política de Segurança
 
-[🇺🇸 English](SECURITY.md) · [🇧🇷 Português](SECURITY.pt-BR.md) · [🇪🇸 Español](SECURITY.es.md)
+[🇺🇸 English](../../SECURITY.md) · [🇧🇷 Português](SECURITY.pt-BR.md) · [🇪🇸 Español](SECURITY.es.md)
 
 </div>
 

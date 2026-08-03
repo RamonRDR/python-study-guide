@@ -2,7 +2,7 @@
 
 # Código de Conduta
 
-[🇺🇸 English](CODE_OF_CONDUCT.md) · [🇧🇷 Português](CODE_OF_CONDUCT.pt-BR.md) · [🇪🇸 Español](CODE_OF_CONDUCT.es.md)
+[🇺🇸 English](../../CODE_OF_CONDUCT.md) · [🇧🇷 Português](CODE_OF_CONDUCT.pt-BR.md) · [🇪🇸 Español](CODE_OF_CONDUCT.es.md)
 
 </div>
 

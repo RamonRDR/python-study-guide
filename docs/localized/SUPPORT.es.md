@@ -2,7 +2,7 @@
 
 # Guía de Soporte
 
-[🇺🇸 English](SUPPORT.md) · [🇧🇷 Português](SUPPORT.pt-BR.md) · [🇪🇸 Español](SUPPORT.es.md)
+[🇺🇸 English](../../SUPPORT.md) · [🇧🇷 Português](SUPPORT.pt-BR.md) · [🇪🇸 Español](SUPPORT.es.md)
 
 </div>
 

@@ -20,24 +20,12 @@ python-study-guide/
 ├── .gitignore
 ├── AGENTS.md
 ├── AUTHORS.md
-├── AUTHORS.pt-BR.md
-├── AUTHORS.es.md
 ├── CODE_OF_CONDUCT.md
-├── CODE_OF_CONDUCT.pt-BR.md
-├── CODE_OF_CONDUCT.es.md
 ├── CONTRIBUTING.md
-├── CONTRIBUTING.pt-BR.md
-├── CONTRIBUTING.es.md
 ├── LICENSE
 ├── README.md
-├── README.pt-BR.md
-├── README.es.md
 ├── SECURITY.md
-├── SECURITY.pt-BR.md
-├── SECURITY.es.md
 ├── SUPPORT.md
-├── SUPPORT.pt-BR.md
-├── SUPPORT.es.md
 ├── assets/
 │   └── README.md
 ├── comments-and-documentation/
@@ -57,6 +45,19 @@ python-study-guide/
 │   │   ├── README.en.md
 │   │   ├── README.pt-BR.md
 │   │   └── README.es.md
+│   ├── localized/
+│   │   ├── AUTHORS.pt-BR.md
+│   │   ├── AUTHORS.es.md
+│   │   ├── CODE_OF_CONDUCT.pt-BR.md
+│   │   ├── CODE_OF_CONDUCT.es.md
+│   │   ├── CONTRIBUTING.pt-BR.md
+│   │   ├── CONTRIBUTING.es.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   ├── SECURITY.pt-BR.md
+│   │   ├── SECURITY.es.md
+│   │   ├── SUPPORT.pt-BR.md
+│   │   └── SUPPORT.es.md
 │   ├── project-structure.en.md
 │   ├── project-structure.pt-BR.md
 │   ├── project-structure.es.md
@@ -83,20 +84,20 @@ python-study-guide/
 
 - `.gitignore`: impede que artefatos locais do Python e outros arquivos gerados sejam versionados.
 - `AGENTS.md`: reúne instruções gerais do repositório para colaboradores e agentes de IA.
-- `AUTHORS...`: registra, nos três idiomas, a autoria, a manutenção e o crédito das contribuições.
-- `CODE_OF_CONDUCT...`: define o comportamento esperado, condutas inaceitáveis, orientações para relatos privados e princípios de aplicação proporcional.
-- `CONTRIBUTING...`: descreve o fluxo de contribuição e os critérios de qualidade nos três idiomas.
+- `AUTHORS.md`: registro canônico em inglês sobre autoria, manutenção e crédito das contribuições.
+- `CODE_OF_CONDUCT.md`: política canônica em inglês sobre conduta e relatos privados, reconhecida pelo GitHub.
+- `CONTRIBUTING.md`: fluxo canônico em inglês para contribuições e critérios de qualidade, reconhecido pelo GitHub.
 - `LICENSE`: contém a Licença MIT aplicada ao repositório.
-- `README...`: funciona como porta de entrada multilíngue do projeto.
-- `SECURITY...`: define o escopo de segurança contemplado, expectativas para pesquisa segura e orientações para relatos privados de vulnerabilidades.
-- `SUPPORT...`: direciona dúvidas e relatos ao canal adequado e define os limites do suporte oferecido pelo projeto.
+- `README.md`: porta de entrada canônica em inglês reconhecida pelo GitHub.
+- `SECURITY.md`: política canônica em inglês sobre segurança e relatos privados de vulnerabilidades, reconhecida pelo GitHub.
+- `SUPPORT.md`: orientação canônica em inglês sobre canais e limites do suporte do projeto.
 
 ## Guia de diretórios
 
 - `.github/`: configuração de colaboração do GitHub. O template de pull request solicita escopo, validação, alinhamento entre idiomas, declaração de assistência por IA, verificações de privacidade e observações para revisão. Os formulários de issue separam relatos de erros, sugestões de conteúdo, perguntas de aprendizagem, melhorias de tradução e solicitações seguras de um canal privado. O `config.yml` desativa issues em branco sem estrutura e direciona às orientações de contribuição, segurança e conduta.
 - `assets/`: política e futuro local de logos, banners, diagramas, capturas de tela e imagens de apresentação originais.
 - `comments-and-documentation/`: trilha sobre comentários, docstrings, nomes, marcadores de tarefas, decisões de logging, PEP 8 e código legível. O primeiro capítulo está disponível em `01-comments/`.
-- `docs/`: roadmaps, arquitetura do projeto, políticas e documentos multilíngues de referência. O diretório `ai-assisted-development/` explica o uso responsável de ChatGPT e Codex no fluxo do projeto.
+- `docs/`: roadmaps, arquitetura do projeto, políticas e documentos multilíngues de referência. O diretório `ai-assisted-development/` explica o uso responsável de ChatGPT e Codex no fluxo do projeto. O diretório `localized/` contém as versões em português brasileiro e espanhol dos documentos principais do projeto, autoria, contribuição, conduta, segurança e suporte. Manter somente os arquivos canônicos em inglês na raiz evita detecção ambígua das abas automáticas do GitHub sem reduzir a navegação multilíngue.
 - `exercises/`: futuras atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros instalados separadamente.
 - `functions/`: futura trilha sobre criação de funções, parâmetros, argumentos, retornos, escopo, type hints e colaboração entre funções.
@@ -109,9 +110,7 @@ python-study-guide/
 
 Os diretórios, nomes de arquivos, variáveis, funções, classes e demais identificadores do código usam inglês. Os documentos explicativos são oferecidos em inglês, português brasileiro e espanhol.
 
-O inglês é representado pelo `README.md` padrão quando o documento é uma porta de entrada principal do GitHub. Documentos dentro de `docs/` podem utilizar os sufixos explícitos `.en.md`, `.pt-BR.md` e `.es.md`.
-
-Os templates de colaboração do GitHub utilizam inglês como idioma padrão do repositório e permitem explicitamente que os envios sejam escritos em inglês, português brasileiro ou espanhol.
+O inglês utiliza os arquivos canônicos da raiz reconhecidos automaticamente pelo GitHub. As versões em português brasileiro e espanhol desses documentos ficam em `docs/localized/`. Seções de aprendizagem podem manter os READMEs traduzidos ao lado do capítulo em inglês quando isso melhorar a navegação.
 
 ## Regra de manutenção
 
