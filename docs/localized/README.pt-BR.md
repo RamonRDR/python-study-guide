@@ -1,8 +1,6 @@
 <div align="center">
 
-# Guia de Estudos de Python 🐍
-
-### Estude. Entenda. Pratique.
+<img src="../../assets/banner.svg" alt="Python Study Guide — Study. Understand. Practice." width="100%">
 
 [🇺🇸 English](../../README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
@@ -69,9 +67,15 @@ Explicações detalhadas:
 
 ## Status atual
 
-A fundação do projeto está em andamento. A documentação multilíngue, as orientações e os templates de contribuição, os padrões da comunidade, a autoria, a licença, a governança de IA, as validações automáticas e a estrutura escalável do repositório já estão disponíveis. Ainda faltam a identidade visual original e uma auditoria final da fundação para concluir a Fase 0.
+A fundação do projeto está em andamento. A documentação multilíngue, as orientações e os templates de contribuição, os padrões da comunidade, a autoria, a licença, a governança de IA, as validações automáticas, a identidade visual original e a estrutura escalável do repositório já estão disponíveis. Falta apenas uma auditoria final da fundação antes da conclusão da Fase 0.
 
 O primeiro capítulo completo de aprendizagem, [Comentários em Python](../../comments-and-documentation/01-comments/README.pt-BR.md), já está disponível. Sua seção está organizada e continuará futuramente com docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e legibilidade segundo a PEP 8. Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status atual de todas as fases.
+
+## Identidade visual
+
+O símbolo do projeto conecta Python, código, aprendizagem e relações entre conceitos por meio de uma serpente geométrica, chaves, um livro aberto e nós conectados.
+
+Consulte o [guia da identidade visual](../../assets/README.md) para conhecer os arquivos disponíveis, a paleta, os significados, as orientações de acessibilidade e as regras de uso.
 
 ## Desenvolvimento assistido por IA
 
