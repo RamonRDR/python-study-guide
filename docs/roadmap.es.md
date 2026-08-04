@@ -14,7 +14,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 
 | Fase | Estado | Resultado actual |
 |---|---|---|
-| 0. Base del proyecto | En progreso | La documentación principal, la gobernanza, la autoría, la licencia, la estructura, las plantillas de colaboración, los estándares de la comunidad y las validaciones automáticas ya están disponibles |
+| 0. Base del proyecto | En progreso | La documentación principal, la gobernanza, la autoría, la licencia, la estructura, las plantillas de colaboración, los estándares de la comunidad, las validaciones automáticas y la identidad visual original ya están disponibles |
 | 1. Fundamentos | Planificada | Contenido todavía no iniciado |
 | 2. Textos y números | Planificada | Contenido todavía no iniciado |
 | 3. Colecciones | Planificada | Contenido todavía no iniciado |
@@ -45,11 +45,11 @@ Las Fases 0 y 6 están activas porque la base del repositorio y una primera secc
 - [x] Guía de desarrollo responsable asistido por IA
 - [x] Roadmap y documentación de la estructura en tres idiomas
 - [x] Validaciones automáticas para archivos Python, ejemplos aprobados, enlaces internos y estructura del repositorio
+- [x] Identidad visual original y recursos del repositorio
 
 ### Pendiente antes de completarla
 
-- [ ] Identidad visual original y recursos del repositorio
-- [ ] Auditoría final de navegación, terminología y estado
+- [ ] Auditoría final de navegación, terminología, accesibilidad y estado
 - [ ] Marcar oficialmente la Fase 0 como completada
 
 ## Fase 1: Fundamentos

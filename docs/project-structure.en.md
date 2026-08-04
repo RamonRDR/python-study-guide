@@ -29,7 +29,13 @@ python-study-guide/
 ├── SECURITY.md
 ├── SUPPORT.md
 ├── assets/
-│   └── README.md
+│   ├── README.md
+│   ├── banner.png
+│   ├── banner.svg
+│   ├── logo-mark.png
+│   ├── logo.png
+│   ├── repository-preview.png
+│   └── repository-preview.svg
 ├── comments-and-documentation/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -103,7 +109,7 @@ python-study-guide/
 ## Directory guide
 
 - `.github/`: GitHub collaboration and automation configuration. The pull request template requests scope, verification, language alignment, AI-assistance disclosure, privacy checks, and reviewer notes. The issue forms separate bug reports, content suggestions, learning questions, translation improvements, and privacy-safe requests for a private reporting channel. `config.yml` disables unstructured blank issues for contributors and links to contribution, security, and conduct guidance. The `quality-checks.yml` workflow compiles Python files, runs quality-script regression tests and approved examples, checks internal Markdown paths, and validates repository structure on pull requests and pushes to `main`.
-- `assets/`: policy and future home for original logos, banners, diagrams, screenshots, and repository preview images.
+- `assets/`: original project visual identity, including final PNG files for the banner, primary transparent logo, compact logo mark, and repository preview. The directory also contains editable SVG compositions that embed raster artwork and therefore are not infinitely scalable, plus palette documentation, meaning, accessibility guidance, and usage rules.
 - `comments-and-documentation/`: learning path for comments, docstrings, naming, task markers, logging decisions, PEP 8, and readable code. The first chapter is available in `01-comments/`.
 - `docs/`: roadmaps, project architecture, policies, and multilingual reference documents. The `ai-assisted-development/` directory explains responsible use of ChatGPT and Codex in the project workflow. The `localized/` directory contains the Brazilian Portuguese and Spanish versions of the root-level project, authorship, contribution, conduct, security, and support documents. Keeping only canonical English community files at the repository root prevents ambiguous GitHub tab detection while preserving complete multilingual navigation.
 - `exercises/`: focused practice activities connected to learning chapters.

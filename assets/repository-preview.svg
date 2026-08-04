@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Python Study Guide repository preview</title>
+  <desc id="desc">Social preview with the project serpent and book emblem, project name, and Study. Understand. Practice. motto.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020b18"/>
+      <stop offset="0.58" stop-color="#061827"/>
+      <stop offset="1" stop-color="#03111d"/>
+    </linearGradient>
+    <linearGradient id="wordmark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#59e1ff"/>
+      <stop offset="0.5" stop-color="#00d0c9"/>
+      <stop offset="1" stop-color="#17c964"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00d0c9" stop-opacity="0.17"/>
+      <stop offset="1" stop-color="#17c964" stop-opacity="0.28"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#00d0c9" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#00d0c9" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" rx="36" fill="url(#background)"/>
+  <circle cx="286" cy="290" r="245" fill="url(#glow)" filter="url(#softGlow)"/>
+  <g opacity="0.22" stroke="#00d0c9" fill="none" stroke-width="2">
+    <path d="M0 480 C150 360 260 530 430 405 S755 360 930 430 S1125 500 1280 395"/>
+    <path d="M690 100 C860 190 1030 20 1280 145"/>
+  </g>
+  <g fill="#59e1ff" opacity="0.65">
+    <circle cx="72" cy="449" r="7"/><circle cx="185" cy="402" r="11"/><circle cx="438" cy="414" r="6"/>
+    <circle cx="786" cy="135" r="6"/><circle cx="1000" cy="81" r="9"/><circle cx="1164" cy="124" r="6"/>
+  </g>
+  <image x="72" y="77" width="440" height="440" href="logo-mark.png" xlink:href="logo-mark.png"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="535" y="230" fill="#ffffff" font-size="112" font-weight="800" letter-spacing="-4">Python</text>
+    <text x="535" y="345" fill="url(#wordmark)" font-size="101" font-weight="800" letter-spacing="-4">Study Guide</text>
+    <line x1="540" y1="390" x2="1163" y2="390" stroke="#00d0c9" stroke-width="5"/>
+    <circle cx="540" cy="390" r="8" fill="#03111d" stroke="#00d0c9" stroke-width="5"/>
+    <circle cx="1163" cy="390" r="8" fill="#03111d" stroke="#00d0c9" stroke-width="5"/>
+    <text x="543" y="462" fill="#ffffff" font-size="43" font-weight="500">Study.<tspan fill="#59e1ff"> Understand.</tspan><tspan fill="#a7f070"> Practice.</tspan></text>
+  </g>
+  <path d="M0 566 C245 515 425 626 650 569 C878 511 1051 582 1280 528 L1280 640 L0 640 Z" fill="url(#wave)"/>
+  <g transform="translate(614 533)" fill="none" stroke="#00d0c9" stroke-width="4" opacity="0.92">
+    <circle cx="0" cy="0" r="34"/><text x="-18" y="11" fill="#59e1ff" stroke="none" font-family="monospace" font-size="33" font-weight="700">{ }</text>
+    <circle cx="126" cy="0" r="34"/><path d="M111 -10 L129 0 L111 10 M131 13 H148" stroke="#a7f070" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="252" cy="0" r="34"/><path d="M235 -13 Q252 -18 252 -3 Q252 -18 269 -13 V14 Q252 9 252 20 Q252 9 235 14 Z" stroke="#17c964"/>
+    <circle cx="378" cy="0" r="34"/><circle cx="362" cy="8" r="5" fill="#00d0c9"/><circle cx="390" cy="-13" r="5" fill="#00d0c9"/><circle cx="396" cy="15" r="5" fill="#00d0c9"/><path d="M366 5 L386 -10 M367 11 L391 15"/>
+  </g>
+</svg>

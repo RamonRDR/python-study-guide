@@ -29,7 +29,13 @@ python-study-guide/
 ├── SECURITY.md
 ├── SUPPORT.md
 ├── assets/
-│   └── README.md
+│   ├── README.md
+│   ├── banner.png
+│   ├── banner.svg
+│   ├── logo-mark.png
+│   ├── logo.png
+│   ├── repository-preview.png
+│   └── repository-preview.svg
 ├── comments-and-documentation/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -103,7 +109,7 @@ python-study-guide/
 ## Guía de directorios
 
 - `.github/`: configuración de colaboración y automatización de GitHub. La plantilla de pull request solicita alcance, validación, alineación entre idiomas, declaración de asistencia por IA, verificaciones de privacidad y notas para la revisión. Los formularios de issue separan reportes de errores, sugerencias de contenido, preguntas de aprendizaje, mejoras de traducción y solicitudes seguras de un canal privado. `config.yml` desactiva las issues en blanco sin estructura y dirige a las orientaciones de contribución, seguridad y conducta. El workflow `quality-checks.yml` compila archivos Python, ejecuta pruebas de regresión de las herramientas de calidad y ejemplos aprobados, verifica rutas internas en Markdown y valida la estructura del repositorio en pull requests y envíos a `main`.
-- `assets/`: política y futuro espacio para logotipos, banners, diagramas, capturas de pantalla e imágenes de presentación originales.
+- `assets/`: identidad visual original del proyecto, con archivos PNG finales para el banner, logotipo principal transparente, símbolo compacto y vista previa del repositorio. El directorio también contiene composiciones SVG editables que incorporan arte raster y, por ello, no son infinitamente escalables, además de la documentación de la paleta, significados, orientaciones de accesibilidad y reglas de uso.
 - `comments-and-documentation/`: ruta sobre comentarios, docstrings, nombres, marcadores de tareas, decisiones de logging, PEP 8 y código legible. El primer capítulo está disponible en `01-comments/`.
 - `docs/`: roadmaps, arquitectura del proyecto, políticas y documentos multilingües de referencia. El directorio `ai-assisted-development/` explica el uso responsable de ChatGPT y Codex en el flujo del proyecto. El directorio `localized/` contiene las versiones en portugués de Brasil y español de los documentos principales del proyecto, autoría, contribución, conducta, seguridad y soporte. Mantener solamente los archivos canónicos en inglés en la raíz evita una detección ambigua de las pestañas automáticas de GitHub sin reducir la navegación multilingüe.
 - `exercises/`: futuras actividades prácticas relacionadas con los capítulos.

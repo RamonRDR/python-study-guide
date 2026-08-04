@@ -4,6 +4,8 @@
 
 ### Estudia. Comprende. Practica.
 
+<img src="../../assets/banner.png" alt="Identidad visual de Python Study Guide con una serpiente geométrica, llaves de código, un libro abierto y nodos de aprendizaje conectados." width="100%">
+
 [🇺🇸 English](../../README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 </div>
@@ -69,9 +71,15 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-La base del proyecto está en progreso. La documentación multilingüe, las orientaciones y plantillas de contribución, los estándares de la comunidad, la autoría, la licencia, la gobernanza de IA, las validaciones automáticas y la estructura escalable del repositorio ya están disponibles. Todavía faltan la identidad visual original y una auditoría final de la base para completar la Fase 0.
+La base del proyecto está en progreso. La documentación multilingüe, las orientaciones y plantillas de contribución, los estándares de la comunidad, la autoría, la licencia, la gobernanza de IA, las validaciones automáticas, la identidad visual original y la estructura escalable del repositorio ya están disponibles. Solo falta una auditoría final de la base antes de completar la Fase 0.
 
 El primer capítulo completo de aprendizaje, [Comentarios en Python](../../comments-and-documentation/01-comments/README.es.md), ya está disponible. Su sección está organizada y continuará más adelante con docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y legibilidad según PEP 8. Consulta el [roadmap](../roadmap.es.md) para seguir el estado actual de todas las fases.
+
+## Identidad visual
+
+El símbolo del proyecto conecta Python, código, aprendizaje y relaciones entre conceptos mediante una serpiente geométrica, llaves, un libro abierto y nodos conectados.
+
+Consulta la [guía de identidad visual](../../assets/README.md) para conocer los archivos disponibles, la paleta, los significados, las orientaciones de accesibilidad y las reglas de uso.
 
 ## Desarrollo asistido por IA
 
