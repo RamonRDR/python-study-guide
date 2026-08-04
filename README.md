@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Python Study Guide — Study. Understand. Practice." width="100%">
+<img src="assets/banner.png" alt="Python Study Guide — Study. Understand. Practice." width="100%">
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](docs/localized/README.pt-BR.md) · [🇪🇸 Español](docs/localized/README.es.md)
 
