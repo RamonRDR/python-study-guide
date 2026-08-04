@@ -107,7 +107,7 @@ def relative_link(source: Path, target: Path) -> str:
 
     source_parent = source.parent
     source_parts = source_parent.parts
-n    target_parts = target.parts
+    target_parts = target.parts
 
     shared_length = 0
     for source_part, target_part in zip(source_parts, target_parts):
