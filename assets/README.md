@@ -2,18 +2,20 @@
 
 This directory contains the original visual identity created for Python Study Guide.
 
-![Python Study Guide banner](banner.svg)
+![Python Study Guide banner](banner.png)
 
 ## Available assets
 
 | File | Purpose | Recommended use |
 |---|---|---|
-| `banner.svg` | Scalable project banner with the name and motto | Main README and project pages |
-| `banner.png` | Raster export of the project banner | Platforms that do not accept SVG |
+| `banner.png` | Final project banner with the name and motto | Main README and project pages |
 | `logo.png` | Primary logo with emblem and wordmark on a transparent background | Light backgrounds and presentations |
 | `logo-mark.png` | Compact emblem on a transparent background | Avatars, icons, diagrams, and small spaces |
-| `repository-preview.svg` | Scalable source for the social preview | Editing and future exports |
-| `repository-preview.png` | Social preview image | GitHub repository sharing preview |
+| `repository-preview.png` | Final social preview image | GitHub repository sharing preview |
+| `banner.svg` | Editable banner composition that embeds the raster emblem | Layout adjustments at the original design size |
+| `repository-preview.svg` | Editable social-preview composition that embeds the raster logo mark | Layout adjustments at the original design size |
+
+The SVG compositions are not fully vector artwork because they embed PNG versions of the emblem. They should not be treated as infinitely scalable sources. Use the final PNG files at their intended dimensions, and do not enlarge the SVG compositions beyond the resolution of their embedded raster elements.
 
 ## Meaning of the identity
 
@@ -44,9 +46,10 @@ The exported artwork may include smooth transitions between these colors.
 - Preserve the original proportions.
 - Do not stretch, rotate, recolor, or redraw the emblem.
 - Keep enough clear space around the mark and wordmark.
-- Prefer `logo.png` on light backgrounds and `banner.svg` or `banner.png` on dark presentation surfaces.
+- Prefer `logo.png` on light backgrounds and `banner.png` on dark presentation surfaces.
 - Use meaningful alternative text whenever an asset appears in documentation.
 - Check readability at the final display size before publishing.
+- Do not enlarge raster assets or SVG compositions beyond the resolution of their embedded images.
 - Do not place private, personal, proprietary, or confidential information inside project artwork.
 
 ## Creation and review
