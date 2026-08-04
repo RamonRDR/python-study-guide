@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="assets/banner.png" alt="Python Study Guide — Study. Understand. Practice." width="100%">
+# Python Study Guide 🐍
+
+### Study. Understand. Practice.
+
+<img src="assets/banner.png" alt="Python Study Guide visual identity with a geometric serpent, code braces, an open book, and connected learning nodes." width="100%">
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](docs/localized/README.pt-BR.md) · [🇪🇸 Español](docs/localized/README.es.md)
 
