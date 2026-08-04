@@ -1,8 +1,6 @@
 <div align="center">
 
-# Python Study Guide 🐍
-
-### Study. Understand. Practice.
+<img src="assets/banner.svg" alt="Python Study Guide — Study. Understand. Practice." width="100%">
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](docs/localized/README.pt-BR.md) · [🇪🇸 Español](docs/localized/README.es.md)
 
@@ -69,9 +67,15 @@ Detailed explanations:
 
 ## Current status
 
-The project foundation is in progress. Multilingual documentation, contribution guidance, collaboration templates, community standards, authorship, licensing, AI governance, automated quality checks, and the scalable repository structure are available. The original visual identity and a final foundation audit remain before Phase 0 is complete.
+The project foundation is in progress. Multilingual documentation, contribution guidance, collaboration templates, community standards, authorship, licensing, AI governance, automated quality checks, the original visual identity, and the scalable repository structure are available. A final foundation audit remains before Phase 0 is complete.
 
 The first complete learning chapter, [Comments in Python](comments-and-documentation/01-comments/README.md), is available. Its broader section is organized and will later continue with docstrings, meaningful names, task markers, comments versus logging, and PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
+
+## Visual identity
+
+The project emblem connects Python, code, learning, and relationships between concepts through a geometric serpent, braces, an open book, and connected nodes.
+
+See the [visual identity guide](assets/README.md) for available assets, palette, meaning, accessibility guidance, and usage rules.
 
 ## AI-assisted development
 
