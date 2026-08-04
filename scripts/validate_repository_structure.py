@@ -42,6 +42,13 @@ REQUIRED_FILES = (
     "README.md",
     "SECURITY.md",
     "SUPPORT.md",
+    "assets/README.md",
+    "assets/banner.png",
+    "assets/banner.svg",
+    "assets/logo-mark.png",
+    "assets/logo.png",
+    "assets/repository-preview.png",
+    "assets/repository-preview.svg",
     "comments-and-documentation/README.md",
     "comments-and-documentation/README.pt-BR.md",
     "comments-and-documentation/README.es.md",
@@ -100,7 +107,7 @@ def relative_link(source: Path, target: Path) -> str:
 
     source_parent = source.parent
     source_parts = source_parent.parts
-    target_parts = target.parts
+n    target_parts = target.parts
 
     shared_length = 0
     for source_part, target_part in zip(source_parts, target_parts):
