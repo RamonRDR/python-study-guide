@@ -14,7 +14,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 
 | Fase | Estado | Resultado actual |
 |---|---|---|
-| 0. Base del proyecto | En progreso | La documentación principal, la gobernanza, la autoría, la licencia, la estructura, las plantillas de colaboración, los estándares de la comunidad, las validaciones automáticas y la identidad visual original ya están disponibles |
+| 0. Base del proyecto | Completada | Base disponible, auditada y oficialmente completada |
 | 1. Fundamentos | Planificada | Contenido todavía no iniciado |
 | 2. Textos y números | Planificada | Contenido todavía no iniciado |
 | 3. Colecciones | Planificada | Contenido todavía no iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0 y 6 están activas porque la base del repositorio y una primera sección piloto de aprendizaje se desarrollaron en conjunto. Después de completar la Fase 0, la ruta podrá continuar por la Fase 1 sin perder los estándares ya establecidos en la Fase 6.
+La Fase 0 está completada, por lo que el desarrollo de la ruta puede continuar desde la Fase 1 sin perder los estándares ya establecidos en la sección piloto de la Fase 6. La Fase 6 permanece en progreso y podrá continuar en paralelo a la secuencia principal cuando corresponda.
 
 ## Fase 0: Base del proyecto
 
@@ -46,11 +46,12 @@ Las Fases 0 y 6 están activas porque la base del repositorio y una primera secc
 - [x] Roadmap y documentación de la estructura en tres idiomas
 - [x] Validaciones automáticas para archivos Python, ejemplos aprobados, enlaces internos y estructura del repositorio
 - [x] Identidad visual original y recursos del repositorio
+- [x] Auditoría final de navegación, terminología, accesibilidad y estado
+- [x] Marcar oficialmente la Fase 0 como completada
 
-### Pendiente antes de completarla
+### Seguimiento planificado y no bloqueante
 
-- [ ] Auditoría final de navegación, terminología, accesibilidad y estado
-- [ ] Marcar oficialmente la Fase 0 como completada
+- Refinar y reemplazar los recursos visuales con exportaciones de alta calidad después de completar el encuadre final del logotipo.
 
 ## Fase 1: Fundamentos
 
