@@ -71,7 +71,7 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-La base del proyecto está en progreso. La documentación multilingüe, las orientaciones y plantillas de contribución, los estándares de la comunidad, la autoría, la licencia, la gobernanza de IA, las validaciones automáticas, la identidad visual original y la estructura escalable del repositorio ya están disponibles. Solo falta una auditoría final de la base antes de completar la Fase 0.
+La base del proyecto está en progreso. La documentación multilingüe, las orientaciones y plantillas de contribución, los estándares de la comunidad, la autoría, la licencia, la gobernanza de IA, las validaciones automáticas, la identidad visual original, la estructura escalable del repositorio y la auditoría final de la base ya están disponibles. Solo falta la marca oficial de finalización de la Fase 0.
 
 El primer capítulo completo de aprendizaje, [Comentarios en Python](../../comments-and-documentation/01-comments/README.es.md), ya está disponible. Su sección está organizada y continuará más adelante con docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y legibilidad según PEP 8. Consulta el [roadmap](../roadmap.es.md) para seguir el estado actual de todas las fases.
 
