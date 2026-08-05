@@ -20,7 +20,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 3. Collections | Planned | Curriculum not started |
 | 4. Program flow | Planned | Curriculum not started |
 | 5. Functions | Planned | Curriculum not started |
-| 6. Comments, documentation, and clean code | In progress | The comments chapter is complete and the section learning path is organized |
+| 6. Comments, documentation, and clean code | In progress | The comments and docstrings chapters are complete, with four planned chapters remaining |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
 | 8. Standard library | Planned | Curriculum not started |
 | 9. External libraries | Planned | Curriculum not started |
@@ -103,7 +103,7 @@ See the [section learning path](../comments-and-documentation/README.md).
 - [x] When and why to comment
 - [x] When not to comment
 - [x] Useful and harmful comments
-- [ ] Docstrings
+- [x] Docstrings
 - [ ] Meaningful names and self-explanatory code
 - [ ] `TODO`, `FIXME`, `NOTE`, and related task markers
 - [ ] Comments versus logging

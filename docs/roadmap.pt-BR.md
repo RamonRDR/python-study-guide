@@ -20,7 +20,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 3. Coleções | Planejada | Conteúdo ainda não iniciado |
 | 4. Fluxo do programa | Planejada | Conteúdo ainda não iniciado |
 | 5. Funções | Planejada | Conteúdo ainda não iniciado |
-| 6. Comentários, documentação e código limpo | Em andamento | O capítulo de comentários está completo e a trilha da seção está organizada |
+| 6. Comentários, documentação e código limpo | Em andamento | Os capítulos de comentários e docstrings estão completos, restando quatro capítulos planejados |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
 | 8. Biblioteca padrão | Planejada | Conteúdo ainda não iniciado |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
@@ -103,7 +103,7 @@ Consulte a [trilha de aprendizagem da seção](../comments-and-documentation/REA
 - [x] Quando e por que comentar
 - [x] Quando não comentar
 - [x] Comentários úteis e prejudiciais
-- [ ] Docstrings
+- [x] Docstrings
 - [ ] Nomes significativos e código autoexplicativo
 - [ ] `TODO`, `FIXME`, `NOTE` e marcadores relacionados
 - [ ] Comentários versus logging

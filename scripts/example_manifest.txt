@@ -5,3 +5,6 @@
 comments-and-documentation/01-comments/examples/business_rule_comments.py
 comments-and-documentation/01-comments/examples/unnecessary_comments.py
 comments-and-documentation/01-comments/examples/useful_comments.py
+comments-and-documentation/02-docstrings/examples/class_docstrings.py
+comments-and-documentation/02-docstrings/examples/function_docstrings.py
+comments-and-documentation/02-docstrings/examples/inspect_docstrings.py

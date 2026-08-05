@@ -13,7 +13,7 @@ Esta sección enseña cómo hacer que el código Python sea más fácil de compr
 | Capítulo | Enfoque principal | Nivel | Estado |
 |---|---|---|---|
 | [01. Comentarios](01-comments/README.es.md) | Explicar decisiones y contextos no evidentes sin narrar el código | Principiante | Disponible |
-| 02. Docstrings | Documentar módulos, funciones, clases y métodos | Principiante | Planificado |
+| [02. Docstrings](02-docstrings/README.es.md) | Documentar módulos, funciones, clases y métodos | Principiante | Disponible |
 | 03. Nombres significativos | Hacer que el código exprese intención mediante nombres claros y pequeñas abstracciones | Principiante | Planificado |
 | 04. Marcadores de tareas | Utilizar `TODO`, `FIXME`, `NOTE` y convenciones relacionadas con responsabilidad | Principiante a intermedio | Planificado |
 | 05. Comentarios frente a logging | Separar las explicaciones del código fuente de la observación durante la ejecución | Intermedio | Planificado |
@@ -22,7 +22,7 @@ Esta sección enseña cómo hacer que el código Python sea más fácil de compr
 ## Orientación sobre requisitos previos
 
 - **01. Comentarios:** no tiene un requisito previo formal. La familiaridad básica con variables y condicionales ayuda, pero no es obligatoria.
-- **02. Docstrings:** la familiaridad básica con funciones, módulos, clases y métodos facilitará la comprensión de los ejemplos.
+- **02. Docstrings:** se recomienda una familiaridad básica con funciones. Los ejemplos de módulos, clases y métodos también pueden comprenderse conceptualmente antes de estudiar esos temas en profundidad.
 - **03. Nombres significativos:** se recomiendan conocimientos básicos sobre variables y funciones.
 - **04. Marcadores de tareas:** se recomienda completar el capítulo de comentarios. La familiaridad con issues y control de versiones ayuda.
 - **05. Comentarios frente a logging:** se recomienda completar el capítulo de comentarios. Los conocimientos básicos sobre ejecución de programas y excepciones serán útiles.
@@ -62,7 +62,7 @@ Al completar esta ruta, deberías ser capaz de:
 
 ## Capítulo actual
 
-Comienza con [Comentarios en Python](01-comments/README.es.md). El capítulo incluye explicaciones multilingües, ejemplos ejecutables, un ejercicio y un resumen de consulta rápida.
+Después de estudiar [Comentarios en Python](01-comments/README.es.md), continúa con [Docstrings en Python](02-docstrings/README.es.md). Ambos capítulos incluyen explicaciones multilingües, ejemplos ejecutables, un ejercicio y un resumen de consulta rápida.
 
 ## Estructura del directorio
 
@@ -71,14 +71,22 @@ comments-and-documentation/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-comments/
+├── 01-comments/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── business_rule_comments.py
+│       ├── unnecessary_comments.py
+│       └── useful_comments.py
+└── 02-docstrings/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── business_rule_comments.py
-        ├── unnecessary_comments.py
-        └── useful_comments.py
+        ├── class_docstrings.py
+        ├── function_docstrings.py
+        └── inspect_docstrings.py
 ```
 
 Los directorios de los próximos capítulos se añadirán cuando sus contenidos completos estén preparados. Evitamos placeholders vacíos para que cada directorio de capítulo versionado contenga material útil.
