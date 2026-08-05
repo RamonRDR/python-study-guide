@@ -40,14 +40,22 @@ python-study-guide/
 │   ├── README.md
 │   ├── README.pt-BR.md
 │   ├── README.es.md
-│   └── 01-comments/
+│   ├── 01-comments/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── business_rule_comments.py
+│   │       ├── unnecessary_comments.py
+│   │       └── useful_comments.py
+│   └── 02-docstrings/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── business_rule_comments.py
-│           ├── unnecessary_comments.py
-│           └── useful_comments.py
+│           ├── class_docstrings.py
+│           ├── function_docstrings.py
+│           └── inspect_docstrings.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   │   ├── README.en.md
@@ -91,7 +99,8 @@ python-study-guide/
 │   └── README.md
 └── tests/
     ├── README.md
-    └── test_check_internal_links.py
+    ├── test_check_internal_links.py
+    └── test_validate_repository_structure.py
 ```
 
 ## Root file guide
@@ -108,10 +117,10 @@ python-study-guide/
 
 ## Directory guide
 
-- `.github/`: GitHub collaboration and automation configuration. The pull request template requests scope, verification, language alignment, AI-assistance disclosure, privacy checks, and reviewer notes. The issue forms separate bug reports, content suggestions, learning questions, translation improvements, and privacy-safe requests for a private reporting channel. `config.yml` disables unstructured blank issues for contributors and links to contribution, security, and conduct guidance. The `quality-checks.yml` workflow compiles Python files, runs quality-script regression tests and approved examples, checks internal Markdown paths, and validates repository structure on pull requests and pushes to `main`.
-- `assets/`: original project visual identity, including final PNG files for the banner, primary transparent logo, compact logo mark, and repository preview. The directory also contains editable SVG compositions that embed raster artwork and therefore are not infinitely scalable, plus palette documentation, meaning, accessibility guidance, and usage rules.
-- `comments-and-documentation/`: learning path for comments, docstrings, naming, task markers, logging decisions, PEP 8, and readable code. The first chapter is available in `01-comments/`.
-- `docs/`: roadmaps, project architecture, policies, and multilingual reference documents. The `ai-assisted-development/` directory explains responsible use of ChatGPT and Codex in the project workflow. The `localized/` directory contains the Brazilian Portuguese and Spanish versions of the root-level project, authorship, contribution, conduct, security, and support documents. Keeping only canonical English community files at the repository root prevents ambiguous GitHub tab detection while preserving complete multilingual navigation.
+- `.github/`: GitHub collaboration and automation configuration. The pull request template requests scope, verification, language alignment, AI-assistance disclosure, privacy checks, and reviewer notes. Issue forms separate bug reports, content suggestions, learning questions, translation improvements, and privacy-safe requests for a private reporting channel. The quality workflow compiles Python files, runs regression tests and approved examples, checks internal Markdown paths, and validates repository structure.
+- `assets/`: original project visual identity, including the banner, primary logo, compact mark, repository preview, editable SVG compositions, palette documentation, accessibility guidance, and usage rules.
+- `comments-and-documentation/`: learning path for comments, docstrings, naming, task markers, logging decisions, PEP 8, and readable code. Complete chapters are available in `01-comments/` and `02-docstrings/`, each with English, Brazilian Portuguese, and Spanish explanations plus executable examples.
+- `docs/`: roadmaps, project architecture, policies, and multilingual reference documents. `ai-assisted-development/` explains responsible use of ChatGPT and Codex. `localized/` stores Brazilian Portuguese and Spanish versions of canonical root documents while keeping GitHub-recognized community files unambiguous.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages installed separately.
 - `functions/`: future learning path for function creation, parameters, arguments, return values, scope, type hints, and collaboration between functions.
@@ -125,7 +134,7 @@ python-study-guide/
 
 Repository directories, file names, variables, functions, classes, and other code identifiers use English. Explanatory documents are offered in English, Brazilian Portuguese, and Spanish.
 
-English uses the canonical root files recognized automatically by GitHub. Brazilian Portuguese and Spanish versions of those documents are stored in `docs/localized/`. Learning sections may keep their localized README files beside the English chapter when that improves navigation.
+English uses the canonical root files recognized automatically by GitHub. Brazilian Portuguese and Spanish versions of those documents are stored in `docs/localized/`. Learning sections may keep localized README files beside the English chapter when that improves navigation.
 
 ## Maintenance rule
 

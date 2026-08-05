@@ -73,7 +73,7 @@ Detailed explanations:
 
 The project foundation is complete. Phase 0 established the multilingual documentation, contribution workflow, collaboration templates, community standards, authorship, licensing, AI governance, automated quality checks, original visual identity, scalable repository structure, and final foundation audit. Curriculum development can now continue from Phase 1, while the pilot Phase 6 section remains in progress.
 
-The first complete learning chapter, [Comments in Python](comments-and-documentation/01-comments/README.md), is available. Its broader section is organized and will later continue with docstrings, meaningful names, task markers, comments versus logging, and PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
+Two complete learning chapters are available: [Comments in Python](comments-and-documentation/01-comments/README.md) and [Docstrings in Python](comments-and-documentation/02-docstrings/README.md). The section will continue with meaningful names, task markers, comments versus logging, and PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
 ## Visual identity
 

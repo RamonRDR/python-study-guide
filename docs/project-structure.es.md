@@ -40,14 +40,22 @@ python-study-guide/
 │   ├── README.md
 │   ├── README.pt-BR.md
 │   ├── README.es.md
-│   └── 01-comments/
+│   ├── 01-comments/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── business_rule_comments.py
+│   │       ├── unnecessary_comments.py
+│   │       └── useful_comments.py
+│   └── 02-docstrings/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── business_rule_comments.py
-│           ├── unnecessary_comments.py
-│           └── useful_comments.py
+│           ├── class_docstrings.py
+│           ├── function_docstrings.py
+│           └── inspect_docstrings.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   │   ├── README.en.md
@@ -91,7 +99,8 @@ python-study-guide/
 │   └── README.md
 └── tests/
     ├── README.md
-    └── test_check_internal_links.py
+    ├── test_check_internal_links.py
+    └── test_validate_repository_structure.py
 ```
 
 ## Guía de los archivos raíz
@@ -108,11 +117,11 @@ python-study-guide/
 
 ## Guía de directorios
 
-- `.github/`: configuración de colaboración y automatización de GitHub. La plantilla de pull request solicita alcance, validación, alineación entre idiomas, declaración de asistencia por IA, verificaciones de privacidad y notas para la revisión. Los formularios de issue separan reportes de errores, sugerencias de contenido, preguntas de aprendizaje, mejoras de traducción y solicitudes seguras de un canal privado. `config.yml` desactiva las issues en blanco sin estructura y dirige a las orientaciones de contribución, seguridad y conducta. El workflow `quality-checks.yml` compila archivos Python, ejecuta pruebas de regresión de las herramientas de calidad y ejemplos aprobados, verifica rutas internas en Markdown y valida la estructura del repositorio en pull requests y envíos a `main`.
-- `assets/`: identidad visual original del proyecto, con archivos PNG finales para el banner, logotipo principal transparente, símbolo compacto y vista previa del repositorio. El directorio también contiene composiciones SVG editables que incorporan arte raster y, por ello, no son infinitamente escalables, además de la documentación de la paleta, significados, orientaciones de accesibilidad y reglas de uso.
-- `comments-and-documentation/`: ruta sobre comentarios, docstrings, nombres, marcadores de tareas, decisiones de logging, PEP 8 y código legible. El primer capítulo está disponible en `01-comments/`.
-- `docs/`: roadmaps, arquitectura del proyecto, políticas y documentos multilingües de referencia. El directorio `ai-assisted-development/` explica el uso responsable de ChatGPT y Codex en el flujo del proyecto. El directorio `localized/` contiene las versiones en portugués de Brasil y español de los documentos principales del proyecto, autoría, contribución, conducta, seguridad y soporte. Mantener solamente los archivos canónicos en inglés en la raíz evita una detección ambigua de las pestañas automáticas de GitHub sin reducir la navegación multilingüe.
-- `exercises/`: futuras actividades prácticas relacionadas con los capítulos.
+- `.github/`: configuración de colaboración y automatización de GitHub. La plantilla de pull request solicita alcance, validación, alineación entre idiomas, declaración de asistencia por IA, verificaciones de privacidad y notas para la revisión. Los formularios de issue separan reportes de errores, sugerencias de contenido, preguntas de aprendizaje, mejoras de traducción y solicitudes seguras de un canal privado. El workflow de calidad compila archivos Python, ejecuta pruebas de regresión y ejemplos aprobados, verifica rutas internas en Markdown y valida la estructura del repositorio.
+- `assets/`: identidad visual original del proyecto, incluidos el banner, el logotipo principal, el símbolo compacto, la vista previa del repositorio, composiciones SVG editables, documentación de la paleta, orientaciones de accesibilidad y reglas de uso.
+- `comments-and-documentation/`: ruta sobre comentarios, docstrings, nombres, marcadores de tareas, decisiones de logging, PEP 8 y código legible. Los capítulos completos están disponibles en `01-comments/` y `02-docstrings/`, ambos con explicaciones en inglés, portugués de Brasil y español, además de ejemplos ejecutables.
+- `docs/`: roadmaps, arquitectura del proyecto, políticas y documentos multilingües de referencia. `ai-assisted-development/` explica el uso responsable de ChatGPT y Codex. `localized/` almacena las versiones en portugués de Brasil y español de los documentos canónicos de la raíz, manteniendo sin ambigüedad los archivos comunitarios reconocidos por GitHub.
+- `exercises/`: actividades prácticas relacionadas con los capítulos.
 - `external-libraries/`: futuras guías sobre paquetes de terceros instalados por separado.
 - `functions/`: futura ruta sobre creación de funciones, parámetros, argumentos, retornos, alcance, type hints y colaboración entre funciones.
 - `fundamentals/`: futura ruta sobre variables, tipos de datos, entrada, salida, strings, números, colecciones y control de flujo.

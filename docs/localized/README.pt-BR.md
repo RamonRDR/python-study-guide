@@ -73,7 +73,7 @@ Explicações detalhadas:
 
 A fundação do projeto está concluída. A Fase 0 estabeleceu a documentação multilíngue, o fluxo de contribuição, os templates de colaboração, os padrões da comunidade, a autoria, a licença, a governança de IA, as validações automáticas, a identidade visual original, a estrutura escalável do repositório e a auditoria final da fundação. O desenvolvimento da trilha pode agora continuar pela Fase 1, enquanto a seção-piloto da Fase 6 permanece em andamento.
 
-O primeiro capítulo completo de aprendizagem, [Comentários em Python](../../comments-and-documentation/01-comments/README.pt-BR.md), já está disponível. Sua seção está organizada e continuará futuramente com docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e legibilidade segundo a PEP 8. Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status atual de todas as fases.
+Dois capítulos completos de aprendizagem estão disponíveis: [Comentários em Python](../../comments-and-documentation/01-comments/README.pt-BR.md) e [Docstrings em Python](../../comments-and-documentation/02-docstrings/README.pt-BR.md). A seção continuará com nomes significativos, marcadores de tarefas, comentários versus logging e legibilidade segundo a PEP 8. Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status atual de todas as fases.
 
 ## Identidade visual
 
