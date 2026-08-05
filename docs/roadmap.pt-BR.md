@@ -14,7 +14,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 
 | Fase | Status | Resultado atual |
 |---|---|---|
-| 0. Fundação do projeto | Em andamento | Documentação principal, governança, autoria, licença, estrutura, templates de colaboração, padrões da comunidade, validações automáticas e identidade visual original já estão disponíveis |
+| 0. Fundação do projeto | Concluída | Fundação disponível, auditada e oficialmente concluída |
 | 1. Fundamentos | Planejada | Conteúdo ainda não iniciado |
 | 2. Textos e números | Planejada | Conteúdo ainda não iniciado |
 | 3. Coleções | Planejada | Conteúdo ainda não iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0 e 6 estão ativas porque a fundação do repositório e uma primeira seção-piloto de aprendizagem foram desenvolvidas em conjunto. Depois da conclusão da Fase 0, a trilha poderá seguir pela Fase 1 sem perder os padrões já estabelecidos na Fase 6.
+A Fase 0 está concluída, portanto o desenvolvimento da trilha pode continuar pela Fase 1 sem perder os padrões já estabelecidos na seção-piloto da Fase 6. A Fase 6 permanece em andamento e poderá continuar em paralelo à sequência principal quando for apropriado.
 
 ## Fase 0: Fundação do projeto
 
@@ -46,11 +46,12 @@ As Fases 0 e 6 estão ativas porque a fundação do repositório e uma primeira 
 - [x] Roadmap e documentação da estrutura em três idiomas
 - [x] Validações automáticas para arquivos Python, exemplos aprovados, links internos e estrutura do repositório
 - [x] Identidade visual original e recursos do repositório
+- [x] Auditoria final de navegação, terminologia, acessibilidade e status
+- [x] Marcação oficial da Fase 0 como concluída
 
-### Pendente antes da conclusão
+### Acompanhamento planejado e não bloqueante
 
-- [ ] Auditoria final de navegação, terminologia, acessibilidade e status
-- [ ] Marcação oficial da Fase 0 como concluída
+- Refinar e substituir os recursos visuais por exportações de alta qualidade após a conclusão do enquadramento final da logomarca.
 
 ## Fase 1: Fundamentos
 
