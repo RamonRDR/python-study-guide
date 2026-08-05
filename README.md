@@ -22,31 +22,29 @@ The explanations are available in English, Brazilian Portuguese, and Spanish.
 
 ## How to study
 
-Each chapter will follow a consistent structure:
+Each chapter follows a consistent structure:
 
 1. What it is
 2. Why it exists
-3. Syntax
+3. Syntax and conventions
 4. When to use it
 5. When to avoid it
 6. How it connects to other resources
-7. Basic example
-8. Practical example
-9. Common mistakes
-10. Exercise
+7. Basic and practical examples
+8. Common mistakes
+9. Exercise
+10. Review checklist
 11. Quick-reference summary
 
 ## Learning roadmap
 
-The guide will grow from Python fundamentals to functions, documentation, error handling, files, the standard library, external libraries, testing, and practical projects.
+The guide grows from Python fundamentals to functions, documentation, error handling, files, the standard library, external libraries, testing, and practical projects.
 
 - [Roadmap in English](docs/roadmap.en.md)
 - [Roadmap em Português](docs/roadmap.pt-BR.md)
 - [Roadmap en Español](docs/roadmap.es.md)
 
 ## Project structure
-
-The tree below highlights the main learning and support directories. The detailed project-structure documents also list governance files and currently available nested chapters.
 
 ```text
 python-study-guide/
@@ -71,9 +69,15 @@ Detailed explanations:
 
 ## Current status
 
-The project foundation is complete. Phase 0 established the multilingual documentation, contribution workflow, collaboration templates, community standards, authorship, licensing, AI governance, automated quality checks, original visual identity, scalable repository structure, and final foundation audit. Curriculum development can now continue from Phase 1, while the pilot Phase 6 section remains in progress.
+The project foundation is complete. Phase 0 established the multilingual documentation, contribution workflow, collaboration templates, community standards, authorship, licensing, AI governance, automated quality checks, original visual identity, scalable repository structure, and final foundation audit.
 
-Two complete learning chapters are available: [Comments in Python](comments-and-documentation/01-comments/README.md) and [Docstrings in Python](comments-and-documentation/02-docstrings/README.md). The section will continue with meaningful names, task markers, comments versus logging, and PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
+Three complete learning chapters are available:
+
+- [Comments in Python](comments-and-documentation/01-comments/README.md)
+- [Docstrings in Python](comments-and-documentation/02-docstrings/README.md)
+- [Meaningful Names and Self-Explanatory Code](comments-and-documentation/03-meaningful-names/README.md)
+
+Phase 6 will continue with task markers, comments versus logging, and PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
 ## Visual identity
 
@@ -87,19 +91,17 @@ This project uses AI tools, including ChatGPT and Codex, to support planning, re
 
 AI output is not accepted automatically. Every change must be understood, verified, and reviewed by the maintainer before it is incorporated into the `main` branch.
 
-Repository-wide working instructions for AI agents and contributors are recorded in [AGENTS.md](AGENTS.md).
-
-Read the [AI-assisted development guide](docs/ai-assisted-development/README.en.md) to learn how to write useful prompts, move from a ChatGPT conversation to a Codex implementation brief, review generated work, and protect private information.
+Repository-wide working instructions for AI agents and contributors are recorded in [AGENTS.md](AGENTS.md). Read the [AI-assisted development guide](docs/ai-assisted-development/README.en.md) for the responsible workflow.
 
 ## Authorship and maintenance
 
 Python Study Guide was created and is maintained by [Ramon Estevez Rodriguez](https://github.com/RamonRDR).
 
-Community contributions are welcome and remain credited through commit metadata, Git history, and pull requests. Read the [project authorship record](AUTHORS.md) for the complete attribution policy.
+Community contributions remain credited through commit metadata, Git history, and pull requests. Read the [project authorship record](AUTHORS.md) for the complete attribution policy.
 
 ## Community and support
 
-Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). The [Support Guide](SUPPORT.md) explains where different questions and requests belong. Potential vulnerabilities must follow the private process in the [Security Policy](SECURITY.md), not a public issue.
+Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). The [Support Guide](SUPPORT.md) explains where different questions and requests belong. Potential vulnerabilities must follow the private process in the [Security Policy](SECURITY.md).
 
 ## Contributing
 

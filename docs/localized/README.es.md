@@ -12,41 +12,39 @@
 
 Una guía práctica y multilingüe para estudiar Python, comprender cómo se conectan sus partes y aplicar los conceptos mediante ejemplos claros.
 
-Este proyecto está diseñado como una ruta de aprendizaje y también como una biblioteca de consulta rápida. En lugar de presentar comandos aislados, cada tema explicará qué hace un recurso, por qué existe, cuándo utilizarlo, cuándo evitarlo y cómo funciona junto con otras partes de Python.
+Este proyecto funciona como ruta de aprendizaje y también como biblioteca de consulta rápida. En lugar de presentar comandos aislados, cada tema explica qué hace un recurso, por qué existe, cuándo utilizarlo, cuándo evitarlo y cómo funciona junto con otras partes de Python.
 
 ## ¿Por qué el código está escrito en inglés?
 
 Los nombres de carpetas, archivos, variables, funciones, clases y otros identificadores están escritos en inglés. Esto ayuda a quienes están aprendiendo a familiarizarse con convenciones comunes en bibliotecas, documentación técnica y proyectos internacionales.
 
-Las explicaciones estarán disponibles en inglés, portugués de Brasil y español.
+Las explicaciones están disponibles en inglés, portugués de Brasil y español.
 
 ## Cómo estudiar
 
-Cada capítulo seguirá una estructura consistente:
+Cada capítulo sigue una estructura consistente:
 
 1. Qué es
 2. Por qué existe
-3. Sintaxis
+3. Sintaxis y convenciones
 4. Cuándo utilizarlo
 5. Cuándo evitarlo
 6. Cómo se conecta con otros recursos
-7. Ejemplo básico
-8. Ejemplo práctico
-9. Errores comunes
-10. Ejercicio
+7. Ejemplos básicos y prácticos
+8. Errores comunes
+9. Ejercicio
+10. Lista de revisión
 11. Resumen de consulta rápida
 
 ## Ruta de aprendizaje
 
-La guía crecerá desde los fundamentos de Python hasta funciones, documentación, manejo de errores, archivos, biblioteca estándar, bibliotecas externas, pruebas y proyectos prácticos.
+La guía crece desde los fundamentos de Python hasta funciones, documentación, manejo de errores, archivos, biblioteca estándar, bibliotecas externas, pruebas y proyectos prácticos.
 
 - [Roadmap en Español](../roadmap.es.md)
 - [Roadmap in English](../roadmap.en.md)
 - [Roadmap em Português](../roadmap.pt-BR.md)
 
 ## Estructura del proyecto
-
-El árbol siguiente destaca los principales directorios de aprendizaje y soporte. Los documentos detallados de estructura también muestran los archivos de gobernanza y los capítulos internos ya disponibles.
 
 ```text
 python-study-guide/
@@ -71,35 +69,39 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-La base del proyecto está completada. La Fase 0 estableció la documentación multilingüe, el flujo de contribución, las plantillas de colaboración, los estándares de la comunidad, la autoría, la licencia, la gobernanza de IA, las validaciones automáticas, la identidad visual original, la estructura escalable del repositorio y la auditoría final de la base. El desarrollo de la ruta puede continuar ahora desde la Fase 1, mientras la sección piloto de la Fase 6 permanece en progreso.
+La base del proyecto está completada. La Fase 0 estableció la documentación multilingüe, el flujo de contribución, las plantillas de colaboración, los estándares de la comunidad, la autoría, la licencia, la gobernanza de IA, las verificaciones automáticas, la identidad visual original, la estructura escalable y la auditoría final de la base.
 
-Hay dos capítulos completos de aprendizaje disponibles: [Comentarios en Python](../../comments-and-documentation/01-comments/README.es.md) y [Docstrings en Python](../../comments-and-documentation/02-docstrings/README.es.md). La sección continuará con nombres significativos, marcadores de tareas, comentarios frente a logging y legibilidad según PEP 8. Consulta el [roadmap](../roadmap.es.md) para seguir el estado actual de todas las fases.
+Hay tres capítulos completos de aprendizaje disponibles:
+
+- [Comentarios en Python](../../comments-and-documentation/01-comments/README.es.md)
+- [Docstrings en Python](../../comments-and-documentation/02-docstrings/README.es.md)
+- [Nombres Significativos y Código Autoexplicativo](../../comments-and-documentation/03-meaningful-names/README.es.md)
+
+La Fase 6 continuará con marcadores de tareas, comentarios frente a logging y legibilidad según PEP 8. Consulta el [roadmap](../roadmap.es.md) para seguir el estado de todas las fases.
 
 ## Identidad visual
 
 El símbolo del proyecto conecta Python, código, aprendizaje y relaciones entre conceptos mediante una serpiente geométrica, llaves, un libro abierto y nodos conectados.
 
-Consulta la [guía de identidad visual](../../assets/README.md) para conocer los archivos disponibles, la paleta, los significados, las orientaciones de accesibilidad y las reglas de uso.
+Consulta la [guía de identidad visual](../../assets/README.md) para conocer los archivos, la paleta, los significados, las orientaciones de accesibilidad y las reglas de uso.
 
 ## Desarrollo asistido por IA
 
 Este proyecto utiliza herramientas de inteligencia artificial, incluidas ChatGPT y Codex, para apoyar la planificación, la investigación, la redacción, la traducción, la revisión y el mantenimiento del repositorio.
 
-El contenido producido por IA no se acepta automáticamente. Cada cambio debe ser comprendido, verificado y revisado por la persona responsable del proyecto antes de incorporarse a la rama `main`.
+El contenido producido por IA no se acepta automáticamente. Cada cambio debe comprenderse, verificarse y revisarse antes de incorporarse a la rama `main`.
 
-Las instrucciones generales de trabajo para agentes de IA y colaboradores están registradas en [AGENTS.md](../../AGENTS.md).
-
-Lee la [guía de desarrollo asistido por IA](../ai-assisted-development/README.es.md) para aprender a escribir prompts útiles, transformar una conversación en ChatGPT en un brief de implementación para Codex, revisar el trabajo generado y proteger información privada.
+Las instrucciones generales están registradas en [AGENTS.md](../../AGENTS.md). Lee la [guía de desarrollo asistido por IA](../ai-assisted-development/README.es.md) para conocer el flujo responsable.
 
 ## Autoría y mantenimiento
 
 Python Study Guide fue creado y es mantenido por [Ramon Estevez Rodriguez](https://github.com/RamonRDR).
 
-Las contribuciones de la comunidad son bienvenidas y permanecen reconocidas en los metadatos de los commits, el historial de Git y los pull requests. Consulta el [registro de autoría del proyecto](AUTHORS.es.md) para conocer la política completa de atribución.
+Las contribuciones permanecen reconocidas en los metadatos de los commits, el historial de Git y los pull requests. Consulta el [registro de autoría del proyecto](AUTHORS.es.md).
 
 ## Comunidad y soporte
 
-La participación se rige por el [Código de Conducta](CODE_OF_CONDUCT.es.md). La [Guía de Soporte](SUPPORT.es.md) explica qué canal corresponde a cada pregunta o solicitud. Las posibles vulnerabilidades deben seguir el proceso privado de la [Política de Seguridad](SECURITY.es.md), no una issue pública.
+La participación se rige por el [Código de Conducta](CODE_OF_CONDUCT.es.md). La [Guía de Soporte](SUPPORT.es.md) explica qué canal corresponde a cada solicitud. Las posibles vulnerabilidades deben seguir el proceso privado de la [Política de Seguridad](SECURITY.es.md).
 
 ## Cómo contribuir
 

@@ -10,16 +10,9 @@ Este documento descreve a estrutura atualmente versionada no repositório. Diret
 python-study-guide/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
-│   │   ├── bug-report.yml
-│   │   ├── config.yml
-│   │   ├── content-suggestion.yml
-│   │   ├── learning-question.yml
-│   │   ├── private-contact-request.yml
-│   │   └── translation-improvement.yml
 │   ├── workflows/
 │   │   └── quality-checks.yml
 │   └── pull_request_template.md
-├── .gitignore
 ├── AGENTS.md
 ├── AUTHORS.md
 ├── CODE_OF_CONDUCT.md
@@ -29,13 +22,6 @@ python-study-guide/
 ├── SECURITY.md
 ├── SUPPORT.md
 ├── assets/
-│   ├── README.md
-│   ├── banner.png
-│   ├── banner.svg
-│   ├── logo-mark.png
-│   ├── logo.png
-│   ├── repository-preview.png
-│   └── repository-preview.svg
 ├── comments-and-documentation/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -48,32 +34,25 @@ python-study-guide/
 │   │       ├── business_rule_comments.py
 │   │       ├── unnecessary_comments.py
 │   │       └── useful_comments.py
-│   └── 02-docstrings/
+│   ├── 02-docstrings/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── class_docstrings.py
+│   │       ├── function_docstrings.py
+│   │       └── inspect_docstrings.py
+│   └── 03-meaningful-names/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── class_docstrings.py
-│           ├── function_docstrings.py
-│           └── inspect_docstrings.py
+│           ├── booleans_and_units.py
+│           ├── refactor_for_intent.py
+│           └── vague_and_clear_names.py
 ├── docs/
 │   ├── ai-assisted-development/
-│   │   ├── README.en.md
-│   │   ├── README.pt-BR.md
-│   │   └── README.es.md
 │   ├── localized/
-│   │   ├── AUTHORS.pt-BR.md
-│   │   ├── AUTHORS.es.md
-│   │   ├── CODE_OF_CONDUCT.pt-BR.md
-│   │   ├── CODE_OF_CONDUCT.es.md
-│   │   ├── CONTRIBUTING.pt-BR.md
-│   │   ├── CONTRIBUTING.es.md
-│   │   ├── README.pt-BR.md
-│   │   ├── README.es.md
-│   │   ├── SECURITY.pt-BR.md
-│   │   ├── SECURITY.es.md
-│   │   ├── SUPPORT.pt-BR.md
-│   │   └── SUPPORT.es.md
 │   ├── project-structure.en.md
 │   ├── project-structure.pt-BR.md
 │   ├── project-structure.es.md
@@ -81,61 +60,60 @@ python-study-guide/
 │   ├── roadmap.pt-BR.md
 │   └── roadmap.es.md
 ├── exercises/
-│   └── README.md
 ├── external-libraries/
-│   └── README.md
 ├── functions/
-│   └── README.md
 ├── fundamentals/
-│   └── README.md
 ├── practical-projects/
-│   └── README.md
 ├── scripts/
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
 │   ├── run_examples.py
 │   └── validate_repository_structure.py
 ├── standard-library/
-│   └── README.md
 └── tests/
-    ├── README.md
-    ├── test_check_internal_links.py
-    └── test_validate_repository_structure.py
 ```
 
 ## Guia dos arquivos da raiz
 
-- `.gitignore`: impede que artefatos locais do Python e outros arquivos gerados sejam versionados.
-- `AGENTS.md`: reúne instruções gerais do repositório para colaboradores e agentes de IA.
-- `AUTHORS.md`: registro canônico em inglês sobre autoria, manutenção e crédito das contribuições.
-- `CODE_OF_CONDUCT.md`: política canônica em inglês sobre conduta e relatos privados, reconhecida pelo GitHub.
-- `CONTRIBUTING.md`: fluxo canônico em inglês para contribuições e critérios de qualidade, reconhecido pelo GitHub.
-- `LICENSE`: contém a Licença MIT aplicada ao repositório.
-- `README.md`: porta de entrada canônica em inglês reconhecida pelo GitHub.
-- `SECURITY.md`: política canônica em inglês sobre segurança e relatos privados de vulnerabilidades, reconhecida pelo GitHub.
-- `SUPPORT.md`: orientação canônica em inglês sobre canais e limites do suporte do projeto.
+- `AGENTS.md`: instruções gerais do repositório para colaboradores e agentes de IA.
+- `AUTHORS.md`: registro canônico de autoria, manutenção e crédito das contribuições.
+- `CODE_OF_CONDUCT.md`: política de conduta da comunidade e relatos privados reconhecida pelo GitHub.
+- `CONTRIBUTING.md`: fluxo de contribuição e critérios de qualidade.
+- `LICENSE`: Licença MIT aplicada ao repositório.
+- `README.md`: porta de entrada canônica em inglês.
+- `SECURITY.md`: escopo de segurança e política de relato privado de vulnerabilidades.
+- `SUPPORT.md`: orientação sobre canais e limites do suporte.
 
 ## Guia de diretórios
 
-- `.github/`: configuração de colaboração e automação do GitHub. O template de pull request solicita escopo, validação, alinhamento entre idiomas, declaração de assistência por IA, verificações de privacidade e observações para revisão. Os formulários de issue separam relatos de erros, sugestões de conteúdo, perguntas de aprendizagem, melhorias de tradução e solicitações seguras de um canal privado. O workflow de qualidade compila arquivos Python, executa testes de regressão e exemplos aprovados, verifica caminhos internos em Markdown e valida a estrutura do repositório.
-- `assets/`: identidade visual original do projeto, incluindo banner, logo principal, símbolo compacto, prévia do repositório, composições SVG editáveis, documentação da paleta, orientações de acessibilidade e regras de uso.
-- `comments-and-documentation/`: trilha sobre comentários, docstrings, nomes, marcadores de tarefas, decisões de logging, PEP 8 e código legível. Os capítulos completos estão disponíveis em `01-comments/` e `02-docstrings/`, ambos com explicações em inglês, português brasileiro e espanhol, além de exemplos executáveis.
-- `docs/`: roadmaps, arquitetura do projeto, políticas e documentos multilíngues de referência. `ai-assisted-development/` explica o uso responsável de ChatGPT e Codex. `localized/` armazena as versões em português brasileiro e espanhol dos documentos canônicos da raiz, mantendo sem ambiguidade os arquivos comunitários reconhecidos pelo GitHub.
+- `.github/`: configuração de colaboração, formulários de issue, template de pull request e workflow do GitHub Actions.
+- `assets/`: identidade visual original, arquivos exportados, composições editáveis, paleta, acessibilidade e regras de uso.
+- `comments-and-documentation/`: trilha da Fase 6. Há capítulos completos sobre comentários, docstrings e nomes significativos, cada um em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
+- `docs/`: roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
-- `external-libraries/`: futuros guias sobre pacotes de terceiros instalados separadamente.
-- `functions/`: futura trilha sobre criação de funções, parâmetros, argumentos, retornos, escopo, type hints e colaboração entre funções.
-- `fundamentals/`: futura trilha sobre variáveis, tipos de dados, entrada, saída, strings, números, coleções e controle de fluxo.
-- `practical-projects/`: futuros projetos pequenos que combinarão vários conceitos.
-- `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions para executar exemplos aprovados, verificar links internos e validar a estrutura do repositório.
+- `external-libraries/`: futuros guias sobre pacotes de terceiros.
+- `functions/`: futura trilha sobre funções, parâmetros, retornos, escopo e type hints.
+- `fundamentals/`: futura trilha sobre variáveis, tipos, entrada, saída, textos, números, coleções e controle de fluxo.
+- `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
+- `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
 - `standard-library/`: futuros guias sobre módulos distribuídos com o Python.
-- `tests/`: testes de regressão das ferramentas de qualidade do repositório e, futuramente, testes automatizados dos exemplos educacionais e projetos práticos.
+- `tests/`: testes de regressão das ferramentas de qualidade e, futuramente, do conteúdo educacional.
+
+## Regra dos diretórios de capítulos
+
+Cada capítulo de aprendizagem contém:
+
+- `README.md` canônico em inglês;
+- READMEs localizados em português brasileiro e espanhol;
+- diretório `examples/` quando exemplos executáveis melhoram o tema;
+- somente material completo e revisável, sem placeholders vazios.
 
 ## Convenções de nomes e idiomas
 
-Os diretórios, nomes de arquivos, variáveis, funções, classes e demais identificadores do código usam inglês. Os documentos explicativos são oferecidos em inglês, português brasileiro e espanhol.
+Diretórios, arquivos, variáveis, funções, classes e demais identificadores usam inglês. Os documentos explicativos são oferecidos em inglês, português brasileiro e espanhol.
 
-O inglês utiliza os arquivos canônicos da raiz reconhecidos automaticamente pelo GitHub. As versões em português brasileiro e espanhol desses documentos ficam em `docs/localized/`. Seções de aprendizagem podem manter os READMEs traduzidos ao lado do capítulo em inglês quando isso melhorar a navegação.
+O inglês utiliza arquivos canônicos reconhecidos automaticamente pelo GitHub. As versões em português brasileiro e espanhol dos documentos principais ficam em `docs/localized/`. Os capítulos mantêm os READMEs localizados junto da versão em inglês para navegação direta.
 
 ## Regra de manutenção
 
-Um pull request que mover, criar ou remover caminhos importantes deverá atualizar esta estrutura na mesma alteração. Diretórios de capítulos planejados deverão ser adicionados somente quando contiverem material útil, e não como placeholders vazios.
+Um pull request que mover, criar ou remover caminhos importantes deve atualizar esta estrutura na mesma alteração. Novos exemplos executáveis também devem ser revisados para execução automática e registrados em `scripts/example_manifest.txt` quando aprovados para o CI.

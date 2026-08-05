@@ -8,3 +8,6 @@ comments-and-documentation/01-comments/examples/useful_comments.py
 comments-and-documentation/02-docstrings/examples/class_docstrings.py
 comments-and-documentation/02-docstrings/examples/function_docstrings.py
 comments-and-documentation/02-docstrings/examples/inspect_docstrings.py
+comments-and-documentation/03-meaningful-names/examples/booleans_and_units.py
+comments-and-documentation/03-meaningful-names/examples/refactor_for_intent.py
+comments-and-documentation/03-meaningful-names/examples/vague_and_clear_names.py
