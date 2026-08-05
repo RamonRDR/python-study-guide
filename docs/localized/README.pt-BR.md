@@ -71,7 +71,7 @@ Explicações detalhadas:
 
 ## Status atual
 
-A fundação do projeto está em andamento. A documentação multilíngue, as orientações e os templates de contribuição, os padrões da comunidade, a autoria, a licença, a governança de IA, as validações automáticas, a identidade visual original e a estrutura escalável do repositório já estão disponíveis. Falta apenas uma auditoria final da fundação antes da conclusão da Fase 0.
+A fundação do projeto está em andamento. A documentação multilíngue, as orientações e os templates de contribuição, os padrões da comunidade, a autoria, a licença, a governança de IA, as validações automáticas, a identidade visual original, a estrutura escalável do repositório e a auditoria final da fundação já estão disponíveis. Falta apenas a marcação oficial de conclusão da Fase 0.
 
 O primeiro capítulo completo de aprendizagem, [Comentários em Python](../../comments-and-documentation/01-comments/README.pt-BR.md), já está disponível. Sua seção está organizada e continuará futuramente com docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e legibilidade segundo a PEP 8. Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status atual de todas as fases.
 
