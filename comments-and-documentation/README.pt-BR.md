@@ -1,6 +1,6 @@
 <div align="center">
 
-# Comentários, documentação e legibilidade
+# Comentários, Documentação e Legibilidade
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
@@ -14,7 +14,7 @@ Esta seção ensina como tornar o código Python mais fácil de entender, explic
 |---|---|---|---|
 | [01. Comentários](01-comments/README.pt-BR.md) | Explicar decisões e contextos não evidentes sem narrar o código | Iniciante | Disponível |
 | [02. Docstrings](02-docstrings/README.pt-BR.md) | Documentar módulos, funções, classes e métodos | Iniciante | Disponível |
-| 03. Nomes significativos | Fazer o código expressar intenção por meio de nomes claros e pequenas abstrações | Iniciante | Planejado |
+| [03. Nomes significativos](03-meaningful-names/README.pt-BR.md) | Fazer o código expressar intenção por meio de nomes claros e pequenas abstrações | Iniciante | Disponível |
 | 04. Marcadores de tarefas | Utilizar `TODO`, `FIXME`, `NOTE` e convenções relacionadas com responsabilidade | Iniciante a intermediário | Planejado |
 | 05. Comentários versus logging | Separar explicações no código-fonte da observação durante a execução | Intermediário | Planejado |
 | 06. PEP 8 e legibilidade | Aplicar orientações de estilo compreendendo seus objetivos e limites | Iniciante a intermediário | Planejado |
@@ -23,7 +23,7 @@ Esta seção ensina como tornar o código Python mais fácil de entender, explic
 
 - **01. Comentários:** não possui pré-requisito formal. Familiaridade básica com variáveis e condicionais ajuda, mas não é obrigatória.
 - **02. Docstrings:** recomenda-se familiaridade básica com funções. Os exemplos de módulos, classes e métodos também podem ser compreendidos conceitualmente antes que esses temas sejam estudados em profundidade.
-- **03. Nomes significativos:** conhecimentos básicos sobre variáveis e funções são recomendados.
+- **03. Nomes significativos:** recomenda-se familiaridade básica com variáveis e funções.
 - **04. Marcadores de tarefas:** recomenda-se concluir o capítulo de comentários. Familiaridade com issues e controle de versão ajuda.
 - **05. Comentários versus logging:** recomenda-se concluir o capítulo de comentários. Conhecimentos básicos sobre execução de programas e exceções serão úteis.
 - **06. PEP 8 e legibilidade:** recomenda-se conhecer a sintaxe básica do Python e concluir os capítulos de comentários e nomes significativos.
@@ -62,7 +62,7 @@ Ao concluir esta trilha, você deverá ser capaz de:
 
 ## Capítulo atual
 
-Depois de estudar [Comentários em Python](01-comments/README.pt-BR.md), continue com [Docstrings em Python](02-docstrings/README.pt-BR.md). Os dois capítulos incluem explicações multilíngues, exemplos executáveis, exercício e resumo para consulta rápida.
+Depois de estudar [Comentários em Python](01-comments/README.pt-BR.md) e [Docstrings em Python](02-docstrings/README.pt-BR.md), continue com [Nomes Significativos e Código Autoexplicativo](03-meaningful-names/README.pt-BR.md). Todos os capítulos disponíveis incluem explicações multilíngues, exemplos executáveis, exercício e resumo para consulta rápida.
 
 ## Estrutura do diretório
 
@@ -79,14 +79,22 @@ comments-and-documentation/
 │       ├── business_rule_comments.py
 │       ├── unnecessary_comments.py
 │       └── useful_comments.py
-└── 02-docstrings/
+├── 02-docstrings/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── class_docstrings.py
+│       ├── function_docstrings.py
+│       └── inspect_docstrings.py
+└── 03-meaningful-names/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── class_docstrings.py
-        ├── function_docstrings.py
-        └── inspect_docstrings.py
+        ├── booleans_and_units.py
+        ├── refactor_for_intent.py
+        └── vague_and_clear_names.py
 ```
 
 Os diretórios dos próximos capítulos serão adicionados quando seus conteúdos completos forem preparados. Evitamos placeholders vazios para que todo diretório de capítulo versionado contenha material útil.

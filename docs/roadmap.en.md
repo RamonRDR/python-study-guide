@@ -20,13 +20,13 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 3. Collections | Planned | Curriculum not started |
 | 4. Program flow | Planned | Curriculum not started |
 | 5. Functions | Planned | Curriculum not started |
-| 6. Comments, documentation, and clean code | In progress | The comments and docstrings chapters are complete, with four planned chapters remaining |
+| 6. Comments, documentation, and clean code | In progress | Comments, docstrings, and meaningful names are complete; three chapters remain |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
 | 8. Standard library | Planned | Curriculum not started |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phase 0 is complete, so curriculum development can continue from Phase 1 without losing the standards already established in the pilot Phase 6 section. Phase 6 remains in progress and will continue alongside the main learning sequence when appropriate.
+Phase 0 is complete. Phase 6 is currently being completed as the pilot educational section before the main sequence begins with Phase 1.
 
 ## Phase 0: Project foundation
 
@@ -51,7 +51,7 @@ Phase 0 is complete, so curriculum development can continue from Phase 1 without
 
 ### Planned non-blocking follow-up
 
-- Refine and replace the visual assets with high-quality exports after the final logo framing is complete.
+- Refine and replace visual assets with high-quality exports after the final logo framing is complete.
 
 ## Phase 1: Fundamentals
 
@@ -104,7 +104,7 @@ See the [section learning path](../comments-and-documentation/README.md).
 - [x] When not to comment
 - [x] Useful and harmful comments
 - [x] Docstrings
-- [ ] Meaningful names and self-explanatory code
+- [x] Meaningful names and self-explanatory code
 - [ ] `TODO`, `FIXME`, `NOTE`, and related task markers
 - [ ] Comments versus logging
 - [ ] PEP 8 and readability

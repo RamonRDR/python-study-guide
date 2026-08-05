@@ -2,7 +2,7 @@
 
 [🇺🇸 English](roadmap.en.md) · [🇧🇷 Português](roadmap.pt-BR.md) · [🇪🇸 Español](roadmap.es.md)
 
-Este roadmap acompanha tanto a trilha educacional quanto a fundação do repositório que a sustenta. A numeração das fases representa a sequência de aprendizagem pretendida, mas o trabalho no repositório pode antecipar a preparação de seções posteriores quando isso ajudar a estabelecer padrões úteis para todo o projeto.
+Este roadmap acompanha tanto a trilha educacional quanto a fundação do repositório que a sustenta. A numeração das fases representa a sequência de aprendizagem pretendida, mas o trabalho no repositório pode antecipar seções posteriores quando isso ajudar a estabelecer padrões úteis.
 
 ## Legenda de status
 
@@ -20,13 +20,13 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 3. Coleções | Planejada | Conteúdo ainda não iniciado |
 | 4. Fluxo do programa | Planejada | Conteúdo ainda não iniciado |
 | 5. Funções | Planejada | Conteúdo ainda não iniciado |
-| 6. Comentários, documentação e código limpo | Em andamento | Os capítulos de comentários e docstrings estão completos, restando quatro capítulos planejados |
+| 6. Comentários, documentação e código limpo | Em andamento | Comentários, docstrings e nomes significativos estão completos; restam três capítulos |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
 | 8. Biblioteca padrão | Planejada | Conteúdo ainda não iniciado |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-A Fase 0 está concluída, portanto o desenvolvimento da trilha pode continuar pela Fase 1 sem perder os padrões já estabelecidos na seção-piloto da Fase 6. A Fase 6 permanece em andamento e poderá continuar em paralelo à sequência principal quando for apropriado.
+A Fase 0 está concluída. A Fase 6 está sendo finalizada como seção educacional-piloto antes do início da sequência principal pela Fase 1.
 
 ## Fase 0: Fundação do projeto
 
@@ -44,7 +44,7 @@ A Fase 0 está concluída, portanto o desenvolvimento da trilha pode continuar p
 - [x] Instruções do repositório para colaboradores e agentes de IA
 - [x] Guia de desenvolvimento responsável assistido por IA
 - [x] Roadmap e documentação da estrutura em três idiomas
-- [x] Validações automáticas para arquivos Python, exemplos aprovados, links internos e estrutura do repositório
+- [x] Validações automáticas para arquivos Python, exemplos aprovados, links internos e estrutura
 - [x] Identidade visual original e recursos do repositório
 - [x] Auditoria final de navegação, terminologia, acessibilidade e status
 - [x] Marcação oficial da Fase 0 como concluída
@@ -104,7 +104,7 @@ Consulte a [trilha de aprendizagem da seção](../comments-and-documentation/REA
 - [x] Quando não comentar
 - [x] Comentários úteis e prejudiciais
 - [x] Docstrings
-- [ ] Nomes significativos e código autoexplicativo
+- [x] Nomes significativos e código autoexplicativo
 - [ ] `TODO`, `FIXME`, `NOTE` e marcadores relacionados
 - [ ] Comentários versus logging
 - [ ] PEP 8 e legibilidade

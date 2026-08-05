@@ -2,7 +2,7 @@
 
 [🇺🇸 English](roadmap.en.md) · [🇧🇷 Português](roadmap.pt-BR.md) · [🇪🇸 Español](roadmap.es.md)
 
-Este roadmap acompaña tanto la ruta educativa como la base del repositorio que la sostiene. La numeración de las fases representa la secuencia de aprendizaje prevista, pero el trabajo del repositorio puede anticipar la preparación de secciones posteriores cuando eso ayude a establecer estándares útiles para todo el proyecto.
+Este roadmap acompaña tanto la ruta educativa como la base del repositorio que la sostiene. La numeración de las fases representa la secuencia de aprendizaje prevista, pero el trabajo del repositorio puede anticipar secciones posteriores cuando eso ayude a establecer estándares útiles.
 
 ## Leyenda de estados
 
@@ -20,13 +20,13 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 3. Colecciones | Planificada | Contenido todavía no iniciado |
 | 4. Flujo del programa | Planificada | Contenido todavía no iniciado |
 | 5. Funciones | Planificada | Contenido todavía no iniciado |
-| 6. Comentarios, documentación y código limpio | En progreso | Los capítulos de comentarios y docstrings están completos y quedan cuatro capítulos planificados |
+| 6. Comentarios, documentación y código limpio | En progreso | Comentarios, docstrings y nombres significativos están completos; quedan tres capítulos |
 | 7. Errores, archivos y módulos | Planificada | Contenido todavía no iniciado |
 | 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-La Fase 0 está completada, por lo que el desarrollo de la ruta puede continuar desde la Fase 1 sin perder los estándares ya establecidos en la sección piloto de la Fase 6. La Fase 6 permanece en progreso y podrá continuar en paralelo a la secuencia principal cuando corresponda.
+La Fase 0 está completada. La Fase 6 se está finalizando como sección educativa piloto antes de comenzar la secuencia principal con la Fase 1.
 
 ## Fase 0: Base del proyecto
 
@@ -44,7 +44,7 @@ La Fase 0 está completada, por lo que el desarrollo de la ruta puede continuar 
 - [x] Instrucciones del repositorio para colaboradores y agentes de IA
 - [x] Guía de desarrollo responsable asistido por IA
 - [x] Roadmap y documentación de la estructura en tres idiomas
-- [x] Validaciones automáticas para archivos Python, ejemplos aprobados, enlaces internos y estructura del repositorio
+- [x] Verificaciones automáticas para archivos Python, ejemplos aprobados, enlaces internos y estructura
 - [x] Identidad visual original y recursos del repositorio
 - [x] Auditoría final de navegación, terminología, accesibilidad y estado
 - [x] Marcar oficialmente la Fase 0 como completada
@@ -104,7 +104,7 @@ Consulta la [ruta de aprendizaje de la sección](../comments-and-documentation/R
 - [x] Cuándo no comentar
 - [x] Comentarios útiles y perjudiciales
 - [x] Docstrings
-- [ ] Nombres significativos y código autoexplicativo
+- [x] Nombres significativos y código autoexplicativo
 - [ ] `TODO`, `FIXME`, `NOTE` y marcadores relacionados
 - [ ] Comentarios frente a logging
 - [ ] PEP 8 y legibilidad

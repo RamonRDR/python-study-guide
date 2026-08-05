@@ -16,6 +16,7 @@ XLINK_HREF = "{http://www.w3.org/1999/xlink}href"
 REQUIRED_DIRECTORIES = (
     ".github/ISSUE_TEMPLATE", ".github/workflows", "assets",
     "comments-and-documentation/01-comments/examples",
+    "comments-and-documentation/03-meaningful-names/examples",
     "docs/ai-assisted-development", "docs/localized", "exercises",
     "external-libraries", "functions", "fundamentals",
     "practical-projects", "scripts", "standard-library", "tests",
@@ -38,6 +39,9 @@ REQUIRED_FILES = (
     "comments-and-documentation/01-comments/README.md",
     "comments-and-documentation/01-comments/README.pt-BR.md",
     "comments-and-documentation/01-comments/README.es.md",
+    "comments-and-documentation/03-meaningful-names/README.md",
+    "comments-and-documentation/03-meaningful-names/README.pt-BR.md",
+    "comments-and-documentation/03-meaningful-names/README.es.md",
     "docs/project-structure.en.md", "docs/project-structure.pt-BR.md",
     "docs/project-structure.es.md", "docs/roadmap.en.md",
     "docs/roadmap.pt-BR.md", "docs/roadmap.es.md",
