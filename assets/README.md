@@ -8,14 +8,14 @@ This directory contains the original visual identity created for Python Study Gu
 
 | File | Purpose | Recommended use |
 |---|---|---|
-| `banner.png` | Final project banner with the name and motto | Main README and project pages |
+| `banner.png` | Current project banner with the name and motto | Main README and project pages |
 | `logo.png` | Primary logo with emblem and wordmark on a transparent background | Light backgrounds and presentations |
 | `logo-mark.png` | Compact emblem on a transparent background | Avatars, icons, diagrams, and small spaces |
-| `repository-preview.png` | Final social preview image | GitHub repository sharing preview |
-| `banner.svg` | Editable banner composition that embeds the raster emblem | Layout adjustments at the original design size |
-| `repository-preview.svg` | Editable social-preview composition that embeds the raster logo mark | Layout adjustments at the original design size |
+| `repository-preview.png` | Current social preview image | GitHub repository sharing preview |
+| `banner.svg` | Editable banner composition that embeds the raster emblem as Base64 data | Layout adjustments at the original design size |
+| `repository-preview.svg` | Editable social-preview composition that references `logo-mark.png` as a local file | Layout adjustments at the original design size |
 
-The SVG compositions are not fully vector artwork because they embed PNG versions of the emblem. They should not be treated as infinitely scalable sources. Use the final PNG files at their intended dimensions, and do not enlarge the SVG compositions beyond the resolution of their embedded raster elements.
+The SVG compositions are not fully vector artwork. `banner.svg` embeds a PNG copy of the emblem, while `repository-preview.svg` links to the local `logo-mark.png` file. They should not be treated as infinitely scalable sources. Use the current PNG exports at their intended dimensions and avoid enlarging new raster placements beyond their source resolution.
 
 ## Meaning of the identity
 
@@ -49,8 +49,12 @@ The exported artwork may include smooth transitions between these colors.
 - Prefer `logo.png` on light backgrounds and `banner.png` on dark presentation surfaces.
 - Use meaningful alternative text whenever an asset appears in documentation.
 - Check readability at the final display size before publishing.
-- Do not enlarge raster assets or SVG compositions beyond the resolution of their embedded images.
+- Do not enlarge new raster placements beyond the resolution of their source images.
 - Do not place private, personal, proprietary, or confidential information inside project artwork.
+
+## Known non-blocking limitation
+
+`logo-mark.png` is currently `384 × 384` pixels, while `repository-preview.svg` displays it at `440 × 440` pixels. This known upscale is documented for future export refinement and does not block the current repository foundation.
 
 ## Creation and review
 

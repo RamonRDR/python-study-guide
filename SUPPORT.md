@@ -13,9 +13,9 @@ Python Study Guide is maintained as a public educational project. Questions and 
 | Need | Preferred channel |
 |---|---|
 | Ask about material already published in this repository | Open a [**Learning question** issue](https://github.com/RamonRDR/python-study-guide/issues/new?template=learning-question.yml) |
-| Incorrect or broken repository content | Open a **Bug report** issue |
-| Suggest a new chapter, example, exercise, or improvement | Open a **Content suggestion** issue |
-| Correct or improve a translation | Open a **Translation improvement** issue |
+| Incorrect or broken repository content | Open a [**Bug report** issue](https://github.com/RamonRDR/python-study-guide/issues/new?template=bug-report.yml) |
+| Suggest a new chapter, example, exercise, or improvement | Open a [**Content suggestion** issue](https://github.com/RamonRDR/python-study-guide/issues/new?template=content-suggestion.yml) |
+| Correct or improve a translation | Open a [**Translation improvement** issue](https://github.com/RamonRDR/python-study-guide/issues/new?template=translation-improvement.yml) |
 | Learn how to prepare a contribution | Read the [contribution guide](CONTRIBUTING.md) |
 | Report a security vulnerability | Follow the [security policy](SECURITY.md) and report privately |
 | Report harassment or other conduct concerns | Follow the [code of conduct](CODE_OF_CONDUCT.md) and report privately |

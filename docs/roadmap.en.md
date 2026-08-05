@@ -14,7 +14,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 
 | Phase | Status | Current result |
 |---|---|---|
-| 0. Project foundation | In progress | Core documentation, governance, authorship, licensing, structure, collaboration templates, community standards, automated quality checks, and the original visual identity are available |
+| 0. Project foundation | In progress | Core documentation, governance, authorship, licensing, structure, collaboration templates, community standards, automated quality checks, original visual identity, and the final foundation audit are available |
 | 1. Fundamentals | Planned | Curriculum not started |
 | 2. Strings and numbers | Planned | Curriculum not started |
 | 3. Collections | Planned | Curriculum not started |
@@ -46,11 +46,15 @@ Phases 0 and 6 are currently active because the repository foundation and an ear
 - [x] Multilingual roadmap and project-structure documentation
 - [x] Automated quality checks for Python files, approved examples, internal links, and repository structure
 - [x] Original visual identity and repository assets
+- [x] Final navigation, terminology, accessibility, and status audit
 
 ### Remaining before completion
 
-- [ ] Final navigation, terminology, accessibility, and status audit
 - [ ] Officially mark Phase 0 as complete
+
+### Planned non-blocking follow-up
+
+- Refine and replace the visual assets with high-quality exports after the final logo framing is complete.
 
 ## Phase 1: Fundamentals
 
