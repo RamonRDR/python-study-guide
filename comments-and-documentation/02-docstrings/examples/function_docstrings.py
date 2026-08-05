@@ -1,7 +1,9 @@
 """Demonstrate module and function docstrings with runtime access."""
 
+from collections.abc import Sequence
 
-def calculate_average(values: list[float]) -> float:
+
+def calculate_average(values: Sequence[float]) -> float:
     """Return the arithmetic mean of a non-empty sequence of numbers.
 
     Args:
