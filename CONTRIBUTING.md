@@ -99,6 +99,7 @@ Run the same dependency-free checks used by GitHub Actions from the repository r
 
 ```bash
 python -m compileall -q -x '(^|/)\.git/' .
+python -m unittest discover -s tests -p 'test_*.py'
 python scripts/run_examples.py
 python scripts/check_internal_links.py
 python scripts/validate_repository_structure.py
