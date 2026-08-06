@@ -15,18 +15,18 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | Fase | Estado | Resultado actual |
 |---|---|---|
 | 0. Base del proyecto | Completada | Base disponible, auditada y oficialmente completada |
-| 1. Fundamentos | Planificada | Contenido todavía no iniciado |
+| 1. Fundamentos | Planificada | Próxima fase principal del currículo; contenido todavía no iniciado |
 | 2. Textos y números | Planificada | Contenido todavía no iniciado |
 | 3. Colecciones | Planificada | Contenido todavía no iniciado |
 | 4. Flujo del programa | Planificada | Contenido todavía no iniciado |
 | 5. Funciones | Planificada | Contenido todavía no iniciado |
-| 6. Comentarios, documentación y código limpio | En progreso | Comentarios, docstrings, nombres significativos, marcadores de tareas y comentarios frente a logging están completos; queda un capítulo |
+| 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
 | 7. Errores, archivos y módulos | Planificada | Contenido todavía no iniciado |
 | 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-La Fase 0 está completada. La Fase 6 se está finalizando como sección educativa piloto antes de comenzar la secuencia principal con la Fase 1.
+Las Fases 0 y 6 están completadas. La Fase 6 estableció el estándar editorial piloto, y la secuencia principal de aprendizaje ahora continúa con la Fase 1.
 
 ## Fase 0: Base del proyecto
 
@@ -107,7 +107,9 @@ Consulta la [ruta de aprendizaje de la sección](../comments-and-documentation/R
 - [x] Nombres significativos y código autoexplicativo
 - [x] `TODO`, `FIXME`, `NOTE` y marcadores relacionados
 - [x] Comentarios frente a logging
-- [ ] PEP 8 y legibilidad
+- [x] PEP 8 y legibilidad
+
+La Fase 6 está oficialmente completada y proporciona el modelo editorial y de calidad para las demás secciones de aprendizaje.
 
 ## Fase 7: Errores, archivos y módulos
 

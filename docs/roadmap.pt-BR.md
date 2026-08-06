@@ -15,18 +15,18 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | Fase | Status | Resultado atual |
 |---|---|---|
 | 0. Fundação do projeto | Concluída | Fundação disponível, auditada e oficialmente concluída |
-| 1. Fundamentos | Planejada | Conteúdo ainda não iniciado |
+| 1. Fundamentos | Planejada | Próxima fase principal do currículo; conteúdo ainda não iniciado |
 | 2. Textos e números | Planejada | Conteúdo ainda não iniciado |
 | 3. Coleções | Planejada | Conteúdo ainda não iniciado |
 | 4. Fluxo do programa | Planejada | Conteúdo ainda não iniciado |
 | 5. Funções | Planejada | Conteúdo ainda não iniciado |
-| 6. Comentários, documentação e código limpo | Em andamento | Comentários, docstrings, nomes significativos, marcadores de tarefas e comentários versus logging estão completos; resta um capítulo |
+| 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
 | 8. Biblioteca padrão | Planejada | Conteúdo ainda não iniciado |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-A Fase 0 está concluída. A Fase 6 está sendo finalizada como seção educacional-piloto antes do início da sequência principal pela Fase 1.
+As Fases 0 e 6 estão concluídas. A Fase 6 estabeleceu o padrão editorial-piloto, e a sequência principal de aprendizagem agora prossegue pela Fase 1.
 
 ## Fase 0: Fundação do projeto
 
@@ -107,7 +107,9 @@ Consulte a [trilha de aprendizagem da seção](../comments-and-documentation/REA
 - [x] Nomes significativos e código autoexplicativo
 - [x] `TODO`, `FIXME`, `NOTE` e marcadores relacionados
 - [x] Comentários versus logging
-- [ ] PEP 8 e legibilidade
+- [x] PEP 8 e legibilidade
+
+A Fase 6 está oficialmente concluída e fornece o modelo editorial e de qualidade para as demais seções de aprendizagem.
 
 ## Fase 7: Erros, arquivos e módulos
 

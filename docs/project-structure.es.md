@@ -58,14 +58,22 @@ python-study-guide/
 │   │       ├── actionable_markers.py
 │   │       ├── scan_markers.py
 │   │       └── temporary_workaround.py
-│   └── 05-comments-vs-logging/
+│   ├── 05-comments-vs-logging/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── application_and_library_logging.py
+│   │       ├── comments_vs_logging.py
+│   │       └── logging_levels.py
+│   └── 06-pep8-and-readability/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── application_and_library_logging.py
-│           ├── comments_vs_logging.py
-│           └── logging_levels.py
+│           ├── imports_and_names.py
+│           ├── readable_layout.py
+│           └── refactor_for_readability.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -104,7 +112,7 @@ python-study-guide/
 
 - `.github/`: configuración de colaboración, formularios de issue, plantilla de pull request y workflow de GitHub Actions.
 - `assets/`: identidad visual original, recursos exportados, composiciones editables, paleta, accesibilidad y reglas de uso.
-- `comments-and-documentation/`: ruta de la Fase 6. Hay capítulos completos sobre comentarios, docstrings, nombres significativos, marcadores de tareas y comentarios frente a logging, cada uno en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
+- `comments-and-documentation/`: ruta completa de la Fase 6. Hay capítulos revisados sobre comentarios, docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y PEP 8 y legibilidad, cada uno en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
 - `docs/`: roadmaps, arquitectura del proyecto, documentos localizados, políticas y guía de desarrollo responsable asistido por IA.
 - `exercises/`: actividades prácticas relacionadas con los capítulos.
 - `external-libraries/`: futuras guías sobre paquetes de terceros.
