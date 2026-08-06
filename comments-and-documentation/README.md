@@ -16,7 +16,7 @@ This section teaches how to make Python code easier to understand, explain, main
 | [02. Docstrings](02-docstrings/README.md) | Document modules, functions, classes, and methods | Beginner | Available |
 | [03. Meaningful names](03-meaningful-names/README.md) | Make code express intention through clear names and small abstractions | Beginner | Available |
 | [04. Task markers](04-task-markers/README.md) | Use `TODO`, `FIXME`, `NOTE`, and related conventions responsibly | Beginner to intermediate | Available |
-| 05. Comments versus logging | Separate source-code explanation from runtime observation | Intermediate | Planned |
+| [05. Comments versus logging](05-comments-vs-logging/README.md) | Separate source-code explanation from runtime observation | Intermediate | Available |
 | 06. PEP 8 and readability | Apply style guidance while understanding its purpose and limits | Beginner to intermediate | Planned |
 
 ## Prerequisite guidance
@@ -28,7 +28,7 @@ This section teaches how to make Python code easier to understand, explain, main
 - **05. Comments versus logging:** the comments chapter is recommended. Basic knowledge of program execution and exceptions will be helpful.
 - **06. PEP 8 and readability:** basic Python syntax plus the comments and meaningful-names chapters are recommended.
 
-Planned prerequisites may be refined when each chapter is written. Estimated study time is published only after a chapter has complete, reviewable content.
+The remaining planned prerequisite may be refined when the chapter is written. Estimated study time is published only after a chapter has complete, reviewable content.
 
 ## Recommended sequence
 
@@ -62,7 +62,7 @@ By the end of this learning path, you should be able to:
 
 ## Current chapter
 
-After studying [Comments in Python](01-comments/README.md), [Docstrings in Python](02-docstrings/README.md), and [Meaningful Names and Self-Explanatory Code](03-meaningful-names/README.md), continue with [Task Markers and Technical Follow-up](04-task-markers/README.md). All available chapters include multilingual explanations, executable examples, an exercise, and a quick-reference summary.
+After studying [Comments in Python](01-comments/README.md), [Docstrings in Python](02-docstrings/README.md), [Meaningful Names and Self-Explanatory Code](03-meaningful-names/README.md), and [Task Markers and Technical Follow-up](04-task-markers/README.md), continue with [Comments versus Logging in Python](05-comments-vs-logging/README.md). All available chapters include multilingual explanations, executable examples, an exercise, and a quick-reference summary.
 
 ## Directory structure
 
@@ -95,14 +95,22 @@ comments-and-documentation/
 │       ├── booleans_and_units.py
 │       ├── refactor_for_intent.py
 │       └── vague_and_clear_names.py
-└── 04-task-markers/
+├── 04-task-markers/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── actionable_markers.py
+│       ├── scan_markers.py
+│       └── temporary_workaround.py
+└── 05-comments-vs-logging/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── actionable_markers.py
-        ├── scan_markers.py
-        └── temporary_workaround.py
+        ├── application_and_library_logging.py
+        ├── comments_vs_logging.py
+        └── logging_levels.py
 ```
 
 Future chapter directories will be added when their complete content is prepared. Empty placeholders are intentionally avoided so that every tracked chapter directory contains useful material.

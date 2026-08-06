@@ -20,7 +20,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 3. Colecciones | Planificada | Contenido todavía no iniciado |
 | 4. Flujo del programa | Planificada | Contenido todavía no iniciado |
 | 5. Funciones | Planificada | Contenido todavía no iniciado |
-| 6. Comentarios, documentación y código limpio | En progreso | Comentarios, docstrings, nombres significativos y marcadores de tareas están completos; quedan dos capítulos |
+| 6. Comentarios, documentación y código limpio | En progreso | Comentarios, docstrings, nombres significativos, marcadores de tareas y comentarios frente a logging están completos; queda un capítulo |
 | 7. Errores, archivos y módulos | Planificada | Contenido todavía no iniciado |
 | 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
@@ -106,7 +106,7 @@ Consulta la [ruta de aprendizaje de la sección](../comments-and-documentation/R
 - [x] Docstrings
 - [x] Nombres significativos y código autoexplicativo
 - [x] `TODO`, `FIXME`, `NOTE` y marcadores relacionados
-- [ ] Comentarios frente a logging
+- [x] Comentarios frente a logging
 - [ ] PEP 8 y legibilidad
 
 ## Fase 7: Errores, archivos y módulos

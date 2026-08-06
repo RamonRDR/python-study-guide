@@ -16,7 +16,7 @@ Esta seção ensina como tornar o código Python mais fácil de entender, explic
 | [02. Docstrings](02-docstrings/README.pt-BR.md) | Documentar módulos, funções, classes e métodos | Iniciante | Disponível |
 | [03. Nomes significativos](03-meaningful-names/README.pt-BR.md) | Fazer o código expressar intenção por meio de nomes claros e pequenas abstrações | Iniciante | Disponível |
 | [04. Marcadores de tarefas](04-task-markers/README.pt-BR.md) | Utilizar `TODO`, `FIXME`, `NOTE` e convenções relacionadas com responsabilidade | Iniciante a intermediário | Disponível |
-| 05. Comentários versus logging | Separar explicações no código-fonte da observação durante a execução | Intermediário | Planejado |
+| [05. Comentários versus logging](05-comments-vs-logging/README.pt-BR.md) | Separar explicações no código-fonte da observação durante a execução | Intermediário | Disponível |
 | 06. PEP 8 e legibilidade | Aplicar orientações de estilo compreendendo seus objetivos e limites | Iniciante a intermediário | Planejado |
 
 ## Orientação sobre pré-requisitos
@@ -28,7 +28,7 @@ Esta seção ensina como tornar o código Python mais fácil de entender, explic
 - **05. Comentários versus logging:** recomenda-se concluir o capítulo de comentários. Conhecimentos básicos sobre execução de programas e exceções serão úteis.
 - **06. PEP 8 e legibilidade:** recomenda-se conhecer a sintaxe básica do Python e concluir os capítulos de comentários e nomes significativos.
 
-Os pré-requisitos planejados poderão ser refinados quando cada capítulo for escrito. O tempo estimado de estudo será publicado somente depois que o capítulo possuir conteúdo completo e revisável.
+O pré-requisito do capítulo restante poderá ser refinado quando ele for escrito. O tempo estimado de estudo será publicado somente depois que o capítulo possuir conteúdo completo e revisável.
 
 ## Sequência recomendada
 
@@ -62,7 +62,7 @@ Ao concluir esta trilha, você deverá ser capaz de:
 
 ## Capítulo atual
 
-Depois de estudar [Comentários em Python](01-comments/README.pt-BR.md), [Docstrings em Python](02-docstrings/README.pt-BR.md) e [Nomes Significativos e Código Autoexplicativo](03-meaningful-names/README.pt-BR.md), continue com [Marcadores de Tarefas e Acompanhamento Técnico](04-task-markers/README.pt-BR.md). Todos os capítulos disponíveis incluem explicações multilíngues, exemplos executáveis, exercício e resumo para consulta rápida.
+Depois de estudar [Comentários em Python](01-comments/README.pt-BR.md), [Docstrings em Python](02-docstrings/README.pt-BR.md), [Nomes Significativos e Código Autoexplicativo](03-meaningful-names/README.pt-BR.md) e [Marcadores de Tarefas e Acompanhamento Técnico](04-task-markers/README.pt-BR.md), continue com [Comentários versus Logging em Python](05-comments-vs-logging/README.pt-BR.md). Todos os capítulos disponíveis incluem explicações multilíngues, exemplos executáveis, exercício e resumo para consulta rápida.
 
 ## Estrutura do diretório
 
@@ -95,14 +95,22 @@ comments-and-documentation/
 │       ├── booleans_and_units.py
 │       ├── refactor_for_intent.py
 │       └── vague_and_clear_names.py
-└── 04-task-markers/
+├── 04-task-markers/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── actionable_markers.py
+│       ├── scan_markers.py
+│       └── temporary_workaround.py
+└── 05-comments-vs-logging/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── actionable_markers.py
-        ├── scan_markers.py
-        └── temporary_workaround.py
+        ├── application_and_library_logging.py
+        ├── comments_vs_logging.py
+        └── logging_levels.py
 ```
 
 Os diretórios dos próximos capítulos serão adicionados quando seus conteúdos completos forem preparados. Evitamos placeholders vazios para que todo diretório de capítulo versionado contenha material útil.

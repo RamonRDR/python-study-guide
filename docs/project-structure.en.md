@@ -50,14 +50,22 @@ python-study-guide/
 │   │       ├── booleans_and_units.py
 │   │       ├── refactor_for_intent.py
 │   │       └── vague_and_clear_names.py
-│   └── 04-task-markers/
+│   ├── 04-task-markers/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── actionable_markers.py
+│   │       ├── scan_markers.py
+│   │       └── temporary_workaround.py
+│   └── 05-comments-vs-logging/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── actionable_markers.py
-│           ├── scan_markers.py
-│           └── temporary_workaround.py
+│           ├── application_and_library_logging.py
+│           ├── comments_vs_logging.py
+│           └── logging_levels.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -96,7 +104,7 @@ python-study-guide/
 
 - `.github/`: collaboration configuration, issue forms, pull request template, and GitHub Actions workflow.
 - `assets/`: original visual identity, exported assets, editable compositions, palette, accessibility guidance, and usage rules.
-- `comments-and-documentation/`: Phase 6 learning path. Complete chapters are available for comments, docstrings, meaningful names, and task markers, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
+- `comments-and-documentation/`: Phase 6 learning path. Complete chapters are available for comments, docstrings, meaningful names, task markers, and comments versus logging, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `docs/`: roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.

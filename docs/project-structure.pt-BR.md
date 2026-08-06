@@ -50,14 +50,22 @@ python-study-guide/
 │   │       ├── booleans_and_units.py
 │   │       ├── refactor_for_intent.py
 │   │       └── vague_and_clear_names.py
-│   └── 04-task-markers/
+│   ├── 04-task-markers/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── actionable_markers.py
+│   │       ├── scan_markers.py
+│   │       └── temporary_workaround.py
+│   └── 05-comments-vs-logging/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── actionable_markers.py
-│           ├── scan_markers.py
-│           └── temporary_workaround.py
+│           ├── application_and_library_logging.py
+│           ├── comments_vs_logging.py
+│           └── logging_levels.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -96,7 +104,7 @@ python-study-guide/
 
 - `.github/`: configuração de colaboração, formulários de issue, template de pull request e workflow do GitHub Actions.
 - `assets/`: identidade visual original, arquivos exportados, composições editáveis, paleta, acessibilidade e regras de uso.
-- `comments-and-documentation/`: trilha da Fase 6. Há capítulos completos sobre comentários, docstrings, nomes significativos e marcadores de tarefas, cada um em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
+- `comments-and-documentation/`: trilha da Fase 6. Há capítulos completos sobre comentários, docstrings, nomes significativos, marcadores de tarefas e comentários versus logging, cada um em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `docs/`: roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros.
