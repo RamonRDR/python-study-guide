@@ -15,7 +15,7 @@ This section teaches how to make Python code easier to understand, explain, main
 | [01. Comments](01-comments/README.md) | Explain decisions and non-obvious context without narrating the code | Beginner | Available |
 | [02. Docstrings](02-docstrings/README.md) | Document modules, functions, classes, and methods | Beginner | Available |
 | [03. Meaningful names](03-meaningful-names/README.md) | Make code express intention through clear names and small abstractions | Beginner | Available |
-| 04. Task markers | Use `TODO`, `FIXME`, `NOTE`, and related conventions responsibly | Beginner to intermediate | Planned |
+| [04. Task markers](04-task-markers/README.md) | Use `TODO`, `FIXME`, `NOTE`, and related conventions responsibly | Beginner to intermediate | Available |
 | 05. Comments versus logging | Separate source-code explanation from runtime observation | Intermediate | Planned |
 | 06. PEP 8 and readability | Apply style guidance while understanding its purpose and limits | Beginner to intermediate | Planned |
 
@@ -62,7 +62,7 @@ By the end of this learning path, you should be able to:
 
 ## Current chapter
 
-After studying [Comments in Python](01-comments/README.md) and [Docstrings in Python](02-docstrings/README.md), continue with [Meaningful Names and Self-Explanatory Code](03-meaningful-names/README.md). All available chapters include multilingual explanations, executable examples, an exercise, and a quick-reference summary.
+After studying [Comments in Python](01-comments/README.md), [Docstrings in Python](02-docstrings/README.md), and [Meaningful Names and Self-Explanatory Code](03-meaningful-names/README.md), continue with [Task Markers and Technical Follow-up](04-task-markers/README.md). All available chapters include multilingual explanations, executable examples, an exercise, and a quick-reference summary.
 
 ## Directory structure
 
@@ -87,14 +87,22 @@ comments-and-documentation/
 │       ├── class_docstrings.py
 │       ├── function_docstrings.py
 │       └── inspect_docstrings.py
-└── 03-meaningful-names/
+├── 03-meaningful-names/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── booleans_and_units.py
+│       ├── refactor_for_intent.py
+│       └── vague_and_clear_names.py
+└── 04-task-markers/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── booleans_and_units.py
-        ├── refactor_for_intent.py
-        └── vague_and_clear_names.py
+        ├── actionable_markers.py
+        ├── scan_markers.py
+        └── temporary_workaround.py
 ```
 
 Future chapter directories will be added when their complete content is prepared. Empty placeholders are intentionally avoided so that every tracked chapter directory contains useful material.

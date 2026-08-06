@@ -11,3 +11,6 @@ comments-and-documentation/02-docstrings/examples/inspect_docstrings.py
 comments-and-documentation/03-meaningful-names/examples/booleans_and_units.py
 comments-and-documentation/03-meaningful-names/examples/refactor_for_intent.py
 comments-and-documentation/03-meaningful-names/examples/vague_and_clear_names.py
+comments-and-documentation/04-task-markers/examples/actionable_markers.py
+comments-and-documentation/04-task-markers/examples/scan_markers.py
+comments-and-documentation/04-task-markers/examples/temporary_workaround.py
