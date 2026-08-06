@@ -15,7 +15,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | Fase | Status | Resultado atual |
 |---|---|---|
 | 0. Fundação do projeto | Concluída | Fundação disponível, auditada e oficialmente concluída |
-| 1. Fundamentos | Planejada | Próxima fase principal do currículo; conteúdo ainda não iniciado |
+| 1. Fundamentos | Em andamento | Primeiro capítulo disponível: como o Python executa um programa |
 | 2. Textos e números | Planejada | Conteúdo ainda não iniciado |
 | 3. Coleções | Planejada | Conteúdo ainda não iniciado |
 | 4. Fluxo do programa | Planejada | Conteúdo ainda não iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0 e 6 estão concluídas. A Fase 6 estabeleceu o padrão editorial-piloto, e a sequência principal de aprendizagem agora prossegue pela Fase 1.
+As Fases 0 e 6 estão concluídas. A Fase 6 estabeleceu o padrão editorial-piloto, e a Fase 1 agora está em andamento com seu primeiro capítulo disponível.
 
 ## Fase 0: Fundação do projeto
 
@@ -55,12 +55,12 @@ As Fases 0 e 6 estão concluídas. A Fase 6 estabeleceu o padrão editorial-pilo
 
 ## Fase 1: Fundamentos
 
-- Como o Python executa um programa
-- `print()` e `input()`
-- Variáveis e nomes
-- Tipos de dados nativos
-- `type()` e `isinstance()`
-- Conversão de tipos
+- [x] [Como o Python executa um programa](../fundamentals/01-how-python-runs-a-program/README.pt-BR.md)
+- [ ] `print()` e `input()`
+- [ ] Variáveis e nomes
+- [ ] Tipos de dados nativos
+- [ ] `type()` e `isinstance()`
+- [ ] Conversão de tipos
 
 ## Fase 2: Textos e números
 
