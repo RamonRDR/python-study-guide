@@ -58,14 +58,22 @@ python-study-guide/
 │   │       ├── actionable_markers.py
 │   │       ├── scan_markers.py
 │   │       └── temporary_workaround.py
-│   └── 05-comments-vs-logging/
+│   ├── 05-comments-vs-logging/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── application_and_library_logging.py
+│   │       ├── comments_vs_logging.py
+│   │       └── logging_levels.py
+│   └── 06-pep8-and-readability/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── application_and_library_logging.py
-│           ├── comments_vs_logging.py
-│           └── logging_levels.py
+│           ├── imports_and_names.py
+│           ├── readable_layout.py
+│           └── refactor_for_readability.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -104,7 +112,7 @@ python-study-guide/
 
 - `.github/`: collaboration configuration, issue forms, pull request template, and GitHub Actions workflow.
 - `assets/`: original visual identity, exported assets, editable compositions, palette, accessibility guidance, and usage rules.
-- `comments-and-documentation/`: Phase 6 learning path. Complete chapters are available for comments, docstrings, meaningful names, task markers, and comments versus logging, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
+- `comments-and-documentation/`: complete Phase 6 learning path. Reviewed chapters are available for comments, docstrings, meaningful names, task markers, comments versus logging, and PEP 8 and readability, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `docs/`: roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.

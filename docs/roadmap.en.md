@@ -15,18 +15,18 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | Phase | Status | Current result |
 |---|---|---|
 | 0. Project foundation | Complete | Foundation available, audited, and officially completed |
-| 1. Fundamentals | Planned | Curriculum not started |
+| 1. Fundamentals | Planned | Next main curriculum phase; content not started |
 | 2. Strings and numbers | Planned | Curriculum not started |
 | 3. Collections | Planned | Curriculum not started |
 | 4. Program flow | Planned | Curriculum not started |
 | 5. Functions | Planned | Curriculum not started |
-| 6. Comments, documentation, and clean code | In progress | Comments, docstrings, meaningful names, task markers, and comments versus logging are complete; one chapter remains |
+| 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
 | 8. Standard library | Planned | Curriculum not started |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phase 0 is complete. Phase 6 is currently being completed as the pilot educational section before the main sequence begins with Phase 1.
+Phases 0 and 6 are complete. Phase 6 established the pilot editorial standard, and the main learning sequence now proceeds with Phase 1.
 
 ## Phase 0: Project foundation
 
@@ -107,7 +107,9 @@ See the [section learning path](../comments-and-documentation/README.md).
 - [x] Meaningful names and self-explanatory code
 - [x] `TODO`, `FIXME`, `NOTE`, and related task markers
 - [x] Comments versus logging
-- [ ] PEP 8 and readability
+- [x] PEP 8 and readability
+
+Phase 6 is officially complete and provides the editorial and quality model for the remaining learning sections.
 
 ## Phase 7: Errors, files, and modules
 

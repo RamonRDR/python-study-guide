@@ -71,15 +71,16 @@ Detailed explanations:
 
 The project foundation is complete. Phase 0 established the multilingual documentation, contribution workflow, collaboration templates, community standards, authorship, licensing, AI governance, automated quality checks, original visual identity, scalable repository structure, and final foundation audit.
 
-Five complete learning chapters are available:
+The project foundation and the first complete educational section are available. Phase 6 contains six reviewed learning chapters:
 
 - [Comments in Python](comments-and-documentation/01-comments/README.md)
 - [Docstrings in Python](comments-and-documentation/02-docstrings/README.md)
 - [Meaningful Names and Self-Explanatory Code](comments-and-documentation/03-meaningful-names/README.md)
 - [Task Markers and Technical Follow-up](comments-and-documentation/04-task-markers/README.md)
 - [Comments versus Logging in Python](comments-and-documentation/05-comments-vs-logging/README.md)
+- [PEP 8 and Readability in Python](comments-and-documentation/06-pep8-and-readability/README.md)
 
-Phase 6 will continue with PEP 8 readability. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
+Phase 6 is complete and now serves as the project's first finished educational section. The next main curriculum step is Phase 1: Fundamentals, beginning with how Python runs a program and the first executable examples. See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
 ## Visual identity
 
