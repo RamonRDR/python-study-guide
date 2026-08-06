@@ -17,3 +17,6 @@ comments-and-documentation/04-task-markers/examples/temporary_workaround.py
 comments-and-documentation/05-comments-vs-logging/examples/application_and_library_logging.py
 comments-and-documentation/05-comments-vs-logging/examples/comments_vs_logging.py
 comments-and-documentation/05-comments-vs-logging/examples/logging_levels.py
+comments-and-documentation/06-pep8-and-readability/examples/imports_and_names.py
+comments-and-documentation/06-pep8-and-readability/examples/readable_layout.py
+comments-and-documentation/06-pep8-and-readability/examples/refactor_for_readability.py

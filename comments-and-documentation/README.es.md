@@ -6,7 +6,7 @@
 
 </div>
 
-Esta sección enseña cómo hacer que el código Python sea más fácil de comprender, explicar, mantener y observar. La secuencia comienza con comentarios y continúa con docstrings, nombres, marcadores de tareas, decisiones sobre logging y legibilidad según PEP 8.
+Esta sección enseña cómo hacer que el código Python sea más fácil de comprender, explicar, mantener y observar. Es la sección educativa piloto completada de Python Study Guide.
 
 ## Ruta de aprendizaje
 
@@ -14,10 +14,10 @@ Esta sección enseña cómo hacer que el código Python sea más fácil de compr
 |---|---|---|---|
 | [01. Comentarios](01-comments/README.es.md) | Explicar decisiones y contextos no evidentes sin narrar el código | Principiante | Disponible |
 | [02. Docstrings](02-docstrings/README.es.md) | Documentar módulos, funciones, clases y métodos | Principiante | Disponible |
-| [03. Nombres significativos](03-meaningful-names/README.es.md) | Hacer que el código exprese intención mediante nombres claros y pequeñas abstracciones | Principiante | Disponible |
+| [03. Nombres significativos](03-meaningful-names/README.es.md) | Expresar intención mediante nombres claros y pequeñas abstracciones | Principiante | Disponible |
 | [04. Marcadores de tareas](04-task-markers/README.es.md) | Utilizar `TODO`, `FIXME`, `NOTE` y convenciones relacionadas con responsabilidad | Principiante a intermedio | Disponible |
-| [05. Comentarios frente a logging](05-comments-vs-logging/README.es.md) | Separar las explicaciones del código fuente de la observación durante la ejecución | Intermedio | Disponible |
-| 06. PEP 8 y legibilidad | Aplicar orientaciones de estilo comprendiendo sus objetivos y límites | Principiante a intermedio | Planificado |
+| [05. Comentarios frente a logging](05-comments-vs-logging/README.es.md) | Separar las explicaciones del código fuente de la observación en ejecución | Intermedio | Disponible |
+| [06. PEP 8 y legibilidad](06-pep8-and-readability/README.es.md) | Aplicar orientaciones de estilo comprendiendo sus objetivos y límites | Principiante a intermedio | Disponible |
 
 ## Orientación sobre requisitos previos
 
@@ -28,11 +28,7 @@ Esta sección enseña cómo hacer que el código Python sea más fácil de compr
 - **05. Comentarios frente a logging:** se recomienda completar el capítulo de comentarios. Los conocimientos básicos sobre ejecución de programas y excepciones serán útiles.
 - **06. PEP 8 y legibilidad:** se recomienda conocer la sintaxis básica de Python y completar los capítulos de comentarios y nombres significativos.
 
-El requisito previo del capítulo restante podrá ajustarse cuando se escriba. El tiempo estimado de estudio se publicará solamente después de que el capítulo tenga contenido completo y revisable.
-
-## Secuencia recomendada
-
-Estudia los capítulos en orden numérico. Después de comprender sus requisitos previos, cada capítulo también puede consultarse de forma independiente.
+Estudia los capítulos en orden numérico al seguir la ruta completa. Cada capítulo también puede consultarse de forma independiente después de comprender sus requisitos.
 
 ```text
 01. Comentarios
@@ -55,14 +51,14 @@ Al completar esta ruta, deberías ser capaz de:
 - diferenciar comentarios, docstrings, documentación, type hints y logs;
 - explicar decisiones sin repetir código evidente;
 - elegir nombres que revelen intención, unidades, estado y responsabilidad;
-- registrar tareas técnicas con suficiente contexto para que continúen siendo útiles;
+- registrar tareas técnicas con contexto suficiente para que sigan siendo útiles;
 - decidir cuándo la información de ejecución pertenece al logging;
-- aplicar las recomendaciones de PEP 8 con criterio, sin tratarlas como sintaxis de Python;
+- aplicar las recomendaciones de PEP 8 con criterio, sin tratarlas como sintaxis;
 - revisar código considerando claridad, exactitud, privacidad y facilidad de mantenimiento.
 
 ## Capítulo actual
 
-Después de estudiar [Comentarios en Python](01-comments/README.es.md), [Docstrings en Python](02-docstrings/README.es.md), [Nombres Significativos y Código Autoexplicativo](03-meaningful-names/README.es.md) y [Marcadores de Tareas y Seguimiento Técnico](04-task-markers/README.es.md), continúa con [Comentarios frente a Logging en Python](05-comments-vs-logging/README.es.md). Todos los capítulos disponibles incluyen explicaciones multilingües, ejemplos ejecutables, un ejercicio y un resumen de consulta rápida.
+Completa la ruta con [PEP 8 y Legibilidad en Python](06-pep8-and-readability/README.es.md). Todos los capítulos incluyen explicaciones multilingües, ejemplos ejecutables, ejercicio, lista de revisión y resumen de consulta rápida.
 
 ## Estructura del directorio
 
@@ -72,45 +68,16 @@ comments-and-documentation/
 ├── README.pt-BR.md
 ├── README.es.md
 ├── 01-comments/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── business_rule_comments.py
-│       ├── unnecessary_comments.py
-│       └── useful_comments.py
 ├── 02-docstrings/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── class_docstrings.py
-│       ├── function_docstrings.py
-│       └── inspect_docstrings.py
 ├── 03-meaningful-names/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── booleans_and_units.py
-│       ├── refactor_for_intent.py
-│       └── vague_and_clear_names.py
 ├── 04-task-markers/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── actionable_markers.py
-│       ├── scan_markers.py
-│       └── temporary_workaround.py
-└── 05-comments-vs-logging/
+├── 05-comments-vs-logging/
+└── 06-pep8-and-readability/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── application_and_library_logging.py
-        ├── comments_vs_logging.py
-        └── logging_levels.py
+        ├── imports_and_names.py
+        ├── readable_layout.py
+        └── refactor_for_readability.py
 ```
-
-Los directorios de los próximos capítulos se añadirán cuando sus contenidos completos estén preparados. Evitamos placeholders vacíos para que cada directorio de capítulo versionado contenga material útil.
