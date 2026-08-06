@@ -20,7 +20,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 3. Coleções | Planejada | Conteúdo ainda não iniciado |
 | 4. Fluxo do programa | Planejada | Conteúdo ainda não iniciado |
 | 5. Funções | Planejada | Conteúdo ainda não iniciado |
-| 6. Comentários, documentação e código limpo | Em andamento | Comentários, docstrings, nomes significativos e marcadores de tarefas estão completos; restam dois capítulos |
+| 6. Comentários, documentação e código limpo | Em andamento | Comentários, docstrings, nomes significativos, marcadores de tarefas e comentários versus logging estão completos; resta um capítulo |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
 | 8. Biblioteca padrão | Planejada | Conteúdo ainda não iniciado |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
@@ -106,7 +106,7 @@ Consulte a [trilha de aprendizagem da seção](../comments-and-documentation/REA
 - [x] Docstrings
 - [x] Nomes significativos e código autoexplicativo
 - [x] `TODO`, `FIXME`, `NOTE` e marcadores relacionados
-- [ ] Comentários versus logging
+- [x] Comentários versus logging
 - [ ] PEP 8 e legibilidade
 
 ## Fase 7: Erros, arquivos e módulos

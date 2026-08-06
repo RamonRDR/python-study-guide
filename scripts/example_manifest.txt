@@ -14,3 +14,6 @@ comments-and-documentation/03-meaningful-names/examples/vague_and_clear_names.py
 comments-and-documentation/04-task-markers/examples/actionable_markers.py
 comments-and-documentation/04-task-markers/examples/scan_markers.py
 comments-and-documentation/04-task-markers/examples/temporary_workaround.py
+comments-and-documentation/05-comments-vs-logging/examples/application_and_library_logging.py
+comments-and-documentation/05-comments-vs-logging/examples/comments_vs_logging.py
+comments-and-documentation/05-comments-vs-logging/examples/logging_levels.py
