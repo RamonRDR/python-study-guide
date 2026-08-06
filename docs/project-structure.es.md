@@ -42,14 +42,22 @@ python-study-guide/
 │   │       ├── class_docstrings.py
 │   │       ├── function_docstrings.py
 │   │       └── inspect_docstrings.py
-│   └── 03-meaningful-names/
+│   ├── 03-meaningful-names/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── booleans_and_units.py
+│   │       ├── refactor_for_intent.py
+│   │       └── vague_and_clear_names.py
+│   └── 04-task-markers/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── booleans_and_units.py
-│           ├── refactor_for_intent.py
-│           └── vague_and_clear_names.py
+│           ├── actionable_markers.py
+│           ├── scan_markers.py
+│           └── temporary_workaround.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -88,7 +96,7 @@ python-study-guide/
 
 - `.github/`: configuración de colaboración, formularios de issue, plantilla de pull request y workflow de GitHub Actions.
 - `assets/`: identidad visual original, recursos exportados, composiciones editables, paleta, accesibilidad y reglas de uso.
-- `comments-and-documentation/`: ruta de la Fase 6. Hay capítulos completos sobre comentarios, docstrings y nombres significativos, cada uno en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
+- `comments-and-documentation/`: ruta de la Fase 6. Hay capítulos completos sobre comentarios, docstrings, nombres significativos y marcadores de tareas, cada uno en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
 - `docs/`: roadmaps, arquitectura del proyecto, documentos localizados, políticas y guía de desarrollo responsable asistido por IA.
 - `exercises/`: actividades prácticas relacionadas con los capítulos.
 - `external-libraries/`: futuras guías sobre paquetes de terceros.

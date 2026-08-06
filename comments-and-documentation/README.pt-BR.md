@@ -15,7 +15,7 @@ Esta seção ensina como tornar o código Python mais fácil de entender, explic
 | [01. Comentários](01-comments/README.pt-BR.md) | Explicar decisões e contextos não evidentes sem narrar o código | Iniciante | Disponível |
 | [02. Docstrings](02-docstrings/README.pt-BR.md) | Documentar módulos, funções, classes e métodos | Iniciante | Disponível |
 | [03. Nomes significativos](03-meaningful-names/README.pt-BR.md) | Fazer o código expressar intenção por meio de nomes claros e pequenas abstrações | Iniciante | Disponível |
-| 04. Marcadores de tarefas | Utilizar `TODO`, `FIXME`, `NOTE` e convenções relacionadas com responsabilidade | Iniciante a intermediário | Planejado |
+| [04. Marcadores de tarefas](04-task-markers/README.pt-BR.md) | Utilizar `TODO`, `FIXME`, `NOTE` e convenções relacionadas com responsabilidade | Iniciante a intermediário | Disponível |
 | 05. Comentários versus logging | Separar explicações no código-fonte da observação durante a execução | Intermediário | Planejado |
 | 06. PEP 8 e legibilidade | Aplicar orientações de estilo compreendendo seus objetivos e limites | Iniciante a intermediário | Planejado |
 
@@ -62,7 +62,7 @@ Ao concluir esta trilha, você deverá ser capaz de:
 
 ## Capítulo atual
 
-Depois de estudar [Comentários em Python](01-comments/README.pt-BR.md) e [Docstrings em Python](02-docstrings/README.pt-BR.md), continue com [Nomes Significativos e Código Autoexplicativo](03-meaningful-names/README.pt-BR.md). Todos os capítulos disponíveis incluem explicações multilíngues, exemplos executáveis, exercício e resumo para consulta rápida.
+Depois de estudar [Comentários em Python](01-comments/README.pt-BR.md), [Docstrings em Python](02-docstrings/README.pt-BR.md) e [Nomes Significativos e Código Autoexplicativo](03-meaningful-names/README.pt-BR.md), continue com [Marcadores de Tarefas e Acompanhamento Técnico](04-task-markers/README.pt-BR.md). Todos os capítulos disponíveis incluem explicações multilíngues, exemplos executáveis, exercício e resumo para consulta rápida.
 
 ## Estrutura do diretório
 
@@ -87,14 +87,22 @@ comments-and-documentation/
 │       ├── class_docstrings.py
 │       ├── function_docstrings.py
 │       └── inspect_docstrings.py
-└── 03-meaningful-names/
+├── 03-meaningful-names/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── booleans_and_units.py
+│       ├── refactor_for_intent.py
+│       └── vague_and_clear_names.py
+└── 04-task-markers/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── booleans_and_units.py
-        ├── refactor_for_intent.py
-        └── vague_and_clear_names.py
+        ├── actionable_markers.py
+        ├── scan_markers.py
+        └── temporary_workaround.py
 ```
 
 Os diretórios dos próximos capítulos serão adicionados quando seus conteúdos completos forem preparados. Evitamos placeholders vazios para que todo diretório de capítulo versionado contenha material útil.
