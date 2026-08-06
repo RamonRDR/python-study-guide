@@ -6,7 +6,7 @@
 
 </div>
 
-Esta seção ensina como tornar o código Python mais fácil de entender, explicar, manter e observar. A sequência começa com comentários e avança por docstrings, nomes, marcadores de tarefas, decisões sobre logging e legibilidade segundo a PEP 8.
+Esta seção ensina como tornar o código Python mais fácil de entender, explicar, manter e observar. Ela é a seção educacional-piloto concluída do Python Study Guide.
 
 ## Trilha de aprendizagem
 
@@ -14,10 +14,10 @@ Esta seção ensina como tornar o código Python mais fácil de entender, explic
 |---|---|---|---|
 | [01. Comentários](01-comments/README.pt-BR.md) | Explicar decisões e contextos não evidentes sem narrar o código | Iniciante | Disponível |
 | [02. Docstrings](02-docstrings/README.pt-BR.md) | Documentar módulos, funções, classes e métodos | Iniciante | Disponível |
-| [03. Nomes significativos](03-meaningful-names/README.pt-BR.md) | Fazer o código expressar intenção por meio de nomes claros e pequenas abstrações | Iniciante | Disponível |
+| [03. Nomes significativos](03-meaningful-names/README.pt-BR.md) | Expressar intenção por nomes claros e pequenas abstrações | Iniciante | Disponível |
 | [04. Marcadores de tarefas](04-task-markers/README.pt-BR.md) | Utilizar `TODO`, `FIXME`, `NOTE` e convenções relacionadas com responsabilidade | Iniciante a intermediário | Disponível |
 | [05. Comentários versus logging](05-comments-vs-logging/README.pt-BR.md) | Separar explicações no código-fonte da observação durante a execução | Intermediário | Disponível |
-| 06. PEP 8 e legibilidade | Aplicar orientações de estilo compreendendo seus objetivos e limites | Iniciante a intermediário | Planejado |
+| [06. PEP 8 e legibilidade](06-pep8-and-readability/README.pt-BR.md) | Aplicar orientações de estilo compreendendo objetivos e limites | Iniciante a intermediário | Disponível |
 
 ## Orientação sobre pré-requisitos
 
@@ -28,11 +28,7 @@ Esta seção ensina como tornar o código Python mais fácil de entender, explic
 - **05. Comentários versus logging:** recomenda-se concluir o capítulo de comentários. Conhecimentos básicos sobre execução de programas e exceções serão úteis.
 - **06. PEP 8 e legibilidade:** recomenda-se conhecer a sintaxe básica do Python e concluir os capítulos de comentários e nomes significativos.
 
-O pré-requisito do capítulo restante poderá ser refinado quando ele for escrito. O tempo estimado de estudo será publicado somente depois que o capítulo possuir conteúdo completo e revisável.
-
-## Sequência recomendada
-
-Estude os capítulos em ordem numérica. Depois de compreender seus pré-requisitos, cada capítulo também poderá ser consultado de maneira independente.
+Estude os capítulos em ordem numérica ao seguir a trilha completa. Cada capítulo também pode ser consultado de forma independente depois que seus pré-requisitos forem compreendidos.
 
 ```text
 01. Comentários
@@ -57,12 +53,12 @@ Ao concluir esta trilha, você deverá ser capaz de:
 - escolher nomes que revelem intenção, unidades, estado e responsabilidade;
 - registrar tarefas técnicas com contexto suficiente para continuarem úteis;
 - decidir quando informações de execução pertencem ao logging;
-- aplicar recomendações da PEP 8 com discernimento, sem tratá-las como sintaxe do Python;
+- aplicar recomendações da PEP 8 com discernimento, sem tratá-las como sintaxe;
 - revisar código considerando clareza, exatidão, privacidade e facilidade de manutenção.
 
 ## Capítulo atual
 
-Depois de estudar [Comentários em Python](01-comments/README.pt-BR.md), [Docstrings em Python](02-docstrings/README.pt-BR.md), [Nomes Significativos e Código Autoexplicativo](03-meaningful-names/README.pt-BR.md) e [Marcadores de Tarefas e Acompanhamento Técnico](04-task-markers/README.pt-BR.md), continue com [Comentários versus Logging em Python](05-comments-vs-logging/README.pt-BR.md). Todos os capítulos disponíveis incluem explicações multilíngues, exemplos executáveis, exercício e resumo para consulta rápida.
+Conclua a trilha com [PEP 8 e Legibilidade em Python](06-pep8-and-readability/README.pt-BR.md). Todos os capítulos incluem explicações multilíngues, exemplos executáveis, exercício, checklist e resumo para consulta rápida.
 
 ## Estrutura do diretório
 
@@ -72,45 +68,16 @@ comments-and-documentation/
 ├── README.pt-BR.md
 ├── README.es.md
 ├── 01-comments/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── business_rule_comments.py
-│       ├── unnecessary_comments.py
-│       └── useful_comments.py
 ├── 02-docstrings/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── class_docstrings.py
-│       ├── function_docstrings.py
-│       └── inspect_docstrings.py
 ├── 03-meaningful-names/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── booleans_and_units.py
-│       ├── refactor_for_intent.py
-│       └── vague_and_clear_names.py
 ├── 04-task-markers/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── actionable_markers.py
-│       ├── scan_markers.py
-│       └── temporary_workaround.py
-└── 05-comments-vs-logging/
+├── 05-comments-vs-logging/
+└── 06-pep8-and-readability/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── application_and_library_logging.py
-        ├── comments_vs_logging.py
-        └── logging_levels.py
+        ├── imports_and_names.py
+        ├── readable_layout.py
+        └── refactor_for_readability.py
 ```
-
-Os diretórios dos próximos capítulos serão adicionados quando seus conteúdos completos forem preparados. Evitamos placeholders vazios para que todo diretório de capítulo versionado contenha material útil.

@@ -6,7 +6,7 @@
 
 </div>
 
-This section teaches how to make Python code easier to understand, explain, maintain, and observe. The sequence begins with comments and advances through docstrings, naming, task markers, logging decisions, and PEP 8 readability.
+This section teaches how to make Python code easier to understand, explain, maintain, and observe. It is the completed pilot learning section of the Python Study Guide.
 
 ## Learning path
 
@@ -14,10 +14,10 @@ This section teaches how to make Python code easier to understand, explain, main
 |---|---|---|---|
 | [01. Comments](01-comments/README.md) | Explain decisions and non-obvious context without narrating the code | Beginner | Available |
 | [02. Docstrings](02-docstrings/README.md) | Document modules, functions, classes, and methods | Beginner | Available |
-| [03. Meaningful names](03-meaningful-names/README.md) | Make code express intention through clear names and small abstractions | Beginner | Available |
+| [03. Meaningful names](03-meaningful-names/README.md) | Express intention through clear names and small abstractions | Beginner | Available |
 | [04. Task markers](04-task-markers/README.md) | Use `TODO`, `FIXME`, `NOTE`, and related conventions responsibly | Beginner to intermediate | Available |
 | [05. Comments versus logging](05-comments-vs-logging/README.md) | Separate source-code explanation from runtime observation | Intermediate | Available |
-| 06. PEP 8 and readability | Apply style guidance while understanding its purpose and limits | Beginner to intermediate | Planned |
+| [06. PEP 8 and readability](06-pep8-and-readability/README.md) | Apply style guidance while understanding its purpose and limits | Beginner to intermediate | Available |
 
 ## Prerequisite guidance
 
@@ -25,14 +25,10 @@ This section teaches how to make Python code easier to understand, explain, main
 - **02. Docstrings:** basic familiarity with functions is recommended. Module, class, and method examples can also be understood conceptually before those topics are studied in depth.
 - **03. Meaningful names:** basic familiarity with variables and functions is recommended.
 - **04. Task markers:** the comments chapter is recommended. Familiarity with issues and version control is helpful.
-- **05. Comments versus logging:** the comments chapter is recommended. Basic knowledge of program execution and exceptions will be helpful.
+- **05. Comments versus logging:** the comments chapter is recommended. Basic knowledge of program execution and exceptions is helpful.
 - **06. PEP 8 and readability:** basic Python syntax plus the comments and meaningful-names chapters are recommended.
 
-The remaining planned prerequisite may be refined when the chapter is written. Estimated study time is published only after a chapter has complete, reviewable content.
-
-## Recommended sequence
-
-Study the chapters in numerical order. Each chapter can also be consulted independently after its prerequisites are understood.
+Study the chapters in numerical order when following the complete path. Each chapter can also be consulted independently after its prerequisites are understood.
 
 ```text
 01. Comments
@@ -57,12 +53,12 @@ By the end of this learning path, you should be able to:
 - choose names that reveal intention, units, state, and responsibility;
 - record technical tasks with enough context to remain useful;
 - decide when runtime information belongs in logging;
-- apply PEP 8 recommendations with judgment instead of treating them as Python syntax;
+- apply PEP 8 recommendations with judgment instead of treating them as syntax;
 - review code for clarity, accuracy, privacy, and maintainability.
 
 ## Current chapter
 
-After studying [Comments in Python](01-comments/README.md), [Docstrings in Python](02-docstrings/README.md), [Meaningful Names and Self-Explanatory Code](03-meaningful-names/README.md), and [Task Markers and Technical Follow-up](04-task-markers/README.md), continue with [Comments versus Logging in Python](05-comments-vs-logging/README.md). All available chapters include multilingual explanations, executable examples, an exercise, and a quick-reference summary.
+Complete the path with [PEP 8 and Readability in Python](06-pep8-and-readability/README.md). Every chapter includes multilingual explanations, executable examples, an exercise, a checklist, and a quick-reference summary.
 
 ## Directory structure
 
@@ -72,45 +68,16 @@ comments-and-documentation/
 ├── README.pt-BR.md
 ├── README.es.md
 ├── 01-comments/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── business_rule_comments.py
-│       ├── unnecessary_comments.py
-│       └── useful_comments.py
 ├── 02-docstrings/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── class_docstrings.py
-│       ├── function_docstrings.py
-│       └── inspect_docstrings.py
 ├── 03-meaningful-names/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── booleans_and_units.py
-│       ├── refactor_for_intent.py
-│       └── vague_and_clear_names.py
 ├── 04-task-markers/
-│   ├── README.md
-│   ├── README.pt-BR.md
-│   ├── README.es.md
-│   └── examples/
-│       ├── actionable_markers.py
-│       ├── scan_markers.py
-│       └── temporary_workaround.py
-└── 05-comments-vs-logging/
+├── 05-comments-vs-logging/
+└── 06-pep8-and-readability/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── application_and_library_logging.py
-        ├── comments_vs_logging.py
-        └── logging_levels.py
+        ├── imports_and_names.py
+        ├── readable_layout.py
+        └── refactor_for_readability.py
 ```
-
-Future chapter directories will be added when their complete content is prepared. Empty placeholders are intentionally avoided so that every tracked chapter directory contains useful material.
