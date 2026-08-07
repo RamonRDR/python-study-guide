@@ -13,7 +13,7 @@ This section begins the main Python Study Guide learning sequence. It assumes no
 | Chapter | Main focus | Level | Status |
 |---|---|---|---|
 | [01. How Python runs a program](01-how-python-runs-a-program/README.md) | Create, execute, modify, and correct a first Python file | Absolute beginner | Available |
-| 02. `print()` and `input()` | Display information and receive text from a user | Absolute beginner | Planned |
+| [02. `print()` and `input()`](02-print-and-input/README.md) | Display information and receive text from a user | Absolute beginner | Available |
 | 03. Variables and naming | Store values and choose understandable identifiers | Beginner | Planned |
 | 04. Built-in data types | Recognize Python's fundamental value categories | Beginner | Planned |
 | 05. `type()` and `isinstance()` | Inspect and verify value types | Beginner | Planned |
@@ -22,7 +22,8 @@ This section begins the main Python Study Guide learning sequence. It assumes no
 ## Prerequisite guidance
 
 - **01. How Python runs a program:** no previous programming experience is required. Python must be installed, and the learner needs access to a plain-text or code editor and a terminal.
-- Later chapters will build on the ability to create, save, and execute a `.py` file.
+- **02. `print()` and `input()`:** complete Chapter 01 first. The learner should be able to create, save, and execute a `.py` file from the terminal.
+- Later chapters build on the ability to display values, receive text, and rerun a program after each change.
 
 Study the chapters in numerical order when following the complete path.
 
@@ -54,7 +55,7 @@ By the end of this learning path, you should be able to:
 
 ## Current chapter
 
-Start with [How Python Runs a Program](01-how-python-runs-a-program/README.md). It moves from an empty file to a working script and introduces the editor, terminal, interpreter, execution order, and basic syntax-error reading.
+Continue with [Output with `print()` and Input with `input()`](02-print-and-input/README.md). It explains program output, terminal input, function calls, prompts, multiple displayed values, `sep`, `end`, and the text returned by `input()`.
 
 ## Directory structure
 
@@ -63,10 +64,17 @@ fundamentals/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-how-python-runs-a-program/
+├── 01-how-python-runs-a-program/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       └── hello_world.py
+└── 02-print-and-input/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        └── hello_world.py
+        ├── interactive_greeting.py
+        └── output_basics.py
 ```

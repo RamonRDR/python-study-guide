@@ -15,7 +15,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | Phase | Status | Current result |
 |---|---|---|
 | 0. Project foundation | Complete | Foundation available, audited, and officially completed |
-| 1. Fundamentals | In progress | First chapter available: how Python runs a program |
+| 1. Fundamentals | In progress | Two chapters available: program execution, output, and input |
 | 2. Strings and numbers | Planned | Curriculum not started |
 | 3. Collections | Planned | Curriculum not started |
 | 4. Program flow | Planned | Curriculum not started |
@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0 and 6 are complete. Phase 6 established the pilot editorial standard, and Phase 1 is now in progress with its first chapter available.
+Phases 0 and 6 are complete. Phase 6 established the pilot editorial standard, and Phase 1 is now in progress with two chapters available.
 
 ## Phase 0: Project foundation
 
@@ -56,7 +56,7 @@ Phases 0 and 6 are complete. Phase 6 established the pilot editorial standard, a
 ## Phase 1: Fundamentals
 
 - [x] [How Python runs a program](../fundamentals/01-how-python-runs-a-program/README.md)
-- [ ] `print()` and `input()`
+- [x] [`print()` and `input()`](../fundamentals/02-print-and-input/README.md)
 - [ ] Variables and naming
 - [ ] Built-in data types
 - [ ] `type()` and `isinstance()`
