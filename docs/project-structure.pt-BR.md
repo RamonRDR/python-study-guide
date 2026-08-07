@@ -103,13 +103,20 @@ python-study-guide/
 │   │   └── examples/
 │   │       ├── interactive_greeting.py
 │   │       └── output_basics.py
-│   └── 03-variables-and-naming/
+│   ├── 03-variables-and-naming/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── learning_profile.py
+│   │       └── variable_basics.py
+│   └── 04-built-in-data-types/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── learning_profile.py
-│           └── variable_basics.py
+│           ├── same_looking_values.py
+│           └── value_catalog.py
 ├── practical-projects/
 ├── scripts/
 │   ├── check_internal_links.py
@@ -140,7 +147,7 @@ python-study-guide/
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros.
 - `functions/`: futura trilha sobre funções, parâmetros, retornos, escopo e type hints.
-- `fundamentals/`: trilha ativa da Fase 1. Os capítulos disponíveis ensinam como o Python executa um programa, como usar `print()` e `input()` e como funcionam atribuição, variáveis e nomes, com explicações multilíngues alinhadas e exemplos executáveis.
+- `fundamentals/`: trilha ativa da Fase 1. Os capítulos disponíveis ensinam como o Python executa um programa, como usar `print()` e `input()`, como funcionam atribuição e nomes e como reconhecer tipos de dados embutidos comuns, com explicações multilíngues alinhadas e exemplos executáveis.
 - `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
 - `standard-library/`: futuros guias sobre módulos distribuídos com o Python.
