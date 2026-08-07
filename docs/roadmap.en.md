@@ -16,7 +16,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 |---|---|---|
 | 0. Project foundation | Complete | Foundation available, audited, and officially completed |
 | 1. Fundamentals | Complete | Six reviewed chapters cover execution, input/output, variables and naming, built-in data types, type inspection, and type conversion |
-| 2. Strings and numbers | Planned | Curriculum not started |
+| 2. Strings and numbers | In progress | First reviewed chapter covers string creation, length, indexing, slicing, and immutability |
 | 3. Collections | Planned | Curriculum not started |
 | 4. Program flow | Planned | Curriculum not started |
 | 5. Functions | Planned | Curriculum not started |
@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, and 6 are complete. Phase 1 now provides the full six-chapter Fundamentals learning path, and Phase 6 provides the editorial and quality model for later sections.
+Phases 0, 1, and 6 are complete. Phase 2 is now in progress with its first reviewed chapter, while Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -64,10 +64,10 @@ Phases 0, 1, and 6 are complete. Phase 1 now provides the full six-chapter Funda
 
 ## Phase 2: Strings and numbers
 
-- String creation and indexing
-- Common string methods
-- `int`, `float`, and `bool`
-- `round()`, `abs()`, `min()`, `max()`, and `sum()`
+- [x] [String creation and indexing](../strings-and-numbers/01-string-creation-and-indexing/README.md)
+- [ ] Common string methods
+- [ ] `int`, `float`, and `bool`
+- [ ] `round()`, `abs()`, `min()`, `max()`, and `sum()`
 
 ## Phase 3: Collections
 

@@ -29,3 +29,5 @@ fundamentals/05-type-and-isinstance/examples/check_type_families.py
 fundamentals/05-type-and-isinstance/examples/inspect_types.py
 fundamentals/06-type-conversion/examples/conversion_basics.py
 fundamentals/06-type-conversion/examples/conversion_surprises.py
+strings-and-numbers/01-string-creation-and-indexing/examples/fixed_position_text.py
+strings-and-numbers/01-string-creation-and-indexing/examples/string_basics.py
