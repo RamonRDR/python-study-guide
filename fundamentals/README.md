@@ -14,7 +14,7 @@ This section begins the main Python Study Guide learning sequence. It assumes no
 |---|---|---|---|
 | [01. How Python runs a program](01-how-python-runs-a-program/README.md) | Create, execute, modify, and correct a first Python file | Absolute beginner | Available |
 | [02. `print()` and `input()`](02-print-and-input/README.md) | Display information and receive text from a user | Absolute beginner | Available |
-| 03. Variables and naming | Store values and choose understandable identifiers | Beginner | Planned |
+| [03. Variables and naming](03-variables-and-naming/README.md) | Store values and choose understandable identifiers | Beginner | Available |
 | 04. Built-in data types | Recognize Python's fundamental value categories | Beginner | Planned |
 | 05. `type()` and `isinstance()` | Inspect and verify value types | Beginner | Planned |
 | 06. Type conversion | Convert compatible values deliberately | Beginner | Planned |
@@ -23,7 +23,8 @@ This section begins the main Python Study Guide learning sequence. It assumes no
 
 - **01. How Python runs a program:** no previous programming experience is required. Python must be installed, and the learner needs access to a plain-text or code editor and a terminal.
 - **02. `print()` and `input()`:** complete Chapter 01 first. The learner should be able to create, save, and execute a `.py` file from the terminal.
-- Later chapters build on the ability to display values, receive text, and rerun a program after each change.
+- **03. Variables and naming:** complete Chapter 02 first. The learner should understand `print()`, `input()`, and why an input result must be stored before it can be reused.
+- Later chapters build on the ability to store, display, and inspect values through clear names.
 
 Study the chapters in numerical order when following the complete path.
 
@@ -55,7 +56,7 @@ By the end of this learning path, you should be able to:
 
 ## Current chapter
 
-Continue with [Output with `print()` and Input with `input()`](02-print-and-input/README.md). It explains program output, terminal input, function calls, prompts, multiple displayed values, `sep`, `end`, and the text returned by `input()`.
+Continue with [Variables and Naming](03-variables-and-naming/README.md). It explains assignment, reassignment, identifiers, keywords, `snake_case`, meaningful names, built-in shadowing, and constant naming conventions.
 
 ## Directory structure
 
@@ -70,11 +71,18 @@ fundamentals/
 │   ├── README.es.md
 │   └── examples/
 │       └── hello_world.py
-└── 02-print-and-input/
+├── 02-print-and-input/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── interactive_greeting.py
+│       └── output_basics.py
+└── 03-variables-and-naming/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── interactive_greeting.py
-        └── output_basics.py
+        ├── learning_profile.py
+        └── variable_basics.py
 ```

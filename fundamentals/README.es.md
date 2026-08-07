@@ -14,7 +14,7 @@ Esta sección inicia la secuencia principal de aprendizaje de Python Study Guide
 |---|---|---|---|
 | [01. Cómo ejecuta Python un programa](01-how-python-runs-a-program/README.es.md) | Crear, ejecutar, modificar y corregir un primer archivo de Python | Principiante absoluto | Disponible |
 | [02. `print()` e `input()`](02-print-and-input/README.es.md) | Mostrar información y recibir texto de una persona usuaria | Principiante absoluto | Disponible |
-| 03. Variables y nombres | Almacenar valores y elegir identificadores comprensibles | Principiante | Planificado |
+| [03. Variables y nombres](03-variables-and-naming/README.es.md) | Almacenar valores y elegir identificadores comprensibles | Principiante | Disponible |
 | 04. Tipos de datos incorporados | Reconocer las categorías fundamentales de valores de Python | Principiante | Planificado |
 | 05. `type()` e `isinstance()` | Inspeccionar y verificar tipos de valores | Principiante | Planificado |
 | 06. Conversión de tipos | Convertir valores compatibles de forma deliberada | Principiante | Planificado |
@@ -23,7 +23,8 @@ Esta sección inicia la secuencia principal de aprendizaje de Python Study Guide
 
 - **01. Cómo ejecuta Python un programa:** no se requiere experiencia previa en programación. Python debe estar instalado, y la persona estudiante necesita acceso a un editor de texto plano o de código y a una terminal.
 - **02. `print()` e `input()`:** completa primero el Capítulo 01. La persona estudiante debe poder crear, guardar y ejecutar un archivo `.py` desde la terminal.
-- Los capítulos posteriores dependen de la capacidad de mostrar valores, recibir texto y volver a ejecutar un programa después de cada cambio.
+- **03. Variables y nombres:** completa primero el Capítulo 02. La persona estudiante debe comprender `print()`, `input()` y por qué el resultado de una entrada debe almacenarse antes de reutilizarse.
+- Los capítulos posteriores dependen de la capacidad de almacenar, mostrar e inspeccionar valores mediante nombres claros.
 
 Estudia los capítulos en orden numérico cuando sigas la ruta completa.
 
@@ -55,7 +56,7 @@ Al final de esta ruta, deberías poder:
 
 ## Capítulo actual
 
-Continúa con [Salida con `print()` y Entrada con `input()`](02-print-and-input/README.es.md). El capítulo explica la salida del programa, la entrada desde la terminal, las llamadas de función, los prompts, varios valores mostrados, `sep`, `end` y el texto retornado por `input()`.
+Continúa con [Variables y Nombres](03-variables-and-naming/README.es.md). El capítulo explica asignación, reasignación, identificadores, palabras clave, `snake_case`, nombres significativos, ocultación de nombres incorporados y convenciones de constantes.
 
 ## Estructura del directorio
 
@@ -70,11 +71,18 @@ fundamentals/
 │   ├── README.es.md
 │   └── examples/
 │       └── hello_world.py
-└── 02-print-and-input/
+├── 02-print-and-input/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── interactive_greeting.py
+│       └── output_basics.py
+└── 03-variables-and-naming/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── interactive_greeting.py
-        └── output_basics.py
+        ├── learning_profile.py
+        └── variable_basics.py
 ```
