@@ -1,0 +1,6 @@
+print(int(8.9))
+print(int(-8.9))
+print(bool(""))
+print(bool("False"))
+print(bool(0))
+print(bool(1))

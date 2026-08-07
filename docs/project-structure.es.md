@@ -117,13 +117,20 @@ python-study-guide/
 │   │   └── examples/
 │   │       ├── same_looking_values.py
 │   │       └── value_catalog.py
-│   └── 05-type-and-isinstance/
+│   ├── 05-type-and-isinstance/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── check_type_families.py
+│   │       └── inspect_types.py
+│   └── 06-type-conversion/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── check_type_families.py
-│           └── inspect_types.py
+│           ├── conversion_basics.py
+│           └── conversion_surprises.py
 ├── practical-projects/
 ├── scripts/
 │   ├── check_internal_links.py
@@ -154,7 +161,7 @@ python-study-guide/
 - `exercises/`: actividades prácticas relacionadas con los capítulos.
 - `external-libraries/`: futuras guías sobre paquetes de terceros.
 - `functions/`: futura ruta sobre funciones, parámetros, retornos, alcance y type hints.
-- `fundamentals/`: ruta activa de la Fase 1. Los capítulos disponibles enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres, cómo reconocer tipos de datos incorporados comunes y cómo inspeccionar tipos exactos y compatibles con `type()` e `isinstance()`, con explicaciones multilingües alineadas y ejemplos ejecutables.
+- `fundamentals/`: ruta completa de la Fase 1. Sus seis capítulos enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres, cómo reconocer e inspeccionar tipos de datos incorporados comunes y cómo convertir valores compatibles de forma deliberada, con explicaciones multilingües alineadas y ejemplos ejecutables.
 - `practical-projects/`: futuros proyectos pequeños que combinarán varios conceptos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions.
 - `standard-library/`: futuras guías sobre módulos distribuidos con Python.

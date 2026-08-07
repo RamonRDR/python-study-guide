@@ -71,7 +71,7 @@ Explicaciones detalladas:
 
 La base del proyecto está completada. La Fase 0 estableció la documentación multilingüe, el flujo de contribución, las plantillas de colaboración, los estándares de la comunidad, la autoría, la licencia, la gobernanza de IA, las verificaciones automáticas, la identidad visual original, la estructura escalable y la auditoría final de la base.
 
-La base del proyecto y la primera sección educativa completa están disponibles. La Fase 6 reúne seis capítulos de aprendizaje revisados:
+La base del proyecto y dos secciones educativas completas están disponibles. La [Fase 1: Fundamentos](../../fundamentals/README.es.md) ahora ofrece seis capítulos revisados para principiantes. La Fase 6 reúne seis capítulos de aprendizaje revisados:
 
 - [Comentarios en Python](../../comments-and-documentation/01-comments/README.es.md)
 - [Docstrings en Python](../../comments-and-documentation/02-docstrings/README.es.md)
@@ -80,7 +80,7 @@ La base del proyecto y la primera sección educativa completa están disponibles
 - [Comentarios frente a Logging en Python](../../comments-and-documentation/05-comments-vs-logging/README.es.md)
 - [PEP 8 y Legibilidad en Python](../../comments-and-documentation/06-pep8-and-readability/README.es.md)
 
-La Fase 6 está completada y se convierte en la primera sección educativa finalizada del proyecto. La siguiente etapa principal del currículo es la Fase 1: Fundamentos, comenzando por cómo Python ejecuta un programa y por los primeros ejemplos ejecutables. Consulta el [roadmap](../roadmap.es.md) para seguir el estado de todas las fases.
+Las Fases 1 y 6 están completadas. La siguiente etapa principal del currículo es la **Fase 2: Textos y números**. Consulta el [roadmap](../roadmap.es.md) para seguir el estado de todas las fases.
 
 ## Identidad visual
 

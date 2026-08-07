@@ -27,3 +27,5 @@ fundamentals/04-built-in-data-types/examples/same_looking_values.py
 fundamentals/04-built-in-data-types/examples/value_catalog.py
 fundamentals/05-type-and-isinstance/examples/check_type_families.py
 fundamentals/05-type-and-isinstance/examples/inspect_types.py
+fundamentals/06-type-conversion/examples/conversion_basics.py
+fundamentals/06-type-conversion/examples/conversion_surprises.py
