@@ -15,7 +15,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | Fase | Estado | Resultado actual |
 |---|---|---|
 | 0. Base del proyecto | Completada | Base disponible, auditada y oficialmente completada |
-| 1. Fundamentos | En progreso | Tres capítulos disponibles: ejecución, entrada y salida, variables y nombres |
+| 1. Fundamentos | En progreso | Cuatro capítulos disponibles: ejecución, entrada y salida, variables, nombres y tipos de datos incorporados |
 | 2. Textos y números | Planificada | Contenido todavía no iniciado |
 | 3. Colecciones | Planificada | Contenido todavía no iniciado |
 | 4. Flujo del programa | Planificada | Contenido todavía no iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0 y 6 están completadas. La Fase 6 estableció el estándar editorial piloto, y la Fase 1 ahora está en progreso con tres capítulos disponibles.
+Las Fases 0 y 6 están completadas. La Fase 6 estableció el estándar editorial piloto, y la Fase 1 ahora está en progreso con cuatro capítulos disponibles.
 
 ## Fase 0: Base del proyecto
 
@@ -58,7 +58,7 @@ Las Fases 0 y 6 están completadas. La Fase 6 estableció el estándar editorial
 - [x] [Cómo Python ejecuta un programa](../fundamentals/01-how-python-runs-a-program/README.es.md)
 - [x] [`print()` e `input()`](../fundamentals/02-print-and-input/README.es.md)
 - [x] [Variables y nombres](../fundamentals/03-variables-and-naming/README.es.md)
-- [ ] Tipos de datos integrados
+- [x] [Tipos de datos incorporados](../fundamentals/04-built-in-data-types/README.es.md)
 - [ ] `type()` e `isinstance()`
 - [ ] Conversión de tipos
 
