@@ -110,13 +110,20 @@ python-study-guide/
 │   │   └── examples/
 │   │       ├── learning_profile.py
 │   │       └── variable_basics.py
-│   └── 04-built-in-data-types/
+│   ├── 04-built-in-data-types/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── same_looking_values.py
+│   │       └── value_catalog.py
+│   └── 05-type-and-isinstance/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── same_looking_values.py
-│           └── value_catalog.py
+│           ├── check_type_families.py
+│           └── inspect_types.py
 ├── practical-projects/
 ├── scripts/
 │   ├── check_internal_links.py
@@ -147,7 +154,7 @@ python-study-guide/
 - `exercises/`: actividades prácticas relacionadas con los capítulos.
 - `external-libraries/`: futuras guías sobre paquetes de terceros.
 - `functions/`: futura ruta sobre funciones, parámetros, retornos, alcance y type hints.
-- `fundamentals/`: ruta activa de la Fase 1. Los capítulos disponibles enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres y cómo reconocer tipos de datos incorporados comunes, con explicaciones multilingües alineadas y ejemplos ejecutables.
+- `fundamentals/`: ruta activa de la Fase 1. Los capítulos disponibles enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres, cómo reconocer tipos de datos incorporados comunes y cómo inspeccionar tipos exactos y compatibles con `type()` e `isinstance()`, con explicaciones multilingües alineadas y ejemplos ejecutables.
 - `practical-projects/`: futuros proyectos pequeños que combinarán varios conceptos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions.
 - `standard-library/`: futuras guías sobre módulos distribuidos con Python.

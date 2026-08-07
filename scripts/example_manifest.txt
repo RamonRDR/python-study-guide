@@ -25,3 +25,5 @@ fundamentals/02-print-and-input/examples/output_basics.py
 fundamentals/03-variables-and-naming/examples/variable_basics.py
 fundamentals/04-built-in-data-types/examples/same_looking_values.py
 fundamentals/04-built-in-data-types/examples/value_catalog.py
+fundamentals/05-type-and-isinstance/examples/check_type_families.py
+fundamentals/05-type-and-isinstance/examples/inspect_types.py
