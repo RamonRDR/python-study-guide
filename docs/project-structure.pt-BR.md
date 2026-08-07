@@ -138,6 +138,17 @@ python-study-guide/
 │   ├── run_examples.py
 │   └── validate_repository_structure.py
 ├── standard-library/
+├── strings-and-numbers/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── 01-string-creation-and-indexing/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           ├── fixed_position_text.py
+│           └── string_basics.py
 └── tests/
 ```
 
@@ -165,6 +176,7 @@ python-study-guide/
 - `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
 - `standard-library/`: futuros guias sobre módulos distribuídos com o Python.
+- `strings-and-numbers/`: trilha da Fase 2, atualmente em andamento. Seu primeiro capítulo revisado cobre criação de strings, `len()`, indexação, slicing, limites e imutabilidade em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `tests/`: testes de regressão das ferramentas de qualidade e, futuramente, do conteúdo educacional.
 
 ## Regra dos diretórios de capítulos
