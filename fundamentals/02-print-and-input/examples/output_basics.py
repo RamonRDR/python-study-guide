@@ -1,0 +1,5 @@
+print("Python", "Study", "Guide")
+print("Python", "Study", "Guide", sep=" - ")
+print()
+print("Loading", end="...")
+print("done!")

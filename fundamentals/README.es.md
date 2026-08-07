@@ -13,7 +13,7 @@ Esta sección inicia la secuencia principal de aprendizaje de Python Study Guide
 | Capítulo | Enfoque principal | Nivel | Estado |
 |---|---|---|---|
 | [01. Cómo ejecuta Python un programa](01-how-python-runs-a-program/README.es.md) | Crear, ejecutar, modificar y corregir un primer archivo de Python | Principiante absoluto | Disponible |
-| 02. `print()` e `input()` | Mostrar información y recibir texto de una persona usuaria | Principiante absoluto | Planificado |
+| [02. `print()` e `input()`](02-print-and-input/README.es.md) | Mostrar información y recibir texto de una persona usuaria | Principiante absoluto | Disponible |
 | 03. Variables y nombres | Almacenar valores y elegir identificadores comprensibles | Principiante | Planificado |
 | 04. Tipos de datos incorporados | Reconocer las categorías fundamentales de valores de Python | Principiante | Planificado |
 | 05. `type()` e `isinstance()` | Inspeccionar y verificar tipos de valores | Principiante | Planificado |
@@ -22,7 +22,8 @@ Esta sección inicia la secuencia principal de aprendizaje de Python Study Guide
 ## Orientación de prerrequisitos
 
 - **01. Cómo ejecuta Python un programa:** no se requiere experiencia previa en programación. Python debe estar instalado, y la persona estudiante necesita acceso a un editor de texto plano o de código y a una terminal.
-- Los capítulos posteriores dependerán de la capacidad de crear, guardar y ejecutar un archivo `.py`.
+- **02. `print()` e `input()`:** completa primero el Capítulo 01. La persona estudiante debe poder crear, guardar y ejecutar un archivo `.py` desde la terminal.
+- Los capítulos posteriores dependen de la capacidad de mostrar valores, recibir texto y volver a ejecutar un programa después de cada cambio.
 
 Estudia los capítulos en orden numérico cuando sigas la ruta completa.
 
@@ -54,7 +55,7 @@ Al final de esta ruta, deberías poder:
 
 ## Capítulo actual
 
-Comienza con [Cómo Ejecuta Python un Programa](01-how-python-runs-a-program/README.es.md). El capítulo avanza desde un archivo vacío hasta un script funcional e introduce el editor, la terminal, el intérprete, el orden de ejecución y la lectura básica de errores de sintaxis.
+Continúa con [Salida con `print()` y Entrada con `input()`](02-print-and-input/README.es.md). El capítulo explica la salida del programa, la entrada desde la terminal, las llamadas de función, los prompts, varios valores mostrados, `sep`, `end` y el texto retornado por `input()`.
 
 ## Estructura del directorio
 
@@ -63,10 +64,17 @@ fundamentals/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-how-python-runs-a-program/
+├── 01-how-python-runs-a-program/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       └── hello_world.py
+└── 02-print-and-input/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        └── hello_world.py
+        ├── interactive_greeting.py
+        └── output_basics.py
 ```

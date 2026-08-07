@@ -87,6 +87,22 @@ python-study-guide/
 ├── external-libraries/
 ├── functions/
 ├── fundamentals/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   ├── 01-how-python-runs-a-program/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── hello_world.py
+│   └── 02-print-and-input/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           ├── interactive_greeting.py
+│           └── output_basics.py
 ├── practical-projects/
 ├── scripts/
 │   ├── check_internal_links.py
@@ -117,7 +133,7 @@ python-study-guide/
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros.
 - `functions/`: futura trilha sobre funções, parâmetros, retornos, escopo e type hints.
-- `fundamentals/`: futura trilha sobre variáveis, tipos, entrada, saída, textos, números, coleções e controle de fluxo.
+- `fundamentals/`: trilha ativa da Fase 1. Os capítulos disponíveis ensinam como o Python executa um programa e como usar `print()` e `input()`, com explicações multilíngues alinhadas e exemplos executáveis.
 - `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
 - `standard-library/`: futuros guias sobre módulos distribuídos com o Python.
