@@ -15,7 +15,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | Fase | Estado | Resultado actual |
 |---|---|---|
 | 0. Base del proyecto | Completada | Base disponible, auditada y oficialmente completada |
-| 1. Fundamentos | En progreso | Cuatro capítulos disponibles: ejecución, entrada y salida, variables, nombres y tipos de datos incorporados |
+| 1. Fundamentos | En progreso | Cinco capítulos disponibles: ejecución, entrada y salida, variables, nombres, tipos de datos incorporados e inspección de tipos |
 | 2. Textos y números | Planificada | Contenido todavía no iniciado |
 | 3. Colecciones | Planificada | Contenido todavía no iniciado |
 | 4. Flujo del programa | Planificada | Contenido todavía no iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0 y 6 están completadas. La Fase 6 estableció el estándar editorial piloto, y la Fase 1 ahora está en progreso con cuatro capítulos disponibles.
+Las Fases 0 y 6 están completadas. La Fase 6 estableció el estándar editorial piloto, y la Fase 1 ahora está en progreso con cinco capítulos disponibles.
 
 ## Fase 0: Base del proyecto
 
@@ -59,7 +59,7 @@ Las Fases 0 y 6 están completadas. La Fase 6 estableció el estándar editorial
 - [x] [`print()` e `input()`](../fundamentals/02-print-and-input/README.es.md)
 - [x] [Variables y nombres](../fundamentals/03-variables-and-naming/README.es.md)
 - [x] [Tipos de datos incorporados](../fundamentals/04-built-in-data-types/README.es.md)
-- [ ] `type()` e `isinstance()`
+- [x] [`type()` e `isinstance()`](../fundamentals/05-type-and-isinstance/README.es.md)
 - [ ] Conversión de tipos
 
 ## Fase 2: Textos y números

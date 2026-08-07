@@ -16,7 +16,7 @@ Esta seção inicia a sequência principal de aprendizagem do Python Study Guide
 | [02. `print()` e `input()`](02-print-and-input/README.pt-BR.md) | Exibir informações e receber texto de uma pessoa usuária | Iniciante absoluto | Disponível |
 | [03. Variáveis e nomes](03-variables-and-naming/README.pt-BR.md) | Armazenar valores e escolher identificadores compreensíveis | Iniciante | Disponível |
 | [04. Tipos de dados embutidos](04-built-in-data-types/README.pt-BR.md) | Reconhecer categorias comuns de valores e sua notação no código-fonte | Iniciante | Disponível |
-| 05. `type()` e `isinstance()` | Inspecionar e verificar tipos de valores | Iniciante | Planejado |
+| [05. `type()` e `isinstance()`](05-type-and-isinstance/README.pt-BR.md) | Inspecionar tipos exatos e verificar famílias de tipos compatíveis | Iniciante | Disponível |
 | 06. Conversão de tipos | Converter valores compatíveis de forma deliberada | Iniciante | Planejado |
 
 ## Orientação de pré-requisitos
@@ -25,6 +25,7 @@ Esta seção inicia a sequência principal de aprendizagem do Python Study Guide
 - **02. `print()` e `input()`:** conclua primeiro o Capítulo 01. A pessoa estudante deve conseguir criar, salvar e executar um arquivo `.py` pelo terminal.
 - **03. Variáveis e nomes:** conclua primeiro o Capítulo 02. A pessoa estudante deve compreender `print()`, `input()` e por que o resultado de uma entrada precisa ser armazenado antes de ser reutilizado.
 - **04. Tipos de dados embutidos:** conclua primeiro o Capítulo 03. A pessoa estudante deve compreender atribuição, reatribuição e como nomes de variáveis referenciam valores.
+- **05. `type()` e `isinstance()`:** conclua primeiro o Capítulo 04. A pessoa estudante deve reconhecer valores `str`, `int`, `float`, `bool` e `None` e compreender que valores possuem tipos.
 - Os capítulos posteriores dependem da capacidade de armazenar, exibir, reconhecer e inspecionar valores por meio de nomes claros.
 
 Estude os capítulos em ordem numérica ao seguir a trilha completa.
@@ -57,7 +58,7 @@ Ao final desta trilha, você deverá ser capaz de:
 
 ## Capítulo atual
 
-Continue com [Tipos de Dados Embutidos](04-built-in-data-types/README.pt-BR.md). O capítulo explica valores e tipos, notação no código-fonte, `str`, `int`, `float`, `bool`, `None`, valores de aparência semelhante e comportamentos dependentes do tipo.
+Continue com [`type()` e `isinstance()`](05-type-and-isinstance/README.pt-BR.md). O capítulo explica inspeção do tipo exato, verificações de compatibilidade, tuplas de tipos aceitos e a importante relação entre `bool` e `int`.
 
 ## Estrutura do diretório
 
@@ -86,11 +87,18 @@ fundamentals/
 │   └── examples/
 │       ├── learning_profile.py
 │       └── variable_basics.py
-└── 04-built-in-data-types/
+├── 04-built-in-data-types/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── same_looking_values.py
+│       └── value_catalog.py
+└── 05-type-and-isinstance/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── same_looking_values.py
-        └── value_catalog.py
+        ├── check_type_families.py
+        └── inspect_types.py
 ```
