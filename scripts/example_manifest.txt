@@ -22,3 +22,4 @@ comments-and-documentation/06-pep8-and-readability/examples/readable_layout.py
 comments-and-documentation/06-pep8-and-readability/examples/refactor_for_readability.py
 fundamentals/01-how-python-runs-a-program/examples/hello_world.py
 fundamentals/02-print-and-input/examples/output_basics.py
+fundamentals/03-variables-and-naming/examples/variable_basics.py
