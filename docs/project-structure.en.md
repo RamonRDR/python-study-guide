@@ -117,13 +117,20 @@ python-study-guide/
 │   │   └── examples/
 │   │       ├── same_looking_values.py
 │   │       └── value_catalog.py
-│   └── 05-type-and-isinstance/
+│   ├── 05-type-and-isinstance/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── check_type_families.py
+│   │       └── inspect_types.py
+│   └── 06-type-conversion/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── check_type_families.py
-│           └── inspect_types.py
+│           ├── conversion_basics.py
+│           └── conversion_surprises.py
 ├── practical-projects/
 ├── scripts/
 │   ├── check_internal_links.py
@@ -154,7 +161,7 @@ python-study-guide/
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.
 - `functions/`: future learning path for functions, parameters, returns, scope, and type hints.
-- `fundamentals/`: active Phase 1 learning path. The available chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize common built-in data types, and how to inspect exact and compatible types with `type()` and `isinstance()`, with aligned multilingual explanations and executable examples.
+- `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
 - `standard-library/`: future guides to modules distributed with Python.

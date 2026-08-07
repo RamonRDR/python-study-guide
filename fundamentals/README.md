@@ -17,7 +17,7 @@ This section begins the main Python Study Guide learning sequence. It assumes no
 | [03. Variables and naming](03-variables-and-naming/README.md) | Store values and choose understandable identifiers | Beginner | Available |
 | [04. Built-in data types](04-built-in-data-types/README.md) | Recognize common value categories and their source notation | Beginner | Available |
 | [05. `type()` and `isinstance()`](05-type-and-isinstance/README.md) | Inspect exact types and verify compatible type families | Beginner | Available |
-| 06. Type conversion | Convert compatible values deliberately | Beginner | Planned |
+| [06. Type conversion](06-type-conversion/README.md) | Convert compatible values deliberately | Beginner | Available |
 
 ## Prerequisite guidance
 
@@ -26,7 +26,7 @@ This section begins the main Python Study Guide learning sequence. It assumes no
 - **03. Variables and naming:** complete Chapter 02 first. The learner should understand `print()`, `input()`, and why an input result must be stored before it can be reused.
 - **04. Built-in data types:** complete Chapter 03 first. The learner should understand assignment, reassignment, and how variable names refer to values.
 - **05. `type()` and `isinstance()`:** complete Chapter 04 first. The learner should recognize `str`, `int`, `float`, `bool`, and `None` values and understand that values have types.
-- Later chapters build on the ability to store, display, recognize, and inspect values through clear names.
+- **06. Type conversion:** complete Chapter 05 first. The learner should know how to inspect values with `type()` and `isinstance()` and recognize the common built-in types introduced earlier.
 
 Study the chapters in numerical order when following the complete path.
 
@@ -58,7 +58,7 @@ By the end of this learning path, you should be able to:
 
 ## Current chapter
 
-Continue with [`type()` and `isinstance()`](05-type-and-isinstance/README.md). It explains exact type inspection, compatibility checks, tuples of accepted types, and the important relationship between `bool` and `int`.
+Continue with [Type Conversion](06-type-conversion/README.md). It explains deliberate conversion with `int()`, `float()`, `str()`, and `bool()`, invalid conversions, truth-value behavior, and conversion of text returned by `input()`.
 
 ## Directory structure
 
@@ -94,11 +94,18 @@ fundamentals/
 │   └── examples/
 │       ├── same_looking_values.py
 │       └── value_catalog.py
-└── 05-type-and-isinstance/
+├── 05-type-and-isinstance/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── check_type_families.py
+│       └── inspect_types.py
+└── 06-type-conversion/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── check_type_families.py
-        └── inspect_types.py
+        ├── conversion_basics.py
+        └── conversion_surprises.py
 ```

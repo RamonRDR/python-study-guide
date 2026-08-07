@@ -17,7 +17,7 @@ Esta seção inicia a sequência principal de aprendizagem do Python Study Guide
 | [03. Variáveis e nomes](03-variables-and-naming/README.pt-BR.md) | Armazenar valores e escolher identificadores compreensíveis | Iniciante | Disponível |
 | [04. Tipos de dados embutidos](04-built-in-data-types/README.pt-BR.md) | Reconhecer categorias comuns de valores e sua notação no código-fonte | Iniciante | Disponível |
 | [05. `type()` e `isinstance()`](05-type-and-isinstance/README.pt-BR.md) | Inspecionar tipos exatos e verificar famílias de tipos compatíveis | Iniciante | Disponível |
-| 06. Conversão de tipos | Converter valores compatíveis de forma deliberada | Iniciante | Planejado |
+| [06. Conversão de tipos](06-type-conversion/README.pt-BR.md) | Converter valores compatíveis de forma deliberada | Iniciante | Disponível |
 
 ## Orientação de pré-requisitos
 
@@ -26,7 +26,7 @@ Esta seção inicia a sequência principal de aprendizagem do Python Study Guide
 - **03. Variáveis e nomes:** conclua primeiro o Capítulo 02. A pessoa estudante deve compreender `print()`, `input()` e por que o resultado de uma entrada precisa ser armazenado antes de ser reutilizado.
 - **04. Tipos de dados embutidos:** conclua primeiro o Capítulo 03. A pessoa estudante deve compreender atribuição, reatribuição e como nomes de variáveis referenciam valores.
 - **05. `type()` e `isinstance()`:** conclua primeiro o Capítulo 04. A pessoa estudante deve reconhecer valores `str`, `int`, `float`, `bool` e `None` e compreender que valores possuem tipos.
-- Os capítulos posteriores dependem da capacidade de armazenar, exibir, reconhecer e inspecionar valores por meio de nomes claros.
+- **06. Conversão de tipos:** conclua primeiro o Capítulo 05. A pessoa estudante deve saber inspecionar valores com `type()` e `isinstance()` e reconhecer os tipos embutidos comuns apresentados anteriormente.
 
 Estude os capítulos em ordem numérica ao seguir a trilha completa.
 
@@ -58,7 +58,7 @@ Ao final desta trilha, você deverá ser capaz de:
 
 ## Capítulo atual
 
-Continue com [`type()` e `isinstance()`](05-type-and-isinstance/README.pt-BR.md). O capítulo explica inspeção do tipo exato, verificações de compatibilidade, tuplas de tipos aceitos e a importante relação entre `bool` e `int`.
+Continue com [Conversão de Tipos](06-type-conversion/README.pt-BR.md). O capítulo explica conversão deliberada com `int()`, `float()`, `str()` e `bool()`, conversões inválidas, comportamento de valor-verdade e conversão do texto retornado por `input()`.
 
 ## Estrutura do diretório
 
@@ -94,11 +94,18 @@ fundamentals/
 │   └── examples/
 │       ├── same_looking_values.py
 │       └── value_catalog.py
-└── 05-type-and-isinstance/
+├── 05-type-and-isinstance/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── check_type_families.py
+│       └── inspect_types.py
+└── 06-type-conversion/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── check_type_families.py
-        └── inspect_types.py
+        ├── conversion_basics.py
+        └── conversion_surprises.py
 ```
