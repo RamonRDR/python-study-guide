@@ -1,0 +1,7 @@
+print("0.1 + 0.2:", 0.1 + 0.2)
+print("Exactly 0.3:", 0.1 + 0.2 == 0.3)
+print("bool(0):", bool(0))
+print("bool(1):", bool(1))
+print('bool(""):', bool(""))
+print('bool("False"):', bool("False"))
+print("bool is int-compatible:", isinstance(True, int))

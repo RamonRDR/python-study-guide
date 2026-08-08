@@ -149,13 +149,20 @@ python-study-guide/
 │   │   └── examples/
 │   │       ├── fixed_position_text.py
 │   │       └── string_basics.py
-│   └── 02-common-string-methods/
+│   ├── 02-common-string-methods/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── normalize_text.py
+│   │       └── split_and_join.py
+│   └── 03-int-float-and-bool/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── normalize_text.py
-│           └── split_and_join.py
+│           ├── numeric_behavior.py
+│           └── truth_and_precision.py
 └── tests/
 ```
 
@@ -183,7 +190,7 @@ python-study-guide/
 - `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
 - `standard-library/`: futuros guias sobre módulos distribuídos com o Python.
-- `strings-and-numbers/`: trilha da Fase 2, atualmente em andamento. Seus dois primeiros capítulos revisados cobrem criação de strings, `len()`, indexação, slicing, imutabilidade e métodos comuns para transformar, pesquisar, dividir e unir texto em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
+- `strings-and-numbers/`: trilha da Fase 2, atualmente em andamento. Seus três primeiros capítulos revisados cobrem criação de strings, métodos comuns, comportamento de inteiros e ponto flutuante, divisão, aproximação de ponto flutuante, valores de verdade e semântica booleana em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `tests/`: testes de regressão das ferramentas de qualidade e, futuramente, do conteúdo educacional.
 
 ## Regra dos diretórios de capítulos

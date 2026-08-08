@@ -14,14 +14,14 @@ Esta sección corresponde a la Fase 2 de la secuencia principal de aprendizaje d
 |---|---|---|---|
 | [01. Creación e indexación de strings](01-string-creation-and-indexing/README.es.md) | Crear strings y leer posiciones e intervalos de forma segura | Principiante | Disponible |
 | [02. Métodos comunes de strings](02-common-string-methods/README.es.md) | Transformar, buscar, dividir y unir texto | Principiante | Disponible |
-| 03. `int`, `float` y `bool` | Trabajar con mayor profundidad con valores numéricos y lógicos | Principiante | Planificado |
+| [03. `int`, `float` y `bool`](03-int-float-and-bool/README.es.md) | Profundizar en el comportamiento de enteros, punto flotante y booleanos | Principiante | Disponible |
 | 04. `round()`, `abs()`, `min()`, `max()` y `sum()` | Usar funciones incorporadas numéricas comunes | Principiante | Planificado |
 
 ## Orientación de prerrequisitos
 
 - **01. Creación e indexación de strings:** completa primero la Fase 1. Debes comprender variables, `str`, `int`, `type()`, conversión de tipos y ejecución básica de programas.
 - **02. Métodos comunes de strings:** completa primero el Capítulo 01. Debes comprender la inmutabilidad de las strings, la indexación, el slicing y la diferencia entre la string original y un resultado de tipo string producido sin modificarla.
-- **03. `int`, `float` y `bool`:** la Fase 1 ya presentó estos tipos. Este capítulo profundizará su comportamiento después de que los capítulos de texto establezcan una intuición más sólida sobre secuencias.
+- **03. `int`, `float` y `bool`:** completa primero el Capítulo 02. La Fase 1 ya presentó estos tipos; este capítulo profundiza el comportamiento numérico, la precisión de punto flotante y los valores de verdad.
 - **04. Funciones numéricas incorporadas:** completa primero el capítulo sobre tipos numéricos para aprender estas funciones en contexto y no como una lista aislada.
 
 Estudia los capítulos en orden numérico al seguir la ruta completa.
@@ -50,7 +50,7 @@ Al final de esta ruta de aprendizaje, deberías poder:
 
 ## Capítulo actual
 
-Continúa con [Métodos Comunes de Strings](02-common-string-methods/README.es.md). Enseña llamadas de métodos, normalización de texto, búsqueda, reemplazo, división, unión y cadenas de métodos legibles, reforzando la inmutabilidad de las strings.
+Continúa con [`int`, `float` y `bool`](03-int-float-and-bool/README.es.md). Profundiza en el comportamiento de enteros y punto flotante, división verdadera y por piso, restos, aproximación de punto flotante, valores de verdad y la relación entre `bool` e `int`.
 
 ## Estructura del directorio
 
@@ -66,13 +66,20 @@ strings-and-numbers/
 │   └── examples/
 │       ├── fixed_position_text.py
 │       └── string_basics.py
-└── 02-common-string-methods/
+├── 02-common-string-methods/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── normalize_text.py
+│       └── split_and_join.py
+└── 03-int-float-and-bool/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── normalize_text.py
-        └── split_and_join.py
+        ├── numeric_behavior.py
+        └── truth_and_precision.py
 ```
 
 El árbol representa archivos que existen actualmente. Los capítulos planificados aparecen en la ruta de aprendizaje, pero no se muestran como directorios hasta que se agrega su contenido.

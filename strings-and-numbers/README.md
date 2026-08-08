@@ -14,14 +14,14 @@ This section is Phase 2 of the main Python Study Guide learning sequence. It bui
 |---|---|---|---|
 | [01. String creation and indexing](01-string-creation-and-indexing/README.md) | Create strings and read positions and ranges safely | Beginner | Available |
 | [02. Common string methods](02-common-string-methods/README.md) | Transform, search, split, and join text | Beginner | Available |
-| 03. `int`, `float`, and `bool` | Work more deeply with numeric and logical values | Beginner | Planned |
+| [03. `int`, `float`, and `bool`](03-int-float-and-bool/README.md) | Deepen integer, floating-point, and Boolean behavior | Beginner | Available |
 | 04. `round()`, `abs()`, `min()`, `max()`, and `sum()` | Use common built-in numeric helpers | Beginner | Planned |
 
 ## Prerequisite guidance
 
 - **01. String creation and indexing:** complete Phase 1 first. You should understand variables, `str`, `int`, `type()`, type conversion, and basic program execution.
 - **02. Common string methods:** complete Chapter 01 first. You should understand string immutability, indexing, slicing, and the difference between the original string and a string result produced without mutating it.
-- **03. `int`, `float`, and `bool`:** Phase 1 already introduced these types. This chapter will deepen their behavior after the text-focused chapters establish stronger sequence intuition.
+- **03. `int`, `float`, and `bool`:** complete Chapter 02 first. Phase 1 already introduced these types; this chapter deepens numeric behavior, floating-point precision, and truth values.
 - **04. Numeric built-ins:** complete the numeric-type chapter first so the helper functions are learned in context rather than as an isolated list.
 
 Study the chapters in numerical order when following the complete path.
@@ -50,7 +50,7 @@ By the end of this learning path, you should be able to:
 
 ## Current chapter
 
-Continue with [Common String Methods](02-common-string-methods/README.md). It teaches method calls, text normalization, searching, replacing, splitting, joining, and readable method chains while reinforcing string immutability.
+Continue with [`int`, `float`, and `bool`](03-int-float-and-bool/README.md). It deepens integer and floating-point behavior, true and floor division, remainders, floating-point approximation, truth values, and the relationship between `bool` and `int`.
 
 ## Directory structure
 
@@ -66,13 +66,20 @@ strings-and-numbers/
 │   └── examples/
 │       ├── fixed_position_text.py
 │       └── string_basics.py
-└── 02-common-string-methods/
+├── 02-common-string-methods/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── normalize_text.py
+│       └── split_and_join.py
+└── 03-int-float-and-bool/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── normalize_text.py
-        └── split_and_join.py
+        ├── numeric_behavior.py
+        └── truth_and_precision.py
 ```
 
 The directory tree reflects files that currently exist. Planned chapters are listed in the learning path but are not represented as directories until their content is added.
