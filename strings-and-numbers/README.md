@@ -15,7 +15,7 @@ This section is Phase 2 of the main Python Study Guide learning sequence. It bui
 | [01. String creation and indexing](01-string-creation-and-indexing/README.md) | Create strings and read positions and ranges safely | Beginner | Available |
 | [02. Common string methods](02-common-string-methods/README.md) | Transform, search, split, and join text | Beginner | Available |
 | [03. `int`, `float`, and `bool`](03-int-float-and-bool/README.md) | Deepen integer, floating-point, and Boolean behavior | Beginner | Available |
-| 04. `round()`, `abs()`, `min()`, `max()`, and `sum()` | Use common built-in numeric helpers | Beginner | Planned |
+| [04. Numeric built-ins](04-numeric-builtins/README.md) | Use `round()`, `abs()`, `min()`, `max()`, and `sum()` appropriately | Beginner | Available |
 
 ## Prerequisite guidance
 
@@ -48,9 +48,9 @@ By the end of this learning path, you should be able to:
 - connect text input, type conversion, and numeric computation;
 - recognize when a text or numeric operation produces a result value without mutating the original value.
 
-## Current chapter
+## Section status
 
-Continue with [`int`, `float`, and `bool`](03-int-float-and-bool/README.md). It deepens integer and floating-point behavior, true and floor division, remainders, floating-point approximation, truth values, and the relationship between `bool` and `int`.
+Phase 2 is complete. Its final chapter, [Numeric Built-ins](04-numeric-builtins/README.md), connects numeric behavior with `round()`, `abs()`, `min()`, `max()`, and `sum()`. The next curriculum phase is Collections.
 
 ## Directory structure
 
@@ -73,13 +73,20 @@ strings-and-numbers/
 │   └── examples/
 │       ├── normalize_text.py
 │       └── split_and_join.py
-└── 03-int-float-and-bool/
+├── 03-int-float-and-bool/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── numeric_behavior.py
+│       └── truth_and_precision.py
+└── 04-numeric-builtins/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── numeric_behavior.py
-        └── truth_and_precision.py
+        ├── numeric_summary.py
+        └── rounding_behavior.py
 ```
 
-The directory tree reflects files that currently exist. Planned chapters are listed in the learning path but are not represented as directories until their content is added.
+The directory tree reflects the complete Phase 2 learning path. All four planned chapters are now available in English, Brazilian Portuguese, and Spanish.

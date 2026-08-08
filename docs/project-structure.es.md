@@ -156,13 +156,20 @@ python-study-guide/
 │   │   └── examples/
 │   │       ├── normalize_text.py
 │   │       └── split_and_join.py
-│   └── 03-int-float-and-bool/
+│   ├── 03-int-float-and-bool/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── numeric_behavior.py
+│   │       └── truth_and_precision.py
+│   └── 04-numeric-builtins/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── numeric_behavior.py
-│           └── truth_and_precision.py
+│           ├── numeric_summary.py
+│           └── rounding_behavior.py
 └── tests/
 ```
 
@@ -190,7 +197,7 @@ python-study-guide/
 - `practical-projects/`: futuros proyectos pequeños que combinarán varios conceptos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions.
 - `standard-library/`: futuras guías sobre módulos distribuidos con Python.
-- `strings-and-numbers/`: ruta de la Fase 2, actualmente en progreso. Sus tres primeros capítulos revisados cubren creación de strings, métodos comunes, comportamiento de enteros y punto flotante, división, aproximación de punto flotante, valores de verdad y semántica booleana en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
+- `strings-and-numbers/`: ruta completa de la Fase 2. Sus cuatro capítulos revisados cubren creación e indexación de strings, métodos comunes, comportamiento de enteros, punto flotante y booleanos, precisión de punto flotante y `round()`, `abs()`, `min()`, `max()` y `sum()` en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
 - `tests/`: pruebas de regresión de las herramientas de calidad y, más adelante, del contenido educativo.
 
 ## Regla de los directorios de capítulos
