@@ -149,13 +149,20 @@ python-study-guide/
 │   │   └── examples/
 │   │       ├── fixed_position_text.py
 │   │       └── string_basics.py
-│   └── 02-common-string-methods/
+│   ├── 02-common-string-methods/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── normalize_text.py
+│   │       └── split_and_join.py
+│   └── 03-int-float-and-bool/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── normalize_text.py
-│           └── split_and_join.py
+│           ├── numeric_behavior.py
+│           └── truth_and_precision.py
 └── tests/
 ```
 
@@ -183,7 +190,7 @@ python-study-guide/
 - `practical-projects/`: future small projects combining several concepts.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
 - `standard-library/`: future guides to modules distributed with Python.
-- `strings-and-numbers/`: Phase 2 learning path, currently in progress. Its first two reviewed chapters cover string creation, `len()`, indexing, slicing, immutability, and common methods for transforming, searching, splitting, and joining text in English, Brazilian Portuguese, and Spanish with safe executable examples.
+- `strings-and-numbers/`: Phase 2 learning path, currently in progress. Its first three reviewed chapters cover string creation, common string methods, integer and floating-point behavior, division, floating-point approximation, truth values, and Boolean semantics in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `tests/`: regression tests for repository quality tools and later educational code.
 
 ## Chapter directory rule

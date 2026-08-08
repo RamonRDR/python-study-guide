@@ -16,7 +16,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 |---|---|---|
 | 0. Base del proyecto | Completada | Base disponible, auditada y oficialmente completada |
 | 1. Fundamentos | Completada | Seis capítulos revisados cubren ejecución, entrada y salida, variables y nombres, tipos de datos incorporados, inspección de tipos y conversión de tipos |
-| 2. Textos y números | En progreso | Dos capítulos revisados cubren creación, indexación, slicing, inmutabilidad y métodos comunes para transformar, buscar, dividir y unir texto |
+| 2. Textos y números | En progreso | Tres capítulos revisados cubren creación de strings, métodos comunes, comportamiento de enteros y punto flotante, precisión y valores booleanos |
 | 3. Colecciones | Planificada | Contenido todavía no iniciado |
 | 4. Flujo del programa | Planificada | Contenido todavía no iniciado |
 | 5. Funciones | Planificada | Contenido todavía no iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1 y 6 están completadas. La Fase 2 está ahora en progreso con dos capítulos revisados, mientras la Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1 y 6 están completadas. La Fase 2 está ahora en progreso con tres capítulos revisados, mientras la Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -66,7 +66,7 @@ Las Fases 0, 1 y 6 están completadas. La Fase 2 está ahora en progreso con dos
 
 - [x] [Creación e indexación de strings](../strings-and-numbers/01-string-creation-and-indexing/README.es.md)
 - [x] [Métodos comunes de strings](../strings-and-numbers/02-common-string-methods/README.es.md)
-- [ ] `int`, `float` y `bool`
+- [x] [`int`, `float` y `bool`](../strings-and-numbers/03-int-float-and-bool/README.es.md)
 - [ ] `round()`, `abs()`, `min()`, `max()` y `sum()`
 
 ## Fase 3: Colecciones

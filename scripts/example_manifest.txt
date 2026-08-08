@@ -33,3 +33,5 @@ strings-and-numbers/01-string-creation-and-indexing/examples/fixed_position_text
 strings-and-numbers/01-string-creation-and-indexing/examples/string_basics.py
 strings-and-numbers/02-common-string-methods/examples/normalize_text.py
 strings-and-numbers/02-common-string-methods/examples/split_and_join.py
+strings-and-numbers/03-int-float-and-bool/examples/numeric_behavior.py
+strings-and-numbers/03-int-float-and-bool/examples/truth_and_precision.py

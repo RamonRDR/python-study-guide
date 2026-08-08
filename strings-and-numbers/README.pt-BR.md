@@ -14,14 +14,14 @@ Esta seção corresponde à Fase 2 da sequência principal de aprendizagem do Py
 |---|---|---|---|
 | [01. Criação e indexação de strings](01-string-creation-and-indexing/README.pt-BR.md) | Criar strings e ler posições e intervalos com segurança | Iniciante | Disponível |
 | [02. Métodos comuns de strings](02-common-string-methods/README.pt-BR.md) | Transformar, pesquisar, dividir e unir texto | Iniciante | Disponível |
-| 03. `int`, `float` e `bool` | Trabalhar com mais profundidade com valores numéricos e lógicos | Iniciante | Planejado |
+| [03. `int`, `float` e `bool`](03-int-float-and-bool/README.pt-BR.md) | Aprofundar o comportamento de inteiros, ponto flutuante e booleanos | Iniciante | Disponível |
 | 04. `round()`, `abs()`, `min()`, `max()` e `sum()` | Usar funções embutidas numéricas comuns | Iniciante | Planejado |
 
 ## Orientação de pré-requisitos
 
 - **01. Criação e indexação de strings:** conclua a Fase 1 primeiro. Você deve entender variáveis, `str`, `int`, `type()`, conversão de tipos e execução básica de programas.
 - **02. Métodos comuns de strings:** conclua o Capítulo 01 primeiro. Você deve entender imutabilidade de strings, indexação, slicing e a diferença entre a string original e um resultado do tipo string produzido sem modificá-la.
-- **03. `int`, `float` e `bool`:** a Fase 1 já apresentou esses tipos. Este capítulo aprofundará seu comportamento depois que os capítulos de texto estabelecerem uma intuição mais forte sobre sequências.
+- **03. `int`, `float` e `bool`:** conclua primeiro o Capítulo 02. A Fase 1 já apresentou esses tipos; este capítulo aprofunda comportamento numérico, precisão de ponto flutuante e valores de verdade.
 - **04. Funções numéricas embutidas:** conclua primeiro o capítulo sobre tipos numéricos para aprender essas funções dentro de um contexto, e não como uma lista isolada.
 
 Estude os capítulos em ordem numérica ao seguir a trilha completa.
@@ -50,7 +50,7 @@ Ao final desta trilha de aprendizagem, você deverá conseguir:
 
 ## Capítulo atual
 
-Continue com [Métodos Comuns de Strings](02-common-string-methods/README.pt-BR.md). Ele ensina chamadas de métodos, normalização de texto, busca, substituição, divisão, união e cadeias de métodos legíveis, reforçando a imutabilidade das strings.
+Continue com [`int`, `float` e `bool`](03-int-float-and-bool/README.pt-BR.md). Ele aprofunda comportamento de inteiros e ponto flutuante, divisão verdadeira e pelo piso, restos, aproximação de ponto flutuante, valores de verdade e a relação entre `bool` e `int`.
 
 ## Estrutura do diretório
 
@@ -66,13 +66,20 @@ strings-and-numbers/
 │   └── examples/
 │       ├── fixed_position_text.py
 │       └── string_basics.py
-└── 02-common-string-methods/
+├── 02-common-string-methods/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── normalize_text.py
+│       └── split_and_join.py
+└── 03-int-float-and-bool/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── normalize_text.py
-        └── split_and_join.py
+        ├── numeric_behavior.py
+        └── truth_and_precision.py
 ```
 
 A árvore representa arquivos que existem atualmente. Os capítulos planejados aparecem na trilha de aprendizagem, mas não são apresentados como diretórios até que seu conteúdo seja adicionado.
