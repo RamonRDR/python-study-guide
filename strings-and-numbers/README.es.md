@@ -13,7 +13,7 @@ Esta sección corresponde a la Fase 2 de la secuencia principal de aprendizaje d
 | Capítulo | Enfoque principal | Nivel | Estado |
 |---|---|---|---|
 | [01. Creación e indexación de strings](01-string-creation-and-indexing/README.es.md) | Crear strings y leer posiciones e intervalos de forma segura | Principiante | Disponible |
-| 02. Métodos comunes de strings | Transformar, buscar, dividir y unir texto | Principiante | Planificado |
+| [02. Métodos comunes de strings](02-common-string-methods/README.es.md) | Transformar, buscar, dividir y unir texto | Principiante | Disponible |
 | 03. `int`, `float` y `bool` | Trabajar con mayor profundidad con valores numéricos y lógicos | Principiante | Planificado |
 | 04. `round()`, `abs()`, `min()`, `max()` y `sum()` | Usar funciones incorporadas numéricas comunes | Principiante | Planificado |
 
@@ -50,7 +50,7 @@ Al final de esta ruta de aprendizaje, deberías poder:
 
 ## Capítulo actual
 
-Comienza con [Creación e Indexación de Strings](01-string-creation-and-indexing/README.es.md). Presenta literales de string, `len()`, índices positivos y negativos, slicing, límites de slices, `IndexError` e inmutabilidad de strings.
+Continúa con [Métodos Comunes de Strings](02-common-string-methods/README.es.md). Enseña llamadas de métodos, normalización de texto, búsqueda, reemplazo, división, unión y cadenas de métodos legibles, reforzando la inmutabilidad de las strings.
 
 ## Estructura del directorio
 
@@ -59,13 +59,20 @@ strings-and-numbers/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-string-creation-and-indexing/
+├── 01-string-creation-and-indexing/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── fixed_position_text.py
+│       └── string_basics.py
+└── 02-common-string-methods/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── fixed_position_text.py
-        └── string_basics.py
+        ├── normalize_text.py
+        └── split_and_join.py
 ```
 
 El árbol representa archivos que existen actualmente. Los capítulos planificados aparecen en la ruta de aprendizaje, pero no se muestran como directorios hasta que se agrega su contenido.

@@ -13,7 +13,7 @@ This section is Phase 2 of the main Python Study Guide learning sequence. It bui
 | Chapter | Main focus | Level | Status |
 |---|---|---|---|
 | [01. String creation and indexing](01-string-creation-and-indexing/README.md) | Create strings and read positions and ranges safely | Beginner | Available |
-| 02. Common string methods | Transform, search, split, and join text | Beginner | Planned |
+| [02. Common string methods](02-common-string-methods/README.md) | Transform, search, split, and join text | Beginner | Available |
 | 03. `int`, `float`, and `bool` | Work more deeply with numeric and logical values | Beginner | Planned |
 | 04. `round()`, `abs()`, `min()`, `max()`, and `sum()` | Use common built-in numeric helpers | Beginner | Planned |
 
@@ -50,7 +50,7 @@ By the end of this learning path, you should be able to:
 
 ## Current chapter
 
-Start with [String Creation and Indexing](01-string-creation-and-indexing/README.md). It introduces string literals, `len()`, positive and negative indexes, slicing, slice boundaries, `IndexError`, and string immutability.
+Continue with [Common String Methods](02-common-string-methods/README.md). It teaches method calls, text normalization, searching, replacing, splitting, joining, and readable method chains while reinforcing string immutability.
 
 ## Directory structure
 
@@ -59,13 +59,20 @@ strings-and-numbers/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-string-creation-and-indexing/
+├── 01-string-creation-and-indexing/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── fixed_position_text.py
+│       └── string_basics.py
+└── 02-common-string-methods/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── fixed_position_text.py
-        └── string_basics.py
+        ├── normalize_text.py
+        └── split_and_join.py
 ```
 
 The directory tree reflects files that currently exist. Planned chapters are listed in the learning path but are not represented as directories until their content is added.
