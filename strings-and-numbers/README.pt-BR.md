@@ -13,7 +13,7 @@ Esta seção corresponde à Fase 2 da sequência principal de aprendizagem do Py
 | Capítulo | Foco principal | Nível | Status |
 |---|---|---|---|
 | [01. Criação e indexação de strings](01-string-creation-and-indexing/README.pt-BR.md) | Criar strings e ler posições e intervalos com segurança | Iniciante | Disponível |
-| 02. Métodos comuns de strings | Transformar, pesquisar, dividir e unir texto | Iniciante | Planejado |
+| [02. Métodos comuns de strings](02-common-string-methods/README.pt-BR.md) | Transformar, pesquisar, dividir e unir texto | Iniciante | Disponível |
 | 03. `int`, `float` e `bool` | Trabalhar com mais profundidade com valores numéricos e lógicos | Iniciante | Planejado |
 | 04. `round()`, `abs()`, `min()`, `max()` e `sum()` | Usar funções embutidas numéricas comuns | Iniciante | Planejado |
 
@@ -50,7 +50,7 @@ Ao final desta trilha de aprendizagem, você deverá conseguir:
 
 ## Capítulo atual
 
-Comece por [Criação e Indexação de Strings](01-string-creation-and-indexing/README.pt-BR.md). Ele apresenta literais de string, `len()`, índices positivos e negativos, slicing, limites de slices, `IndexError` e imutabilidade de strings.
+Continue com [Métodos Comuns de Strings](02-common-string-methods/README.pt-BR.md). Ele ensina chamadas de métodos, normalização de texto, busca, substituição, divisão, união e cadeias de métodos legíveis, reforçando a imutabilidade das strings.
 
 ## Estrutura do diretório
 
@@ -59,13 +59,20 @@ strings-and-numbers/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-string-creation-and-indexing/
+├── 01-string-creation-and-indexing/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── fixed_position_text.py
+│       └── string_basics.py
+└── 02-common-string-methods/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── fixed_position_text.py
-        └── string_basics.py
+        ├── normalize_text.py
+        └── split_and_join.py
 ```
 
 A árvore representa arquivos que existem atualmente. Os capítulos planejados aparecem na trilha de aprendizagem, mas não são apresentados como diretórios até que seu conteúdo seja adicionado.

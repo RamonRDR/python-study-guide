@@ -31,3 +31,5 @@ fundamentals/06-type-conversion/examples/conversion_basics.py
 fundamentals/06-type-conversion/examples/conversion_surprises.py
 strings-and-numbers/01-string-creation-and-indexing/examples/fixed_position_text.py
 strings-and-numbers/01-string-creation-and-indexing/examples/string_basics.py
+strings-and-numbers/02-common-string-methods/examples/normalize_text.py
+strings-and-numbers/02-common-string-methods/examples/split_and_join.py

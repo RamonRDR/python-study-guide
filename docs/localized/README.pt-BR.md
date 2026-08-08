@@ -81,7 +81,7 @@ A fundação do projeto e duas seções educacionais completas estão disponíve
 - [Comentários versus Logging em Python](../../comments-and-documentation/05-comments-vs-logging/README.pt-BR.md)
 - [PEP 8 e Legibilidade em Python](../../comments-and-documentation/06-pep8-and-readability/README.pt-BR.md)
 
-As Fases 1 e 6 estão concluídas. A **Fase 2: Textos e números está agora em andamento**, começando por [Criação e Indexação de Strings](../../strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md). Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status de todas as fases.
+As Fases 1 e 6 estão concluídas. A **Fase 2: Textos e números está agora em andamento** com dois capítulos revisados: [Criação e Indexação de Strings](../../strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md) e [Métodos Comuns de Strings](../../strings-and-numbers/02-common-string-methods/README.pt-BR.md). Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status de todas as fases.
 
 ## Identidade visual
 

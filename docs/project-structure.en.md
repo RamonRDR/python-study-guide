@@ -142,13 +142,20 @@ python-study-guide/
 │   ├── README.md
 │   ├── README.pt-BR.md
 │   ├── README.es.md
-│   └── 01-string-creation-and-indexing/
+│   ├── 01-string-creation-and-indexing/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── fixed_position_text.py
+│   │       └── string_basics.py
+│   └── 02-common-string-methods/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── fixed_position_text.py
-│           └── string_basics.py
+│           ├── normalize_text.py
+│           └── split_and_join.py
 └── tests/
 ```
 
@@ -176,7 +183,7 @@ python-study-guide/
 - `practical-projects/`: future small projects combining several concepts.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
 - `standard-library/`: future guides to modules distributed with Python.
-- `strings-and-numbers/`: Phase 2 learning path, currently in progress. Its first reviewed chapter covers string creation, `len()`, indexing, slicing, boundaries, and immutability in English, Brazilian Portuguese, and Spanish with safe executable examples.
+- `strings-and-numbers/`: Phase 2 learning path, currently in progress. Its first two reviewed chapters cover string creation, `len()`, indexing, slicing, immutability, and common methods for transforming, searching, splitting, and joining text in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `tests/`: regression tests for repository quality tools and later educational code.
 
 ## Chapter directory rule

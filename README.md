@@ -81,7 +81,7 @@ The project foundation and two complete educational sections are available. [Pha
 - [Comments versus Logging in Python](comments-and-documentation/05-comments-vs-logging/README.md)
 - [PEP 8 and Readability in Python](comments-and-documentation/06-pep8-and-readability/README.md)
 
-Phases 1 and 6 are complete. **Phase 2: Strings and numbers is now in progress**, beginning with [String Creation and Indexing](strings-and-numbers/01-string-creation-and-indexing/README.md). See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
+Phases 1 and 6 are complete. **Phase 2: Strings and numbers is now in progress** with two reviewed chapters: [String Creation and Indexing](strings-and-numbers/01-string-creation-and-indexing/README.md) and [Common String Methods](strings-and-numbers/02-common-string-methods/README.md). See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
 ## Visual identity
 

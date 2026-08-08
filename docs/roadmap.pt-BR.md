@@ -16,7 +16,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 |---|---|---|
 | 0. Fundação do projeto | Concluída | Fundação disponível, auditada e oficialmente concluída |
 | 1. Fundamentos | Concluída | Seis capítulos revisados cobrem execução, entrada e saída, variáveis e nomes, tipos de dados embutidos, inspeção de tipos e conversão de tipos |
-| 2. Textos e números | Em andamento | Primeiro capítulo revisado cobre criação de strings, comprimento, indexação, slicing e imutabilidade |
+| 2. Textos e números | Em andamento | Dois capítulos revisados cobrem criação, indexação, slicing, imutabilidade e métodos comuns para transformar, pesquisar, dividir e unir texto |
 | 3. Coleções | Planejada | Conteúdo ainda não iniciado |
 | 4. Fluxo do programa | Planejada | Conteúdo ainda não iniciado |
 | 5. Funções | Planejada | Conteúdo ainda não iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1 e 6 estão concluídas. A Fase 2 está agora em andamento com seu primeiro capítulo revisado, enquanto a Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1 e 6 estão concluídas. A Fase 2 está agora em andamento com dois capítulos revisados, enquanto a Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -65,7 +65,7 @@ As Fases 0, 1 e 6 estão concluídas. A Fase 2 está agora em andamento com seu 
 ## Fase 2: Textos e números
 
 - [x] [Criação e indexação de strings](../strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md)
-- [ ] Métodos comuns de strings
+- [x] [Métodos comuns de strings](../strings-and-numbers/02-common-string-methods/README.pt-BR.md)
 - [ ] `int`, `float` e `bool`
 - [ ] `round()`, `abs()`, `min()`, `max()` e `sum()`
 
