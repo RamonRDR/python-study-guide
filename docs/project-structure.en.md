@@ -156,13 +156,20 @@ python-study-guide/
 │   │   └── examples/
 │   │       ├── normalize_text.py
 │   │       └── split_and_join.py
-│   └── 03-int-float-and-bool/
+│   ├── 03-int-float-and-bool/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── numeric_behavior.py
+│   │       └── truth_and_precision.py
+│   └── 04-numeric-builtins/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── numeric_behavior.py
-│           └── truth_and_precision.py
+│           ├── numeric_summary.py
+│           └── rounding_behavior.py
 └── tests/
 ```
 
@@ -190,7 +197,7 @@ python-study-guide/
 - `practical-projects/`: future small projects combining several concepts.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
 - `standard-library/`: future guides to modules distributed with Python.
-- `strings-and-numbers/`: Phase 2 learning path, currently in progress. Its first three reviewed chapters cover string creation, common string methods, integer and floating-point behavior, division, floating-point approximation, truth values, and Boolean semantics in English, Brazilian Portuguese, and Spanish with safe executable examples.
+- `strings-and-numbers/`: complete Phase 2 learning path. Its four reviewed chapters cover string creation and indexing, common string methods, integer, floating-point, and Boolean behavior, floating-point precision, and `round()`, `abs()`, `min()`, `max()`, and `sum()` in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `tests/`: regression tests for repository quality tools and later educational code.
 
 ## Chapter directory rule

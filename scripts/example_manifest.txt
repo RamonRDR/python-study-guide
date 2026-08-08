@@ -35,3 +35,5 @@ strings-and-numbers/02-common-string-methods/examples/normalize_text.py
 strings-and-numbers/02-common-string-methods/examples/split_and_join.py
 strings-and-numbers/03-int-float-and-bool/examples/numeric_behavior.py
 strings-and-numbers/03-int-float-and-bool/examples/truth_and_precision.py
+strings-and-numbers/04-numeric-builtins/examples/numeric_summary.py
+strings-and-numbers/04-numeric-builtins/examples/rounding_behavior.py

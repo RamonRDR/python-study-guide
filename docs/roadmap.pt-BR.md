@@ -16,7 +16,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 |---|---|---|
 | 0. Fundação do projeto | Concluída | Fundação disponível, auditada e oficialmente concluída |
 | 1. Fundamentos | Concluída | Seis capítulos revisados cobrem execução, entrada e saída, variáveis e nomes, tipos de dados embutidos, inspeção de tipos e conversão de tipos |
-| 2. Textos e números | Em andamento | Três capítulos revisados cobrem criação de strings, métodos comuns, comportamento de inteiros e ponto flutuante, precisão e valores booleanos |
+| 2. Textos e números | Concluída | Quatro capítulos revisados cobrem criação de strings, métodos comuns, comportamento numérico e booleano, precisão de ponto flutuante e funções numéricas embutidas |
 | 3. Coleções | Planejada | Conteúdo ainda não iniciado |
 | 4. Fluxo do programa | Planejada | Conteúdo ainda não iniciado |
 | 5. Funções | Planejada | Conteúdo ainda não iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1 e 6 estão concluídas. A Fase 2 está agora em andamento com três capítulos revisados, enquanto a Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2 e 6 estão concluídas. A Fase 2 agora oferece quatro capítulos revisados, enquanto a Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -67,7 +67,7 @@ As Fases 0, 1 e 6 estão concluídas. A Fase 2 está agora em andamento com trê
 - [x] [Criação e indexação de strings](../strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md)
 - [x] [Métodos comuns de strings](../strings-and-numbers/02-common-string-methods/README.pt-BR.md)
 - [x] [`int`, `float` e `bool`](../strings-and-numbers/03-int-float-and-bool/README.pt-BR.md)
-- [ ] `round()`, `abs()`, `min()`, `max()` e `sum()`
+- [x] [Funções numéricas embutidas: `round()`, `abs()`, `min()`, `max()` e `sum()`](../strings-and-numbers/04-numeric-builtins/README.pt-BR.md)
 
 ## Fase 3: Coleções
 
