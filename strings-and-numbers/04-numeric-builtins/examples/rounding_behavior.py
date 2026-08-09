@@ -1,0 +1,7 @@
+print("2.5:", round(2.5))
+print("3.5:", round(3.5))
+print("125 to tens:", round(125, -1))
+print("135 to tens:", round(135, -1))
+print("2.675 to two decimals:", round(2.675, 2))
+print("Type without ndigits:", type(round(2.5)))
+print("Type with ndigits:", type(round(2.5, 0)))

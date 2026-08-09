@@ -16,7 +16,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 |---|---|---|
 | 0. Project foundation | Complete | Foundation available, audited, and officially completed |
 | 1. Fundamentals | Complete | Six reviewed chapters cover execution, input/output, variables and naming, built-in data types, type inspection, and type conversion |
-| 2. Strings and numbers | In progress | Three reviewed chapters cover string creation, common string methods, integer and floating-point behavior, precision, and Boolean truth values |
+| 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
 | 3. Collections | Planned | Curriculum not started |
 | 4. Program flow | Planned | Curriculum not started |
 | 5. Functions | Planned | Curriculum not started |
@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, and 6 are complete. Phase 2 is now in progress with three reviewed chapters, while Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, and 6 are complete. Phase 2 now provides four reviewed chapters, while Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -67,7 +67,7 @@ Phases 0, 1, and 6 are complete. Phase 2 is now in progress with three reviewed 
 - [x] [String creation and indexing](../strings-and-numbers/01-string-creation-and-indexing/README.md)
 - [x] [Common string methods](../strings-and-numbers/02-common-string-methods/README.md)
 - [x] [`int`, `float`, and `bool`](../strings-and-numbers/03-int-float-and-bool/README.md)
-- [ ] `round()`, `abs()`, `min()`, `max()`, and `sum()`
+- [x] [Numeric built-ins: `round()`, `abs()`, `min()`, `max()`, and `sum()`](../strings-and-numbers/04-numeric-builtins/README.md)
 
 ## Phase 3: Collections
 

@@ -72,7 +72,7 @@ Explicações detalhadas:
 
 A fundação do projeto está concluída. A Fase 0 estabeleceu a documentação multilíngue, o fluxo de contribuição, os templates de colaboração, os padrões da comunidade, a autoria, a licença, a governança de IA, as validações automáticas, a identidade visual original, a estrutura escalável e a auditoria final da fundação.
 
-A fundação do projeto e duas seções educacionais completas estão disponíveis. A [Fase 1: Fundamentos](../../fundamentals/README.pt-BR.md) agora oferece seis capítulos revisados para iniciantes. A Fase 6 reúne seis capítulos de aprendizagem revisados:
+A fundação do projeto e três seções educacionais completas estão disponíveis. A [Fase 1: Fundamentos](../../fundamentals/README.pt-BR.md) agora oferece seis capítulos revisados para iniciantes. A Fase 6 reúne seis capítulos de aprendizagem revisados:
 
 - [Comentários em Python](../../comments-and-documentation/01-comments/README.pt-BR.md)
 - [Docstrings em Python](../../comments-and-documentation/02-docstrings/README.pt-BR.md)
@@ -81,7 +81,7 @@ A fundação do projeto e duas seções educacionais completas estão disponíve
 - [Comentários versus Logging em Python](../../comments-and-documentation/05-comments-vs-logging/README.pt-BR.md)
 - [PEP 8 e Legibilidade em Python](../../comments-and-documentation/06-pep8-and-readability/README.pt-BR.md)
 
-As Fases 1 e 6 estão concluídas. A **Fase 2: Textos e números está agora em andamento** com três capítulos revisados: [Criação e Indexação de Strings](../../strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md), [Métodos Comuns de Strings](../../strings-and-numbers/02-common-string-methods/README.pt-BR.md) e [`int`, `float` e `bool`](../../strings-and-numbers/03-int-float-and-bool/README.pt-BR.md). Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status de todas as fases.
+As Fases 1, 2 e 6 estão concluídas. A **Fase 2: Textos e números agora contém quatro capítulos revisados**, encerrando com [Funções Numéricas Embutidas](../../strings-and-numbers/04-numeric-builtins/README.pt-BR.md). Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status de todas as fases.
 
 ## Identidade visual
 
