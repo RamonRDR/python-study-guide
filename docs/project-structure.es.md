@@ -74,6 +74,17 @@ python-study-guide/
 │           ├── imports_and_names.py
 │           ├── readable_layout.py
 │           └── refactor_for_readability.py
+├── collections/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── 01-list-creation-and-indexing/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           ├── list_basics.py
+│           └── list_slicing.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -189,6 +200,7 @@ python-study-guide/
 - `.github/`: configuración de colaboración, formularios de issue, plantilla de pull request y workflow de GitHub Actions.
 - `assets/`: identidad visual original, recursos exportados, composiciones editables, paleta, accesibilidad y reglas de uso.
 - `comments-and-documentation/`: ruta completa de la Fase 6. Hay capítulos revisados sobre comentarios, docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y PEP 8 y legibilidad, cada uno en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
+- `collections/`: ruta de la Fase 3, actualmente en progreso. El Capítulo 01 enseña creación, indexación, slicing y pertenencia en listas, además del modelo mental inicial de secuencia mutable, en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
 - `docs/`: roadmaps, arquitectura del proyecto, documentos localizados, políticas y guía de desarrollo responsable asistido por IA.
 - `exercises/`: actividades prácticas relacionadas con los capítulos.
 - `external-libraries/`: futuras guías sobre paquetes de terceros.

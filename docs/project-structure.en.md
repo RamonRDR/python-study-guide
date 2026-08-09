@@ -74,6 +74,17 @@ python-study-guide/
 │           ├── imports_and_names.py
 │           ├── readable_layout.py
 │           └── refactor_for_readability.py
+├── collections/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── 01-list-creation-and-indexing/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           ├── list_basics.py
+│           └── list_slicing.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -189,6 +200,7 @@ python-study-guide/
 - `.github/`: collaboration configuration, issue forms, pull request template, and GitHub Actions workflow.
 - `assets/`: original visual identity, exported assets, editable compositions, palette, accessibility guidance, and usage rules.
 - `comments-and-documentation/`: complete Phase 6 learning path. Reviewed chapters are available for comments, docstrings, meaningful names, task markers, comments versus logging, and PEP 8 and readability, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
+- `collections/`: Phase 3 learning path, currently in progress. Chapter 01 teaches list creation, indexing, slicing, membership, and the initial mutable-sequence mental model in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `docs/`: roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.
