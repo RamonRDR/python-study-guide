@@ -6,7 +6,7 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md)
+[← Volver al índice de la sección](../README.es.md) · [Siguiente capítulo: Métodos comunes de strings →](../02-common-string-methods/README.es.md)
 
 La Fase 1 enseñó que los valores de texto comunes usan el tipo `str`. Este primer capítulo de la Fase 2 profundiza ese concepto: muestra cómo crear strings y cómo leer posiciones individuales e intervalos dentro de ellas.
 
