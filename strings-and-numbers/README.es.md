@@ -15,7 +15,7 @@ Esta sección corresponde a la Fase 2 de la secuencia principal de aprendizaje d
 | [01. Creación e indexación de strings](01-string-creation-and-indexing/README.es.md) | Crear strings y leer posiciones e intervalos de forma segura | Principiante | Disponible |
 | [02. Métodos comunes de strings](02-common-string-methods/README.es.md) | Transformar, buscar, dividir y unir texto | Principiante | Disponible |
 | [03. `int`, `float` y `bool`](03-int-float-and-bool/README.es.md) | Profundizar en el comportamiento de enteros, punto flotante y booleanos | Principiante | Disponible |
-| 04. `round()`, `abs()`, `min()`, `max()` y `sum()` | Usar funciones incorporadas numéricas comunes | Principiante | Planificado |
+| [04. Funciones numéricas incorporadas](04-numeric-builtins/README.es.md) | Usar `round()`, `abs()`, `min()`, `max()` y `sum()` adecuadamente | Principiante | Disponible |
 
 ## Orientación de prerrequisitos
 
@@ -48,9 +48,9 @@ Al final de esta ruta de aprendizaje, deberías poder:
 - conectar entrada de texto, conversión de tipos y cálculo numérico;
 - reconocer cuándo una operación textual o numérica produce un valor de resultado sin modificar el valor original.
 
-## Capítulo actual
+## Estado de la sección
 
-Continúa con [`int`, `float` y `bool`](03-int-float-and-bool/README.es.md). Profundiza en el comportamiento de enteros y punto flotante, división verdadera y por piso, restos, aproximación de punto flotante, valores de verdad y la relación entre `bool` e `int`.
+La Fase 2 está completada. Su capítulo final, [Funciones Numéricas Incorporadas](04-numeric-builtins/README.es.md), conecta el comportamiento numérico con `round()`, `abs()`, `min()`, `max()` y `sum()`. La siguiente fase curricular es Colecciones.
 
 ## Estructura del directorio
 
@@ -73,13 +73,20 @@ strings-and-numbers/
 │   └── examples/
 │       ├── normalize_text.py
 │       └── split_and_join.py
-└── 03-int-float-and-bool/
+├── 03-int-float-and-bool/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── numeric_behavior.py
+│       └── truth_and_precision.py
+└── 04-numeric-builtins/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── numeric_behavior.py
-        └── truth_and_precision.py
+        ├── numeric_summary.py
+        └── rounding_behavior.py
 ```
 
-El árbol representa archivos que existen actualmente. Los capítulos planificados aparecen en la ruta de aprendizaje, pero no se muestran como directorios hasta que se agrega su contenido.
+El árbol representa la ruta completa de la Fase 2. Los cuatro capítulos planificados ya están disponibles en inglés, portugués de Brasil y español.

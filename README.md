@@ -72,7 +72,7 @@ Detailed explanations:
 
 The project foundation is complete. Phase 0 established the multilingual documentation, contribution workflow, collaboration templates, community standards, authorship, licensing, AI governance, automated quality checks, original visual identity, scalable repository structure, and final foundation audit.
 
-The project foundation and two complete educational sections are available. [Phase 1: Fundamentals](fundamentals/README.md) now provides six reviewed beginner chapters. Phase 6 contains six reviewed learning chapters:
+The project foundation and three complete educational sections are available. [Phase 1: Fundamentals](fundamentals/README.md) now provides six reviewed beginner chapters. Phase 6 contains six reviewed learning chapters:
 
 - [Comments in Python](comments-and-documentation/01-comments/README.md)
 - [Docstrings in Python](comments-and-documentation/02-docstrings/README.md)
@@ -81,7 +81,7 @@ The project foundation and two complete educational sections are available. [Pha
 - [Comments versus Logging in Python](comments-and-documentation/05-comments-vs-logging/README.md)
 - [PEP 8 and Readability in Python](comments-and-documentation/06-pep8-and-readability/README.md)
 
-Phases 1 and 6 are complete. **Phase 2: Strings and numbers is now in progress** with three reviewed chapters: [String Creation and Indexing](strings-and-numbers/01-string-creation-and-indexing/README.md), [Common String Methods](strings-and-numbers/02-common-string-methods/README.md), and [`int`, `float`, and `bool`](strings-and-numbers/03-int-float-and-bool/README.md). See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
+Phases 1, 2, and 6 are complete. **Phase 2: Strings and numbers now contains four reviewed chapters**, ending with [Numeric Built-ins](strings-and-numbers/04-numeric-builtins/README.md). See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
 ## Visual identity
 
