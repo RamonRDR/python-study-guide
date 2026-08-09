@@ -6,7 +6,7 @@
 
 </div>
 
-[← Previous chapter: Dictionaries: keys and values](../04-dictionaries-keys-and-values/README.md) · [Back to the Collections index](../README.md) · Next chapter: Choosing the right collection
+[← Previous chapter: Dictionaries: keys and values](../04-dictionaries-keys-and-values/README.md) · [Back to the Collections index](../README.md) · [Next chapter: Choosing the right collection →](../06-choosing-the-right-collection/README.md)
 
 Lists and tuples organize values by position. Dictionaries organize values by keys. Sets introduce another model: a value is either **a member of the collection or it is not**.
 

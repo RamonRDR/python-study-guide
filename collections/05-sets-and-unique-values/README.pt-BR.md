@@ -6,7 +6,7 @@
 
 </div>
 
-[← Capítulo anterior: Dicionários: chaves e valores](../04-dictionaries-keys-and-values/README.pt-BR.md) · [Voltar ao índice de Coleções](../README.pt-BR.md) · Próximo capítulo: Escolhendo a coleção certa
+[← Capítulo anterior: Dicionários: chaves e valores](../04-dictionaries-keys-and-values/README.pt-BR.md) · [Voltar ao índice de Coleções](../README.pt-BR.md) · [Próximo capítulo: Escolhendo a coleção certa →](../06-choosing-the-right-collection/README.pt-BR.md)
 
 Listas e tuplas organizam valores por posição. Dicionários organizam valores por chaves. Conjuntos apresentam outro modelo: um valor **pertence à coleção ou não pertence**.
 

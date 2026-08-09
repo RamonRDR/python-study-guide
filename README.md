@@ -73,7 +73,7 @@ Detailed explanations:
 
 The project foundation is complete. Phase 0 established the multilingual documentation, contribution workflow, collaboration templates, community standards, authorship, licensing, AI governance, automated quality checks, original visual identity, scalable repository structure, and final foundation audit.
 
-The project foundation and three complete educational sections are available. [Phase 1: Fundamentals](fundamentals/README.md) now provides six reviewed beginner chapters. Phase 6 contains six reviewed learning chapters:
+The project foundation and four complete educational sections are available. [Phase 1: Fundamentals](fundamentals/README.md) now provides six reviewed beginner chapters. Phase 6 contains six reviewed learning chapters:
 
 - [Comments in Python](comments-and-documentation/01-comments/README.md)
 - [Docstrings in Python](comments-and-documentation/02-docstrings/README.md)
@@ -82,7 +82,7 @@ The project foundation and three complete educational sections are available. [P
 - [Comments versus Logging in Python](comments-and-documentation/05-comments-vs-logging/README.md)
 - [PEP 8 and Readability in Python](comments-and-documentation/06-pep8-and-readability/README.md)
 
-Phases 1, 2, and 6 are complete. **Phase 3: Collections is now in progress**, beginning with [List Creation, Indexing, and Slicing](collections/01-list-creation-and-indexing/README.md). Phase 2 remains complete with four reviewed chapters, ending with [Numeric Built-ins](strings-and-numbers/04-numeric-builtins/README.md). See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
+Phases 1, 2, 3, and 6 are complete. Phase 3 now contains six reviewed Collections chapters, ending with [Choosing the Right Collection](collections/06-choosing-the-right-collection/README.md). Phase 2 remains complete with four reviewed chapters, ending with [Numeric Built-ins](strings-and-numbers/04-numeric-builtins/README.md). See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
 ## Visual identity
 

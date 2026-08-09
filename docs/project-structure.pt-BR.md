@@ -109,14 +109,22 @@ python-study-guide/
 │   │       ├── dictionary_basics.py
 │   │       ├── dictionary_mutation.py
 │   │       └── dictionary_views.py
-│   └── 05-sets-and-unique-values/
+│   ├── 05-sets-and-unique-values/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── set_basics.py
+│   │       ├── set_mutation.py
+│   │       └── set_operations.py
+│   └── 06-choosing-the-right-collection/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── set_basics.py
-│           ├── set_mutation.py
-│           └── set_operations.py
+│           ├── collection_models.py
+│           ├── collection_tradeoffs.py
+│           └── study_workspace.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -232,7 +240,7 @@ python-study-guide/
 - `.github/`: configuração de colaboração, formulários de issue, template de pull request e workflow do GitHub Actions.
 - `assets/`: identidade visual original, arquivos exportados, composições editáveis, paleta, acessibilidade e regras de uso.
 - `comments-and-documentation/`: trilha completa da Fase 6. Há capítulos revisados sobre comentários, docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e PEP 8 e legibilidade, cada um em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
-- `collections/`: trilha de aprendizagem da Fase 3, atualmente em andamento. Os Capítulos 01 a 05 ensinam criação, leitura, mutação e métodos comuns de listas, cópia rasa, tuplas, imutabilidade, empacotamento, desempacotamento, mapeamentos chave-valor e views de dicionários, além de unicidade, pertencimento, mutação, elementos hashable e relações fundamentais de conjuntos, em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
+- `collections/`: trilha completa da Fase 3. Seus seis capítulos ensinam criação, leitura, mutação e métodos comuns de listas, cópia rasa, tuplas e imutabilidade, mapeamentos chave-valor e views de dicionários, unicidade e relações de conjuntos e como escolher entre listas, tuplas, dicionários e conjuntos de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `docs/`: roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros.

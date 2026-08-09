@@ -17,7 +17,7 @@ Esta seção é a Fase 3 da sequência principal de aprendizagem do Python Study
 | [03. Tuplas e imutabilidade](03-tuples-and-immutability/README.pt-BR.md) | Usar sequências imutáveis e compará-las com listas | Iniciante | Disponível |
 | [04. Dicionários: chaves e valores](04-dictionaries-keys-and-values/README.pt-BR.md) | Organizar valores por chaves significativas em vez de posições | Iniciante | Disponível |
 | [05. Conjuntos e valores únicos](05-sets-and-unique-values/README.pt-BR.md) | Trabalhar com membros únicos, testes de pertencimento e relações entre conjuntos | Iniciante | Disponível |
-| 06. Escolhendo a coleção certa | Comparar listas, tuplas, dicionários e conjuntos pela intenção | Iniciante | Planejado |
+| [06. Escolhendo a coleção certa](06-choosing-the-right-collection/README.pt-BR.md) | Comparar listas, tuplas, dicionários e conjuntos pela intenção | Iniciante | Disponível |
 
 ## Por que esta ordem?
 
@@ -83,7 +83,7 @@ Essas ideias ficam mais fáceis depois que a pessoa entende primeiro o que as co
 
 ## Status da seção
 
-A Fase 3 está **em andamento**. Os Capítulos 01 a 05 estão disponíveis em inglês, português brasileiro e espanhol. O Capítulo 06 continua planejado e será adicionado como capítulo completo e revisável, sem placeholder vazio.
+A Fase 3 está **concluída**. Os Capítulos 01 a 06 estão disponíveis em inglês, português brasileiro e espanhol. A trilha agora cobre os quatro modelos principais de coleção e termina comparando-os diretamente antes que a Fase 4 introduza fluxo de programa.
 
 ## Estrutura atual do diretório
 
@@ -123,12 +123,20 @@ collections/
 │       ├── dictionary_basics.py
 │       ├── dictionary_mutation.py
 │       └── dictionary_views.py
-└── 05-sets-and-unique-values/
+├── 05-sets-and-unique-values/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── set_basics.py
+│       ├── set_mutation.py
+│       └── set_operations.py
+└── 06-choosing-the-right-collection/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── set_basics.py
-        ├── set_mutation.py
-        └── set_operations.py
+        ├── collection_models.py
+        ├── collection_tradeoffs.py
+        └── study_workspace.py
 ```
