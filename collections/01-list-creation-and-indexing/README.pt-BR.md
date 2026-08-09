@@ -6,7 +6,7 @@
 
 </div>
 
-[← Voltar ao índice de Coleções](../README.pt-BR.md) · Próximo capítulo: Modificando listas e métodos comuns de listas
+[← Voltar ao índice de Coleções](../README.pt-BR.md) · [Próximo capítulo: Modificando listas e métodos comuns de listas →](../02-modifying-lists-and-methods/README.pt-BR.md)
 
 A Fase 2 ensinou como strings ordenadas expõem posições e fatias. A Fase 3 começa aplicando essa ideia familiar a um novo tipo de valor: uma **lista**, que pode manter vários valores relacionados juntos sob um único nome.
 

@@ -78,13 +78,21 @@ python-study-guide/
 │   ├── README.md
 │   ├── README.pt-BR.md
 │   ├── README.es.md
-│   └── 01-list-creation-and-indexing/
+│   ├── 01-list-creation-and-indexing/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── list_basics.py
+│   │       └── list_slicing.py
+│   └── 02-modifying-lists-and-methods/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── list_basics.py
-│           └── list_slicing.py
+│           ├── list_copying.py
+│           ├── list_methods.py
+│           └── list_mutation.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -200,7 +208,7 @@ python-study-guide/
 - `.github/`: collaboration configuration, issue forms, pull request template, and GitHub Actions workflow.
 - `assets/`: original visual identity, exported assets, editable compositions, palette, accessibility guidance, and usage rules.
 - `comments-and-documentation/`: complete Phase 6 learning path. Reviewed chapters are available for comments, docstrings, meaningful names, task markers, comments versus logging, and PEP 8 and readability, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
-- `collections/`: Phase 3 learning path, currently in progress. Chapter 01 teaches list creation, indexing, slicing, membership, and the initial mutable-sequence mental model in English, Brazilian Portuguese, and Spanish with safe executable examples.
+- `collections/`: Phase 3 learning path, currently in progress. Chapters 01 and 02 teach list creation, reading, mutation, common methods, return-value behavior, and basic shallow copying in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `docs/`: roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.

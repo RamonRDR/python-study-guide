@@ -78,13 +78,21 @@ python-study-guide/
 │   ├── README.md
 │   ├── README.pt-BR.md
 │   ├── README.es.md
-│   └── 01-list-creation-and-indexing/
+│   ├── 01-list-creation-and-indexing/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── list_basics.py
+│   │       └── list_slicing.py
+│   └── 02-modifying-lists-and-methods/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── list_basics.py
-│           └── list_slicing.py
+│           ├── list_copying.py
+│           ├── list_methods.py
+│           └── list_mutation.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -200,7 +208,7 @@ python-study-guide/
 - `.github/`: configuração de colaboração, formulários de issue, template de pull request e workflow do GitHub Actions.
 - `assets/`: identidade visual original, arquivos exportados, composições editáveis, paleta, acessibilidade e regras de uso.
 - `comments-and-documentation/`: trilha completa da Fase 6. Há capítulos revisados sobre comentários, docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e PEP 8 e legibilidade, cada um em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
-- `collections/`: trilha da Fase 3, atualmente em andamento. O Capítulo 01 ensina criação, indexação, fatiamento e pertencimento em listas, além do modelo mental inicial de sequência mutável, em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
+- `collections/`: trilha da Fase 3, atualmente em andamento. Os Capítulos 01 e 02 ensinam criação, leitura, mutação, métodos comuns, comportamento dos valores de retorno e cópia rasa básica de listas, em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `docs/`: roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros.
