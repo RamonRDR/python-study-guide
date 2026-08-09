@@ -6,7 +6,7 @@
 
 </div>
 
-[← Previous chapter: Tuples and immutability](../03-tuples-and-immutability/README.md) · [Back to the Collections index](../README.md) · Next chapter: Sets and unique values
+[← Previous chapter: Tuples and immutability](../03-tuples-and-immutability/README.md) · [Back to the Collections index](../README.md) · [Next chapter: Sets and unique values →](../05-sets-and-unique-values/README.md)
 
 Lists and tuples organize values by **position**. Dictionaries introduce a different model: each stored value is associated with a **key**.
 

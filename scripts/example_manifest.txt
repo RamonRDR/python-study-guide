@@ -48,3 +48,6 @@ collections/03-tuples-and-immutability/examples/tuple_unpacking.py
 collections/04-dictionaries-keys-and-values/examples/dictionary_basics.py
 collections/04-dictionaries-keys-and-values/examples/dictionary_mutation.py
 collections/04-dictionaries-keys-and-values/examples/dictionary_views.py
+collections/05-sets-and-unique-values/examples/set_basics.py
+collections/05-sets-and-unique-values/examples/set_mutation.py
+collections/05-sets-and-unique-values/examples/set_operations.py

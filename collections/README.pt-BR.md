@@ -16,7 +16,7 @@ Esta seção é a Fase 3 da sequência principal de aprendizagem do Python Study
 | [02. Modificando listas e métodos comuns de listas](02-modifying-lists-and-methods/README.pt-BR.md) | Alterar o conteúdo de listas de forma deliberada e entender mutação | Iniciante | Disponível |
 | [03. Tuplas e imutabilidade](03-tuples-and-immutability/README.pt-BR.md) | Usar sequências imutáveis e compará-las com listas | Iniciante | Disponível |
 | [04. Dicionários: chaves e valores](04-dictionaries-keys-and-values/README.pt-BR.md) | Organizar valores por chaves significativas em vez de posições | Iniciante | Disponível |
-| 05. Conjuntos e valores únicos | Trabalhar com itens únicos e operações de pertencimento de conjuntos | Iniciante | Planejado |
+| [05. Conjuntos e valores únicos](05-sets-and-unique-values/README.pt-BR.md) | Trabalhar com membros únicos, testes de pertencimento e relações entre conjuntos | Iniciante | Disponível |
 | 06. Escolhendo a coleção certa | Comparar listas, tuplas, dicionários e conjuntos pela intenção | Iniciante | Planejado |
 
 ## Por que esta ordem?
@@ -83,7 +83,7 @@ Essas ideias ficam mais fáceis depois que a pessoa entende primeiro o que as co
 
 ## Status da seção
 
-A Fase 3 está **em andamento**. Os Capítulos 01 a 04 estão disponíveis em inglês, português brasileiro e espanhol. Os Capítulos 05 e 06 continuam planejados e serão adicionados como capítulos completos e revisáveis, sem placeholders vazios.
+A Fase 3 está **em andamento**. Os Capítulos 01 a 05 estão disponíveis em inglês, português brasileiro e espanhol. O Capítulo 06 continua planejado e será adicionado como capítulo completo e revisável, sem placeholder vazio.
 
 ## Estrutura atual do diretório
 
@@ -115,12 +115,20 @@ collections/
 │       ├── tuple_basics.py
 │       ├── tuple_mutable_item.py
 │       └── tuple_unpacking.py
-└── 04-dictionaries-keys-and-values/
+├── 04-dictionaries-keys-and-values/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── dictionary_basics.py
+│       ├── dictionary_mutation.py
+│       └── dictionary_views.py
+└── 05-sets-and-unique-values/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── dictionary_basics.py
-        ├── dictionary_mutation.py
-        └── dictionary_views.py
+        ├── set_basics.py
+        ├── set_mutation.py
+        └── set_operations.py
 ```
