@@ -17,7 +17,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 0. Project foundation | Complete | Foundation available, audited, and officially completed |
 | 1. Fundamentals | Complete | Six reviewed chapters cover execution, input/output, variables and naming, built-in data types, type inspection, and type conversion |
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
-| 3. Collections | In progress | Chapters 01 through 03 cover list creation, reading, mutation, common methods, tuples, and immutability |
+| 3. Collections | In progress | Chapters 01 through 04 cover list creation, reading, mutation, common methods, tuples, immutability, and dictionary key-value mappings |
 | 4. Program flow | Planned | Curriculum not started |
 | 5. Functions | Planned | Curriculum not started |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, and 6 are complete. Phase 3 is now in progress with its first three Collections chapters available, while Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, and 6 are complete. Phase 3 is now in progress with its first four Collections chapters available, while Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -74,7 +74,7 @@ Phases 0, 1, 2, and 6 are complete. Phase 3 is now in progress with its first th
 - [x] [List creation, indexing, and slicing](../collections/01-list-creation-and-indexing/README.md)
 - [x] [Modifying lists and common list methods](../collections/02-modifying-lists-and-methods/README.md)
 - [x] [Tuples and immutability](../collections/03-tuples-and-immutability/README.md)
-- [ ] Dictionaries: keys and values
+- [x] [Dictionaries: keys and values](../collections/04-dictionaries-keys-and-values/README.md)
 - [ ] Sets and unique values
 - [ ] Choosing the right collection
 

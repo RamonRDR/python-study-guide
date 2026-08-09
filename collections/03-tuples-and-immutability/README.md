@@ -6,7 +6,7 @@
 
 </div>
 
-[← Previous chapter: Modifying lists and common list methods](../02-modifying-lists-and-methods/README.md) · [Back to the Collections index](../README.md) · Next chapter: Dictionaries: keys and values
+[← Previous chapter: Modifying lists and common list methods](../02-modifying-lists-and-methods/README.md) · [Back to the Collections index](../README.md) · [Next chapter: Dictionaries: keys and values](../04-dictionaries-keys-and-values/README.md)
 
 Lists taught you what it means for a collection to be mutable. Tuples introduce the contrasting idea: an ordered sequence whose item positions cannot be replaced, added to, or removed from after the tuple is created.
 
