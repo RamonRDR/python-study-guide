@@ -16,7 +16,7 @@ This section is Phase 3 of the main Python Study Guide learning sequence. It bui
 | [02. Modifying lists and common list methods](02-modifying-lists-and-methods/README.md) | Change list contents deliberately and understand mutation | Beginner | Available |
 | [03. Tuples and immutability](03-tuples-and-immutability/README.md) | Use immutable sequences and compare them with lists | Beginner | Available |
 | [04. Dictionaries: keys and values](04-dictionaries-keys-and-values/README.md) | Organize values by meaningful keys instead of positions | Beginner | Available |
-| 05. Sets and unique values | Work with unique items and set-style membership operations | Beginner | Planned |
+| [05. Sets and unique values](05-sets-and-unique-values/README.md) | Work with unique members, membership tests, and set relationships | Beginner | Available |
 | 06. Choosing the right collection | Compare lists, tuples, dictionaries, and sets by intent | Beginner | Planned |
 
 ## Why this order?
@@ -83,7 +83,7 @@ Those ideas become easier after the learner first understands what the collectio
 
 ## Section status
 
-Phase 3 is **in progress**. Chapters 01 through 04 are available in English, Brazilian Portuguese, and Spanish. Chapters 05 and 06 remain planned and will be added as complete, reviewable chapters rather than empty placeholders.
+Phase 3 is **in progress**. Chapters 01 through 05 are available in English, Brazilian Portuguese, and Spanish. Chapter 06 remains planned and will be added as a complete, reviewable chapter rather than an empty placeholder.
 
 ## Current directory structure
 
@@ -115,12 +115,20 @@ collections/
 │       ├── tuple_basics.py
 │       ├── tuple_mutable_item.py
 │       └── tuple_unpacking.py
-└── 04-dictionaries-keys-and-values/
+├── 04-dictionaries-keys-and-values/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── dictionary_basics.py
+│       ├── dictionary_mutation.py
+│       └── dictionary_views.py
+└── 05-sets-and-unique-values/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── dictionary_basics.py
-        ├── dictionary_mutation.py
-        └── dictionary_views.py
+        ├── set_basics.py
+        ├── set_mutation.py
+        └── set_operations.py
 ```

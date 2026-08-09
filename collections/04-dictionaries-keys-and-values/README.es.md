@@ -6,7 +6,7 @@
 
 </div>
 
-[← Capítulo anterior: Tuplas e inmutabilidad](../03-tuples-and-immutability/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · Próximo capítulo: Conjuntos y valores únicos
+[← Capítulo anterior: Tuplas e inmutabilidad](../03-tuples-and-immutability/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · [Próximo capítulo: Conjuntos y valores únicos →](../05-sets-and-unique-values/README.es.md)
 
 Las listas y las tuplas organizan valores por **posición**. Los diccionarios introducen un modelo diferente: cada valor almacenado se asocia con una **clave**.
 
