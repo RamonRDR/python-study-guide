@@ -40,6 +40,7 @@ Each chapter follows a consistent structure:
 
 The guide grows from Python fundamentals to functions, documentation, error handling, files, the standard library, external libraries, testing, and practical projects.
 
+- [Full learning path: direct links to every published chapter](docs/learning-path.en.md)
 - [Roadmap in English](docs/roadmap.en.md)
 - [Roadmap em Português](docs/roadmap.pt-BR.md)
 - [Roadmap en Español](docs/roadmap.es.md)

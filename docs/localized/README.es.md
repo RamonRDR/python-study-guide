@@ -40,6 +40,7 @@ Cada capítulo sigue una estructura consistente:
 
 La guía crece desde los fundamentos de Python hasta funciones, documentación, manejo de errores, archivos, biblioteca estándar, bibliotecas externas, pruebas y proyectos prácticos.
 
+- [Ruta completa de aprendizaje: enlaces directos a todos los capítulos publicados](../learning-path.es.md)
 - [Roadmap en Español](../roadmap.es.md)
 - [Roadmap in English](../roadmap.en.md)
 - [Roadmap em Português](../roadmap.pt-BR.md)
