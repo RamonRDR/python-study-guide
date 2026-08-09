@@ -109,14 +109,22 @@ python-study-guide/
 │   │       ├── dictionary_basics.py
 │   │       ├── dictionary_mutation.py
 │   │       └── dictionary_views.py
-│   └── 05-sets-and-unique-values/
+│   ├── 05-sets-and-unique-values/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── set_basics.py
+│   │       ├── set_mutation.py
+│   │       └── set_operations.py
+│   └── 06-choosing-the-right-collection/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── set_basics.py
-│           ├── set_mutation.py
-│           └── set_operations.py
+│           ├── collection_models.py
+│           ├── collection_tradeoffs.py
+│           └── study_workspace.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -232,7 +240,7 @@ python-study-guide/
 - `.github/`: collaboration configuration, issue forms, pull request template, and GitHub Actions workflow.
 - `assets/`: original visual identity, exported assets, editable compositions, palette, accessibility guidance, and usage rules.
 - `comments-and-documentation/`: complete Phase 6 learning path. Reviewed chapters are available for comments, docstrings, meaningful names, task markers, comments versus logging, and PEP 8 and readability, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
-- `collections/`: Phase 3 learning path, currently in progress. Chapters 01 through 05 teach list creation, reading, mutation, common methods, shallow copying, tuples, immutability, packing, unpacking, dictionary key-value mappings and views, plus set uniqueness, membership, mutation, hashable elements, and core set relationships in English, Brazilian Portuguese, and Spanish with safe executable examples.
+- `collections/`: complete Phase 3 learning path. Its six chapters teach list creation, reading, mutation, common methods, shallow copying, tuples and immutability, dictionary key-value mappings and views, set uniqueness and relationships, and how to choose among lists, tuples, dictionaries, and sets by intent, in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `docs/`: roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.

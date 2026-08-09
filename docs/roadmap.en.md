@@ -17,7 +17,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 0. Project foundation | Complete | Foundation available, audited, and officially completed |
 | 1. Fundamentals | Complete | Six reviewed chapters cover execution, input/output, variables and naming, built-in data types, type inspection, and type conversion |
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
-| 3. Collections | In progress | Chapters 01 through 05 cover lists, tuples, dictionaries, set uniqueness, membership, and core set relationships |
+| 3. Collections | Complete | Six reviewed chapters cover lists, tuples, dictionaries, sets, and choosing a collection by intent |
 | 4. Program flow | Planned | Curriculum not started |
 | 5. Functions | Planned | Curriculum not started |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, and 6 are complete. Phase 3 is now in progress with its first five Collections chapters available, while Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, and 6 are complete. Phase 3 now provides a complete beginner path through the four core collection models and collection choice, while Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -76,7 +76,7 @@ Phases 0, 1, 2, and 6 are complete. Phase 3 is now in progress with its first fi
 - [x] [Tuples and immutability](../collections/03-tuples-and-immutability/README.md)
 - [x] [Dictionaries: keys and values](../collections/04-dictionaries-keys-and-values/README.md)
 - [x] [Sets and unique values](../collections/05-sets-and-unique-values/README.md)
-- [ ] Choosing the right collection
+- [x] [Choosing the right collection](../collections/06-choosing-the-right-collection/README.md)
 
 ## Phase 4: Program flow
 

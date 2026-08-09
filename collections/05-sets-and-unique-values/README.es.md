@@ -6,7 +6,7 @@
 
 </div>
 
-[← Capítulo anterior: Diccionarios: claves y valores](../04-dictionaries-keys-and-values/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · Próximo capítulo: Elegir la colección adecuada
+[← Capítulo anterior: Diccionarios: claves y valores](../04-dictionaries-keys-and-values/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · [Próximo capítulo: Elegir la colección adecuada →](../06-choosing-the-right-collection/README.es.md)
 
 Las listas y las tuplas organizan valores por posición. Los diccionarios organizan valores mediante claves. Los conjuntos introducen otro modelo: un valor **pertenece a la colección o no pertenece**.
 

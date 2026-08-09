@@ -17,7 +17,7 @@ This section is Phase 3 of the main Python Study Guide learning sequence. It bui
 | [03. Tuples and immutability](03-tuples-and-immutability/README.md) | Use immutable sequences and compare them with lists | Beginner | Available |
 | [04. Dictionaries: keys and values](04-dictionaries-keys-and-values/README.md) | Organize values by meaningful keys instead of positions | Beginner | Available |
 | [05. Sets and unique values](05-sets-and-unique-values/README.md) | Work with unique members, membership tests, and set relationships | Beginner | Available |
-| 06. Choosing the right collection | Compare lists, tuples, dictionaries, and sets by intent | Beginner | Planned |
+| [06. Choosing the right collection](06-choosing-the-right-collection/README.md) | Compare lists, tuples, dictionaries, and sets by intent | Beginner | Available |
 
 ## Why this order?
 
@@ -83,7 +83,7 @@ Those ideas become easier after the learner first understands what the collectio
 
 ## Section status
 
-Phase 3 is **in progress**. Chapters 01 through 05 are available in English, Brazilian Portuguese, and Spanish. Chapter 06 remains planned and will be added as a complete, reviewable chapter rather than an empty placeholder.
+Phase 3 is **complete**. Chapters 01 through 06 are available in English, Brazilian Portuguese, and Spanish. The learning path now covers the four core collection models and closes by comparing them directly before Phase 4 introduces program flow.
 
 ## Current directory structure
 
@@ -123,12 +123,20 @@ collections/
 │       ├── dictionary_basics.py
 │       ├── dictionary_mutation.py
 │       └── dictionary_views.py
-└── 05-sets-and-unique-values/
+├── 05-sets-and-unique-values/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── set_basics.py
+│       ├── set_mutation.py
+│       └── set_operations.py
+└── 06-choosing-the-right-collection/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── set_basics.py
-        ├── set_mutation.py
-        └── set_operations.py
+        ├── collection_models.py
+        ├── collection_tradeoffs.py
+        └── study_workspace.py
 ```

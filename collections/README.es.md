@@ -17,7 +17,7 @@ Esta sección es la Fase 3 de la secuencia principal de aprendizaje de Python St
 | [03. Tuplas e inmutabilidad](03-tuples-and-immutability/README.es.md) | Usar secuencias inmutables y compararlas con listas | Principiante | Disponible |
 | [04. Diccionarios: claves y valores](04-dictionaries-keys-and-values/README.es.md) | Organizar valores mediante claves significativas en lugar de posiciones | Principiante | Disponible |
 | [05. Conjuntos y valores únicos](05-sets-and-unique-values/README.es.md) | Trabajar con miembros únicos, pruebas de pertenencia y relaciones entre conjuntos | Principiante | Disponible |
-| 06. Elegir la colección correcta | Comparar listas, tuplas, diccionarios y conjuntos según la intención | Principiante | Planificado |
+| [06. Elegir la colección adecuada](06-choosing-the-right-collection/README.es.md) | Comparar listas, tuplas, diccionarios y conjuntos según la intención | Principiante | Disponible |
 
 ## ¿Por qué este orden?
 
@@ -50,7 +50,7 @@ Las tuplas hacen explícita la diferencia entre mutabilidad e inmutabilidad. Los
 - **03. Tuplas e inmutabilidad:** completa los dos capítulos de listas para que el contraste entre secuencias mutables e inmutables tenga una referencia concreta.
 - **04. Diccionarios: claves y valores:** completa primero los capítulos de secuencias. Este capítulo cambia el modelo de búsqueda de posiciones a claves.
 - **05. Conjuntos y valores únicos:** completa primero el capítulo de diccionarios. Los conjuntos eliminan la búsqueda posicional y se centran en pertenencia y unicidad.
-- **06. Elegir la colección correcta:** completa los cinco capítulos anteriores para que la comparación se base en conceptos que ya has practicado.
+- **06. Elegir la colección adecuada:** completa los cinco capítulos anteriores para que la comparación se base en conceptos que ya has practicado.
 
 Al seguir la ruta completa, estudia los capítulos en orden numérico.
 
@@ -83,7 +83,7 @@ Estas ideas resultan más sencillas después de comprender primero qué contiene
 
 ## Estado de la sección
 
-La Fase 3 está **en progreso**. Los Capítulos 01 a 05 están disponibles en inglés, portugués de Brasil y español. El Capítulo 06 sigue planificado y se añadirá como un capítulo completo y revisable, sin placeholder vacío.
+La Fase 3 está **completa**. Los Capítulos 01 a 06 están disponibles en inglés, portugués de Brasil y español. La ruta ahora cubre los cuatro modelos principales de colección y termina comparándolos directamente antes de que la Fase 4 introduzca flujo de programa.
 
 ## Estructura actual del directorio
 
@@ -123,12 +123,20 @@ collections/
 │       ├── dictionary_basics.py
 │       ├── dictionary_mutation.py
 │       └── dictionary_views.py
-└── 05-sets-and-unique-values/
+├── 05-sets-and-unique-values/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── set_basics.py
+│       ├── set_mutation.py
+│       └── set_operations.py
+└── 06-choosing-the-right-collection/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── set_basics.py
-        ├── set_mutation.py
-        └── set_operations.py
+        ├── collection_models.py
+        ├── collection_tradeoffs.py
+        └── study_workspace.py
 ```

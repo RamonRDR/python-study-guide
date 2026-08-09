@@ -51,3 +51,6 @@ collections/04-dictionaries-keys-and-values/examples/dictionary_views.py
 collections/05-sets-and-unique-values/examples/set_basics.py
 collections/05-sets-and-unique-values/examples/set_mutation.py
 collections/05-sets-and-unique-values/examples/set_operations.py
+collections/06-choosing-the-right-collection/examples/collection_models.py
+collections/06-choosing-the-right-collection/examples/collection_tradeoffs.py
+collections/06-choosing-the-right-collection/examples/study_workspace.py
