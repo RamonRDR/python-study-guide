@@ -50,6 +50,7 @@ O guia cresce dos fundamentos do Python até funções, documentação, tratamen
 python-study-guide/
 ├── assets/
 ├── comments-and-documentation/
+├── collections/
 ├── docs/
 ├── exercises/
 ├── external-libraries/
@@ -81,7 +82,7 @@ A fundação do projeto e três seções educacionais completas estão disponív
 - [Comentários versus Logging em Python](../../comments-and-documentation/05-comments-vs-logging/README.pt-BR.md)
 - [PEP 8 e Legibilidade em Python](../../comments-and-documentation/06-pep8-and-readability/README.pt-BR.md)
 
-As Fases 1, 2 e 6 estão concluídas. A **Fase 2: Textos e números agora contém quatro capítulos revisados**, encerrando com [Funções Numéricas Embutidas](../../strings-and-numbers/04-numeric-builtins/README.pt-BR.md). Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status de todas as fases.
+As Fases 1, 2 e 6 estão concluídas. A **Fase 3: Coleções agora está em andamento**, começando com [Criação, Indexação e Fatiamento de Listas](../../collections/01-list-creation-and-indexing/README.pt-BR.md). A Fase 2 permanece concluída com quatro capítulos revisados, encerrando com [Funções Numéricas Embutidas](../../strings-and-numbers/04-numeric-builtins/README.pt-BR.md). Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status de todas as fases.
 
 ## Identidade visual
 

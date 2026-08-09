@@ -50,6 +50,7 @@ The guide grows from Python fundamentals to functions, documentation, error hand
 python-study-guide/
 ├── assets/
 ├── comments-and-documentation/
+├── collections/
 ├── docs/
 ├── exercises/
 ├── external-libraries/
@@ -81,7 +82,7 @@ The project foundation and three complete educational sections are available. [P
 - [Comments versus Logging in Python](comments-and-documentation/05-comments-vs-logging/README.md)
 - [PEP 8 and Readability in Python](comments-and-documentation/06-pep8-and-readability/README.md)
 
-Phases 1, 2, and 6 are complete. **Phase 2: Strings and numbers now contains four reviewed chapters**, ending with [Numeric Built-ins](strings-and-numbers/04-numeric-builtins/README.md). See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
+Phases 1, 2, and 6 are complete. **Phase 3: Collections is now in progress**, beginning with [List Creation, Indexing, and Slicing](collections/01-list-creation-and-indexing/README.md). Phase 2 remains complete with four reviewed chapters, ending with [Numeric Built-ins](strings-and-numbers/04-numeric-builtins/README.md). See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
 
 ## Visual identity
 
