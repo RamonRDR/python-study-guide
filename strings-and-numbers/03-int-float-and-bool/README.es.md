@@ -6,6 +6,8 @@
 
 </div>
 
+[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Métodos comunes de strings](../02-common-string-methods/README.es.md) · [Siguiente capítulo: Funciones numéricas incorporadas →](../04-numeric-builtins/README.es.md)
+
 Python ya presentó estos tipos en la fase de Fundamentos. Este capítulo avanza un nivel al centrarse en cómo se comportan en expresiones, cómo difieren sus resultados y qué detalles importan al elegir entre ellos.
 
 El objetivo no es memorizar reglas aisladas. El objetivo es construir un modelo mental confiable para números enteros, valores decimales aproximados y valores de verdad.
@@ -134,7 +136,7 @@ print(type(temperature))
 <class 'float'>
 ```
 
-Un punto decimal en un literal numérico normalmente produce un `float`.
+Un literal numérico real que contiene un punto decimal, como `19.90`, produce un `float`.
 
 ## 6. `int` y `float` pueden participar en la misma expresión
 
@@ -171,7 +173,7 @@ print(type(7 / 2))
 <class 'float'>
 ```
 
-Incluso cuando ambos operandos son enteros, `/` normalmente produce un resultado de punto flotante cuando el cociente puede representarse como `float`. Si el cociente entero es demasiado grande para representarse como `float`, la división verdadera genera `OverflowError`.
+Incluso cuando ambos operandos son enteros, `/` produce un resultado de punto flotante cuando el resultado matemático puede representarse como `float`. Si ese resultado es demasiado grande para convertirse en un `float` finito, la división verdadera genera `OverflowError`.
 
 ```python
 print(8 / 4)
@@ -349,7 +351,7 @@ print(value.as_integer_ratio())
 (3602879701896397, 36028797018963968)
 ```
 
-La razón muestra el valor binario exacto de punto flotante que este `float` representa en implementaciones estándar de Python que usan aritmética IEEE 754 binary64.
+En plataformas modernas de Python que usan IEEE 754 binary64 para `float`, la razón muestra el valor almacenado exacto que representa este `float`. El lenguaje no exige que todas las implementaciones de Python usen ese formato de hardware.
 
 Para un principiante, basta con este modelo mental: el texto `0.1` es una notación conveniente para un valor de punto flotante representable cercano.
 
@@ -369,7 +371,7 @@ Que la igualdad exacta sea adecuada depende del dominio.
 
 Para comparaciones numéricas aproximadas, la biblioteca estándar de Python ofrece herramientas como `math.isclose()`. Para aritmética decimal exacta en base 10, el módulo `decimal` suele ser más apropiado.
 
-Estas herramientas pertenecen a fases posteriores del roadmap, así que este capítulo solo presenta la razón por la que existen.
+Estas herramientas están fuera del alcance de este capítulo. La idea importante aquí es reconocer cuándo la igualdad directa entre valores `float` puede no expresar la comparación pretendida.
 
 ## 17. Los valores monetarios merecen atención especial
 

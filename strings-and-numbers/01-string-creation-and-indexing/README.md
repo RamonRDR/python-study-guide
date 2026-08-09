@@ -6,7 +6,7 @@
 
 </div>
 
-[← Back to the section index](../README.md)
+[← Back to the section index](../README.md) · [Next chapter: Common string methods →](../02-common-string-methods/README.md)
 
 Phase 1 taught you that ordinary text values use the `str` type. This first chapter of Phase 2 goes deeper: it shows how to create strings and how to read individual positions and ranges from them.
 

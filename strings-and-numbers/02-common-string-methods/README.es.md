@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Creación e indexación de strings](../01-string-creation-and-indexing/README.es.md)
+[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Creación e indexación de strings](../01-string-creation-and-indexing/README.es.md) · [Siguiente capítulo: `int`, `float` y `bool` →](../03-int-float-and-bool/README.es.md)
 
 El capítulo anterior enseñó cómo crear strings y leer sus posiciones e intervalos. Este capítulo añade una nueva idea: las strings también ofrecen **métodos**, operaciones reutilizables que pueden inspeccionar texto o producir un resultado de tipo string sin modificar el valor original.
 
@@ -667,7 +667,7 @@ Guarda o reasigna el resultado cuando lo necesites.
 
 ### Usar `find()` directamente como booleano
 
-Una substring encontrada puede estar en el índice `0`, y `0` es falso. Una substring ausente produce `-1`, y `-1` es verdadero.
+Una substring encontrada puede estar en el índice `0`, y `0` se trata como falso en un contexto booleano. Una substring ausente produce `-1`, y `-1` se trata como verdadero.
 
 Por eso esta es una mala comprobación de presencia:
 

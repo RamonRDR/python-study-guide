@@ -6,6 +6,8 @@
 
 </div>
 
+[← Back to the section index](../README.md) · [← Previous chapter: `int`, `float`, and `bool`](../03-int-float-and-bool/README.md)
+
 Phase 2 has already introduced text, string operations, integers, floating-point values, and Boolean values. This chapter finishes the phase by combining that knowledge with five built-in functions that solve common numeric tasks without requiring imports.
 
 These functions look small, but several of them contain details that matter in real programs. In particular, `round()` does not always behave like the everyday rule of "5 always rounds up", floating-point representation can influence rounded results, and `min()` and `max()` need special care with empty inputs.
@@ -446,13 +448,13 @@ This is a floating-point representation issue, not a failure of `sum()`.
 
 Python's standard library contains tools for cases that need different numeric guarantees. For example, `math.fsum()` is designed for more accurate floating-point summation, while decimal arithmetic is useful when decimal semantics are required.
 
-Those tools belong to later parts of the roadmap. The important idea now is to avoid assuming that aggregation removes floating-point approximation.
+Those tools are outside this chapter's scope. The important idea now is to avoid assuming that aggregation removes floating-point approximation.
 
 ---
 
 ## 11. `round()` returns a rounded numeric value
 
-With only one argument, `round()` returns the nearest integer for built-in numeric types such as `float`.
+For the built-in `int` and `float` values used in this chapter, `round(number)` returns the nearest integer.
 
 ```python
 print(round(3.2))
@@ -491,7 +493,7 @@ print(round(3.14159, 4))
 3.1416
 ```
 
-For built-in numbers, providing `ndigits` changes an important type detail:
+For the `int` and `float` cases used here, providing `ndigits` affects an important return-type rule:
 
 ```python
 print(round(2.5))
@@ -553,7 +555,7 @@ Negative `ndigits` is especially useful when values need to be grouped or presen
 
 ## 14. Python does not use "5 always rounds up"
 
-For built-in numeric types, when two candidate multiples are equally close, Python chooses the even one.
+For the `int` and `float` cases used in this chapter, when two candidate multiples are equally close, Python chooses the even one.
 
 Observe:
 
@@ -678,7 +680,7 @@ False
 
 Use `round()` when a rounded value is what your program actually needs. Do not use it as a universal repair tool for floating-point arithmetic.
 
-Later, you will encounter tools such as `math.isclose()` for approximate comparisons and decimal arithmetic for decimal-based requirements.
+Depending on the requirement, tools such as `math.isclose()` for approximate comparisons or decimal arithmetic for decimal-based calculations may be more appropriate.
 
 ---
 
@@ -702,7 +704,7 @@ It does not promise that printing the result will show trailing zeros such as `3
 
 That is a formatting concern rather than a numeric rounding concern.
 
-String formatting is introduced elsewhere in the learning path. Keep the distinction in mind:
+String formatting is a separate topic from this chapter. Keep the distinction in mind:
 
 ```text
 rounding   -> numeric value
@@ -761,7 +763,7 @@ You do not need to master lists yet.
 
 For now, treat the list as a simple ordered container of values that can be passed to a function.
 
-Phase 3 will teach lists, tuples, sets, dictionaries, indexing behavior for collections, mutability, iteration, and common collection operations in their proper context.
+Phase 3 will teach lists, tuples, dictionaries, and sets, including indexing or slicing where a collection type supports them and appropriate ways to add, update, or remove values.
 
 This small preview exists because `sum()` would be difficult to teach meaningfully without any grouped values at all.
 
@@ -769,20 +771,10 @@ This small preview exists because `sum()` would be difficult to teach meaningful
 
 ## 21. Common mistake: manually recreating `abs()`
 
-A beginner may write logic conceptually equivalent to:
+A beginner may try to reproduce absolute-value behavior manually by checking whether a value is negative and changing its sign conditionally. Conditionals are taught later in the roadmap. If the real intention is simply absolute value, this is clearer:
 
 ```python
 value = -8
-
-if value < 0:
-    magnitude = -value
-else:
-    magnitude = value
-```
-
-That may be useful while learning conditionals later, but if the real intention is simply absolute value, this is clearer:
-
-```python
 magnitude = abs(value)
 ```
 
@@ -866,7 +858,7 @@ This is a useful example of choosing an operation based on data semantics, not m
 
 ## 25. Common mistake: assuming `round()` always rounds halves upward
 
-This expectation is wrong in Python's built-in numeric rounding:
+This expectation is wrong for the `int` and `float` rounding shown in this chapter:
 
 ```text
 2.5 -> expected by some beginners: 3
@@ -892,7 +884,7 @@ If a calculation depends on exact decimal semantics, repeatedly applying `round(
 
 The right tool depends on the domain.
 
-Examples of later considerations include:
+Examples of tools and concerns outside this chapter include:
 
 ```text
 approximate scientific comparison -> math.isclose()
@@ -901,7 +893,7 @@ decimal arithmetic requirements    -> decimal.Decimal
 textual decimal display             -> formatting
 ```
 
-These are roadmap connections, not requirements for this beginner chapter.
+These are contextual references, not requirements for this beginner chapter.
 
 ---
 
@@ -1023,7 +1015,7 @@ Add:
 empty_measurements = []
 ```
 
-Use `min()` and `max()` with an explicit `default=` and explain in a comment why the chosen default would or would not make semantic sense in a real measurement system.
+Use `min()` and `max()` with an explicit `default=` and write one or two sentences below your code explaining why the chosen default would or would not make semantic sense in a real measurement system.
 
 The important part is the reasoning, not merely avoiding `ValueError`.
 
@@ -1132,7 +1124,6 @@ You now have a stronger foundation for working with individual text and numeric 
 
 The next curriculum phase introduces **Collections**, where multiple values become first-class structures in your programs. Lists, tuples, sets, and dictionaries will make many patterns previewed in this phase much more powerful.
 
-Before moving forward, the repository may perform a cross-chapter audit to verify that Phase 2 reads cleanly as one continuous learning path.
 
 ---
 

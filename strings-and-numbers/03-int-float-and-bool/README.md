@@ -6,9 +6,11 @@
 
 </div>
 
+[← Back to the section index](../README.md) · [← Previous chapter: Common string methods](../02-common-string-methods/README.md) · [Next chapter: Numeric built-ins →](../04-numeric-builtins/README.md)
+
 Python already introduced these types in the Fundamentals phase. This chapter goes one level deeper by focusing on how they behave in expressions, how their results differ, and which details matter when choosing between them.
 
-The goal is not to memorize isolated rules. The goal is to build a reliable mental model for whole numbers, approximate decimal values, and truth values.
+The goal is not to memorize isolated rules. The goal is to build a reliable mental model for integers, approximate decimal values, and truth values.
 
 ## Learning goals
 
@@ -31,7 +33,7 @@ A useful first model is:
 
 | Type | Main job | Example |
 |---|---|---|
-| `int` | whole-number values | `12`, `0`, `-4` |
+| `int` | integer values | `12`, `0`, `-4` |
 | `float` | fractional or approximate real-number values | `7.5`, `-0.25` |
 | `bool` | truth values | `True`, `False` |
 
@@ -134,7 +136,7 @@ print(type(temperature))
 <class 'float'>
 ```
 
-A decimal point in a numeric literal normally produces a `float`.
+A real numeric literal containing a decimal point, such as `19.90`, produces a `float`.
 
 ## 6. `int` and `float` can participate in the same expression
 
@@ -171,7 +173,7 @@ print(type(7 / 2))
 <class 'float'>
 ```
 
-Even when both operands are integers, `/` normally produces a floating-point result when the quotient is representable as a `float`. If the integer quotient is too large to be represented as a `float`, true division raises `OverflowError` instead.
+Even when both operands are integers, `/` produces a floating-point result when the mathematical result can be represented as a `float`. If that result is too large to convert to a finite `float`, true division raises `OverflowError` instead.
 
 ```python
 print(8 / 4)
@@ -349,7 +351,7 @@ print(value.as_integer_ratio())
 (3602879701896397, 36028797018963968)
 ```
 
-The ratio shows the exact binary floating-point value that this `float` represents on standard Python implementations using IEEE 754 binary64 arithmetic.
+On modern Python platforms that use IEEE 754 binary64 for `float`, the ratio shows the exact stored value represented by this `float`. The language does not require every Python implementation to use that hardware format.
 
 For a beginner, the useful mental model is enough: the text `0.1` is convenient notation for a nearby representable floating-point value.
 
@@ -369,7 +371,7 @@ Whether exact equality is appropriate depends on the domain.
 
 For approximate numeric comparisons, Python's standard library provides tools such as `math.isclose()`. For exact base-10 decimal arithmetic, the `decimal` module is often more appropriate.
 
-Those tools belong to later roadmap phases, so this chapter only introduces the reason they exist.
+Those tools are outside this chapter's scope. The important idea here is to recognize when plain `float` equality may not express the intended comparison.
 
 ## 17. Money deserves special attention
 
@@ -801,7 +803,7 @@ You should now be able to answer these questions without running Python first:
 
 | Goal | Example | Important detail |
 |---|---|---|
-| Whole number | `count = 12` | `int` has arbitrary precision |
+| Integer value | `count = 12` | `int` has arbitrary precision |
 | Fractional numeric value | `rate = 5.42` | `float` is usually approximate binary floating point |
 | Truth value | `is_ready = True` | `bool` has `True` and `False` |
 | True division | `7 / 2` | returns `3.5` |

@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-[← Back to the section index](../README.md) · [← Previous chapter: String creation and indexing](../01-string-creation-and-indexing/README.md)
+[← Back to the section index](../README.md) · [← Previous chapter: String creation and indexing](../01-string-creation-and-indexing/README.md) · [Next chapter: `int`, `float`, and `bool` →](../03-int-float-and-bool/README.md)
 
 The previous chapter taught you how to create strings and read their positions and ranges. This chapter adds a new idea: strings also provide **methods**, reusable operations that can inspect text or produce a string result without mutating the original value.
 
@@ -667,7 +667,7 @@ Store or reassign the result when you need it.
 
 ### Using `find()` as a Boolean directly
 
-A found substring may be at index `0`, and `0` is falsey. A missing substring produces `-1`, and `-1` is truthy.
+A found substring may be at index `0`, and `0` is treated as false in a Boolean context. A missing substring produces `-1`, and `-1` is treated as true.
 
 So this is a poor presence test:
 

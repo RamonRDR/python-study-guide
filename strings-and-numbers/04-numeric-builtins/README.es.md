@@ -6,6 +6,8 @@
 
 </div>
 
+[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: `int`, `float` y `bool`](../03-int-float-and-bool/README.es.md)
+
 La Fase 2 ya presentó texto, operaciones con strings, enteros, valores de punto flotante y valores booleanos. Este capítulo cierra la fase combinando ese conocimiento con cinco funciones incorporadas que resuelven tareas numéricas comunes sin requerir importaciones.
 
 Estas funciones parecen pequeñas, pero varias contienen detalles importantes en programas reales. En particular, `round()` no siempre se comporta como la regla cotidiana de que "5 siempre redondea hacia arriba", la representación de punto flotante puede influir en los resultados redondeados y `min()` y `max()` requieren cuidado con entradas vacías.
@@ -446,13 +448,13 @@ Esto es un asunto de representación de punto flotante, no un fallo de `sum()`.
 
 La biblioteca estándar de Python contiene herramientas para casos que necesitan garantías numéricas diferentes. Por ejemplo, `math.fsum()` está diseñado para sumas de punto flotante más precisas, mientras que la aritmética decimal es útil cuando se requiere semántica decimal.
 
-Esas herramientas pertenecen a partes posteriores del roadmap. La idea importante ahora es no asumir que la agregación elimina la aproximación de punto flotante.
+Esas herramientas están fuera del alcance de este capítulo. La idea importante ahora es no asumir que la agregación elimina la aproximación de punto flotante.
 
 ---
 
 ## 11. `round()` devuelve un valor numérico redondeado
 
-Con un solo argumento, `round()` devuelve el entero más cercano para tipos numéricos incorporados como `float`.
+Para los valores incorporados `int` y `float` usados en este capítulo, `round(number)` devuelve el entero más cercano.
 
 ```python
 print(round(3.2))
@@ -491,7 +493,7 @@ print(round(3.14159, 4))
 3.1416
 ```
 
-Para números incorporados, proporcionar `ndigits` cambia un detalle importante de tipo:
+Para los casos de `int` y `float` usados aquí, proporcionar `ndigits` afecta una regla importante del tipo de retorno:
 
 ```python
 print(round(2.5))
@@ -553,7 +555,7 @@ Un `ndigits` negativo es especialmente útil cuando los valores deben agruparse 
 
 ## 14. Python no usa la regla "5 siempre redondea hacia arriba"
 
-Para tipos numéricos incorporados, cuando dos múltiplos candidatos están igualmente cerca, Python elige el valor par.
+Para los casos de `int` y `float` usados en este capítulo, cuando dos múltiplos candidatos están igualmente cerca, Python elige el valor par.
 
 Observa:
 
@@ -678,7 +680,7 @@ False
 
 Usa `round()` cuando un valor redondeado sea realmente lo que necesita tu programa. No lo uses como herramienta universal para reparar la aritmética de punto flotante.
 
-Más adelante encontrarás herramientas como `math.isclose()` para comparaciones aproximadas y aritmética decimal para requisitos basados en decimales.
+Según el requisito, herramientas como `math.isclose()` para comparaciones aproximadas o la aritmética decimal para cálculos basados en decimales pueden ser más adecuadas.
 
 ---
 
@@ -702,7 +704,7 @@ No promete que la impresión mostrará ceros finales como `3.10`.
 
 Eso es una cuestión de formato, no de redondeo numérico.
 
-El formato de strings se introduce en otra parte de la ruta. Mantén la distinción en mente:
+El formato de strings es un tema separado de este capítulo. Mantén la distinción en mente:
 
 ```text
 rounding   -> numeric value
@@ -761,7 +763,7 @@ Todavía no necesitas dominar las listas.
 
 Por ahora, trata la lista como un contenedor ordenado sencillo de valores que puede pasarse a una función.
 
-La Fase 3 enseñará listas, tuplas, conjuntos, diccionarios, comportamiento de indexación en colecciones, mutabilidad, iteración y operaciones comunes con colecciones en su contexto adecuado.
+La Fase 3 enseñará listas, tuplas, diccionarios y conjuntos, incluida la indexación o el slicing cuando el tipo de colección los admita y formas adecuadas de agregar, actualizar o eliminar valores.
 
 Esta pequeña vista previa existe porque sería difícil enseñar `sum()` de forma significativa sin ningún grupo de valores.
 
@@ -769,20 +771,10 @@ Esta pequeña vista previa existe porque sería difícil enseñar `sum()` de for
 
 ## 21. Error común: recrear `abs()` manualmente
 
-Un principiante puede escribir una lógica conceptualmente equivalente a:
+Un principiante puede intentar reproducir manualmente el comportamiento del valor absoluto comprobando si un valor es negativo y cambiando su signo de forma condicional. Los condicionales se enseñan más adelante en el roadmap. Si la intención real es simplemente obtener el valor absoluto, esto es más claro:
 
 ```python
 value = -8
-
-if value < 0:
-    magnitude = -value
-else:
-    magnitude = value
-```
-
-Eso puede ser útil al aprender condicionales más adelante, pero si la intención real es simplemente obtener el valor absoluto, esto es más claro:
-
-```python
 magnitude = abs(value)
 ```
 
@@ -866,7 +858,7 @@ Este es un buen ejemplo de elegir una operación según la semántica de los dat
 
 ## 25. Error común: asumir que `round()` siempre redondea las mitades hacia arriba
 
-Esta expectativa es incorrecta en el redondeo numérico incorporado de Python:
+Esta expectativa es incorrecta para el redondeo de `int` y `float` mostrado en este capítulo:
 
 ```text
 2.5 -> expected by some beginners: 3
@@ -892,7 +884,7 @@ Si un cálculo depende de semántica decimal exacta, aplicar `round()` repetidam
 
 La herramienta correcta depende del dominio.
 
-Ejemplos de consideraciones posteriores incluyen:
+Ejemplos de herramientas y cuestiones fuera del alcance de este capítulo incluyen:
 
 ```text
 approximate scientific comparison -> math.isclose()
@@ -901,7 +893,7 @@ decimal arithmetic requirements    -> decimal.Decimal
 textual decimal display             -> formatting
 ```
 
-Estas son conexiones con el roadmap, no requisitos para este capítulo de nivel principiante.
+Estas son referencias de contexto, no requisitos para este capítulo de nivel principiante.
 
 ---
 
@@ -1023,7 +1015,7 @@ Agrega:
 empty_measurements = []
 ```
 
-Usa `min()` y `max()` con un `default=` explícito y explica en un comentario por qué el valor elegido tendría o no sentido semántico en un sistema real de mediciones.
+Usa `min()` y `max()` con un `default=` explícito y escribe una o dos frases debajo del código explicando por qué el valor elegido tendría o no sentido semántico en un sistema real de mediciones.
 
 La parte importante es el razonamiento, no solo evitar `ValueError`.
 
@@ -1132,7 +1124,6 @@ Ahora tienes una base más sólida para trabajar con valores individuales de tex
 
 La siguiente fase curricular introduce **Colecciones**, donde múltiples valores pasan a convertirse en estructuras de primera clase en tus programas. Listas, tuplas, conjuntos y diccionarios harán mucho más poderosos varios patrones anticipados en esta fase.
 
-Antes de avanzar, el repositorio puede realizar una auditoría entre capítulos para verificar que la Fase 2 funcione de manera fluida como una única ruta de aprendizaje.
 
 ---
 
