@@ -85,14 +85,22 @@ python-study-guide/
 │   │   └── examples/
 │   │       ├── list_basics.py
 │   │       └── list_slicing.py
-│   └── 02-modifying-lists-and-methods/
+│   ├── 02-modifying-lists-and-methods/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── list_copying.py
+│   │       ├── list_methods.py
+│   │       └── list_mutation.py
+│   └── 03-tuples-and-immutability/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── list_copying.py
-│           ├── list_methods.py
-│           └── list_mutation.py
+│           ├── tuple_basics.py
+│           ├── tuple_mutable_item.py
+│           └── tuple_unpacking.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -208,7 +216,7 @@ python-study-guide/
 - `.github/`: configuración de colaboración, formularios de issue, plantilla de pull request y workflow de GitHub Actions.
 - `assets/`: identidad visual original, recursos exportados, composiciones editables, paleta, accesibilidad y reglas de uso.
 - `comments-and-documentation/`: ruta completa de la Fase 6. Hay capítulos revisados sobre comentarios, docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y PEP 8 y legibilidad, cada uno en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
-- `collections/`: ruta de la Fase 3, actualmente en progreso. Los Capítulos 01 y 02 enseñan creación, lectura, mutación, métodos comunes, comportamiento de valores de retorno y copia superficial básica de listas, en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
+- `collections/`: ruta de aprendizaje de la Fase 3, actualmente en progreso. Los Capítulos 01 a 03 enseñan creación, lectura, mutación y métodos comunes de listas, comportamiento de valores de retorno, copia superficial básica, tuplas, inmutabilidad, empaquetado y desempaquetado en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
 - `docs/`: roadmaps, arquitectura del proyecto, documentos localizados, políticas y guía de desarrollo responsable asistido por IA.
 - `exercises/`: actividades prácticas relacionadas con los capítulos.
 - `external-libraries/`: futuras guías sobre paquetes de terceros.
