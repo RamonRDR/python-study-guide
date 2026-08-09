@@ -42,3 +42,6 @@ collections/01-list-creation-and-indexing/examples/list_slicing.py
 collections/02-modifying-lists-and-methods/examples/list_copying.py
 collections/02-modifying-lists-and-methods/examples/list_methods.py
 collections/02-modifying-lists-and-methods/examples/list_mutation.py
+collections/03-tuples-and-immutability/examples/tuple_basics.py
+collections/03-tuples-and-immutability/examples/tuple_mutable_item.py
+collections/03-tuples-and-immutability/examples/tuple_unpacking.py

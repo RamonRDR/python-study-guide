@@ -6,7 +6,7 @@
 
 </div>
 
-[← Previous chapter: List creation, indexing, and slicing](../01-list-creation-and-indexing/README.md) · [Back to the Collections index](../README.md) · Next chapter: Tuples and immutability
+[← Previous chapter: List creation, indexing, and slicing](../01-list-creation-and-indexing/README.md) · [Back to the Collections index](../README.md) · [Next chapter: Tuples and immutability](../03-tuples-and-immutability/README.md)
 
 The previous chapter taught you to create and read lists. Now the other half of the list model becomes important: a list is **mutable**, which means its contents can be changed after the list is created.
 

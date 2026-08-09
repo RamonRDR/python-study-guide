@@ -6,7 +6,7 @@
 
 </div>
 
-[← Capítulo anterior: Creación, indexación y slicing de listas](../01-list-creation-and-indexing/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · Siguiente capítulo: Tuplas e inmutabilidad
+[← Capítulo anterior: Creación, indexación y slicing de listas](../01-list-creation-and-indexing/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · [Siguiente capítulo: Tuplas e inmutabilidad](../03-tuples-and-immutability/README.es.md)
 
 El capítulo anterior enseñó a crear y leer listas. Ahora la otra mitad del modelo de listas se vuelve importante: una lista es **mutable**, lo que significa que su contenido puede cambiar después de que la lista se crea.
 
