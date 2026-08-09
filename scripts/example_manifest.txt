@@ -39,3 +39,6 @@ strings-and-numbers/04-numeric-builtins/examples/numeric_summary.py
 strings-and-numbers/04-numeric-builtins/examples/rounding_behavior.py
 collections/01-list-creation-and-indexing/examples/list_basics.py
 collections/01-list-creation-and-indexing/examples/list_slicing.py
+collections/02-modifying-lists-and-methods/examples/list_copying.py
+collections/02-modifying-lists-and-methods/examples/list_methods.py
+collections/02-modifying-lists-and-methods/examples/list_mutation.py

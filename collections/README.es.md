@@ -13,7 +13,7 @@ Esta sección es la Fase 3 de la secuencia principal de aprendizaje de Python St
 | Capítulo | Enfoque principal | Nivel | Estado |
 |---|---|---|---|
 | [01. Creación, indexación y slicing de listas](01-list-creation-and-indexing/README.es.md) | Crear colecciones ordenadas y leer elementos individuales y rangos | Principiante | Disponible |
-| 02. Modificar listas y métodos comunes de listas | Cambiar deliberadamente el contenido de listas y comprender la mutación | Principiante | Planificado |
+| [02. Modificar listas y métodos comunes de listas](02-modifying-lists-and-methods/README.es.md) | Cambiar deliberadamente el contenido de listas y comprender la mutación | Principiante | Disponible |
 | 03. Tuplas e inmutabilidad | Usar secuencias inmutables y compararlas con listas | Principiante | Planificado |
 | 04. Diccionarios: claves y valores | Organizar valores mediante claves significativas en lugar de posiciones | Principiante | Planificado |
 | 05. Conjuntos y valores únicos | Trabajar con elementos únicos y operaciones de pertenencia de conjuntos | Principiante | Planificado |
@@ -83,7 +83,7 @@ Estas ideas resultan más sencillas después de comprender primero qué contiene
 
 ## Estado de la sección
 
-La Fase 3 está **en progreso**. El Capítulo 01 está disponible en inglés, portugués de Brasil y español. Los Capítulos 02 a 06 siguen planificados y se añadirán como capítulos completos y revisables, sin placeholders vacíos.
+La Fase 3 está **en progreso**. Los Capítulos 01 y 02 están disponibles en inglés, portugués de Brasil y español. Los Capítulos 03 a 06 siguen planificados y se añadirán como capítulos completos y revisables, sin placeholders vacíos.
 
 ## Estructura actual del directorio
 
@@ -92,11 +92,19 @@ collections/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-list-creation-and-indexing/
+├── 01-list-creation-and-indexing/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── list_basics.py
+│       └── list_slicing.py
+└── 02-modifying-lists-and-methods/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── list_basics.py
-        └── list_slicing.py
+        ├── list_copying.py
+        ├── list_methods.py
+        └── list_mutation.py
 ```

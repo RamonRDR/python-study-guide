@@ -6,7 +6,7 @@
 
 </div>
 
-[← Back to the Collections index](../README.md) · Next chapter: Modifying lists and common list methods
+[← Back to the Collections index](../README.md) · [Next chapter: Modifying lists and common list methods →](../02-modifying-lists-and-methods/README.md)
 
 Phase 2 taught you how ordered strings expose positions and slices. Phase 3 begins by applying that familiar idea to a new kind of value: a **list**, which can keep several related values together under one name.
 

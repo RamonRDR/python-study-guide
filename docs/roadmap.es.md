@@ -17,7 +17,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 0. Base del proyecto | Completada | Base disponible, auditada y oficialmente completada |
 | 1. Fundamentos | Completada | Seis capítulos revisados cubren ejecución, entrada y salida, variables y nombres, tipos de datos incorporados, inspección de tipos y conversión de tipos |
 | 2. Textos y números | Completada | Cuatro capítulos revisados cubren creación de strings, métodos comunes, comportamiento numérico y booleano, precisión de punto flotante y funciones numéricas incorporadas |
-| 3. Colecciones | En progreso | El Capítulo 01 presenta creación, indexación, slicing y pertenencia en listas |
+| 3. Colecciones | En progreso | Los Capítulos 01 y 02 cubren creación, lectura, mutación y métodos comunes de listas |
 | 4. Flujo del programa | Planificada | Contenido todavía no iniciado |
 | 5. Funciones | Planificada | Contenido todavía no iniciado |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
@@ -26,7 +26,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2 y 6 están completadas. La Fase 3 ahora está en progreso con su primer capítulo de Colecciones disponible, mientras la Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1, 2 y 6 están completadas. La Fase 3 ahora está en progreso con sus dos primeros capítulos de Colecciones disponibles, mientras la Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -72,7 +72,7 @@ Las Fases 0, 1, 2 y 6 están completadas. La Fase 3 ahora está en progreso con 
 ## Fase 3: Colecciones
 
 - [x] [Creación, indexación y slicing de listas](../collections/01-list-creation-and-indexing/README.es.md)
-- [ ] Modificar listas y métodos comunes de listas
+- [x] [Modificar listas y métodos comunes de listas](../collections/02-modifying-lists-and-methods/README.es.md)
 - [ ] Tuplas e inmutabilidad
 - [ ] Diccionarios: claves y valores
 - [ ] Conjuntos y valores únicos

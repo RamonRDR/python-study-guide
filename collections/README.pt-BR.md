@@ -13,7 +13,7 @@ Esta seção é a Fase 3 da sequência principal de aprendizagem do Python Study
 | Capítulo | Foco principal | Nível | Status |
 |---|---|---|---|
 | [01. Criação, indexação e fatiamento de listas](01-list-creation-and-indexing/README.pt-BR.md) | Criar coleções ordenadas e ler itens individuais e intervalos | Iniciante | Disponível |
-| 02. Modificando listas e métodos comuns de listas | Alterar o conteúdo de listas de forma deliberada e entender mutação | Iniciante | Planejado |
+| [02. Modificando listas e métodos comuns de listas](02-modifying-lists-and-methods/README.pt-BR.md) | Alterar o conteúdo de listas de forma deliberada e entender mutação | Iniciante | Disponível |
 | 03. Tuplas e imutabilidade | Usar sequências imutáveis e compará-las com listas | Iniciante | Planejado |
 | 04. Dicionários: chaves e valores | Organizar valores por chaves significativas em vez de posições | Iniciante | Planejado |
 | 05. Conjuntos e valores únicos | Trabalhar com itens únicos e operações de pertencimento de conjuntos | Iniciante | Planejado |
@@ -83,7 +83,7 @@ Essas ideias ficam mais fáceis depois que a pessoa entende primeiro o que as co
 
 ## Status da seção
 
-A Fase 3 está **em andamento**. O Capítulo 01 está disponível em inglês, português brasileiro e espanhol. Os Capítulos 02 a 06 continuam planejados e serão adicionados como capítulos completos e revisáveis, sem placeholders vazios.
+A Fase 3 está **em andamento**. Os Capítulos 01 e 02 estão disponíveis em inglês, português brasileiro e espanhol. Os Capítulos 03 a 06 continuam planejados e serão adicionados como capítulos completos e revisáveis, sem placeholders vazios.
 
 ## Estrutura atual do diretório
 
@@ -92,11 +92,19 @@ collections/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-list-creation-and-indexing/
+├── 01-list-creation-and-indexing/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── list_basics.py
+│       └── list_slicing.py
+└── 02-modifying-lists-and-methods/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── list_basics.py
-        └── list_slicing.py
+        ├── list_copying.py
+        ├── list_methods.py
+        └── list_mutation.py
 ```
