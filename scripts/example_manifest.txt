@@ -54,3 +54,6 @@ collections/05-sets-and-unique-values/examples/set_operations.py
 collections/06-choosing-the-right-collection/examples/collection_models.py
 collections/06-choosing-the-right-collection/examples/collection_tradeoffs.py
 collections/06-choosing-the-right-collection/examples/study_workspace.py
+program-flow/01-conditions-comparisons-and-boolean-logic/examples/boolean_logic.py
+program-flow/01-conditions-comparisons-and-boolean-logic/examples/comparison_results.py
+program-flow/01-conditions-comparisons-and-boolean-logic/examples/truth_values.py

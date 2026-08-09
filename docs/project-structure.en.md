@@ -128,6 +128,9 @@ python-study-guide/
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
+│   ├── learning-path.en.md
+│   ├── learning-path.pt-BR.md
+│   ├── learning-path.es.md
 │   ├── project-structure.en.md
 │   ├── project-structure.pt-BR.md
 │   ├── project-structure.es.md
@@ -183,6 +186,18 @@ python-study-guide/
 │           ├── conversion_basics.py
 │           └── conversion_surprises.py
 ├── practical-projects/
+├── program-flow/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── 01-conditions-comparisons-and-boolean-logic/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           ├── boolean_logic.py
+│           ├── comparison_results.py
+│           └── truth_values.py
 ├── scripts/
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
@@ -241,12 +256,13 @@ python-study-guide/
 - `assets/`: original visual identity, exported assets, editable compositions, palette, accessibility guidance, and usage rules.
 - `comments-and-documentation/`: complete Phase 6 learning path. Reviewed chapters are available for comments, docstrings, meaningful names, task markers, comments versus logging, and PEP 8 and readability, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `collections/`: complete Phase 3 learning path. Its six chapters teach list creation, reading, mutation, common methods, shallow copying, tuples and immutability, dictionary key-value mappings and views, set uniqueness and relationships, and how to choose among lists, tuples, dictionaries, and sets by intent, in English, Brazilian Portuguese, and Spanish with safe executable examples.
-- `docs/`: roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
+- `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.
 - `functions/`: future learning path for functions, parameters, returns, scope, and type hints.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.
+- `program-flow/`: Phase 4 learning path in progress. Chapter 01 teaches conditions, comparisons, truth-value testing, membership, identity, Boolean logic, precedence, and short-circuit evaluation in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
 - `standard-library/`: future guides to modules distributed with Python.
 - `strings-and-numbers/`: complete Phase 2 learning path. Its four reviewed chapters cover string creation and indexing, common string methods, integer, floating-point, and Boolean behavior, floating-point precision, and `round()`, `abs()`, `min()`, `max()`, and `sum()` in English, Brazilian Portuguese, and Spanish with safe executable examples.

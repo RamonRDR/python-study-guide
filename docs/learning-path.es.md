@@ -43,11 +43,13 @@ Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores p
 5. [Conjuntos y valores únicos](../collections/05-sets-and-unique-values/README.es.md)
 6. [Elegir la colección adecuada](../collections/06-choosing-the-right-collection/README.es.md)
 
-## Fase 4 · Flujo del Programa ⏳
+## Fase 4 · Flujo del Programa 🚧
 
-Esta es la **siguiente fase de la secuencia de aprendizaje recomendada**. Los enlaces directos a sus capítulos se añadirán aquí a medida que cada capítulo sea publicado y revisado.
+[Abrir el índice de la sección Flujo del Programa](../program-flow/README.es.md)
 
-Los temas planificados incluyen condiciones, `if`/`elif`/`else`, `for`, `while`, herramientas de iteración y control de bucles.
+1. [Condiciones, Comparaciones y Lógica Booleana](../program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md)
+
+La Fase 4 ahora está en progreso. El Capítulo 01 construye las expresiones de verdad de las que dependerán las decisiones y los bucles posteriores. El siguiente capítulo planificado introduce `if`, `elif` y `else`.
 
 ## Fase 5 · Funciones ⏳
 
