@@ -6,7 +6,7 @@
 
 </div>
 
-[← Capítulo anterior: Modificar listas y métodos comunes de listas](../02-modifying-lists-and-methods/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · Siguiente capítulo: Diccionarios: claves y valores
+[← Capítulo anterior: Modificar listas y métodos comunes de listas](../02-modifying-lists-and-methods/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · [Siguiente capítulo: Diccionarios: claves y valores](../04-dictionaries-keys-and-values/README.es.md)
 
 Las listas enseñaron qué significa que una colección sea mutable. Las tuplas presentan la idea opuesta: una secuencia ordenada cuyas posiciones no pueden sustituirse, añadirse ni eliminarse después de crear la tupla.
 

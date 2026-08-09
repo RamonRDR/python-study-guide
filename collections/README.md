@@ -15,7 +15,7 @@ This section is Phase 3 of the main Python Study Guide learning sequence. It bui
 | [01. List creation, indexing, and slicing](01-list-creation-and-indexing/README.md) | Create ordered collections and read individual items and ranges | Beginner | Available |
 | [02. Modifying lists and common list methods](02-modifying-lists-and-methods/README.md) | Change list contents deliberately and understand mutation | Beginner | Available |
 | [03. Tuples and immutability](03-tuples-and-immutability/README.md) | Use immutable sequences and compare them with lists | Beginner | Available |
-| 04. Dictionaries: keys and values | Organize values by meaningful keys instead of positions | Beginner | Planned |
+| [04. Dictionaries: keys and values](04-dictionaries-keys-and-values/README.md) | Organize values by meaningful keys instead of positions | Beginner | Available |
 | 05. Sets and unique values | Work with unique items and set-style membership operations | Beginner | Planned |
 | 06. Choosing the right collection | Compare lists, tuples, dictionaries, and sets by intent | Beginner | Planned |
 
@@ -83,7 +83,7 @@ Those ideas become easier after the learner first understands what the collectio
 
 ## Section status
 
-Phase 3 is **in progress**. Chapters 01 through 03 are available in English, Brazilian Portuguese, and Spanish. Chapters 04 through 06 remain planned and will be added as complete, reviewable chapters rather than empty placeholders.
+Phase 3 is **in progress**. Chapters 01 through 04 are available in English, Brazilian Portuguese, and Spanish. Chapters 05 and 06 remain planned and will be added as complete, reviewable chapters rather than empty placeholders.
 
 ## Current directory structure
 
@@ -107,12 +107,20 @@ collections/
 │       ├── list_copying.py
 │       ├── list_methods.py
 │       └── list_mutation.py
-└── 03-tuples-and-immutability/
+├── 03-tuples-and-immutability/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── tuple_basics.py
+│       ├── tuple_mutable_item.py
+│       └── tuple_unpacking.py
+└── 04-dictionaries-keys-and-values/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── tuple_basics.py
-        ├── tuple_mutable_item.py
-        └── tuple_unpacking.py
+        ├── dictionary_basics.py
+        ├── dictionary_mutation.py
+        └── dictionary_views.py
 ```

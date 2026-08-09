@@ -93,14 +93,22 @@ python-study-guide/
 │   │       ├── list_copying.py
 │   │       ├── list_methods.py
 │   │       └── list_mutation.py
-│   └── 03-tuples-and-immutability/
+│   ├── 03-tuples-and-immutability/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── tuple_basics.py
+│   │       ├── tuple_mutable_item.py
+│   │       └── tuple_unpacking.py
+│   └── 04-dictionaries-keys-and-values/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── tuple_basics.py
-│           ├── tuple_mutable_item.py
-│           └── tuple_unpacking.py
+│           ├── dictionary_basics.py
+│           ├── dictionary_mutation.py
+│           └── dictionary_views.py
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
@@ -216,7 +224,7 @@ python-study-guide/
 - `.github/`: configuração de colaboração, formulários de issue, template de pull request e workflow do GitHub Actions.
 - `assets/`: identidade visual original, arquivos exportados, composições editáveis, paleta, acessibilidade e regras de uso.
 - `comments-and-documentation/`: trilha completa da Fase 6. Há capítulos revisados sobre comentários, docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e PEP 8 e legibilidade, cada um em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
-- `collections/`: trilha de aprendizagem da Fase 3, atualmente em andamento. Os Capítulos 01 a 03 ensinam criação, leitura, mutação e métodos comuns de listas, comportamento de valores de retorno, cópia rasa básica, tuplas, imutabilidade, empacotamento e desempacotamento em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
+- `collections/`: trilha de aprendizagem da Fase 3, atualmente em andamento. Os Capítulos 01 a 04 ensinam criação, leitura, mutação e métodos comuns de listas, cópia rasa, tuplas, imutabilidade, empacotamento, desempacotamento e mapeamentos chave-valor com dicionários, incluindo busca, mutação, views, ordem de inserção e chaves hashable, em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `docs/`: roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros.
