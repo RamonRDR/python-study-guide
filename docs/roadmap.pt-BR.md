@@ -18,7 +18,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 1. Fundamentos | Concluída | Seis capítulos revisados cobrem execução, entrada e saída, variáveis e nomes, tipos de dados embutidos, inspeção de tipos e conversão de tipos |
 | 2. Textos e números | Concluída | Quatro capítulos revisados cobrem criação de strings, métodos comuns, comportamento numérico e booleano, precisão de ponto flutuante e funções numéricas embutidas |
 | 3. Coleções | Concluída | Seis capítulos revisados cobrem listas, tuplas, dicionários, conjuntos e escolha da coleção pela intenção |
-| 4. Fluxo do programa | Planejada | Conteúdo ainda não iniciado |
+| 4. Fluxo do programa | Em andamento | O Capítulo 01 cobre condições, comparações, valores de verdade, lógica booleana, pertencimento, identidade e avaliação de curto-circuito |
 | 5. Funções | Planejada | Conteúdo ainda não iniciado |
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3 e 6 estão concluídas. A Fase 3 agora oferece uma trilha completa para iniciantes pelos quatro modelos principais de coleção e pela escolha da coleção, enquanto a Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2, 3 e 6 estão concluídas. A Fase 4 agora está em andamento com a base de construção de condições que sustentará decisões e loops, enquanto a Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -80,10 +80,17 @@ As Fases 0, 1, 2, 3 e 6 estão concluídas. A Fase 3 agora oferece uma trilha co
 
 ## Fase 4: Fluxo do programa
 
-- `if`, `elif` e `else`
-- `for` e `while`
-- `range()`, `enumerate()` e `zip()`
-- `break`, `continue` e desenho de loops
+Consulte a [trilha de aprendizagem da seção](../program-flow/README.pt-BR.md).
+
+- [x] [Condições, comparações e lógica booleana](../program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md)
+- [ ] `if`, `elif` e `else`
+- [ ] Loops `for` e iteração
+- [ ] `range()`, `enumerate()` e `zip()`
+- [ ] Loops `while` e repetição guiada por estado
+- [ ] `break`, `continue` e `else` de loops
+- [ ] Escolhendo e combinando o fluxo do programa
+
+A Fase 4 começa intencionalmente tornando as condições confiáveis antes que elas controlem ramificações e repetições.
 
 ## Fase 5: Funções
 

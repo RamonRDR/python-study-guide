@@ -43,11 +43,13 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 5. [Sets and unique values](../collections/05-sets-and-unique-values/README.md)
 6. [Choosing the right collection](../collections/06-choosing-the-right-collection/README.md)
 
-## Phase 4 · Program Flow ⏳
+## Phase 4 · Program Flow 🚧
 
-This is the **next phase in the intended learning sequence**. Direct chapter links will be added here as each chapter is published and reviewed.
+[Open the Program Flow section index](../program-flow/README.md)
 
-Planned topics include conditions, `if`/`elif`/`else`, `for`, `while`, iteration helpers, and loop control.
+1. [Conditions, Comparisons, and Boolean Logic](../program-flow/01-conditions-comparisons-and-boolean-logic/README.md)
+
+Phase 4 is now in progress. Chapter 01 builds the truth expressions that later decisions and loops depend on. The next planned chapter introduces `if`, `elif`, and `else`.
 
 ## Phase 5 · Functions ⏳
 

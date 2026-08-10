@@ -128,6 +128,9 @@ python-study-guide/
 ├── docs/
 │   ├── ai-assisted-development/
 │   ├── localized/
+│   ├── learning-path.en.md
+│   ├── learning-path.pt-BR.md
+│   ├── learning-path.es.md
 │   ├── project-structure.en.md
 │   ├── project-structure.pt-BR.md
 │   ├── project-structure.es.md
@@ -183,6 +186,18 @@ python-study-guide/
 │           ├── conversion_basics.py
 │           └── conversion_surprises.py
 ├── practical-projects/
+├── program-flow/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── 01-conditions-comparisons-and-boolean-logic/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           ├── boolean_logic.py
+│           ├── comparison_results.py
+│           └── truth_values.py
 ├── scripts/
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
@@ -241,12 +256,13 @@ python-study-guide/
 - `assets/`: identidad visual original, recursos exportados, composiciones editables, paleta, accesibilidad y reglas de uso.
 - `comments-and-documentation/`: ruta completa de la Fase 6. Hay capítulos revisados sobre comentarios, docstrings, nombres significativos, marcadores de tareas, comentarios frente a logging y PEP 8 y legibilidad, cada uno en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
 - `collections/`: ruta completa de la Fase 3. Sus seis capítulos enseñan creación, lectura, mutación y métodos comunes de listas, copia superficial, tuplas e inmutabilidad, mappings clave-valor y vistas de diccionarios, unicidad y relaciones de conjuntos y cómo elegir entre listas, tuplas, diccionarios y conjuntos según la intención, en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
-- `docs/`: roadmaps, arquitectura del proyecto, documentos localizados, políticas y guía de desarrollo responsable asistido por IA.
+- `docs/`: rutas completas de aprendizaje, roadmaps, arquitectura del proyecto, documentos localizados, políticas y guía de desarrollo responsable asistido por IA.
 - `exercises/`: actividades prácticas relacionadas con los capítulos.
 - `external-libraries/`: futuras guías sobre paquetes de terceros.
 - `functions/`: futura ruta sobre funciones, parámetros, retornos, alcance y type hints.
 - `fundamentals/`: ruta completa de la Fase 1. Sus seis capítulos enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres, cómo reconocer e inspeccionar tipos de datos incorporados comunes y cómo convertir valores compatibles de forma deliberada, con explicaciones multilingües alineadas y ejemplos ejecutables.
 - `practical-projects/`: futuros proyectos pequeños que combinarán varios conceptos.
+- `program-flow/`: ruta de la Fase 4 en progreso. El Capítulo 01 enseña condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, precedencia y evaluación de cortocircuito en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions.
 - `standard-library/`: futuras guías sobre módulos distribuidos con Python.
 - `strings-and-numbers/`: ruta completa de la Fase 2. Sus cuatro capítulos revisados cubren creación e indexación de strings, métodos comunes, comportamiento de enteros, punto flotante y booleanos, precisión de punto flotante y `round()`, `abs()`, `min()`, `max()` y `sum()` en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.

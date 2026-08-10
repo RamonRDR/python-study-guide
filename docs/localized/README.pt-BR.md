@@ -58,6 +58,7 @@ python-study-guide/
 ├── functions/
 ├── fundamentals/
 ├── practical-projects/
+├── program-flow/
 ├── scripts/
 ├── standard-library/
 ├── strings-and-numbers/
@@ -83,7 +84,7 @@ A fundação do projeto e quatro seções educacionais completas estão disponí
 - [Comentários versus Logging em Python](../../comments-and-documentation/05-comments-vs-logging/README.pt-BR.md)
 - [PEP 8 e Legibilidade em Python](../../comments-and-documentation/06-pep8-and-readability/README.pt-BR.md)
 
-As Fases 1, 2, 3 e 6 estão concluídas. A Fase 3 agora reúne seis capítulos revisados de Coleções, encerrando com [Escolhendo a Coleção Certa](../../collections/06-choosing-the-right-collection/README.pt-BR.md). A Fase 2 permanece concluída com quatro capítulos revisados, encerrando com [Funções Numéricas Embutidas](../../strings-and-numbers/04-numeric-builtins/README.pt-BR.md). Consulte o [roadmap](../roadmap.pt-BR.md) para acompanhar o status de todas as fases.
+As Fases 1, 2, 3 e 6 estão concluídas. A Fase 4 agora está em andamento com [Condições, Comparações e Lógica Booleana](../../program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md), o primeiro capítulo de Fluxo do Programa. A Fase 3 reúne seis capítulos revisados de Coleções, encerrando com [Escolhendo a Coleção Certa](../../collections/06-choosing-the-right-collection/README.pt-BR.md). A Fase 2 permanece concluída com quatro capítulos revisados, encerrando com [Funções Numéricas Embutidas](../../strings-and-numbers/04-numeric-builtins/README.pt-BR.md). Consulte o [roadmap](../roadmap.pt-BR.md) ou a [trilha completa de estudos](../learning-path.pt-BR.md) para acompanhar o status do currículo e acessar os capítulos diretamente.
 
 ## Identidade visual
 

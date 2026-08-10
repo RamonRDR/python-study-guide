@@ -58,6 +58,7 @@ python-study-guide/
 ├── functions/
 ├── fundamentals/
 ├── practical-projects/
+├── program-flow/
 ├── scripts/
 ├── standard-library/
 ├── strings-and-numbers/
@@ -83,7 +84,7 @@ The project foundation and four complete educational sections are available. [Ph
 - [Comments versus Logging in Python](comments-and-documentation/05-comments-vs-logging/README.md)
 - [PEP 8 and Readability in Python](comments-and-documentation/06-pep8-and-readability/README.md)
 
-Phases 1, 2, 3, and 6 are complete. Phase 3 now contains six reviewed Collections chapters, ending with [Choosing the Right Collection](collections/06-choosing-the-right-collection/README.md). Phase 2 remains complete with four reviewed chapters, ending with [Numeric Built-ins](strings-and-numbers/04-numeric-builtins/README.md). See the [roadmap](docs/roadmap.en.md) for the current status of every phase.
+Phases 1, 2, 3, and 6 are complete. Phase 4 is now in progress with [Conditions, Comparisons, and Boolean Logic](program-flow/01-conditions-comparisons-and-boolean-logic/README.md), the first Program Flow chapter. Phase 3 contains six reviewed Collections chapters, ending with [Choosing the Right Collection](collections/06-choosing-the-right-collection/README.md). Phase 2 remains complete with four reviewed chapters, ending with [Numeric Built-ins](strings-and-numbers/04-numeric-builtins/README.md). See the [roadmap](docs/roadmap.en.md) or the [full learning path](docs/learning-path.en.md) for the current curriculum status and direct chapter links.
 
 ## Visual identity
 
