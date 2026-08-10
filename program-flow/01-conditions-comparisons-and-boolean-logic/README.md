@@ -6,7 +6,7 @@
 
 </div>
 
-[← Back to Program Flow](../README.md) · [← Previous phase: Choosing the Right Collection](../../collections/06-choosing-the-right-collection/README.md)
+[← Back to Program Flow](../README.md) · [← Previous phase: Choosing the Right Collection](../../collections/06-choosing-the-right-collection/README.md) · [Next: `if`, `elif`, and `else` →](../02-if-elif-and-else/README.md)
 
 Conditions are the questions a program can evaluate before it decides what should happen next.
 

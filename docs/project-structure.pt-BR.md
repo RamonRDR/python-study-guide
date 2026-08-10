@@ -190,14 +190,22 @@ python-study-guide/
 │   ├── README.md
 │   ├── README.pt-BR.md
 │   ├── README.es.md
-│   └── 01-conditions-comparisons-and-boolean-logic/
+│   ├── 01-conditions-comparisons-and-boolean-logic/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── boolean_logic.py
+│   │       ├── comparison_results.py
+│   │       └── truth_values.py
+│   └── 02-if-elif-and-else/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── boolean_logic.py
-│           ├── comparison_results.py
-│           └── truth_values.py
+│           ├── basic_if.py
+│           ├── if_elif_else.py
+│           └── independent_conditions.py
 ├── scripts/
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
@@ -262,7 +270,7 @@ python-study-guide/
 - `functions/`: futura trilha sobre funções, parâmetros, retornos, escopo e type hints.
 - `fundamentals/`: trilha completa da Fase 1. Seus seis capítulos ensinam como o Python executa um programa, como usar `print()` e `input()`, como funcionam atribuição e nomes, como reconhecer e inspecionar tipos de dados embutidos comuns e como converter valores compatíveis de forma deliberada, com explicações multilíngues alinhadas e exemplos executáveis.
 - `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
-- `program-flow/`: trilha da Fase 4 em andamento. O Capítulo 01 ensina condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, precedência e avaliação de curto-circuito em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
+- `program-flow/`: trilha da Fase 4 em andamento. Os Capítulos 01 e 02 ensinam condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, precedência, avaliação de curto-circuito e ramificação condicional com `if`, `elif` e `else` em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
 - `standard-library/`: futuros guias sobre módulos distribuídos com o Python.
 - `strings-and-numbers/`: trilha completa da Fase 2. Seus quatro capítulos revisados cobrem criação e indexação de strings, métodos comuns, comportamento de inteiros, ponto flutuante e booleanos, precisão de ponto flutuante e `round()`, `abs()`, `min()`, `max()` e `sum()` em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.

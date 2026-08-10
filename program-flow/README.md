@@ -30,7 +30,7 @@ You should already be comfortable with:
 | Chapter | Main focus | Status |
 |---|---|---|
 | [01. Conditions, Comparisons, and Boolean Logic](01-conditions-comparisons-and-boolean-logic/README.md) | Build trustworthy truth expressions before using them to control execution | Available |
-| 02. `if`, `elif`, and `else` | Choose which block of code runs | Planned |
+| [02. `if`, `elif`, and `else`](02-if-elif-and-else/README.md) | Choose which block of code runs | Available |
 | 03. `for` Loops and Iteration | Repeat work for items from an iterable | Planned |
 | 04. `range()`, `enumerate()`, and `zip()` | Count, track positions, and coordinate iteration | Planned |
 | 05. `while` Loops and State-Driven Repetition | Repeat while a condition remains truthy | Planned |
@@ -50,7 +50,7 @@ condition = a question Python can interpret for truth
 decision = what the program does because of that condition
 ```
 
-Chapter 01 focuses on the first idea. Chapter 02 will add the second.
+Chapter 01 focuses on the first idea. Chapter 02 adds the second by using those conditions to select which block executes.
 
 ## Phase progression
 
@@ -88,4 +88,6 @@ Those concepts appear later in the roadmap.
 
 Begin with [01. Conditions, Comparisons, and Boolean Logic](01-conditions-comparisons-and-boolean-logic/README.md).
 
-The section index will be updated as each later chapter is published and reviewed.
+After Chapter 01, continue with [02. `if`, `elif`, and `else`](02-if-elif-and-else/README.md).
+
+The next planned chapter introduces `for` loops and iteration.

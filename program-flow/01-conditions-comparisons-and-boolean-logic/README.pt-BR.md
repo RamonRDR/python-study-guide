@@ -6,7 +6,7 @@
 
 </div>
 
-[← Voltar para Fluxo do Programa](../README.pt-BR.md) · [← Fase anterior: Escolhendo a Coleção Certa](../../collections/06-choosing-the-right-collection/README.pt-BR.md)
+[← Voltar para Fluxo do Programa](../README.pt-BR.md) · [← Fase anterior: Escolhendo a Coleção Certa](../../collections/06-choosing-the-right-collection/README.pt-BR.md) · [Próximo: `if`, `elif` e `else` →](../02-if-elif-and-else/README.pt-BR.md)
 
 Condições são as perguntas que um programa consegue avaliar antes de decidir o que deve acontecer em seguida.
 

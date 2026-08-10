@@ -18,7 +18,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 1. Fundamentals | Complete | Six reviewed chapters cover execution, input/output, variables and naming, built-in data types, type inspection, and type conversion |
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
 | 3. Collections | Complete | Six reviewed chapters cover lists, tuples, dictionaries, sets, and choosing a collection by intent |
-| 4. Program flow | In progress | Chapter 01 covers conditions, comparisons, truth values, Boolean logic, membership, identity, and short-circuit evaluation |
+| 4. Program flow | In progress | Chapters 01 and 02 cover trustworthy conditions, Boolean logic, membership, identity, `if`, `elif`, `else`, branch ordering, and independent versus exclusive decisions |
 | 5. Functions | Planned | Curriculum not started |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is now in progress with the condition-building foundation that will support decisions and loops, while Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is in progress with conditions and conditional branching now available; iteration with `for` is the next planned step. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -83,14 +83,14 @@ Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is now in progress with the condi
 See the [section learning path](../program-flow/README.md).
 
 - [x] [Conditions, comparisons, and Boolean logic](../program-flow/01-conditions-comparisons-and-boolean-logic/README.md)
-- [ ] `if`, `elif`, and `else`
+- [x] [`if`, `elif`, and `else`](../program-flow/02-if-elif-and-else/README.md)
 - [ ] `for` loops and iteration
 - [ ] `range()`, `enumerate()`, and `zip()`
 - [ ] `while` loops and state-driven repetition
 - [ ] `break`, `continue`, and loop `else`
 - [ ] Choosing and combining program flow
 
-Phase 4 intentionally begins by making conditions trustworthy before those conditions control branches and repetition.
+Phase 4 intentionally builds trustworthy conditions first, then uses them for branching before introducing repetition. Chapters 01 and 02 are complete; `for` loops and iteration are next.
 
 ## Phase 5: Functions
 
