@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is in progress with conditions and conditional branching now available; iteration with `for` is the next planned step. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is in progress with conditions and conditional branching now available; structural pattern matching with `match` and `case` is the next planned step, followed by iteration with `for`. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -84,13 +84,14 @@ See the [section learning path](../program-flow/README.md).
 
 - [x] [Conditions, comparisons, and Boolean logic](../program-flow/01-conditions-comparisons-and-boolean-logic/README.md)
 - [x] [`if`, `elif`, and `else`](../program-flow/02-if-elif-and-else/README.md)
+- [ ] `match` and `case`: structural pattern matching
 - [ ] `for` loops and iteration
 - [ ] `range()`, `enumerate()`, and `zip()`
 - [ ] `while` loops and state-driven repetition
 - [ ] `break`, `continue`, and loop `else`
 - [ ] Choosing and combining program flow
 
-Phase 4 intentionally builds trustworthy conditions first, then uses them for branching before introducing repetition. Chapters 01 and 02 are complete; `for` loops and iteration are next.
+Phase 4 intentionally builds trustworthy conditions first, uses them for conditional branching, and then introduces structural pattern matching before repetition. Chapters 01 and 02 are complete; Chapter 03, `match` and `case`, is next. `for` loops and iteration move to Chapter 04.
 
 ## Phase 5: Functions
 

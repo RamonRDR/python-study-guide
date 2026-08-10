@@ -32,7 +32,7 @@ Ao final deste capítulo, você deverá conseguir:
 - usar aninhamento moderado quando uma segunda decisão só fizer sentido dentro de uma primeira;
 - evitar deixar variáveis indefinidas porque um ramo não foi executado;
 - reconhecer erros comuns de iniciantes envolvendo indentação, `=`, `==` e ordem dos ramos;
-- preparar-se para repetição com loops `for` no próximo capítulo.
+- preparar-se para correspondência de padrões estruturais com `match` e `case` no próximo capítulo.
 
 ## 1. O que significa execução condicional
 
@@ -1133,9 +1133,9 @@ Lembre da progressão:
 
 ## Próximo passo
 
-O próximo capítulo é **Loops `for` e Iteração**.
+O próximo capítulo é **`match` e `case`: Correspondência de Padrões Estruturais**.
 
-Agora você sabe como uma condição pode escolher se um bloco será executado. Em seguida, Python aprenderá a executar um bloco repetidamente para itens de strings, listas, tuplas, dicionários, conjuntos e outros iteráveis.
+Agora você sabe como condições escolhem entre ramos. Em seguida, aprenderá como `match` compara um valor analisado com padrões, incluindo alternativas literais e o curinga `_`, antes de o curso avançar para repetição com `for` no Capítulo 04.
 
 ## Referências oficiais
 

@@ -26,7 +26,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3 y 6 están completadas. La Fase 4 está en progreso con condiciones y ramificaciones condicionales ya disponibles; la iteración con `for` es el siguiente paso planificado. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1, 2, 3 y 6 están completadas. La Fase 4 está en progreso con condiciones y ramificaciones condicionales ya disponibles; la coincidencia de patrones estructurales con `match` y `case` es el siguiente paso planificado, seguida por la iteración con `for`. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -84,13 +84,14 @@ Consulta la [ruta de aprendizaje de la sección](../program-flow/README.es.md).
 
 - [x] [Condiciones, comparaciones y lógica booleana](../program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md)
 - [x] [`if`, `elif` y `else`](../program-flow/02-if-elif-and-else/README.es.md)
+- [ ] `match` y `case`: coincidencia de patrones estructurales
 - [ ] Bucles `for` e iteración
 - [ ] `range()`, `enumerate()` y `zip()`
 - [ ] Bucles `while` y repetición guiada por estado
 - [ ] `break`, `continue` y `else` de bucles
 - [ ] Elegir y combinar el flujo del programa
 
-La Fase 4 construye intencionalmente condiciones confiables primero y luego las usa para ramificaciones antes de introducir repetición. Los Capítulos 01 y 02 están completados; los bucles `for` y la iteración son el siguiente paso.
+La Fase 4 construye intencionalmente condiciones confiables primero, las usa para ramificaciones condicionales y después introduce coincidencia de patrones estructurales antes de la repetición. Los Capítulos 01 y 02 están completados; el Capítulo 03, `match` y `case`, es el siguiente. Los bucles `for` y la iteración pasan al Capítulo 04.
 
 ## Fase 5: Funciones
 

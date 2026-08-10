@@ -32,7 +32,7 @@ Al final de este capítulo, deberías poder:
 - usar anidamiento moderado cuando una segunda decisión solo tiene sentido dentro de una primera;
 - evitar dejar variables sin definir porque una rama no se ejecutó;
 - reconocer errores comunes de principiantes relacionados con indentación, `=`, `==` y orden de ramas;
-- prepararte para la repetición con bucles `for` en el próximo capítulo.
+- prepararte para la coincidencia de patrones estructurales con `match` y `case` en el próximo capítulo.
 
 ## 1. Qué significa la ejecución condicional
 
@@ -1133,9 +1133,9 @@ Recuerda la progresión:
 
 ## Siguiente paso
 
-El próximo capítulo es **Bucles `for` e Iteración**.
+El próximo capítulo es **`match` y `case`: Coincidencia de Patrones Estructurales**.
 
-Ahora sabes cómo una condición puede elegir si se ejecuta un bloque. A continuación, Python aprenderá a ejecutar un bloque repetidamente para elementos de strings, listas, tuplas, diccionarios, conjuntos y otros iterables.
+Ahora sabes cómo las condiciones eligen entre ramas. A continuación, aprenderás cómo `match` compara un valor analizado con patrones, incluidas alternativas literales y el comodín `_`, antes de que el curso avance hacia la repetición con `for` en el Capítulo 04.
 
 ## Referencias oficiales
 
