@@ -30,7 +30,7 @@ Você já deve estar confortável com:
 | Capítulo | Foco principal | Status |
 |---|---|---|
 | [01. Condições, Comparações e Lógica Booleana](01-conditions-comparisons-and-boolean-logic/README.pt-BR.md) | Construir expressões de verdade confiáveis antes de usá-las para controlar a execução | Disponível |
-| 02. `if`, `elif` e `else` | Escolher qual bloco de código é executado | Planejado |
+| [02. `if`, `elif` e `else`](02-if-elif-and-else/README.pt-BR.md) | Escolher qual bloco de código é executado | Disponível |
 | 03. Loops `for` e Iteração | Repetir trabalho para itens de um iterável | Planejado |
 | 04. `range()`, `enumerate()` e `zip()` | Contar, acompanhar posições e coordenar iterações | Planejado |
 | 05. Loops `while` e Repetição Guiada por Estado | Repetir enquanto uma condição permanecer verdadeira | Planejado |
@@ -50,7 +50,7 @@ condition = a question Python can interpret for truth
 decision = what the program does because of that condition
 ```
 
-O Capítulo 01 se concentra na primeira ideia. O Capítulo 02 adicionará a segunda.
+O Capítulo 01 se concentra na primeira ideia. O Capítulo 02 adiciona a segunda usando essas condições para selecionar qual bloco é executado.
 
 ## Progressão da fase
 
@@ -88,4 +88,6 @@ Esses conceitos aparecem mais adiante no roadmap.
 
 Comece por [01. Condições, Comparações e Lógica Booleana](01-conditions-comparisons-and-boolean-logic/README.pt-BR.md).
 
-O índice da seção será atualizado à medida que cada capítulo posterior for publicado e revisado.
+Depois do Capítulo 01, continue com [02. `if`, `elif` e `else`](02-if-elif-and-else/README.pt-BR.md).
+
+O próximo capítulo planejado introduz loops `for` e iteração.

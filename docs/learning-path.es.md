@@ -48,8 +48,9 @@ Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores p
 [Abrir el índice de la sección Flujo del Programa](../program-flow/README.es.md)
 
 1. [Condiciones, Comparaciones y Lógica Booleana](../program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md)
+2. [`if`, `elif` y `else`](../program-flow/02-if-elif-and-else/README.es.md)
 
-La Fase 4 ahora está en progreso. El Capítulo 01 construye las expresiones de verdad de las que dependerán las decisiones y los bucles posteriores. El siguiente capítulo planificado introduce `if`, `elif` y `else`.
+La Fase 4 está en progreso con dos capítulos revisados. El Capítulo 01 construye expresiones de verdad y el Capítulo 02 las usa para elegir qué bloque se ejecuta. El próximo capítulo planificado introduce bucles `for` e iteración.
 
 ## Fase 5 · Funciones ⏳
 

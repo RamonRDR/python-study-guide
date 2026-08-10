@@ -48,8 +48,9 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 [Open the Program Flow section index](../program-flow/README.md)
 
 1. [Conditions, Comparisons, and Boolean Logic](../program-flow/01-conditions-comparisons-and-boolean-logic/README.md)
+2. [`if`, `elif`, and `else`](../program-flow/02-if-elif-and-else/README.md)
 
-Phase 4 is now in progress. Chapter 01 builds the truth expressions that later decisions and loops depend on. The next planned chapter introduces `if`, `elif`, and `else`.
+Phase 4 is in progress with two reviewed chapters. Chapter 01 builds truth expressions, and Chapter 02 uses them to choose which block executes. The next planned chapter introduces `for` loops and iteration.
 
 ## Phase 5 · Functions ⏳
 

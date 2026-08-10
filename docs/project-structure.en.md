@@ -190,14 +190,22 @@ python-study-guide/
 │   ├── README.md
 │   ├── README.pt-BR.md
 │   ├── README.es.md
-│   └── 01-conditions-comparisons-and-boolean-logic/
+│   ├── 01-conditions-comparisons-and-boolean-logic/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── boolean_logic.py
+│   │       ├── comparison_results.py
+│   │       └── truth_values.py
+│   └── 02-if-elif-and-else/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── boolean_logic.py
-│           ├── comparison_results.py
-│           └── truth_values.py
+│           ├── basic_if.py
+│           ├── if_elif_else.py
+│           └── independent_conditions.py
 ├── scripts/
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
@@ -262,7 +270,7 @@ python-study-guide/
 - `functions/`: future learning path for functions, parameters, returns, scope, and type hints.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.
-- `program-flow/`: Phase 4 learning path in progress. Chapter 01 teaches conditions, comparisons, truth-value testing, membership, identity, Boolean logic, precedence, and short-circuit evaluation in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
+- `program-flow/`: Phase 4 learning path in progress. Chapters 01 and 02 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, precedence, short-circuit evaluation, and conditional branching with `if`, `elif`, and `else` in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
 - `standard-library/`: future guides to modules distributed with Python.
 - `strings-and-numbers/`: complete Phase 2 learning path. Its four reviewed chapters cover string creation and indexing, common string methods, integer, floating-point, and Boolean behavior, floating-point precision, and `round()`, `abs()`, `min()`, `max()`, and `sum()` in English, Brazilian Portuguese, and Spanish with safe executable examples.
