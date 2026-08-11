@@ -32,7 +32,7 @@ You should already be comfortable with:
 | [01. Conditions, Comparisons, and Boolean Logic](01-conditions-comparisons-and-boolean-logic/README.md) | Build trustworthy truth expressions before using them to control execution | Available |
 | [02. `if`, `elif`, and `else`](02-if-elif-and-else/README.md) | Choose which block of code runs | Available |
 | [03. `match` and `case`: Structural Pattern Matching](03-match-and-case/README.md) | Match values and data structures against patterns | Available |
-| 04. `for` Loops and Iteration | Repeat work for items from an iterable | Planned |
+| [04. `for` Loops and Iteration](04-for-loops-and-iteration/README.md) | Repeat work for items from an iterable | Available |
 | 05. `range()`, `enumerate()`, and `zip()` | Count, track positions, and coordinate iteration | Planned |
 | 06. `while` Loops and State-Driven Repetition | Repeat while a condition remains truthy | Planned |
 | 07. `break`, `continue`, and Loop `else` | Change or interpret normal loop completion | Planned |
@@ -51,7 +51,7 @@ condition = a question Python can interpret for truth
 decision = what the program does because of that condition
 ```
 
-Chapter 01 focuses on the first idea. Chapter 02 adds the second by using those conditions to select which block executes. Chapter 03 then introduces structural pattern matching as another way to select behavior when the shape or pattern of a value is the important question.
+Chapter 01 focuses on the first idea. Chapter 02 adds the second by using those conditions to select which block executes. Chapter 03 then introduces structural pattern matching as another way to select behavior when the shape or pattern of a value is the important question. Chapter 04 shifts from selection to repetition by processing items from an iterable one at a time.
 
 ## Phase progression
 
@@ -95,4 +95,6 @@ After Chapter 01, continue with [02. `if`, `elif`, and `else`](02-if-elif-and-el
 
 After Chapter 02, continue with [03. `match` and `case`: Structural Pattern Matching](03-match-and-case/README.md).
 
-The next planned chapter introduces `for` loops and iteration.
+After Chapter 03, continue with [04. `for` Loops and Iteration](04-for-loops-and-iteration/README.md).
+
+The next planned chapter introduces `range()`, `enumerate()`, and `zip()`.

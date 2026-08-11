@@ -32,7 +32,7 @@ Ya deberías sentirte cómodo con:
 | [01. Condiciones, Comparaciones y Lógica Booleana](01-conditions-comparisons-and-boolean-logic/README.es.md) | Construir expresiones de verdad confiables antes de usarlas para controlar la ejecución | Disponible |
 | [02. `if`, `elif` y `else`](02-if-elif-and-else/README.es.md) | Elegir qué bloque de código se ejecuta | Disponible |
 | [03. `match` y `case`: Coincidencia de Patrones Estructurales](03-match-and-case/README.es.md) | Comparar valores y estructuras de datos con patrones | Disponible |
-| 04. Bucles `for` e Iteración | Repetir trabajo para elementos de un iterable | Planificado |
+| [04. Bucles `for` e Iteración](04-for-loops-and-iteration/README.es.md) | Repetir trabajo para elementos de un iterable | Disponible |
 | 05. `range()`, `enumerate()` y `zip()` | Contar, seguir posiciones y coordinar iteraciones | Planificado |
 | 06. Bucles `while` y Repetición Guiada por Estado | Repetir mientras una condición permanezca verdadera | Planificado |
 | 07. `break`, `continue` y `else` de Bucles | Cambiar o interpretar la finalización normal de un bucle | Planificado |
@@ -51,7 +51,7 @@ condition = a question Python can interpret for truth
 decision = what the program does because of that condition
 ```
 
-El Capítulo 01 se concentra en la primera idea. El Capítulo 02 añade la segunda usando esas condiciones para seleccionar qué bloque se ejecuta. El Capítulo 03 introduce después la coincidencia de patrones estructurales como otra forma de seleccionar comportamiento cuando la forma o el patrón de un valor es la pregunta importante.
+El Capítulo 01 se concentra en la primera idea. El Capítulo 02 añade la segunda usando esas condiciones para seleccionar qué bloque se ejecuta. El Capítulo 03 introduce después la coincidencia de patrones estructurales como otra forma de seleccionar comportamiento cuando la forma o el patrón de un valor es la pregunta importante. El Capítulo 04 cambia de la selección a la repetición al procesar elementos de un iterable uno por uno.
 
 ## Progresión de la fase
 
@@ -95,4 +95,6 @@ Después del Capítulo 01, continúa con [02. `if`, `elif` y `else`](02-if-elif-
 
 Después del Capítulo 02, continúa con [03. `match` y `case`: Coincidencia de Patrones Estructurales](03-match-and-case/README.es.md).
 
-El próximo capítulo planificado introduce bucles `for` e iteración.
+Después del Capítulo 03, continúa con [04. Bucles `for` e Iteración](04-for-loops-and-iteration/README.es.md).
+
+El próximo capítulo planificado introduce `range()`, `enumerate()` y `zip()`.

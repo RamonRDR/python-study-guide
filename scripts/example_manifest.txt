@@ -63,3 +63,6 @@ program-flow/02-if-elif-and-else/examples/independent_conditions.py
 program-flow/03-match-and-case/examples/literal_and_or_patterns.py
 program-flow/03-match-and-case/examples/mapping_patterns_and_guards.py
 program-flow/03-match-and-case/examples/sequence_patterns.py
+program-flow/04-for-loops-and-iteration/examples/collection_iteration.py
+program-flow/04-for-loops-and-iteration/examples/dictionary_iteration.py
+program-flow/04-for-loops-and-iteration/examples/filter_and_collect.py

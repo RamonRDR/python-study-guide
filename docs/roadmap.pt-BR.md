@@ -18,7 +18,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 1. Fundamentos | Concluída | Seis capítulos revisados cobrem execução, entrada e saída, variáveis e nomes, tipos de dados embutidos, inspeção de tipos e conversão de tipos |
 | 2. Textos e números | Concluída | Quatro capítulos revisados cobrem criação de strings, métodos comuns, comportamento numérico e booleano, precisão de ponto flutuante e funções numéricas embutidas |
 | 3. Coleções | Concluída | Seis capítulos revisados cobrem listas, tuplas, dicionários, conjuntos e escolha da coleção pela intenção |
-| 4. Fluxo do programa | Em andamento | Os Capítulos 01–03 cobrem condições confiáveis, ramificação condicional e correspondência de padrões estruturais com literais, sequências, mappings, capturas e guards |
+| 4. Fluxo do programa | Em andamento | Os Capítulos 01–04 cobrem condições confiáveis, ramificação condicional, correspondência de padrões estruturais e iteração item por item com `for` |
 | 5. Funções | Planejada | Conteúdo ainda não iniciado |
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3 e 6 estão concluídas. A Fase 4 está em andamento com condições, ramificações condicionais e correspondência de padrões estruturais já disponíveis; iteração com `for` é o próximo passo planejado. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2, 3 e 6 estão concluídas. A Fase 4 está em andamento com condições, ramificações condicionais, correspondência de padrões estruturais e iteração direta com `for` já disponíveis; `range()`, `enumerate()` e `zip()` são o próximo passo planejado. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -85,13 +85,13 @@ Consulte a [trilha de aprendizagem da seção](../program-flow/README.pt-BR.md).
 - [x] [Condições, comparações e lógica booleana](../program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md)
 - [x] [`if`, `elif` e `else`](../program-flow/02-if-elif-and-else/README.pt-BR.md)
 - [x] [`match` e `case`: correspondência de padrões estruturais](../program-flow/03-match-and-case/README.pt-BR.md)
-- [ ] Loops `for` e iteração
+- [x] [Loops `for` e iteração](../program-flow/04-for-loops-and-iteration/README.pt-BR.md)
 - [ ] `range()`, `enumerate()` e `zip()`
 - [ ] Loops `while` e repetição guiada por estado
 - [ ] `break`, `continue` e `else` de loops
 - [ ] Escolhendo e combinando o fluxo do programa
 
-A Fase 4 constrói intencionalmente condições confiáveis primeiro, usa essas condições para ramificações condicionais e então introduz correspondência de padrões estruturais antes da repetição. Os Capítulos 01–03 estão concluídos; o Capítulo 04, loops `for` e iteração, é o próximo.
+A Fase 4 constrói intencionalmente condições confiáveis primeiro, usa essas condições para ramificações condicionais, introduz correspondência de padrões estruturais e então avança para repetição com `for`. Os Capítulos 01–04 estão concluídos; o Capítulo 05, `range()`, `enumerate()` e `zip()`, é o próximo.
 
 ## Fase 5: Funções
 

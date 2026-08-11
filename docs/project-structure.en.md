@@ -206,14 +206,22 @@ python-study-guide/
 │   │       ├── basic_if.py
 │   │       ├── if_elif_else.py
 │   │       └── independent_conditions.py
-│   └── 03-match-and-case/
+│   ├── 03-match-and-case/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── literal_and_or_patterns.py
+│   │       ├── mapping_patterns_and_guards.py
+│   │       └── sequence_patterns.py
+│   └── 04-for-loops-and-iteration/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── literal_and_or_patterns.py
-│           ├── mapping_patterns_and_guards.py
-│           └── sequence_patterns.py
+│           ├── collection_iteration.py
+│           ├── dictionary_iteration.py
+│           └── filter_and_collect.py
 ├── scripts/
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
@@ -278,7 +286,7 @@ python-study-guide/
 - `functions/`: future learning path for functions, parameters, returns, scope, and type hints.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.
-- `program-flow/`: Phase 4 learning path in progress. Chapters 01–03 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, and structural pattern matching with literal, OR, sequence, mapping, capture, wildcard, and guard patterns in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
+- `program-flow/`: Phase 4 learning path in progress. Chapters 01–04 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, and item-by-item iteration with `for` across lists, tuples, strings, dictionaries, and sets, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
 - `standard-library/`: future guides to modules distributed with Python.
 - `strings-and-numbers/`: complete Phase 2 learning path. Its four reviewed chapters cover string creation and indexing, common string methods, integer, floating-point, and Boolean behavior, floating-point precision, and `round()`, `abs()`, `min()`, `max()`, and `sum()` in English, Brazilian Portuguese, and Spanish with safe executable examples.
