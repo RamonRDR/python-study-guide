@@ -18,7 +18,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 1. Fundamentals | Complete | Six reviewed chapters cover execution, input/output, variables and naming, built-in data types, type inspection, and type conversion |
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
 | 3. Collections | Complete | Six reviewed chapters cover lists, tuples, dictionaries, sets, and choosing a collection by intent |
-| 4. Program flow | In progress | Chapters 01 and 02 cover trustworthy conditions, Boolean logic, membership, identity, `if`, `elif`, `else`, branch ordering, and independent versus exclusive decisions |
+| 4. Program flow | In progress | Chapters 01–03 cover trustworthy conditions, conditional branching, and structural pattern matching with literals, sequences, mappings, captures, and guards |
 | 5. Functions | Planned | Curriculum not started |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is in progress with conditions and conditional branching now available; structural pattern matching with `match` and `case` is the next planned step, followed by iteration with `for`. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is in progress with conditions, conditional branching, and structural pattern matching now available; iteration with `for` is the next planned step. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -84,14 +84,14 @@ See the [section learning path](../program-flow/README.md).
 
 - [x] [Conditions, comparisons, and Boolean logic](../program-flow/01-conditions-comparisons-and-boolean-logic/README.md)
 - [x] [`if`, `elif`, and `else`](../program-flow/02-if-elif-and-else/README.md)
-- [ ] `match` and `case`: structural pattern matching
+- [x] [`match` and `case`: structural pattern matching](../program-flow/03-match-and-case/README.md)
 - [ ] `for` loops and iteration
 - [ ] `range()`, `enumerate()`, and `zip()`
 - [ ] `while` loops and state-driven repetition
 - [ ] `break`, `continue`, and loop `else`
 - [ ] Choosing and combining program flow
 
-Phase 4 intentionally builds trustworthy conditions first, uses them for conditional branching, and then introduces structural pattern matching before repetition. Chapters 01 and 02 are complete; Chapter 03, `match` and `case`, is next. `for` loops and iteration move to Chapter 04.
+Phase 4 intentionally builds trustworthy conditions first, uses them for conditional branching, and then introduces structural pattern matching before repetition. Chapters 01–03 are complete; Chapter 04, `for` loops and iteration, is next.
 
 ## Phase 5: Functions
 

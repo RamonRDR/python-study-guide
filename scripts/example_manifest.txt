@@ -60,3 +60,6 @@ program-flow/01-conditions-comparisons-and-boolean-logic/examples/truth_values.p
 program-flow/02-if-elif-and-else/examples/basic_if.py
 program-flow/02-if-elif-and-else/examples/if_elif_else.py
 program-flow/02-if-elif-and-else/examples/independent_conditions.py
+program-flow/03-match-and-case/examples/literal_and_or_patterns.py
+program-flow/03-match-and-case/examples/mapping_patterns_and_guards.py
+program-flow/03-match-and-case/examples/sequence_patterns.py

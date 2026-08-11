@@ -49,8 +49,9 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 
 1. [Conditions, Comparisons, and Boolean Logic](../program-flow/01-conditions-comparisons-and-boolean-logic/README.md)
 2. [`if`, `elif`, and `else`](../program-flow/02-if-elif-and-else/README.md)
+3. [`match` and `case`: Structural Pattern Matching](../program-flow/03-match-and-case/README.md)
 
-Phase 4 is in progress with two reviewed chapters. Chapter 01 builds truth expressions, and Chapter 02 uses them to choose which block executes. The next planned chapter is Chapter 03, `match` and `case`: Structural Pattern Matching. `for` loops and iteration move to Chapter 04.
+Phase 4 is in progress with three reviewed chapters. Chapter 01 builds truth expressions, Chapter 02 uses them to choose which block executes, and Chapter 03 adds structural pattern matching for literal, sequence, and mapping patterns. The next planned chapter is Chapter 04, `for` Loops and Iteration.
 
 ## Phase 5 · Functions ⏳
 

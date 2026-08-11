@@ -31,7 +31,7 @@ Você já deve estar confortável com:
 |---|---|---|
 | [01. Condições, Comparações e Lógica Booleana](01-conditions-comparisons-and-boolean-logic/README.pt-BR.md) | Construir expressões de verdade confiáveis antes de usá-las para controlar a execução | Disponível |
 | [02. `if`, `elif` e `else`](02-if-elif-and-else/README.pt-BR.md) | Escolher qual bloco de código é executado | Disponível |
-| 03. `match` e `case`: Correspondência de Padrões Estruturais | Comparar valores e estruturas de dados com padrões | Planejado |
+| [03. `match` e `case`: Correspondência de Padrões Estruturais](03-match-and-case/README.pt-BR.md) | Comparar valores e estruturas de dados com padrões | Disponível |
 | 04. Loops `for` e Iteração | Repetir trabalho para itens de um iterável | Planejado |
 | 05. `range()`, `enumerate()` e `zip()` | Contar, acompanhar posições e coordenar iterações | Planejado |
 | 06. Loops `while` e Repetição Guiada por Estado | Repetir enquanto uma condição permanecer verdadeira | Planejado |
@@ -93,4 +93,6 @@ Comece por [01. Condições, Comparações e Lógica Booleana](01-conditions-com
 
 Depois do Capítulo 01, continue com [02. `if`, `elif` e `else`](02-if-elif-and-else/README.pt-BR.md).
 
-O próximo capítulo planejado introduz `match`, `case` e correspondência de padrões estruturais.
+Depois do Capítulo 02, continue com [03. `match` e `case`: Correspondência de Padrões Estruturais](03-match-and-case/README.pt-BR.md).
+
+O próximo capítulo planejado introduz loops `for` e iteração.
