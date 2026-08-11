@@ -66,3 +66,6 @@ program-flow/03-match-and-case/examples/sequence_patterns.py
 program-flow/04-for-loops-and-iteration/examples/collection_iteration.py
 program-flow/04-for-loops-and-iteration/examples/dictionary_iteration.py
 program-flow/04-for-loops-and-iteration/examples/filter_and_collect.py
+program-flow/05-range-enumerate-and-zip/examples/enumerate_positions.py
+program-flow/05-range-enumerate-and-zip/examples/range_progressions.py
+program-flow/05-range-enumerate-and-zip/examples/zip_parallel_iteration.py

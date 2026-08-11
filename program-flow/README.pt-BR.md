@@ -33,7 +33,7 @@ Você já deve estar confortável com:
 | [02. `if`, `elif` e `else`](02-if-elif-and-else/README.pt-BR.md) | Escolher qual bloco de código é executado | Disponível |
 | [03. `match` e `case`: Correspondência de Padrões Estruturais](03-match-and-case/README.pt-BR.md) | Comparar valores e estruturas de dados com padrões | Disponível |
 | [04. Loops `for` e Iteração](04-for-loops-and-iteration/README.pt-BR.md) | Repetir trabalho para itens de um iterável | Disponível |
-| 05. `range()`, `enumerate()` e `zip()` | Contar, acompanhar posições e coordenar iterações | Planejado |
+| [05. `range()`, `enumerate()` e `zip()`](05-range-enumerate-and-zip/README.pt-BR.md) | Contar, acompanhar posições e coordenar iterações | Disponível |
 | 06. Loops `while` e Repetição Guiada por Estado | Repetir enquanto uma condição permanecer verdadeira | Planejado |
 | 07. `break`, `continue` e `else` de Loops | Alterar ou interpretar o encerramento normal de um loop | Planejado |
 | 08. Escolhendo e Combinando o Fluxo do Programa | Selecionar e combinar ferramentas de fluxo de acordo com a intenção | Planejado |
@@ -51,7 +51,7 @@ condition = a question Python can interpret for truth
 decision = what the program does because of that condition
 ```
 
-O Capítulo 01 se concentra na primeira ideia. O Capítulo 02 adiciona a segunda usando essas condições para selecionar qual bloco é executado. O Capítulo 03 então introduz correspondência de padrões estruturais como outra forma de selecionar comportamento quando a forma ou o padrão de um valor é a pergunta importante. O Capítulo 04 muda da seleção para a repetição ao processar itens de um iterável um de cada vez.
+O Capítulo 01 se concentra na primeira ideia. O Capítulo 02 adiciona a segunda usando essas condições para selecionar qual bloco é executado. O Capítulo 03 então introduz correspondência de padrões estruturais como outra forma de selecionar comportamento quando a forma ou o padrão de um valor é a pergunta importante. O Capítulo 04 muda da seleção para a repetição ao processar itens de um iterável um de cada vez. O Capítulo 05 adiciona auxiliares para progressões numéricas, posições e iteração paralela.
 
 ## Progressão da fase
 
@@ -97,4 +97,6 @@ Depois do Capítulo 02, continue com [03. `match` e `case`: Correspondência de 
 
 Depois do Capítulo 03, continue com [04. Loops `for` e Iteração](04-for-loops-and-iteration/README.pt-BR.md).
 
-O próximo capítulo planejado introduz `range()`, `enumerate()` e `zip()`.
+Depois do Capítulo 04, continue com [05. `range()`, `enumerate()` e `zip()`](05-range-enumerate-and-zip/README.pt-BR.md).
+
+O próximo capítulo planejado introduz loops `while` e repetição guiada por estado.
