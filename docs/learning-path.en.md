@@ -52,8 +52,9 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 3. [`match` and `case`: Structural Pattern Matching](../program-flow/03-match-and-case/README.md)
 4. [`for` Loops and Iteration](../program-flow/04-for-loops-and-iteration/README.md)
 5. [`range()`, `enumerate()`, and `zip()`](../program-flow/05-range-enumerate-and-zip/README.md)
+6. [`while` Loops and State-Driven Repetition](../program-flow/06-while-loops-and-state-driven-repetition/README.md)
 
-Phase 4 is in progress with five reviewed chapters. Chapter 01 builds truth expressions, Chapter 02 uses them to choose which block executes, Chapter 03 adds structural pattern matching, Chapter 04 introduces item-by-item iteration with `for`, and Chapter 05 adds numeric progressions, position-aware iteration, and parallel iteration with `range()`, `enumerate()`, and `zip()`. The next planned chapter is Chapter 06, `while` Loops and State-Driven Repetition.
+Phase 4 is in progress with six reviewed chapters. Chapter 01 builds truth expressions, Chapter 02 uses them to choose which block executes, Chapter 03 adds structural pattern matching, Chapter 04 introduces item-by-item iteration with `for`, Chapter 05 adds numeric progressions, position-aware iteration, and parallel iteration with `range()`, `enumerate()`, and `zip()`, and Chapter 06 introduces state-driven repetition with `while`, including condition re-evaluation and termination reasoning. The next planned chapter is Chapter 07, `break`, `continue`, and Loop `else`.
 
 ## Phase 5 · Functions ⏳
 

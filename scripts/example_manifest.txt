@@ -69,3 +69,6 @@ program-flow/04-for-loops-and-iteration/examples/filter_and_collect.py
 program-flow/05-range-enumerate-and-zip/examples/enumerate_positions.py
 program-flow/05-range-enumerate-and-zip/examples/range_progressions.py
 program-flow/05-range-enumerate-and-zip/examples/zip_parallel_iteration.py
+program-flow/06-while-loops-and-state-driven-repetition/examples/countdown_state.py
+program-flow/06-while-loops-and-state-driven-repetition/examples/doubling_until_limit.py
+program-flow/06-while-loops-and-state-driven-repetition/examples/study_target.py
