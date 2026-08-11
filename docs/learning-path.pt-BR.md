@@ -50,8 +50,9 @@ Se você está começando do zero, siga a ordem das fases. Algumas fases posteri
 1. [Condições, Comparações e Lógica Booleana](../program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md)
 2. [`if`, `elif` e `else`](../program-flow/02-if-elif-and-else/README.pt-BR.md)
 3. [`match` e `case`: Correspondência de Padrões Estruturais](../program-flow/03-match-and-case/README.pt-BR.md)
+4. [Loops `for` e Iteração](../program-flow/04-for-loops-and-iteration/README.pt-BR.md)
 
-A Fase 4 está em andamento com três capítulos revisados. O Capítulo 01 constrói expressões de verdade, o Capítulo 02 usa essas expressões para escolher qual bloco é executado e o Capítulo 03 adiciona correspondência de padrões estruturais para padrões literais, de sequência e de mapping. O próximo capítulo planejado é o Capítulo 04, Loops `for` e Iteração.
+A Fase 4 está em andamento com quatro capítulos revisados. O Capítulo 01 constrói expressões de verdade, o Capítulo 02 usa essas expressões para escolher qual bloco é executado, o Capítulo 03 adiciona correspondência de padrões estruturais e o Capítulo 04 introduz iteração item por item com `for`. O próximo capítulo planejado é o Capítulo 05, `range()`, `enumerate()` e `zip()`.
 
 ## Fase 5 · Funções ⏳
 

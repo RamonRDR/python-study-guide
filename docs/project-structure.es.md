@@ -206,14 +206,22 @@ python-study-guide/
 │   │       ├── basic_if.py
 │   │       ├── if_elif_else.py
 │   │       └── independent_conditions.py
-│   └── 03-match-and-case/
+│   ├── 03-match-and-case/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── literal_and_or_patterns.py
+│   │       ├── mapping_patterns_and_guards.py
+│   │       └── sequence_patterns.py
+│   └── 04-for-loops-and-iteration/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── literal_and_or_patterns.py
-│           ├── mapping_patterns_and_guards.py
-│           └── sequence_patterns.py
+│           ├── collection_iteration.py
+│           ├── dictionary_iteration.py
+│           └── filter_and_collect.py
 ├── scripts/
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
@@ -278,7 +286,7 @@ python-study-guide/
 - `functions/`: futura ruta sobre funciones, parámetros, retornos, alcance y type hints.
 - `fundamentals/`: ruta completa de la Fase 1. Sus seis capítulos enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres, cómo reconocer e inspeccionar tipos de datos incorporados comunes y cómo convertir valores compatibles de forma deliberada, con explicaciones multilingües alineadas y ejemplos ejecutables.
 - `practical-projects/`: futuros proyectos pequeños que combinarán varios conceptos.
-- `program-flow/`: ruta de la Fase 4 en progreso. Los Capítulos 01–03 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else` y coincidencia de patrones estructurales con patrones literales, OR, de secuencia, de mapping, de captura, comodín y guards en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
+- `program-flow/`: ruta de la Fase 4 en progreso. Los Capítulos 01–04 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else`, coincidencia de patrones estructurales e iteración elemento por elemento con `for` sobre listas, tuplas, strings, diccionarios y conjuntos, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions.
 - `standard-library/`: futuras guías sobre módulos distribuidos con Python.
 - `strings-and-numbers/`: ruta completa de la Fase 2. Sus cuatro capítulos revisados cubren creación e indexación de strings, métodos comunes, comportamiento de enteros, punto flotante y booleanos, precisión de punto flotante y `round()`, `abs()`, `min()`, `max()` y `sum()` en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
