@@ -32,7 +32,7 @@ By the end of this chapter, you should be able to:
 - use modest nesting when a second decision only matters inside a first one;
 - avoid leaving variables undefined because a branch did not run;
 - recognize common beginner mistakes involving indentation, `=`, `==`, and branch ordering;
-- prepare for repetition with `for` loops in the next chapter.
+- prepare for structural pattern matching with `match` and `case` in the next chapter.
 
 ## 1. What conditional execution means
 
@@ -1133,9 +1133,9 @@ Remember the progression:
 
 ## Next step
 
-The next chapter is **`for` Loops and Iteration**.
+The next chapter is **`match` and `case`: Structural Pattern Matching**.
 
-You now know how one condition can choose whether a block runs. Next, Python will learn to run a block repeatedly for items from strings, lists, tuples, dictionaries, sets, and other iterables.
+You now know how conditions choose among branches. Next, you will learn how `match` compares a subject against patterns, including literal alternatives and the wildcard `_`, before the course moves on to repetition with `for` in Chapter 04.
 
 ## Official references
 

@@ -26,7 +26,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3 e 6 estão concluídas. A Fase 4 está em andamento com condições e ramificações condicionais já disponíveis; iteração com `for` é o próximo passo planejado. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2, 3 e 6 estão concluídas. A Fase 4 está em andamento com condições e ramificações condicionais já disponíveis; correspondência de padrões estruturais com `match` e `case` é o próximo passo planejado, seguida por iteração com `for`. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -84,13 +84,14 @@ Consulte a [trilha de aprendizagem da seção](../program-flow/README.pt-BR.md).
 
 - [x] [Condições, comparações e lógica booleana](../program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md)
 - [x] [`if`, `elif` e `else`](../program-flow/02-if-elif-and-else/README.pt-BR.md)
+- [ ] `match` e `case`: correspondência de padrões estruturais
 - [ ] Loops `for` e iteração
 - [ ] `range()`, `enumerate()` e `zip()`
 - [ ] Loops `while` e repetição guiada por estado
 - [ ] `break`, `continue` e `else` de loops
 - [ ] Escolhendo e combinando o fluxo do programa
 
-A Fase 4 constrói intencionalmente condições confiáveis primeiro e depois usa essas condições para ramificações antes de introduzir repetição. Os Capítulos 01 e 02 estão concluídos; loops `for` e iteração são o próximo passo.
+A Fase 4 constrói intencionalmente condições confiáveis primeiro, usa essas condições para ramificações condicionais e então introduz correspondência de padrões estruturais antes da repetição. Os Capítulos 01 e 02 estão concluídos; o Capítulo 03, `match` e `case`, é o próximo. Loops `for` e iteração passam para o Capítulo 04.
 
 ## Fase 5: Funções
 
