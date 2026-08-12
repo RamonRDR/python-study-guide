@@ -34,7 +34,7 @@ You should already be comfortable with:
 | [03. `match` and `case`: Structural Pattern Matching](03-match-and-case/README.md) | Match values and data structures against patterns | Available |
 | [04. `for` Loops and Iteration](04-for-loops-and-iteration/README.md) | Repeat work for items from an iterable | Available |
 | [05. `range()`, `enumerate()`, and `zip()`](05-range-enumerate-and-zip/README.md) | Count, track positions, and coordinate iteration | Available |
-| 06. `while` Loops and State-Driven Repetition | Repeat while a condition remains truthy | Planned |
+| [06. `while` Loops and State-Driven Repetition](06-while-loops-and-state-driven-repetition/README.md) | Repeat while a condition remains truthy and state evolves | Available |
 | 07. `break`, `continue`, and Loop `else` | Change or interpret normal loop completion | Planned |
 | 08. Choosing and Combining Program Flow | Select and combine flow tools by intent | Planned |
 
@@ -51,7 +51,7 @@ condition = a question Python can interpret for truth
 decision = what the program does because of that condition
 ```
 
-Chapter 01 focuses on the first idea. Chapter 02 adds the second by using those conditions to select which block executes. Chapter 03 then introduces structural pattern matching as another way to select behavior when the shape or pattern of a value is the important question. Chapter 04 shifts from selection to repetition by processing items from an iterable one at a time. Chapter 05 adds helpers for numeric progressions, positions, and parallel iteration.
+Chapter 01 focuses on the first idea. Chapter 02 adds the second by using those conditions to select which block executes. Chapter 03 then introduces structural pattern matching as another way to select behavior when the shape or pattern of a value is the important question. Chapter 04 shifts from selection to repetition by processing items from an iterable one at a time. Chapter 05 adds helpers for numeric progressions, positions, and parallel iteration. Chapter 06 adds repetition controlled by changing state and a condition that is re-evaluated before every iteration.
 
 ## Phase progression
 
@@ -99,4 +99,6 @@ After Chapter 03, continue with [04. `for` Loops and Iteration](04-for-loops-and
 
 After Chapter 04, continue with [05. `range()`, `enumerate()`, and `zip()`](05-range-enumerate-and-zip/README.md).
 
-The next planned chapter introduces `while` loops and state-driven repetition.
+After Chapter 05, continue with [06. `while` Loops and State-Driven Repetition](06-while-loops-and-state-driven-repetition/README.md).
+
+The next planned chapter introduces `break`, `continue`, and loop `else`.
