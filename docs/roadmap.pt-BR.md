@@ -18,7 +18,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 1. Fundamentos | Concluída | Seis capítulos revisados cobrem execução, entrada e saída, variáveis e nomes, tipos de dados embutidos, inspeção de tipos e conversão de tipos |
 | 2. Textos e números | Concluída | Quatro capítulos revisados cobrem criação de strings, métodos comuns, comportamento numérico e booleano, precisão de ponto flutuante e funções numéricas embutidas |
 | 3. Coleções | Concluída | Seis capítulos revisados cobrem listas, tuplas, dicionários, conjuntos e escolha da coleção pela intenção |
-| 4. Fluxo do programa | Em andamento | Os Capítulos 01–07 cobrem condições confiáveis, ramificação condicional, correspondência de padrões estruturais, `for`, auxiliares de iteração, `while` e controle de loops com `break`, `continue` e `else` de loop |
+| 4. Fluxo do programa | Concluída | Oito capítulos revisados cobrem condições, ramificações, correspondência de padrões estruturais, `for`, auxiliares de iteração, `while`, controle de loops e escolha e combinação das ferramentas de fluxo pela intenção |
 | 5. Funções | Planejada | Conteúdo ainda não iniciado |
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3 e 6 estão concluídas. A Fase 4 está em andamento com condições, ramificações condicionais, correspondência de padrões estruturais, iteração direta com `for`, auxiliares de iteração, repetição guiada por estado com `while` e controle deliberado de loops já disponíveis; escolher e combinar ferramentas de fluxo é o último passo planejado. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2, 3, 4 e 6 estão concluídas. A Fase 4 agora oferece toda a sequência introdutória de fluxo do programa, desde condições confiáveis até seleção deliberada, repetição, controle de loops e síntese final das ferramentas de fluxo. A Fase 5: Funções é o próximo passo planejado do currículo. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -89,9 +89,9 @@ Consulte a [trilha de aprendizagem da seção](../program-flow/README.pt-BR.md).
 - [x] [`range()`, `enumerate()` e `zip()`](../program-flow/05-range-enumerate-and-zip/README.pt-BR.md)
 - [x] [Loops `while` e repetição guiada por estado](../program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md)
 - [x] [`break`, `continue` e `else` de loops](../program-flow/07-break-continue-and-loop-else/README.pt-BR.md)
-- [ ] Escolhendo e combinando o fluxo do programa
+- [x] [Escolhendo e combinando o fluxo do programa](../program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md)
 
-A Fase 4 constrói intencionalmente condições confiáveis primeiro, usa essas condições para ramificações condicionais, introduz correspondência de padrões estruturais, avança para repetição com `for`, adiciona auxiliares para progressões numéricas, posições e iteração paralela, introduz repetição guiada por estado com `while` e então adiciona controle deliberado de loops com `break`, `continue` e `else` de loop. Os Capítulos 01–07 estão concluídos; o Capítulo 08, Escolhendo e Combinando o Fluxo do Programa, é o próximo.
+A Fase 4 constrói intencionalmente condições confiáveis primeiro, usa essas condições para ramificações condicionais, introduz correspondência de padrões estruturais, avança para repetição com `for`, adiciona auxiliares para progressões numéricas, posições e iteração paralela, introduz repetição guiada por estado com `while`, adiciona controle deliberado de loops com `break`, `continue` e `else` de loop e encerra ensinando como escolher e combinar essas ferramentas de acordo com a intenção. Os Capítulos 01–08 estão concluídos e a Fase 4 está oficialmente concluída. A Fase 5: Funções é a próxima.
 
 ## Fase 5: Funções
 

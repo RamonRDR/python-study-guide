@@ -43,7 +43,7 @@ Se você está começando do zero, siga a ordem das fases. Algumas fases posteri
 5. [Conjuntos e valores únicos](../collections/05-sets-and-unique-values/README.pt-BR.md)
 6. [Escolhendo a coleção certa](../collections/06-choosing-the-right-collection/README.pt-BR.md)
 
-## Fase 4 · Fluxo do Programa 🚧
+## Fase 4 · Fluxo do Programa ✅
 
 [Abrir o índice da seção Fluxo do Programa](../program-flow/README.pt-BR.md)
 
@@ -54,8 +54,9 @@ Se você está começando do zero, siga a ordem das fases. Algumas fases posteri
 5. [`range()`, `enumerate()` e `zip()`](../program-flow/05-range-enumerate-and-zip/README.pt-BR.md)
 6. [Loops `while` e Repetição Guiada por Estado](../program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md)
 7. [`break`, `continue` e `else` de Loops](../program-flow/07-break-continue-and-loop-else/README.pt-BR.md)
+8. [Escolhendo e Combinando o Fluxo do Programa](../program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md)
 
-A Fase 4 está em andamento com sete capítulos revisados. O Capítulo 01 constrói expressões de verdade, o Capítulo 02 usa essas expressões para escolher qual bloco é executado, o Capítulo 03 adiciona correspondência de padrões estruturais, o Capítulo 04 introduz iteração item por item com `for`, o Capítulo 05 adiciona progressões numéricas, iteração com posição e iteração paralela com `range()`, `enumerate()` e `zip()`, o Capítulo 06 introduz repetição guiada por estado com `while`, e o Capítulo 07 adiciona encerramento antecipado de loops, salto de iteração e tratamento do encerramento normal com `break`, `continue` e `else` de loop. O próximo capítulo planejado é o Capítulo 08, Escolhendo e Combinando o Fluxo do Programa.
+A Fase 4 está concluída com oito capítulos revisados. A sequência constrói condições confiáveis, ramificações condicionais, correspondência de padrões estruturais, repetição guiada por iteráveis, auxiliares de iteração, repetição guiada por estado, controle deliberado de loops e, por fim, um modelo de decisão para escolher e combinar essas ferramentas de acordo com a intenção. A próxima fase de aprendizagem planejada é a Fase 5: Funções.
 
 ## Fase 5 · Funções ⏳
 

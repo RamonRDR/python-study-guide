@@ -10,7 +10,7 @@
 
 Fluxo do Programa é a Fase 4 da sequência principal de aprendizagem do Python Study Guide.
 
-As fases anteriores ensinaram como valores são criados, inspecionados, transformados e organizados. Esta fase ensina como esses valores começam a influenciar **o que é executado, quantas vezes é executado e quando uma repetição termina**.
+As fases anteriores ensinaram como valores são criados, inspecionados, transformados e organizados. Esta fase ensina como esses valores influenciam **o que é executado, quantas vezes é executado, quando uma repetição termina e como ferramentas de fluxo podem ser combinadas de forma deliberada**.
 
 ## Pré-requisito
 
@@ -36,7 +36,7 @@ Você já deve estar confortável com:
 | [05. `range()`, `enumerate()` e `zip()`](05-range-enumerate-and-zip/README.pt-BR.md) | Contar, acompanhar posições e coordenar iterações | Disponível |
 | [06. Loops `while` e Repetição Guiada por Estado](06-while-loops-and-state-driven-repetition/README.pt-BR.md) | Repetir enquanto uma condição permanecer verdadeira e o estado evoluir | Disponível |
 | [07. `break`, `continue` e `else` de Loops](07-break-continue-and-loop-else/README.pt-BR.md) | Encerrar cedo, pular uma iteração e distinguir encerramento normal de `break` | Disponível |
-| 08. Escolhendo e Combinando o Fluxo do Programa | Selecionar e combinar ferramentas de fluxo de acordo com a intenção | Planejado |
+| [08. Escolhendo e Combinando o Fluxo do Programa](08-choosing-and-combining-program-flow/README.pt-BR.md) | Selecionar e combinar ferramentas de fluxo de acordo com a intenção | Disponível |
 
 Estude os capítulos em ordem ao seguir a trilha completa para iniciantes.
 
@@ -51,7 +51,7 @@ condition = a question Python can interpret for truth
 decision = what the program does because of that condition
 ```
 
-O Capítulo 01 se concentra na primeira ideia. O Capítulo 02 adiciona a segunda usando essas condições para selecionar qual bloco é executado. O Capítulo 03 então introduz correspondência de padrões estruturais como outra forma de selecionar comportamento quando a forma ou o padrão de um valor é a pergunta importante. O Capítulo 04 muda da seleção para a repetição ao processar itens de um iterável um de cada vez. O Capítulo 05 adiciona auxiliares para progressões numéricas, posições e iteração paralela. O Capítulo 06 adiciona repetição controlada por um estado que muda e por uma condição reavaliada antes de cada iteração. O Capítulo 07 adiciona saída antecipada deliberada, salto de iteração e tratamento do encerramento de loops com `break`, `continue` e `else` de loop.
+O Capítulo 01 se concentra na primeira ideia. O Capítulo 02 usa essas condições para selecionar qual bloco é executado. O Capítulo 03 introduz correspondência de padrões estruturais quando a forma ou o padrão de um valor é a pergunta importante. O Capítulo 04 avança da seleção para repetição guiada por iterável. O Capítulo 05 adiciona auxiliares para progressões numéricas, posições e iteração paralela. O Capítulo 06 adiciona repetição controlada por estado em mudança. O Capítulo 07 adiciona saída antecipada deliberada, salto de iteração e tratamento da conclusão de loops. O Capítulo 08 encerra a fase escolhendo e combinando todas essas ferramentas de acordo com a intenção.
 
 ## Progressão da fase
 
@@ -103,4 +103,6 @@ Depois do Capítulo 05, continue com [06. Loops `while` e Repetição Guiada por
 
 Depois do Capítulo 06, continue com [07. `break`, `continue` e `else` de Loops](07-break-continue-and-loop-else/README.pt-BR.md).
 
-O próximo capítulo planejado encerra a fase escolhendo e combinando ferramentas de fluxo de acordo com a intenção.
+Depois do Capítulo 07, encerre a fase com [08. Escolhendo e Combinando o Fluxo do Programa](08-choosing-and-combining-program-flow/README.pt-BR.md).
+
+**A Fase 4 está concluída com oito capítulos revisados.** A próxima fase de aprendizagem planejada é a Fase 5: Funções.

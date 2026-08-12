@@ -18,7 +18,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 1. Fundamentals | Complete | Six reviewed chapters cover execution, input/output, variables and naming, built-in data types, type inspection, and type conversion |
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
 | 3. Collections | Complete | Six reviewed chapters cover lists, tuples, dictionaries, sets, and choosing a collection by intent |
-| 4. Program flow | In progress | Chapters 01–07 cover trustworthy conditions, conditional branching, structural pattern matching, `for`, iteration helpers, `while`, and loop control with `break`, `continue`, and loop `else` |
+| 4. Program flow | Complete | Eight reviewed chapters cover conditions, branching, structural pattern matching, `for`, iteration helpers, `while`, loop control, and choosing and combining flow tools by intent |
 | 5. Functions | Planned | Curriculum not started |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is in progress with conditions, conditional branching, structural pattern matching, direct iteration with `for`, iteration helpers, state-driven repetition with `while`, and deliberate loop control now available; choosing and combining program-flow tools is the final planned step. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, 4, and 6 are complete. Phase 4 now provides the full beginner program-flow sequence from trustworthy conditions through deliberate selection, repetition, loop control, and final flow-tool synthesis. Phase 5: Functions is the next planned curriculum step. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -89,9 +89,9 @@ See the [section learning path](../program-flow/README.md).
 - [x] [`range()`, `enumerate()`, and `zip()`](../program-flow/05-range-enumerate-and-zip/README.md)
 - [x] [`while` loops and state-driven repetition](../program-flow/06-while-loops-and-state-driven-repetition/README.md)
 - [x] [`break`, `continue`, and loop `else`](../program-flow/07-break-continue-and-loop-else/README.md)
-- [ ] Choosing and combining program flow
+- [x] [Choosing and combining program flow](../program-flow/08-choosing-and-combining-program-flow/README.md)
 
-Phase 4 intentionally builds trustworthy conditions first, uses them for conditional branching, introduces structural pattern matching, moves into repetition with `for`, adds helpers for numeric progressions, positions, and parallel iteration, introduces state-driven repetition with `while`, and then adds deliberate loop control with `break`, `continue`, and loop `else`. Chapters 01–07 are complete; Chapter 08, Choosing and Combining Program Flow, is next.
+Phase 4 intentionally builds trustworthy conditions first, uses them for conditional branching, introduces structural pattern matching, moves into repetition with `for`, adds helpers for numeric progressions, positions, and parallel iteration, introduces state-driven repetition with `while`, adds deliberate loop control with `break`, `continue`, and loop `else`, and closes by teaching how to choose and combine those tools according to intent. Chapters 01–08 are complete and Phase 4 is officially complete. Phase 5: Functions is next.
 
 ## Phase 5: Functions
 

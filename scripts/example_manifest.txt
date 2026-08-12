@@ -75,3 +75,6 @@ program-flow/06-while-loops-and-state-driven-repetition/examples/study_target.py
 program-flow/07-break-continue-and-loop-else/examples/break_search.py
 program-flow/07-break-continue-and-loop-else/examples/continue_filtering.py
 program-flow/07-break-continue-and-loop-else/examples/loop_else_search.py
+program-flow/08-choosing-and-combining-program-flow/examples/search_with_position.py
+program-flow/08-choosing-and-combining-program-flow/examples/select_and_classify.py
+program-flow/08-choosing-and-combining-program-flow/examples/state_driven_workflow.py
