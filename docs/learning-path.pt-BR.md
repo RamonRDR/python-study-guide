@@ -53,8 +53,9 @@ Se você está começando do zero, siga a ordem das fases. Algumas fases posteri
 4. [Loops `for` e Iteração](../program-flow/04-for-loops-and-iteration/README.pt-BR.md)
 5. [`range()`, `enumerate()` e `zip()`](../program-flow/05-range-enumerate-and-zip/README.pt-BR.md)
 6. [Loops `while` e Repetição Guiada por Estado](../program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md)
+7. [`break`, `continue` e `else` de Loops](../program-flow/07-break-continue-and-loop-else/README.pt-BR.md)
 
-A Fase 4 está em andamento com seis capítulos revisados. O Capítulo 01 constrói expressões de verdade, o Capítulo 02 usa essas expressões para escolher qual bloco é executado, o Capítulo 03 adiciona correspondência de padrões estruturais, o Capítulo 04 introduz iteração item por item com `for`, o Capítulo 05 adiciona progressões numéricas, iteração com posição e iteração paralela com `range()`, `enumerate()` e `zip()`, e o Capítulo 06 introduz repetição guiada por estado com `while`, incluindo reavaliação da condição e raciocínio sobre término. O próximo capítulo planejado é o Capítulo 07, `break`, `continue` e `else` de Loops.
+A Fase 4 está em andamento com sete capítulos revisados. O Capítulo 01 constrói expressões de verdade, o Capítulo 02 usa essas expressões para escolher qual bloco é executado, o Capítulo 03 adiciona correspondência de padrões estruturais, o Capítulo 04 introduz iteração item por item com `for`, o Capítulo 05 adiciona progressões numéricas, iteração com posição e iteração paralela com `range()`, `enumerate()` e `zip()`, o Capítulo 06 introduz repetição guiada por estado com `while`, e o Capítulo 07 adiciona encerramento antecipado de loops, salto de iteração e tratamento do encerramento normal com `break`, `continue` e `else` de loop. O próximo capítulo planejado é o Capítulo 08, Escolhendo e Combinando o Fluxo do Programa.
 
 ## Fase 5 · Funções ⏳
 

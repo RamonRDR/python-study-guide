@@ -18,7 +18,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 1. Fundamentos | Completada | Seis capítulos revisados cubren ejecución, entrada y salida, variables y nombres, tipos de datos incorporados, inspección de tipos y conversión de tipos |
 | 2. Textos y números | Completada | Cuatro capítulos revisados cubren creación de strings, métodos comunes, comportamiento numérico y booleano, precisión de punto flotante y funciones numéricas incorporadas |
 | 3. Colecciones | Completada | Seis capítulos revisados cubren listas, tuplas, diccionarios, conjuntos y elección de colección según la intención |
-| 4. Flujo del programa | En progreso | Los Capítulos 01–06 cubren condiciones confiables, ramificación condicional, coincidencia de patrones estructurales, iteración con `for`, ayudas de iteración y repetición guiada por estado con `while` |
+| 4. Flujo del programa | En progreso | Los Capítulos 01–07 cubren condiciones confiables, ramificación condicional, coincidencia de patrones estructurales, `for`, ayudas de iteración, `while` y control de bucles con `break`, `continue` y `else` de bucle |
 | 5. Funciones | Planificada | Contenido todavía no iniciado |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
 | 7. Errores, archivos y módulos | Planificada | Contenido todavía no iniciado |
@@ -26,7 +26,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3 y 6 están completadas. La Fase 4 está en progreso con condiciones, ramificaciones condicionales, coincidencia de patrones estructurales, iteración directa con `for`, ayudas de iteración y repetición guiada por estado con `while` ya disponibles; `break`, `continue` y `else` de bucles son el siguiente paso planificado. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1, 2, 3 y 6 están completadas. La Fase 4 está en progreso con condiciones, ramificaciones condicionales, coincidencia de patrones estructurales, iteración directa con `for`, ayudas de iteración, repetición guiada por estado con `while` y control deliberado de bucles ya disponibles; elegir y combinar herramientas de flujo es el último paso planificado. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -88,10 +88,10 @@ Consulta la [ruta de aprendizaje de la sección](../program-flow/README.es.md).
 - [x] [Bucles `for` e iteración](../program-flow/04-for-loops-and-iteration/README.es.md)
 - [x] [`range()`, `enumerate()` y `zip()`](../program-flow/05-range-enumerate-and-zip/README.es.md)
 - [x] [Bucles `while` y repetición guiada por estado](../program-flow/06-while-loops-and-state-driven-repetition/README.es.md)
-- [ ] `break`, `continue` y `else` de bucles
+- [x] [`break`, `continue` y `else` de bucles](../program-flow/07-break-continue-and-loop-else/README.es.md)
 - [ ] Elegir y combinar el flujo del programa
 
-La Fase 4 construye intencionalmente condiciones confiables primero, las usa para ramificaciones condicionales, introduce coincidencia de patrones estructurales, avanza hacia la repetición con `for`, añade ayudas para progresiones numéricas, posiciones e iteración paralela y después introduce repetición guiada por estado con `while`. Los Capítulos 01–06 están completados; el Capítulo 07, `break`, `continue` y `else` de bucles, es el siguiente.
+La Fase 4 construye intencionalmente condiciones confiables primero, las usa para ramificaciones condicionales, introduce coincidencia de patrones estructurales, avanza hacia la repetición con `for`, añade ayudas para progresiones numéricas, posiciones e iteración paralela, introduce repetición guiada por estado con `while` y después añade control deliberado de bucles con `break`, `continue` y `else` de bucle. Los Capítulos 01–07 están completados; el Capítulo 08, Elegir y Combinar el Flujo del Programa, es el siguiente.
 
 ## Fase 5: Funciones
 

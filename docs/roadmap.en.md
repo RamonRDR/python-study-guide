@@ -18,7 +18,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 1. Fundamentals | Complete | Six reviewed chapters cover execution, input/output, variables and naming, built-in data types, type inspection, and type conversion |
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
 | 3. Collections | Complete | Six reviewed chapters cover lists, tuples, dictionaries, sets, and choosing a collection by intent |
-| 4. Program flow | In progress | Chapters 01–06 cover trustworthy conditions, conditional branching, structural pattern matching, `for` iteration, iteration helpers, and state-driven repetition with `while` |
+| 4. Program flow | In progress | Chapters 01–07 cover trustworthy conditions, conditional branching, structural pattern matching, `for`, iteration helpers, `while`, and loop control with `break`, `continue`, and loop `else` |
 | 5. Functions | Planned | Curriculum not started |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
@@ -26,7 +26,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is in progress with conditions, conditional branching, structural pattern matching, direct iteration with `for`, iteration helpers, and state-driven repetition with `while` now available; `break`, `continue`, and loop `else` are the next planned step. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, and 6 are complete. Phase 4 is in progress with conditions, conditional branching, structural pattern matching, direct iteration with `for`, iteration helpers, state-driven repetition with `while`, and deliberate loop control now available; choosing and combining program-flow tools is the final planned step. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -88,10 +88,10 @@ See the [section learning path](../program-flow/README.md).
 - [x] [`for` loops and iteration](../program-flow/04-for-loops-and-iteration/README.md)
 - [x] [`range()`, `enumerate()`, and `zip()`](../program-flow/05-range-enumerate-and-zip/README.md)
 - [x] [`while` loops and state-driven repetition](../program-flow/06-while-loops-and-state-driven-repetition/README.md)
-- [ ] `break`, `continue`, and loop `else`
+- [x] [`break`, `continue`, and loop `else`](../program-flow/07-break-continue-and-loop-else/README.md)
 - [ ] Choosing and combining program flow
 
-Phase 4 intentionally builds trustworthy conditions first, uses them for conditional branching, introduces structural pattern matching, moves into repetition with `for`, adds helpers for numeric progressions, positions, and parallel iteration, and then introduces state-driven repetition with `while`. Chapters 01–06 are complete; Chapter 07, `break`, `continue`, and loop `else`, is next.
+Phase 4 intentionally builds trustworthy conditions first, uses them for conditional branching, introduces structural pattern matching, moves into repetition with `for`, adds helpers for numeric progressions, positions, and parallel iteration, introduces state-driven repetition with `while`, and then adds deliberate loop control with `break`, `continue`, and loop `else`. Chapters 01–07 are complete; Chapter 08, Choosing and Combining Program Flow, is next.
 
 ## Phase 5: Functions
 
