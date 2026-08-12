@@ -35,7 +35,7 @@ Ya deberías sentirte cómodo con:
 | [04. Bucles `for` e Iteración](04-for-loops-and-iteration/README.es.md) | Repetir trabajo para elementos de un iterable | Disponible |
 | [05. `range()`, `enumerate()` y `zip()`](05-range-enumerate-and-zip/README.es.md) | Contar, seguir posiciones y coordinar iteraciones | Disponible |
 | [06. Bucles `while` y Repetición Guiada por Estado](06-while-loops-and-state-driven-repetition/README.es.md) | Repetir mientras una condición permanezca verdadera y el estado evolucione | Disponible |
-| 07. `break`, `continue` y `else` de Bucles | Cambiar o interpretar la finalización normal de un bucle | Planificado |
+| [07. `break`, `continue` y `else` de Bucles](07-break-continue-and-loop-else/README.es.md) | Terminar antes, omitir una iteración y distinguir finalización normal de `break` | Disponible |
 | 08. Elegir y Combinar el Flujo del Programa | Seleccionar y combinar herramientas de flujo según la intención | Planificado |
 
 Estudia los capítulos en orden al seguir la ruta completa para principiantes.
@@ -51,7 +51,7 @@ condition = a question Python can interpret for truth
 decision = what the program does because of that condition
 ```
 
-El Capítulo 01 se concentra en la primera idea. El Capítulo 02 añade la segunda usando esas condiciones para seleccionar qué bloque se ejecuta. El Capítulo 03 introduce después la coincidencia de patrones estructurales como otra forma de seleccionar comportamiento cuando la forma o el patrón de un valor es la pregunta importante. El Capítulo 04 cambia de la selección a la repetición al procesar elementos de un iterable uno por uno. El Capítulo 05 añade ayudas para progresiones numéricas, posiciones e iteración paralela. El Capítulo 06 añade repetición controlada por un estado cambiante y por una condición que se vuelve a evaluar antes de cada iteración.
+El Capítulo 01 se concentra en la primera idea. El Capítulo 02 añade la segunda usando esas condiciones para seleccionar qué bloque se ejecuta. El Capítulo 03 introduce después la coincidencia de patrones estructurales como otra forma de seleccionar comportamiento cuando la forma o el patrón de un valor es la pregunta importante. El Capítulo 04 cambia de la selección a la repetición al procesar elementos de un iterable uno por uno. El Capítulo 05 añade ayudas para progresiones numéricas, posiciones e iteración paralela. El Capítulo 06 añade repetición controlada por un estado cambiante y por una condición que se vuelve a evaluar antes de cada iteración. El Capítulo 07 añade salida anticipada deliberada, salto de iteración y tratamiento de finalización de bucles con `break`, `continue` y `else` de bucle.
 
 ## Progresión de la fase
 
@@ -101,4 +101,6 @@ Después del Capítulo 04, continúa con [05. `range()`, `enumerate()` y `zip()`
 
 Después del Capítulo 05, continúa con [06. Bucles `while` y Repetición Guiada por Estado](06-while-loops-and-state-driven-repetition/README.es.md).
 
-El próximo capítulo planificado introduce `break`, `continue` y `else` de bucles.
+Después del Capítulo 06, continúa con [07. `break`, `continue` y `else` de Bucles](07-break-continue-and-loop-else/README.es.md).
+
+El próximo capítulo planificado cierra la fase eligiendo y combinando herramientas de flujo según la intención.
