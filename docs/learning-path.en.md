@@ -53,8 +53,9 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 4. [`for` Loops and Iteration](../program-flow/04-for-loops-and-iteration/README.md)
 5. [`range()`, `enumerate()`, and `zip()`](../program-flow/05-range-enumerate-and-zip/README.md)
 6. [`while` Loops and State-Driven Repetition](../program-flow/06-while-loops-and-state-driven-repetition/README.md)
+7. [`break`, `continue`, and Loop `else`](../program-flow/07-break-continue-and-loop-else/README.md)
 
-Phase 4 is in progress with six reviewed chapters. Chapter 01 builds truth expressions, Chapter 02 uses them to choose which block executes, Chapter 03 adds structural pattern matching, Chapter 04 introduces item-by-item iteration with `for`, Chapter 05 adds numeric progressions, position-aware iteration, and parallel iteration with `range()`, `enumerate()`, and `zip()`, and Chapter 06 introduces state-driven repetition with `while`, including condition re-evaluation and termination reasoning. The next planned chapter is Chapter 07, `break`, `continue`, and Loop `else`.
+Phase 4 is in progress with seven reviewed chapters. Chapter 01 builds truth expressions, Chapter 02 uses them to choose which block executes, Chapter 03 adds structural pattern matching, Chapter 04 introduces item-by-item iteration with `for`, Chapter 05 adds numeric progressions, position-aware iteration, and parallel iteration with `range()`, `enumerate()`, and `zip()`, Chapter 06 introduces state-driven repetition with `while`, and Chapter 07 adds early loop termination, iteration skipping, and normal-completion handling with `break`, `continue`, and loop `else`. The next planned chapter is Chapter 08, Choosing and Combining Program Flow.
 
 ## Phase 5 · Functions ⏳
 
