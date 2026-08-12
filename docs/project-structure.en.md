@@ -230,14 +230,22 @@ python-study-guide/
 │   │       ├── enumerate_positions.py
 │   │       ├── range_progressions.py
 │   │       └── zip_parallel_iteration.py
-│   └── 06-while-loops-and-state-driven-repetition/
+│   ├── 06-while-loops-and-state-driven-repetition/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── countdown_state.py
+│   │       ├── doubling_until_limit.py
+│   │       └── study_target.py
+│   └── 07-break-continue-and-loop-else/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── countdown_state.py
-│           ├── doubling_until_limit.py
-│           └── study_target.py
+│           ├── break_search.py
+│           ├── continue_filtering.py
+│           └── loop_else_search.py
 ├── scripts/
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
@@ -302,7 +310,7 @@ python-study-guide/
 - `functions/`: future learning path for functions, parameters, returns, scope, and type hints.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.
-- `program-flow/`: Phase 4 learning path in progress. Chapters 01–06 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, item-by-item iteration with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, and state-driven repetition with `while`, including condition re-evaluation and termination reasoning, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
+- `program-flow/`: Phase 4 learning path in progress. Chapters 01–07 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, item-by-item iteration with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, and deliberate loop control with `break`, `continue`, and loop `else`, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
 - `standard-library/`: future guides to modules distributed with Python.
 - `strings-and-numbers/`: complete Phase 2 learning path. Its four reviewed chapters cover string creation and indexing, common string methods, integer, floating-point, and Boolean behavior, floating-point precision, and `round()`, `abs()`, `min()`, `max()`, and `sum()` in English, Brazilian Portuguese, and Spanish with safe executable examples.
