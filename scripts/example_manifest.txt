@@ -72,3 +72,6 @@ program-flow/05-range-enumerate-and-zip/examples/zip_parallel_iteration.py
 program-flow/06-while-loops-and-state-driven-repetition/examples/countdown_state.py
 program-flow/06-while-loops-and-state-driven-repetition/examples/doubling_until_limit.py
 program-flow/06-while-loops-and-state-driven-repetition/examples/study_target.py
+program-flow/07-break-continue-and-loop-else/examples/break_search.py
+program-flow/07-break-continue-and-loop-else/examples/continue_filtering.py
+program-flow/07-break-continue-and-loop-else/examples/loop_else_search.py
