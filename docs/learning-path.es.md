@@ -53,8 +53,9 @@ Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores p
 4. [Bucles `for` e Iteración](../program-flow/04-for-loops-and-iteration/README.es.md)
 5. [`range()`, `enumerate()` y `zip()`](../program-flow/05-range-enumerate-and-zip/README.es.md)
 6. [Bucles `while` y Repetición Guiada por Estado](../program-flow/06-while-loops-and-state-driven-repetition/README.es.md)
+7. [`break`, `continue` y `else` de Bucles](../program-flow/07-break-continue-and-loop-else/README.es.md)
 
-La Fase 4 está en progreso con seis capítulos revisados. El Capítulo 01 construye expresiones de verdad, el Capítulo 02 las usa para elegir qué bloque se ejecuta, el Capítulo 03 añade coincidencia de patrones estructurales, el Capítulo 04 introduce la iteración elemento por elemento con `for`, el Capítulo 05 añade progresiones numéricas, iteración con posición e iteración paralela con `range()`, `enumerate()` y `zip()`, y el Capítulo 06 introduce repetición guiada por estado con `while`, incluida la reevaluación de la condición y el razonamiento sobre la finalización. El siguiente capítulo planificado es el Capítulo 07, `break`, `continue` y `else` de Bucles.
+La Fase 4 está en progreso con siete capítulos revisados. El Capítulo 01 construye expresiones de verdad, el Capítulo 02 las usa para elegir qué bloque se ejecuta, el Capítulo 03 añade coincidencia de patrones estructurales, el Capítulo 04 introduce la iteración elemento por elemento con `for`, el Capítulo 05 añade progresiones numéricas, iteración con posición e iteración paralela con `range()`, `enumerate()` y `zip()`, el Capítulo 06 introduce repetición guiada por estado con `while` y el Capítulo 07 añade terminación anticipada de bucles, salto de iteración y tratamiento de la finalización normal con `break`, `continue` y `else` de bucle. El siguiente capítulo planificado es el Capítulo 08, Elegir y Combinar el Flujo del Programa.
 
 ## Fase 5 · Funciones ⏳
 
