@@ -34,7 +34,7 @@ You should already be comfortable with:
 |---|---|---|
 | [01. Defining and Calling Functions](01-defining-and-calling-functions/README.md) | Create named behavior with `def`, call it, reuse it, and trace execution | Available |
 | [02. Parameters and Arguments](02-parameters-and-arguments/README.md) | Receive required input values through positional and basic keyword arguments | Available |
-| 03. Return Values | Send useful results back to the caller | Planned |
+| [03. Return Values](03-return-values/README.md) | Send useful results back to the caller and trace complete input-to-output flow | Available |
 | 04. Scope | Understand where names are visible and how lookup works | Planned |
 | 05. Type Hints | Describe expected inputs and outputs without changing runtime behavior by themselves | Planned |
 | 06. Default Values | Design optional arguments safely and clearly | Planned |
@@ -55,7 +55,7 @@ call       = execute that behavior now
 
 Chapter 01 isolates those ideas before adding data exchange.
 
-Chapter 02 adds required parameters, positional arguments, and basic keyword arguments so one function can work with different inputs. Chapter 03 will add return values. Later chapters will build scope, type hints, defaults, flexible argument collection, composition, and explicit data flow on top of the same definition/call model.
+Chapter 02 adds required parameters, positional arguments, and basic keyword arguments so one function can work with different inputs. Chapter 03 completes the first data round trip with return values, `None`, branch-specific returns, and the distinction between returning and printing. Chapter 04 will add scope. Later chapters build type hints, defaults, flexible argument collection, composition, and explicit data flow on top of the same model.
 
 ## Phase progression
 
@@ -97,8 +97,8 @@ Those concepts appear later or require dedicated treatment.
 
 ## Start here
 
-Begin with [01. Defining and Calling Functions](01-defining-and-calling-functions/README.md), then continue with [02. Parameters and Arguments](02-parameters-and-arguments/README.md).
+Begin with [01. Defining and Calling Functions](01-defining-and-calling-functions/README.md), continue with [02. Parameters and Arguments](02-parameters-and-arguments/README.md), then study [03. Return Values](03-return-values/README.md).
 
-After Chapter 02, the next planned chapter is **03. Return Values**.
+After Chapter 03, the next planned chapter is **04. Scope**.
 
-**Phase 5 is now in progress with two reviewed chapters available.**
+**Phase 5 is now in progress with three reviewed chapters available.**

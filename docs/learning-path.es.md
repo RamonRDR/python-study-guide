@@ -64,8 +64,9 @@ La Fase 4 está completada con ocho capítulos revisados. La secuencia construye
 
 1. [Definir y Llamar Funciones](../functions/01-defining-and-calling-functions/README.es.md)
 2. [Parámetros y Argumentos](../functions/02-parameters-and-arguments/README.es.md)
+3. [Valores de Retorno](../functions/03-return-values/README.es.md)
 
-La Fase 5 está en progreso con dos capítulos revisados. El Capítulo 01 establece el modelo definición frente a llamada, reutilización básica, orden de ejecución, nombres de funciones y la conexión entre funciones y las herramientas de flujo de la Fase 4. El Capítulo 02 añade parámetros obligatorios, argumentos posicionales, argumentos por palabra clave básicos y seguimiento del flujo de entrada. El siguiente capítulo planificado es Valores de Retorno.
+La Fase 5 está en progreso con tres capítulos revisados. El Capítulo 01 establece definición frente a llamada, el Capítulo 02 añade entradas obligatorias mediante parámetros y argumentos, y el Capítulo 03 completa el primer recorrido de entrada y salida con valores de retorno, `None`, retornos por rama y la diferencia entre retornar e imprimir. El siguiente capítulo planificado es Alcance.
 
 ## Fase 6 · Comentarios, Documentación y Código Limpio ✅
 

@@ -19,14 +19,14 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 2. Textos y números | Completada | Cuatro capítulos revisados cubren creación de strings, métodos comunes, comportamiento numérico y booleano, precisión de punto flotante y funciones numéricas incorporadas |
 | 3. Colecciones | Completada | Seis capítulos revisados cubren listas, tuplas, diccionarios, conjuntos y elección de colección según la intención |
 | 4. Flujo del programa | Completada | Ocho capítulos revisados cubren condiciones, ramificaciones, coincidencia de patrones estructurales, `for`, ayudas de iteración, `while`, control de bucles y elección y combinación de herramientas de flujo según la intención |
-| 5. Funciones | En progreso | Dos capítulos revisados cubren `def`, llamadas, parámetros obligatorios, argumentos posicionales, argumentos por palabra clave básicos y flujo de entrada |
+| 5. Funciones | En progreso | Tres capítulos revisados cubren `def`, llamadas, parámetros obligatorios, argumentos posicionales, argumentos por palabra clave básicos, valores de retorno, `None` y flujo completo de entrada y salida |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
 | 7. Errores, archivos y módulos | Planificada | Contenido todavía no iniciado |
 | 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3, 4 y 6 están completadas. La Fase 5: Funciones está en progreso con el modelo definición frente a llamada y el flujo de entradas obligatorias ya establecidos; los valores de retorno son el siguiente paso. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1, 2, 3, 4 y 6 están completadas. La Fase 5: Funciones está en progreso con definición, llamada, flujo de entrada y flujo de retorno ya establecidos; alcance es el siguiente paso. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -99,7 +99,7 @@ Consulta la [ruta de aprendizaje de la sección](../functions/README.es.md).
 
 - [x] [Definir y llamar funciones](../functions/01-defining-and-calling-functions/README.es.md)
 - [x] [Parámetros y argumentos](../functions/02-parameters-and-arguments/README.es.md)
-- [ ] Valores de retorno
+- [x] [Valores de retorno](../functions/03-return-values/README.es.md)
 - [ ] Alcance
 - [ ] Type hints
 - [ ] Valores predeterminados
@@ -107,7 +107,7 @@ Consulta la [ruta de aprendizaje de la sección](../functions/README.es.md).
 - [ ] Funciones trabajando juntas
 - [ ] Flujo de datos entre funciones
 
-La Fase 5 está en progreso. El Capítulo 01 establece `def`, llamadas, reutilización, orden de ejecución, nombres, `pass`, `None` implícito y la conexión entre cuerpos de funciones y las herramientas de flujo aprendidas anteriormente. El Capítulo 02 añade parámetros obligatorios, argumentos posicionales, argumentos por palabra clave básicos, expresiones como argumentos, errores de llamada y seguimiento del flujo de entrada. Los valores de retorno son el siguiente paso.
+La Fase 5 está en progreso. El Capítulo 01 establece `def`, llamadas, reutilización, orden de ejecución, nombres, `pass`, `None` implícito y la conexión entre cuerpos de funciones y las herramientas de flujo aprendidas anteriormente. El Capítulo 02 añade parámetros obligatorios, argumentos posicionales, argumentos por palabra clave básicos, expresiones como argumentos, errores de llamada y seguimiento del flujo de entrada. El Capítulo 03 añade `return`, valores retornados, `print()` frente a `return`, retornos por rama y anticipados, `None`, retorno en tupla y la diferencia entre salir de un bucle y salir de una función. Alcance es el siguiente paso.
 
 ## Fase 6: Comentarios, documentación y código limpio
 
