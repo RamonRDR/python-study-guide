@@ -56,11 +56,15 @@ Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores p
 7. [`break`, `continue` y `else` de Bucles](../program-flow/07-break-continue-and-loop-else/README.es.md)
 8. [Elegir y Combinar el Flujo del Programa](../program-flow/08-choosing-and-combining-program-flow/README.es.md)
 
-La Fase 4 está completada con ocho capítulos revisados. La secuencia construye condiciones confiables, ramificación condicional, coincidencia de patrones estructurales, repetición guiada por iterables, ayudas de iteración, repetición guiada por estado, control deliberado de bucles y, finalmente, un modelo de decisión para elegir y combinar esas herramientas según la intención. La siguiente fase de aprendizaje planificada es la Fase 5: Funciones.
+La Fase 4 está completada con ocho capítulos revisados. La secuencia construye condiciones confiables, ramificación condicional, coincidencia de patrones estructurales, repetición guiada por iterables, ayudas de iteración, repetición guiada por estado, control deliberado de bucles y, finalmente, un modelo de decisión para elegir y combinar esas herramientas según la intención.
 
-## Fase 5 · Funciones ⏳
+## Fase 5 · Funciones 🚧
 
-Los capítulos de funciones todavía no se han publicado como una sección completa de aprendizaje. Sus enlaces se añadirán aquí cuando estén disponibles.
+[Abrir el índice de la sección Funciones](../functions/README.es.md)
+
+1. [Definir y Llamar Funciones](../functions/01-defining-and-calling-functions/README.es.md)
+
+La Fase 5 está en progreso con su primer capítulo. El Capítulo 01 establece el modelo definición frente a llamada, reutilización básica, orden de ejecución, nombres de funciones y la conexión entre funciones y las herramientas de flujo de la Fase 4. El siguiente capítulo planificado es Parámetros y Argumentos.
 
 ## Fase 6 · Comentarios, Documentación y Código Limpio ✅
 

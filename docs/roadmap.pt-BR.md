@@ -19,14 +19,14 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 2. Textos e números | Concluída | Quatro capítulos revisados cobrem criação de strings, métodos comuns, comportamento numérico e booleano, precisão de ponto flutuante e funções numéricas embutidas |
 | 3. Coleções | Concluída | Seis capítulos revisados cobrem listas, tuplas, dicionários, conjuntos e escolha da coleção pela intenção |
 | 4. Fluxo do programa | Concluída | Oito capítulos revisados cobrem condições, ramificações, correspondência de padrões estruturais, `for`, auxiliares de iteração, `while`, controle de loops e escolha e combinação das ferramentas de fluxo pela intenção |
-| 5. Funções | Planejada | Conteúdo ainda não iniciado |
+| 5. Funções | Em andamento | Um capítulo revisado introduz `def`, chamadas de função, reuso e ordem de execução |
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
 | 8. Biblioteca padrão | Planejada | Conteúdo ainda não iniciado |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3, 4 e 6 estão concluídas. A Fase 4 agora oferece toda a sequência introdutória de fluxo do programa, desde condições confiáveis até seleção deliberada, repetição, controle de loops e síntese final das ferramentas de fluxo. A Fase 5: Funções é o próximo passo planejado do currículo. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2, 3, 4 e 6 estão concluídas. A Fase 5: Funções agora está em andamento e começa pelo modelo definição versus chamada antes de introduzir troca de dados com parâmetros e valores de retorno. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -91,19 +91,23 @@ Consulte a [trilha de aprendizagem da seção](../program-flow/README.pt-BR.md).
 - [x] [`break`, `continue` e `else` de loops](../program-flow/07-break-continue-and-loop-else/README.pt-BR.md)
 - [x] [Escolhendo e combinando o fluxo do programa](../program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md)
 
-A Fase 4 constrói intencionalmente condições confiáveis primeiro, usa essas condições para ramificações condicionais, introduz correspondência de padrões estruturais, avança para repetição com `for`, adiciona auxiliares para progressões numéricas, posições e iteração paralela, introduz repetição guiada por estado com `while`, adiciona controle deliberado de loops com `break`, `continue` e `else` de loop e encerra ensinando como escolher e combinar essas ferramentas de acordo com a intenção. Os Capítulos 01–08 estão concluídos e a Fase 4 está oficialmente concluída. A Fase 5: Funções é a próxima.
+A Fase 4 constrói intencionalmente condições confiáveis primeiro, usa essas condições para ramificações condicionais, introduz correspondência de padrões estruturais, avança para repetição com `for`, adiciona auxiliares para progressões numéricas, posições e iteração paralela, introduz repetição guiada por estado com `while`, adiciona controle deliberado de loops com `break`, `continue` e `else` de loop e encerra ensinando como escolher e combinar essas ferramentas de acordo com a intenção. Os Capítulos 01–08 estão concluídos e a Fase 4 está oficialmente concluída.
 
 ## Fase 5: Funções
 
-- `def`
-- Parâmetros e argumentos
-- Valores de retorno
-- Escopo
-- Type hints
-- Valores padrão
-- `*args` e `**kwargs`
-- Funções trabalhando juntas
-- Fluxo de dados entre funções
+Consulte a [trilha de aprendizagem da seção](../functions/README.pt-BR.md).
+
+- [x] [Definindo e chamando funções](../functions/01-defining-and-calling-functions/README.pt-BR.md)
+- [ ] Parâmetros e argumentos
+- [ ] Valores de retorno
+- [ ] Escopo
+- [ ] Type hints
+- [ ] Valores padrão
+- [ ] `*args` e `**kwargs`
+- [ ] Funções trabalhando juntas
+- [ ] Fluxo de dados entre funções
+
+A Fase 5 está em andamento. O Capítulo 01 estabelece `def`, chamadas, reuso, ordem de execução, nomenclatura, `pass`, `None` implícito e a conexão entre corpos de funções e as ferramentas de fluxo aprendidas anteriormente. Parâmetros e argumentos são o próximo passo.
 
 ## Fase 6: Comentários, documentação e código limpo
 
