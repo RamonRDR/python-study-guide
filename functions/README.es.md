@@ -26,7 +26,7 @@ Antes de continuar, deberías sentirte cómodo con variables y tipos integrados,
 | [02. Parámetros y Argumentos](02-parameters-and-arguments/README.es.md) | Recibir entradas obligatorias con argumentos posicionales y por palabra clave básicos | Disponible |
 | [03. Valores de Retorno](03-return-values/README.es.md) | Enviar resultados útiles al llamador y seguir el flujo completo de entrada y salida | Disponible |
 | [04. Alcance](04-scope/README.es.md) | Entender nombres locales y globales, búsqueda, sombreado y revinculación global explícita | Disponible |
-| [05. Type Hints](05-type-hints/README.es.md) | Describir entradas y salidas esperadas sin cambiar por sí solas el comportamiento durante la ejecución | Disponible |
+| [05. Type Hints](05-type-hints/README.es.md) | Describir entradas y salidas esperadas sin imponer tipos en runtime por sí solas | Disponible |
 | 06. Valores Predeterminados | Diseñar argumentos opcionales de forma clara y segura | Planeado |
 | 07. `*args` y `**kwargs` | Recibir cantidades variables de argumentos posicionales y por palabra clave | Planeado |
 | 08. Funciones Trabajando Juntas | Componer funciones manteniendo responsabilidades claras | Planeado |

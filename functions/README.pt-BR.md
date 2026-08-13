@@ -26,7 +26,7 @@ Antes de continuar, você já deve estar confortável com variáveis e tipos nat
 | [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md) | Receber entradas obrigatórias com argumentos posicionais e nomeados básicos | Disponível |
 | [03. Valores de Retorno](03-return-values/README.pt-BR.md) | Enviar resultados úteis ao chamador e rastrear o fluxo completo de entrada e saída | Disponível |
 | [04. Escopo](04-scope/README.pt-BR.md) | Entender nomes locais e globais, busca, sombreamento e religação global explícita | Disponível |
-| [05. Type Hints](05-type-hints/README.pt-BR.md) | Descrever entradas e saídas esperadas sem alterar sozinhas o comportamento durante a execução | Disponível |
+| [05. Type Hints](05-type-hints/README.pt-BR.md) | Descrever entradas e saídas esperadas sem impor tipos em runtime por conta própria | Disponível |
 | 06. Valores Padrão | Projetar argumentos opcionais com clareza e segurança | Planejado |
 | 07. `*args` e `**kwargs` | Receber quantidades variáveis de argumentos posicionais e nomeados | Planejado |
 | 08. Funções Trabalhando Juntas | Compor funções mantendo responsabilidades claras | Planejado |

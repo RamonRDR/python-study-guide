@@ -36,7 +36,7 @@ You should already be comfortable with:
 | [02. Parameters and Arguments](02-parameters-and-arguments/README.md) | Receive required input values through positional and basic keyword arguments | Available |
 | [03. Return Values](03-return-values/README.md) | Send useful results back to the caller and trace complete input-to-output flow | Available |
 | [04. Scope](04-scope/README.md) | Understand local and global names, lookup, shadowing, and explicit global rebinding | Available |
-| [05. Type Hints](05-type-hints/README.md) | Describe expected inputs and outputs without changing runtime behavior by themselves | Available |
+| [05. Type Hints](05-type-hints/README.md) | Describe expected inputs and outputs without enforcing types at runtime by themselves | Available |
 | 06. Default Values | Design optional arguments safely and clearly | Planned |
 | 07. `*args` and `**kwargs` | Receive variable numbers of positional and keyword arguments | Planned |
 | 08. Functions Working Together | Compose functions while keeping responsibilities clear | Planned |
