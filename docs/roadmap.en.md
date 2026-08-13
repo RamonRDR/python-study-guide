@@ -19,14 +19,14 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
 | 3. Collections | Complete | Six reviewed chapters cover lists, tuples, dictionaries, sets, and choosing a collection by intent |
 | 4. Program flow | Complete | Eight reviewed chapters cover conditions, branching, structural pattern matching, `for`, iteration helpers, `while`, loop control, and choosing and combining flow tools by intent |
-| 5. Functions | In progress | Two reviewed chapters cover `def`, calls, required parameters, positional arguments, basic keyword arguments, and input flow |
+| 5. Functions | In progress | Three reviewed chapters cover `def`, calls, required inputs, return values, `None`, branch-specific returns, and the first complete input-to-output flow |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
 | 8. Standard library | Planned | Curriculum not started |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, 4, and 6 are complete. Phase 5: Functions is in progress with the definition-versus-call model and required input flow now established; return values are next. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, 4, and 6 are complete. Phase 5: Functions is in progress with definition, calling, input flow, and return flow now established; scope is next. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -99,7 +99,7 @@ See the [section learning path](../functions/README.md).
 
 - [x] [Defining and calling functions](../functions/01-defining-and-calling-functions/README.md)
 - [x] [Parameters and arguments](../functions/02-parameters-and-arguments/README.md)
-- [ ] Return values
+- [x] [Return values](../functions/03-return-values/README.md)
 - [ ] Scope
 - [ ] Type hints
 - [ ] Default values
@@ -107,7 +107,7 @@ See the [section learning path](../functions/README.md).
 - [ ] Functions working together
 - [ ] Data flow between functions
 
-Phase 5 is in progress. Chapter 01 establishes `def`, calls, reuse, execution order, naming, `pass`, implicit `None`, and the connection between function bodies and previously learned program-flow tools. Chapter 02 adds required parameters, positional arguments, basic keyword arguments, argument expressions, call errors, and input-flow tracing. Return values are next.
+Phase 5 is in progress. Chapter 01 establishes `def`, calls, reuse, execution order, naming, `pass`, implicit `None`, and the connection with program flow. Chapter 02 adds required parameters, positional and basic keyword arguments, argument expressions, call errors, and input-flow tracing. Chapter 03 adds `return`, returned expressions, `print()` versus `return`, branch-specific and early returns, `None`, tuple returns, and the distinction between leaving a loop and leaving a function. Scope is next.
 
 ## Phase 6: Comments, documentation, and clean code
 

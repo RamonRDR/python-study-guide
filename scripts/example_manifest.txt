@@ -84,3 +84,6 @@ functions/01-defining-and-calling-functions/examples/repeated_calls.py
 functions/02-parameters-and-arguments/examples/book_details.py
 functions/02-parameters-and-arguments/examples/greet_people.py
 functions/02-parameters-and-arguments/examples/score_status.py
+functions/03-return-values/examples/calculate_total.py
+functions/03-return-values/examples/classify_score.py
+functions/03-return-values/examples/find_first_even.py
