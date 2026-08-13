@@ -16,7 +16,7 @@ Flujo del Programa enseñó cómo la ejecución decide y repite. Esta fase ense�
 
 Completa primero la [Fase 4: Flujo del Programa](../program-flow/README.es.md).
 
-Antes de continuar, deberías sentirte cómodo con variables y tipos integrados, strings, números, colecciones, condiciones booleanas, `if`, `elif`, `else`, `match`, `case`, `for`, `while`, `range()`, `enumerate()`, `zip()`, `break`, `continue` y `else` de bucles.
+Antes de continuar, deberías sentirte cómodo con variables y tipos integrados, strings, números, colecciones, condiciones booleanas, `if`, `elif`, `else`, `match`, `case`, `for`, `while`, `range()`, `enumerate()`, `zip()`, `break`, `continue`, `else` de bucles y con decidir qué herramientas de flujo usar juntas según el objetivo del programa.
 
 ## Ruta de aprendizaje
 
