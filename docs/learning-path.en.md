@@ -56,11 +56,15 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 7. [`break`, `continue`, and Loop `else`](../program-flow/07-break-continue-and-loop-else/README.md)
 8. [Choosing and Combining Program Flow](../program-flow/08-choosing-and-combining-program-flow/README.md)
 
-Phase 4 is complete with eight reviewed chapters. The sequence builds trustworthy conditions, conditional branching, structural pattern matching, iterable-driven repetition, iteration helpers, state-driven repetition, deliberate loop control, and finally a decision framework for choosing and combining those tools by intent. The next planned learning phase is Phase 5: Functions.
+Phase 4 is complete with eight reviewed chapters. The sequence builds trustworthy conditions, conditional branching, structural pattern matching, iterable-driven repetition, iteration helpers, state-driven repetition, deliberate loop control, and finally a decision framework for choosing and combining those tools by intent.
 
-## Phase 5 · Functions ⏳
+## Phase 5 · Functions 🚧
 
-Function chapters have not yet been published as a complete learning section. They will be linked here when available.
+[Open the Functions section index](../functions/README.md)
+
+1. [Defining and Calling Functions](../functions/01-defining-and-calling-functions/README.md)
+
+Phase 5 is in progress with its first chapter. Chapter 01 establishes the definition-versus-call model, basic reuse, execution order, function naming, and the connection between functions and the program-flow tools from Phase 4. The next planned chapter is Parameters and Arguments.
 
 ## Phase 6 · Comments, Documentation, and Clean Code ✅
 

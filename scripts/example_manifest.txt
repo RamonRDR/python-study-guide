@@ -78,3 +78,6 @@ program-flow/07-break-continue-and-loop-else/examples/loop_else_search.py
 program-flow/08-choosing-and-combining-program-flow/examples/search_with_position.py
 program-flow/08-choosing-and-combining-program-flow/examples/select_and_classify.py
 program-flow/08-choosing-and-combining-program-flow/examples/state_driven_workflow.py
+functions/01-defining-and-calling-functions/examples/define_and_call.py
+functions/01-defining-and-calling-functions/examples/execution_order.py
+functions/01-defining-and-calling-functions/examples/repeated_calls.py
