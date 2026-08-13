@@ -65,8 +65,9 @@ Phase 4 is complete with eight reviewed chapters. The sequence builds trustworth
 1. [Defining and Calling Functions](../functions/01-defining-and-calling-functions/README.md)
 2. [Parameters and Arguments](../functions/02-parameters-and-arguments/README.md)
 3. [Return Values](../functions/03-return-values/README.md)
+4. [Scope](../functions/04-scope/README.md)
 
-Phase 5 is in progress with three reviewed chapters. Chapter 01 establishes definition versus call, Chapter 02 adds required inputs through parameters and arguments, and Chapter 03 completes the first input-to-output round trip with return values, `None`, branch-specific returns, and the distinction between returning and printing. The next planned chapter is Scope.
+Phase 5 is in progress with four reviewed chapters. Chapter 01 establishes definition versus call, Chapter 02 adds required inputs through parameters and arguments, Chapter 03 completes the first input-to-output round trip with return values, and Chapter 04 explains local and global names, lookup, shadowing, statement-level scope behavior, `NameError`, `UnboundLocalError`, and cautious global rebinding. The next planned chapter is Type Hints.
 
 ## Phase 6 · Comments, Documentation, and Clean Code ✅
 

@@ -19,14 +19,14 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 2. Textos e números | Concluída | Quatro capítulos revisados cobrem criação de strings, métodos comuns, comportamento numérico e booleano, precisão de ponto flutuante e funções numéricas embutidas |
 | 3. Coleções | Concluída | Seis capítulos revisados cobrem listas, tuplas, dicionários, conjuntos e escolha da coleção pela intenção |
 | 4. Fluxo do programa | Concluída | Oito capítulos revisados cobrem condições, ramificações, correspondência de padrões estruturais, `for`, auxiliares de iteração, `while`, controle de loops e escolha e combinação das ferramentas de fluxo pela intenção |
-| 5. Funções | Em andamento | Três capítulos revisados cobrem `def`, chamadas, parâmetros obrigatórios, argumentos posicionais, argumentos nomeados básicos, valores de retorno, `None` e fluxo completo de entrada e saída |
+| 5. Funções | Em andamento | Quatro capítulos revisados cobrem `def`, chamadas, entradas obrigatórias, valores retornados, escopo local/global, busca, sombreamento e religação global explícita |
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
 | 8. Biblioteca padrão | Planejada | Conteúdo ainda não iniciado |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3, 4 e 6 estão concluídas. A Fase 5: Funções está em andamento com definição, chamada, fluxo de entrada e fluxo de retorno já estabelecidos; escopo é o próximo passo. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2, 3, 4 e 6 estão concluídas. A Fase 5: Funções está em andamento com definição, chamada, fluxo de entrada, fluxo de retorno e escopo já estabelecidos; type hints são o próximo passo. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -100,14 +100,14 @@ Consulte a [trilha de aprendizagem da seção](../functions/README.pt-BR.md).
 - [x] [Definindo e chamando funções](../functions/01-defining-and-calling-functions/README.pt-BR.md)
 - [x] [Parâmetros e argumentos](../functions/02-parameters-and-arguments/README.pt-BR.md)
 - [x] [Valores de retorno](../functions/03-return-values/README.pt-BR.md)
-- [ ] Escopo
+- [x] [Escopo](../functions/04-scope/README.pt-BR.md)
 - [ ] Type hints
 - [ ] Valores padrão
 - [ ] `*args` e `**kwargs`
 - [ ] Funções trabalhando juntas
 - [ ] Fluxo de dados entre funções
 
-A Fase 5 está em andamento. O Capítulo 01 estabelece `def`, chamadas, reuso, ordem de execução, nomenclatura, `pass`, `None` implícito e a conexão entre corpos de funções e as ferramentas de fluxo aprendidas anteriormente. O Capítulo 02 adiciona parâmetros obrigatórios, argumentos posicionais, argumentos nomeados básicos, expressões como argumentos, erros de chamada e rastreamento do fluxo de entrada. O Capítulo 03 adiciona `return`, valores retornados, `print()` versus `return`, retornos por ramificação e antecipados, `None`, retorno em tupla e a diferença entre sair de um loop e sair de uma função. Escopo é o próximo passo.
+A Fase 5 está em andamento. O Capítulo 01 estabelece `def`, chamadas, reuso, ordem de execução, nomenclatura, `pass`, `None` implícito e a conexão entre corpos de funções e as ferramentas de fluxo aprendidas anteriormente. O Capítulo 02 adiciona parâmetros obrigatórios, argumentos posicionais, argumentos nomeados básicos, expressões como argumentos, erros de chamada e rastreamento do fluxo de entrada. O Capítulo 03 adiciona `return`, valores retornados, `print()` versus `return`, retornos por ramificação e antecipados, `None`, retorno em tupla e a diferença entre sair de um loop e sair de uma função. O Capítulo 04 adiciona nomes locais e globais, espaços de nomes locais por chamada, busca de nomes, sombreamento, comportamento de escopo das instruções comuns, `NameError`, `UnboundLocalError` e uso cauteloso de `global`. Type hints são o próximo passo.
 
 ## Fase 6: Comentários, documentação e código limpo
 

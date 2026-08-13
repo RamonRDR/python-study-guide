@@ -25,7 +25,7 @@ Antes de continuar, deberías sentirte cómodo con variables y tipos integrados,
 | [01. Definir y Llamar Funciones](01-defining-and-calling-functions/README.es.md) | Crear comportamiento con nombre usando `def`, llamarlo, reutilizarlo y seguir la ejecución | Disponible |
 | [02. Parámetros y Argumentos](02-parameters-and-arguments/README.es.md) | Recibir entradas obligatorias con argumentos posicionales y por palabra clave básicos | Disponible |
 | [03. Valores de Retorno](03-return-values/README.es.md) | Enviar resultados útiles al llamador y seguir el flujo completo de entrada y salida | Disponible |
-| 04. Alcance | Entender dónde son visibles los nombres y cómo funciona su búsqueda | Planeado |
+| [04. Alcance](04-scope/README.es.md) | Entender nombres locales y globales, búsqueda, sombreado y revinculación global explícita | Disponible |
 | 05. Type Hints | Describir entradas y salidas esperadas sin cambiar por sí solos el comportamiento durante la ejecución | Planeado |
 | 06. Valores Predeterminados | Diseñar argumentos opcionales de forma clara y segura | Planeado |
 | 07. `*args` y `**kwargs` | Recibir cantidades variables de argumentos posicionales y por palabra clave | Planeado |
@@ -43,7 +43,7 @@ definition = describe and name behavior
 call       = execute that behavior now
 ```
 
-El Capítulo 01 separa esas ideas antes de añadir intercambio de datos. El Capítulo 02 añade entradas mediante parámetros y argumentos. El Capítulo 03 completa el primer recorrido de ida y vuelta con valores de retorno, `None`, retornos por rama y la diferencia entre retornar e imprimir. El Capítulo 04 añadirá alcance.
+El Capítulo 01 separa esas ideas antes de añadir intercambio de datos. El Capítulo 02 añade entradas mediante parámetros y argumentos. El Capítulo 03 completa el primer recorrido de ida y vuelta con valores de retorno, `None`, retornos por rama y la diferencia entre retornar e imprimir. El Capítulo 04 añade alcance local y global, búsqueda de nombres, sombreado, comportamiento de alcance de sentencias ordinarias y uso cauteloso de `global`. Los capítulos posteriores añaden type hints, valores predeterminados, recolección flexible de argumentos, composición y flujo explícito de datos sobre el mismo modelo.
 
 ## Progresión de la fase
 
@@ -73,8 +73,8 @@ La Fase 5 trata funciones normales definidas por el usuario y el movimiento de e
 
 ## Empieza aquí
 
-Comienza con [01. Definir y Llamar Funciones](01-defining-and-calling-functions/README.es.md), continúa con [02. Parámetros y Argumentos](02-parameters-and-arguments/README.es.md) y luego estudia [03. Valores de Retorno](03-return-values/README.es.md).
+Comienza con [01. Definir y Llamar Funciones](01-defining-and-calling-functions/README.es.md), continúa con [02. Parámetros y Argumentos](02-parameters-and-arguments/README.es.md), luego estudia [03. Valores de Retorno](03-return-values/README.es.md) y [04. Alcance](04-scope/README.es.md).
 
-Después del Capítulo 03, el siguiente capítulo planeado es **04. Alcance**.
+Después del Capítulo 04, el siguiente capítulo planeado es **05. Type Hints**.
 
-La Fase 5 ahora está en progreso con tres capítulos revisados disponibles.
+La Fase 5 ahora está en progreso con cuatro capítulos revisados disponibles.

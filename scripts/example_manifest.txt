@@ -87,3 +87,6 @@ functions/02-parameters-and-arguments/examples/score_status.py
 functions/03-return-values/examples/calculate_total.py
 functions/03-return-values/examples/classify_score.py
 functions/03-return-values/examples/find_first_even.py
+functions/04-scope/examples/local_and_global_names.py
+functions/04-scope/examples/separate_function_calls.py
+functions/04-scope/examples/shadowing_names.py

@@ -25,7 +25,7 @@ Antes de continuar, você já deve estar confortável com variáveis e tipos nat
 | [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md) | Criar comportamento nomeado com `def`, chamar, reutilizar e rastrear a execução | Disponível |
 | [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md) | Receber entradas obrigatórias com argumentos posicionais e nomeados básicos | Disponível |
 | [03. Valores de Retorno](03-return-values/README.pt-BR.md) | Enviar resultados úteis ao chamador e rastrear o fluxo completo de entrada e saída | Disponível |
-| 04. Escopo | Entender onde nomes são visíveis e como a busca funciona | Planejado |
+| [04. Escopo](04-scope/README.pt-BR.md) | Entender nomes locais e globais, busca, sombreamento e religação global explícita | Disponível |
 | 05. Type Hints | Descrever entradas e saídas esperadas sem alterar sozinhos o comportamento durante a execução | Planejado |
 | 06. Valores Padrão | Projetar argumentos opcionais com clareza e segurança | Planejado |
 | 07. `*args` e `**kwargs` | Receber quantidades variáveis de argumentos posicionais e nomeados | Planejado |
@@ -43,7 +43,7 @@ definition = describe and name behavior
 call       = execute that behavior now
 ```
 
-O Capítulo 01 separa essas ideias antes de adicionar troca de dados. O Capítulo 02 adiciona entradas com parâmetros e argumentos. O Capítulo 03 completa a primeira viagem de ida e volta com valores de retorno, `None`, retornos por ramificação e a diferença entre retornar e imprimir. O Capítulo 04 adicionará escopo.
+O Capítulo 01 separa essas ideias antes de adicionar troca de dados. O Capítulo 02 adiciona entradas com parâmetros e argumentos. O Capítulo 03 completa a primeira viagem de ida e volta com valores de retorno, `None`, retornos por ramificação e a diferença entre retornar e imprimir. O Capítulo 04 adiciona escopo local e global, busca de nomes, sombreamento, comportamento de escopo de instruções comuns e uso cauteloso de `global`. Os capítulos seguintes adicionam type hints, valores padrão, coleta flexível de argumentos, composição e fluxo explícito de dados sobre o mesmo modelo.
 
 ## Progressão da fase
 
@@ -73,8 +73,8 @@ A Fase 5 trata de funções normais definidas pelo usuário e do movimento da ex
 
 ## Comece aqui
 
-Comece com [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md), continue com [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md) e depois estude [03. Valores de Retorno](03-return-values/README.pt-BR.md).
+Comece com [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md), continue com [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md), depois estude [03. Valores de Retorno](03-return-values/README.pt-BR.md) e [04. Escopo](04-scope/README.pt-BR.md).
 
-Depois do Capítulo 03, o próximo capítulo planejado é **04. Escopo**.
+Depois do Capítulo 04, o próximo capítulo planejado é **05. Type Hints**.
 
-A Fase 5 agora está em andamento com três capítulos revisados disponíveis.
+A Fase 5 agora está em andamento com quatro capítulos revisados disponíveis.
