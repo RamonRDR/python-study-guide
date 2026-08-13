@@ -16,7 +16,7 @@ Fluxo do Programa ensinou como a execução toma decisões e repete trabalho. Es
 
 Conclua primeiro a [Fase 4: Fluxo do Programa](../program-flow/README.pt-BR.md).
 
-Antes de continuar, você já deve estar confortável com variáveis e tipos nativos, strings, números, coleções, condições booleanas, `if`, `elif`, `else`, `match`, `case`, `for`, `while`, `range()`, `enumerate()`, `zip()`, `break`, `continue` e `else` de loop.
+Antes de continuar, você já deve estar confortável com variáveis e tipos nativos, strings, números, coleções, condições booleanas, `if`, `elif`, `else`, `match`, `case`, `for`, `while`, `range()`, `enumerate()`, `zip()`, `break`, `continue`, `else` de loop e com escolher e combinar ferramentas de fluxo de acordo com a intenção.
 
 ## Trilha de aprendizagem
 
