@@ -330,7 +330,7 @@ def is_empty(items):
 
 Esta función retorna un booleano. Una función de búsqueda puede retornar `None` para significar “no encontrado”.
 
-Ambos son falsy, pero no significan lo mismo.
+Ambos son falsy, pero no significan lo mismo. Cuando la distinción importe, comprueba deliberadamente cuál valor recibiste, por ejemplo comparando el resultado con `None`.
 
 ## 15. La expresión de retorno se evalúa primero
 
