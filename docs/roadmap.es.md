@@ -2,49 +2,56 @@
 
 [🇺🇸 English](roadmap.en.md) · [🇧🇷 Português](roadmap.pt-BR.md) · [🇪🇸 Español](roadmap.es.md)
 
-Este roadmap acompaña la ruta educativa y la base del repositorio. La numeración representa la secuencia recomendada de aprendizaje.
+Este roadmap acompaña tanto la ruta educativa como la base del repositorio que la sostiene. La numeración de las fases representa la secuencia de aprendizaje prevista, pero el trabajo del repositorio puede anticipar secciones posteriores cuando eso ayude a establecer estándares útiles.
 
 ## Leyenda de estados
 
-- **Completada:** alcance planificado disponible y revisado.
-- **En progreso:** existe material útil, pero la fase no está cerrada.
-- **Planificada:** la fase todavía no ha comenzado como sección completa.
+- **Completada:** el alcance planificado está disponible y revisado.
+- **En progreso:** ya existe material útil, pero el alcance planificado todavía no está cerrado.
+- **Planificada:** la fase todavía no ha comenzado como una sección completa de aprendizaje.
 
 ## Progreso actual
 
 | Fase | Estado | Resultado actual |
 |---|---|---|
 | 0. Base del proyecto | Completada | Base disponible, auditada y oficialmente completada |
-| 1. Fundamentos | Completada | Seis capítulos revisados |
-| 2. Textos y números | Completada | Cuatro capítulos revisados |
-| 3. Colecciones | Completada | Seis capítulos revisados |
-| 4. Flujo del programa | Completada | Ocho capítulos revisados |
-| 5. Funciones | En progreso | Tres capítulos revisados cubren definición, llamadas, entradas obligatorias, valores de retorno, `None`, retornos por rama y el primer flujo completo de entrada y salida |
-| 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados |
-| 7. Errores, archivos y módulos | Planificada | Contenido no iniciado |
-| 8. Biblioteca estándar | Planificada | Contenido no iniciado |
-| 9. Bibliotecas externas | Planificada | Contenido no iniciado |
-| 10. Proyectos prácticos | Planificada | Contenido no iniciado |
+| 1. Fundamentos | Completada | Seis capítulos revisados cubren ejecución, entrada y salida, variables y nombres, tipos de datos incorporados, inspección de tipos y conversión de tipos |
+| 2. Textos y números | Completada | Cuatro capítulos revisados cubren creación de strings, métodos comunes, comportamiento numérico y booleano, precisión de punto flotante y funciones numéricas incorporadas |
+| 3. Colecciones | Completada | Seis capítulos revisados cubren listas, tuplas, diccionarios, conjuntos y elección de colección según la intención |
+| 4. Flujo del programa | Completada | Ocho capítulos revisados cubren condiciones, ramificaciones, coincidencia de patrones estructurales, `for`, ayudas de iteración, `while`, control de bucles y elección y combinación de herramientas de flujo según la intención |
+| 5. Funciones | En progreso | Tres capítulos revisados cubren `def`, llamadas, parámetros obligatorios, argumentos posicionales, argumentos por palabra clave básicos, valores de retorno, `None` y flujo completo de entrada y salida |
+| 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
+| 7. Errores, archivos y módulos | Planificada | Contenido todavía no iniciado |
+| 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
+| 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
+| 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3, 4 y 6 están completadas. La Fase 5 ya establece definición, llamada, flujo de entrada y flujo de retorno; **Alcance** es el siguiente paso.
+Las Fases 0, 1, 2, 3, 4 y 6 están completadas. La Fase 5: Funciones está en progreso con definición, llamada, flujo de entrada y flujo de retorno ya establecidos; alcance es el siguiente paso. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
+
+### Elementos completados
 
 - [x] READMEs principales multilingües
 - [x] Estructura inicial escalable
 - [x] Guías de contribución multilingües
-- [x] Plantillas de pull request e issues
-- [x] Estándares de comunidad y soporte
-- [x] Formato editorial coherente
+- [x] Plantillas de pull request e issues en GitHub
+- [x] Estándares de la comunidad y orientaciones para reportes
+- [x] Formato editorial coherente para los capítulos
 - [x] Licencia MIT
 - [x] Registros de autoría y mantenimiento
-- [x] Flujo basado en pull requests
-- [x] Instrucciones para colaboradores y agentes de IA
+- [x] Flujo basado en pull requests y rama `main` protegida
+- [x] Instrucciones del repositorio para colaboradores y agentes de IA
 - [x] Guía de desarrollo responsable asistido por IA
-- [x] Roadmap y estructura en tres idiomas
-- [x] Verificaciones automáticas
-- [x] Identidad visual original
+- [x] Roadmap y documentación de la estructura en tres idiomas
+- [x] Verificaciones automáticas para archivos Python, ejemplos aprobados, enlaces internos y estructura
+- [x] Identidad visual original y recursos del repositorio
 - [x] Auditoría final de navegación, terminología, accesibilidad y estado
+- [x] Marcar oficialmente la Fase 0 como completada
+
+### Seguimiento planificado y no bloqueante
+
+- Refinar y reemplazar los recursos visuales con exportaciones de alta calidad después de completar el encuadre final del logotipo.
 
 ## Fase 1: Fundamentos
 
@@ -60,12 +67,12 @@ Las Fases 0, 1, 2, 3, 4 y 6 están completadas. La Fase 5 ya establece definici�
 - [x] [Creación e indexación de strings](../strings-and-numbers/01-string-creation-and-indexing/README.es.md)
 - [x] [Métodos comunes de strings](../strings-and-numbers/02-common-string-methods/README.es.md)
 - [x] [`int`, `float` y `bool`](../strings-and-numbers/03-int-float-and-bool/README.es.md)
-- [x] [Funciones numéricas incorporadas](../strings-and-numbers/04-numeric-builtins/README.es.md)
+- [x] [Funciones numéricas incorporadas: `round()`, `abs()`, `min()`, `max()` y `sum()`](../strings-and-numbers/04-numeric-builtins/README.es.md)
 
 ## Fase 3: Colecciones
 
 - [x] [Creación, indexación y slicing de listas](../collections/01-list-creation-and-indexing/README.es.md)
-- [x] [Modificar listas y métodos comunes](../collections/02-modifying-lists-and-methods/README.es.md)
+- [x] [Modificar listas y métodos comunes de listas](../collections/02-modifying-lists-and-methods/README.es.md)
 - [x] [Tuplas e inmutabilidad](../collections/03-tuples-and-immutability/README.es.md)
 - [x] [Diccionarios: claves y valores](../collections/04-dictionaries-keys-and-values/README.es.md)
 - [x] [Conjuntos y valores únicos](../collections/05-sets-and-unique-values/README.es.md)
@@ -73,20 +80,22 @@ Las Fases 0, 1, 2, 3, 4 y 6 están completadas. La Fase 5 ya establece definici�
 
 ## Fase 4: Flujo del programa
 
-Consulta la [ruta de aprendizaje](../program-flow/README.es.md).
+Consulta la [ruta de aprendizaje de la sección](../program-flow/README.es.md).
 
 - [x] [Condiciones, comparaciones y lógica booleana](../program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md)
 - [x] [`if`, `elif` y `else`](../program-flow/02-if-elif-and-else/README.es.md)
-- [x] [`match` y `case`](../program-flow/03-match-and-case/README.es.md)
+- [x] [`match` y `case`: coincidencia de patrones estructurales](../program-flow/03-match-and-case/README.es.md)
 - [x] [Bucles `for` e iteración](../program-flow/04-for-loops-and-iteration/README.es.md)
 - [x] [`range()`, `enumerate()` y `zip()`](../program-flow/05-range-enumerate-and-zip/README.es.md)
-- [x] [Bucles `while`](../program-flow/06-while-loops-and-state-driven-repetition/README.es.md)
+- [x] [Bucles `while` y repetición guiada por estado](../program-flow/06-while-loops-and-state-driven-repetition/README.es.md)
 - [x] [`break`, `continue` y `else` de bucles](../program-flow/07-break-continue-and-loop-else/README.es.md)
-- [x] [Elegir y combinar el flujo](../program-flow/08-choosing-and-combining-program-flow/README.es.md)
+- [x] [Elegir y combinar el flujo del programa](../program-flow/08-choosing-and-combining-program-flow/README.es.md)
+
+La Fase 4 construye intencionalmente condiciones confiables primero, las usa para ramificaciones condicionales, introduce coincidencia de patrones estructurales, avanza hacia la repetición con `for`, añade ayudas para progresiones numéricas, posiciones e iteración paralela, introduce repetición guiada por estado con `while`, añade control deliberado de bucles con `break`, `continue` y `else` de bucle y cierra enseñando cómo elegir y combinar esas herramientas según la intención. Los Capítulos 01–08 están completados y la Fase 4 está oficialmente completada.
 
 ## Fase 5: Funciones
 
-Consulta la [ruta de aprendizaje](../functions/README.es.md).
+Consulta la [ruta de aprendizaje de la sección](../functions/README.es.md).
 
 - [x] [Definir y llamar funciones](../functions/01-defining-and-calling-functions/README.es.md)
 - [x] [Parámetros y argumentos](../functions/02-parameters-and-arguments/README.es.md)
@@ -98,11 +107,11 @@ Consulta la [ruta de aprendizaje](../functions/README.es.md).
 - [ ] Funciones trabajando juntas
 - [ ] Flujo de datos entre funciones
 
-El Capítulo 01 establece `def`, llamadas y reutilización. El Capítulo 02 añade parámetros, argumentos y flujo de entrada. El Capítulo 03 añade `return`, `print()` frente a `return`, retornos por rama, `None`, tuplas y la diferencia entre salir de un bucle y salir de una función. **Alcance** es el siguiente capítulo.
+La Fase 5 está en progreso. El Capítulo 01 establece `def`, llamadas, reutilización, orden de ejecución, nombres, `pass`, `None` implícito y la conexión entre cuerpos de funciones y las herramientas de flujo aprendidas anteriormente. El Capítulo 02 añade parámetros obligatorios, argumentos posicionales, argumentos por palabra clave básicos, expresiones como argumentos, errores de llamada y seguimiento del flujo de entrada. El Capítulo 03 añade `return`, valores retornados, `print()` frente a `return`, retornos por rama y anticipados, `None`, retorno en tupla y la diferencia entre salir de un bucle y salir de una función. Alcance es el siguiente paso.
 
 ## Fase 6: Comentarios, documentación y código limpio
 
-Consulta la [ruta de aprendizaje](../comments-and-documentation/README.es.md).
+Consulta la [ruta de aprendizaje de la sección](../comments-and-documentation/README.es.md).
 
 - [x] Cuándo y por qué comentar
 - [x] Cuándo no comentar
@@ -112,6 +121,8 @@ Consulta la [ruta de aprendizaje](../comments-and-documentation/README.es.md).
 - [x] `TODO`, `FIXME`, `NOTE` y marcadores relacionados
 - [x] Comentarios frente a logging
 - [x] PEP 8 y legibilidad
+
+La Fase 6 está oficialmente completada y proporciona el modelo editorial y de calidad para las demás secciones de aprendizaje.
 
 ## Fase 7: Errores, archivos y módulos
 
