@@ -19,14 +19,14 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
 | 3. Collections | Complete | Six reviewed chapters cover lists, tuples, dictionaries, sets, and choosing a collection by intent |
 | 4. Program flow | Complete | Eight reviewed chapters cover conditions, branching, structural pattern matching, `for`, iteration helpers, `while`, loop control, and choosing and combining flow tools by intent |
-| 5. Functions | In progress | Four reviewed chapters cover `def`, calls, required inputs, returned values, local/global scope, lookup, shadowing, and explicit global rebinding |
+| 5. Functions | In progress | Five reviewed chapters cover `def`, calls, required inputs, returned values, scope, and type hints for function interfaces |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
 | 8. Standard library | Planned | Curriculum not started |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, 4, and 6 are complete. Phase 5: Functions is in progress with definition, calling, input flow, return flow, and scope now established; type hints are next. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, 4, and 6 are complete. Phase 5: Functions is in progress with definition, calling, input flow, return flow, scope, and type-hint interfaces now established; default values are next. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -101,13 +101,13 @@ See the [section learning path](../functions/README.md).
 - [x] [Parameters and arguments](../functions/02-parameters-and-arguments/README.md)
 - [x] [Return values](../functions/03-return-values/README.md)
 - [x] [Scope](../functions/04-scope/README.md)
-- [ ] Type hints
+- [x] [Type hints](../functions/05-type-hints/README.md)
 - [ ] Default values
 - [ ] `*args` and `**kwargs`
 - [ ] Functions working together
 - [ ] Data flow between functions
 
-Phase 5 is in progress. Chapter 01 establishes `def`, calls, reuse, execution order, naming, `pass`, implicit `None`, and the connection with program flow. Chapter 02 adds required parameters, positional and basic keyword arguments, argument expressions, call errors, and input-flow tracing. Chapter 03 adds `return`, returned expressions, `print()` versus `return`, branch-specific and early returns, `None`, tuple returns, and the distinction between leaving a loop and leaving a function. Chapter 04 adds local and global names, function-local namespaces, name lookup, shadowing, ordinary statement scope behavior, `NameError`, `UnboundLocalError`, and cautious use of `global`. Type hints are next.
+Phase 5 is in progress. Chapter 01 establishes `def`, calls, reuse, execution order, naming, `pass`, implicit `None`, and the connection with program flow. Chapter 02 adds required parameters, positional and basic keyword arguments, argument expressions, call errors, and input-flow tracing. Chapter 03 adds `return`, reusable results, branch-specific and early returns, `None`, and tuple returns. Chapter 04 adds local and global names, function-local namespaces, lookup, shadowing, `NameError`, `UnboundLocalError`, and cautious use of `global`. Chapter 05 adds parameter and return annotations, built-in and collection type hints, `-> None`, `str | None`, annotation metadata, and the distinction between static type information, runtime validation, and conversion. Default values are next.
 
 ## Phase 6: Comments, documentation, and clean code
 
