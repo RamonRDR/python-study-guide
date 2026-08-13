@@ -66,8 +66,9 @@ A Fase 4 está concluída com oito capítulos revisados. A sequência constrói 
 2. [Parâmetros e Argumentos](../functions/02-parameters-and-arguments/README.pt-BR.md)
 3. [Valores de Retorno](../functions/03-return-values/README.pt-BR.md)
 4. [Escopo](../functions/04-scope/README.pt-BR.md)
+5. [Type Hints](../functions/05-type-hints/README.pt-BR.md)
 
-A Fase 5 está em andamento com quatro capítulos revisados. O Capítulo 01 estabelece definição versus chamada, o Capítulo 02 adiciona entradas obrigatórias por parâmetros e argumentos, o Capítulo 03 completa a primeira viagem de entrada e saída com valores de retorno, e o Capítulo 04 explica nomes locais e globais, busca, sombreamento, comportamento de escopo das instruções comuns, `NameError`, `UnboundLocalError` e religação global cautelosa. O próximo capítulo planejado é Type Hints.
+A Fase 5 está em andamento com cinco capítulos revisados. O Capítulo 01 estabelece definição versus chamada, o Capítulo 02 adiciona entradas obrigatórias por parâmetros e argumentos, o Capítulo 03 completa a primeira viagem de entrada e saída com valores de retorno, o Capítulo 04 explica nomes locais e globais e busca, e o Capítulo 05 adiciona type hints de parâmetros e retorno, anotações de coleções, `str | None` e a diferença entre informação estática de tipos e enforcement em runtime. O próximo capítulo planejado é Valores Padrão.
 
 ## Fase 6 · Comentários, Documentação e Código Limpo ✅
 

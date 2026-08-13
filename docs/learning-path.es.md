@@ -66,8 +66,9 @@ La Fase 4 está completada con ocho capítulos revisados. La secuencia construye
 2. [Parámetros y Argumentos](../functions/02-parameters-and-arguments/README.es.md)
 3. [Valores de Retorno](../functions/03-return-values/README.es.md)
 4. [Alcance](../functions/04-scope/README.es.md)
+5. [Type Hints](../functions/05-type-hints/README.es.md)
 
-La Fase 5 está en progreso con cuatro capítulos revisados. El Capítulo 01 establece definición frente a llamada, el Capítulo 02 añade entradas obligatorias mediante parámetros y argumentos, el Capítulo 03 completa el primer recorrido de entrada y salida con valores de retorno, y el Capítulo 04 explica nombres locales y globales, búsqueda, sombreado, comportamiento de alcance de sentencias ordinarias, `NameError`, `UnboundLocalError` y revinculación global cautelosa. El siguiente capítulo planificado es Type Hints.
+La Fase 5 está en progreso con cinco capítulos revisados. El Capítulo 01 establece definición frente a llamada, el Capítulo 02 añade entradas obligatorias mediante parámetros y argumentos, el Capítulo 03 completa el primer recorrido de entrada y salida con valores de retorno, el Capítulo 04 explica nombres locales y globales y búsqueda, y el Capítulo 05 añade type hints de parámetros y retorno, anotaciones de colecciones, `str | None` y la diferencia entre información estática de tipos y enforcement en runtime. El siguiente capítulo planificado es Valores Predeterminados.
 
 ## Fase 6 · Comentarios, Documentación y Código Limpio ✅
 

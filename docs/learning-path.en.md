@@ -66,8 +66,9 @@ Phase 4 is complete with eight reviewed chapters. The sequence builds trustworth
 2. [Parameters and Arguments](../functions/02-parameters-and-arguments/README.md)
 3. [Return Values](../functions/03-return-values/README.md)
 4. [Scope](../functions/04-scope/README.md)
+5. [Type Hints](../functions/05-type-hints/README.md)
 
-Phase 5 is in progress with four reviewed chapters. Chapter 01 establishes definition versus call, Chapter 02 adds required inputs through parameters and arguments, Chapter 03 completes the first input-to-output round trip with return values, and Chapter 04 explains local and global names, lookup, shadowing, statement-level scope behavior, `NameError`, `UnboundLocalError`, and cautious global rebinding. The next planned chapter is Type Hints.
+Phase 5 is in progress with five reviewed chapters. Chapter 01 establishes definition versus call, Chapter 02 adds required inputs through parameters and arguments, Chapter 03 completes the first input-to-output round trip with return values, Chapter 04 explains local and global names and lookup, and Chapter 05 adds parameter and return type hints, collection annotations, `str | None`, and the distinction between static type information and runtime enforcement. The next planned chapter is Default Values.
 
 ## Phase 6 · Comments, Documentation, and Clean Code ✅
 
