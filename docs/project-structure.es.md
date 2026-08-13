@@ -238,14 +238,22 @@ python-study-guide/
 │   │       ├── countdown_state.py
 │   │       ├── doubling_until_limit.py
 │   │       └── study_target.py
-│   └── 07-break-continue-and-loop-else/
+│   ├── 07-break-continue-and-loop-else/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── break_search.py
+│   │       ├── continue_filtering.py
+│   │       └── loop_else_search.py
+│   └── 08-choosing-and-combining-program-flow/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── break_search.py
-│           ├── continue_filtering.py
-│           └── loop_else_search.py
+│           ├── search_with_position.py
+│           ├── select_and_classify.py
+│           └── state_driven_workflow.py
 ├── scripts/
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
@@ -310,7 +318,7 @@ python-study-guide/
 - `functions/`: futura ruta sobre funciones, parámetros, retornos, alcance y type hints.
 - `fundamentals/`: ruta completa de la Fase 1. Sus seis capítulos enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres, cómo reconocer e inspeccionar tipos de datos incorporados comunes y cómo convertir valores compatibles de forma deliberada, con explicaciones multilingües alineadas y ejemplos ejecutables.
 - `practical-projects/`: futuros proyectos pequeños que combinarán varios conceptos.
-- `program-flow/`: ruta de la Fase 4 en progreso. Los Capítulos 01–07 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else`, coincidencia de patrones estructurales, iteración elemento por elemento con `for`, progresiones numéricas con `range()`, iteración con posición usando `enumerate()`, iteración paralela con `zip()` incluida la validación explícita de longitudes iguales con `strict=True`, repetición guiada por estado con `while` y control deliberado de bucles con `break`, `continue` y `else` de bucle, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
+- `program-flow/`: ruta completa de la Fase 4. Los Capítulos 01–08 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else`, coincidencia de patrones estructurales, repetición guiada por iterables con `for`, progresiones numéricas con `range()`, iteración con posición usando `enumerate()`, iteración paralela con `zip()` incluida la validación explícita de longitudes iguales con `strict=True`, repetición guiada por estado con `while`, control deliberado de bucles con `break`, `continue` y `else` de bucle y cómo elegir y combinar herramientas de flujo del programa según la intención, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions.
 - `standard-library/`: futuras guías sobre módulos distribuidos con Python.
 - `strings-and-numbers/`: ruta completa de la Fase 2. Sus cuatro capítulos revisados cubren creación e indexación de strings, métodos comunes, comportamiento de enteros, punto flotante y booleanos, precisión de punto flotante y `round()`, `abs()`, `min()`, `max()` y `sum()` en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.

@@ -43,7 +43,7 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 5. [Sets and unique values](../collections/05-sets-and-unique-values/README.md)
 6. [Choosing the right collection](../collections/06-choosing-the-right-collection/README.md)
 
-## Phase 4 · Program Flow 🚧
+## Phase 4 · Program Flow ✅
 
 [Open the Program Flow section index](../program-flow/README.md)
 
@@ -54,8 +54,9 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 5. [`range()`, `enumerate()`, and `zip()`](../program-flow/05-range-enumerate-and-zip/README.md)
 6. [`while` Loops and State-Driven Repetition](../program-flow/06-while-loops-and-state-driven-repetition/README.md)
 7. [`break`, `continue`, and Loop `else`](../program-flow/07-break-continue-and-loop-else/README.md)
+8. [Choosing and Combining Program Flow](../program-flow/08-choosing-and-combining-program-flow/README.md)
 
-Phase 4 is in progress with seven reviewed chapters. Chapter 01 builds truth expressions, Chapter 02 uses them to choose which block executes, Chapter 03 adds structural pattern matching, Chapter 04 introduces item-by-item iteration with `for`, Chapter 05 adds numeric progressions, position-aware iteration, and parallel iteration with `range()`, `enumerate()`, and `zip()`, Chapter 06 introduces state-driven repetition with `while`, and Chapter 07 adds early loop termination, iteration skipping, and normal-completion handling with `break`, `continue`, and loop `else`. The next planned chapter is Chapter 08, Choosing and Combining Program Flow.
+Phase 4 is complete with eight reviewed chapters. The sequence builds trustworthy conditions, conditional branching, structural pattern matching, iterable-driven repetition, iteration helpers, state-driven repetition, deliberate loop control, and finally a decision framework for choosing and combining those tools by intent. The next planned learning phase is Phase 5: Functions.
 
 ## Phase 5 · Functions ⏳
 

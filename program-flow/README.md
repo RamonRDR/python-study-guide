@@ -10,7 +10,7 @@
 
 Program Flow is Phase 4 of the main Python Study Guide learning sequence.
 
-Earlier phases taught how values are created, inspected, transformed, and organized. This phase teaches how those values begin to influence **what runs, how many times it runs, and when repetition stops**.
+Earlier phases taught how values are created, inspected, transformed, and organized. This phase teaches how those values influence **what runs, how many times it runs, when repetition stops, and how flow tools can be combined deliberately**.
 
 ## Prerequisite
 
@@ -36,7 +36,7 @@ You should already be comfortable with:
 | [05. `range()`, `enumerate()`, and `zip()`](05-range-enumerate-and-zip/README.md) | Count, track positions, and coordinate iteration | Available |
 | [06. `while` Loops and State-Driven Repetition](06-while-loops-and-state-driven-repetition/README.md) | Repeat while a condition remains truthy and state evolves | Available |
 | [07. `break`, `continue`, and Loop `else`](07-break-continue-and-loop-else/README.md) | Stop early, skip one iteration, and distinguish normal loop completion from `break` | Available |
-| 08. Choosing and Combining Program Flow | Select and combine flow tools by intent | Planned |
+| [08. Choosing and Combining Program Flow](08-choosing-and-combining-program-flow/README.md) | Select and combine flow tools by intent | Available |
 
 Study the chapters in order when following the complete beginner path.
 
@@ -51,7 +51,7 @@ condition = a question Python can interpret for truth
 decision = what the program does because of that condition
 ```
 
-Chapter 01 focuses on the first idea. Chapter 02 adds the second by using those conditions to select which block executes. Chapter 03 then introduces structural pattern matching as another way to select behavior when the shape or pattern of a value is the important question. Chapter 04 shifts from selection to repetition by processing items from an iterable one at a time. Chapter 05 adds helpers for numeric progressions, positions, and parallel iteration. Chapter 06 adds repetition controlled by changing state and a condition that is re-evaluated before every iteration. Chapter 07 adds deliberate early exit, iteration skipping, and loop completion handling with `break`, `continue`, and loop `else`.
+Chapter 01 focuses on the first idea. Chapter 02 adds the second by using those conditions to select which block executes. Chapter 03 introduces structural pattern matching when the shape or pattern of a value is the important question. Chapter 04 shifts from selection to iterable-driven repetition. Chapter 05 adds helpers for numeric progressions, positions, and parallel iteration. Chapter 06 adds repetition controlled by changing state. Chapter 07 adds deliberate early exit, iteration skipping, and loop-completion handling. Chapter 08 closes the phase by choosing and combining all of those tools according to intent.
 
 ## Phase progression
 
@@ -103,4 +103,6 @@ After Chapter 05, continue with [06. `while` Loops and State-Driven Repetition](
 
 After Chapter 06, continue with [07. `break`, `continue`, and Loop `else`](07-break-continue-and-loop-else/README.md).
 
-The next planned chapter closes the phase by choosing and combining program-flow tools according to intent.
+After Chapter 07, finish the phase with [08. Choosing and Combining Program Flow](08-choosing-and-combining-program-flow/README.md).
+
+**Phase 4 is complete with eight reviewed chapters.** The next planned learning phase is Phase 5: Functions.
