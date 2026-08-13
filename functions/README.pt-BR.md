@@ -33,7 +33,7 @@ Você já deve estar confortável com:
 | Capítulo | Foco principal | Status |
 |---|---|---|
 | [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md) | Criar comportamento nomeado com `def`, chamar, reutilizar e rastrear a execução | Disponível |
-| 02. Parâmetros e Argumentos | Receber valores de entrada pela interface da função | Planejado |
+| [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md) | Receber entradas obrigatórias com argumentos posicionais e nomeados básicos | Disponível |
 | 03. Valores de Retorno | Enviar resultados úteis de volta ao chamador | Planejado |
 | 04. Escopo | Entender onde nomes são visíveis e como a busca funciona | Planejado |
 | 05. Type Hints | Descrever entradas e saídas esperadas sem alterar sozinhos o comportamento em runtime | Planejado |
@@ -55,7 +55,7 @@ call       = execute that behavior now
 
 O Capítulo 01 isola essas ideias antes de adicionar troca de dados.
 
-O Capítulo 02 introduzirá parâmetros e argumentos. O Capítulo 03 adicionará valores de retorno. Os capítulos seguintes construirão escopo, type hints, padrões, coleta flexível de argumentos, composição e fluxo explícito de dados sobre o mesmo modelo de definição/chamada.
+O Capítulo 02 adiciona parâmetros obrigatórios, argumentos posicionais e argumentos nomeados básicos para que uma função trabalhe com entradas diferentes. O Capítulo 03 adicionará valores de retorno. Os capítulos seguintes construirão escopo, type hints, padrões, coleta flexível de argumentos, composição e fluxo explícito de dados sobre o mesmo modelo de definição/chamada.
 
 ## Progressão da fase
 
@@ -97,8 +97,8 @@ Esses conceitos aparecem depois ou exigem tratamento próprio.
 
 ## Comece aqui
 
-Comece com [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md).
+Comece com [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md) e depois continue com [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md).
 
-Depois do Capítulo 01, o próximo capítulo planejado é **02. Parâmetros e Argumentos**.
+Depois do Capítulo 02, o próximo capítulo planejado é **03. Valores de Retorno**.
 
-**A Fase 5 agora está em andamento com um capítulo revisado disponível.**
+**A Fase 5 agora está em andamento com dois capítulos revisados disponíveis.**

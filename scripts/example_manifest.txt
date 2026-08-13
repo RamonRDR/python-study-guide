@@ -81,3 +81,6 @@ program-flow/08-choosing-and-combining-program-flow/examples/state_driven_workfl
 functions/01-defining-and-calling-functions/examples/define_and_call.py
 functions/01-defining-and-calling-functions/examples/execution_order.py
 functions/01-defining-and-calling-functions/examples/repeated_calls.py
+functions/02-parameters-and-arguments/examples/book_details.py
+functions/02-parameters-and-arguments/examples/greet_people.py
+functions/02-parameters-and-arguments/examples/score_status.py

@@ -33,7 +33,7 @@ Ya deberías sentirte cómodo con:
 | Capítulo | Enfoque principal | Estado |
 |---|---|---|
 | [01. Definir y Llamar Funciones](01-defining-and-calling-functions/README.es.md) | Crear comportamiento con nombre usando `def`, llamarlo, reutilizarlo y seguir la ejecución | Disponible |
-| 02. Parámetros y Argumentos | Recibir valores de entrada mediante la interfaz de la función | Planeado |
+| [02. Parámetros y Argumentos](02-parameters-and-arguments/README.es.md) | Recibir entradas obligatorias con argumentos posicionales y por palabra clave básicos | Disponible |
 | 03. Valores de Retorno | Enviar resultados útiles de vuelta al llamador | Planeado |
 | 04. Alcance | Entender dónde son visibles los nombres y cómo funciona su búsqueda | Planeado |
 | 05. Type Hints | Describir entradas y salidas esperadas sin cambiar por sí solos el comportamiento en runtime | Planeado |
@@ -55,7 +55,7 @@ call       = execute that behavior now
 
 El Capítulo 01 aísla esas ideas antes de añadir intercambio de datos.
 
-El Capítulo 02 introducirá parámetros y argumentos. El Capítulo 03 añadirá valores de retorno. Los capítulos posteriores construirán alcance, type hints, valores predeterminados, recolección flexible de argumentos, composición y flujo explícito de datos sobre el mismo modelo de definición/llamada.
+El Capítulo 02 añade parámetros obligatorios, argumentos posicionales y argumentos por palabra clave básicos para que una función trabaje con entradas diferentes. El Capítulo 03 añadirá valores de retorno. Los capítulos posteriores construirán alcance, type hints, valores predeterminados, recolección flexible de argumentos, composición y flujo explícito de datos sobre el mismo modelo de definición/llamada.
 
 ## Progresión de la fase
 
@@ -97,8 +97,8 @@ Esos conceptos aparecen después o requieren tratamiento propio.
 
 ## Empieza aquí
 
-Comienza con [01. Definir y Llamar Funciones](01-defining-and-calling-functions/README.es.md).
+Comienza con [01. Definir y Llamar Funciones](01-defining-and-calling-functions/README.es.md) y luego continúa con [02. Parámetros y Argumentos](02-parameters-and-arguments/README.es.md).
 
-Después del Capítulo 01, el siguiente capítulo planeado es **02. Parámetros y Argumentos**.
+Después del Capítulo 02, el siguiente capítulo planeado es **03. Valores de Retorno**.
 
-**La Fase 5 ahora está en progreso con un capítulo revisado disponible.**
+**La Fase 5 ahora está en progreso con dos capítulos revisados disponibles.**
