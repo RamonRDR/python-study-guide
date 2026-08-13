@@ -23,6 +23,8 @@ function body still runs as ordinary Python
 
 **Tiempo estimado de estudio:** 75–100 minutos.
 
+**Versión de Python:** este capítulo requiere **Python 3.10 o posterior**.
+
 ## Objetivos de aprendizaje
 
 Al final de este capítulo, deberías poder:

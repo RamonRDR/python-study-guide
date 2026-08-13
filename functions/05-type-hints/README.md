@@ -23,6 +23,8 @@ function body still runs as ordinary Python
 
 **Estimated study time:** 75–100 minutes.
 
+**Python version:** This chapter requires **Python 3.10 or newer**.
+
 ## Learning objectives
 
 By the end of this chapter, you should be able to:
