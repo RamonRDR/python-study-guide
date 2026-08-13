@@ -19,14 +19,14 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 2. Textos e números | Concluída | Quatro capítulos revisados cobrem criação de strings, métodos comuns, comportamento numérico e booleano, precisão de ponto flutuante e funções numéricas embutidas |
 | 3. Coleções | Concluída | Seis capítulos revisados cobrem listas, tuplas, dicionários, conjuntos e escolha da coleção pela intenção |
 | 4. Fluxo do programa | Concluída | Oito capítulos revisados cobrem condições, ramificações, correspondência de padrões estruturais, `for`, auxiliares de iteração, `while`, controle de loops e escolha e combinação das ferramentas de fluxo pela intenção |
-| 5. Funções | Em andamento | Um capítulo revisado introduz `def`, chamadas de função, reuso e ordem de execução |
+| 5. Funções | Em andamento | Dois capítulos revisados cobrem `def`, chamadas, parâmetros obrigatórios, argumentos posicionais, argumentos nomeados básicos e fluxo de entrada |
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Planejada | Conteúdo ainda não iniciado |
 | 8. Biblioteca padrão | Planejada | Conteúdo ainda não iniciado |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3, 4 e 6 estão concluídas. A Fase 5: Funções agora está em andamento e começa pelo modelo definição versus chamada antes de introduzir troca de dados com parâmetros e valores de retorno. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2, 3, 4 e 6 estão concluídas. A Fase 5: Funções está em andamento com o modelo definição versus chamada e o fluxo de entradas obrigatórias já estabelecidos; valores de retorno são o próximo passo. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -98,7 +98,7 @@ A Fase 4 constrói intencionalmente condições confiáveis primeiro, usa essas 
 Consulte a [trilha de aprendizagem da seção](../functions/README.pt-BR.md).
 
 - [x] [Definindo e chamando funções](../functions/01-defining-and-calling-functions/README.pt-BR.md)
-- [ ] Parâmetros e argumentos
+- [x] [Parâmetros e argumentos](../functions/02-parameters-and-arguments/README.pt-BR.md)
 - [ ] Valores de retorno
 - [ ] Escopo
 - [ ] Type hints
@@ -107,7 +107,7 @@ Consulte a [trilha de aprendizagem da seção](../functions/README.pt-BR.md).
 - [ ] Funções trabalhando juntas
 - [ ] Fluxo de dados entre funções
 
-A Fase 5 está em andamento. O Capítulo 01 estabelece `def`, chamadas, reuso, ordem de execução, nomenclatura, `pass`, `None` implícito e a conexão entre corpos de funções e as ferramentas de fluxo aprendidas anteriormente. Parâmetros e argumentos são o próximo passo.
+A Fase 5 está em andamento. O Capítulo 01 estabelece `def`, chamadas, reuso, ordem de execução, nomenclatura, `pass`, `None` implícito e a conexão entre corpos de funções e as ferramentas de fluxo aprendidas anteriormente. O Capítulo 02 adiciona parâmetros obrigatórios, argumentos posicionais, argumentos nomeados básicos, expressões como argumentos, erros de chamada e rastreamento do fluxo de entrada. Valores de retorno são o próximo passo.
 
 ## Fase 6: Comentários, documentação e código limpo
 

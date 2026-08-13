@@ -63,8 +63,9 @@ Phase 4 is complete with eight reviewed chapters. The sequence builds trustworth
 [Open the Functions section index](../functions/README.md)
 
 1. [Defining and Calling Functions](../functions/01-defining-and-calling-functions/README.md)
+2. [Parameters and Arguments](../functions/02-parameters-and-arguments/README.md)
 
-Phase 5 is in progress with its first chapter. Chapter 01 establishes the definition-versus-call model, basic reuse, execution order, function naming, and the connection between functions and the program-flow tools from Phase 4. The next planned chapter is Parameters and Arguments.
+Phase 5 is in progress with two reviewed chapters. Chapter 01 establishes the definition-versus-call model, basic reuse, execution order, function naming, and the connection between functions and the program-flow tools from Phase 4. Chapter 02 adds required parameters, positional arguments, basic keyword arguments, and input-flow tracing. The next planned chapter is Return Values.
 
 ## Phase 6 · Comments, Documentation, and Clean Code ✅
 

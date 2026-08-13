@@ -143,14 +143,22 @@ python-study-guide/
 │   ├── README.md
 │   ├── README.pt-BR.md
 │   ├── README.es.md
-│   └── 01-defining-and-calling-functions/
+│   ├── 01-defining-and-calling-functions/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── define_and_call.py
+│   │       ├── execution_order.py
+│   │       └── repeated_calls.py
+│   └── 02-parameters-and-arguments/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── define_and_call.py
-│           ├── execution_order.py
-│           └── repeated_calls.py
+│           ├── book_details.py
+│           ├── greet_people.py
+│           └── score_status.py
 ├── fundamentals/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -326,7 +334,7 @@ python-study-guide/
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.
-- `functions/`: Phase 5 learning path in progress. Chapter 01 introduces defining and calling functions, reuse, execution order, naming, `pass`, implicit `None`, and function bodies that use familiar program-flow tools, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
+- `functions/`: Phase 5 learning path in progress. Chapters 01–02 cover defining and calling functions, reuse, execution order, naming, `pass`, implicit `None`, required parameters, positional and basic keyword arguments, argument expressions, call errors, and input-flow tracing, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
