@@ -159,14 +159,22 @@ python-study-guide/
 │   │       ├── book_details.py
 │   │       ├── greet_people.py
 │   │       └── score_status.py
-│   └── 03-return-values/
+│   ├── 03-return-values/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── calculate_total.py
+│   │       ├── classify_score.py
+│   │       └── find_first_even.py
+│   └── 04-scope/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── calculate_total.py
-│           ├── classify_score.py
-│           └── find_first_even.py
+│           ├── local_and_global_names.py
+│           ├── separate_function_calls.py
+│           └── shadowing_names.py
 ├── fundamentals/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -342,7 +350,7 @@ python-study-guide/
 - `docs/`: trilhas completas de estudos, roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros.
-- `functions/`: trilha da Fase 5 em andamento. Os Capítulos 01–03 cobrem definição e chamada de funções, reuso, ordem de execução, nomenclatura, `pass`, `None` implícito, parâmetros obrigatórios, argumentos posicionais e nomeados básicos, expressões como argumentos, erros de chamada, rastreamento do fluxo de entrada, semântica de `return`, reutilização de resultados, `print()` versus `return`, retornos por ramificação e antecipados, comportamento de `return` em loops e uso deliberado de `None`, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
+- `functions/`: trilha da Fase 5 em andamento. Os Capítulos 01–04 cobrem definição e chamada de funções, entradas obrigatórias, valores retornados, nomes locais e globais, espaços de nomes locais por chamada, busca, sombreamento, comportamento de escopo de instruções comuns, `NameError`, `UnboundLocalError` e uso cauteloso de `global`, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
 - `fundamentals/`: trilha completa da Fase 1. Seus seis capítulos ensinam como o Python executa um programa, como usar `print()` e `input()`, como funcionam atribuição e nomes, como reconhecer e inspecionar tipos de dados embutidos comuns e como converter valores compatíveis de forma deliberada, com explicações multilíngues alinhadas e exemplos executáveis.
 - `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
 - `program-flow/`: trilha completa da Fase 4. Os Capítulos 01–08 ensinam condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, ramificação condicional com `if`, `elif` e `else`, correspondência de padrões estruturais, repetição guiada por iteráveis com `for`, progressões numéricas com `range()`, iteração com posição usando `enumerate()`, iteração paralela com `zip()` incluindo validação explícita de comprimentos iguais com `strict=True`, repetição guiada por estado com `while`, controle deliberado de loops com `break`, `continue` e `else` de loop e como escolher e combinar ferramentas de fluxo do programa de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
