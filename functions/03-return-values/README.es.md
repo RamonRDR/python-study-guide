@@ -138,6 +138,8 @@ Salida:
 20
 ```
 
+Una variable intermedia con un nombre claro suele facilitar el seguimiento del valor mientras aprendes o depuras.
+
 ## 5. Las funciones pueden retornar valores normales de Python
 
 ```python
@@ -234,7 +236,7 @@ def describe_quantity(quantity):
     return "quantity accepted"
 ```
 
-El caso especial sale primero y deja claro el camino normal.
+El caso especial sale primero y deja claro el camino normal. Usa retornos anticipados cuando mejoren la claridad.
 
 ## 10. `return` dentro de un bucle termina toda la función
 
@@ -466,6 +468,8 @@ def count_even(numbers):
     return count
 ```
 
+La indentación cambia el momento en que la función termina.
+
 ## 20. Error común: un `None` implícito accidental
 
 ```python
@@ -491,6 +495,8 @@ def get_level(score):
 
     return "low"
 ```
+
+Diseña deliberadamente los posibles resultados de la función.
 
 ## 21. Sigue el recorrido completo de ida y vuelta
 
