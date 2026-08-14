@@ -102,3 +102,6 @@ functions/07-args-and-kwargs/examples/display_settings.py
 functions/08-functions-working-together/examples/build_score_report.py
 functions/08-functions-working-together/examples/build_study_summary.py
 functions/08-functions-working-together/examples/prepare_greeting.py
+functions/09-data-flow-between-functions/examples/build_learning_report.py
+functions/09-data-flow-between-functions/examples/rebinding_and_mutation.py
+functions/09-data-flow-between-functions/examples/trace_score_pipeline.py

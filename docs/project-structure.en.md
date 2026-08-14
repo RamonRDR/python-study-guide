@@ -199,14 +199,22 @@ python-study-guide/
 │   │       ├── calculate_average.py
 │   │       ├── describe_session.py
 │   │       └── display_settings.py
-│   └── 08-functions-working-together/
+│   ├── 08-functions-working-together/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── build_score_report.py
+│   │       ├── build_study_summary.py
+│   │       └── prepare_greeting.py
+│   └── 09-data-flow-between-functions/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── build_score_report.py
-│           ├── build_study_summary.py
-│           └── prepare_greeting.py
+│           ├── build_learning_report.py
+│           ├── rebinding_and_mutation.py
+│           └── trace_score_pipeline.py
 ├── fundamentals/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -382,7 +390,7 @@ python-study-guide/
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.
-- `functions/`: Phase 5 learning path in progress. Chapters 01–08 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, default values including definition-time evaluation and mutable-default safety, variable-length positional and keyword argument collection with `*args` and `**kwargs`, and composition through helper and coordinating functions with explicit dependencies via parameters and returns plus simple call graphs, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
+- `functions/`: complete Phase 5 learning path. Chapters 01–09 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, default values including definition-time evaluation and mutable-default safety, variable-length positional and keyword argument collection with `*args` and `**kwargs`, composition through helper and coordinating functions with explicit dependencies and simple call graphs, and explicit data-flow tracing across calls including parameter bindings, rebinding versus mutation, `None`, tuple results, and return-based handoffs, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.

@@ -58,7 +58,7 @@ Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores p
 
 La Fase 4 está completada con ocho capítulos revisados. La secuencia construye condiciones confiables, ramificación condicional, coincidencia de patrones estructurales, repetición guiada por iterables, ayudas de iteración, repetición guiada por estado, control deliberado de bucles y, finalmente, un modelo de decisión para elegir y combinar esas herramientas según la intención.
 
-## Fase 5 · Funciones 🚧
+## Fase 5 · Funciones ✅
 
 [Abrir el índice de la sección Funciones](../functions/README.es.md)
 
@@ -70,12 +70,13 @@ La Fase 4 está completada con ocho capítulos revisados. La secuencia construye
 6. [Valores Predeterminados](../functions/06-default-values/README.es.md)
 7. [`*args` y `**kwargs`](../functions/07-args-and-kwargs/README.es.md)
 8. [Funciones Trabajando Juntas](../functions/08-functions-working-together/README.es.md)
+9. [Flujo de Datos Entre Funciones](../functions/09-data-flow-between-functions/README.es.md)
 
-La Fase 5 está en progreso con ocho capítulos revisados. El Capítulo 01 establece definición frente a llamada, el Capítulo 02 añade entradas obligatorias mediante parámetros y argumentos, el Capítulo 03 completa el primer recorrido de entrada y salida con valores de retorno, el Capítulo 04 explica nombres locales y globales y búsqueda, el Capítulo 05 añade type hints de parámetros y retorno, anotaciones de colecciones, `str | None` y la diferencia entre información estática de tipos y enforcement en runtime, el Capítulo 06 añade valores predeterminados, reemplazos selectivos, evaluación al definir la función y manejo seguro de valores mutables con `None`, el Capítulo 07 añade recolección de cantidades variables de argumentos posicionales y por palabra clave con `*args` y `**kwargs`, sus modelos de tupla/diccionario, firmas mixtas simples, type hints para valores recogidos y el límite entre recolección en la definición y desempaquetado en la llamada, y el Capítulo 08 compone funciones auxiliares y coordinadoras, pasa valores retornados entre pasos, mantiene explícitas las dependencias, combina funciones con condiciones y bucles e introduce grafos simples de llamadas. El siguiente capítulo planificado es Flujo de Datos Entre Funciones.
+La Fase 5 está completada con nueve capítulos revisados. El Capítulo 01 establece definición frente a llamada, el Capítulo 02 añade entradas obligatorias mediante parámetros y argumentos, el Capítulo 03 completa el primer recorrido de entrada y salida con valores de retorno, el Capítulo 04 explica nombres locales y globales y búsqueda, el Capítulo 05 añade type hints de parámetros y retorno, anotaciones de colecciones, `str | None` y la diferencia entre información estática de tipos y enforcement en runtime, el Capítulo 06 añade valores predeterminados, reemplazos selectivos, evaluación al definir la función y manejo seguro de valores mutables con `None`, el Capítulo 07 añade recolección de cantidades variables de argumentos posicionales y por palabra clave con `*args` y `**kwargs`, sus modelos de tupla/diccionario, firmas mixtas simples, type hints para valores recogidos y el límite entre recolección en la definición y desempaquetado en la llamada, el Capítulo 08 compone funciones auxiliares y coordinadoras, pasa valores retornados entre pasos, mantiene explícitas las dependencias, combina funciones con condiciones y bucles e introduce grafos simples de llamadas, y el Capítulo 09 cierra la fase con seguimiento llamador-parámetro-retorno, vínculos locales, reasignación frente a mutación, resultados en tupla y `None`, pipelines explícitos y seguimientos de flujo de datos.
 
 ## Fase 6 · Comentarios, Documentación y Código Limpio ✅
 
-Esta fase ya está disponible, pero quienes sigan el currículo desde cero deberían continuar respetando el orden numérico de la ruta.
+Esta fase ya está disponible y es la siguiente fase recomendada después de Funciones para quienes siguen el currículo desde cero.
 
 [Abrir el índice de la sección Comentarios y Documentación](../comments-and-documentation/README.es.md)
 

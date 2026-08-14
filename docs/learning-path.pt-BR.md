@@ -58,7 +58,7 @@ Se você está começando do zero, siga a ordem das fases. Algumas fases posteri
 
 A Fase 4 está concluída com oito capítulos revisados. A sequência constrói condições confiáveis, ramificações condicionais, correspondência de padrões estruturais, repetição guiada por iteráveis, auxiliares de iteração, repetição guiada por estado, controle deliberado de loops e, por fim, um modelo de decisão para escolher e combinar essas ferramentas de acordo com a intenção.
 
-## Fase 5 · Funções 🚧
+## Fase 5 · Funções ✅
 
 [Abrir o índice da seção Funções](../functions/README.pt-BR.md)
 
@@ -70,12 +70,13 @@ A Fase 4 está concluída com oito capítulos revisados. A sequência constrói 
 6. [Valores Padrão](../functions/06-default-values/README.pt-BR.md)
 7. [`*args` e `**kwargs`](../functions/07-args-and-kwargs/README.pt-BR.md)
 8. [Funções Trabalhando Juntas](../functions/08-functions-working-together/README.pt-BR.md)
+9. [Fluxo de Dados Entre Funções](../functions/09-data-flow-between-functions/README.pt-BR.md)
 
-A Fase 5 está em andamento com oito capítulos revisados. O Capítulo 01 estabelece definição versus chamada, o Capítulo 02 adiciona entradas obrigatórias por parâmetros e argumentos, o Capítulo 03 completa a primeira viagem de entrada e saída com valores de retorno, o Capítulo 04 explica nomes locais e globais e busca, o Capítulo 05 adiciona type hints de parâmetros e retorno, anotações de coleções, `str | None` e a diferença entre informação estática de tipos e enforcement em runtime, o Capítulo 06 adiciona valores padrão, substituições seletivas, avaliação no momento da definição e tratamento seguro de padrões mutáveis com `None`, o Capítulo 07 adiciona coleta de quantidade variável de argumentos posicionais e nomeados com `*args` e `**kwargs`, seus modelos de tupla/dicionário, assinaturas mistas simples, type hints para valores coletados e o limite entre coleta na definição e desempacotamento na chamada, e o Capítulo 08 compõe funções auxiliares e coordenadoras, passa valores retornados entre etapas, mantém dependências explícitas, combina funções com condições e loops e introduz grafos simples de chamadas. O próximo capítulo planejado é Fluxo de Dados Entre Funções.
+A Fase 5 está concluída com nove capítulos revisados. O Capítulo 01 estabelece definição versus chamada, o Capítulo 02 adiciona entradas obrigatórias por parâmetros e argumentos, o Capítulo 03 completa a primeira viagem de entrada e saída com valores de retorno, o Capítulo 04 explica nomes locais e globais e busca, o Capítulo 05 adiciona type hints de parâmetros e retorno, anotações de coleções, `str | None` e a diferença entre informação estática de tipos e enforcement em runtime, o Capítulo 06 adiciona valores padrão, substituições seletivas, avaliação no momento da definição e tratamento seguro de padrões mutáveis com `None`, o Capítulo 07 adiciona coleta de quantidade variável de argumentos posicionais e nomeados com `*args` e `**kwargs`, seus modelos de tupla/dicionário, assinaturas mistas simples, type hints para valores coletados e o limite entre coleta na definição e desempacotamento na chamada, o Capítulo 08 compõe funções auxiliares e coordenadoras, passa valores retornados entre etapas, mantém dependências explícitas, combina funções com condições e loops e introduz grafos simples de chamadas, e o Capítulo 09 encerra a fase com rastreamento chamador-parâmetro-retorno, vínculos locais, reatribuição versus mutação, resultados em tupla e `None`, pipelines explícitos e rastreamentos de fluxo de dados.
 
 ## Fase 6 · Comentários, Documentação e Código Limpo ✅
 
-Esta fase já está disponível, mas quem estiver seguindo o currículo desde o zero deve continuar respeitando a ordem numérica da trilha.
+Esta fase já está disponível e é a próxima fase recomendada depois de Funções para quem segue o currículo desde o zero.
 
 [Abrir o índice da seção Comentários e Documentação](../comments-and-documentation/README.pt-BR.md)
 
