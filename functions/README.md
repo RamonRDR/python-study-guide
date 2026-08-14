@@ -37,7 +37,7 @@ You should already be comfortable with:
 | [03. Return Values](03-return-values/README.md) | Send useful results back to the caller and trace complete input-to-output flow | Available |
 | [04. Scope](04-scope/README.md) | Understand local and global names, lookup, shadowing, and explicit global rebinding | Available |
 | [05. Type Hints](05-type-hints/README.md) | Describe expected inputs and outputs without enforcing types at runtime by themselves | Available |
-| 06. Default Values | Design optional arguments safely and clearly | Planned |
+| [06. Default Values](06-default-values/README.md) | Design optional arguments safely, including definition-time defaults and mutable-default safety | Available |
 | 07. `*args` and `**kwargs` | Receive variable numbers of positional and keyword arguments | Planned |
 | 08. Functions Working Together | Compose functions while keeping responsibilities clear | Planned |
 | 09. Data Flow Between Functions | Trace inputs, transformations, outputs, and ownership across calls | Planned |
@@ -55,7 +55,7 @@ call       = execute that behavior now
 
 Chapter 01 isolates those ideas before adding data exchange.
 
-Chapter 02 adds required parameters, positional arguments, and basic keyword arguments so one function can work with different inputs. Chapter 03 completes the first data round trip with return values, `None`, branch-specific returns, and the distinction between returning and printing. Chapter 04 adds local and global scope, name lookup, shadowing, statement-level scope behavior, and cautious use of `global`. Chapter 05 adds parameter and return type hints, collection annotations, unions with `None`, and the key distinction between static type information and runtime enforcement. Later chapters build defaults, flexible argument collection, composition, and explicit data flow on top of the same model.
+Chapter 02 adds required parameters, positional arguments, and basic keyword arguments so one function can work with different inputs. Chapter 03 completes the first data round trip with return values, `None`, branch-specific returns, and the distinction between returning and printing. Chapter 04 adds local and global scope, name lookup, shadowing, statement-level scope behavior, and cautious use of `global`. Chapter 05 adds parameter and return type hints, collection annotations, unions with `None`, and the distinction between static type information and runtime enforcement. Chapter 06 adds default values, selective overrides, definition-time evaluation, and the safe `None` pattern for fresh mutable objects. Later chapters build flexible argument collection, composition, and explicit data flow on top of the same model.
 
 ## Phase progression
 
@@ -98,8 +98,8 @@ Those concepts appear later or require dedicated treatment.
 
 ## Start here
 
-Begin with [01. Defining and Calling Functions](01-defining-and-calling-functions/README.md), continue with [02. Parameters and Arguments](02-parameters-and-arguments/README.md), then study [03. Return Values](03-return-values/README.md), [04. Scope](04-scope/README.md), and [05. Type Hints](05-type-hints/README.md).
+Begin with [01. Defining and Calling Functions](01-defining-and-calling-functions/README.md), continue with [02. Parameters and Arguments](02-parameters-and-arguments/README.md), then study [03. Return Values](03-return-values/README.md), [04. Scope](04-scope/README.md), [05. Type Hints](05-type-hints/README.md), and [06. Default Values](06-default-values/README.md).
 
-After Chapter 05, the next planned chapter is **06. Default Values**.
+After Chapter 06, the next planned chapter is **07. `*args` and `**kwargs`**.
 
-**Phase 5 is now in progress with five reviewed chapters available.**
+**Phase 5 is now in progress with six reviewed chapters available.**

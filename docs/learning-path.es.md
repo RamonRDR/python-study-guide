@@ -67,8 +67,9 @@ La Fase 4 está completada con ocho capítulos revisados. La secuencia construye
 3. [Valores de Retorno](../functions/03-return-values/README.es.md)
 4. [Alcance](../functions/04-scope/README.es.md)
 5. [Type Hints](../functions/05-type-hints/README.es.md)
+6. [Valores Predeterminados](../functions/06-default-values/README.es.md)
 
-La Fase 5 está en progreso con cinco capítulos revisados. El Capítulo 01 establece definición frente a llamada, el Capítulo 02 añade entradas obligatorias mediante parámetros y argumentos, el Capítulo 03 completa el primer recorrido de entrada y salida con valores de retorno, el Capítulo 04 explica nombres locales y globales y búsqueda, y el Capítulo 05 añade type hints de parámetros y retorno, anotaciones de colecciones, `str | None` y la diferencia entre información estática de tipos y enforcement en runtime. El siguiente capítulo planificado es Valores Predeterminados.
+La Fase 5 está en progreso con seis capítulos revisados. El Capítulo 01 establece definición frente a llamada, el Capítulo 02 añade entradas obligatorias mediante parámetros y argumentos, el Capítulo 03 completa el primer recorrido de entrada y salida con valores de retorno, el Capítulo 04 explica nombres locales y globales y búsqueda, el Capítulo 05 añade type hints de parámetros y retorno, anotaciones de colecciones, `str | None` y la diferencia entre información estática de tipos y enforcement en runtime, y el Capítulo 06 añade valores predeterminados, reemplazos selectivos, evaluación al definir la función y manejo seguro de valores mutables con `None`. El siguiente capítulo planificado es `*args` y `**kwargs`.
 
 ## Fase 6 · Comentarios, Documentación y Código Limpio ✅
 

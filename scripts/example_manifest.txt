@@ -93,3 +93,6 @@ functions/04-scope/examples/shadowing_names.py
 functions/05-type-hints/examples/annotated_greeting.py
 functions/05-type-hints/examples/collection_summary.py
 functions/05-type-hints/examples/runtime_does_not_enforce.py
+functions/06-default-values/examples/greet_with_style.py
+functions/06-default-values/examples/safe_list_default.py
+functions/06-default-values/examples/shipping_quote.py

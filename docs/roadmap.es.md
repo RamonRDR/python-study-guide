@@ -19,14 +19,14 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 2. Textos y números | Completada | Cuatro capítulos revisados cubren creación de strings, métodos comunes, comportamiento numérico y booleano, precisión de punto flotante y funciones numéricas incorporadas |
 | 3. Colecciones | Completada | Seis capítulos revisados cubren listas, tuplas, diccionarios, conjuntos y elección de colección según la intención |
 | 4. Flujo del programa | Completada | Ocho capítulos revisados cubren condiciones, ramificaciones, coincidencia de patrones estructurales, `for`, ayudas de iteración, `while`, control de bucles y elección y combinación de herramientas de flujo según la intención |
-| 5. Funciones | En progreso | Cinco capítulos revisados cubren `def`, llamadas, entradas obligatorias, valores retornados, alcance y type hints para interfaces de funciones |
+| 5. Funciones | En progreso | Seis capítulos revisados cubren `def`, llamadas, entradas obligatorias, valores retornados, alcance, type hints y valores predeterminados seguros |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
 | 7. Errores, archivos y módulos | Planificada | Contenido todavía no iniciado |
 | 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3, 4 y 6 están completadas. La Fase 5: Funciones está en progreso con definición, llamada, flujo de entrada, flujo de retorno, alcance e interfaces con type hints ya establecidos; valores predeterminados son el siguiente paso. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1, 2, 3, 4 y 6 están completadas. La Fase 5: Funciones está en progreso con definición, llamada, flujo de entrada, flujo de retorno, alcance, interfaces con type hints y comportamiento de valores predeterminados ya establecidos; `*args` y `**kwargs` son el siguiente paso. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -102,12 +102,12 @@ Consulta la [ruta de aprendizaje de la sección](../functions/README.es.md).
 - [x] [Valores de retorno](../functions/03-return-values/README.es.md)
 - [x] [Alcance](../functions/04-scope/README.es.md)
 - [x] [Type hints](../functions/05-type-hints/README.es.md)
-- [ ] Valores predeterminados
+- [x] [Valores predeterminados](../functions/06-default-values/README.es.md)
 - [ ] `*args` y `**kwargs`
 - [ ] Funciones trabajando juntas
 - [ ] Flujo de datos entre funciones
 
-La Fase 5 está en progreso. El Capítulo 01 establece `def`, llamadas, reutilización, orden de ejecución, nombres, `pass`, `None` implícito y la conexión con el flujo del programa. El Capítulo 02 añade parámetros obligatorios, argumentos posicionales y por palabra clave básicos, expresiones como argumentos, errores de llamada y seguimiento del flujo de entrada. El Capítulo 03 añade `return`, resultados reutilizables, retornos por rama y anticipados, `None` y retornos en tupla. El Capítulo 04 añade nombres locales y globales, namespaces locales por llamada, búsqueda, sombreado, `NameError`, `UnboundLocalError` y uso cauteloso de `global`. El Capítulo 05 añade anotaciones de parámetros y retorno, hints de tipos incorporados y colecciones, `-> None`, `str | None`, metadatos de anotaciones y la diferencia entre información estática de tipos, validación en runtime y conversión. Valores predeterminados son el siguiente paso.
+La Fase 5 está en progreso. El Capítulo 01 establece `def`, llamadas, reutilización, orden de ejecución, nombres, `pass`, `None` implícito y la conexión con el flujo del programa. El Capítulo 02 añade parámetros obligatorios, argumentos posicionales y por palabra clave básicos, expresiones como argumentos, errores de llamada y seguimiento del flujo de entrada. El Capítulo 03 añade `return`, resultados reutilizables, retornos por rama y anticipados, `None` y retornos en tupla. El Capítulo 04 añade nombres locales y globales, namespaces locales por llamada, búsqueda, sombreado, `NameError`, `UnboundLocalError` y uso cauteloso de `global`. El Capítulo 05 añade anotaciones de parámetros y retorno, hints de tipos incorporados y colecciones, `-> None`, `str | None`, metadatos de anotaciones y la diferencia entre información estática de tipos, validación en runtime y conversión. El Capítulo 06 añade valores predeterminados, reemplazos posicionales y por palabra clave selectivos, evaluación al definir la función, la trampa de valores mutables y el patrón seguro con `None` para crear objetos mutables nuevos. `*args` y `**kwargs` son el siguiente paso.
 
 ## Fase 6: Comentarios, documentación y código limpio
 
@@ -161,3 +161,29 @@ La Fase 6 está oficialmente completada y proporciona el modelo editorial y de c
 - Organizador de archivos
 - Flujo ficticio de conciliación
 - Flujo simulado de automatización
+
+Cada proyecto debe incluir:
+
+- requisitos;
+- notas de diseño;
+- implementación;
+- explicación;
+- ideas de pruebas;
+- desafíos de ampliación;
+- discusión de portafolio.
+
+## Criterios continuos de calidad
+
+Cada fase debe preservar:
+
+- precisión técnica;
+- consistencia multilingüe;
+- ejemplos originales y seguros para publicación;
+- datos seguros desde el punto de vista de la privacidad;
+- ejemplos ejecutables de Python cuando corresponda;
+- integridad de la navegación interna;
+- atención a PEP 8;
+- documentación de cambios estructurales relevantes;
+- transparencia sobre dependencias y supuestos de versión.
+
+El roadmap evolucionará a medida que el proyecto crezca, pero los cambios deben preservar la progresión desde los conceptos iniciales hasta el trabajo práctico integrado.
