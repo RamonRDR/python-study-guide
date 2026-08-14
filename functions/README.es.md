@@ -28,7 +28,7 @@ Antes de continuar, deberías sentirte cómodo con variables y tipos integrados,
 | [04. Alcance](04-scope/README.es.md) | Entender nombres locales y globales, búsqueda, sombreado y revinculación global explícita | Disponible |
 | [05. Type Hints](05-type-hints/README.es.md) | Describir entradas y salidas esperadas sin imponer tipos en runtime por sí solas | Disponible |
 | [06. Valores Predeterminados](06-default-values/README.es.md) | Diseñar argumentos opcionales con seguridad, incluida la evaluación al definir y los valores mutables | Disponible |
-| 07. `*args` y `**kwargs` | Recibir cantidades variables de argumentos posicionales y por palabra clave | Planeado |
+| [07. `*args` y `**kwargs`](07-args-and-kwargs/README.es.md) | Recibir cantidades intencionalmente variables de argumentos posicionales y por palabra clave | Disponible |
 | 08. Funciones Trabajando Juntas | Componer funciones manteniendo responsabilidades claras | Planeado |
 | 09. Flujo de Datos Entre Funciones | Seguir entradas, transformaciones, salidas y propiedad de los datos entre llamadas | Planeado |
 
@@ -43,7 +43,7 @@ definition = describe and name behavior
 call       = execute that behavior now
 ```
 
-El Capítulo 01 separa esas ideas antes de añadir intercambio de datos. El Capítulo 02 añade entradas mediante parámetros y argumentos. El Capítulo 03 completa el primer recorrido de ida y vuelta con valores de retorno, `None`, retornos por rama y la diferencia entre retornar e imprimir. El Capítulo 04 añade alcance local y global, búsqueda de nombres, sombreado, comportamiento de alcance de sentencias ordinarias y uso cauteloso de `global`. El Capítulo 05 añade type hints de parámetros y retorno, anotaciones de colecciones, uniones con `None` y la diferencia fundamental entre información estática de tipos y enforcement en runtime. El Capítulo 06 añade valores predeterminados, reemplazos selectivos, evaluación al definir la función y el patrón seguro con `None` para crear objetos mutables nuevos. Los capítulos posteriores añaden recolección flexible de argumentos, composición y flujo explícito de datos sobre el mismo modelo.
+El Capítulo 01 separa esas ideas antes de añadir intercambio de datos. El Capítulo 02 añade entradas mediante parámetros y argumentos. El Capítulo 03 completa el primer recorrido de ida y vuelta con valores de retorno, `None`, retornos por rama y la diferencia entre retornar e imprimir. El Capítulo 04 añade alcance local y global, búsqueda de nombres, sombreado, comportamiento de alcance de sentencias ordinarias y uso cauteloso de `global`. El Capítulo 05 añade type hints de parámetros y retorno, anotaciones de colecciones, uniones con `None` y la diferencia fundamental entre información estática de tipos y enforcement en runtime. El Capítulo 06 añade valores predeterminados, reemplazos selectivos, evaluación al definir la función y el patrón seguro con `None` para crear objetos mutables nuevos. El Capítulo 07 añade recolección de cantidades variables de argumentos posicionales y por palabra clave con `*args` y `**kwargs`, sus modelos de tupla/diccionario, firmas mixtas simples y el límite entre recolección en la definición y desempaquetado posterior en la llamada. Los capítulos siguientes desarrollan composición y flujo explícito de datos sobre el mismo modelo.
 
 ## Progresión de la fase
 
@@ -73,8 +73,8 @@ La Fase 5 trata funciones normales definidas por el usuario y el movimiento de e
 
 ## Empieza aquí
 
-Comienza con [01. Definir y Llamar Funciones](01-defining-and-calling-functions/README.es.md), continúa con [02. Parámetros y Argumentos](02-parameters-and-arguments/README.es.md), luego estudia [03. Valores de Retorno](03-return-values/README.es.md), [04. Alcance](04-scope/README.es.md), [05. Type Hints](05-type-hints/README.es.md) y [06. Valores Predeterminados](06-default-values/README.es.md).
+Comienza con [01. Definir y Llamar Funciones](01-defining-and-calling-functions/README.es.md), continúa con [02. Parámetros y Argumentos](02-parameters-and-arguments/README.es.md), luego estudia [03. Valores de Retorno](03-return-values/README.es.md), [04. Alcance](04-scope/README.es.md), [05. Type Hints](05-type-hints/README.es.md), [06. Valores Predeterminados](06-default-values/README.es.md) y [07. `*args` y `**kwargs`](07-args-and-kwargs/README.es.md).
 
-Después del Capítulo 06, el siguiente capítulo planeado es **07. `*args` y `**kwargs`**.
+Después del Capítulo 07, el siguiente capítulo planeado es **08. Funciones Trabajando Juntas**.
 
-La Fase 5 ahora está en progreso con seis capítulos revisados disponibles.
+La Fase 5 ahora está en progreso con siete capítulos revisados disponibles.
