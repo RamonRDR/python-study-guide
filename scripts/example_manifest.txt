@@ -99,3 +99,6 @@ functions/06-default-values/examples/shipping_quote.py
 functions/07-args-and-kwargs/examples/calculate_average.py
 functions/07-args-and-kwargs/examples/describe_session.py
 functions/07-args-and-kwargs/examples/display_settings.py
+functions/08-functions-working-together/examples/build_score_report.py
+functions/08-functions-working-together/examples/build_study_summary.py
+functions/08-functions-working-together/examples/prepare_greeting.py
