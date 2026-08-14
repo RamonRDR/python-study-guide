@@ -10,7 +10,7 @@
 
 Funções é a Fase 5 da sequência principal do Python Study Guide.
 
-Fluxo do Programa ensinou como a execução toma decisões e repete trabalho. Esta fase ensina a dar nome a comportamentos, passar dados para eles, devolver resultados, controlar escopo, descrever interfaces e combinar pequenas partes em programas mais claros.
+Fluxo do Programa ensinou como a execução toma decisões e repete trabalho. Esta fase ensina a dar nome a comportamentos, passar dados para eles, devolver resultados, controlar escopo, descrever interfaces, combinar pequenas partes em programas mais claros e rastrear dados através das fronteiras entre funções.
 
 ## Pré-requisito
 
@@ -30,7 +30,7 @@ Antes de continuar, você já deve estar confortável com variáveis e tipos nat
 | [06. Valores Padrão](06-default-values/README.pt-BR.md) | Projetar argumentos opcionais com segurança, incluindo avaliação na definição e padrões mutáveis | Disponível |
 | [07. `*args` e `**kwargs`](07-args-and-kwargs/README.pt-BR.md) | Receber quantidades intencionalmente variáveis de argumentos posicionais e nomeados | Disponível |
 | [08. Funções Trabalhando Juntas](08-functions-working-together/README.pt-BR.md) | Compor funções auxiliares e coordenadoras mantendo responsabilidades e dependências claras | Disponível |
-| 09. Fluxo de Dados Entre Funções | Rastrear entradas, transformações, saídas e propriedade dos dados entre chamadas | Planejado |
+| [09. Fluxo de Dados Entre Funções](09-data-flow-between-functions/README.pt-BR.md) | Rastrear entradas do chamador, vínculos de parâmetros, transformações, mutação, saídas retornadas e propriedade dos dados entre chamadas | Disponível |
 
 Estude os capítulos em ordem ao seguir a trilha completa para iniciantes.
 
@@ -43,7 +43,7 @@ definition = describe and name behavior
 call       = execute that behavior now
 ```
 
-O Capítulo 01 separa essas ideias antes de adicionar troca de dados. O Capítulo 02 adiciona entradas com parâmetros e argumentos. O Capítulo 03 completa a primeira viagem de ida e volta com valores de retorno, `None`, retornos por ramificação e a diferença entre retornar e imprimir. O Capítulo 04 adiciona escopo local e global, busca de nomes, sombreamento, comportamento de escopo de instruções comuns e uso cauteloso de `global`. O Capítulo 05 adiciona type hints de parâmetros e retorno, anotações de coleções, uniões com `None` e a diferença fundamental entre informação estática de tipos e enforcement em runtime. O Capítulo 06 adiciona valores padrão, substituições seletivas, avaliação no momento da definição e o padrão seguro com `None` para criar objetos mutáveis novos. O Capítulo 07 adiciona coleta de quantidade variável de argumentos posicionais e nomeados com `*args` e `**kwargs`, seus modelos de tupla/dicionário, assinaturas mistas simples e o limite entre coleta na definição e desempacotamento posterior na chamada. O Capítulo 08 conecta essas habilidades individuais ao compor funções auxiliares e coordenadoras, passar resultados retornados entre etapas, expor dependências por parâmetros e ler grafos simples de chamadas. O Capítulo 09 aprofundará o modelo rastreando propriedade e transformação dos dados entre chamadas.
+O Capítulo 01 separa essas ideias antes de adicionar troca de dados. O Capítulo 02 adiciona entradas com parâmetros e argumentos. O Capítulo 03 completa a primeira viagem de ida e volta com valores de retorno, `None`, retornos por ramificação e a diferença entre retornar e imprimir. O Capítulo 04 adiciona escopo local e global, busca de nomes, sombreamento, comportamento de escopo de instruções comuns e uso cauteloso de `global`. O Capítulo 05 adiciona type hints de parâmetros e retorno, anotações de coleções, uniões com `None` e a diferença fundamental entre informação estática de tipos e enforcement em runtime. O Capítulo 06 adiciona valores padrão, substituições seletivas, avaliação no momento da definição e o padrão seguro com `None` para criar objetos mutáveis novos. O Capítulo 07 adiciona coleta de quantidade variável de argumentos posicionais e nomeados com `*args` e `**kwargs`, seus modelos de tupla/dicionário, assinaturas mistas simples e o limite entre coleta na definição e desempacotamento posterior na chamada. O Capítulo 08 conecta essas habilidades individuais ao compor funções auxiliares e coordenadoras, passar resultados retornados entre etapas, expor dependências por parâmetros e ler grafos simples de chamadas. O Capítulo 09 encerra a fase rastreando o fluxo chamador-parâmetro-retorno, vínculos locais de parâmetros, reatribuição versus mutação, resultados em tupla e `None`, pipelines explícitos e a diferença entre grafos de chamadas e rastreamentos de fluxo de dados.
 
 ## Progressão da fase
 
@@ -71,10 +71,10 @@ data flow between functions
 
 A Fase 5 trata de funções normais definidas pelo usuário e do movimento da execução e dos dados ao redor delas. Tratamento de erros, arquivos, módulos, bibliotecas externas, decorators, generators e recursos avançados de tipagem como generics, protocols e overloads aparecem depois ou exigem tratamento próprio.
 
-## Comece aqui
+## Trilha completa
 
-Comece com [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md), continue com [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md), depois estude [03. Valores de Retorno](03-return-values/README.pt-BR.md), [04. Escopo](04-scope/README.pt-BR.md), [05. Type Hints](05-type-hints/README.pt-BR.md), [06. Valores Padrão](06-default-values/README.pt-BR.md), [07. `*args` e `**kwargs`](07-args-and-kwargs/README.pt-BR.md) e [08. Funções Trabalhando Juntas](08-functions-working-together/README.pt-BR.md).
+Comece com [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md), continue com [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md), depois estude [03. Valores de Retorno](03-return-values/README.pt-BR.md), [04. Escopo](04-scope/README.pt-BR.md), [05. Type Hints](05-type-hints/README.pt-BR.md), [06. Valores Padrão](06-default-values/README.pt-BR.md), [07. `*args` e `**kwargs`](07-args-and-kwargs/README.pt-BR.md), [08. Funções Trabalhando Juntas](08-functions-working-together/README.pt-BR.md) e [09. Fluxo de Dados Entre Funções](09-data-flow-between-functions/README.pt-BR.md).
 
-Depois do Capítulo 08, o próximo capítulo planejado é **09. Fluxo de Dados Entre Funções**.
+Depois de concluir os nove capítulos, continue com a já publicada [Fase 6: Comentários, Documentação e Código Limpo](../comments-and-documentation/README.pt-BR.md).
 
-A Fase 5 agora está em andamento com oito capítulos revisados disponíveis.
+**A Fase 5 está concluída com nove capítulos revisados disponíveis.**

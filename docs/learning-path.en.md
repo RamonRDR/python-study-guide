@@ -58,7 +58,7 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 
 Phase 4 is complete with eight reviewed chapters. The sequence builds trustworthy conditions, conditional branching, structural pattern matching, iterable-driven repetition, iteration helpers, state-driven repetition, deliberate loop control, and finally a decision framework for choosing and combining those tools by intent.
 
-## Phase 5 · Functions 🚧
+## Phase 5 · Functions ✅
 
 [Open the Functions section index](../functions/README.md)
 
@@ -70,12 +70,13 @@ Phase 4 is complete with eight reviewed chapters. The sequence builds trustworth
 6. [Default Values](../functions/06-default-values/README.md)
 7. [`*args` and `**kwargs`](../functions/07-args-and-kwargs/README.md)
 8. [Functions Working Together](../functions/08-functions-working-together/README.md)
+9. [Data Flow Between Functions](../functions/09-data-flow-between-functions/README.md)
 
-Phase 5 is in progress with eight reviewed chapters. Chapter 01 establishes definition versus call, Chapter 02 adds required inputs through parameters and arguments, Chapter 03 completes the first input-to-output round trip with return values, Chapter 04 explains local and global names and lookup, Chapter 05 adds parameter and return type hints, collection annotations, `str | None`, and the distinction between static type information and runtime enforcement, Chapter 06 adds default values, selective overrides, definition-time evaluation, and safe handling of mutable defaults with `None`, Chapter 07 adds variable-length positional and keyword collection with `*args` and `**kwargs`, their tuple/dictionary models, simple mixed signatures, type hints for collected values, and the boundary between definition-side collection and call-side unpacking, and Chapter 08 composes helpers and coordinating functions, passes returned values between steps, keeps dependencies explicit, combines functions with conditions and loops, and introduces simple call graphs. The next planned chapter is Data Flow Between Functions.
+Phase 5 is complete with nine reviewed chapters. Chapter 01 establishes definition versus call, Chapter 02 adds required inputs through parameters and arguments, Chapter 03 completes the first input-to-output round trip with return values, Chapter 04 explains local and global names and lookup, Chapter 05 adds parameter and return type hints, collection annotations, `str | None`, and the distinction between static type information and runtime enforcement, Chapter 06 adds default values, selective overrides, definition-time evaluation, and safe handling of mutable defaults with `None`, Chapter 07 adds variable-length positional and keyword collection with `*args` and `**kwargs`, their tuple/dictionary models, simple mixed signatures, type hints for collected values, and the boundary between definition-side collection and call-side unpacking, Chapter 08 composes helpers and coordinating functions, passes returned values between steps, keeps dependencies explicit, combines functions with conditions and loops, and introduces simple call graphs, and Chapter 09 closes the phase with caller-to-parameter-to-return tracing, local bindings, rebinding versus mutation, tuple and `None` results, explicit pipelines, and data-flow traces.
 
 ## Phase 6 · Comments, Documentation, and Clean Code ✅
 
-This phase is already available, but learners following the curriculum from zero should still respect the numbered learning sequence.
+This phase is already available and is the next recommended phase after Functions for learners following the curriculum from zero.
 
 [Open the Comments and Documentation section index](../comments-and-documentation/README.md)
 
