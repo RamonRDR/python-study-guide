@@ -68,8 +68,9 @@ La Fase 4 está completada con ocho capítulos revisados. La secuencia construye
 4. [Alcance](../functions/04-scope/README.es.md)
 5. [Type Hints](../functions/05-type-hints/README.es.md)
 6. [Valores Predeterminados](../functions/06-default-values/README.es.md)
+7. [`*args` y `**kwargs`](../functions/07-args-and-kwargs/README.es.md)
 
-La Fase 5 está en progreso con seis capítulos revisados. El Capítulo 01 establece definición frente a llamada, el Capítulo 02 añade entradas obligatorias mediante parámetros y argumentos, el Capítulo 03 completa el primer recorrido de entrada y salida con valores de retorno, el Capítulo 04 explica nombres locales y globales y búsqueda, el Capítulo 05 añade type hints de parámetros y retorno, anotaciones de colecciones, `str | None` y la diferencia entre información estática de tipos y enforcement en runtime, y el Capítulo 06 añade valores predeterminados, reemplazos selectivos, evaluación al definir la función y manejo seguro de valores mutables con `None`. El siguiente capítulo planificado es `*args` y `**kwargs`.
+La Fase 5 está en progreso con siete capítulos revisados. El Capítulo 01 establece definición frente a llamada, el Capítulo 02 añade entradas obligatorias mediante parámetros y argumentos, el Capítulo 03 completa el primer recorrido de entrada y salida con valores de retorno, el Capítulo 04 explica nombres locales y globales y búsqueda, el Capítulo 05 añade type hints de parámetros y retorno, anotaciones de colecciones, `str | None` y la diferencia entre información estática de tipos y enforcement en runtime, el Capítulo 06 añade valores predeterminados, reemplazos selectivos, evaluación al definir la función y manejo seguro de valores mutables con `None`, y el Capítulo 07 añade recolección de cantidades variables de argumentos posicionales y por palabra clave con `*args` y `**kwargs`, sus modelos de tupla/diccionario, firmas mixtas simples, type hints para valores recogidos y el límite entre recolección en la definición y desempaquetado en la llamada. El siguiente capítulo planificado es Funciones Trabajando Juntas.
 
 ## Fase 6 · Comentarios, Documentación y Código Limpio ✅
 

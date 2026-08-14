@@ -68,8 +68,9 @@ Phase 4 is complete with eight reviewed chapters. The sequence builds trustworth
 4. [Scope](../functions/04-scope/README.md)
 5. [Type Hints](../functions/05-type-hints/README.md)
 6. [Default Values](../functions/06-default-values/README.md)
+7. [`*args` and `**kwargs`](../functions/07-args-and-kwargs/README.md)
 
-Phase 5 is in progress with six reviewed chapters. Chapter 01 establishes definition versus call, Chapter 02 adds required inputs through parameters and arguments, Chapter 03 completes the first input-to-output round trip with return values, Chapter 04 explains local and global names and lookup, Chapter 05 adds parameter and return type hints, collection annotations, `str | None`, and the distinction between static type information and runtime enforcement, and Chapter 06 adds default values, selective overrides, definition-time evaluation, and safe handling of mutable defaults with `None`. The next planned chapter is `*args` and `**kwargs`.
+Phase 5 is in progress with seven reviewed chapters. Chapter 01 establishes definition versus call, Chapter 02 adds required inputs through parameters and arguments, Chapter 03 completes the first input-to-output round trip with return values, Chapter 04 explains local and global names and lookup, Chapter 05 adds parameter and return type hints, collection annotations, `str | None`, and the distinction between static type information and runtime enforcement, Chapter 06 adds default values, selective overrides, definition-time evaluation, and safe handling of mutable defaults with `None`, and Chapter 07 adds variable-length positional and keyword collection with `*args` and `**kwargs`, their tuple/dictionary models, simple mixed signatures, type hints for collected values, and the boundary between definition-side collection and call-side unpacking. The next planned chapter is Functions Working Together.
 
 ## Phase 6 · Comments, Documentation, and Clean Code ✅
 

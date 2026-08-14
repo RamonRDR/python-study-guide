@@ -96,3 +96,6 @@ functions/05-type-hints/examples/runtime_does_not_enforce.py
 functions/06-default-values/examples/greet_with_style.py
 functions/06-default-values/examples/safe_list_default.py
 functions/06-default-values/examples/shipping_quote.py
+functions/07-args-and-kwargs/examples/calculate_average.py
+functions/07-args-and-kwargs/examples/describe_session.py
+functions/07-args-and-kwargs/examples/display_settings.py

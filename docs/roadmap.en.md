@@ -19,14 +19,14 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
 | 3. Collections | Complete | Six reviewed chapters cover lists, tuples, dictionaries, sets, and choosing a collection by intent |
 | 4. Program flow | Complete | Eight reviewed chapters cover conditions, branching, structural pattern matching, `for`, iteration helpers, `while`, loop control, and choosing and combining flow tools by intent |
-| 5. Functions | In progress | Six reviewed chapters cover `def`, calls, required inputs, returned values, scope, type hints, and safe default values |
+| 5. Functions | In progress | Seven reviewed chapters cover `def`, calls, required inputs, returned values, scope, type hints, safe default values, and flexible positional/keyword collection |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Planned | Curriculum not started |
 | 8. Standard library | Planned | Curriculum not started |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, 4, and 6 are complete. Phase 5: Functions is in progress with definition, calling, input flow, return flow, scope, type-hint interfaces, and default-value behavior now established; `*args` and `**kwargs` are next. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, 4, and 6 are complete. Phase 5: Functions is in progress with definition, calling, input flow, return flow, scope, type-hint interfaces, default-value behavior, and variable-length positional and keyword argument collection now established; Functions Working Together is next. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -103,11 +103,11 @@ See the [section learning path](../functions/README.md).
 - [x] [Scope](../functions/04-scope/README.md)
 - [x] [Type hints](../functions/05-type-hints/README.md)
 - [x] [Default values](../functions/06-default-values/README.md)
-- [ ] `*args` and `**kwargs`
+- [x] [`*args` and `**kwargs`](../functions/07-args-and-kwargs/README.md)
 - [ ] Functions working together
 - [ ] Data flow between functions
 
-Phase 5 is in progress. Chapter 01 establishes `def`, calls, reuse, execution order, naming, `pass`, implicit `None`, and the connection with program flow. Chapter 02 adds required parameters, positional and basic keyword arguments, argument expressions, call errors, and input-flow tracing. Chapter 03 adds `return`, reusable results, branch-specific and early returns, `None`, and tuple returns. Chapter 04 adds local and global names, function-local namespaces, lookup, shadowing, `NameError`, `UnboundLocalError`, and cautious use of `global`. Chapter 05 adds parameter and return annotations, built-in and collection type hints, `-> None`, `str | None`, annotation metadata, and the distinction between static type information, runtime validation, and conversion. Chapter 06 adds default values, selective positional and keyword overrides, definition-time evaluation, the mutable-default trap, and the safe `None` pattern for fresh mutable objects. `*args` and `**kwargs` are next.
+Phase 5 is in progress. Chapter 01 establishes `def`, calls, reuse, execution order, naming, `pass`, implicit `None`, and the connection with program flow. Chapter 02 adds required parameters, positional and basic keyword arguments, argument expressions, call errors, and input-flow tracing. Chapter 03 adds `return`, reusable results, branch-specific and early returns, `None`, and tuple returns. Chapter 04 adds local and global names, function-local namespaces, lookup, shadowing, `NameError`, `UnboundLocalError`, and cautious use of `global`. Chapter 05 adds parameter and return annotations, built-in and collection type hints, `-> None`, `str | None`, annotation metadata, and the distinction between static type information, runtime validation, and conversion. Chapter 06 adds default values, selective positional and keyword overrides, definition-time evaluation, the mutable-default trap, and the safe `None` pattern for fresh mutable objects. Chapter 07 adds variable-length positional and keyword argument collection with `*args` and `**kwargs`, tuple and dictionary behavior inside the function, simple mixed signatures, basic type hints for collected values, and the distinction between definition-side collection and later call-side unpacking. Functions Working Together is next.
 
 ## Phase 6: Comments, documentation, and clean code
 
