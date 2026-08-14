@@ -175,14 +175,22 @@ python-study-guide/
 │   │       ├── local_and_global_names.py
 │   │       ├── separate_function_calls.py
 │   │       └── shadowing_names.py
-│   └── 05-type-hints/
+│   ├── 05-type-hints/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── annotated_greeting.py
+│   │       ├── collection_summary.py
+│   │       └── runtime_does_not_enforce.py
+│   └── 06-default-values/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── annotated_greeting.py
-│           ├── collection_summary.py
-│           └── runtime_does_not_enforce.py
+│           ├── greet_with_style.py
+│           ├── safe_list_default.py
+│           └── shipping_quote.py
 ├── fundamentals/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -358,7 +366,7 @@ python-study-guide/
 - `docs/`: trilhas completas de estudos, roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros.
-- `functions/`: trilha da Fase 5 em andamento. Os Capítulos 01–05 cobrem definição e chamada de funções, entradas obrigatórias, valores retornados, escopo e busca de nomes, além de type hints para parâmetros, retornos, coleções, uniões com `None` e a diferença entre informação estática de tipos e enforcement em runtime, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
+- `functions/`: trilha da Fase 5 em andamento. Os Capítulos 01–06 cobrem definição e chamada de funções, entradas obrigatórias, valores retornados, escopo e busca de nomes, type hints para interfaces de funções e valores padrão, incluindo avaliação no momento da definição e segurança com padrões mutáveis, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos.
 - `fundamentals/`: trilha completa da Fase 1. Seus seis capítulos ensinam como o Python executa um programa, como usar `print()` e `input()`, como funcionam atribuição e nomes, como reconhecer e inspecionar tipos de dados embutidos comuns e como converter valores compatíveis de forma deliberada, com explicações multilíngues alinhadas e exemplos executáveis.
 - `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
 - `program-flow/`: trilha completa da Fase 4. Os Capítulos 01–08 ensinam condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, ramificação condicional com `if`, `elif` e `else`, correspondência de padrões estruturais, repetição guiada por iteráveis com `for`, progressões numéricas com `range()`, iteração com posição usando `enumerate()`, iteração paralela com `zip()` incluindo validação explícita de comprimentos iguais com `strict=True`, repetição guiada por estado com `while`, controle deliberado de loops com `break`, `continue` e `else` de loop e como escolher e combinar ferramentas de fluxo do programa de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.

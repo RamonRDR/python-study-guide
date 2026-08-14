@@ -175,14 +175,22 @@ python-study-guide/
 │   │       ├── local_and_global_names.py
 │   │       ├── separate_function_calls.py
 │   │       └── shadowing_names.py
-│   └── 05-type-hints/
+│   ├── 05-type-hints/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── annotated_greeting.py
+│   │       ├── collection_summary.py
+│   │       └── runtime_does_not_enforce.py
+│   └── 06-default-values/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── annotated_greeting.py
-│           ├── collection_summary.py
-│           └── runtime_does_not_enforce.py
+│           ├── greet_with_style.py
+│           ├── safe_list_default.py
+│           └── shipping_quote.py
 ├── fundamentals/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -358,7 +366,7 @@ python-study-guide/
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.
-- `functions/`: Phase 5 learning path in progress. Chapters 01–05 cover defining and calling functions, required inputs, returned values, scope and name lookup, plus type hints for parameters, returns, collections, unions with `None`, and the distinction between static type information and runtime enforcement, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
+- `functions/`: Phase 5 learning path in progress. Chapters 01–06 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, and default values including definition-time evaluation and mutable-default safety, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.

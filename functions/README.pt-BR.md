@@ -27,7 +27,7 @@ Antes de continuar, você já deve estar confortável com variáveis e tipos nat
 | [03. Valores de Retorno](03-return-values/README.pt-BR.md) | Enviar resultados úteis ao chamador e rastrear o fluxo completo de entrada e saída | Disponível |
 | [04. Escopo](04-scope/README.pt-BR.md) | Entender nomes locais e globais, busca, sombreamento e religação global explícita | Disponível |
 | [05. Type Hints](05-type-hints/README.pt-BR.md) | Descrever entradas e saídas esperadas sem impor tipos em runtime por conta própria | Disponível |
-| 06. Valores Padrão | Projetar argumentos opcionais com clareza e segurança | Planejado |
+| [06. Valores Padrão](06-default-values/README.pt-BR.md) | Projetar argumentos opcionais com segurança, incluindo avaliação na definição e padrões mutáveis | Disponível |
 | 07. `*args` e `**kwargs` | Receber quantidades variáveis de argumentos posicionais e nomeados | Planejado |
 | 08. Funções Trabalhando Juntas | Compor funções mantendo responsabilidades claras | Planejado |
 | 09. Fluxo de Dados Entre Funções | Rastrear entradas, transformações, saídas e propriedade dos dados entre chamadas | Planejado |
@@ -43,7 +43,7 @@ definition = describe and name behavior
 call       = execute that behavior now
 ```
 
-O Capítulo 01 separa essas ideias antes de adicionar troca de dados. O Capítulo 02 adiciona entradas com parâmetros e argumentos. O Capítulo 03 completa a primeira viagem de ida e volta com valores de retorno, `None`, retornos por ramificação e a diferença entre retornar e imprimir. O Capítulo 04 adiciona escopo local e global, busca de nomes, sombreamento, comportamento de escopo de instruções comuns e uso cauteloso de `global`. O Capítulo 05 adiciona type hints de parâmetros e retorno, anotações de coleções, uniões com `None` e a diferença fundamental entre informação estática de tipos e enforcement em runtime. Os capítulos seguintes adicionam valores padrão, coleta flexível de argumentos, composição e fluxo explícito de dados sobre o mesmo modelo.
+O Capítulo 01 separa essas ideias antes de adicionar troca de dados. O Capítulo 02 adiciona entradas com parâmetros e argumentos. O Capítulo 03 completa a primeira viagem de ida e volta com valores de retorno, `None`, retornos por ramificação e a diferença entre retornar e imprimir. O Capítulo 04 adiciona escopo local e global, busca de nomes, sombreamento, comportamento de escopo de instruções comuns e uso cauteloso de `global`. O Capítulo 05 adiciona type hints de parâmetros e retorno, anotações de coleções, uniões com `None` e a diferença fundamental entre informação estática de tipos e enforcement em runtime. O Capítulo 06 adiciona valores padrão, substituições seletivas, avaliação no momento da definição e o padrão seguro com `None` para criar objetos mutáveis novos. Os capítulos seguintes adicionam coleta flexível de argumentos, composição e fluxo explícito de dados sobre o mesmo modelo.
 
 ## Progressão da fase
 
@@ -73,8 +73,8 @@ A Fase 5 trata de funções normais definidas pelo usuário e do movimento da ex
 
 ## Comece aqui
 
-Comece com [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md), continue com [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md), depois estude [03. Valores de Retorno](03-return-values/README.pt-BR.md), [04. Escopo](04-scope/README.pt-BR.md) e [05. Type Hints](05-type-hints/README.pt-BR.md).
+Comece com [01. Definindo e Chamando Funções](01-defining-and-calling-functions/README.pt-BR.md), continue com [02. Parâmetros e Argumentos](02-parameters-and-arguments/README.pt-BR.md), depois estude [03. Valores de Retorno](03-return-values/README.pt-BR.md), [04. Escopo](04-scope/README.pt-BR.md), [05. Type Hints](05-type-hints/README.pt-BR.md) e [06. Valores Padrão](06-default-values/README.pt-BR.md).
 
-Depois do Capítulo 05, o próximo capítulo planejado é **06. Valores Padrão**.
+Depois do Capítulo 06, o próximo capítulo planejado é **07. `*args` e `**kwargs`**.
 
-A Fase 5 agora está em andamento com cinco capítulos revisados disponíveis.
+A Fase 5 agora está em andamento com seis capítulos revisados disponíveis.
