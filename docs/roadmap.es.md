@@ -21,12 +21,12 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 4. Flujo del programa | Completada | Ocho capítulos revisados cubren condiciones, ramificaciones, coincidencia de patrones estructurales, `for`, ayudas de iteración, `while`, control de bucles y elección y combinación de herramientas de flujo según la intención |
 | 5. Funciones | Completada | Nueve capítulos revisados cubren `def`, llamadas, entradas obligatorias, valores retornados, alcance, type hints, valores predeterminados seguros, argumentos flexibles, composición de funciones y flujo explícito de datos |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
-| 7. Errores, archivos y módulos | Planificada | Contenido todavía no iniciado |
+| 7. Errores, archivos y módulos | En progreso | El Capítulo 01 introduce manejo de excepciones de runtime con `try`, `except`, `else` y `finally` |
 | 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3, 4, 5 y 6 están completadas. La Fase 5: Funciones ahora ofrece la progresión completa desde definición y llamada hasta el flujo explícito de datos entre funciones que cooperan. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1, 2, 3, 4, 5 y 6 están completadas. La Fase 7 está ahora en progreso, comenzando con el manejo explícito de excepciones de runtime antes de los capítulos posteriores sobre archivos y módulos. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -126,11 +126,15 @@ La Fase 6 está oficialmente completada y proporciona el modelo editorial y de c
 
 ## Fase 7: Errores, archivos y módulos
 
-- `try`, `except`, `else` y `finally`
-- `raise` y excepciones personalizadas
-- `open()` y `with`
-- TXT, CSV y JSON
-- Imports, módulos y paquetes
+Consulta la [ruta de aprendizaje de la sección](../errors-files-and-modules/README.es.md).
+
+- [x] [`try`, `except`, `else` y `finally`](../errors-files-and-modules/01-try-except-else-finally/README.es.md)
+- [ ] `raise` y excepciones personalizadas
+- [ ] `open()` y `with`
+- [ ] TXT, CSV y JSON
+- [ ] Imports, módulos y paquetes
+
+La Fase 7 está en progreso. El Capítulo 01 establece excepciones de runtime, handlers específicos, orden de handlers, la ruta de éxito con `else`, limpieza con `finally`, propagación entre llamadas de función y límites de fallo pequeños. El siguiente capítulo planificado es **Lanzar Excepciones y Excepciones Personalizadas**.
 
 ## Fase 8: Biblioteca estándar
 
