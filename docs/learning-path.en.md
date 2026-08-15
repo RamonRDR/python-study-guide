@@ -87,9 +87,13 @@ This phase is already available and is the next recommended phase after Function
 5. [Comments versus Logging in Python](../comments-and-documentation/05-comments-vs-logging/README.md)
 6. [PEP 8 and Readability in Python](../comments-and-documentation/06-pep8-and-readability/README.md)
 
-## Phase 7 · Errors, Files, and Modules ⏳
+## Phase 7 · Errors, Files, and Modules 🚧
 
-Planned. Direct chapter links will appear here when the phase begins.
+[Open the Errors, Files, and Modules section index](../errors-files-and-modules/README.md)
+
+1. [Handling Exceptions with `try`, `except`, `else`, and `finally`](../errors-files-and-modules/01-try-except-else-finally/README.md)
+
+Phase 7 is in progress. Chapter 01 establishes the runtime-exception model, specific handlers, handler ordering, success-only `else`, cleanup-oriented `finally`, propagation across function calls, and the difference between deliberate recovery and accidentally hiding failures. The next planned chapter is **Raising and Custom Exceptions**.
 
 ## Phase 8 · Standard Library ⏳
 

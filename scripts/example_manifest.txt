@@ -105,3 +105,6 @@ functions/08-functions-working-together/examples/prepare_greeting.py
 functions/09-data-flow-between-functions/examples/build_learning_report.py
 functions/09-data-flow-between-functions/examples/rebinding_and_mutation.py
 functions/09-data-flow-between-functions/examples/trace_score_pipeline.py
+errors-files-and-modules/01-try-except-else-finally/examples/parse_integer.py
+errors-files-and-modules/01-try-except-else-finally/examples/safe_divide.py
+errors-files-and-modules/01-try-except-else-finally/examples/trace_try_else_finally.py

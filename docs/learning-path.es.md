@@ -87,9 +87,13 @@ Esta fase ya está disponible y es la siguiente fase recomendada después de Fun
 5. [Comentarios frente a Logging en Python](../comments-and-documentation/05-comments-vs-logging/README.es.md)
 6. [PEP 8 y legibilidad en Python](../comments-and-documentation/06-pep8-and-readability/README.es.md)
 
-## Fase 7 · Errores, Archivos y Módulos ⏳
+## Fase 7 · Errores, Archivos y Módulos 🚧
 
-Planificado. Los enlaces directos a los capítulos aparecerán aquí cuando comience la fase.
+[Abrir el índice de la sección Errores, Archivos y Módulos](../errors-files-and-modules/README.es.md)
+
+1. [Manejo de Excepciones con `try`, `except`, `else` y `finally`](../errors-files-and-modules/01-try-except-else-finally/README.es.md)
+
+La Fase 7 está en progreso. El Capítulo 01 establece el modelo de excepciones en runtime, handlers específicos, orden de handlers, la ruta de éxito con `else`, limpieza con `finally`, propagación entre llamadas de función y la diferencia entre recuperación deliberada y ocultar fallos por accidente. El siguiente capítulo planificado es **Lanzar Excepciones y Excepciones Personalizadas**.
 
 ## Fase 8 · Biblioteca Estándar ⏳
 
