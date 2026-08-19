@@ -1,0 +1,87 @@
+name: Synchronize Phase 7 Chapter 03
+
+on:
+  push:
+    branches:
+      - phase-07-open-and-with
+
+permissions:
+  contents: write
+
+jobs:
+  synchronize:
+    if: github.event.head_commit.message == 'Run Phase 7 Chapter 03 synchronization'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Build Chapter 03 and synchronize repository
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+          import zlib
+
+          encoded = Path(".tmp/ch3/sync.py.zb64").read_text(encoding="ascii")
+          Path(".tmp/ch3/sync.py").write_bytes(
+              zlib.decompress(base64.b64decode(encoded))
+          )
+          PY
+
+          python .tmp/ch3/sync.py
+
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          base = Path("errors-files-and-modules/03-open-and-with")
+          docs = [
+              base / "README.md",
+              base / "README.pt-BR.md",
+              base / "README.es.md",
+          ]
+
+          def python_blocks(path: Path) -> list[str]:
+              text = path.read_text(encoding="utf-8")
+              return re.findall(r"```python\n(.*?)```", text, flags=re.S)
+
+          blocks = [python_blocks(path) for path in docs]
+          if not blocks[0] or blocks[0] != blocks[1] or blocks[0] != blocks[2]:
+              raise SystemExit("Localized Python code blocks are not identical.")
+
+          manifest = Path("scripts/example_manifest.txt").read_text(encoding="utf-8")
+          entries = [
+              line.strip()
+              for line in manifest.splitlines()
+              if line.strip() and not line.lstrip().startswith("#")
+          ]
+          if len(entries) != 112:
+              raise SystemExit(f"Expected 112 approved examples, found {len(entries)}")
+          PY
+
+          git diff --check
+          python scripts/check_internal_links.py
+          python scripts/validate_repository_structure.py
+          python scripts/run_examples.py
+          python -m unittest discover -s tests -v
+
+          git add -A
+          changed_count="$(git diff --cached --name-only | wc -l | tr -d ' ')"
+          test "$changed_count" -eq 22
+
+      - name: Commit synchronized chapter
+        shell: bash
+        run: |
+          git config user.name "Ramon Rodriguez"
+          git config user.email "ramoncorreka@hotmail.com"
+          git commit -m "Add open and with chapter"
+          git push origin HEAD:phase-07-open-and-with
