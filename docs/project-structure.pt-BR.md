@@ -149,14 +149,22 @@ python-study-guide/
 │   │       ├── parse_integer.py
 │   │       ├── safe_divide.py
 │   │       └── trace_try_else_finally.py
-│   └── 02-raise-and-custom-exceptions/
+│   ├── 02-raise-and-custom-exceptions/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── custom_exception.py
+│   │       ├── exception_chaining.py
+│   │       └── validate_score.py
+│   └── 03-open-and-with/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── custom_exception.py
-│           ├── exception_chaining.py
-│           └── validate_score.py
+│           ├── append_text.py
+│           ├── handle_missing_file.py
+│           └── write_and_read_text.py
 ├── exercises/
 ├── external-libraries/
 ├── functions/
@@ -408,7 +416,7 @@ python-study-guide/
 - `comments-and-documentation/`: trilha completa da Fase 6. Há capítulos revisados sobre comentários, docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e PEP 8 e legibilidade, cada um em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `collections/`: trilha completa da Fase 3. Seus seis capítulos ensinam criação, leitura, mutação e métodos comuns de listas, cópia rasa, tuplas e imutabilidade, mapeamentos chave-valor e views de dicionários, unicidade e relações de conjuntos e como escolher entre listas, tuplas, dicionários e conjuntos de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `docs/`: trilhas completas de estudos, roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
-- `errors-files-and-modules/`: trilha em andamento da Fase 7. Os Capítulos 01–02 cobrem tratamento específico de exceções, `else`, `finally`, propagação, `raise` deliberado, escolha entre exceções built-in e personalizadas, relançamento com `raise` sem expressão, encadeamento explícito, `raise` versus `assert` e exemplos executáveis determinísticos em inglês, português brasileiro e espanhol.
+- `errors-files-and-modules/`: trilha em andamento da Fase 7. Os Capítulos 01–03 cobrem tratamento de exceções de runtime, levantamento e exceções personalizadas e I/O seguro de arquivos de texto com `open()`, encoding explícito, modos de arquivo, exceções de arquivo específicas e `with`, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: futuros guias sobre pacotes de terceiros.
 - `functions/`: trilha completa da Fase 5. Os Capítulos 01–09 cobrem definição e chamada de funções, entradas obrigatórias, valores retornados, escopo e busca de nomes, type hints para interfaces de funções, valores padrão incluindo avaliação no momento da definição e segurança com padrões mutáveis, coleta de argumentos posicionais e nomeados de quantidade variável com `*args` e `**kwargs`, composição por funções auxiliares e coordenadoras com dependências explícitas e grafos simples de chamadas e rastreamento explícito do fluxo de dados entre chamadas, incluindo vínculos de parâmetros, reatribuição versus mutação, `None`, resultados em tupla e passagens por `return`, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos.

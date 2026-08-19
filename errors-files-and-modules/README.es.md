@@ -16,7 +16,7 @@ La Fase 7 comienza con el manejo de excepciones, continúa con la generación de
 |---|---|---|---|
 | [01. `try`, `except`, `else` y `finally`](01-try-except-else-finally/README.es.md) | Manejar fallos esperados en runtime manteniendo explícitas las rutas normal y de limpieza | Principiante a intermedio | Disponible |
 | [02. Lanzar Excepciones y Excepciones Personalizadas](02-raise-and-custom-exceptions/README.es.md) | Señalar estados inválidos deliberadamente con `raise`, volver a lanzar o encadenar fallos de forma intencional e introducir excepciones personalizadas simples | Intermedio | Disponible |
-| 03. `open()` y `with` | Leer y escribir archivos de texto gestionando recursos de forma segura | Principiante a intermedio | Planificado |
+| [03. `open()` y `with`](03-open-and-with/README.es.md) | Abrir, leer, escribir y añadir a archivos de texto gestionando recursos de forma segura con `with` | Principiante a intermedio | Disponible |
 | 04. TXT, CSV y JSON | Trabajar con formatos comunes de datos basados en texto y sus límites | Intermedio | Planificado |
 | 05. Imports, Módulos y Paquetes | Dividir código en archivos reutilizables y comprender el modelo de importación de Python | Intermedio | Planificado |
 
@@ -67,9 +67,9 @@ Al final de la Fase 7, deberías poder:
 
 ## Capítulo actual
 
-Continúa con [Lanzar Excepciones y Crear Excepciones Personalizadas](02-raise-and-custom-exceptions/README.es.md).
+Continúa con [Abrir Archivos de Forma Segura con `open()` y `with`](03-open-and-with/README.es.md).
 
-El Capítulo 01 establece **el manejo de excepciones que ya ocurren**. El Capítulo 02 añade `raise` deliberado, elección entre tipos built-in y personalizados, relanzamiento con `raise` sin expresión, encadenamiento explícito de excepciones y la distinción entre `raise` y `assert`. El próximo capítulo planificado es **`open()` y `with`**.
+Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade apertura de archivos de texto, encoding explícito, modos de archivo, lectura, escritura, append, errores de archivo específicos y limpieza gestionada por contexto. El próximo capítulo planificado es **TXT, CSV y JSON**.
 
 ## Estructura del directorio
 
@@ -86,14 +86,22 @@ errors-files-and-modules/
 │       ├── parse_integer.py
 │       ├── safe_divide.py
 │       └── trace_try_else_finally.py
-└── 02-raise-and-custom-exceptions/
+├── 02-raise-and-custom-exceptions/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── custom_exception.py
+│       ├── exception_chaining.py
+│       └── validate_score.py
+└── 03-open-and-with/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── custom_exception.py
-        ├── exception_chaining.py
-        └── validate_score.py
+        ├── append_text.py
+        ├── handle_missing_file.py
+        └── write_and_read_text.py
 ```
 
 Los directorios de capítulos planificados se añaden únicamente cuando su contenido se publica realmente.
