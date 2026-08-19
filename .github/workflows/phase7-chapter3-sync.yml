@@ -4,18 +4,22 @@ on:
   push:
     branches:
       - phase-07-open-and-with
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
   synchronize:
-    if: github.event.head_commit.message == 'Run Phase 7 Chapter 03 synchronization'
+    if: github.event_name == 'pull_request' || github.event.head_commit.message == 'Run Phase 7 Chapter 03 synchronization'
     runs-on: ubuntu-latest
     steps:
       - name: Check out branch
         uses: actions/checkout@v4
         with:
+          ref: phase-07-open-and-with
           fetch-depth: 0
 
       - name: Set up Python
