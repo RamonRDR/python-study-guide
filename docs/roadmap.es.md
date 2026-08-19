@@ -21,7 +21,7 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 4. Flujo del programa | Completada | Ocho capítulos revisados cubren condiciones, ramificaciones, coincidencia de patrones estructurales, `for`, ayudas de iteración, `while`, control de bucles y elección y combinación de herramientas de flujo según la intención |
 | 5. Funciones | Completada | Nueve capítulos revisados cubren `def`, llamadas, entradas obligatorias, valores retornados, alcance, type hints, valores predeterminados seguros, argumentos flexibles, composición de funciones y flujo explícito de datos |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
-| 7. Errores, archivos y módulos | En progreso | Los Capítulos 01–02 cubren manejo de excepciones de runtime y generación, relanzamiento, encadenamiento y definición deliberada de excepciones personalizadas |
+| 7. Errores, archivos y módulos | En progreso | Los Capítulos 01–03 cubren manejo de excepciones, señalización deliberada e I/O seguro de archivos de texto con `open()` y `with` |
 | 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
@@ -130,11 +130,11 @@ Consulta la [ruta de aprendizaje de la sección](../errors-files-and-modules/REA
 
 - [x] [`try`, `except`, `else` y `finally`](../errors-files-and-modules/01-try-except-else-finally/README.es.md)
 - [x] [`raise` y excepciones personalizadas](../errors-files-and-modules/02-raise-and-custom-exceptions/README.es.md)
-- [ ] `open()` y `with`
+- [x] [`open()` y `with`](../errors-files-and-modules/03-open-and-with/README.es.md)
 - [ ] TXT, CSV y JSON
 - [ ] Imports, módulos y paquetes
 
-La Fase 7 está en progreso. El Capítulo 01 establece manejo de excepciones de runtime, handlers específicos, `else`, `finally`, propagación y límites de fallo pequeños. El Capítulo 02 añade `raise` deliberado, elección entre excepciones built-in y personalizadas, relanzamiento con `raise` sin expresión, encadenamiento explícito y `raise` frente a `assert`. El próximo capítulo planificado es **`open()` y `with`**.
+La Fase 7 está en progreso. Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade I/O seguro de archivos de texto con modos, encoding explícito, lectura, escritura, append, excepciones de archivo específicas y `with`. El próximo capítulo planificado es **TXT, CSV y JSON**.
 
 ## Fase 8: Biblioteca estándar
 

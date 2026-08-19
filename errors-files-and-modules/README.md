@@ -16,7 +16,7 @@ Phase 7 starts with exception handling, then moves into deliberately raising exc
 |---|---|---|---|
 | [01. `try`, `except`, `else`, and `finally`](01-try-except-else-finally/README.md) | Handle expected runtime failures while keeping normal and cleanup paths explicit | Beginner to intermediate | Available |
 | [02. Raising and Custom Exceptions](02-raise-and-custom-exceptions/README.md) | Signal invalid states deliberately with `raise`, re-raise or chain failures deliberately, and introduce simple custom exceptions | Intermediate | Available |
-| 03. `open()` and `with` | Read and write text files while managing resources safely | Beginner to intermediate | Planned |
+| [03. `open()` and `with`](03-open-and-with/README.md) | Open, read, write, and append text files while managing file resources safely with `with` | Beginner to intermediate | Available |
 | 04. TXT, CSV, and JSON | Work with common text-based data formats and their boundaries | Intermediate | Planned |
 | 05. Imports, Modules, and Packages | Split code into reusable files and understand Python's import model | Intermediate | Planned |
 
@@ -67,9 +67,9 @@ By the end of Phase 7, you should be able to:
 
 ## Current chapter
 
-Continue with [Raising and Custom Exceptions](02-raise-and-custom-exceptions/README.md).
+Continue with [Opening Files Safely with `open()` and `with`](03-open-and-with/README.md).
 
-Chapter 01 establishes **handling exceptions that already occur**. Chapter 02 adds deliberate `raise`, choosing built-in versus custom exception types, bare re-raising, explicit exception chaining, and the distinction between `raise` and `assert`. The next planned chapter is **`open()` and `with`**.
+Chapters 01–02 establish exception handling and deliberate exception signaling. Chapter 03 adds text-file opening, explicit encodings, file modes, reading, writing, appending, focused file errors, and context-managed cleanup. The next planned chapter is **TXT, CSV, and JSON**.
 
 ## Directory structure
 
@@ -86,14 +86,22 @@ errors-files-and-modules/
 │       ├── parse_integer.py
 │       ├── safe_divide.py
 │       └── trace_try_else_finally.py
-└── 02-raise-and-custom-exceptions/
+├── 02-raise-and-custom-exceptions/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── custom_exception.py
+│       ├── exception_chaining.py
+│       └── validate_score.py
+└── 03-open-and-with/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── custom_exception.py
-        ├── exception_chaining.py
-        └── validate_score.py
+        ├── append_text.py
+        ├── handle_missing_file.py
+        └── write_and_read_text.py
 ```
 
 Planned chapter directories are added only when their content is actually published.

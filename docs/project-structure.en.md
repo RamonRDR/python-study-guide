@@ -149,14 +149,22 @@ python-study-guide/
 │   │       ├── parse_integer.py
 │   │       ├── safe_divide.py
 │   │       └── trace_try_else_finally.py
-│   └── 02-raise-and-custom-exceptions/
+│   ├── 02-raise-and-custom-exceptions/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── custom_exception.py
+│   │       ├── exception_chaining.py
+│   │       └── validate_score.py
+│   └── 03-open-and-with/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── custom_exception.py
-│           ├── exception_chaining.py
-│           └── validate_score.py
+│           ├── append_text.py
+│           ├── handle_missing_file.py
+│           └── write_and_read_text.py
 ├── exercises/
 ├── external-libraries/
 ├── functions/
@@ -408,7 +416,7 @@ python-study-guide/
 - `comments-and-documentation/`: complete Phase 6 learning path. Reviewed chapters are available for comments, docstrings, meaningful names, task markers, comments versus logging, and PEP 8 and readability, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `collections/`: complete Phase 3 learning path. Its six chapters teach list creation, reading, mutation, common methods, shallow copying, tuples and immutability, dictionary key-value mappings and views, set uniqueness and relationships, and how to choose among lists, tuples, dictionaries, and sets by intent, in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
-- `errors-files-and-modules/`: in-progress Phase 7 learning path. Chapters 01–02 cover specific exception handling, `else`, `finally`, propagation, deliberate `raise`, built-in versus custom exception selection, bare re-raising, explicit exception chaining, `raise` versus `assert`, and deterministic executable examples in English, Brazilian Portuguese, and Spanish.
+- `errors-files-and-modules/`: in-progress Phase 7 learning path. Chapters 01–03 cover runtime exception handling, deliberate raising and custom exceptions, and safe text-file I/O with `open()`, explicit encodings, file modes, focused file exceptions, and `with`, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: future guides to third-party packages.
 - `functions/`: complete Phase 5 learning path. Chapters 01–09 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, default values including definition-time evaluation and mutable-default safety, variable-length positional and keyword argument collection with `*args` and `**kwargs`, composition through helper and coordinating functions with explicit dependencies and simple call graphs, and explicit data-flow tracing across calls including parameter bindings, rebinding versus mutation, `None`, tuple results, and return-based handoffs, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
