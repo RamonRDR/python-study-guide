@@ -15,7 +15,7 @@ Phase 7 starts with exception handling, then moves into deliberately raising exc
 | Chapter | Main focus | Level | Status |
 |---|---|---|---|
 | [01. `try`, `except`, `else`, and `finally`](01-try-except-else-finally/README.md) | Handle expected runtime failures while keeping normal and cleanup paths explicit | Beginner to intermediate | Available |
-| 02. Raising and Custom Exceptions | Signal invalid states deliberately with `raise` and introduce simple custom exceptions | Intermediate | Planned |
+| [02. Raising and Custom Exceptions](02-raise-and-custom-exceptions/README.md) | Signal invalid states deliberately with `raise`, re-raise or chain failures deliberately, and introduce simple custom exceptions | Intermediate | Available |
 | 03. `open()` and `with` | Read and write text files while managing resources safely | Beginner to intermediate | Planned |
 | 04. TXT, CSV, and JSON | Work with common text-based data formats and their boundaries | Intermediate | Planned |
 | 05. Imports, Modules, and Packages | Split code into reusable files and understand Python's import model | Intermediate | Planned |
@@ -67,9 +67,9 @@ By the end of Phase 7, you should be able to:
 
 ## Current chapter
 
-Start with [Handling Exceptions with `try`, `except`, `else`, and `finally`](01-try-except-else-finally/README.md).
+Continue with [Raising and Custom Exceptions](02-raise-and-custom-exceptions/README.md).
 
-The first chapter focuses on **handling exceptions that already occur**. Creating exceptions deliberately with `raise` is reserved for Chapter 02 so the two responsibilities remain easy to distinguish.
+Chapter 01 establishes **handling exceptions that already occur**. Chapter 02 adds deliberate `raise`, choosing built-in versus custom exception types, bare re-raising, explicit exception chaining, and the distinction between `raise` and `assert`. The next planned chapter is **`open()` and `with`**.
 
 ## Directory structure
 
@@ -78,14 +78,22 @@ errors-files-and-modules/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-try-except-else-finally/
+├── 01-try-except-else-finally/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── parse_integer.py
+│       ├── safe_divide.py
+│       └── trace_try_else_finally.py
+└── 02-raise-and-custom-exceptions/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── parse_integer.py
-        ├── safe_divide.py
-        └── trace_try_else_finally.py
+        ├── custom_exception.py
+        ├── exception_chaining.py
+        └── validate_score.py
 ```
 
 Planned chapter directories are added only when their content is actually published.
