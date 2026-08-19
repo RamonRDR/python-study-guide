@@ -92,8 +92,9 @@ Esta fase ya está disponible y es la siguiente fase recomendada después de Fun
 [Abrir el índice de la sección Errores, Archivos y Módulos](../errors-files-and-modules/README.es.md)
 
 1. [Manejo de Excepciones con `try`, `except`, `else` y `finally`](../errors-files-and-modules/01-try-except-else-finally/README.es.md)
+2. [Lanzar Excepciones y Crear Excepciones Personalizadas](../errors-files-and-modules/02-raise-and-custom-exceptions/README.es.md)
 
-La Fase 7 está en progreso. El Capítulo 01 establece el modelo de excepciones en runtime, handlers específicos, orden de handlers, la ruta de éxito con `else`, limpieza con `finally`, propagación entre llamadas de función y la diferencia entre recuperación deliberada y ocultar fallos por accidente. El siguiente capítulo planificado es **Lanzar Excepciones y Excepciones Personalizadas**.
+La Fase 7 está en progreso. El Capítulo 01 establece el modelo de excepciones en runtime y handlers. El Capítulo 02 añade `raise` deliberado, elección entre excepciones built-in y personalizadas, relanzamiento con `raise` sin expresión, encadenamiento explícito con `from` y la distinción entre `raise` y `assert`. El próximo capítulo planificado es **`open()` y `with`**.
 
 ## Fase 8 · Biblioteca Estándar ⏳
 

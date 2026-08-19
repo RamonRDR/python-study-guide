@@ -108,3 +108,6 @@ functions/09-data-flow-between-functions/examples/trace_score_pipeline.py
 errors-files-and-modules/01-try-except-else-finally/examples/parse_integer.py
 errors-files-and-modules/01-try-except-else-finally/examples/safe_divide.py
 errors-files-and-modules/01-try-except-else-finally/examples/trace_try_else_finally.py
+errors-files-and-modules/02-raise-and-custom-exceptions/examples/custom_exception.py
+errors-files-and-modules/02-raise-and-custom-exceptions/examples/exception_chaining.py
+errors-files-and-modules/02-raise-and-custom-exceptions/examples/validate_score.py

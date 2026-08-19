@@ -15,7 +15,7 @@ La Fase 7 comienza con el manejo de excepciones, continúa con la generación de
 | Capítulo | Enfoque principal | Nivel | Estado |
 |---|---|---|---|
 | [01. `try`, `except`, `else` y `finally`](01-try-except-else-finally/README.es.md) | Manejar fallos esperados en runtime manteniendo explícitas las rutas normal y de limpieza | Principiante a intermedio | Disponible |
-| 02. Lanzar Excepciones y Excepciones Personalizadas | Señalar estados inválidos deliberadamente con `raise` e introducir excepciones personalizadas simples | Intermedio | Planificado |
+| [02. Lanzar Excepciones y Excepciones Personalizadas](02-raise-and-custom-exceptions/README.es.md) | Señalar estados inválidos deliberadamente con `raise`, volver a lanzar o encadenar fallos de forma intencional e introducir excepciones personalizadas simples | Intermedio | Disponible |
 | 03. `open()` y `with` | Leer y escribir archivos de texto gestionando recursos de forma segura | Principiante a intermedio | Planificado |
 | 04. TXT, CSV y JSON | Trabajar con formatos comunes de datos basados en texto y sus límites | Intermedio | Planificado |
 | 05. Imports, Módulos y Paquetes | Dividir código en archivos reutilizables y comprender el modelo de importación de Python | Intermedio | Planificado |
@@ -67,9 +67,9 @@ Al final de la Fase 7, deberías poder:
 
 ## Capítulo actual
 
-Comienza con [Manejo de Excepciones con `try`, `except`, `else` y `finally`](01-try-except-else-finally/README.es.md).
+Continúa con [Lanzar Excepciones y Crear Excepciones Personalizadas](02-raise-and-custom-exceptions/README.es.md).
 
-El primer capítulo se concentra en **manejar excepciones que ya ocurren**. Crear excepciones deliberadamente con `raise` queda reservado para el Capítulo 02, de modo que ambas responsabilidades sean fáciles de distinguir.
+El Capítulo 01 establece **el manejo de excepciones que ya ocurren**. El Capítulo 02 añade `raise` deliberado, elección entre tipos built-in y personalizados, relanzamiento con `raise` sin expresión, encadenamiento explícito de excepciones y la distinción entre `raise` y `assert`. El próximo capítulo planificado es **`open()` y `with`**.
 
 ## Estructura del directorio
 
@@ -78,14 +78,22 @@ errors-files-and-modules/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-try-except-else-finally/
+├── 01-try-except-else-finally/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── parse_integer.py
+│       ├── safe_divide.py
+│       └── trace_try_else_finally.py
+└── 02-raise-and-custom-exceptions/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── parse_integer.py
-        ├── safe_divide.py
-        └── trace_try_else_finally.py
+        ├── custom_exception.py
+        ├── exception_chaining.py
+        └── validate_score.py
 ```
 
 Los directorios de capítulos planificados se añaden únicamente cuando su contenido se publica realmente.

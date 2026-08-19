@@ -21,12 +21,12 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 4. Program flow | Complete | Eight reviewed chapters cover conditions, branching, structural pattern matching, `for`, iteration helpers, `while`, loop control, and choosing and combining flow tools by intent |
 | 5. Functions | Complete | Nine reviewed chapters cover `def`, calls, required inputs, returned values, scope, type hints, safe defaults, flexible arguments, function composition, and explicit data flow |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
-| 7. Errors, files, and modules | In progress | Chapter 01 introduces runtime exception handling with `try`, `except`, `else`, and `finally` |
+| 7. Errors, files, and modules | In progress | Chapters 01–02 cover handling runtime exceptions and deliberately raising, re-raising, chaining, and defining custom exceptions |
 | 8. Standard library | Planned | Curriculum not started |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, 4, 5, and 6 are complete. Phase 7 is now in progress, starting with explicit handling of runtime exceptions before the later file and module chapters. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, 4, 5, and 6 are complete. Phase 7 is in progress with both exception handling and deliberate exception raising now available before the later file and module chapters. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -129,12 +129,12 @@ Phase 6 is officially complete and provides the editorial and quality model for 
 See the [section learning path](../errors-files-and-modules/README.md).
 
 - [x] [`try`, `except`, `else`, and `finally`](../errors-files-and-modules/01-try-except-else-finally/README.md)
-- [ ] `raise` and custom exceptions
+- [x] [`raise` and custom exceptions](../errors-files-and-modules/02-raise-and-custom-exceptions/README.md)
 - [ ] `open()` and `with`
 - [ ] TXT, CSV, and JSON
 - [ ] Imports, modules, and packages
 
-Phase 7 is in progress. Chapter 01 establishes runtime exceptions, specific handlers, handler ordering, success-only `else`, cleanup-oriented `finally`, propagation between function calls, and narrow failure boundaries. The next planned chapter is **Raising and Custom Exceptions**.
+Phase 7 is in progress. Chapter 01 establishes runtime exception handling, specific handlers, `else`, `finally`, propagation, and narrow failure boundaries. Chapter 02 adds deliberate `raise`, choosing built-in versus custom exception types, bare re-raising, explicit chaining, and `raise` versus `assert`. The next planned chapter is **`open()` and `with`**.
 
 ## Phase 8: Standard library
 

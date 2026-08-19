@@ -92,8 +92,9 @@ This phase is already available and is the next recommended phase after Function
 [Open the Errors, Files, and Modules section index](../errors-files-and-modules/README.md)
 
 1. [Handling Exceptions with `try`, `except`, `else`, and `finally`](../errors-files-and-modules/01-try-except-else-finally/README.md)
+2. [Raising and Custom Exceptions](../errors-files-and-modules/02-raise-and-custom-exceptions/README.md)
 
-Phase 7 is in progress. Chapter 01 establishes the runtime-exception model, specific handlers, handler ordering, success-only `else`, cleanup-oriented `finally`, propagation across function calls, and the difference between deliberate recovery and accidentally hiding failures. The next planned chapter is **Raising and Custom Exceptions**.
+Phase 7 is in progress. Chapter 01 establishes the runtime-exception and handler model. Chapter 02 adds deliberate `raise`, built-in versus custom exception selection, bare re-raising, explicit chaining with `from`, and the distinction between `raise` and `assert`. The next planned chapter is **`open()` and `with`**.
 
 ## Phase 8 · Standard Library ⏳
 
