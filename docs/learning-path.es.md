@@ -93,8 +93,9 @@ Esta fase ya está disponible y es la siguiente fase recomendada después de Fun
 
 1. [Manejo de Excepciones con `try`, `except`, `else` y `finally`](../errors-files-and-modules/01-try-except-else-finally/README.es.md)
 2. [Lanzar Excepciones y Crear Excepciones Personalizadas](../errors-files-and-modules/02-raise-and-custom-exceptions/README.es.md)
+3. [Abrir Archivos de Forma Segura con `open()` y `with`](../errors-files-and-modules/03-open-and-with/README.es.md)
 
-La Fase 7 está en progreso. El Capítulo 01 establece el modelo de excepciones en runtime y handlers. El Capítulo 02 añade `raise` deliberado, elección entre excepciones built-in y personalizadas, relanzamiento con `raise` sin expresión, encadenamiento explícito con `from` y la distinción entre `raise` y `assert`. El próximo capítulo planificado es **`open()` y `with`**.
+La Fase 7 está en progreso. Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade modos de archivo de texto, encoding explícito, lectura, escritura, append, excepciones de archivo y limpieza gestionada por contexto. El próximo capítulo planificado es **TXT, CSV y JSON**.
 
 ## Fase 8 · Biblioteca Estándar ⏳
 

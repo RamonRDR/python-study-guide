@@ -111,3 +111,6 @@ errors-files-and-modules/01-try-except-else-finally/examples/trace_try_else_fina
 errors-files-and-modules/02-raise-and-custom-exceptions/examples/custom_exception.py
 errors-files-and-modules/02-raise-and-custom-exceptions/examples/exception_chaining.py
 errors-files-and-modules/02-raise-and-custom-exceptions/examples/validate_score.py
+errors-files-and-modules/03-open-and-with/examples/append_text.py
+errors-files-and-modules/03-open-and-with/examples/handle_missing_file.py
+errors-files-and-modules/03-open-and-with/examples/write_and_read_text.py
