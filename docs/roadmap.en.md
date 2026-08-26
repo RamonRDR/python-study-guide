@@ -21,7 +21,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 4. Program flow | Complete | Eight reviewed chapters cover conditions, branching, structural pattern matching, `for`, iteration helpers, `while`, loop control, and choosing and combining flow tools by intent |
 | 5. Functions | Complete | Nine reviewed chapters cover `def`, calls, required inputs, returned values, scope, type hints, safe defaults, flexible arguments, function composition, and explicit data flow |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
-| 7. Errors, files, and modules | In progress | Chapters 01–02 cover handling runtime exceptions and deliberately raising, re-raising, chaining, and defining custom exceptions |
+| 7. Errors, files, and modules | In progress | Chapters 01–03 cover exception handling, deliberate exception signaling, and safe text-file I/O with `open()` and `with` |
 | 8. Standard library | Planned | Curriculum not started |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
@@ -130,11 +130,11 @@ See the [section learning path](../errors-files-and-modules/README.md).
 
 - [x] [`try`, `except`, `else`, and `finally`](../errors-files-and-modules/01-try-except-else-finally/README.md)
 - [x] [`raise` and custom exceptions](../errors-files-and-modules/02-raise-and-custom-exceptions/README.md)
-- [ ] `open()` and `with`
+- [x] [`open()` and `with`](../errors-files-and-modules/03-open-and-with/README.md)
 - [ ] TXT, CSV, and JSON
 - [ ] Imports, modules, and packages
 
-Phase 7 is in progress. Chapter 01 establishes runtime exception handling, specific handlers, `else`, `finally`, propagation, and narrow failure boundaries. Chapter 02 adds deliberate `raise`, choosing built-in versus custom exception types, bare re-raising, explicit chaining, and `raise` versus `assert`. The next planned chapter is **`open()` and `with`**.
+Phase 7 is in progress. Chapters 01–02 establish exception handling and deliberate signaling. Chapter 03 adds safe text-file I/O with modes, explicit encodings, reading, writing, appending, focused file exceptions, and `with`. The next planned chapter is **TXT, CSV, and JSON**.
 
 ## Phase 8: Standard library
 

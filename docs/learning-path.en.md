@@ -93,8 +93,9 @@ This phase is already available and is the next recommended phase after Function
 
 1. [Handling Exceptions with `try`, `except`, `else`, and `finally`](../errors-files-and-modules/01-try-except-else-finally/README.md)
 2. [Raising and Custom Exceptions](../errors-files-and-modules/02-raise-and-custom-exceptions/README.md)
+3. [Opening Files Safely with `open()` and `with`](../errors-files-and-modules/03-open-and-with/README.md)
 
-Phase 7 is in progress. Chapter 01 establishes the runtime-exception and handler model. Chapter 02 adds deliberate `raise`, built-in versus custom exception selection, bare re-raising, explicit chaining with `from`, and the distinction between `raise` and `assert`. The next planned chapter is **`open()` and `with`**.
+Phase 7 is in progress. Chapters 01–02 establish exception handling and deliberate signaling. Chapter 03 adds text-file modes, explicit encodings, reading, writing, appending, file exceptions, and context-managed cleanup. The next planned chapter is **TXT, CSV, and JSON**.
 
 ## Phase 8 · Standard Library ⏳
 
