@@ -18,7 +18,7 @@ A Fase 7 começa com tratamento de exceções, avança para a criação delibera
 | [02. Levantando Exceções e Exceções Personalizadas](02-raise-and-custom-exceptions/README.pt-BR.md) | Sinalizar estados inválidos deliberadamente com `raise`, relançar ou encadear falhas de forma intencional e introduzir exceções personalizadas simples | Intermediário | Disponível |
 | [03. `open()` e `with`](03-open-and-with/README.pt-BR.md) | Abrir, ler, escrever e acrescentar em arquivos de texto gerenciando recursos com segurança usando `with` | Iniciante a intermediário | Disponível |
 | [04. TXT, CSV e JSON](04-txt-csv-and-json/README.pt-BR.md) | Interpretar, escrever, converter e validar formatos comuns de dados textuais com ferramentas específicas do formato | Intermediário | Disponível |
-| 05. Imports, Módulos e Pacotes | Dividir código em arquivos reutilizáveis e entender o modelo de importação do Python | Intermediário | Planejado |
+| [05. Imports, Módulos e Pacotes](05-imports-modules-and-packages/README.pt-BR.md) | Dividir código em arquivos reutilizáveis, organizar pacotes regulares e entender o contexto de importação e execução do Python | Intermediário | Disponível |
 
 ## Orientação de pré-requisitos
 
@@ -65,11 +65,11 @@ Ao final da Fase 7, você deverá conseguir:
 - importar código de módulos e pacotes;
 - explicar como arquivos, exceções, funções e módulos se conectam em um pequeno programa real.
 
-## Capítulo atual
+## Status da fase
 
-Continue com [Trabalhando com TXT, CSV e JSON](04-txt-csv-and-json/README.pt-BR.md).
+A Fase 7 está concluída. Encerre a seção com [Organizando Código com Imports, Módulos e Pacotes](05-imports-modules-and-packages/README.pt-BR.md).
 
-Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 adiciona tempo de vida seguro de arquivos e I/O de texto. O Capítulo 04 acrescenta contratos TXT orientados por linhas, readers e writers CSV, serialização e desserialização JSON, conversão explícita de tipos e fronteiras entre parsing e validação. O próximo capítulo planejado é **Imports, Módulos e Pacotes**.
+Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 adiciona tempo de vida seguro de arquivos e I/O de texto. O Capítulo 04 adiciona fronteiras de dados TXT, CSV e JSON. O Capítulo 05 encerra a fase com imports explícitos, módulos, pacotes regulares, `__name__`, main guard, contexto de busca, imports relativos, `python -m` e design de dependências.
 
 ## Estrutura do diretório
 
@@ -102,15 +102,28 @@ errors-files-and-modules/
 │       ├── append_text.py
 │       ├── handle_missing_file.py
 │       └── write_and_read_text.py
-└── 04-txt-csv-and-json/
+├── 04-txt-csv-and-json/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── csv_records.py
+│       ├── handle_invalid_json.py
+│       ├── json_document.py
+│       └── text_records.py
+└── 05-imports-modules-and-packages/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── csv_records.py
-        ├── handle_invalid_json.py
-        ├── json_document.py
-        └── text_records.py
+        ├── grade_tools.py
+        ├── import_standard_library.py
+        ├── main_guard.py
+        ├── module_demo.py
+        ├── package_demo.py
+        └── study_tools/
+            ├── __init__.py
+            └── formatting.py
 ```
 
-Os diretórios dos capítulos planejados são adicionados somente quando seu conteúdo é realmente publicado.
+Todos os cinco diretórios planejados da Fase 7 agora estão publicados.

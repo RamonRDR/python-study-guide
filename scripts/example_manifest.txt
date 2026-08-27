@@ -118,3 +118,7 @@ errors-files-and-modules/04-txt-csv-and-json/examples/csv_records.py
 errors-files-and-modules/04-txt-csv-and-json/examples/handle_invalid_json.py
 errors-files-and-modules/04-txt-csv-and-json/examples/json_document.py
 errors-files-and-modules/04-txt-csv-and-json/examples/text_records.py
+errors-files-and-modules/05-imports-modules-and-packages/examples/import_standard_library.py
+errors-files-and-modules/05-imports-modules-and-packages/examples/main_guard.py
+errors-files-and-modules/05-imports-modules-and-packages/examples/module_demo.py
+errors-files-and-modules/05-imports-modules-and-packages/examples/package_demo.py
