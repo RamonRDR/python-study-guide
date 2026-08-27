@@ -17,7 +17,7 @@ La Fase 7 comienza con el manejo de excepciones, continúa con la generación de
 | [01. `try`, `except`, `else` y `finally`](01-try-except-else-finally/README.es.md) | Manejar fallos esperados en runtime manteniendo explícitas las rutas normal y de limpieza | Principiante a intermedio | Disponible |
 | [02. Lanzar Excepciones y Excepciones Personalizadas](02-raise-and-custom-exceptions/README.es.md) | Señalar estados inválidos deliberadamente con `raise`, volver a lanzar o encadenar fallos de forma intencional e introducir excepciones personalizadas simples | Intermedio | Disponible |
 | [03. `open()` y `with`](03-open-and-with/README.es.md) | Abrir, leer, escribir y añadir a archivos de texto gestionando recursos de forma segura con `with` | Principiante a intermedio | Disponible |
-| 04. TXT, CSV y JSON | Trabajar con formatos comunes de datos basados en texto y sus límites | Intermedio | Planificado |
+| [04. TXT, CSV y JSON](04-txt-csv-and-json/README.es.md) | Analizar, escribir, convertir y validar formatos comunes de datos textuales con herramientas específicas del formato | Intermedio | Disponible |
 | 05. Imports, Módulos y Paquetes | Dividir código en archivos reutilizables y comprender el modelo de importación de Python | Intermedio | Planificado |
 
 ## Orientación de prerrequisitos
@@ -67,9 +67,9 @@ Al final de la Fase 7, deberías poder:
 
 ## Capítulo actual
 
-Continúa con [Abrir Archivos de Forma Segura con `open()` y `with`](03-open-and-with/README.es.md).
+Continúa con [Trabajar con TXT, CSV y JSON](04-txt-csv-and-json/README.es.md).
 
-Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade apertura de archivos de texto, encoding explícito, modos de archivo, lectura, escritura, append, errores de archivo específicos y limpieza gestionada por contexto. El próximo capítulo planificado es **TXT, CSV y JSON**.
+Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade un tiempo de vida seguro de archivos e I/O de texto. El Capítulo 04 añade contratos TXT orientados a líneas, readers y writers CSV, serialización y deserialización JSON, conversión explícita de tipos y límites entre parsing y validación. El próximo capítulo planificado es **Imports, Módulos y Paquetes**.
 
 ## Estructura del directorio
 
@@ -94,14 +94,23 @@ errors-files-and-modules/
 │       ├── custom_exception.py
 │       ├── exception_chaining.py
 │       └── validate_score.py
-└── 03-open-and-with/
+├── 03-open-and-with/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── append_text.py
+│       ├── handle_missing_file.py
+│       └── write_and_read_text.py
+└── 04-txt-csv-and-json/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── append_text.py
-        ├── handle_missing_file.py
-        └── write_and_read_text.py
+        ├── csv_records.py
+        ├── handle_invalid_json.py
+        ├── json_document.py
+        └── text_records.py
 ```
 
 Los directorios de capítulos planificados se añaden únicamente cuando su contenido se publica realmente.

@@ -94,8 +94,9 @@ Esta fase já está disponível e é a próxima fase recomendada depois de Funç
 1. [Tratando Exceções com `try`, `except`, `else` e `finally`](../errors-files-and-modules/01-try-except-else-finally/README.pt-BR.md)
 2. [Levantando Exceções e Criando Exceções Personalizadas](../errors-files-and-modules/02-raise-and-custom-exceptions/README.pt-BR.md)
 3. [Abrindo Arquivos com Segurança com `open()` e `with`](../errors-files-and-modules/03-open-and-with/README.pt-BR.md)
+4. [Trabalhando com TXT, CSV e JSON](../errors-files-and-modules/04-txt-csv-and-json/README.pt-BR.md)
 
-A Fase 7 está em andamento. Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 acrescenta modos de arquivo de texto, encoding explícito, leitura, escrita, append, exceções de arquivo e limpeza gerenciada por contexto. O próximo capítulo planejado é **TXT, CSV e JSON**.
+A Fase 7 está em andamento. Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 acrescenta tempo de vida seguro de arquivos e I/O de texto. O Capítulo 04 adiciona contratos TXT, parsing e escrita de CSV, serialização e desserialização JSON e fronteiras explícitas entre parsing e validação. O próximo capítulo planejado é **Imports, Módulos e Pacotes**.
 
 ## Fase 8 · Biblioteca Padrão ⏳
 

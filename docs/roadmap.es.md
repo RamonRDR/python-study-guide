@@ -21,12 +21,12 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 4. Flujo del programa | Completada | Ocho capítulos revisados cubren condiciones, ramificaciones, coincidencia de patrones estructurales, `for`, ayudas de iteración, `while`, control de bucles y elección y combinación de herramientas de flujo según la intención |
 | 5. Funciones | Completada | Nueve capítulos revisados cubren `def`, llamadas, entradas obligatorias, valores retornados, alcance, type hints, valores predeterminados seguros, argumentos flexibles, composición de funciones y flujo explícito de datos |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
-| 7. Errores, archivos y módulos | En progreso | Los Capítulos 01–03 cubren manejo de excepciones, señalización deliberada e I/O seguro de archivos de texto con `open()` y `with` |
+| 7. Errores, archivos y módulos | En progreso | Los Capítulos 01–04 cubren manejo de excepciones, señalización deliberada, I/O seguro de archivos y formatos TXT/CSV/JSON |
 | 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3, 4, 5 y 6 están completadas. La Fase 7 está en progreso, ahora con manejo y lanzamiento deliberado de excepciones disponibles antes de los capítulos posteriores sobre archivos y módulos. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1, 2, 3, 4, 5 y 6 están completadas. La Fase 7 está en progreso con manejo de excepciones, señalización deliberada, I/O seguro de archivos y límites de formatos TXT/CSV/JSON ya disponibles. El último capítulo planificado de la Fase 7 es **Imports, módulos y paquetes**. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -131,10 +131,10 @@ Consulta la [ruta de aprendizaje de la sección](../errors-files-and-modules/REA
 - [x] [`try`, `except`, `else` y `finally`](../errors-files-and-modules/01-try-except-else-finally/README.es.md)
 - [x] [`raise` y excepciones personalizadas](../errors-files-and-modules/02-raise-and-custom-exceptions/README.es.md)
 - [x] [`open()` y `with`](../errors-files-and-modules/03-open-and-with/README.es.md)
-- [ ] TXT, CSV y JSON
+- [x] [TXT, CSV y JSON](../errors-files-and-modules/04-txt-csv-and-json/README.es.md)
 - [ ] Imports, módulos y paquetes
 
-La Fase 7 está en progreso. Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade I/O seguro de archivos de texto con modos, encoding explícito, lectura, escritura, append, excepciones de archivo específicas y `with`. El próximo capítulo planificado es **TXT, CSV y JSON**.
+La Fase 7 está en progreso. Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade I/O seguro de archivos y gestión de recursos. El Capítulo 04 añade contratos TXT, parsing y escritura de CSV y JSON, conversión explícita de tipos y límites entre parsing y validación. El próximo capítulo planificado es **Imports, módulos y paquetes**.
 
 ## Fase 8: Biblioteca estándar
 
