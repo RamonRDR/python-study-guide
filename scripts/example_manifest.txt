@@ -114,3 +114,7 @@ errors-files-and-modules/02-raise-and-custom-exceptions/examples/validate_score.
 errors-files-and-modules/03-open-and-with/examples/append_text.py
 errors-files-and-modules/03-open-and-with/examples/handle_missing_file.py
 errors-files-and-modules/03-open-and-with/examples/write_and_read_text.py
+errors-files-and-modules/04-txt-csv-and-json/examples/csv_records.py
+errors-files-and-modules/04-txt-csv-and-json/examples/handle_invalid_json.py
+errors-files-and-modules/04-txt-csv-and-json/examples/json_document.py
+errors-files-and-modules/04-txt-csv-and-json/examples/text_records.py

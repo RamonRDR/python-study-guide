@@ -94,8 +94,9 @@ Esta fase ya está disponible y es la siguiente fase recomendada después de Fun
 1. [Manejo de Excepciones con `try`, `except`, `else` y `finally`](../errors-files-and-modules/01-try-except-else-finally/README.es.md)
 2. [Lanzar Excepciones y Crear Excepciones Personalizadas](../errors-files-and-modules/02-raise-and-custom-exceptions/README.es.md)
 3. [Abrir Archivos de Forma Segura con `open()` y `with`](../errors-files-and-modules/03-open-and-with/README.es.md)
+4. [Trabajar con TXT, CSV y JSON](../errors-files-and-modules/04-txt-csv-and-json/README.es.md)
 
-La Fase 7 está en progreso. Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade modos de archivo de texto, encoding explícito, lectura, escritura, append, excepciones de archivo y limpieza gestionada por contexto. El próximo capítulo planificado es **TXT, CSV y JSON**.
+La Fase 7 está en progreso. Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade un tiempo de vida seguro de archivos e I/O de texto. El Capítulo 04 añade contratos TXT, parsing y escritura de CSV, serialización y deserialización JSON y límites explícitos entre parsing y validación. El próximo capítulo planificado es **Imports, Módulos y Paquetes**.
 
 ## Fase 8 · Biblioteca Estándar ⏳
 
