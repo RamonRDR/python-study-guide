@@ -21,12 +21,12 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 4. Program flow | Complete | Eight reviewed chapters cover conditions, branching, structural pattern matching, `for`, iteration helpers, `while`, loop control, and choosing and combining flow tools by intent |
 | 5. Functions | Complete | Nine reviewed chapters cover `def`, calls, required inputs, returned values, scope, type hints, safe defaults, flexible arguments, function composition, and explicit data flow |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
-| 7. Errors, files, and modules | In progress | Chapters 01–04 cover exception handling, deliberate exception signaling, safe file I/O, and TXT/CSV/JSON data formats |
+| 7. Errors, files, and modules | Complete | Five reviewed chapters cover exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data formats, and imports/modules/packages |
 | 8. Standard library | Planned | Curriculum not started |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, 4, 5, and 6 are complete. Phase 7 is in progress with exception handling, deliberate exception signaling, safe file I/O, and TXT/CSV/JSON data-format boundaries now available. The final planned Phase 7 chapter is **Imports, modules, and packages**. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, 4, 5, 6, and 7 are complete. Phase 7 now connects exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data boundaries, and code organization through imports, modules, and packages. Phase 8: Standard Library is the next planned learning phase. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -132,9 +132,9 @@ See the [section learning path](../errors-files-and-modules/README.md).
 - [x] [`raise` and custom exceptions](../errors-files-and-modules/02-raise-and-custom-exceptions/README.md)
 - [x] [`open()` and `with`](../errors-files-and-modules/03-open-and-with/README.md)
 - [x] [TXT, CSV, and JSON](../errors-files-and-modules/04-txt-csv-and-json/README.md)
-- [ ] Imports, modules, and packages
+- [x] [Imports, modules, and packages](../errors-files-and-modules/05-imports-modules-and-packages/README.md)
 
-Phase 7 is in progress. Chapters 01–02 establish exception handling and deliberate signaling. Chapter 03 adds safe text-file I/O and resource lifetime. Chapter 04 adds TXT contracts, CSV and JSON parsing/writing, explicit type conversion, and parsing-versus-validation boundaries. The next planned chapter is **Imports, modules, and packages**.
+Phase 7 is complete. Chapters 01–02 establish exception handling and deliberate signaling. Chapter 03 adds safe text-file I/O and resource lifetime. Chapter 04 adds TXT, CSV, and JSON parsing/writing with explicit data boundaries. Chapter 05 closes the phase with modules, regular packages, import namespaces and caching, `__name__`, the main guard, search context, absolute and relative imports, `python -m`, and dependency design.
 
 ## Phase 8: Standard library
 

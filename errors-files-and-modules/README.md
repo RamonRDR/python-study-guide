@@ -18,7 +18,7 @@ Phase 7 starts with exception handling, then moves into deliberately raising exc
 | [02. Raising and Custom Exceptions](02-raise-and-custom-exceptions/README.md) | Signal invalid states deliberately with `raise`, re-raise or chain failures deliberately, and introduce simple custom exceptions | Intermediate | Available |
 | [03. `open()` and `with`](03-open-and-with/README.md) | Open, read, write, and append text files while managing file resources safely with `with` | Beginner to intermediate | Available |
 | [04. TXT, CSV, and JSON](04-txt-csv-and-json/README.md) | Parse, write, convert, and validate common text-based data formats with format-aware tools | Intermediate | Available |
-| 05. Imports, Modules, and Packages | Split code into reusable files and understand Python's import model | Intermediate | Planned |
+| [05. Imports, Modules, and Packages](05-imports-modules-and-packages/README.md) | Split code into reusable files, organize regular packages, and understand Python's import and execution context | Intermediate | Available |
 
 ## Prerequisite guidance
 
@@ -65,11 +65,11 @@ By the end of Phase 7, you should be able to:
 - import code from modules and packages;
 - explain how files, exceptions, functions, and modules connect in a small real program.
 
-## Current chapter
+## Phase status
 
-Continue with [Working with TXT, CSV, and JSON](04-txt-csv-and-json/README.md).
+Phase 7 is complete. Finish the section with [Organizing Code with Imports, Modules, and Packages](05-imports-modules-and-packages/README.md).
 
-Chapters 01–02 establish exception handling and deliberate exception signaling. Chapter 03 adds safe text-file lifetime and I/O. Chapter 04 adds line-oriented TXT contracts, CSV readers and writers, JSON serialization and deserialization, explicit type conversion, and parsing-versus-validation boundaries. The next planned chapter is **Imports, Modules, and Packages**.
+Chapters 01–02 establish exception handling and deliberate exception signaling. Chapter 03 adds safe text-file lifetime and I/O. Chapter 04 adds TXT, CSV, and JSON data boundaries. Chapter 05 closes the phase with explicit imports, modules, regular packages, `__name__`, the main guard, search context, relative imports, `python -m`, and dependency design.
 
 ## Directory structure
 
@@ -102,15 +102,28 @@ errors-files-and-modules/
 │       ├── append_text.py
 │       ├── handle_missing_file.py
 │       └── write_and_read_text.py
-└── 04-txt-csv-and-json/
+├── 04-txt-csv-and-json/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── csv_records.py
+│       ├── handle_invalid_json.py
+│       ├── json_document.py
+│       └── text_records.py
+└── 05-imports-modules-and-packages/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── csv_records.py
-        ├── handle_invalid_json.py
-        ├── json_document.py
-        └── text_records.py
+        ├── grade_tools.py
+        ├── import_standard_library.py
+        ├── main_guard.py
+        ├── module_demo.py
+        ├── package_demo.py
+        └── study_tools/
+            ├── __init__.py
+            └── formatting.py
 ```
 
-Planned chapter directories are added only when their content is actually published.
+All five planned Phase 7 chapter directories are now published.

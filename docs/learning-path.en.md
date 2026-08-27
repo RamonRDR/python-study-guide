@@ -87,7 +87,7 @@ This phase is already available and is the next recommended phase after Function
 5. [Comments versus Logging in Python](../comments-and-documentation/05-comments-vs-logging/README.md)
 6. [PEP 8 and Readability in Python](../comments-and-documentation/06-pep8-and-readability/README.md)
 
-## Phase 7 · Errors, Files, and Modules 🚧
+## Phase 7 · Errors, Files, and Modules ✅
 
 [Open the Errors, Files, and Modules section index](../errors-files-and-modules/README.md)
 
@@ -95,8 +95,9 @@ This phase is already available and is the next recommended phase after Function
 2. [Raising and Custom Exceptions](../errors-files-and-modules/02-raise-and-custom-exceptions/README.md)
 3. [Opening Files Safely with `open()` and `with`](../errors-files-and-modules/03-open-and-with/README.md)
 4. [Working with TXT, CSV, and JSON](../errors-files-and-modules/04-txt-csv-and-json/README.md)
+5. [Organizing Code with Imports, Modules, and Packages](../errors-files-and-modules/05-imports-modules-and-packages/README.md)
 
-Phase 7 is in progress. Chapters 01–02 establish exception handling and deliberate signaling. Chapter 03 adds safe file lifetime and text I/O. Chapter 04 adds TXT contracts, CSV parsing and writing, JSON serialization and deserialization, and explicit parsing-versus-validation boundaries. The next planned chapter is **Imports, Modules, and Packages**.
+Phase 7 is complete with five reviewed chapters. Chapters 01–02 establish exception handling and deliberate signaling. Chapter 03 adds safe file lifetime and text I/O. Chapter 04 adds TXT, CSV, and JSON data boundaries. Chapter 05 closes the phase with modules, regular packages, `__name__`, the main guard, import search context, absolute and relative imports, `python -m`, and dependency design.
 
 ## Phase 8 · Standard Library ⏳
 

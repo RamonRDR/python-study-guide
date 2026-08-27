@@ -87,7 +87,7 @@ Esta fase já está disponível e é a próxima fase recomendada depois de Funç
 5. [Comentários versus Logging em Python](../comments-and-documentation/05-comments-vs-logging/README.pt-BR.md)
 6. [PEP 8 e legibilidade em Python](../comments-and-documentation/06-pep8-and-readability/README.pt-BR.md)
 
-## Fase 7 · Erros, Arquivos e Módulos 🚧
+## Fase 7 · Erros, Arquivos e Módulos ✅
 
 [Abrir o índice da seção Erros, Arquivos e Módulos](../errors-files-and-modules/README.pt-BR.md)
 
@@ -95,8 +95,9 @@ Esta fase já está disponível e é a próxima fase recomendada depois de Funç
 2. [Levantando Exceções e Criando Exceções Personalizadas](../errors-files-and-modules/02-raise-and-custom-exceptions/README.pt-BR.md)
 3. [Abrindo Arquivos com Segurança com `open()` e `with`](../errors-files-and-modules/03-open-and-with/README.pt-BR.md)
 4. [Trabalhando com TXT, CSV e JSON](../errors-files-and-modules/04-txt-csv-and-json/README.pt-BR.md)
+5. [Organizando Código com Imports, Módulos e Pacotes](../errors-files-and-modules/05-imports-modules-and-packages/README.pt-BR.md)
 
-A Fase 7 está em andamento. Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 acrescenta tempo de vida seguro de arquivos e I/O de texto. O Capítulo 04 adiciona contratos TXT, parsing e escrita de CSV, serialização e desserialização JSON e fronteiras explícitas entre parsing e validação. O próximo capítulo planejado é **Imports, Módulos e Pacotes**.
+A Fase 7 está concluída com cinco capítulos revisados. Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 acrescenta tempo de vida seguro de arquivos e I/O de texto. O Capítulo 04 adiciona fronteiras de dados TXT, CSV e JSON. O Capítulo 05 encerra a fase com módulos, pacotes regulares, `__name__`, main guard, contexto de busca de imports, imports absolutos e relativos, `python -m` e design de dependências.
 
 ## Fase 8 · Biblioteca Padrão ⏳
 

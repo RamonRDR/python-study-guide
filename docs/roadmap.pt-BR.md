@@ -21,12 +21,12 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 4. Fluxo do programa | Concluída | Oito capítulos revisados cobrem condições, ramificações, correspondência de padrões estruturais, `for`, auxiliares de iteração, `while`, controle de loops e escolha e combinação das ferramentas de fluxo pela intenção |
 | 5. Funções | Concluída | Nove capítulos revisados cobrem `def`, chamadas, entradas obrigatórias, valores retornados, escopo, type hints, valores padrão seguros, argumentos flexíveis, composição de funções e fluxo explícito de dados |
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
-| 7. Erros, arquivos e módulos | Em andamento | Os Capítulos 01–04 cobrem tratamento de exceções, sinalização deliberada, I/O seguro de arquivos e formatos TXT/CSV/JSON |
+| 7. Erros, arquivos e módulos | Concluída | Cinco capítulos revisados cobrem tratamento de exceções, sinalização deliberada, I/O seguro de arquivos, formatos TXT/CSV/JSON e imports/módulos/pacotes |
 | 8. Biblioteca padrão | Planejada | Conteúdo ainda não iniciado |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3, 4, 5 e 6 estão concluídas. A Fase 7 está em andamento com tratamento de exceções, sinalização deliberada, I/O seguro de arquivos e fronteiras de formatos TXT/CSV/JSON já disponíveis. O último capítulo planejado da Fase 7 é **Imports, módulos e pacotes**. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2, 3, 4, 5, 6 e 7 estão concluídas. A Fase 7 agora conecta tratamento de exceções, sinalização deliberada, I/O seguro de arquivos, fronteiras de dados TXT/CSV/JSON e organização do código por imports, módulos e pacotes. A Fase 8: Biblioteca Padrão é a próxima fase de aprendizagem planejada. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -132,9 +132,9 @@ Consulte a [trilha de aprendizagem da seção](../errors-files-and-modules/READM
 - [x] [`raise` e exceções personalizadas](../errors-files-and-modules/02-raise-and-custom-exceptions/README.pt-BR.md)
 - [x] [`open()` e `with`](../errors-files-and-modules/03-open-and-with/README.pt-BR.md)
 - [x] [TXT, CSV e JSON](../errors-files-and-modules/04-txt-csv-and-json/README.pt-BR.md)
-- [ ] Imports, módulos e pacotes
+- [x] [Imports, módulos e pacotes](../errors-files-and-modules/05-imports-modules-and-packages/README.pt-BR.md)
 
-A Fase 7 está em andamento. Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 acrescenta I/O seguro de arquivos e gerenciamento de recursos. O Capítulo 04 acrescenta contratos TXT, parsing e escrita de CSV e JSON, conversão explícita de tipos e fronteiras entre parsing e validação. O próximo capítulo planejado é **Imports, módulos e pacotes**.
+A Fase 7 está concluída. Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 acrescenta I/O seguro de arquivos e gerenciamento de recursos. O Capítulo 04 acrescenta parsing e escrita de TXT, CSV e JSON com fronteiras explícitas de dados. O Capítulo 05 encerra a fase com módulos, pacotes regulares, namespaces e cache de imports, `__name__`, main guard, contexto de busca, imports absolutos e relativos, `python -m` e design de dependências.
 
 ## Fase 8: Biblioteca padrão
 
