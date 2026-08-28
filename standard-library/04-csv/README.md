@@ -1114,4 +1114,4 @@ If those answers are explicit, CSV becomes a testable interface instead of a col
 
 ## Next chapter
 
-Continue with **Chapter 05: `logging`** when it becomes available. It will deepen logger hierarchy, handlers, formatters, configuration, exception logging, and application-versus-library logging contracts.
+Continue with [**Chapter 05: Engineering Logging Pipelines and Runtime Context Contracts**](../05-logging/README.md). It deepens effective levels, handler routing, propagation, configuration, contextual records, queue-based delivery, concurrency, and operational logging safety.

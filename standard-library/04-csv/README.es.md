@@ -1114,4 +1114,4 @@ Si esas respuestas son explícitas, CSV se convierte en una interfaz comprobable
 
 ## Próximo capítulo
 
-Continúa con el **Capítulo 05: `logging`** cuando esté disponible. Profundizará en jerarquía de loggers, handlers, formatters, configuración, logging de excepciones y contratos de logging de aplicación frente a biblioteca.
+Continúa con el [**Capítulo 05: Diseñando Pipelines de Logging y Contratos de Contexto en Runtime**](../05-logging/README.es.md). Profundiza niveles efectivos, enrutamiento por handlers, propagación, configuración, registros contextuales, entrega mediante colas, concurrencia y seguridad operativa de logging.
