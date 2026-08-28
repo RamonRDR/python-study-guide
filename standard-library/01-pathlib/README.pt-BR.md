@@ -758,7 +758,7 @@ Os exemplos são determinísticos e usam apenas operações estruturais de camin
 
 ## Próximo capítulo
 
-Continue com **Capítulo 02: `datetime` e Cálculos de Tempo**, onde a biblioteca padrão adiciona objetos explícitos para datas, horários, durações, parsing, formatação e aritmética de datas.
+Continue com **[Capítulo 02: `datetime` e Cálculos de Tempo](../02-datetime/README.pt-BR.md)**, onde a biblioteca padrão adiciona objetos explícitos para datas, horários, durações, parsing, formatação e aritmética de datas.
 
 ## Referências oficiais
 

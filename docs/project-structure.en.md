@@ -388,15 +388,24 @@ python-study-guide/
 │   ├── README.md
 │   ├── README.pt-BR.md
 │   ├── README.es.md
-│   └── 01-pathlib/
+│   ├── 01-pathlib/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── discover_python_files.py
+│   │       ├── inspect_paths.py
+│   │       ├── path_parts.py
+│   │       └── text_workspace.py
+│   └── 02-datetime/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── discover_python_files.py
-│           ├── inspect_paths.py
-│           ├── path_parts.py
-│           └── text_workspace.py
+│           ├── date_arithmetic.py
+│           ├── duration_seconds.py
+│           ├── parse_and_format.py
+│           └── utc_conversion.py
 ├── strings-and-numbers/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -458,7 +467,7 @@ python-study-guide/
 - `practical-projects/`: future small projects combining several concepts.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
-- `standard-library/`: in-progress Phase 8 learning path. Chapter 01 teaches `pathlib` path objects, portable composition, structural inspection, filesystem queries, text helpers, directory traversal, globbing, resolution, and exception-aware operation boundaries in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
+- `standard-library/`: in-progress Phase 8 learning path. Chapter 01 teaches `pathlib` path objects and filesystem boundaries. Chapter 02 teaches `datetime` date/time types, durations, parsing, formatting, ISO-oriented helpers, naive versus aware values, UTC and fixed offsets, timezone conversion, timestamps, and deterministic time calculations in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `strings-and-numbers/`: complete Phase 2 learning path. Its four reviewed chapters cover string creation and indexing, common string methods, integer, floating-point, and Boolean behavior, floating-point precision, and `round()`, `abs()`, `min()`, `max()`, and `sum()` in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `tests/`: regression tests for repository quality tools and later educational code.
 

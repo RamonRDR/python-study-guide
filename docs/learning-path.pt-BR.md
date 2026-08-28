@@ -104,8 +104,9 @@ A Fase 7 está concluída com cinco capítulos revisados. Os Capítulos 01–02 
 [Abrir o índice da seção Biblioteca Padrão](../standard-library/README.pt-BR.md)
 
 1. [Trabalhando com Caminhos do Sistema de Arquivos Usando `pathlib`](../standard-library/01-pathlib/README.pt-BR.md)
+2. [Trabalhando com Datas e Cálculos de Tempo Usando `datetime`](../standard-library/02-datetime/README.pt-BR.md)
 
-A Fase 8 está em andamento. O Capítulo 01 introduz objetos de caminho, composição portável, inspeção do filesystem, percurso de diretórios, globbing, helpers de texto e fronteiras seguras de operação. O próximo capítulo planejado é **`datetime` e Cálculos de Tempo**.
+A Fase 8 está em andamento. O Capítulo 01 introduz objetos de caminho e fronteiras do filesystem. O Capítulo 02 acrescenta datas, horários, durações, parsing, formatação, datetimes naive versus aware, offsets UTC fixos, conversão de timezone e cálculos de tempo determinísticos. O próximo capítulo planejado é **`json` Além da Persistência Básica**.
 
 ## Fase 9 · Bibliotecas Externas ⏳
 

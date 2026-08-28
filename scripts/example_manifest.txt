@@ -126,3 +126,7 @@ standard-library/01-pathlib/examples/discover_python_files.py
 standard-library/01-pathlib/examples/inspect_paths.py
 standard-library/01-pathlib/examples/path_parts.py
 standard-library/01-pathlib/examples/text_workspace.py
+standard-library/02-datetime/examples/date_arithmetic.py
+standard-library/02-datetime/examples/duration_seconds.py
+standard-library/02-datetime/examples/parse_and_format.py
+standard-library/02-datetime/examples/utc_conversion.py

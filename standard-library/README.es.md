@@ -15,7 +15,7 @@ La Fase 8 parte del modelo de imports aprendido en la Fase 7 y estudia un conjun
 | Capítulo | Foco principal | Nivel | Estado |
 |---|---|---|---|
 | [01. `pathlib`](01-pathlib/README.es.md) | Representar, componer, inspeccionar, crear, leer y descubrir rutas del sistema de archivos con objetos específicos para rutas | Intermedio | Disponible |
-| 02. `datetime` | Trabajar con fechas, horas, duraciones, parsing, formato y aritmética | Intermedio | Planificado |
+| [02. `datetime`](02-datetime/README.es.md) | Trabajar con fechas, horas, duraciones, parsing, formato, conciencia de timezone y aritmética | Intermedio | Disponible |
 | 03. `json` | Usar el módulo `json` más allá de la persistencia básica, incluidas opciones de serialización y contratos más estrictos | Intermedio | Planificado |
 | 04. `csv` | Trabajar con dialectos CSV, quoting, readers, writers y límites de texto tabular | Intermedio | Planificado |
 | 05. `logging` | Configurar loggers, handlers, formatters, niveles y logging de aplicación frente a biblioteca | Intermedio | Planificado |
@@ -76,7 +76,7 @@ Al final de la Fase 8 deberías poder:
 
 ## Estado de la fase
 
-La Fase 8 está en progreso. El Capítulo 01 introduce [`pathlib`](01-pathlib/README.es.md) como el primer módulo estudiado de forma enfocada.
+La Fase 8 está en progreso. El Capítulo 01 introduce [`pathlib`](01-pathlib/README.es.md), y el Capítulo 02 añade [`datetime`](02-datetime/README.es.md) para fechas, horas, duraciones, parsing, formato, valores conscientes de timezone y cálculos de tiempo. El próximo capítulo planificado es `json` más allá de la persistencia básica.
 
 Los capítulos posteriores revisitarán `json`, `csv` y `logging` a un nivel más profundo de biblioteca. Sus apariciones anteriores enseñaron formatos de archivo o conceptos más amplios de diseño; en esta fase estudiamos los módulos, sus APIs y sus trade-offs.
 
@@ -87,15 +87,24 @@ standard-library/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-pathlib/
+├── 01-pathlib/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── discover_python_files.py
+│       ├── inspect_paths.py
+│       ├── path_parts.py
+│       └── text_workspace.py
+└── 02-datetime/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── discover_python_files.py
-        ├── inspect_paths.py
-        ├── path_parts.py
-        └── text_workspace.py
+        ├── date_arithmetic.py
+        ├── duration_seconds.py
+        ├── parse_and_format.py
+        └── utc_conversion.py
 ```
 
 Se añadirán nuevos directorios de capítulos a medida que avance la fase.

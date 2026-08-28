@@ -762,7 +762,7 @@ These examples are deterministic and use either path-only operations or temporar
 
 ## Next chapter
 
-Continue with **Chapter 02: `datetime` and Time Calculations**, where the standard library adds explicit objects for dates, times, durations, parsing, formatting, and date arithmetic.
+Continue with **[Chapter 02: `datetime` and Time Calculations](../02-datetime/README.md)**, where the standard library adds explicit objects for dates, times, durations, parsing, formatting, and date arithmetic.
 
 ## Official references
 

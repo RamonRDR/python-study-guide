@@ -15,7 +15,7 @@ Phase 8 builds on the import model from Phase 7 and studies a focused set of mod
 | Chapter | Main focus | Level | Status |
 |---|---|---|---|
 | [01. `pathlib`](01-pathlib/README.md) | Represent, compose, inspect, create, read, and discover filesystem paths with path-aware objects | Intermediate | Available |
-| 02. `datetime` | Work with dates, times, durations, parsing, formatting, and arithmetic | Intermediate | Planned |
+| [02. `datetime`](02-datetime/README.md) | Work with dates, times, durations, parsing, formatting, timezone awareness, and arithmetic | Intermediate | Available |
 | 03. `json` | Use the `json` module beyond basic file persistence, including serialization options and stricter contracts | Intermediate | Planned |
 | 04. `csv` | Work with CSV dialects, quoting, readers, writers, and tabular text boundaries | Intermediate | Planned |
 | 05. `logging` | Configure loggers, handlers, formatters, levels, and application versus library logging | Intermediate | Planned |
@@ -76,7 +76,7 @@ By the end of Phase 8, you should be able to:
 
 ## Phase status
 
-Phase 8 is in progress. Chapter 01 introduces [`pathlib`](01-pathlib/README.md) as the first focused standard-library module.
+Phase 8 is in progress. Chapter 01 introduces [`pathlib`](01-pathlib/README.md), and Chapter 02 adds [`datetime`](02-datetime/README.md) for dates, times, durations, parsing, formatting, timezone-aware values, and time calculations. The next planned chapter is `json` beyond basic persistence.
 
 Later chapters will revisit `json`, `csv`, and `logging` at a deeper library level. Their earlier appearances taught file formats or broader design concepts; this phase studies the modules themselves, their APIs, and their trade-offs.
 
@@ -87,15 +87,24 @@ standard-library/
 ├── README.md
 ├── README.pt-BR.md
 ├── README.es.md
-└── 01-pathlib/
+├── 01-pathlib/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── discover_python_files.py
+│       ├── inspect_paths.py
+│       ├── path_parts.py
+│       └── text_workspace.py
+└── 02-datetime/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── discover_python_files.py
-        ├── inspect_paths.py
-        ├── path_parts.py
-        └── text_workspace.py
+        ├── date_arithmetic.py
+        ├── duration_seconds.py
+        ├── parse_and_format.py
+        └── utc_conversion.py
 ```
 
 New chapter directories will be added as the phase progresses.
