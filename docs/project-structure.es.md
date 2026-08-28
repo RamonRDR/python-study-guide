@@ -442,15 +442,24 @@ python-study-guide/
 │   │       ├── chainmap_config.py
 │   │       ├── counter_inventory.py
 │   │       └── defaultdict_grouping.py
-│   └── 07-itertools/
+│   ├── 07-itertools/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── combinatoric_options.py
+│   │       ├── groupby_runs.py
+│   │       ├── lazy_pipeline.py
+│   │       └── pairwise_deltas.py
+│   └── 08-decimal/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── combinatoric_options.py
-│           ├── groupby_runs.py
-│           ├── lazy_pipeline.py
-│           └── pairwise_deltas.py
+│           ├── exact_amounts.py
+│           ├── local_context_precision.py
+│           ├── monitor_rounding.py
+│           └── validate_scale.py
 ├── strings-and-numbers/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -512,7 +521,7 @@ python-study-guide/
 - `practical-projects/`: futuros proyectos pequeños que combinarán varios conceptos.
 - `program-flow/`: ruta completa de la Fase 4. Los Capítulos 01–08 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else`, coincidencia de patrones estructurales, repetición guiada por iterables con `for`, progresiones numéricas con `range()`, iteración con posición usando `enumerate()`, iteración paralela con `zip()` incluida la validación explícita de longitudes iguales con `strict=True`, repetición guiada por estado con `while`, control deliberado de bucles con `break`, `continue` y `else` de bucle y cómo elegir y combinar herramientas de flujo del programa según la intención, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions.
-- `standard-library/`: ruta de aprendizaje de la Fase 8 en progreso. Los Capítulos 01–07 cubren límites de filesystem con `pathlib`, modelado de fecha/hora con `datetime`, contratos avanzados de serialización/decodificación `json`, contratos avanzados de texto tabular con `csv`, contratos avanzados de entrega de eventos con `logging`, contratos especializados de `collections` y composición lazy de iteradores con `itertools`, incluyendo consumo explícito, agrupación, streams infinitos limitados, alineación, buffering y trade-offs combinatorios, en inglés, portugués brasileño y español con ejemplos ejecutables deterministas. El Capítulo 08 sobre `decimal` es el próximo planificado.
+- `standard-library/`: ruta de aprendizaje de la Fase 8 en progreso. Los Capítulos 01–08 cubren límites de filesystem con `pathlib`, modelado de fecha/hora con `datetime`, contratos avanzados de serialización/decodificación `json`, contratos avanzados de texto tabular con `csv`, contratos avanzados de entrega de eventos con `logging`, contratos especializados de `collections`, composición lazy de iteradores con `itertools` y contratos de representación, precisión, redondeo, cuantización, contexts, señales, traps y validación con `decimal`, en inglés, portugués brasileño y español con ejemplos ejecutables deterministas. El Capítulo 09 sobre `os` y `shutil` es el próximo planificado.
 - `strings-and-numbers/`: ruta completa de la Fase 2. Sus cuatro capítulos revisados cubren creación e indexación de strings, métodos comunes, comportamiento de enteros, punto flotante y booleanos, precisión de punto flotante y `round()`, `abs()`, `min()`, `max()` y `sum()` en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
 - `tests/`: pruebas de regresión de las herramientas de calidad y, más adelante, del contenido educativo.
 

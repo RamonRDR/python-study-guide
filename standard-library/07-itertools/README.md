@@ -1144,6 +1144,6 @@ Primary references used for this chapter:
 
 ## Next chapter
 
-Continue with **Chapter 08: `decimal`** when it becomes available.
+Continue with [Chapter 08: `decimal`](../08-decimal/README.md).
 
 The next chapter moves from lazy iteration contracts to **numeric precision contracts**: decimal representation, contexts, rounding, traps, quantization, and exact arithmetic for values where binary floating-point behavior is not the desired model.

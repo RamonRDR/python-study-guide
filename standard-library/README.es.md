@@ -21,7 +21,7 @@ La Fase 8 parte del modelo de imports aprendido en la Fase 7 y estudia un conjun
 | [05. `logging`](05-logging/README.es.md) | Diseñar jerarquía de loggers, configuración, registros contextuales, entrega mediante colas, concurrencia y contratos de logging en runtime | Intermedio | Disponible |
 | [06. `collections`](06-collections/README.es.md) | Usar contenedores especializados, capas de mappings, registros de tupla, reordenación, wrappers e interfaces de colección mediante contratos explícitos de operación | Intermedio | Disponible |
 | [07. `itertools`](07-itertools/README.es.md) | Componer pipelines lazy de iteradores con contratos explícitos de consumo, buffering, agrupación, alineación y combinatoria | Intermedio | Disponible |
-| 08. `decimal` | Realizar aritmética decimal exacta con redondeo y contexto explícitos | Intermedio | Planificado |
+| [08. `decimal`](08-decimal/README.es.md) | Controlar representación decimal, precisión, redondeo, cuantización, contexts, señales y contratos de validación | Intermedio | Disponible |
 | 09. `os` y `shutil` | Trabajar con entorno, operaciones de filesystem de nivel más bajo, copia, movimiento y árboles de directorios | Intermedio | Planificado |
 
 ## Prerrequisitos
@@ -76,9 +76,9 @@ Al final de la Fase 8 deberías poder:
 
 ## Estado de la fase
 
-La Fase 8 está en progreso. El Capítulo 01 introduce [`pathlib`](01-pathlib/README.es.md), el Capítulo 02 añade [`datetime`](02-datetime/README.es.md), el Capítulo 03 profundiza [`json`](03-json/README.es.md), el Capítulo 04 profundiza [`csv`](04-csv/README.es.md), el Capítulo 05 profundiza [`logging`](05-logging/README.es.md), el Capítulo 06 añade [`collections`](06-collections/README.es.md) y el Capítulo 07 añade [`itertools`](07-itertools/README.es.md) con composición lazy, streams infinitos limitados, contratos de consumo, agrupación, fan-out, alineación e iteración combinatoria. El próximo capítulo planificado es `decimal`.
+La Fase 8 está en progreso. El Capítulo 01 introduce [`pathlib`](01-pathlib/README.es.md), el Capítulo 02 añade [`datetime`](02-datetime/README.es.md), el Capítulo 03 profundiza [`json`](03-json/README.es.md), el Capítulo 04 profundiza [`csv`](04-csv/README.es.md), el Capítulo 05 profundiza [`logging`](05-logging/README.es.md), el Capítulo 06 añade [`collections`](06-collections/README.es.md), el Capítulo 07 añade [`itertools`](07-itertools/README.es.md) y el Capítulo 08 añade [`decimal`](08-decimal/README.es.md) con representación decimal exacta, políticas explícitas de precisión y redondeo, cuantización, contexts, señales, traps y fronteras de validación. El próximo capítulo planificado es `os` y `shutil`.
 
-Los Capítulos 03, 04, 05 y 06 profundizan temas que aparecieron anteriormente en el currículo. Sus apariciones previas enseñaron formatos de archivo, diseño de logging o modelos de colecciones integradas; en esta fase estudiamos los módulos de la biblioteca estándar, sus APIs y sus trade-offs.
+Los Capítulos 03, 04, 05, 06 y 08 profundizan temas que aparecieron anteriormente en el currículo. Sus apariciones previas enseñaron formatos de archivo, diseño de logging, modelos de colecciones integradas o comportamiento de punto flotante binario; en esta fase estudiamos los módulos de la biblioteca estándar, sus APIs y sus trade-offs.
 
 ## Estructura del directorio
 
@@ -141,15 +141,24 @@ standard-library/
 │       ├── chainmap_config.py
 │       ├── counter_inventory.py
 │       └── defaultdict_grouping.py
-└── 07-itertools/
+├── 07-itertools/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── combinatoric_options.py
+│       ├── groupby_runs.py
+│       ├── lazy_pipeline.py
+│       └── pairwise_deltas.py
+└── 08-decimal/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── combinatoric_options.py
-        ├── groupby_runs.py
-        ├── lazy_pipeline.py
-        └── pairwise_deltas.py
+        ├── exact_amounts.py
+        ├── local_context_precision.py
+        ├── monitor_rounding.py
+        └── validate_scale.py
 ```
 
 Se añadirán nuevos directorios de capítulos a medida que avance la fase.

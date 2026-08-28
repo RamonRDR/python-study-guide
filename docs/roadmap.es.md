@@ -147,10 +147,10 @@ Consulta la [ruta de aprendizaje de la sección](../standard-library/README.es.m
 - [x] [`logging`](../standard-library/05-logging/README.es.md)
 - [x] [`collections`](../standard-library/06-collections/README.es.md)
 - [x] [`itertools`](../standard-library/07-itertools/README.es.md)
-- [ ] `decimal`
+- [x] [`decimal`](../standard-library/08-decimal/README.es.md)
 - [ ] `os` y `shutil`
 
-La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib`. El Capítulo 02 añade tipos de fecha/hora de `datetime`. El Capítulo 03 añade contratos explícitos de serialización y decodificación `json`. El Capítulo 04 añade contratos explícitos de dialectos y texto tabular con `csv`. El Capítulo 05 añade contratos avanzados de entrega de eventos con `logging`. El Capítulo 06 añade contratos especializados de `collections` para conteo, valores ausentes basados en factory, colas de doble extremo, registros compatibles con tuplas, mappings por capas, reordenación, extensión mediante wrappers e interfaces de colección. El Capítulo 07 añade contratos de `itertools` para composición lazy, consumo de iteradores, agrupación, streams infinitos limitados, alineación, fan-out e iteración combinatoria. El Capítulo 08 continuará con `decimal`.
+La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib`. El Capítulo 02 añade tipos de fecha/hora de `datetime`. El Capítulo 03 añade contratos explícitos de serialización y decodificación `json`. El Capítulo 04 añade contratos explícitos de dialectos y texto tabular con `csv`. El Capítulo 05 añade contratos avanzados de entrega de eventos con `logging`. El Capítulo 06 añade contratos especializados de `collections` para conteo, valores ausentes basados en factory, colas de doble extremo, registros compatibles con tuplas, mappings por capas, reordenación, extensión mediante wrappers e interfaces de colección. El Capítulo 07 añade contratos de `itertools` para composición lazy, consumo de iteradores, agrupación, streams infinitos limitados, alineación, fan-out e iteración combinatoria. El Capítulo 08 añade contratos de `decimal` para representación decimal exacta, precisión, redondeo, cuantización, contexts, señales, traps y validación. El Capítulo 09 continuará con `os` y `shutil`.
 
 ## Fase 9: Bibliotecas externas
 

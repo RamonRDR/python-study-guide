@@ -1144,6 +1144,6 @@ Referencias primarias usadas en este capítulo:
 
 ## Próximo capítulo
 
-Continúa con el **Capítulo 08: `decimal`** cuando esté disponible.
+Continúa con el [Capítulo 08: `decimal`](../08-decimal/README.es.md).
 
 El próximo capítulo cambia de contratos de iteración lazy a **contratos de precisión numérica**: representación decimal, contexts, rounding, traps, cuantización y aritmética exacta para valores donde el comportamiento binario de punto flotante no es el modelo deseado.
