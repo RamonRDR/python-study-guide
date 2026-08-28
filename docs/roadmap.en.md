@@ -22,11 +22,11 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 5. Functions | Complete | Nine reviewed chapters cover `def`, calls, required inputs, returned values, scope, type hints, safe defaults, flexible arguments, function composition, and explicit data flow |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Complete | Five reviewed chapters cover exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data formats, and imports/modules/packages |
-| 8. Standard library | In progress | Three reviewed chapters cover `pathlib` path modeling, `datetime` date/time calculations, and advanced `json` serialization/decoding contracts |
+| 8. Standard library | In progress | Four reviewed chapters cover `pathlib` path modeling, `datetime` date/time calculations, advanced `json` serialization/decoding contracts, and advanced `csv` tabular-text contracts |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, 4, 5, 6, and 7 are complete. Phase 7 now connects exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data boundaries, and code organization through imports, modules, and packages. Phase 8: Standard Library is in progress with three reviewed chapters: `pathlib`, `datetime`, and advanced `json` handling. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, 4, 5, 6, and 7 are complete. Phase 7 now connects exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data boundaries, and code organization through imports, modules, and packages. Phase 8: Standard Library is in progress with four reviewed chapters: `pathlib`, `datetime`, advanced `json`, and advanced `csv` handling. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -143,14 +143,14 @@ See the [section learning path](../standard-library/README.md).
 - [x] [`pathlib`](../standard-library/01-pathlib/README.md)
 - [x] [`datetime`](../standard-library/02-datetime/README.md)
 - [x] [`json`](../standard-library/03-json/README.md)
-- [ ] `csv`
+- [x] [`csv`](../standard-library/04-csv/README.md)
 - [ ] `logging`
 - [ ] `collections`
 - [ ] `itertools`
 - [ ] `decimal`
 - [ ] `os` and `shutil`
 
-Phase 8 is in progress. Chapter 01 establishes `pathlib` path modeling and filesystem boundaries. Chapter 02 adds `datetime` date/time types and deterministic calculations. Chapter 03 adds explicit `json` serialization and decoding contracts, deterministic formatting, strict non-finite-number handling, numeric hooks, custom representations, duplicate-name detection, diagnostics, and untrusted-input resource boundaries. Chapter 04 will continue with deeper `csv` handling.
+Phase 8 is in progress. Chapter 01 establishes `pathlib` path modeling and filesystem boundaries. Chapter 02 adds `datetime` date/time types and deterministic calculations. Chapter 03 adds explicit `json` serialization and decoding contracts, deterministic formatting, strict non-finite-number handling, numeric hooks, custom representations, duplicate-name detection, diagnostics, and untrusted-input resource boundaries. Chapter 04 adds explicit `csv` dialect and tabular-text contracts, quoting and escaping behavior, row-shape validation, strict parsing, field limits, heuristic sniffing, text-encoding boundaries, and spreadsheet-consumer considerations. Chapter 05 will continue with deeper `logging` handling.
 
 ## Phase 9: External libraries
 

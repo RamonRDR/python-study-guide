@@ -406,15 +406,24 @@ python-study-guide/
 │   │       ├── duration_seconds.py
 │   │       ├── parse_and_format.py
 │   │       └── utc_conversion.py
-│   └── 03-json/
+│   ├── 03-json/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── decimal_decode.py
+│   │       ├── deterministic_json.py
+│   │       ├── reject_duplicate_keys.py
+│   │       └── strict_numbers.py
+│   └── 04-csv/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── decimal_decode.py
-│           ├── deterministic_json.py
-│           ├── reject_duplicate_keys.py
-│           └── strict_numbers.py
+│           ├── dialect_round_trip.py
+│           ├── quote_none_escape.py
+│           ├── sniff_delimiter.py
+│           └── validate_dict_rows.py
 ├── strings-and-numbers/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -476,7 +485,7 @@ python-study-guide/
 - `practical-projects/`: future small projects combining several concepts.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
-- `standard-library/`: in-progress Phase 8 learning path. Chapter 01 teaches `pathlib` path objects and filesystem boundaries; Chapter 02 teaches `datetime` date/time modeling and deterministic calculations; Chapter 03 teaches advanced `json` serialization/decoding contracts, deterministic output, strict numeric policies, hooks, custom representations, duplicate-name detection, diagnostics, and resource-aware parsing, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
+- `standard-library/`: in-progress Phase 8 learning path. Chapter 01 teaches `pathlib` path objects and filesystem boundaries; Chapter 02 teaches `datetime` date/time modeling and deterministic calculations; Chapter 03 teaches advanced `json` serialization/decoding contracts; Chapter 04 teaches advanced `csv` dialect and tabular-text contracts, including quoting, escaping, row-shape validation, sniffing, encoding boundaries, and spreadsheet-consumer considerations, in English, Brazilian Portuguese, and Spanish with deterministic executable examples. Chapter 05 on `logging` is the next planned chapter.
 - `strings-and-numbers/`: complete Phase 2 learning path. Its four reviewed chapters cover string creation and indexing, common string methods, integer, floating-point, and Boolean behavior, floating-point precision, and `round()`, `abs()`, `min()`, `max()`, and `sum()` in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `tests/`: regression tests for repository quality tools and later educational code.
 

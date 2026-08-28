@@ -22,11 +22,11 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 5. Funções | Concluída | Nove capítulos revisados cobrem `def`, chamadas, entradas obrigatórias, valores retornados, escopo, type hints, valores padrão seguros, argumentos flexíveis, composição de funções e fluxo explícito de dados |
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Concluída | Cinco capítulos revisados cobrem tratamento de exceções, sinalização deliberada, I/O seguro de arquivos, formatos TXT/CSV/JSON e imports/módulos/pacotes |
-| 8. Biblioteca padrão | Em andamento | Três capítulos revisados cobrem modelagem de caminhos com `pathlib`, cálculos de data/hora com `datetime` e contratos avançados de serialização/decodificação com `json` |
+| 8. Biblioteca padrão | Em andamento | Quatro capítulos revisados cobrem modelagem de caminhos com `pathlib`, cálculos de data/hora com `datetime`, contratos avançados de serialização/decodificação com `json` e contratos avançados de texto tabular com `csv` |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3, 4, 5, 6 e 7 estão concluídas. A Fase 7 agora conecta tratamento de exceções, sinalização deliberada, I/O seguro de arquivos, fronteiras de dados TXT/CSV/JSON e organização do código por imports, módulos e pacotes. A Fase 8: Biblioteca Padrão está em andamento com três capítulos revisados: `pathlib`, `datetime` e uso avançado de `json`. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0, 1, 2, 3, 4, 5, 6 e 7 estão concluídas. A Fase 7 agora conecta tratamento de exceções, sinalização deliberada, I/O seguro de arquivos, fronteiras de dados TXT/CSV/JSON e organização do código por imports, módulos e pacotes. A Fase 8: Biblioteca Padrão está em andamento com quatro capítulos revisados: `pathlib`, `datetime`, uso avançado de `json` e uso avançado de `csv`. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
 
 ## Fase 0: Fundação do projeto
 
@@ -143,14 +143,14 @@ Consulte a [trilha de aprendizagem da seção](../standard-library/README.pt-BR.
 - [x] [`pathlib`](../standard-library/01-pathlib/README.pt-BR.md)
 - [x] [`datetime`](../standard-library/02-datetime/README.pt-BR.md)
 - [x] [`json`](../standard-library/03-json/README.pt-BR.md)
-- [ ] `csv`
+- [x] [`csv`](../standard-library/04-csv/README.pt-BR.md)
 - [ ] `logging`
 - [ ] `collections`
 - [ ] `itertools`
 - [ ] `decimal`
 - [ ] `os` e `shutil`
 
-A Fase 8 está em andamento. O Capítulo 01 estabelece modelagem de caminhos com `pathlib` e fronteiras do filesystem. O Capítulo 02 acrescenta tipos de data/hora e cálculos determinísticos com `datetime`. O Capítulo 03 acrescenta contratos explícitos de serialização e decodificação com `json`, formatação determinística, tratamento estrito de números não finitos, hooks numéricos, representações personalizadas, detecção de nomes duplicados, diagnósticos e limites de recursos para entrada não confiável. O Capítulo 04 continuará com uso mais profundo de `csv`.
+A Fase 8 está em andamento. O Capítulo 01 estabelece modelagem de caminhos com `pathlib` e fronteiras do filesystem. O Capítulo 02 acrescenta tipos de data/hora e cálculos determinísticos com `datetime`. O Capítulo 03 acrescenta contratos explícitos de serialização e decodificação com `json`, formatação determinística, tratamento estrito de números não finitos, hooks numéricos, representações personalizadas, detecção de nomes duplicados, diagnósticos e limites de recursos para entrada não confiável. O Capítulo 04 acrescenta contratos explícitos de dialeto e texto tabular com `csv`, comportamento de quoting e escaping, validação do formato das linhas, parsing estrito, limites de campos, sniffing heurístico, fronteiras de codificação de texto e considerações para consumidores em planilhas. O Capítulo 05 continuará com uso mais profundo de `logging`.
 
 ## Fase 9: Bibliotecas externas
 

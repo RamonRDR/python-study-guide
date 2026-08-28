@@ -1096,4 +1096,4 @@ If those answers are explicit, the JSON boundary becomes much easier to test and
 
 ## Next chapter
 
-Continue with **Chapter 04: `csv`** when it becomes available. It will deepen dialects, quoting, readers, writers, and tabular-text interface contracts.
+Continue with [**Chapter 04: Controlling CSV Dialects and Tabular Text Contracts**](../04-csv/README.md). It deepens dialects, quoting, escaping, row-shape validation, sniffing, encoding boundaries, and spreadsheet-consumer considerations.

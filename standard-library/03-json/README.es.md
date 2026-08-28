@@ -1096,4 +1096,4 @@ Si esas respuestas son explícitas, la frontera JSON se vuelve mucho más fácil
 
 ## Próximo capítulo
 
-Continúa con el **Capítulo 04: `csv`** cuando esté disponible. Profundizará en dialectos, quoting, readers, writers y contratos de interfaces de texto tabular.
+Continúa con el [**Capítulo 04: Controlando Dialectos CSV y Contratos de Texto Tabular**](../04-csv/README.es.md). Profundiza en dialectos, quoting, escaping, validación de forma de filas, sniffing, fronteras de encoding y consideraciones para consumidores de hojas de cálculo.
