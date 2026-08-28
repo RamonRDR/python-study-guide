@@ -99,7 +99,7 @@ Esta fase já está disponível e é a próxima fase recomendada depois de Funç
 
 A Fase 7 está concluída com cinco capítulos revisados. Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 acrescenta tempo de vida seguro de arquivos e I/O de texto. O Capítulo 04 adiciona fronteiras de dados TXT, CSV e JSON. O Capítulo 05 encerra a fase com módulos, pacotes regulares, `__name__`, main guard, contexto de busca de imports, imports absolutos e relativos, `python -m` e design de dependências.
 
-## Fase 8 · Biblioteca Padrão 🚧
+## Fase 8 · Biblioteca Padrão ✅
 
 [Abrir o índice da seção Biblioteca Padrão](../standard-library/README.pt-BR.md)
 
@@ -111,8 +111,9 @@ A Fase 7 está concluída com cinco capítulos revisados. Os Capítulos 01–02 
 6. [Contêineres Especializados e Contratos de Coleções](../standard-library/06-collections/README.pt-BR.md)
 7. [Projetando Pipelines Lazy de Iteradores com `itertools`](../standard-library/07-itertools/README.pt-BR.md)
 8. [Projetando Contratos de Precisão e Arredondamento Decimal](../standard-library/08-decimal/README.pt-BR.md)
+9. [Projetando Operações de Sistema Operacional e Arquivos com `os` e `shutil`](../standard-library/09-os-shutil/README.pt-BR.md)
 
-A Fase 8 está em andamento. O Capítulo 01 introduz objetos de caminho e fronteiras do filesystem. O Capítulo 02 acrescenta datas, horários, durações, parsing, formatação, consciência de timezone e cálculos determinísticos. O Capítulo 03 aprofunda políticas de serialização e decodificação JSON. O Capítulo 04 aprofunda CSV como fronteira de texto tabular. O Capítulo 05 aprofunda logging como grafo de entrega de eventos em runtime. O Capítulo 06 acrescenta contratos de contêineres especializados com `Counter`, `defaultdict`, `deque`, registros de tuplas nomeadas, `ChainMap`, `OrderedDict`, wrappers de extensão e `collections.abc`. O Capítulo 07 acrescenta composição lazy de iteradores, fronteiras explícitas de consumo, agrupamento, limitação de streams infinitos, alinhamento, fan-out e iteração combinatória. O Capítulo 08 acrescenta representação decimal exata, precisão de context, arredondamento explícito, quantização, sinais, traps e fronteiras de validação. O próximo capítulo planejado é **`os` e `shutil`**.
+A Fase 8 está concluída com nove capítulos revisados. A sequência avança de modelagem de caminhos por tempo, formatos estruturados de dados, diagnóstico em runtime, contêineres especializados, iteração lazy, aritmética decimal e finalmente contratos do sistema operacional e filesystem. O Capítulo 09 encerra a fase com estado do ambiente, fronteiras path-like, varredura e travessia determinísticas, metadados, comportamento de cópia/movimentação/remoção, capacidades de plataforma e decisões de segurança para archives.
 
 ## Fase 9 · Bibliotecas Externas ⏳
 

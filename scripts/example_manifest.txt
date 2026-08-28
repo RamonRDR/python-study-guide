@@ -154,3 +154,7 @@ standard-library/08-decimal/examples/exact_amounts.py
 standard-library/08-decimal/examples/local_context_precision.py
 standard-library/08-decimal/examples/monitor_rounding.py
 standard-library/08-decimal/examples/validate_scale.py
+standard-library/09-os-shutil/examples/copy_tree_and_move.py
+standard-library/09-os-shutil/examples/environment_contract.py
+standard-library/09-os-shutil/examples/scan_directory.py
+standard-library/09-os-shutil/examples/walk_with_pruning.py

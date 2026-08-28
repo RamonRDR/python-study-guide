@@ -451,15 +451,24 @@ python-study-guide/
 │   │       ├── groupby_runs.py
 │   │       ├── lazy_pipeline.py
 │   │       └── pairwise_deltas.py
-│   └── 08-decimal/
+│   ├── 08-decimal/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── exact_amounts.py
+│   │       ├── local_context_precision.py
+│   │       ├── monitor_rounding.py
+│   │       └── validate_scale.py
+│   └── 09-os-shutil/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── exact_amounts.py
-│           ├── local_context_precision.py
-│           ├── monitor_rounding.py
-│           └── validate_scale.py
+│           ├── copy_tree_and_move.py
+│           ├── environment_contract.py
+│           ├── scan_directory.py
+│           └── walk_with_pruning.py
 ├── strings-and-numbers/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -521,7 +530,7 @@ python-study-guide/
 - `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
 - `program-flow/`: trilha completa da Fase 4. Os Capítulos 01–08 ensinam condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, ramificação condicional com `if`, `elif` e `else`, correspondência de padrões estruturais, repetição guiada por iteráveis com `for`, progressões numéricas com `range()`, iteração com posição usando `enumerate()`, iteração paralela com `zip()` incluindo validação explícita de comprimentos iguais com `strict=True`, repetição guiada por estado com `while`, controle deliberado de loops com `break`, `continue` e `else` de loop e como escolher e combinar ferramentas de fluxo do programa de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
-- `standard-library/`: trilha da Fase 8 em andamento. Os Capítulos 01–08 cobrem fronteiras de filesystem com `pathlib`, modelagem de data/hora com `datetime`, contratos avançados de serialização/decodificação `json`, contratos avançados de texto tabular com `csv`, contratos avançados de entrega de eventos com `logging`, contratos especializados de `collections`, composição lazy de iteradores com `itertools` e contratos de representação, precisão, arredondamento, quantização, contexts, sinais, traps e validação com `decimal`, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos. O Capítulo 09 sobre `os` e `shutil` é o próximo planejado.
+- `standard-library/`: trilha completa da Fase 8. Os Capítulos 01–09 cobrem fronteiras de filesystem com `pathlib`, modelagem de data/hora com `datetime`, contratos avançados de `json` e `csv`, `logging`, `collections` especializadas, `itertools`, `decimal` e contratos de `os`/`shutil` para estado do ambiente, travessia, metadados, cópia, movimentação, remoção recursiva, capacidades de plataforma e segurança de archives, em inglês, português do Brasil e espanhol com exemplos executáveis determinísticos.
 - `strings-and-numbers/`: trilha completa da Fase 2. Seus quatro capítulos revisados cobrem criação e indexação de strings, métodos comuns, comportamento de inteiros, ponto flutuante e booleanos, precisão de ponto flutuante e `round()`, `abs()`, `min()`, `max()` e `sum()` em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `tests/`: testes de regressão das ferramentas de qualidade e, futuramente, do conteúdo educacional.
 

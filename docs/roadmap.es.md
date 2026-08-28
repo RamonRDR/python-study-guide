@@ -22,11 +22,11 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 5. Funciones | Completada | Nueve capítulos revisados cubren `def`, llamadas, entradas obligatorias, valores retornados, alcance, type hints, valores predeterminados seguros, argumentos flexibles, composición de funciones y flujo explícito de datos |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
 | 7. Errores, archivos y módulos | Completada | Cinco capítulos revisados cubren manejo de excepciones, señalización deliberada, I/O seguro de archivos, formatos TXT/CSV/JSON e imports/módulos/paquetes |
-| 8. Biblioteca estándar | En progreso | Cuatro capítulos revisados cubren modelado de rutas con `pathlib`, cálculos de fecha/hora con `datetime`, contratos avanzados de serialización/decodificación con `json` y contratos avanzados de texto tabular con `csv` |
+| 8. Biblioteca estándar | Completada | Nueve capítulos revisados cubren rutas, fecha/hora, JSON, CSV, logging, colecciones especializadas, iteración lazy, aritmética decimal y operaciones de OS/filesystem |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3, 4, 5, 6 y 7 están completadas. La Fase 7 ahora conecta manejo de excepciones, señalización deliberada, I/O seguro de archivos, límites de datos TXT/CSV/JSON y organización del código mediante imports, módulos y paquetes. La Fase 8: Biblioteca Estándar está en progreso con cuatro capítulos revisados: `pathlib`, `datetime`, uso avanzado de `json` y uso avanzado de `csv`. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0–8 están completadas. La Fase 8 ahora ofrece nueve capítulos revisados de la Biblioteca Estándar, cerrando con contratos de `os` y `shutil` para estado del entorno, recorrido del filesystem, metadatos, copia, movimiento, eliminación recursiva, capacidades de plataforma y seguridad de archives. La Fase 9: Bibliotecas Externas es la siguiente fase planificada del currículo.
 
 ## Fase 0: Base del proyecto
 
@@ -148,9 +148,9 @@ Consulta la [ruta de aprendizaje de la sección](../standard-library/README.es.m
 - [x] [`collections`](../standard-library/06-collections/README.es.md)
 - [x] [`itertools`](../standard-library/07-itertools/README.es.md)
 - [x] [`decimal`](../standard-library/08-decimal/README.es.md)
-- [ ] `os` y `shutil`
+- [x] [`os` y `shutil`](../standard-library/09-os-shutil/README.es.md)
 
-La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib`. El Capítulo 02 añade tipos de fecha/hora de `datetime`. El Capítulo 03 añade contratos explícitos de serialización y decodificación `json`. El Capítulo 04 añade contratos explícitos de dialectos y texto tabular con `csv`. El Capítulo 05 añade contratos avanzados de entrega de eventos con `logging`. El Capítulo 06 añade contratos especializados de `collections` para conteo, valores ausentes basados en factory, colas de doble extremo, registros compatibles con tuplas, mappings por capas, reordenación, extensión mediante wrappers e interfaces de colección. El Capítulo 07 añade contratos de `itertools` para composición lazy, consumo de iteradores, agrupación, streams infinitos limitados, alineación, fan-out e iteración combinatoria. El Capítulo 08 añade contratos de `decimal` para representación decimal exacta, precisión, redondeo, cuantización, contexts, señales, traps y validación. El Capítulo 09 continuará con `os` y `shutil`.
+La Fase 8 está completada. Los Capítulos 01–08 construyen contratos para rutas, fecha/hora, formatos estructurados, logging, colecciones especializadas, iteración lazy y aritmética decimal. El Capítulo 09 cierra la fase conectando esas bases con estado del entorno del proceso, interfaces path-like, exploración y recorrido de directorios, metadatos, copia, movimiento, eliminación recursiva, capacidades de plataforma y seguridad de archives.
 
 ## Fase 9: Bibliotecas externas
 
