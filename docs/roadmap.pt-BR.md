@@ -22,11 +22,11 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 5. Funções | Concluída | Nove capítulos revisados cobrem `def`, chamadas, entradas obrigatórias, valores retornados, escopo, type hints, valores padrão seguros, argumentos flexíveis, composição de funções e fluxo explícito de dados |
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Concluída | Cinco capítulos revisados cobrem tratamento de exceções, sinalização deliberada, I/O seguro de arquivos, formatos TXT/CSV/JSON e imports/módulos/pacotes |
-| 8. Biblioteca padrão | Em andamento | Quatro capítulos revisados cobrem modelagem de caminhos com `pathlib`, cálculos de data/hora com `datetime`, contratos avançados de serialização/decodificação com `json` e contratos avançados de texto tabular com `csv` |
+| 8. Biblioteca padrão | Concluída | Nove capítulos revisados cobrem caminhos, data/hora, JSON, CSV, logging, coleções especializadas, iteração lazy, aritmética decimal e operações de OS/filesystem |
 | 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0, 1, 2, 3, 4, 5, 6 e 7 estão concluídas. A Fase 7 agora conecta tratamento de exceções, sinalização deliberada, I/O seguro de arquivos, fronteiras de dados TXT/CSV/JSON e organização do código por imports, módulos e pacotes. A Fase 8: Biblioteca Padrão está em andamento com quatro capítulos revisados: `pathlib`, `datetime`, uso avançado de `json` e uso avançado de `csv`. A Fase 6 continua fornecendo o modelo editorial e de qualidade para as seções posteriores.
+As Fases 0–8 estão concluídas. A Fase 8 agora oferece nove capítulos revisados da Biblioteca Padrão, encerrando com contratos de `os` e `shutil` para estado do ambiente, travessia do filesystem, metadados, cópia, movimentação, remoção recursiva, capacidades da plataforma e segurança de archives. A Fase 9: Bibliotecas Externas é a próxima fase planejada do currículo.
 
 ## Fase 0: Fundação do projeto
 
@@ -138,7 +138,7 @@ A Fase 7 está concluída. Os Capítulos 01–02 estabelecem tratamento e sinali
 
 ## Fase 8: Biblioteca padrão
 
-Consulte a [trilha de aprendizagem da seção](../standard-library/README.pt-BR.md).
+Veja a [trilha de aprendizagem da seção](../standard-library/README.pt-BR.md).
 
 - [x] [`pathlib`](../standard-library/01-pathlib/README.pt-BR.md)
 - [x] [`datetime`](../standard-library/02-datetime/README.pt-BR.md)
@@ -148,9 +148,9 @@ Consulte a [trilha de aprendizagem da seção](../standard-library/README.pt-BR.
 - [x] [`collections`](../standard-library/06-collections/README.pt-BR.md)
 - [x] [`itertools`](../standard-library/07-itertools/README.pt-BR.md)
 - [x] [`decimal`](../standard-library/08-decimal/README.pt-BR.md)
-- [ ] `os` e `shutil`
+- [x] [`os` e `shutil`](../standard-library/09-os-shutil/README.pt-BR.md)
 
-A Fase 8 está em andamento. O Capítulo 01 estabelece modelagem de caminhos com `pathlib`. O Capítulo 02 acrescenta tipos de data/hora de `datetime`. O Capítulo 03 acrescenta contratos explícitos de serialização e decodificação `json`. O Capítulo 04 acrescenta contratos explícitos de dialetos e texto tabular com `csv`. O Capítulo 05 acrescenta contratos avançados de entrega de eventos com `logging`. O Capítulo 06 acrescenta contratos especializados de `collections` para contagem, valores ausentes baseados em factory, filas de duas extremidades, registros compatíveis com tuplas, mapeamentos em camadas, reordenação, extensão por wrappers e interfaces de coleção. O Capítulo 07 acrescenta contratos de `itertools` para composição lazy, consumo de iteradores, agrupamento, streams infinitos limitados, alinhamento, fan-out e iteração combinatória. O Capítulo 08 acrescenta contratos de `decimal` para representação decimal exata, precisão, arredondamento, quantização, contexts, sinais, traps e validação. O Capítulo 09 continuará com `os` e `shutil`.
+A Fase 8 está concluída. Os Capítulos 01–08 constroem contratos para caminhos, data/hora, formatos estruturados, logging, coleções especializadas, iteração lazy e aritmética decimal. O Capítulo 09 encerra a fase conectando essas bases ao estado do ambiente do processo, interfaces path-like, varredura e travessia de diretórios, metadados, cópia, movimentação, exclusão recursiva, capacidades de plataforma e segurança de archives.
 
 ## Fase 9: Bibliotecas externas
 

@@ -22,7 +22,7 @@ A Fase 8 parte do modelo de imports aprendido na Fase 7 e estuda um conjunto foc
 | [06. `collections`](06-collections/README.pt-BR.md) | Usar contêineres especializados, camadas de mapeamento, registros de tupla, reordenação, wrappers e interfaces de coleção por contratos explícitos de operação | Intermediário | Disponível |
 | [07. `itertools`](07-itertools/README.pt-BR.md) | Compor pipelines lazy de iteradores com contratos explícitos de consumo, buffering, agrupamento, alinhamento e combinatória | Intermediário | Disponível |
 | [08. `decimal`](08-decimal/README.pt-BR.md) | Controlar representação decimal, precisão, arredondamento, quantização, contexts, sinais e contratos de validação | Intermediário | Disponível |
-| 09. `os` e `shutil` | Trabalhar com ambiente, operações de filesystem de nível mais baixo, cópia, movimentação e árvores de diretórios | Intermediário | Planejado |
+| [09. `os` e `shutil`](09-os-shutil/README.pt-BR.md) | Projetar contratos de ambiente, travessia, metadados, cópia, movimentação, remoção, archives e segurança de filesystem | Intermediário | Disponível |
 
 ## Pré-requisitos
 
@@ -76,9 +76,9 @@ Ao final da Fase 8, você deverá conseguir:
 
 ## Status da fase
 
-A Fase 8 está em andamento. O Capítulo 01 introduz [`pathlib`](01-pathlib/README.pt-BR.md), o Capítulo 02 acrescenta [`datetime`](02-datetime/README.pt-BR.md), o Capítulo 03 aprofunda [`json`](03-json/README.pt-BR.md), o Capítulo 04 aprofunda [`csv`](04-csv/README.pt-BR.md), o Capítulo 05 aprofunda [`logging`](05-logging/README.pt-BR.md), o Capítulo 06 acrescenta [`collections`](06-collections/README.pt-BR.md), o Capítulo 07 acrescenta [`itertools`](07-itertools/README.pt-BR.md) e o Capítulo 08 acrescenta [`decimal`](08-decimal/README.pt-BR.md) com representação decimal exata, políticas explícitas de precisão e arredondamento, quantização, contexts, sinais, traps e fronteiras de validação. O próximo capítulo planejado é `os` e `shutil`.
+A Fase 8 está concluída. O Capítulo 01 introduz [`pathlib`](01-pathlib/README.pt-BR.md), o Capítulo 02 acrescenta [`datetime`](02-datetime/README.pt-BR.md), o Capítulo 03 aprofunda [`json`](03-json/README.pt-BR.md), o Capítulo 04 aprofunda [`csv`](04-csv/README.pt-BR.md), o Capítulo 05 aprofunda [`logging`](05-logging/README.pt-BR.md), o Capítulo 06 acrescenta [`collections`](06-collections/README.pt-BR.md), o Capítulo 07 acrescenta [`itertools`](07-itertools/README.pt-BR.md), o Capítulo 08 acrescenta [`decimal`](08-decimal/README.pt-BR.md) e o Capítulo 09 encerra a fase com [`os` e `shutil`](09-os-shutil/README.pt-BR.md): ambiente do processo e diretório de trabalho, fronteiras path-like, varredura e travessia determinísticas, metadados, contratos de cópia/movimentação/remoção, capacidades de plataforma e segurança de archives.
 
-Os Capítulos 03, 04, 05, 06 e 08 aprofundam tópicos que apareceram anteriormente no currículo. As aparições anteriores ensinaram formatos de arquivo, design de logging, modelos de coleções embutidas ou comportamento de ponto flutuante binário; nesta fase estudamos os módulos da biblioteca padrão, suas APIs e seus trade-offs.
+Os Capítulos 03, 04, 05, 06 e 08 aprofundam tópicos já apresentados anteriormente. O Capítulo 09 também reconecta as bases anteriores de I/O de arquivos e `pathlib` com operações de sistema operacional e fluxos de filesystem de nível mais alto.
 
 ## Estrutura do diretório
 
@@ -150,15 +150,24 @@ standard-library/
 │       ├── groupby_runs.py
 │       ├── lazy_pipeline.py
 │       └── pairwise_deltas.py
-└── 08-decimal/
+├── 08-decimal/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── exact_amounts.py
+│       ├── local_context_precision.py
+│       ├── monitor_rounding.py
+│       └── validate_scale.py
+└── 09-os-shutil/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── exact_amounts.py
-        ├── local_context_precision.py
-        ├── monitor_rounding.py
-        └── validate_scale.py
+        ├── copy_tree_and_move.py
+        ├── environment_contract.py
+        ├── scan_directory.py
+        └── walk_with_pruning.py
 ```
 
-Novos diretórios de capítulos serão adicionados conforme a fase avançar.
+A Fase 8 está concluída. O crescimento futuro do currículo continua na Fase 9: Bibliotecas Externas.

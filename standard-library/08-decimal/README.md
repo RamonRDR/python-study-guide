@@ -1377,6 +1377,6 @@ Primary references used for this chapter:
 
 ## Next chapter
 
-Continue with **Chapter 09: `os` and `shutil`** when it becomes available.
+Continue with [Chapter 09: `os` and `shutil`](../09-os-shutil/README.md).
 
-The next chapter moves from numeric contracts to **operating-system and filesystem-operation contracts**: environment access, low-level path operations, copying, moving, directory trees, metadata, destructive operations, and the boundary between `pathlib`, `os`, and `shutil`.
+The next chapter moves from numeric contracts to operating-system and filesystem-operation contracts: environment state, path-like interfaces, traversal, metadata, copying, moving, recursive removal, archive safety, and the boundary between `pathlib`, `os`, and `shutil`.

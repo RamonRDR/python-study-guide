@@ -22,11 +22,11 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 5. Functions | Complete | Nine reviewed chapters cover `def`, calls, required inputs, returned values, scope, type hints, safe defaults, flexible arguments, function composition, and explicit data flow |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Complete | Five reviewed chapters cover exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data formats, and imports/modules/packages |
-| 8. Standard library | In progress | Four reviewed chapters cover `pathlib` path modeling, `datetime` date/time calculations, advanced `json` serialization/decoding contracts, and advanced `csv` tabular-text contracts |
+| 8. Standard library | Complete | Nine reviewed chapters cover paths, date/time, JSON, CSV, logging, specialized collections, lazy iteration, decimal arithmetic, and OS/filesystem operations |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, 4, 5, 6, and 7 are complete. Phase 7 now connects exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data boundaries, and code organization through imports, modules, and packages. Phase 8: Standard Library is in progress with four reviewed chapters: `pathlib`, `datetime`, advanced `json`, and advanced `csv` handling. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0–8 are complete. Phase 8 now provides nine reviewed Standard Library chapters, ending with `os` and `shutil` contracts for environment state, filesystem traversal, metadata, copying, moving, recursive removal, platform capabilities, and archive safety. Phase 9: External Libraries is the next planned curriculum phase.
 
 ## Phase 0: Project foundation
 
@@ -148,9 +148,9 @@ See the [section learning path](../standard-library/README.md).
 - [x] [`collections`](../standard-library/06-collections/README.md)
 - [x] [`itertools`](../standard-library/07-itertools/README.md)
 - [x] [`decimal`](../standard-library/08-decimal/README.md)
-- [ ] `os` and `shutil`
+- [x] [`os` and `shutil`](../standard-library/09-os-shutil/README.md)
 
-Phase 8 is in progress. Chapter 01 establishes `pathlib` path modeling and filesystem boundaries. Chapter 02 adds `datetime` date/time types and deterministic calculations. Chapter 03 adds explicit `json` serialization and decoding contracts. Chapter 04 adds explicit `csv` dialect and tabular-text contracts. Chapter 05 adds advanced `logging` event-delivery contracts. Chapter 06 adds specialized `collections` contracts for counting, factory-backed missing values, double-ended queues, tuple-compatible records, layered mappings, reordering, wrapper extension, and collection interfaces. Chapter 07 adds `itertools` contracts for lazy composition, iterator consumption, grouping, bounded infinite streams, alignment, fan-out, and combinatoric iteration. Chapter 08 adds `decimal` contracts for exact decimal representation, precision, rounding, quantization, contexts, signals, traps, and validation. Chapter 09 will continue with `os` and `shutil`.
+Phase 8 is complete. Chapters 01–08 build contracts for paths, date/time, structured formats, logging, specialized collections, lazy iteration, and decimal arithmetic. Chapter 09 closes the phase by connecting those foundations to process environment state, path-like interfaces, directory scanning and traversal, metadata, copying, moving, recursive deletion, platform capabilities, and archive safety.
 
 ## Phase 9: External libraries
 

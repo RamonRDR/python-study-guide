@@ -1377,6 +1377,6 @@ Referências primárias usadas neste capítulo:
 
 ## Próximo capítulo
 
-Continue com **Capítulo 09: `os` e `shutil`** quando ele estiver disponível.
+Continue com o [Capítulo 09: `os` e `shutil`](../09-os-shutil/README.pt-BR.md).
 
-O próximo capítulo sai dos contratos numéricos e entra em **contratos de operações do sistema operacional e filesystem**: acesso ao ambiente, operações de caminho de nível mais baixo, cópia, movimentação, árvores de diretórios, metadados, operações destrutivas e a fronteira entre `pathlib`, `os` e `shutil`.
+O próximo capítulo passa de contratos numéricos para contratos de operações do sistema operacional e filesystem: estado do ambiente, interfaces path-like, travessia, metadados, cópia, movimentação, remoção recursiva, segurança de archives e a fronteira entre `pathlib`, `os` e `shutil`.

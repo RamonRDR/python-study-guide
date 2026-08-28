@@ -99,7 +99,7 @@ This phase is already available and is the next recommended phase after Function
 
 Phase 7 is complete with five reviewed chapters. Chapters 01–02 establish exception handling and deliberate signaling. Chapter 03 adds safe file lifetime and text I/O. Chapter 04 adds TXT, CSV, and JSON data boundaries. Chapter 05 closes the phase with modules, regular packages, `__name__`, the main guard, import search context, absolute and relative imports, `python -m`, and dependency design.
 
-## Phase 8 · Standard Library 🚧
+## Phase 8 · Standard Library ✅
 
 [Open the Standard Library section index](../standard-library/README.md)
 
@@ -111,8 +111,9 @@ Phase 7 is complete with five reviewed chapters. Chapters 01–02 establish exce
 6. [Specialized Containers and Collection Contracts](../standard-library/06-collections/README.md)
 7. [Engineering Lazy Iterator Pipelines with `itertools`](../standard-library/07-itertools/README.md)
 8. [Engineering Decimal Precision and Rounding Contracts](../standard-library/08-decimal/README.md)
+9. [Engineering OS and Filesystem Operations with `os` and `shutil`](../standard-library/09-os-shutil/README.md)
 
-Phase 8 is in progress. Chapter 01 introduces path objects and filesystem boundaries. Chapter 02 adds dates, times, durations, parsing, formatting, naive versus aware datetimes, fixed UTC offsets, timezone conversion, and deterministic time calculations. Chapter 03 deepens JSON serialization and decoding policies. Chapter 04 deepens CSV as a tabular-text boundary. Chapter 05 deepens logging as a runtime event-delivery graph. Chapter 06 adds specialized container contracts with `Counter`, `defaultdict`, `deque`, named tuple records, `ChainMap`, `OrderedDict`, extension wrappers, and `collections.abc`. Chapter 07 adds lazy iterator composition, explicit consumption boundaries, grouping, infinite-stream limiting, alignment, fan-out, and combinatoric iteration. Chapter 08 adds exact decimal representation, context precision, explicit rounding, quantization, signals, traps, and validation boundaries. The next planned chapter is **`os` and `shutil`**.
+Phase 8 is complete with nine reviewed chapters. The sequence moves from path modeling through time, structured data formats, runtime diagnostics, specialized containers, lazy iteration, decimal arithmetic, and finally operating-system and filesystem contracts. Chapter 09 closes the phase with environment state, path-like boundaries, deterministic scanning and traversal, metadata, copy/move/removal behavior, platform capabilities, and archive-safety decisions.
 
 ## Phase 9 · External Libraries ⏳
 
