@@ -17,7 +17,7 @@ Phase 8 builds on the import model from Phase 7 and studies a focused set of mod
 | [01. `pathlib`](01-pathlib/README.md) | Represent, compose, inspect, create, read, and discover filesystem paths with path-aware objects | Intermediate | Available |
 | [02. `datetime`](02-datetime/README.md) | Work with dates, times, durations, parsing, formatting, timezone awareness, and arithmetic | Intermediate | Available |
 | [03. `json`](03-json/README.md) | Control serialization and decoding contracts, strict numeric behavior, hooks, custom values, duplicate names, and deterministic output | Intermediate | Available |
-| 04. `csv` | Work with CSV dialects, quoting, readers, writers, and tabular text boundaries | Intermediate | Planned |
+| [04. `csv`](04-csv/README.md) | Control dialects, quoting, escaping, row shape, sniffing, and tabular text contracts | Intermediate | Available |
 | 05. `logging` | Configure loggers, handlers, formatters, levels, and application versus library logging | Intermediate | Planned |
 | 06. `collections` | Use specialized containers such as `Counter`, `defaultdict`, and `deque` | Intermediate | Planned |
 | 07. `itertools` | Build efficient iterator pipelines with reusable iteration tools | Intermediate | Planned |
@@ -76,9 +76,9 @@ By the end of Phase 8, you should be able to:
 
 ## Phase status
 
-Phase 8 is in progress. Chapter 01 introduces [`pathlib`](01-pathlib/README.md), Chapter 02 adds [`datetime`](02-datetime/README.md), and Chapter 03 deepens [`json`](03-json/README.md) with explicit serialization and decoding contracts, strict numeric handling, hooks, custom representations, duplicate-name policy, and deterministic output. The next planned chapter is `csv`.
+Phase 8 is in progress. Chapter 01 introduces [`pathlib`](01-pathlib/README.md), Chapter 02 adds [`datetime`](02-datetime/README.md), Chapter 03 deepens [`json`](03-json/README.md), and Chapter 04 deepens [`csv`](04-csv/README.md) with explicit dialect, quoting, escaping, header, row-shape, sniffing, encoding-boundary, and spreadsheet-consumer policies. The next planned chapter is `logging`.
 
-Chapter 03 revisits `json` at a deeper library level, while later chapters will do the same for `csv` and `logging`. Their earlier appearances taught file formats or broader design concepts; this phase studies the modules themselves, their APIs, and their trade-offs.
+Chapters 03 and 04 revisit `json` and `csv` at a deeper library level, while a later chapter will do the same for `logging`. Their earlier appearances taught file formats or broader design concepts; this phase studies the modules themselves, their APIs, and their trade-offs.
 
 ## Directory structure
 
@@ -105,15 +105,24 @@ standard-library/
 │       ├── duration_seconds.py
 │       ├── parse_and_format.py
 │       └── utc_conversion.py
-└── 03-json/
+├── 03-json/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── decimal_decode.py
+│       ├── deterministic_json.py
+│       ├── reject_duplicate_keys.py
+│       └── strict_numbers.py
+└── 04-csv/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── decimal_decode.py
-        ├── deterministic_json.py
-        ├── reject_duplicate_keys.py
-        └── strict_numbers.py
+        ├── dialect_round_trip.py
+        ├── quote_none_escape.py
+        ├── sniff_delimiter.py
+        └── validate_dict_rows.py
 ```
 
 New chapter directories will be added as the phase progresses.
