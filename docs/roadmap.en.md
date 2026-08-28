@@ -141,7 +141,7 @@ Phase 7 is complete. Chapters 01–02 establish exception handling and deliberat
 See the [section learning path](../standard-library/README.md).
 
 - [x] [`pathlib`](../standard-library/01-pathlib/README.md)
-- [ ] `datetime`
+- [x] [`datetime`](../standard-library/02-datetime/README.md)
 - [ ] `json`
 - [ ] `csv`
 - [ ] `logging`
@@ -150,7 +150,7 @@ See the [section learning path](../standard-library/README.md).
 - [ ] `decimal`
 - [ ] `os` and `shutil`
 
-Phase 8 is in progress. Chapter 01 establishes `Path`, pure paths, relative and absolute paths, structural inspection, portable composition, text helpers, directory creation and traversal, globbing, resolution, and filesystem exception boundaries. Chapter 02 will continue with `datetime` and time calculations.
+Phase 8 is in progress. Chapter 01 establishes `pathlib` path modeling and filesystem boundaries. Chapter 02 adds `date`, `time`, `datetime`, `timedelta`, parsing, formatting, ISO-oriented helpers, naive versus aware datetimes, UTC and fixed offsets, timezone conversion, timestamps, and deterministic time calculations. Chapter 03 will continue with deeper `json` handling.
 
 ## Phase 9: External libraries
 

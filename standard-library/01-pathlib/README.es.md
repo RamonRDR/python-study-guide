@@ -758,7 +758,7 @@ Los ejemplos son deterministas y usan solo operaciones estructurales de rutas o 
 
 ## Próximo capítulo
 
-Continúa con **Capítulo 02: `datetime` y Cálculos de Tiempo**, donde la biblioteca estándar añade objetos explícitos para fechas, horas, duraciones, parsing, formato y aritmética de fechas.
+Continúa con **[Capítulo 02: `datetime` y Cálculos de Tiempo](../02-datetime/README.es.md)**, donde la biblioteca estándar añade objetos explícitos para fechas, horas, duraciones, parsing, formato y aritmética de fechas.
 
 ## Referencias oficiales
 

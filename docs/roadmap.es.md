@@ -141,7 +141,7 @@ La Fase 7 está completada. Los Capítulos 01–02 establecen manejo y señaliza
 Consulta la [ruta de aprendizaje de la sección](../standard-library/README.es.md).
 
 - [x] [`pathlib`](../standard-library/01-pathlib/README.es.md)
-- [ ] `datetime`
+- [x] [`datetime`](../standard-library/02-datetime/README.es.md)
 - [ ] `json`
 - [ ] `csv`
 - [ ] `logging`
@@ -150,7 +150,7 @@ Consulta la [ruta de aprendizaje de la sección](../standard-library/README.es.m
 - [ ] `decimal`
 - [ ] `os` y `shutil`
 
-La Fase 8 está en progreso. El Capítulo 01 establece `Path`, rutas puras, rutas relativas y absolutas, inspección estructural, composición portable, helpers de texto, creación y recorrido de directorios, globbing, resolución y límites de excepciones del filesystem. El Capítulo 02 continuará con `datetime` y cálculos de tiempo.
+La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib` y límites del filesystem. El Capítulo 02 añade `date`, `time`, `datetime`, `timedelta`, parsing, formato, helpers orientados a ISO, datetimes naive frente a aware, UTC y offsets fijos, conversión de timezone, timestamps y cálculos de tiempo deterministas. El Capítulo 03 continuará con uso más profundo de `json`.
 
 ## Fase 9: Bibliotecas externas
 
