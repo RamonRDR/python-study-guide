@@ -1475,4 +1475,4 @@ Por isso logging avançado é menos sobre imprimir mensagens e mais sobre projet
 
 ## Próximo capítulo
 
-Continue com o **Capítulo 06: `collections`** quando ele estiver disponível. Ele estudará containers especializados como `Counter`, `defaultdict`, `deque` e ferramentas relacionadas de collections como escolhas explícitas de estrutura de dados, e não apenas atalhos convenientes.
+Continue para o [Capítulo 06: `collections`](../06-collections/README.pt-BR.md). Ele estuda contêineres especializados como `Counter`, `defaultdict`, `deque`, registros de tuplas nomeadas, mapeamentos em camadas, ferramentas de reordenação, bases wrapper e interfaces de coleção como escolhas explícitas de estrutura de dados, e não truques de conveniência.

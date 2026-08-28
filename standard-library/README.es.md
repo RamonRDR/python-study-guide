@@ -19,7 +19,7 @@ La Fase 8 parte del modelo de imports aprendido en la Fase 7 y estudia un conjun
 | [03. `json`](03-json/README.es.md) | Controlar contratos de serialización y decodificación, comportamiento numérico estricto, hooks, valores personalizados, nombres duplicados y salida determinista | Intermedio | Disponible |
 | [04. `csv`](04-csv/README.es.md) | Controlar dialectos, quoting, escaping, forma de filas, sniffing y contratos de texto tabular | Intermedio | Disponible |
 | [05. `logging`](05-logging/README.es.md) | Diseñar jerarquía de loggers, configuración, registros contextuales, entrega mediante colas, concurrencia y contratos de logging en runtime | Intermedio | Disponible |
-| 06. `collections` | Usar contenedores especializados como `Counter`, `defaultdict` y `deque` | Intermedio | Planificado |
+| [06. `collections`](06-collections/README.es.md) | Usar contenedores especializados, capas de mappings, registros de tupla, reordenación, wrappers e interfaces de colección mediante contratos explícitos de operación | Intermedio | Disponible |
 | 07. `itertools` | Construir pipelines eficientes de iteradores con herramientas reutilizables | Intermedio | Planificado |
 | 08. `decimal` | Realizar aritmética decimal exacta con redondeo y contexto explícitos | Intermedio | Planificado |
 | 09. `os` y `shutil` | Trabajar con entorno, operaciones de filesystem de nivel más bajo, copia, movimiento y árboles de directorios | Intermedio | Planificado |
@@ -76,9 +76,9 @@ Al final de la Fase 8 deberías poder:
 
 ## Estado de la fase
 
-La Fase 8 está en progreso. El Capítulo 01 introduce [`pathlib`](01-pathlib/README.es.md), el Capítulo 02 añade [`datetime`](02-datetime/README.es.md), el Capítulo 03 profundiza [`json`](03-json/README.es.md), el Capítulo 04 profundiza [`csv`](04-csv/README.es.md) y el Capítulo 05 profundiza [`logging`](05-logging/README.es.md) con contratos de niveles efectivos, enrutamiento por handlers, propagación, configuración, registros contextuales, entrega mediante colas, concurrencia y seguridad operativa. El próximo capítulo planificado es `collections`.
+La Fase 8 está en progreso. El Capítulo 01 introduce [`pathlib`](01-pathlib/README.es.md), el Capítulo 02 añade [`datetime`](02-datetime/README.es.md), el Capítulo 03 profundiza [`json`](03-json/README.es.md), el Capítulo 04 profundiza [`csv`](04-csv/README.es.md), el Capítulo 05 profundiza [`logging`](05-logging/README.es.md) y el Capítulo 06 añade [`collections`](06-collections/README.es.md) con contratos de `Counter`, `defaultdict`, `deque`, `namedtuple`, `ChainMap`, `OrderedDict`, wrappers de extensión e interfaces de `collections.abc`. El próximo capítulo planificado es `itertools`.
 
-Los Capítulos 03, 04 y 05 revisitan `json`, `csv` y `logging` a un nivel más profundo de biblioteca. Sus apariciones anteriores enseñaron formatos de archivo o conceptos más amplios de diseño; en esta fase estudiamos los módulos, sus APIs y sus trade-offs.
+Los Capítulos 03, 04, 05 y 06 profundizan temas que aparecieron anteriormente en el currículo. Sus apariciones previas enseñaron formatos de archivo, diseño de logging o modelos de colecciones integradas; en esta fase estudiamos los módulos de la biblioteca estándar, sus APIs y sus trade-offs.
 
 ## Estructura del directorio
 
@@ -123,15 +123,24 @@ standard-library/
 │       ├── quote_none_escape.py
 │       ├── sniff_delimiter.py
 │       └── validate_dict_rows.py
-└── 05-logging/
+├── 05-logging/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── context_filter.py
+│       ├── dict_config_routing.py
+│       ├── queue_listener.py
+│       └── stacklevel_helper.py
+└── 06-collections/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── context_filter.py
-        ├── dict_config_routing.py
-        ├── queue_listener.py
-        └── stacklevel_helper.py
+        ├── bounded_deque.py
+        ├── chainmap_config.py
+        ├── counter_inventory.py
+        └── defaultdict_grouping.py
 ```
 
 Se añadirán nuevos directorios de capítulos a medida que avance la fase.

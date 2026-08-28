@@ -19,7 +19,7 @@ Phase 8 builds on the import model from Phase 7 and studies a focused set of mod
 | [03. `json`](03-json/README.md) | Control serialization and decoding contracts, strict numeric behavior, hooks, custom values, duplicate names, and deterministic output | Intermediate | Available |
 | [04. `csv`](04-csv/README.md) | Control dialects, quoting, escaping, row shape, sniffing, and tabular text contracts | Intermediate | Available |
 | [05. `logging`](05-logging/README.md) | Engineer logger hierarchy, configuration, contextual records, queue-based delivery, concurrency, and runtime logging contracts | Intermediate | Available |
-| 06. `collections` | Use specialized containers such as `Counter`, `defaultdict`, and `deque` | Intermediate | Planned |
+| [06. `collections`](06-collections/README.md) | Use specialized containers, mapping layers, tuple records, reordering tools, wrapper bases, and collection interfaces by explicit operation contracts | Intermediate | Available |
 | 07. `itertools` | Build efficient iterator pipelines with reusable iteration tools | Intermediate | Planned |
 | 08. `decimal` | Perform exact decimal arithmetic with explicit rounding and context | Intermediate | Planned |
 | 09. `os` and `shutil` | Work with environment, low-level filesystem operations, copying, moving, and directory trees | Intermediate | Planned |
@@ -76,9 +76,9 @@ By the end of Phase 8, you should be able to:
 
 ## Phase status
 
-Phase 8 is in progress. Chapter 01 introduces [`pathlib`](01-pathlib/README.md), Chapter 02 adds [`datetime`](02-datetime/README.md), Chapter 03 deepens [`json`](03-json/README.md), Chapter 04 deepens [`csv`](04-csv/README.md), and Chapter 05 deepens [`logging`](05-logging/README.md) with effective-level, handler-routing, propagation, configuration, contextual-record, queue-delivery, concurrency, and operational-safety contracts. The next planned chapter is `collections`.
+Phase 8 is in progress. Chapter 01 introduces [`pathlib`](01-pathlib/README.md), Chapter 02 adds [`datetime`](02-datetime/README.md), Chapter 03 deepens [`json`](03-json/README.md), Chapter 04 deepens [`csv`](04-csv/README.md), Chapter 05 deepens [`logging`](05-logging/README.md), and Chapter 06 adds [`collections`](06-collections/README.md) with `Counter`, `defaultdict`, `deque`, `namedtuple`, `ChainMap`, `OrderedDict`, extension wrappers, and `collections.abc` interface contracts. The next planned chapter is `itertools`.
 
-Chapters 03, 04, and 05 revisit `json`, `csv`, and `logging` at a deeper library level. Their earlier appearances taught file formats or broader design concepts; this phase studies the modules themselves, their APIs, and their trade-offs.
+Chapters 03, 04, 05, and 06 deepen topics that appeared earlier in the curriculum. Their earlier appearances taught file formats, logging design, or built-in collection models; this phase studies the standard-library modules themselves, their APIs, and their trade-offs.
 
 ## Directory structure
 
@@ -123,15 +123,24 @@ standard-library/
 │       ├── quote_none_escape.py
 │       ├── sniff_delimiter.py
 │       └── validate_dict_rows.py
-└── 05-logging/
+├── 05-logging/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── context_filter.py
+│       ├── dict_config_routing.py
+│       ├── queue_listener.py
+│       └── stacklevel_helper.py
+└── 06-collections/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── context_filter.py
-        ├── dict_config_routing.py
-        ├── queue_listener.py
-        └── stacklevel_helper.py
+        ├── bounded_deque.py
+        ├── chainmap_config.py
+        ├── counter_inventory.py
+        └── defaultdict_grouping.py
 ```
 
 New chapter directories will be added as the phase progresses.

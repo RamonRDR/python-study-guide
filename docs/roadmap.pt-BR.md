@@ -145,12 +145,12 @@ Consulte a [trilha de aprendizagem da seção](../standard-library/README.pt-BR.
 - [x] [`json`](../standard-library/03-json/README.pt-BR.md)
 - [x] [`csv`](../standard-library/04-csv/README.pt-BR.md)
 - [x] [`logging`](../standard-library/05-logging/README.pt-BR.md)
-- [ ] `collections`
+- [x] [`collections`](../standard-library/06-collections/README.pt-BR.md)
 - [ ] `itertools`
 - [ ] `decimal`
 - [ ] `os` e `shutil`
 
-A Fase 8 está em andamento. O Capítulo 01 estabelece modelagem de caminhos com `pathlib` e fronteiras do filesystem. O Capítulo 02 acrescenta tipos de data/hora e cálculos determinísticos com `datetime`. O Capítulo 03 acrescenta contratos explícitos de serialização e decodificação com `json`. O Capítulo 04 acrescenta contratos explícitos de dialeto e texto tabular com `csv`. O Capítulo 05 acrescenta contratos avançados de `logging` para níveis efetivos, roteamento por handlers, propagação, configuração, registros contextuais, entrega por filas, concorrência e segurança operacional. O Capítulo 06 continuará com `collections`.
+A Fase 8 está em andamento. O Capítulo 01 estabelece modelagem de caminhos com `pathlib`. O Capítulo 02 acrescenta tipos de data/hora de `datetime`. O Capítulo 03 acrescenta contratos explícitos de serialização e decodificação `json`. O Capítulo 04 acrescenta contratos explícitos de dialetos e texto tabular com `csv`. O Capítulo 05 acrescenta contratos avançados de entrega de eventos com `logging`. O Capítulo 06 acrescenta contratos especializados de `collections` para contagem, valores ausentes baseados em factory, filas de duas extremidades, registros compatíveis com tuplas, mapeamentos em camadas, reordenação, extensão por wrappers e interfaces de coleção. O Capítulo 07 continuará com `itertools`.
 
 ## Fase 9: Bibliotecas externas
 
