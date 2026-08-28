@@ -17,7 +17,7 @@ A Fase 8 parte do modelo de imports aprendido na Fase 7 e estuda um conjunto foc
 | [01. `pathlib`](01-pathlib/README.pt-BR.md) | Representar, compor, inspecionar, criar, ler e descobrir caminhos do sistema de arquivos com objetos próprios para caminhos | Intermediário | Disponível |
 | [02. `datetime`](02-datetime/README.pt-BR.md) | Trabalhar com datas, horários, durações, parsing, formatação, consciência de timezone e aritmética | Intermediário | Disponível |
 | [03. `json`](03-json/README.pt-BR.md) | Controlar contratos de serialização e decodificação, comportamento numérico estrito, hooks, valores personalizados, nomes duplicados e saída determinística | Intermediário | Disponível |
-| 04. `csv` | Trabalhar com dialetos CSV, quoting, readers, writers e fronteiras de texto tabular | Intermediário | Planejado |
+| [04. `csv`](04-csv/README.pt-BR.md) | Controlar dialetos, quoting, formato das linhas, semântica de null, entrada malformada e fronteiras de texto tabular | Intermediário | Disponível |
 | 05. `logging` | Configurar loggers, handlers, formatters, níveis e logging de aplicação versus biblioteca | Intermediário | Planejado |
 | 06. `collections` | Usar contêineres especializados como `Counter`, `defaultdict` e `deque` | Intermediário | Planejado |
 | 07. `itertools` | Construir pipelines eficientes de iteradores com ferramentas reutilizáveis | Intermediário | Planejado |
@@ -76,9 +76,9 @@ Ao final da Fase 8, você deverá conseguir:
 
 ## Status da fase
 
-A Fase 8 está em andamento. O Capítulo 01 introduz [`pathlib`](01-pathlib/README.pt-BR.md), o Capítulo 02 acrescenta [`datetime`](02-datetime/README.pt-BR.md), e o Capítulo 03 aprofunda [`json`](03-json/README.pt-BR.md) com contratos explícitos de serialização e decodificação, tratamento numérico estrito, hooks, representações personalizadas, política de nomes duplicados e saída determinística. O próximo capítulo planejado é `csv`.
+A Fase 8 está em andamento. O Capítulo 01 introduz [`pathlib`](01-pathlib/README.pt-BR.md), o Capítulo 02 acrescenta [`datetime`](02-datetime/README.pt-BR.md), o Capítulo 03 aprofunda [`json`](03-json/README.pt-BR.md), e o Capítulo 04 aprofunda [`csv`](04-csv/README.pt-BR.md) com políticas explícitas de dialeto, quoting, formato das linhas, null, erros, encoding e limites de recursos. O próximo capítulo planejado é `logging`.
 
-O Capítulo 03 revisita `json` em um nível mais profundo de biblioteca, enquanto capítulos posteriores farão o mesmo com `csv` e `logging`. As aparições anteriores ensinaram formatos de arquivo ou conceitos maiores de design; nesta fase estudamos os módulos, suas APIs e seus trade-offs.
+Os Capítulos 03 e 04 revisitam `json` e `csv` em um nível mais profundo de biblioteca, enquanto um capítulo posterior fará o mesmo com `logging`. As aparições anteriores ensinaram formatos de arquivo ou conceitos maiores de design; nesta fase estudamos os módulos, suas APIs e seus trade-offs.
 
 ## Estrutura do diretório
 
@@ -105,15 +105,24 @@ standard-library/
 │       ├── duration_seconds.py
 │       ├── parse_and_format.py
 │       └── utc_conversion.py
-└── 03-json/
+├── 03-json/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── decimal_decode.py
+│       ├── deterministic_json.py
+│       ├── reject_duplicate_keys.py
+│       └── strict_numbers.py
+└── 04-csv/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── decimal_decode.py
-        ├── deterministic_json.py
-        ├── reject_duplicate_keys.py
-        └── strict_numbers.py
+        ├── dict_contract.py
+        ├── quote_notnull.py
+        ├── semicolon_dialect.py
+        └── strict_csv.py
 ```
 
 Novos diretórios de capítulos serão adicionados conforme a fase avançar.

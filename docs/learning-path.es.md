@@ -106,8 +106,9 @@ La Fase 7 está completada con cinco capítulos revisados. Los Capítulos 01–0
 1. [Trabajar con Rutas del Sistema de Archivos Usando `pathlib`](../standard-library/01-pathlib/README.es.md)
 2. [Trabajar con Fechas y Cálculos de Tiempo Usando `datetime`](../standard-library/02-datetime/README.es.md)
 3. [Controlando Contratos de Serialización y Decodificación JSON](../standard-library/03-json/README.es.md)
+4. [Controlando Dialectos CSV, Quoting y Contratos Tabulares](../standard-library/04-csv/README.es.md)
 
-La Fase 8 está en progreso. El Capítulo 01 introduce objetos de ruta y límites del filesystem. El Capítulo 02 añade fechas, horas, duraciones, parsing, formato, datetimes naive frente a aware, offsets UTC fijos, conversión de timezone y cálculos de tiempo deterministas. El Capítulo 03 profundiza políticas de serialización y decodificación JSON, incluyendo salida determinista, manejo estricto de números no finitos, hooks numéricos, valores personalizados, nombres duplicados, diagnósticos y límites de recursos. El próximo capítulo planificado es **`csv`**.
+La Fase 8 está en progreso. El Capítulo 01 introduce objetos de ruta y límites del filesystem. El Capítulo 02 añade fechas, horas, duraciones, parsing, formato, datetimes naive frente a aware, offsets UTC fijos, conversión de timezone y cálculos de tiempo deterministas. El Capítulo 03 profundiza políticas de serialización y decodificación JSON. El Capítulo 04 profundiza dialectos CSV, quoting, forma de filas, semántica null, encoding, manejo de entrada malformada, heurísticas y límites de recursos. El próximo capítulo planificado es **`logging`**.
 
 ## Fase 9 · Bibliotecas Externas ⏳
 

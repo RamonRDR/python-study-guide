@@ -1096,4 +1096,6 @@ If those answers are explicit, the JSON boundary becomes much easier to test and
 
 ## Next chapter
 
-Continue with **Chapter 04: `csv`** when it becomes available. It will deepen dialects, quoting, readers, writers, and tabular-text interface contracts.
+Continue with [**Chapter 04: `csv`**](../04-csv/README.md). It deepens dialects, quoting, readers, writers, null semantics, malformed input, and tabular-text interface contracts.
+
+[Next → Chapter 04 · `csv`](../04-csv/README.md)

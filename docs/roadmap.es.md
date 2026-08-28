@@ -143,14 +143,14 @@ Consulta la [ruta de aprendizaje de la sección](../standard-library/README.es.m
 - [x] [`pathlib`](../standard-library/01-pathlib/README.es.md)
 - [x] [`datetime`](../standard-library/02-datetime/README.es.md)
 - [x] [`json`](../standard-library/03-json/README.es.md)
-- [ ] `csv`
+- [x] [`csv`](../standard-library/04-csv/README.es.md)
 - [ ] `logging`
 - [ ] `collections`
 - [ ] `itertools`
 - [ ] `decimal`
 - [ ] `os` y `shutil`
 
-La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib` y límites del filesystem. El Capítulo 02 añade tipos de fecha/hora y cálculos deterministas con `datetime`. El Capítulo 03 añade contratos explícitos de serialización y decodificación con `json`, formato determinista, manejo estricto de números no finitos, hooks numéricos, representaciones personalizadas, detección de nombres duplicados, diagnósticos y límites de recursos para entrada no confiable. El Capítulo 04 continuará con uso más profundo de `csv`.
+La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib` y límites del filesystem. El Capítulo 02 añade tipos de fecha/hora y cálculos deterministas con `datetime`. El Capítulo 03 añade contratos explícitos de serialización y decodificación con `json`. El Capítulo 04 añade políticas explícitas de dialecto CSV, quoting, forma de filas, null, encoding, errores, heurísticas y límites de recursos. El Capítulo 05 continuará con configuración más profunda de `logging`.
 
 ## Fase 9: Bibliotecas externas
 

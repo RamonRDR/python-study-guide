@@ -134,3 +134,7 @@ standard-library/03-json/examples/decimal_decode.py
 standard-library/03-json/examples/deterministic_json.py
 standard-library/03-json/examples/reject_duplicate_keys.py
 standard-library/03-json/examples/strict_numbers.py
+standard-library/04-csv/examples/dict_contract.py
+standard-library/04-csv/examples/quote_notnull.py
+standard-library/04-csv/examples/semicolon_dialect.py
+standard-library/04-csv/examples/strict_csv.py

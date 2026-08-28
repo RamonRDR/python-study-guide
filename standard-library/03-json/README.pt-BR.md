@@ -1096,4 +1096,6 @@ Se essas respostas forem explícitas, a fronteira JSON fica muito mais fácil de
 
 ## Próximo capítulo
 
-Continue com o **Capítulo 04: `csv`** quando ele estiver disponível. Ele aprofundará dialetos, quoting, readers, writers e contratos de interfaces de texto tabular.
+Continue com o [**Capítulo 04: `csv`**](../04-csv/README.pt-BR.md). Ele aprofunda dialetos, quoting, readers, writers, semântica de null, entrada malformada e contratos de interfaces de texto tabular.
+
+[Próximo → Capítulo 04 · `csv`](../04-csv/README.pt-BR.md)
