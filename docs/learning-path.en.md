@@ -105,8 +105,9 @@ Phase 7 is complete with five reviewed chapters. Chapters 01–02 establish exce
 
 1. [Working with Filesystem Paths Using `pathlib`](../standard-library/01-pathlib/README.md)
 2. [Working with Dates and Time Calculations Using `datetime`](../standard-library/02-datetime/README.md)
+3. [Controlling JSON Serialization and Decoding Contracts](../standard-library/03-json/README.md)
 
-Phase 8 is in progress. Chapter 01 introduces path objects and filesystem boundaries. Chapter 02 adds dates, times, durations, parsing, formatting, naive versus aware datetimes, fixed UTC offsets, timezone conversion, and deterministic time calculations. The next planned chapter is **`json` Beyond Basic Persistence**.
+Phase 8 is in progress. Chapter 01 introduces path objects and filesystem boundaries. Chapter 02 adds dates, times, durations, parsing, formatting, naive versus aware datetimes, fixed UTC offsets, timezone conversion, and deterministic time calculations. Chapter 03 deepens JSON serialization and decoding policies, including deterministic output, strict non-finite-number handling, numeric hooks, custom values, duplicate object names, diagnostics, and resource boundaries. The next planned chapter is **`csv`**.
 
 ## Phase 9 · External Libraries ⏳
 

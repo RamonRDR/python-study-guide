@@ -696,7 +696,7 @@ The examples are deterministic and do not depend on the current clock or an exte
 
 ## Next chapter
 
-Continue with **Chapter 03: `json` Beyond Basic Persistence**, where the standard library revisits JSON serialization with deeper control over encoders, decoders, formatting, numeric hooks, and strict interoperability contracts.
+Continue with [**Chapter 03: Controlling JSON Serialization and Decoding Contracts**](../03-json/README.md), where the standard library revisits JSON with deeper control over strictness, numeric hooks, custom representations, duplicate names, and deterministic output.
 
 ## Official references
 

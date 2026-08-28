@@ -397,15 +397,24 @@ python-study-guide/
 │   │       ├── inspect_paths.py
 │   │       ├── path_parts.py
 │   │       └── text_workspace.py
-│   └── 02-datetime/
+│   ├── 02-datetime/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── date_arithmetic.py
+│   │       ├── duration_seconds.py
+│   │       ├── parse_and_format.py
+│   │       └── utc_conversion.py
+│   └── 03-json/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── date_arithmetic.py
-│           ├── duration_seconds.py
-│           ├── parse_and_format.py
-│           └── utc_conversion.py
+│           ├── decimal_decode.py
+│           ├── deterministic_json.py
+│           ├── reject_duplicate_keys.py
+│           └── strict_numbers.py
 ├── strings-and-numbers/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -467,7 +476,7 @@ python-study-guide/
 - `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
 - `program-flow/`: trilha completa da Fase 4. Os Capítulos 01–08 ensinam condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, ramificação condicional com `if`, `elif` e `else`, correspondência de padrões estruturais, repetição guiada por iteráveis com `for`, progressões numéricas com `range()`, iteração com posição usando `enumerate()`, iteração paralela com `zip()` incluindo validação explícita de comprimentos iguais com `strict=True`, repetição guiada por estado com `while`, controle deliberado de loops com `break`, `continue` e `else` de loop e como escolher e combinar ferramentas de fluxo do programa de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
-- `standard-library/`: trilha da Fase 8 em andamento. O Capítulo 01 ensina objetos de caminho com `pathlib` e fronteiras do filesystem. O Capítulo 02 ensina tipos de data/hora com `datetime`, durações, parsing, formatação, helpers orientados a ISO, valores naive versus aware, UTC e offsets fixos, conversão de timezone, timestamps e cálculos de tempo determinísticos em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
+- `standard-library/`: trilha da Fase 8 em andamento. O Capítulo 01 ensina objetos de caminho e fronteiras do filesystem com `pathlib`; o Capítulo 02 ensina modelagem de data/hora e cálculos determinísticos com `datetime`; o Capítulo 03 ensina contratos avançados de serialização/decodificação com `json`, saída determinística, políticas numéricas estritas, hooks, representações personalizadas, detecção de nomes duplicados, diagnósticos e parsing consciente de recursos, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos.
 - `strings-and-numbers/`: trilha completa da Fase 2. Seus quatro capítulos revisados cobrem criação e indexação de strings, métodos comuns, comportamento de inteiros, ponto flutuante e booleanos, precisão de ponto flutuante e `round()`, `abs()`, `min()`, `max()` e `sum()` em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `tests/`: testes de regressão das ferramentas de qualidade e, futuramente, do conteúdo educacional.
 

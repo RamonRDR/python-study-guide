@@ -694,7 +694,7 @@ Os exemplos são determinísticos e não dependem do relógio atual nem de um ba
 
 ## Próximo capítulo
 
-Continue com **Capítulo 03: `json` Além da Persistência Básica**, onde a biblioteca padrão revisita serialização JSON com controle mais profundo de encoders, decoders, formatação, hooks numéricos e contratos rigorosos de interoperabilidade.
+Continue com o [**Capítulo 03: Controlando Contratos de Serialização e Decodificação JSON**](../03-json/README.pt-BR.md), onde a biblioteca padrão revisita JSON com controle mais profundo de rigor, hooks numéricos, representações personalizadas, nomes duplicados e saída determinística.
 
 ## Referências oficiais
 

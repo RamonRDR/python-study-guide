@@ -130,3 +130,7 @@ standard-library/02-datetime/examples/date_arithmetic.py
 standard-library/02-datetime/examples/duration_seconds.py
 standard-library/02-datetime/examples/parse_and_format.py
 standard-library/02-datetime/examples/utc_conversion.py
+standard-library/03-json/examples/decimal_decode.py
+standard-library/03-json/examples/deterministic_json.py
+standard-library/03-json/examples/reject_duplicate_keys.py
+standard-library/03-json/examples/strict_numbers.py

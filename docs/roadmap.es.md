@@ -22,11 +22,11 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 5. Funciones | Completada | Nueve capítulos revisados cubren `def`, llamadas, entradas obligatorias, valores retornados, alcance, type hints, valores predeterminados seguros, argumentos flexibles, composición de funciones y flujo explícito de datos |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
 | 7. Errores, archivos y módulos | Completada | Cinco capítulos revisados cubren manejo de excepciones, señalización deliberada, I/O seguro de archivos, formatos TXT/CSV/JSON e imports/módulos/paquetes |
-| 8. Biblioteca estándar | En progreso | El Capítulo 01 introduce `pathlib` para modelado de rutas, composición portable, inspección del filesystem, recorrido de directorios, globbing y helpers de archivos de texto |
+| 8. Biblioteca estándar | En progreso | Tres capítulos revisados cubren modelado de rutas con `pathlib`, cálculos de fecha/hora con `datetime` y contratos avanzados de serialización/decodificación con `json` |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3, 4, 5, 6 y 7 están completadas. La Fase 7 ahora conecta manejo de excepciones, señalización deliberada, I/O seguro de archivos, límites de datos TXT/CSV/JSON y organización del código mediante imports, módulos y paquetes. La Fase 8: Biblioteca Estándar está en progreso con `pathlib` como su primer capítulo revisado. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1, 2, 3, 4, 5, 6 y 7 están completadas. La Fase 7 ahora conecta manejo de excepciones, señalización deliberada, I/O seguro de archivos, límites de datos TXT/CSV/JSON y organización del código mediante imports, módulos y paquetes. La Fase 8: Biblioteca Estándar está en progreso con tres capítulos revisados: `pathlib`, `datetime` y uso avanzado de `json`. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -142,7 +142,7 @@ Consulta la [ruta de aprendizaje de la sección](../standard-library/README.es.m
 
 - [x] [`pathlib`](../standard-library/01-pathlib/README.es.md)
 - [x] [`datetime`](../standard-library/02-datetime/README.es.md)
-- [ ] `json`
+- [x] [`json`](../standard-library/03-json/README.es.md)
 - [ ] `csv`
 - [ ] `logging`
 - [ ] `collections`
@@ -150,7 +150,7 @@ Consulta la [ruta de aprendizaje de la sección](../standard-library/README.es.m
 - [ ] `decimal`
 - [ ] `os` y `shutil`
 
-La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib` y límites del filesystem. El Capítulo 02 añade `date`, `time`, `datetime`, `timedelta`, parsing, formato, helpers orientados a ISO, datetimes naive frente a aware, UTC y offsets fijos, conversión de timezone, timestamps y cálculos de tiempo deterministas. El Capítulo 03 continuará con uso más profundo de `json`.
+La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib` y límites del filesystem. El Capítulo 02 añade tipos de fecha/hora y cálculos deterministas con `datetime`. El Capítulo 03 añade contratos explícitos de serialización y decodificación con `json`, formato determinista, manejo estricto de números no finitos, hooks numéricos, representaciones personalizadas, detección de nombres duplicados, diagnósticos y límites de recursos para entrada no confiable. El Capítulo 04 continuará con uso más profundo de `csv`.
 
 ## Fase 9: Bibliotecas externas
 
