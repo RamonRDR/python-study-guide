@@ -16,7 +16,7 @@ A Fase 8 parte do modelo de imports aprendido na Fase 7 e estuda um conjunto foc
 |---|---|---|---|
 | [01. `pathlib`](01-pathlib/README.pt-BR.md) | Representar, compor, inspecionar, criar, ler e descobrir caminhos do sistema de arquivos com objetos próprios para caminhos | Intermediário | Disponível |
 | [02. `datetime`](02-datetime/README.pt-BR.md) | Trabalhar com datas, horários, durações, parsing, formatação, consciência de timezone e aritmética | Intermediário | Disponível |
-| 03. `json` | Usar o módulo `json` além da persistência básica, incluindo opções de serialização e contratos mais estritos | Intermediário | Planejado |
+| [03. `json`](03-json/README.pt-BR.md) | Controlar contratos de serialização e decodificação, comportamento numérico estrito, hooks, valores personalizados, nomes duplicados e saída determinística | Intermediário | Disponível |
 | 04. `csv` | Trabalhar com dialetos CSV, quoting, readers, writers e fronteiras de texto tabular | Intermediário | Planejado |
 | 05. `logging` | Configurar loggers, handlers, formatters, níveis e logging de aplicação versus biblioteca | Intermediário | Planejado |
 | 06. `collections` | Usar contêineres especializados como `Counter`, `defaultdict` e `deque` | Intermediário | Planejado |
@@ -76,9 +76,9 @@ Ao final da Fase 8, você deverá conseguir:
 
 ## Status da fase
 
-A Fase 8 está em andamento. O Capítulo 01 introduz [`pathlib`](01-pathlib/README.pt-BR.md), e o Capítulo 02 acrescenta [`datetime`](02-datetime/README.pt-BR.md) para datas, horários, durações, parsing, formatação, valores conscientes de timezone e cálculos de tempo. O próximo capítulo planejado é `json` além da persistência básica.
+A Fase 8 está em andamento. O Capítulo 01 introduz [`pathlib`](01-pathlib/README.pt-BR.md), o Capítulo 02 acrescenta [`datetime`](02-datetime/README.pt-BR.md), e o Capítulo 03 aprofunda [`json`](03-json/README.pt-BR.md) com contratos explícitos de serialização e decodificação, tratamento numérico estrito, hooks, representações personalizadas, política de nomes duplicados e saída determinística. O próximo capítulo planejado é `csv`.
 
-Capítulos posteriores revisitarão `json`, `csv` e `logging` em um nível mais profundo de biblioteca. As aparições anteriores ensinaram formatos de arquivo ou conceitos maiores de design; nesta fase estudamos os módulos, suas APIs e seus trade-offs.
+O Capítulo 03 revisita `json` em um nível mais profundo de biblioteca, enquanto capítulos posteriores farão o mesmo com `csv` e `logging`. As aparições anteriores ensinaram formatos de arquivo ou conceitos maiores de design; nesta fase estudamos os módulos, suas APIs e seus trade-offs.
 
 ## Estrutura do diretório
 
@@ -96,15 +96,24 @@ standard-library/
 │       ├── inspect_paths.py
 │       ├── path_parts.py
 │       └── text_workspace.py
-└── 02-datetime/
+├── 02-datetime/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── date_arithmetic.py
+│       ├── duration_seconds.py
+│       ├── parse_and_format.py
+│       └── utc_conversion.py
+└── 03-json/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── date_arithmetic.py
-        ├── duration_seconds.py
-        ├── parse_and_format.py
-        └── utc_conversion.py
+        ├── decimal_decode.py
+        ├── deterministic_json.py
+        ├── reject_duplicate_keys.py
+        └── strict_numbers.py
 ```
 
 Novos diretórios de capítulos serão adicionados conforme a fase avançar.
