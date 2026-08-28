@@ -122,3 +122,7 @@ errors-files-and-modules/05-imports-modules-and-packages/examples/import_standar
 errors-files-and-modules/05-imports-modules-and-packages/examples/main_guard.py
 errors-files-and-modules/05-imports-modules-and-packages/examples/module_demo.py
 errors-files-and-modules/05-imports-modules-and-packages/examples/package_demo.py
+standard-library/01-pathlib/examples/discover_python_files.py
+standard-library/01-pathlib/examples/inspect_paths.py
+standard-library/01-pathlib/examples/path_parts.py
+standard-library/01-pathlib/examples/text_workspace.py

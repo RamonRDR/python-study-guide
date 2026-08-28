@@ -385,6 +385,18 @@ python-study-guide/
 │   ├── run_examples.py
 │   └── validate_repository_structure.py
 ├── standard-library/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── 01-pathlib/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           ├── discover_python_files.py
+│           ├── inspect_paths.py
+│           ├── path_parts.py
+│           └── text_workspace.py
 ├── strings-and-numbers/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -446,7 +458,7 @@ python-study-guide/
 - `practical-projects/`: futuros proyectos pequeños que combinarán varios conceptos.
 - `program-flow/`: ruta completa de la Fase 4. Los Capítulos 01–08 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else`, coincidencia de patrones estructurales, repetición guiada por iterables con `for`, progresiones numéricas con `range()`, iteración con posición usando `enumerate()`, iteración paralela con `zip()` incluida la validación explícita de longitudes iguales con `strict=True`, repetición guiada por estado con `while`, control deliberado de bucles con `break`, `continue` y `else` de bucle y cómo elegir y combinar herramientas de flujo del programa según la intención, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions.
-- `standard-library/`: futuras guías sobre módulos distribuidos con Python.
+- `standard-library/`: ruta de la Fase 8 en progreso. El Capítulo 01 enseña objetos de ruta con `pathlib`, composición portable, inspección estructural, consultas al filesystem, helpers de texto, recorrido de directorios, globbing, resolución y límites de operación conscientes de excepciones en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `strings-and-numbers/`: ruta completa de la Fase 2. Sus cuatro capítulos revisados cubren creación e indexación de strings, métodos comunes, comportamiento de enteros, punto flotante y booleanos, precisión de punto flotante y `round()`, `abs()`, `min()`, `max()` y `sum()` en inglés, portugués de Brasil y español, con ejemplos ejecutables seguros.
 - `tests/`: pruebas de regresión de las herramientas de calidad y, más adelante, del contenido educativo.
 

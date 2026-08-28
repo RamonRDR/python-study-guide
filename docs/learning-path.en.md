@@ -99,9 +99,13 @@ This phase is already available and is the next recommended phase after Function
 
 Phase 7 is complete with five reviewed chapters. Chapters 01–02 establish exception handling and deliberate signaling. Chapter 03 adds safe file lifetime and text I/O. Chapter 04 adds TXT, CSV, and JSON data boundaries. Chapter 05 closes the phase with modules, regular packages, `__name__`, the main guard, import search context, absolute and relative imports, `python -m`, and dependency design.
 
-## Phase 8 · Standard Library ⏳
+## Phase 8 · Standard Library 🚧
 
-Planned. Direct chapter links will appear here when the phase begins.
+[Open the Standard Library section index](../standard-library/README.md)
+
+1. [Working with Filesystem Paths Using `pathlib`](../standard-library/01-pathlib/README.md)
+
+Phase 8 is in progress. Chapter 01 introduces path objects, portable path composition, filesystem inspection, directory traversal, globbing, text helpers, and safe operation boundaries. The next planned chapter is **`datetime` and Time Calculations**.
 
 ## Phase 9 · External Libraries ⏳
 

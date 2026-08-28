@@ -22,11 +22,11 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 5. Funciones | Completada | Nueve capítulos revisados cubren `def`, llamadas, entradas obligatorias, valores retornados, alcance, type hints, valores predeterminados seguros, argumentos flexibles, composición de funciones y flujo explícito de datos |
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
 | 7. Errores, archivos y módulos | Completada | Cinco capítulos revisados cubren manejo de excepciones, señalización deliberada, I/O seguro de archivos, formatos TXT/CSV/JSON e imports/módulos/paquetes |
-| 8. Biblioteca estándar | Planificada | Contenido todavía no iniciado |
+| 8. Biblioteca estándar | En progreso | El Capítulo 01 introduce `pathlib` para modelado de rutas, composición portable, inspección del filesystem, recorrido de directorios, globbing y helpers de archivos de texto |
 | 9. Bibliotecas externas | Planificada | Contenido todavía no iniciado |
 | 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
 
-Las Fases 0, 1, 2, 3, 4, 5, 6 y 7 están completadas. La Fase 7 ahora conecta manejo de excepciones, señalización deliberada, I/O seguro de archivos, límites de datos TXT/CSV/JSON y organización del código mediante imports, módulos y paquetes. La Fase 8: Biblioteca Estándar es la siguiente fase de aprendizaje planificada. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
+Las Fases 0, 1, 2, 3, 4, 5, 6 y 7 están completadas. La Fase 7 ahora conecta manejo de excepciones, señalización deliberada, I/O seguro de archivos, límites de datos TXT/CSV/JSON y organización del código mediante imports, módulos y paquetes. La Fase 8: Biblioteca Estándar está en progreso con `pathlib` como su primer capítulo revisado. La Fase 6 continúa proporcionando el modelo editorial y de calidad para las secciones posteriores.
 
 ## Fase 0: Base del proyecto
 
@@ -138,15 +138,19 @@ La Fase 7 está completada. Los Capítulos 01–02 establecen manejo y señaliza
 
 ## Fase 8: Biblioteca estándar
 
-- `pathlib`
-- `datetime`
-- `json`
-- `csv`
-- `logging`
-- `collections`
-- `itertools`
-- `decimal`
-- `os` y `shutil`
+Consulta la [ruta de aprendizaje de la sección](../standard-library/README.es.md).
+
+- [x] [`pathlib`](../standard-library/01-pathlib/README.es.md)
+- [ ] `datetime`
+- [ ] `json`
+- [ ] `csv`
+- [ ] `logging`
+- [ ] `collections`
+- [ ] `itertools`
+- [ ] `decimal`
+- [ ] `os` y `shutil`
+
+La Fase 8 está en progreso. El Capítulo 01 establece `Path`, rutas puras, rutas relativas y absolutas, inspección estructural, composición portable, helpers de texto, creación y recorrido de directorios, globbing, resolución y límites de excepciones del filesystem. El Capítulo 02 continuará con `datetime` y cálculos de tiempo.
 
 ## Fase 9: Bibliotecas externas
 
