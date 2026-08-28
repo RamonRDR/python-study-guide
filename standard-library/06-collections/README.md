@@ -1183,6 +1183,6 @@ Primary references used for this chapter:
 
 ## Next chapter
 
-Continue with **Chapter 07: `itertools`** when it becomes available.
+Continue to [Chapter 07: `itertools`](../07-itertools/README.md).
 
 The next chapter shifts from specialized **containers** to specialized **iterator pipelines**: composing lazy transformations, repetition, slicing, grouping, and combinatoric iteration without building unnecessary intermediate collections.

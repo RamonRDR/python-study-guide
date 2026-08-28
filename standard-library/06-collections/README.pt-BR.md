@@ -1183,6 +1183,6 @@ Referências primárias usadas neste capítulo:
 
 ## Próximo capítulo
 
-Continue com o **Capítulo 07: `itertools`** quando estiver disponível.
+Continue com o [Capítulo 07: `itertools`](../07-itertools/README.pt-BR.md).
 
 O próximo capítulo muda de **contêineres** especializados para **pipelines de iteradores** especializados: compondo transformações lazy, repetição, recorte, agrupamento e iteração combinatória sem criar coleções intermediárias desnecessárias.

@@ -146,11 +146,11 @@ See the [section learning path](../standard-library/README.md).
 - [x] [`csv`](../standard-library/04-csv/README.md)
 - [x] [`logging`](../standard-library/05-logging/README.md)
 - [x] [`collections`](../standard-library/06-collections/README.md)
-- [ ] `itertools`
+- [x] [`itertools`](../standard-library/07-itertools/README.md)
 - [ ] `decimal`
 - [ ] `os` and `shutil`
 
-Phase 8 is in progress. Chapter 01 establishes `pathlib` path modeling and filesystem boundaries. Chapter 02 adds `datetime` date/time types and deterministic calculations. Chapter 03 adds explicit `json` serialization and decoding contracts. Chapter 04 adds explicit `csv` dialect and tabular-text contracts. Chapter 05 adds advanced `logging` event-delivery contracts. Chapter 06 adds specialized `collections` contracts for counting, factory-backed missing values, double-ended queues, tuple-compatible records, layered mappings, reordering, wrapper extension, and collection interfaces. Chapter 07 will continue with `itertools`.
+Phase 8 is in progress. Chapter 01 establishes `pathlib` path modeling and filesystem boundaries. Chapter 02 adds `datetime` date/time types and deterministic calculations. Chapter 03 adds explicit `json` serialization and decoding contracts. Chapter 04 adds explicit `csv` dialect and tabular-text contracts. Chapter 05 adds advanced `logging` event-delivery contracts. Chapter 06 adds specialized `collections` contracts for counting, factory-backed missing values, double-ended queues, tuple-compatible records, layered mappings, reordering, wrapper extension, and collection interfaces. Chapter 07 adds `itertools` contracts for lazy composition, iterator consumption, grouping, bounded infinite streams, alignment, fan-out, and combinatoric iteration. Chapter 08 will continue with `decimal`.
 
 ## Phase 9: External libraries
 
