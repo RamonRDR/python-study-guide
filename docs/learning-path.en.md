@@ -108,8 +108,9 @@ Phase 7 is complete with five reviewed chapters. Chapters 01–02 establish exce
 3. [Controlling JSON Serialization and Decoding Contracts](../standard-library/03-json/README.md)
 4. [Controlling CSV Dialects and Tabular Text Contracts](../standard-library/04-csv/README.md)
 5. [Engineering Logging Pipelines and Runtime Context Contracts](../standard-library/05-logging/README.md)
+6. [Specialized Containers and Collection Contracts](../standard-library/06-collections/README.md)
 
-Phase 8 is in progress. Chapter 01 introduces path objects and filesystem boundaries. Chapter 02 adds dates, times, durations, parsing, formatting, naive versus aware datetimes, fixed UTC offsets, timezone conversion, and deterministic time calculations. Chapter 03 deepens JSON serialization and decoding policies, including deterministic output, strict non-finite-number handling, numeric hooks, custom values, duplicate object names, diagnostics, and resource boundaries. Chapter 04 deepens CSV as a tabular-text boundary with explicit dialects, quoting and escaping, row-shape policy, strict parsing, field limits, heuristic sniffing, encoding boundaries, and spreadsheet-consumer safety. Chapter 05 deepens logging as a runtime event-delivery graph with effective levels, handler routing, propagation, `dictConfig()`, contextual records, caller attribution, queue-based delivery, concurrency, and configuration security. The next planned chapter is **`collections`**.
+Phase 8 is in progress. Chapter 01 introduces path objects and filesystem boundaries. Chapter 02 adds dates, times, durations, parsing, formatting, naive versus aware datetimes, fixed UTC offsets, timezone conversion, and deterministic time calculations. Chapter 03 deepens JSON serialization and decoding policies. Chapter 04 deepens CSV as a tabular-text boundary. Chapter 05 deepens logging as a runtime event-delivery graph. Chapter 06 adds specialized container contracts with `Counter`, `defaultdict`, `deque`, named tuple records, `ChainMap`, `OrderedDict`, extension wrappers, and `collections.abc`. The next planned chapter is **`itertools`**.
 
 ## Phase 9 · External Libraries ⏳
 

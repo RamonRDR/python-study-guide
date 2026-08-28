@@ -424,15 +424,24 @@ python-study-guide/
 │   │       ├── quote_none_escape.py
 │   │       ├── sniff_delimiter.py
 │   │       └── validate_dict_rows.py
-│   └── 05-logging/
+│   ├── 05-logging/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── context_filter.py
+│   │       ├── dict_config_routing.py
+│   │       ├── queue_listener.py
+│   │       └── stacklevel_helper.py
+│   └── 06-collections/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── context_filter.py
-│           ├── dict_config_routing.py
-│           ├── queue_listener.py
-│           └── stacklevel_helper.py
+│           ├── bounded_deque.py
+│           ├── chainmap_config.py
+│           ├── counter_inventory.py
+│           └── defaultdict_grouping.py
 ├── strings-and-numbers/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -494,7 +503,7 @@ python-study-guide/
 - `practical-projects/`: future small projects combining several concepts.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
-- `standard-library/`: in-progress Phase 8 learning path. Chapters 01–05 cover `pathlib` filesystem boundaries, `datetime` date/time modeling, advanced `json` serialization/decoding contracts, advanced `csv` tabular-text contracts, and advanced `logging` event-delivery contracts including configuration, contextual records, queues, concurrency, and operational safety, in English, Brazilian Portuguese, and Spanish with deterministic executable examples. Chapter 06 on `collections` is the next planned chapter.
+- `standard-library/`: in-progress Phase 8 learning path. Chapters 01–06 cover `pathlib` filesystem boundaries, `datetime` date/time modeling, advanced `json` serialization/decoding contracts, advanced `csv` tabular-text contracts, advanced `logging` event-delivery contracts, and specialized `collections` contracts including counting, missing-value factories, double-ended queues, named tuple records, layered mappings, reordering, wrapper extension, and collection interfaces, in English, Brazilian Portuguese, and Spanish with deterministic executable examples. Chapter 07 on `itertools` is the next planned chapter.
 - `strings-and-numbers/`: complete Phase 2 learning path. Its four reviewed chapters cover string creation and indexing, common string methods, integer, floating-point, and Boolean behavior, floating-point precision, and `round()`, `abs()`, `min()`, `max()`, and `sum()` in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `tests/`: regression tests for repository quality tools and later educational code.
 

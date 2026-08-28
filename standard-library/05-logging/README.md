@@ -1475,4 +1475,4 @@ This is why advanced logging is less about printing messages and more about desi
 
 ## Next chapter
 
-Continue with **Chapter 06: `collections`** when it becomes available. It will study specialized containers such as `Counter`, `defaultdict`, `deque`, and related collection tools as explicit data-structure choices rather than convenience tricks.
+Continue to [Chapter 06: `collections`](../06-collections/README.md). It studies specialized containers such as `Counter`, `defaultdict`, `deque`, named tuple records, layered mappings, reordering tools, wrapper bases, and collection interfaces as explicit data-structure choices rather than convenience tricks.

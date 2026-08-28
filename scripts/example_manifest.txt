@@ -142,3 +142,7 @@ standard-library/05-logging/examples/context_filter.py
 standard-library/05-logging/examples/dict_config_routing.py
 standard-library/05-logging/examples/queue_listener.py
 standard-library/05-logging/examples/stacklevel_helper.py
+standard-library/06-collections/examples/bounded_deque.py
+standard-library/06-collections/examples/chainmap_config.py
+standard-library/06-collections/examples/counter_inventory.py
+standard-library/06-collections/examples/defaultdict_grouping.py
