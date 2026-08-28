@@ -21,7 +21,7 @@ Phase 8 builds on the import model from Phase 7 and studies a focused set of mod
 | [05. `logging`](05-logging/README.md) | Engineer logger hierarchy, configuration, contextual records, queue-based delivery, concurrency, and runtime logging contracts | Intermediate | Available |
 | [06. `collections`](06-collections/README.md) | Use specialized containers, mapping layers, tuple records, reordering tools, wrapper bases, and collection interfaces by explicit operation contracts | Intermediate | Available |
 | [07. `itertools`](07-itertools/README.md) | Compose lazy iterator pipelines with explicit consumption, buffering, grouping, alignment, and combinatoric contracts | Intermediate | Available |
-| 08. `decimal` | Perform exact decimal arithmetic with explicit rounding and context | Intermediate | Planned |
+| [08. `decimal`](08-decimal/README.md) | Control decimal representation, precision, rounding, quantization, contexts, signals, and validation contracts | Intermediate | Available |
 | 09. `os` and `shutil` | Work with environment, low-level filesystem operations, copying, moving, and directory trees | Intermediate | Planned |
 
 ## Prerequisite guidance
@@ -76,9 +76,9 @@ By the end of Phase 8, you should be able to:
 
 ## Phase status
 
-Phase 8 is in progress. Chapter 01 introduces [`pathlib`](01-pathlib/README.md), Chapter 02 adds [`datetime`](02-datetime/README.md), Chapter 03 deepens [`json`](03-json/README.md), Chapter 04 deepens [`csv`](04-csv/README.md), Chapter 05 deepens [`logging`](05-logging/README.md), Chapter 06 adds [`collections`](06-collections/README.md), and Chapter 07 adds [`itertools`](07-itertools/README.md) with lazy composition, bounded infinite streams, iterator-consumption contracts, grouping, fan-out, alignment, and combinatoric iteration. The next planned chapter is `decimal`.
+Phase 8 is in progress. Chapter 01 introduces [`pathlib`](01-pathlib/README.md), Chapter 02 adds [`datetime`](02-datetime/README.md), Chapter 03 deepens [`json`](03-json/README.md), Chapter 04 deepens [`csv`](04-csv/README.md), Chapter 05 deepens [`logging`](05-logging/README.md), Chapter 06 adds [`collections`](06-collections/README.md), Chapter 07 adds [`itertools`](07-itertools/README.md), and Chapter 08 adds [`decimal`](08-decimal/README.md) with exact decimal representation, explicit precision and rounding policies, quantization, contexts, signals, traps, and validation boundaries. The next planned chapter is `os` and `shutil`.
 
-Chapters 03, 04, 05, and 06 deepen topics that appeared earlier in the curriculum. Their earlier appearances taught file formats, logging design, or built-in collection models; this phase studies the standard-library modules themselves, their APIs, and their trade-offs.
+Chapters 03, 04, 05, 06, and 08 deepen topics that appeared earlier in the curriculum. Their earlier appearances taught file formats, logging design, built-in collection models, or binary floating-point behavior; this phase studies the standard-library modules themselves, their APIs, and their trade-offs.
 
 ## Directory structure
 
@@ -141,15 +141,24 @@ standard-library/
 │       ├── chainmap_config.py
 │       ├── counter_inventory.py
 │       └── defaultdict_grouping.py
-└── 07-itertools/
+├── 07-itertools/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── combinatoric_options.py
+│       ├── groupby_runs.py
+│       ├── lazy_pipeline.py
+│       └── pairwise_deltas.py
+└── 08-decimal/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── combinatoric_options.py
-        ├── groupby_runs.py
-        ├── lazy_pipeline.py
-        └── pairwise_deltas.py
+        ├── exact_amounts.py
+        ├── local_context_precision.py
+        ├── monitor_rounding.py
+        └── validate_scale.py
 ```
 
 New chapter directories will be added as the phase progresses.

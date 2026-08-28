@@ -21,7 +21,7 @@ A Fase 8 parte do modelo de imports aprendido na Fase 7 e estuda um conjunto foc
 | [05. `logging`](05-logging/README.pt-BR.md) | Projetar hierarquia de loggers, configuração, registros contextuais, entrega por filas, concorrência e contratos de logging em runtime | Intermediário | Disponível |
 | [06. `collections`](06-collections/README.pt-BR.md) | Usar contêineres especializados, camadas de mapeamento, registros de tupla, reordenação, wrappers e interfaces de coleção por contratos explícitos de operação | Intermediário | Disponível |
 | [07. `itertools`](07-itertools/README.pt-BR.md) | Compor pipelines lazy de iteradores com contratos explícitos de consumo, buffering, agrupamento, alinhamento e combinatória | Intermediário | Disponível |
-| 08. `decimal` | Executar aritmética decimal exata com arredondamento e contexto explícitos | Intermediário | Planejado |
+| [08. `decimal`](08-decimal/README.pt-BR.md) | Controlar representação decimal, precisão, arredondamento, quantização, contexts, sinais e contratos de validação | Intermediário | Disponível |
 | 09. `os` e `shutil` | Trabalhar com ambiente, operações de filesystem de nível mais baixo, cópia, movimentação e árvores de diretórios | Intermediário | Planejado |
 
 ## Pré-requisitos
@@ -76,9 +76,9 @@ Ao final da Fase 8, você deverá conseguir:
 
 ## Status da fase
 
-A Fase 8 está em andamento. O Capítulo 01 introduz [`pathlib`](01-pathlib/README.pt-BR.md), o Capítulo 02 acrescenta [`datetime`](02-datetime/README.pt-BR.md), o Capítulo 03 aprofunda [`json`](03-json/README.pt-BR.md), o Capítulo 04 aprofunda [`csv`](04-csv/README.pt-BR.md), o Capítulo 05 aprofunda [`logging`](05-logging/README.pt-BR.md), o Capítulo 06 acrescenta [`collections`](06-collections/README.pt-BR.md) e o Capítulo 07 acrescenta [`itertools`](07-itertools/README.pt-BR.md) com composição lazy, streams infinitos limitados, contratos de consumo, agrupamento, fan-out, alinhamento e iteração combinatória. O próximo capítulo planejado é `decimal`.
+A Fase 8 está em andamento. O Capítulo 01 introduz [`pathlib`](01-pathlib/README.pt-BR.md), o Capítulo 02 acrescenta [`datetime`](02-datetime/README.pt-BR.md), o Capítulo 03 aprofunda [`json`](03-json/README.pt-BR.md), o Capítulo 04 aprofunda [`csv`](04-csv/README.pt-BR.md), o Capítulo 05 aprofunda [`logging`](05-logging/README.pt-BR.md), o Capítulo 06 acrescenta [`collections`](06-collections/README.pt-BR.md), o Capítulo 07 acrescenta [`itertools`](07-itertools/README.pt-BR.md) e o Capítulo 08 acrescenta [`decimal`](08-decimal/README.pt-BR.md) com representação decimal exata, políticas explícitas de precisão e arredondamento, quantização, contexts, sinais, traps e fronteiras de validação. O próximo capítulo planejado é `os` e `shutil`.
 
-Os Capítulos 03, 04, 05 e 06 aprofundam tópicos que apareceram anteriormente no currículo. As aparições anteriores ensinaram formatos de arquivo, design de logging ou modelos de coleções embutidas; nesta fase estudamos os módulos da biblioteca padrão, suas APIs e seus trade-offs.
+Os Capítulos 03, 04, 05, 06 e 08 aprofundam tópicos que apareceram anteriormente no currículo. As aparições anteriores ensinaram formatos de arquivo, design de logging, modelos de coleções embutidas ou comportamento de ponto flutuante binário; nesta fase estudamos os módulos da biblioteca padrão, suas APIs e seus trade-offs.
 
 ## Estrutura do diretório
 
@@ -141,15 +141,24 @@ standard-library/
 │       ├── chainmap_config.py
 │       ├── counter_inventory.py
 │       └── defaultdict_grouping.py
-└── 07-itertools/
+├── 07-itertools/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── combinatoric_options.py
+│       ├── groupby_runs.py
+│       ├── lazy_pipeline.py
+│       └── pairwise_deltas.py
+└── 08-decimal/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── combinatoric_options.py
-        ├── groupby_runs.py
-        ├── lazy_pipeline.py
-        └── pairwise_deltas.py
+        ├── exact_amounts.py
+        ├── local_context_precision.py
+        ├── monitor_rounding.py
+        └── validate_scale.py
 ```
 
 Novos diretórios de capítulos serão adicionados conforme a fase avançar.
