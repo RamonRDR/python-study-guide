@@ -138,3 +138,7 @@ standard-library/04-csv/examples/dialect_round_trip.py
 standard-library/04-csv/examples/quote_none_escape.py
 standard-library/04-csv/examples/sniff_delimiter.py
 standard-library/04-csv/examples/validate_dict_rows.py
+standard-library/05-logging/examples/context_filter.py
+standard-library/05-logging/examples/dict_config_routing.py
+standard-library/05-logging/examples/queue_listener.py
+standard-library/05-logging/examples/stacklevel_helper.py

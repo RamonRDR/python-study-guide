@@ -144,13 +144,13 @@ See the [section learning path](../standard-library/README.md).
 - [x] [`datetime`](../standard-library/02-datetime/README.md)
 - [x] [`json`](../standard-library/03-json/README.md)
 - [x] [`csv`](../standard-library/04-csv/README.md)
-- [ ] `logging`
+- [x] [`logging`](../standard-library/05-logging/README.md)
 - [ ] `collections`
 - [ ] `itertools`
 - [ ] `decimal`
 - [ ] `os` and `shutil`
 
-Phase 8 is in progress. Chapter 01 establishes `pathlib` path modeling and filesystem boundaries. Chapter 02 adds `datetime` date/time types and deterministic calculations. Chapter 03 adds explicit `json` serialization and decoding contracts, deterministic formatting, strict non-finite-number handling, numeric hooks, custom representations, duplicate-name detection, diagnostics, and untrusted-input resource boundaries. Chapter 04 adds explicit `csv` dialect and tabular-text contracts, quoting and escaping behavior, row-shape validation, strict parsing, field limits, heuristic sniffing, text-encoding boundaries, and spreadsheet-consumer considerations. Chapter 05 will continue with deeper `logging` handling.
+Phase 8 is in progress. Chapter 01 establishes `pathlib` path modeling and filesystem boundaries. Chapter 02 adds `datetime` date/time types and deterministic calculations. Chapter 03 adds explicit `json` serialization and decoding contracts. Chapter 04 adds explicit `csv` dialect and tabular-text contracts. Chapter 05 adds advanced `logging` contracts for effective levels, handler routing, propagation, configuration, contextual records, queue-based delivery, concurrency, and operational safety. Chapter 06 will continue with `collections`.
 
 ## Phase 9: External libraries
 

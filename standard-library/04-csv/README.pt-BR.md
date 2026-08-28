@@ -1114,4 +1114,4 @@ Se essas respostas forem explícitas, CSV se torna uma interface testável em ve
 
 ## Próximo capítulo
 
-Continue com o **Capítulo 05: `logging`** quando ele estiver disponível. Ele aprofundará hierarquia de loggers, handlers, formatters, configuração, logging de exceções e contratos de logging de aplicação versus biblioteca.
+Continue com o [**Capítulo 05: Projetando Pipelines de Logging e Contratos de Contexto em Runtime**](../05-logging/README.pt-BR.md). Ele aprofunda níveis efetivos, roteamento por handlers, propagação, configuração, registros contextuais, entrega por filas, concorrência e segurança operacional de logging.

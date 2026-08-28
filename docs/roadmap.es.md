@@ -144,13 +144,13 @@ Consulta la [ruta de aprendizaje de la sección](../standard-library/README.es.m
 - [x] [`datetime`](../standard-library/02-datetime/README.es.md)
 - [x] [`json`](../standard-library/03-json/README.es.md)
 - [x] [`csv`](../standard-library/04-csv/README.es.md)
-- [ ] `logging`
+- [x] [`logging`](../standard-library/05-logging/README.es.md)
 - [ ] `collections`
 - [ ] `itertools`
 - [ ] `decimal`
 - [ ] `os` y `shutil`
 
-La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib` y límites del filesystem. El Capítulo 02 añade tipos de fecha/hora y cálculos deterministas con `datetime`. El Capítulo 03 añade contratos explícitos de serialización y decodificación con `json`, formato determinista, manejo estricto de números no finitos, hooks numéricos, representaciones personalizadas, detección de nombres duplicados, diagnósticos y límites de recursos para entrada no confiable. El Capítulo 04 añade contratos explícitos de dialecto y texto tabular con `csv`, comportamiento de quoting y escaping, validación de forma de filas, parsing estricto, límites de campos, sniffing heurístico, fronteras de codificación de texto y consideraciones para consumidores de hojas de cálculo. El Capítulo 05 continuará con uso más profundo de `logging`.
+La Fase 8 está en progreso. El Capítulo 01 establece modelado de rutas con `pathlib` y límites del filesystem. El Capítulo 02 añade tipos de fecha/hora y cálculos deterministas con `datetime`. El Capítulo 03 añade contratos explícitos de serialización y decodificación con `json`. El Capítulo 04 añade contratos explícitos de dialecto y texto tabular con `csv`. El Capítulo 05 añade contratos avanzados de `logging` para niveles efectivos, enrutamiento por handlers, propagación, configuración, registros contextuales, entrega mediante colas, concurrencia y seguridad operativa. El Capítulo 06 continuará con `collections`.
 
 ## Fase 9: Bibliotecas externas
 
