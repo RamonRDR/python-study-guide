@@ -146,3 +146,7 @@ standard-library/06-collections/examples/bounded_deque.py
 standard-library/06-collections/examples/chainmap_config.py
 standard-library/06-collections/examples/counter_inventory.py
 standard-library/06-collections/examples/defaultdict_grouping.py
+standard-library/07-itertools/examples/combinatoric_options.py
+standard-library/07-itertools/examples/groupby_runs.py
+standard-library/07-itertools/examples/lazy_pipeline.py
+standard-library/07-itertools/examples/pairwise_deltas.py

@@ -20,7 +20,7 @@ La Fase 8 parte del modelo de imports aprendido en la Fase 7 y estudia un conjun
 | [04. `csv`](04-csv/README.es.md) | Controlar dialectos, quoting, escaping, forma de filas, sniffing y contratos de texto tabular | Intermedio | Disponible |
 | [05. `logging`](05-logging/README.es.md) | Diseñar jerarquía de loggers, configuración, registros contextuales, entrega mediante colas, concurrencia y contratos de logging en runtime | Intermedio | Disponible |
 | [06. `collections`](06-collections/README.es.md) | Usar contenedores especializados, capas de mappings, registros de tupla, reordenación, wrappers e interfaces de colección mediante contratos explícitos de operación | Intermedio | Disponible |
-| 07. `itertools` | Construir pipelines eficientes de iteradores con herramientas reutilizables | Intermedio | Planificado |
+| [07. `itertools`](07-itertools/README.es.md) | Componer pipelines lazy de iteradores con contratos explícitos de consumo, buffering, agrupación, alineación y combinatoria | Intermedio | Disponible |
 | 08. `decimal` | Realizar aritmética decimal exacta con redondeo y contexto explícitos | Intermedio | Planificado |
 | 09. `os` y `shutil` | Trabajar con entorno, operaciones de filesystem de nivel más bajo, copia, movimiento y árboles de directorios | Intermedio | Planificado |
 
@@ -76,7 +76,7 @@ Al final de la Fase 8 deberías poder:
 
 ## Estado de la fase
 
-La Fase 8 está en progreso. El Capítulo 01 introduce [`pathlib`](01-pathlib/README.es.md), el Capítulo 02 añade [`datetime`](02-datetime/README.es.md), el Capítulo 03 profundiza [`json`](03-json/README.es.md), el Capítulo 04 profundiza [`csv`](04-csv/README.es.md), el Capítulo 05 profundiza [`logging`](05-logging/README.es.md) y el Capítulo 06 añade [`collections`](06-collections/README.es.md) con contratos de `Counter`, `defaultdict`, `deque`, `namedtuple`, `ChainMap`, `OrderedDict`, wrappers de extensión e interfaces de `collections.abc`. El próximo capítulo planificado es `itertools`.
+La Fase 8 está en progreso. El Capítulo 01 introduce [`pathlib`](01-pathlib/README.es.md), el Capítulo 02 añade [`datetime`](02-datetime/README.es.md), el Capítulo 03 profundiza [`json`](03-json/README.es.md), el Capítulo 04 profundiza [`csv`](04-csv/README.es.md), el Capítulo 05 profundiza [`logging`](05-logging/README.es.md), el Capítulo 06 añade [`collections`](06-collections/README.es.md) y el Capítulo 07 añade [`itertools`](07-itertools/README.es.md) con composición lazy, streams infinitos limitados, contratos de consumo, agrupación, fan-out, alineación e iteración combinatoria. El próximo capítulo planificado es `decimal`.
 
 Los Capítulos 03, 04, 05 y 06 profundizan temas que aparecieron anteriormente en el currículo. Sus apariciones previas enseñaron formatos de archivo, diseño de logging o modelos de colecciones integradas; en esta fase estudiamos los módulos de la biblioteca estándar, sus APIs y sus trade-offs.
 
@@ -132,15 +132,24 @@ standard-library/
 │       ├── dict_config_routing.py
 │       ├── queue_listener.py
 │       └── stacklevel_helper.py
-└── 06-collections/
+├── 06-collections/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── examples/
+│       ├── bounded_deque.py
+│       ├── chainmap_config.py
+│       ├── counter_inventory.py
+│       └── defaultdict_grouping.py
+└── 07-itertools/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
     └── examples/
-        ├── bounded_deque.py
-        ├── chainmap_config.py
-        ├── counter_inventory.py
-        └── defaultdict_grouping.py
+        ├── combinatoric_options.py
+        ├── groupby_runs.py
+        ├── lazy_pipeline.py
+        └── pairwise_deltas.py
 ```
 
 Se añadirán nuevos directorios de capítulos a medida que avance la fase.

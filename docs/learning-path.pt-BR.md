@@ -109,8 +109,9 @@ A Fase 7 está concluída com cinco capítulos revisados. Os Capítulos 01–02 
 4. [Controlando Dialetos CSV e Contratos de Texto Tabular](../standard-library/04-csv/README.pt-BR.md)
 5. [Projetando Pipelines de Logging e Contratos de Contexto em Runtime](../standard-library/05-logging/README.pt-BR.md)
 6. [Contêineres Especializados e Contratos de Coleções](../standard-library/06-collections/README.pt-BR.md)
+7. [Projetando Pipelines Lazy de Iteradores com `itertools`](../standard-library/07-itertools/README.pt-BR.md)
 
-A Fase 8 está em andamento. O Capítulo 01 introduz objetos de caminho e fronteiras do filesystem. O Capítulo 02 acrescenta datas, horários, durações, parsing, formatação, consciência de timezone e cálculos determinísticos. O Capítulo 03 aprofunda políticas de serialização e decodificação JSON. O Capítulo 04 aprofunda CSV como fronteira de texto tabular. O Capítulo 05 aprofunda logging como grafo de entrega de eventos em runtime. O Capítulo 06 acrescenta contratos de contêineres especializados com `Counter`, `defaultdict`, `deque`, registros de tuplas nomeadas, `ChainMap`, `OrderedDict`, wrappers de extensão e `collections.abc`. O próximo capítulo planejado é **`itertools`**.
+A Fase 8 está em andamento. O Capítulo 01 introduz objetos de caminho e fronteiras do filesystem. O Capítulo 02 acrescenta datas, horários, durações, parsing, formatação, consciência de timezone e cálculos determinísticos. O Capítulo 03 aprofunda políticas de serialização e decodificação JSON. O Capítulo 04 aprofunda CSV como fronteira de texto tabular. O Capítulo 05 aprofunda logging como grafo de entrega de eventos em runtime. O Capítulo 06 acrescenta contratos de contêineres especializados com `Counter`, `defaultdict`, `deque`, registros de tuplas nomeadas, `ChainMap`, `OrderedDict`, wrappers de extensão e `collections.abc`. O Capítulo 07 acrescenta composição lazy de iteradores, fronteiras explícitas de consumo, agrupamento, limitação de streams infinitos, alinhamento, fan-out e iteração combinatória. O próximo capítulo planejado é **`decimal`**.
 
 ## Fase 9 · Bibliotecas Externas ⏳
 
