@@ -99,9 +99,13 @@ Esta fase ya está disponible y es la siguiente fase recomendada después de Fun
 
 La Fase 7 está completada con cinco capítulos revisados. Los Capítulos 01–02 establecen manejo y señalización deliberada de excepciones. El Capítulo 03 añade un tiempo de vida seguro de archivos e I/O de texto. El Capítulo 04 añade límites de datos TXT, CSV y JSON. El Capítulo 05 cierra la fase con módulos, paquetes regulares, `__name__`, main guard, contexto de búsqueda de imports, imports absolutos y relativos, `python -m` y diseño de dependencias.
 
-## Fase 8 · Biblioteca Estándar ⏳
+## Fase 8 · Biblioteca Estándar 🚧
 
-Planificado. Los enlaces directos a los capítulos aparecerán aquí cuando comience la fase.
+[Abrir el índice de la sección Biblioteca Estándar](../standard-library/README.es.md)
+
+1. [Trabajar con Rutas del Sistema de Archivos Usando `pathlib`](../standard-library/01-pathlib/README.es.md)
+
+La Fase 8 está en progreso. El Capítulo 01 introduce objetos de ruta, composición portable, inspección del filesystem, recorrido de directorios, globbing, helpers de texto y límites seguros de operación. El próximo capítulo planificado es **`datetime` y Cálculos de Tiempo**.
 
 ## Fase 9 · Bibliotecas Externas ⏳
 

@@ -22,11 +22,11 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 5. Functions | Complete | Nine reviewed chapters cover `def`, calls, required inputs, returned values, scope, type hints, safe defaults, flexible arguments, function composition, and explicit data flow |
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Complete | Five reviewed chapters cover exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data formats, and imports/modules/packages |
-| 8. Standard library | Planned | Curriculum not started |
+| 8. Standard library | In progress | Chapter 01 introduces `pathlib` for path modeling, portable composition, filesystem inspection, directory traversal, globbing, and text-file helpers |
 | 9. External libraries | Planned | Curriculum not started |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0, 1, 2, 3, 4, 5, 6, and 7 are complete. Phase 7 now connects exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data boundaries, and code organization through imports, modules, and packages. Phase 8: Standard Library is the next planned learning phase. Phase 6 continues to provide the editorial and quality model for later sections.
+Phases 0, 1, 2, 3, 4, 5, 6, and 7 are complete. Phase 7 now connects exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data boundaries, and code organization through imports, modules, and packages. Phase 8: Standard Library is in progress with `pathlib` as its first reviewed chapter. Phase 6 continues to provide the editorial and quality model for later sections.
 
 ## Phase 0: Project foundation
 
@@ -138,15 +138,19 @@ Phase 7 is complete. Chapters 01–02 establish exception handling and deliberat
 
 ## Phase 8: Standard library
 
-- `pathlib`
-- `datetime`
-- `json`
-- `csv`
-- `logging`
-- `collections`
-- `itertools`
-- `decimal`
-- `os` and `shutil`
+See the [section learning path](../standard-library/README.md).
+
+- [x] [`pathlib`](../standard-library/01-pathlib/README.md)
+- [ ] `datetime`
+- [ ] `json`
+- [ ] `csv`
+- [ ] `logging`
+- [ ] `collections`
+- [ ] `itertools`
+- [ ] `decimal`
+- [ ] `os` and `shutil`
+
+Phase 8 is in progress. Chapter 01 establishes `Path`, pure paths, relative and absolute paths, structural inspection, portable composition, text helpers, directory creation and traversal, globbing, resolution, and filesystem exception boundaries. Chapter 02 will continue with `datetime` and time calculations.
 
 ## Phase 9: External libraries
 

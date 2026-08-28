@@ -99,9 +99,13 @@ Esta fase já está disponível e é a próxima fase recomendada depois de Funç
 
 A Fase 7 está concluída com cinco capítulos revisados. Os Capítulos 01–02 estabelecem tratamento e sinalização deliberada de exceções. O Capítulo 03 acrescenta tempo de vida seguro de arquivos e I/O de texto. O Capítulo 04 adiciona fronteiras de dados TXT, CSV e JSON. O Capítulo 05 encerra a fase com módulos, pacotes regulares, `__name__`, main guard, contexto de busca de imports, imports absolutos e relativos, `python -m` e design de dependências.
 
-## Fase 8 · Biblioteca Padrão ⏳
+## Fase 8 · Biblioteca Padrão 🚧
 
-Planejado. Os links diretos dos capítulos aparecerão aqui quando a fase começar.
+[Abrir o índice da seção Biblioteca Padrão](../standard-library/README.pt-BR.md)
+
+1. [Trabalhando com Caminhos do Sistema de Arquivos Usando `pathlib`](../standard-library/01-pathlib/README.pt-BR.md)
+
+A Fase 8 está em andamento. O Capítulo 01 introduz objetos de caminho, composição portável, inspeção do filesystem, percurso de diretórios, globbing, helpers de texto e fronteiras seguras de operação. O próximo capítulo planejado é **`datetime` e Cálculos de Tempo**.
 
 ## Fase 9 · Bibliotecas Externas ⏳
 
