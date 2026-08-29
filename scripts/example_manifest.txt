@@ -1,6 +1,6 @@
 # Repository-relative Python files approved for unattended execution.
 # Add an example only when it is deterministic, non-interactive, network-free,
-# free of external dependencies, and safe to run in a public CI environment.
+# limited to declared repository dependencies, and safe to run in public CI.
 
 comments-and-documentation/01-comments/examples/business_rule_comments.py
 comments-and-documentation/01-comments/examples/unnecessary_comments.py
@@ -158,3 +158,8 @@ standard-library/09-os-shutil/examples/copy_tree_and_move.py
 standard-library/09-os-shutil/examples/environment_contract.py
 standard-library/09-os-shutil/examples/scan_directory.py
 standard-library/09-os-shutil/examples/walk_with_pruning.py
+external-libraries/01-pandas/examples/csv_pipeline.py
+external-libraries/01-pandas/examples/dataframe_basics.py
+external-libraries/01-pandas/examples/filter_and_assign.py
+external-libraries/01-pandas/examples/groupby_summary.py
+external-libraries/01-pandas/examples/merge_tables.py

@@ -32,6 +32,9 @@ jobs:
       - name: Show Python version
         run: python --version
 
+      - name: Install external-library dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-external.txt
+
       - name: Compile Python files
         run: python -m compileall -q -x '(^|/)\.git/' .
 

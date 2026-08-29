@@ -19,6 +19,7 @@ python-study-guide/
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
+├── requirements-external.txt
 ├── SECURITY.md
 ├── SUPPORT.md
 ├── assets/
@@ -189,6 +190,19 @@ python-study-guide/
 │               └── formatting.py
 ├── exercises/
 ├── external-libraries/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── 01-pandas/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           ├── csv_pipeline.py
+│           ├── dataframe_basics.py
+│           ├── filter_and_assign.py
+│           ├── groupby_summary.py
+│           └── merge_tables.py
 ├── functions/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -524,7 +538,7 @@ python-study-guide/
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `errors-files-and-modules/`: complete Phase 7 learning path. Chapters 01–05 cover runtime exception handling, deliberate raising and custom exceptions, safe text-file I/O with `open()` and `with`, TXT/CSV/JSON parsing and writing, and code organization through imports, modules, regular packages, execution context, and dependency design, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `exercises/`: focused practice activities connected to learning chapters.
-- `external-libraries/`: future guides to third-party packages.
+- `external-libraries/`: Phase 9 learning path for third-party packages. It currently contains the multilingual pandas 3.0.x chapter and five deterministic executable examples, with `openpyxl`, `requests`, and `pytest` planned next.
 - `functions/`: complete Phase 5 learning path. Chapters 01–09 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, default values including definition-time evaluation and mutable-default safety, variable-length positional and keyword argument collection with `*args` and `**kwargs`, composition through helper and coordinating functions with explicit dependencies and simple call graphs, and explicit data-flow tracing across calls including parameter bindings, rebinding versus mutation, `None`, tuple results, and return-based handoffs, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.

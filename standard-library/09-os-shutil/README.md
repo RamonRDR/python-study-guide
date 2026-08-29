@@ -1414,4 +1414,4 @@ This chapter closes **Phase 8: Standard Library**.
 
 The phase started with object-oriented path modeling in `pathlib` and progressed through date/time contracts, structured data formats, logging, specialized collections, lazy iteration, decimal arithmetic, and finally the operating-system boundary itself.
 
-The next planned phase is **Phase 9: External Libraries**, beginning with `pandas` when that phase becomes available.
+Continue with **Phase 9: External Libraries**: [`pandas` — Working with Tabular Data](../../external-libraries/01-pandas/README.md).

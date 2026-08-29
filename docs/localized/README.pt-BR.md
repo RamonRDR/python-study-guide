@@ -74,9 +74,11 @@ Explicações detalhadas:
 
 ## Status atual
 
-A fundação do projeto e as **Fases 1–8 estão concluídas**. A [Fase 8: Biblioteca Padrão](../../standard-library/README.pt-BR.md) agora reúne nove capítulos revisados: [`pathlib`](../../standard-library/01-pathlib/README.pt-BR.md), [`datetime`](../../standard-library/02-datetime/README.pt-BR.md), [`json`](../../standard-library/03-json/README.pt-BR.md), [`csv`](../../standard-library/04-csv/README.pt-BR.md), [`logging`](../../standard-library/05-logging/README.pt-BR.md), [`collections`](../../standard-library/06-collections/README.pt-BR.md), [`itertools`](../../standard-library/07-itertools/README.pt-BR.md), [`decimal`](../../standard-library/08-decimal/README.pt-BR.md) e [`os` + `shutil`](../../standard-library/09-os-shutil/README.pt-BR.md).
+A fundação do projeto e as **Fases 1–8 estão concluídas**. A **Fase 9: Bibliotecas Externas agora está em andamento** com seu primeiro capítulo da trilha, [`pandas`](../../external-libraries/01-pandas/README.pt-BR.md), tendo pandas 3.0.x como alvo.
 
-Juntos, os capítulos da Fase 8 avançam de modelagem de caminhos por tempo, dados estruturados, diagnóstico, contêineres especializados, iteração lazy, aritmética decimal e finalmente contratos de sistema operacional/filesystem para estado do ambiente, travessia, metadados, cópia, movimentação, remoção, capacidades de plataforma e segurança de archives. A Fase 9: Bibliotecas Externas é a próxima fase planejada. Consulte o [roadmap](../roadmap.pt-BR.md) ou a [trilha completa de estudos](../learning-path.pt-BR.md) para links diretos e status atualizado.
+A nova fase acrescenta um contrato explícito de dependências de terceiros por meio de [`requirements-external.txt`](../../requirements-external.txt), e o CI do repositório instala essas dependências antes de executar os exemplos aprovados. O capítulo de pandas cobre dados tabulares rotulados, índices e alinhamento, dtypes, seleção, Copy-on-Write do pandas 3.0, política de dados ausentes, transformações vetorizadas, agrupamentos, joins validados, reshape e pipelines CSV determinísticos.
+
+Os próximos capítulos planejados da Fase 9 são `openpyxl`, `requests` e `pytest`. Consulte o [índice de Bibliotecas Externas](../../external-libraries/README.pt-BR.md), o [roadmap](../roadmap.pt-BR.md) ou a [trilha completa de estudos](../learning-path.pt-BR.md) para o status atualizado.
 
 ## Identidade visual
 

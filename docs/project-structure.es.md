@@ -19,6 +19,7 @@ python-study-guide/
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
+├── requirements-external.txt
 ├── SECURITY.md
 ├── SUPPORT.md
 ├── assets/
@@ -189,6 +190,19 @@ python-study-guide/
 │               └── formatting.py
 ├── exercises/
 ├── external-libraries/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── 01-pandas/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           ├── csv_pipeline.py
+│           ├── dataframe_basics.py
+│           ├── filter_and_assign.py
+│           ├── groupby_summary.py
+│           └── merge_tables.py
 ├── functions/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -524,7 +538,7 @@ python-study-guide/
 - `docs/`: rutas completas de aprendizaje, roadmaps, arquitectura del proyecto, documentos localizados, políticas y guía de desarrollo responsable asistido por IA.
 - `errors-files-and-modules/`: ruta completa de la Fase 7. Los Capítulos 01–05 cubren manejo de excepciones en runtime, lanzamiento deliberado y excepciones personalizadas, I/O seguro de archivos de texto con `open()` y `with`, parsing y escritura de TXT/CSV/JSON y organización del código mediante imports, módulos, paquetes regulares, contexto de ejecución y diseño de dependencias, en inglés, portugués de Brasil y español con ejemplos ejecutables deterministas.
 - `exercises/`: actividades prácticas relacionadas con los capítulos.
-- `external-libraries/`: futuras guías sobre paquetes de terceros.
+- `external-libraries/`: ruta de la Fase 9 para paquetes de terceros. Actualmente contiene el capítulo multilingüe de pandas 3.0.x y cinco ejemplos ejecutables deterministas, con `openpyxl`, `requests` y `pytest` planificados a continuación.
 - `functions/`: ruta completa de la Fase 5. Los Capítulos 01–09 cubren definición y llamada de funciones, entradas obligatorias, valores retornados, alcance y búsqueda de nombres, type hints para interfaces de funciones, valores predeterminados incluida la evaluación al definir la función y la seguridad con valores mutables, recolección de argumentos posicionales y por palabra clave de cantidad variable con `*args` y `**kwargs`, composición mediante funciones auxiliares y coordinadoras con dependencias explícitas y grafos simples de llamadas, y seguimiento explícito del flujo de datos entre llamadas, incluidos vínculos de parámetros, reasignación frente a mutación, `None`, resultados en tupla y traspasos mediante `return`, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `fundamentals/`: ruta completa de la Fase 1. Sus seis capítulos enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres, cómo reconocer e inspeccionar tipos de datos incorporados comunes y cómo convertir valores compatibles de forma deliberada, con explicaciones multilingües alineadas y ejemplos ejecutables.
 - `practical-projects/`: futuros proyectos pequeños que combinarán varios conceptos.

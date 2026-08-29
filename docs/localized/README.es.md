@@ -74,9 +74,11 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-La base del proyecto y las **Fases 1–8 están completadas**. La [Fase 8: Biblioteca Estándar](../../standard-library/README.es.md) ahora reúne nueve capítulos revisados: [`pathlib`](../../standard-library/01-pathlib/README.es.md), [`datetime`](../../standard-library/02-datetime/README.es.md), [`json`](../../standard-library/03-json/README.es.md), [`csv`](../../standard-library/04-csv/README.es.md), [`logging`](../../standard-library/05-logging/README.es.md), [`collections`](../../standard-library/06-collections/README.es.md), [`itertools`](../../standard-library/07-itertools/README.es.md), [`decimal`](../../standard-library/08-decimal/README.es.md) y [`os` + `shutil`](../../standard-library/09-os-shutil/README.es.md).
+La base del proyecto y las **Fases 1–8 están completadas**. La **Fase 9: Bibliotecas Externas está ahora en progreso** con su primer capítulo de la ruta, [`pandas`](../../external-libraries/01-pandas/README.es.md), apuntando a pandas 3.0.x.
 
-En conjunto, los capítulos de la Fase 8 avanzan desde modelado de rutas por tiempo, datos estructurados, diagnóstico, contenedores especializados, iteración lazy, aritmética decimal y finalmente contratos de sistema operativo/filesystem para estado del entorno, recorrido, metadatos, copia, movimiento, eliminación, capacidades de plataforma y seguridad de archives. La Fase 9: Bibliotecas Externas es la siguiente fase planificada. Consulta el [roadmap](../roadmap.es.md) o la [ruta completa de aprendizaje](../learning-path.es.md) para enlaces directos y estado actualizado.
+La nueva fase añade un contrato explícito de dependencias de terceros mediante [`requirements-external.txt`](../../requirements-external.txt), y el CI del repositorio instala esas dependencias antes de ejecutar los ejemplos aprobados. El capítulo de pandas cubre datos tabulares etiquetados, índices y alineación, dtypes, selección, Copy-on-Write de pandas 3.0, política de datos ausentes, transformaciones vectorizadas, agrupaciones, joins validados, reshape y pipelines CSV deterministas.
+
+Los siguientes capítulos planificados de la Fase 9 son `openpyxl`, `requests` y `pytest`. Consulta el [índice de Bibliotecas Externas](../../external-libraries/README.es.md), el [roadmap](../roadmap.es.md) o la [ruta completa de aprendizaje](../learning-path.es.md) para el estado actualizado.
 
 ## Identidad visual
 

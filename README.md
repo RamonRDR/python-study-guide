@@ -74,9 +74,11 @@ Detailed explanations:
 
 ## Current status
 
-The project foundation and **Phases 1–8 are complete**. [Phase 8: Standard Library](standard-library/README.md) now contains nine reviewed chapters: [`pathlib`](standard-library/01-pathlib/README.md), [`datetime`](standard-library/02-datetime/README.md), [`json`](standard-library/03-json/README.md), [`csv`](standard-library/04-csv/README.md), [`logging`](standard-library/05-logging/README.md), [`collections`](standard-library/06-collections/README.md), [`itertools`](standard-library/07-itertools/README.md), [`decimal`](standard-library/08-decimal/README.md), and [`os` + `shutil`](standard-library/09-os-shutil/README.md).
+The project foundation and **Phases 1–8 are complete**. **Phase 9: External Libraries is now in progress** with its first reviewed-track chapter, [`pandas`](external-libraries/01-pandas/README.md), targeting pandas 3.0.x.
 
-Together, Phase 8 moves from path modeling through time, structured data, diagnostics, specialized containers, lazy iteration, decimal arithmetic, and finally operating-system/filesystem contracts for environment state, traversal, metadata, copy, move, removal, platform capabilities, and archive safety. Phase 9: External Libraries is the next planned curriculum phase. See the [roadmap](docs/roadmap.en.md) or the [full learning path](docs/learning-path.en.md) for direct chapter links and current status.
+The new phase adds an explicit third-party dependency contract through [`requirements-external.txt`](requirements-external.txt), and repository CI installs those dependencies before running approved examples. The pandas chapter covers labeled tabular data, indexes and alignment, dtypes, selection, pandas 3.0 Copy-on-Write, missing-data policy, vectorized transformations, grouping, validated joins, reshaping, and deterministic CSV pipelines.
+
+The next planned Phase 9 chapters are `openpyxl`, `requests`, and `pytest`. See the [External Libraries index](external-libraries/README.md), [roadmap](docs/roadmap.en.md), or [full learning path](docs/learning-path.en.md) for current status.
 
 ## Visual identity
 

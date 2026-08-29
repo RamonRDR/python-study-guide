@@ -23,10 +23,10 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 6. Comentários, documentação e código limpo | Concluída | Seis capítulos revisados estão disponíveis e a seção educacional-piloto está oficialmente concluída |
 | 7. Erros, arquivos e módulos | Concluída | Cinco capítulos revisados cobrem tratamento de exceções, sinalização deliberada, I/O seguro de arquivos, formatos TXT/CSV/JSON e imports/módulos/pacotes |
 | 8. Biblioteca padrão | Concluída | Nove capítulos revisados cobrem caminhos, data/hora, JSON, CSV, logging, coleções especializadas, iteração lazy, aritmética decimal e operações de OS/filesystem |
-| 9. Bibliotecas externas | Planejada | Conteúdo ainda não iniciado |
+| 9. Bibliotecas externas | Em andamento | Capítulo de pandas 3.0.x disponível com contrato explícito de dependências de terceiros e exemplos determinísticos |
 | 10. Projetos práticos | Planejada | Conteúdo ainda não iniciado |
 
-As Fases 0–8 estão concluídas. A Fase 8 agora oferece nove capítulos revisados da Biblioteca Padrão, encerrando com contratos de `os` e `shutil` para estado do ambiente, travessia do filesystem, metadados, cópia, movimentação, remoção recursiva, capacidades da plataforma e segurança de archives. A Fase 9: Bibliotecas Externas é a próxima fase planejada do currículo.
+As Fases 0–8 estão concluídas. A Fase 9: Bibliotecas Externas agora está em andamento com `pandas` como primeiro capítulo. A fase introduz contratos explícitos de dependências de terceiros por meio de `requirements-external.txt`, enquanto `openpyxl`, `requests` e `pytest` permanecem planejados.
 
 ## Fase 0: Fundação do projeto
 
@@ -154,10 +154,14 @@ A Fase 8 está concluída. Os Capítulos 01–08 constroem contratos para caminh
 
 ## Fase 9: Bibliotecas externas
 
-- `pandas`
-- `openpyxl`
-- `requests`
-- `pytest`
+Veja a [trilha de aprendizagem da seção](../external-libraries/README.pt-BR.md).
+
+- [x] [`pandas`](../external-libraries/01-pandas/README.pt-BR.md)
+- [ ] `openpyxl`
+- [ ] `requests`
+- [ ] `pytest`
+
+A Fase 9 está em andamento. O Capítulo 01 introduz pandas 3.0.x para dados tabulares rotulados, seleção, Copy-on-Write, política de dados ausentes, transformações vetorizadas, agrupamentos, joins validados, reshape e pipelines CSV. Os exemplos executáveis de bibliotecas externas usam o contrato de dependências declarado em [`requirements-external.txt`](../requirements-external.txt).
 
 ## Fase 10: Projetos práticos
 
