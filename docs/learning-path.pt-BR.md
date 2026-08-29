@@ -120,11 +120,11 @@ A Fase 8 está concluída com nove capítulos revisados. A sequência avança de
 [Abra o índice da seção Bibliotecas Externas](../external-libraries/README.pt-BR.md)
 
 1. ✅ [`pandas`: Trabalhando com Dados Tabulares](../external-libraries/01-pandas/README.pt-BR.md)
-2. ⏳ `openpyxl`
+2. ✅ [`openpyxl`: Automatizando Workbooks do Excel](../external-libraries/02-openpyxl/README.pt-BR.md)
 3. ⏳ `requests`
 4. ⏳ `pytest`
 
-A Fase 9 está em andamento. O Capítulo 01 estabelece contratos de dependências de terceiros e introduz dados rotulados/tabulares com pandas 3.0.x: `Series`, `DataFrame`, índices, alinhamento por labels, dtypes, seleção, Copy-on-Write, dados ausentes, transformações vetorizadas, agrupamentos, joins validados, reshape e pipelines CSV determinísticos.
+A Fase 9 está em andamento. O Capítulo 01 estabelece contratos de dados rotulados/tabulares com pandas 3.0.x. O Capítulo 02 acrescenta automação de workbooks com openpyxl 3.1.x: acesso a planilhas/células, fórmulas versus valores em cache, estilos, tabelas, validações, modos otimizados de leitura/escrita, limites de preservação de VBA, riscos de round-trip e verificação determinística do workbook.
 
 ## Fase 10 · Projetos Práticos ⏳
 

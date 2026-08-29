@@ -19,7 +19,7 @@ Bibliotecas externas acrescentam uma nova responsabilidade de engenharia: **cont
 ## Trilha de aprendizagem
 
 1. ✅ [`pandas`: Trabalhando com Dados Tabulares](01-pandas/README.pt-BR.md)
-2. ⏳ `openpyxl`: automação de workbooks do Excel
+2. ✅ [`openpyxl`: Automatizando Workbooks do Excel](02-openpyxl/README.pt-BR.md)
 3. ⏳ `requests`: clientes HTTP e consumo de APIs
 4. ⏳ `pytest`: testes automatizados
 
@@ -27,10 +27,10 @@ Bibliotecas externas acrescentam uma nova responsabilidade de engenharia: **cont
 
 Os exemplos executáveis publicados nesta fase usam as dependências declaradas em [`requirements-external.txt`](../requirements-external.txt). O CI do repositório instala esse arquivo antes de executar os exemplos aprovados de bibliotecas externas.
 
-O capítulo de pandas tem como alvo **pandas 3.0.x**. O pandas 3.0 suporta Python 3.11+, enquanto este repositório continua validando os exemplos em Python 3.13.
+Os contratos atuais têm como alvo **pandas 3.0.x** e **openpyxl 3.1.x**. O pandas 3.0 suporta Python 3.11+, enquanto o PyPI declara Python 3.8+ para openpyxl 3.1.5. Este repositório valida os exemplos em Python 3.13.
 
 ## Por que esta fase vem agora
 
 As fases anteriores estabeleceram coleções, funções, erros, arquivos, módulos, CSV/JSON, datas, caminhos, logging, iteração, aritmética decimal e contratos de filesystem. Bibliotecas externas devem construir sobre essas habilidades, não substituí-las.
 
-O próximo capítulo planejado é **`openpyxl`**.
+O próximo capítulo planejado é **`requests`**.

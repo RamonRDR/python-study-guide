@@ -1367,8 +1367,6 @@ A documentação oficial identifica pandas 3.0.5 como a documentação estável 
 
 ## 65. Próximo capítulo
 
-Este capítulo abre a **Fase 9: Bibliotecas Externas**.
+Depois de `pandas`, a trilha segue para **`openpyxl`**, passando da semântica de tabelas para a estrutura de workbooks do Excel.
 
-A próxima biblioteca planejada é **`openpyxl`**, com foco em operações programáticas sobre workbooks do Excel.
-
-Antes de avançar, pratique pandas com conjuntos de dados pequenos o suficiente para serem inspecionados manualmente. Uma biblioteca de tabelas só se torna útil quando você ainda consegue raciocinar sobre o que cada transformação deveria fazer.
+Continue com [`openpyxl`: Automatizando Workbooks do Excel](../02-openpyxl/README.pt-BR.md) para estudar operações com planilhas/células, limites de fórmulas, estilos, tabelas, metadados de validação, modos otimizados e round-trips seguros.
