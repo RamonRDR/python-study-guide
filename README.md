@@ -74,11 +74,11 @@ Detailed explanations:
 
 ## Current status
 
-The project foundation and **Phases 1–8 are complete**. **Phase 9: External Libraries is in progress** with two reviewed-track chapters: [`pandas`](external-libraries/01-pandas/README.md), targeting pandas 3.0.x, and [`openpyxl`](external-libraries/02-openpyxl/README.md), targeting openpyxl 3.1.x.
+The project foundation and **Phases 1–8 are complete**. **Phase 9: External Libraries is in progress** with three reviewed-track chapters: [`pandas`](external-libraries/01-pandas/README.md), targeting pandas 3.0.x, [`openpyxl`](external-libraries/02-openpyxl/README.md), targeting openpyxl 3.1.x, and [`requests`](external-libraries/03-requests/README.md), targeting Requests 2.34.x.
 
-The phase now covers both tabular-data transformation and Excel workbook automation. Repository CI installs the explicit third-party contract in [`requirements-external.txt`](requirements-external.txt) before running approved examples.
+The phase now covers tabular-data transformation, Excel workbook automation, and HTTP/API consumption. Repository CI installs the explicit third-party contract in [`requirements-external.txt`](requirements-external.txt) before running approved examples.
 
-The next planned Phase 9 chapters are `requests` and `pytest`. See the [External Libraries index](external-libraries/README.md), [roadmap](docs/roadmap.en.md), or [full learning path](docs/learning-path.en.md) for current status.
+The next planned Phase 9 chapter is `pytest`. See the [External Libraries index](external-libraries/README.md), [roadmap](docs/roadmap.en.md), or [full learning path](docs/learning-path.en.md) for current status.
 
 ## Visual identity
 

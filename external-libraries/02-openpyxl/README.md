@@ -1134,6 +1134,6 @@ pandas   -> transform tabular data
 openpyxl -> construct and maintain Excel workbooks
 ```
 
-The next planned library is **`requests`**, where the boundary moves from local files to HTTP services and APIs.
+Continue with **[`requests`: Consuming HTTP APIs](../03-requests/README.md)**, where the boundary moves from local files to HTTP services and APIs.
 
 Before moving on, practice by generating workbooks that you can inspect manually and validate automatically. Spreadsheet automation becomes reliable when both the data contract and the workbook contract are explicit.

@@ -168,3 +168,8 @@ external-libraries/02-openpyxl/examples/styled_report.py
 external-libraries/02-openpyxl/examples/table_and_validation.py
 external-libraries/02-openpyxl/examples/workbook_basics.py
 external-libraries/02-openpyxl/examples/write_only_export.py
+external-libraries/03-requests/examples/get_with_query.py
+external-libraries/03-requests/examples/http_error_handling.py
+external-libraries/03-requests/examples/post_json.py
+external-libraries/03-requests/examples/session_defaults.py
+external-libraries/03-requests/examples/stream_download.py

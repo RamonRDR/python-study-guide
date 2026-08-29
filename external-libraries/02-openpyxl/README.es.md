@@ -1134,6 +1134,6 @@ pandas   -> transform tabular data
 openpyxl -> construct and maintain Excel workbooks
 ```
 
-La próxima biblioteca planificada es **`requests`**, donde la frontera pasa de archivos locales a servicios HTTP y APIs.
+Continúa con **[`requests`: Consumiendo APIs HTTP](../03-requests/README.es.md)**, donde la frontera pasa de archivos locales a servicios HTTP y APIs.
 
 Antes de continuar, practica generando libros que puedas inspeccionar manualmente y validar automáticamente. La automatización de hojas de cálculo se vuelve confiable cuando tanto el contrato de datos como el contrato del workbook son explícitos.

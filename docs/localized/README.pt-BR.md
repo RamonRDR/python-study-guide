@@ -74,11 +74,11 @@ Explicações detalhadas:
 
 ## Status atual
 
-A fundação do projeto e as **Fases 1–8 estão concluídas**. A **Fase 9: Bibliotecas Externas está em andamento** com dois capítulos revisados da trilha: [`pandas`](../../external-libraries/01-pandas/README.pt-BR.md), tendo pandas 3.0.x como alvo, e [`openpyxl`](../../external-libraries/02-openpyxl/README.pt-BR.md), tendo openpyxl 3.1.x como alvo.
+A fundação do projeto e as **Fases 1–8 estão concluídas**. A **Fase 9: Bibliotecas Externas está em andamento** com três capítulos revisados da trilha: [`pandas`](../../external-libraries/01-pandas/README.pt-BR.md), tendo pandas 3.0.x como alvo, [`openpyxl`](../../external-libraries/02-openpyxl/README.pt-BR.md), tendo openpyxl 3.1.x como alvo, e [`requests`](../../external-libraries/03-requests/README.pt-BR.md), tendo Requests 2.34.x como alvo.
 
-A fase agora cobre tanto transformação de dados tabulares quanto automação de workbooks do Excel. O CI do repositório instala o contrato explícito de terceiros em [`requirements-external.txt`](../../requirements-external.txt) antes de executar os exemplos aprovados.
+A fase agora cobre transformação de dados tabulares, automação de workbooks do Excel e consumo HTTP/API. O CI do repositório instala o contrato explícito de terceiros em [`requirements-external.txt`](../../requirements-external.txt) antes de executar os exemplos aprovados.
 
-Os próximos capítulos planejados da Fase 9 são `requests` e `pytest`. Consulte o [índice de Bibliotecas Externas](../../external-libraries/README.pt-BR.md), o [roadmap](../roadmap.pt-BR.md) ou a [trilha completa de estudos](../learning-path.pt-BR.md) para o status atualizado.
+O próximo capítulo planejado da Fase 9 é `pytest`. Consulte o [índice de Bibliotecas Externas](../../external-libraries/README.pt-BR.md), o [roadmap](../roadmap.pt-BR.md) ou a [trilha completa de estudos](../learning-path.pt-BR.md) para o status atualizado.
 
 ## Identidade visual
 

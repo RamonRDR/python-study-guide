@@ -158,10 +158,10 @@ See the [section learning path](../external-libraries/README.md).
 
 - [x] [`pandas`](../external-libraries/01-pandas/README.md)
 - [x] [`openpyxl`](../external-libraries/02-openpyxl/README.md)
-- [ ] `requests`
+- [x] [`requests`](../external-libraries/03-requests/README.md)
 - [ ] `pytest`
 
-Phase 9 is in progress. Chapter 01 introduces pandas 3.0.x for labeled tabular data, selection, Copy-on-Write, missing-data policy, vectorized transformations, grouping, validated joins, reshaping, and CSV pipelines. Chapter 02 adds openpyxl 3.1.x for Excel workbook creation/loading, formulas and cached values, styles, worksheet tables, data-validation metadata, optimized read/write modes, macro-preservation boundaries, safe round trips, and deterministic workbook verification. Executable external-library examples use the dependency contract declared in [`requirements-external.txt`](../requirements-external.txt).
+Phase 9 is in progress. Chapter 01 introduces pandas 3.0.x for labeled tabular data. Chapter 02 adds openpyxl 3.1.x for Excel workbook automation. Chapter 03 adds Requests 2.34.x for HTTP/API consumption with explicit methods, query/header/body contracts, timeouts, exception handling, Sessions, TLS verification, streaming, retry safety, pagination, secret redaction, and deterministic local HTTP tests. Executable external-library examples use the dependency contract declared in [`requirements-external.txt`](../requirements-external.txt).
 
 ## Phase 10: Practical projects
 
