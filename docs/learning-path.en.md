@@ -120,11 +120,11 @@ Phase 8 is complete with nine reviewed chapters. The sequence moves from path mo
 [Open the External Libraries section index](../external-libraries/README.md)
 
 1. ✅ [`pandas`: Working with Tabular Data](../external-libraries/01-pandas/README.md)
-2. ⏳ `openpyxl`
+2. ✅ [`openpyxl`: Automating Excel Workbooks](../external-libraries/02-openpyxl/README.md)
 3. ⏳ `requests`
 4. ⏳ `pytest`
 
-Phase 9 is in progress. Chapter 01 establishes third-party dependency contracts and introduces labeled/tabular data with pandas 3.0.x: `Series`, `DataFrame`, indexes, label alignment, dtypes, selection, Copy-on-Write, missing data, vectorized transformations, grouping, validated joins, reshaping, and deterministic CSV pipelines.
+Phase 9 is in progress. Chapter 01 establishes labeled/tabular data contracts with pandas 3.0.x. Chapter 02 adds openpyxl 3.1.x workbook automation: worksheet/cell access, formulas versus cached values, styles, tables, validations, optimized read/write modes, VBA preservation boundaries, round-trip risks, and deterministic workbook verification.
 
 ## Phase 10 · Practical Projects ⏳
 

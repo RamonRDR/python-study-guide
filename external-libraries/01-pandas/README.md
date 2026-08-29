@@ -1367,8 +1367,6 @@ The official documentation identifies pandas 3.0.5 as the current stable documen
 
 ## 65. Next chapter
 
-This chapter opens **Phase 9: External Libraries**.
+`pandas` is now followed by **`openpyxl`**, which moves from table semantics to Excel workbook structure.
 
-The next planned library is **`openpyxl`**, focused on programmatic Excel workbook operations.
-
-Before moving on, practice pandas with datasets small enough to inspect manually. A table library becomes useful only when you can still reason about what each transformation should do.
+Continue with [`openpyxl`: Automating Excel Workbooks](../02-openpyxl/README.md) to learn worksheet/cell operations, formula boundaries, styles, tables, validation metadata, optimized modes, and safe workbook round trips.

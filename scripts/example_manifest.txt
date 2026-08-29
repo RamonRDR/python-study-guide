@@ -163,3 +163,8 @@ external-libraries/01-pandas/examples/dataframe_basics.py
 external-libraries/01-pandas/examples/filter_and_assign.py
 external-libraries/01-pandas/examples/groupby_summary.py
 external-libraries/01-pandas/examples/merge_tables.py
+external-libraries/02-openpyxl/examples/load_and_iterate.py
+external-libraries/02-openpyxl/examples/styled_report.py
+external-libraries/02-openpyxl/examples/table_and_validation.py
+external-libraries/02-openpyxl/examples/workbook_basics.py
+external-libraries/02-openpyxl/examples/write_only_export.py

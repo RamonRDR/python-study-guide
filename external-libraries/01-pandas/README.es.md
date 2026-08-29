@@ -1365,10 +1365,8 @@ Referencias principales usadas para este capítulo:
 
 La documentación oficial identifica pandas 3.0.5 como la documentación estable usada en este capítulo, y pandas 3.0 requiere Python 3.11 o superior.
 
-## 65. Siguiente capítulo
+## 65. Próximo capítulo
 
-Este capítulo abre la **Fase 9: Bibliotecas Externas**.
+Después de `pandas`, la ruta continúa con **`openpyxl`**, pasando de la semántica de tablas a la estructura de libros de Excel.
 
-La siguiente biblioteca planificada es **`openpyxl`**, enfocada en operaciones programáticas sobre libros de Excel.
-
-Antes de avanzar, practica pandas con datasets suficientemente pequeños para poder inspeccionarlos manualmente. Una biblioteca tabular solo se vuelve útil cuando todavía puedes razonar sobre lo que debería hacer cada transformación.
+Continúa con [`openpyxl`: Automatizando Libros de Excel](../02-openpyxl/README.es.md) para estudiar operaciones con hojas/celdas, límites de fórmulas, estilos, tablas, metadatos de validación, modos optimizados y round-trips seguros.

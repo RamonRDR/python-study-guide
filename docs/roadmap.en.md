@@ -23,10 +23,10 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Complete | Five reviewed chapters cover exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data formats, and imports/modules/packages |
 | 8. Standard library | Complete | Nine reviewed chapters cover paths, date/time, JSON, CSV, logging, specialized collections, lazy iteration, decimal arithmetic, and OS/filesystem operations |
-| 9. External libraries | In progress | pandas 3.0.x chapter available with an explicit third-party dependency contract and deterministic examples |
+| 9. External libraries | In progress | pandas 3.0.x and openpyxl 3.1.x chapters available with explicit dependency contracts and deterministic examples |
 | 10. Practical projects | Planned | Curriculum not started |
 
-Phases 0–8 are complete. Phase 9: External Libraries is now in progress with `pandas` as its first chapter. The phase introduces explicit third-party dependency contracts through `requirements-external.txt`, while `openpyxl`, `requests`, and `pytest` remain planned.
+Phases 0–8 are complete. Phase 9: External Libraries is in progress with `pandas` and `openpyxl` available. The phase now covers tabular-data transformation and Excel workbook automation through explicit third-party dependency contracts, while `requests` and `pytest` remain planned.
 
 ## Phase 0: Project foundation
 
@@ -157,11 +157,11 @@ Phase 8 is complete. Chapters 01–08 build contracts for paths, date/time, stru
 See the [section learning path](../external-libraries/README.md).
 
 - [x] [`pandas`](../external-libraries/01-pandas/README.md)
-- [ ] `openpyxl`
+- [x] [`openpyxl`](../external-libraries/02-openpyxl/README.md)
 - [ ] `requests`
 - [ ] `pytest`
 
-Phase 9 is in progress. Chapter 01 introduces pandas 3.0.x for labeled tabular data, selection, Copy-on-Write, missing-data policy, vectorized transformations, grouping, validated joins, reshaping, and CSV pipelines. Executable external-library examples use the dependency contract declared in [`requirements-external.txt`](../requirements-external.txt).
+Phase 9 is in progress. Chapter 01 introduces pandas 3.0.x for labeled tabular data, selection, Copy-on-Write, missing-data policy, vectorized transformations, grouping, validated joins, reshaping, and CSV pipelines. Chapter 02 adds openpyxl 3.1.x for Excel workbook creation/loading, formulas and cached values, styles, worksheet tables, data-validation metadata, optimized read/write modes, macro-preservation boundaries, safe round trips, and deterministic workbook verification. Executable external-library examples use the dependency contract declared in [`requirements-external.txt`](../requirements-external.txt).
 
 ## Phase 10: Practical projects
 
