@@ -1414,4 +1414,4 @@ Este capítulo cierra la **Fase 8: Standard Library**.
 
 La fase comenzó con modelado de rutas orientado a objetos en `pathlib` y avanzó por contratos de fecha y hora, formatos estructurados de datos, logging, colecciones especializadas, iteración lazy, aritmética decimal y finalmente la propia frontera del sistema operativo.
 
-La siguiente fase planificada es la **Fase 9: Bibliotecas Externas**, comenzando por `pandas` cuando esa fase esté disponible.
+Continúa con la **Fase 9: Bibliotecas Externas**: [`pandas` — Trabajando con Datos Tabulares](../../external-libraries/01-pandas/README.es.md).

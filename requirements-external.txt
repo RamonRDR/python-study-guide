@@ -1,0 +1,3 @@
+# External-library dependencies used by published executable examples.
+# Keep version ranges aligned with the documented curriculum contracts.
+pandas>=3.0,<3.1

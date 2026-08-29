@@ -115,9 +115,16 @@ La Fase 7 está completada con cinco capítulos revisados. Los Capítulos 01–0
 
 La Fase 8 está completada con nueve capítulos revisados. La secuencia avanza desde modelado de rutas por tiempo, formatos estructurados de datos, diagnóstico en runtime, contenedores especializados, iteración lazy, aritmética decimal y finalmente contratos del sistema operativo y filesystem. El Capítulo 09 cierra la fase con estado del entorno, fronteras path-like, exploración y recorrido deterministas, metadatos, comportamiento de copia/movimiento/eliminación, capacidades de plataforma y decisiones de seguridad para archives.
 
-## Fase 9 · Bibliotecas Externas ⏳
+## Fase 9 · Bibliotecas Externas 🚧
 
-Planificado. Los enlaces directos a los capítulos aparecerán aquí cuando comience la fase.
+[Abre el índice de la sección Bibliotecas Externas](../external-libraries/README.es.md)
+
+1. ✅ [`pandas`: Trabajando con Datos Tabulares](../external-libraries/01-pandas/README.es.md)
+2. ⏳ `openpyxl`
+3. ⏳ `requests`
+4. ⏳ `pytest`
+
+La Fase 9 está en progreso. El Capítulo 01 establece contratos de dependencias de terceros e introduce datos etiquetados/tabulares con pandas 3.0.x: `Series`, `DataFrame`, índices, alineación por labels, dtypes, selección, Copy-on-Write, datos ausentes, transformaciones vectorizadas, agrupaciones, joins validados, reshape y pipelines CSV deterministas.
 
 ## Fase 10 · Proyectos Prácticos ⏳
 

@@ -115,9 +115,16 @@ Phase 7 is complete with five reviewed chapters. Chapters 01–02 establish exce
 
 Phase 8 is complete with nine reviewed chapters. The sequence moves from path modeling through time, structured data formats, runtime diagnostics, specialized containers, lazy iteration, decimal arithmetic, and finally operating-system and filesystem contracts. Chapter 09 closes the phase with environment state, path-like boundaries, deterministic scanning and traversal, metadata, copy/move/removal behavior, platform capabilities, and archive-safety decisions.
 
-## Phase 9 · External Libraries ⏳
+## Phase 9 · External Libraries 🚧
 
-Planned. Direct chapter links will appear here when the phase begins.
+[Open the External Libraries section index](../external-libraries/README.md)
+
+1. ✅ [`pandas`: Working with Tabular Data](../external-libraries/01-pandas/README.md)
+2. ⏳ `openpyxl`
+3. ⏳ `requests`
+4. ⏳ `pytest`
+
+Phase 9 is in progress. Chapter 01 establishes third-party dependency contracts and introduces labeled/tabular data with pandas 3.0.x: `Series`, `DataFrame`, indexes, label alignment, dtypes, selection, Copy-on-Write, missing data, vectorized transformations, grouping, validated joins, reshaping, and deterministic CSV pipelines.
 
 ## Phase 10 · Practical Projects ⏳
 
