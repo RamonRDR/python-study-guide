@@ -2,3 +2,4 @@
 # Keep version ranges aligned with the documented curriculum contracts.
 pandas>=3.0,<3.1
 openpyxl>=3.1,<3.2
+requests>=2.34,<2.35

@@ -158,10 +158,10 @@ Veja a [trilha de aprendizagem da seção](../external-libraries/README.pt-BR.md
 
 - [x] [`pandas`](../external-libraries/01-pandas/README.pt-BR.md)
 - [x] [`openpyxl`](../external-libraries/02-openpyxl/README.pt-BR.md)
-- [ ] `requests`
+- [x] [`requests`](../external-libraries/03-requests/README.pt-BR.md)
 - [ ] `pytest`
 
-A Fase 9 está em andamento. O Capítulo 01 introduz pandas 3.0.x para dados tabulares rotulados, seleção, Copy-on-Write, política de dados ausentes, transformações vetorizadas, agrupamentos, joins validados, reshape e pipelines CSV. O Capítulo 02 acrescenta openpyxl 3.1.x para criação/carregamento de workbooks do Excel, fórmulas e valores em cache, estilos, tabelas, metadados de validação, modos otimizados de leitura/escrita, limites de preservação de macros, round-trips seguros e verificação determinística de workbooks. Os exemplos executáveis de bibliotecas externas usam o contrato declarado em [`requirements-external.txt`](../requirements-external.txt).
+A Fase 9 está em andamento. O Capítulo 01 introduz pandas 3.0.x para dados tabulares rotulados. O Capítulo 02 acrescenta openpyxl 3.1.x para automação de workbooks do Excel. O Capítulo 03 acrescenta Requests 2.34.x para consumo HTTP/API com contratos explícitos de métodos, query/headers/corpos, timeouts, tratamento de exceções, Sessions, verificação TLS, streaming, segurança de retries, paginação, redação de segredos e testes HTTP locais determinísticos. Os exemplos executáveis de bibliotecas externas usam o contrato declarado em [`requirements-external.txt`](../requirements-external.txt).
 
 ## Fase 10: Projetos práticos
 

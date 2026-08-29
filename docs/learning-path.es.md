@@ -121,10 +121,10 @@ La Fase 8 está completada con nueve capítulos revisados. La secuencia avanza d
 
 1. ✅ [`pandas`: Trabajando con Datos Tabulares](../external-libraries/01-pandas/README.es.md)
 2. ✅ [`openpyxl`: Automatizando Libros de Excel](../external-libraries/02-openpyxl/README.es.md)
-3. ⏳ `requests`
+3. ✅ [`requests`: Consumiendo APIs HTTP](../external-libraries/03-requests/README.es.md)
 4. ⏳ `pytest`
 
-La Fase 9 está en progreso. El Capítulo 01 establece contratos de datos etiquetados/tabulares con pandas 3.0.x. El Capítulo 02 añade automatización de libros con openpyxl 3.1.x: acceso a hojas/celdas, fórmulas frente a valores en caché, estilos, tablas, validaciones, modos optimizados de lectura/escritura, límites de preservación de VBA, riesgos de round-trip y verificación determinista del libro.
+La Fase 9 está en progreso. El Capítulo 01 establece contratos de datos etiquetados/tabulares con pandas 3.0.x. El Capítulo 02 añade automatización de libros con openpyxl 3.1.x. El Capítulo 03 añade contratos HTTP/API con Requests 2.34.x: métodos, parámetros de query, headers, JSON, timeouts, fronteras de excepción, Sessions, verificación TLS, streaming, retries, redacción de secretos, paginación y pruebas deterministas con servidor local.
 
 ## Fase 10 · Proyectos Prácticos ⏳
 
