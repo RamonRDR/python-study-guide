@@ -14,23 +14,23 @@ Las bibliotecas externas agregan una nueva responsabilidad de ingeniería: **con
 
 ## Estado
 
-> 🚧 **En progreso**
+> ✅ **Completada**
 
 ## Ruta de aprendizaje
 
 1. ✅ [`pandas`: Trabajando con Datos Tabulares](01-pandas/README.es.md)
 2. ✅ [`openpyxl`: Automatizando Libros de Excel](02-openpyxl/README.es.md)
 3. ✅ [`requests`: Consumiendo APIs HTTP](03-requests/README.es.md)
-4. ⏳ `pytest`: pruebas automatizadas
+4. ✅ [`pytest`: Ingeniería de Pruebas Automatizadas](04-pytest/README.es.md)
 
 ## Contrato de dependencias
 
 Los ejemplos ejecutables publicados en esta fase usan las dependencias declaradas en [`requirements-external.txt`](../requirements-external.txt). El CI del repositorio instala ese archivo antes de ejecutar los ejemplos aprobados de bibliotecas externas.
 
-Los contratos actuales apuntan a **pandas 3.0.x**, **openpyxl 3.1.x** y **Requests 2.34.x**. pandas 3.0 soporta Python 3.11+, PyPI declara Python 3.8+ para openpyxl 3.1.5 y Requests 2.34.2 requiere Python 3.10+. Este repositorio valida los ejemplos en Python 3.13.
+Los contratos publicados apuntan a **pandas 3.0.x**, **openpyxl 3.1.x**, **Requests 2.34.x** y **pytest 9.1.x**. pandas 3.0 soporta Python 3.11+, PyPI declara Python 3.8+ para openpyxl 3.1.5, y Requests 2.34.2 y pytest 9.1.1 requieren Python 3.10+. Este repositorio valida los ejemplos con Python 3.13.
 
-## Por qué esta fase viene ahora
+## Lo que estableció esta fase
 
-Las fases anteriores establecieron colecciones, funciones, errores, archivos, módulos, CSV/JSON, fechas, rutas, logging, iteración, aritmética decimal y contratos de filesystem. Las bibliotecas externas deben construir sobre esas habilidades, no sustituirlas.
+La Fase 9 pasó de la biblioteca estándar a cuatro fronteras de ingeniería con terceros: transformación de datos tabulares, automatización de libros de Excel, clientes HTTP/API y pruebas automatizadas. Cada capítulo trata la biblioteca como una dependencia versionada con contratos explícitos de comportamiento, seguridad y validación.
 
-El próximo capítulo planificado es **`pytest`**.
+La siguiente fase es **Fase 10: Proyectos Prácticos**.

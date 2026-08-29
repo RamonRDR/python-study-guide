@@ -115,16 +115,16 @@ La Fase 7 está completada con cinco capítulos revisados. Los Capítulos 01–0
 
 La Fase 8 está completada con nueve capítulos revisados. La secuencia avanza desde modelado de rutas por tiempo, formatos estructurados de datos, diagnóstico en runtime, contenedores especializados, iteración lazy, aritmética decimal y finalmente contratos del sistema operativo y filesystem. El Capítulo 09 cierra la fase con estado del entorno, fronteras path-like, exploración y recorrido deterministas, metadatos, comportamiento de copia/movimiento/eliminación, capacidades de plataforma y decisiones de seguridad para archives.
 
-## Fase 9 · Bibliotecas Externas 🚧
+## Fase 9 · Bibliotecas Externas ✅
 
 [Abre el índice de la sección Bibliotecas Externas](../external-libraries/README.es.md)
 
 1. ✅ [`pandas`: Trabajando con Datos Tabulares](../external-libraries/01-pandas/README.es.md)
 2. ✅ [`openpyxl`: Automatizando Libros de Excel](../external-libraries/02-openpyxl/README.es.md)
 3. ✅ [`requests`: Consumiendo APIs HTTP](../external-libraries/03-requests/README.es.md)
-4. ⏳ `pytest`
+4. ✅ [`pytest`: Ingeniería de Pruebas Automatizadas](../external-libraries/04-pytest/README.es.md)
 
-La Fase 9 está en progreso. El Capítulo 01 establece contratos de datos etiquetados/tabulares con pandas 3.0.x. El Capítulo 02 añade automatización de libros con openpyxl 3.1.x. El Capítulo 03 añade contratos HTTP/API con Requests 2.34.x: métodos, parámetros de query, headers, JSON, timeouts, fronteras de excepción, Sessions, verificación TLS, streaming, retries, redacción de secretos, paginación y pruebas deterministas con servidor local.
+La Fase 9 está completada con cuatro capítulos revisados. La secuencia avanza desde contratos de datos tabulares por automatización de libros de Excel y clientes HTTP/API, y cierra con contratos de pruebas automatizadas en pytest 9.1.x: descubrimiento, assertions, parametrización, fixtures, recursos temporales, monkeypatching, captura, marks, aislamiento determinista y comportamiento en CI.
 
 ## Fase 10 · Proyectos Prácticos ⏳
 

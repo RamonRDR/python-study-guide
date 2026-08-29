@@ -115,16 +115,16 @@ Phase 7 is complete with five reviewed chapters. Chapters 01–02 establish exce
 
 Phase 8 is complete with nine reviewed chapters. The sequence moves from path modeling through time, structured data formats, runtime diagnostics, specialized containers, lazy iteration, decimal arithmetic, and finally operating-system and filesystem contracts. Chapter 09 closes the phase with environment state, path-like boundaries, deterministic scanning and traversal, metadata, copy/move/removal behavior, platform capabilities, and archive-safety decisions.
 
-## Phase 9 · External Libraries 🚧
+## Phase 9 · External Libraries ✅
 
 [Open the External Libraries section index](../external-libraries/README.md)
 
 1. ✅ [`pandas`: Working with Tabular Data](../external-libraries/01-pandas/README.md)
 2. ✅ [`openpyxl`: Automating Excel Workbooks](../external-libraries/02-openpyxl/README.md)
 3. ✅ [`requests`: Consuming HTTP APIs](../external-libraries/03-requests/README.md)
-4. ⏳ `pytest`
+4. ✅ [`pytest`: Engineering Automated Tests](../external-libraries/04-pytest/README.md)
 
-Phase 9 is in progress. Chapter 01 establishes labeled/tabular data contracts with pandas 3.0.x. Chapter 02 adds openpyxl 3.1.x workbook automation. Chapter 03 adds Requests 2.34.x HTTP/API contracts: methods, query parameters, headers, JSON, timeouts, exception boundaries, Sessions, TLS verification, streaming, retries, secret redaction, pagination, and deterministic local-server testing.
+Phase 9 is complete with four reviewed chapters. The sequence moves from tabular-data contracts through Excel workbook automation and HTTP/API clients, then closes with pytest 9.1.x automated-testing contracts: discovery, assertions, parametrization, fixtures, temporary resources, monkeypatching, capture, marks, deterministic isolation, and CI behavior.
 
 ## Phase 10 · Practical Projects ⏳
 

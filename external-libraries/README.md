@@ -14,23 +14,23 @@ External libraries add a new engineering responsibility: **dependency contracts*
 
 ## Status
 
-> 🚧 **In progress**
+> ✅ **Complete**
 
 ## Learning path
 
 1. ✅ [`pandas`: Working with Tabular Data](01-pandas/README.md)
 2. ✅ [`openpyxl`: Automating Excel Workbooks](02-openpyxl/README.md)
 3. ✅ [`requests`: Consuming HTTP APIs](03-requests/README.md)
-4. ⏳ `pytest`: automated testing
+4. ✅ [`pytest`: Engineering Automated Tests](04-pytest/README.md)
 
 ## Dependency contract
 
 Published executable examples from this phase use the dependencies declared in [`requirements-external.txt`](../requirements-external.txt). Repository CI installs that file before executing approved external-library examples.
 
-The current contracts target **pandas 3.0.x**, **openpyxl 3.1.x**, and **Requests 2.34.x**. pandas 3.0 supports Python 3.11+, PyPI declares Python 3.8+ for openpyxl 3.1.5, and Requests 2.34.2 requires Python 3.10+. This repository validates the examples on Python 3.13.
+The published contracts target **pandas 3.0.x**, **openpyxl 3.1.x**, **Requests 2.34.x**, and **pytest 9.1.x**. pandas 3.0 supports Python 3.11+, PyPI declares Python 3.8+ for openpyxl 3.1.5, and Requests 2.34.2 plus pytest 9.1.1 require Python 3.10+. This repository validates the examples on Python 3.13.
 
-## Why this phase comes now
+## What this phase established
 
-The earlier phases established collections, functions, errors, files, modules, CSV/JSON, dates, paths, logging, iteration, decimal arithmetic, and filesystem contracts. External libraries should build on those skills rather than replace them.
+Phase 9 moved from the Python standard library into four third-party engineering boundaries: tabular-data transformation, Excel workbook automation, HTTP/API clients, and automated testing. Each chapter treats the library as a versioned dependency with explicit behavior, safety, and validation contracts.
 
-The next planned chapter is **`pytest`**.
+The next phase is **Phase 10: Practical Projects**.

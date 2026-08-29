@@ -173,3 +173,8 @@ external-libraries/03-requests/examples/http_error_handling.py
 external-libraries/03-requests/examples/post_json.py
 external-libraries/03-requests/examples/session_defaults.py
 external-libraries/03-requests/examples/stream_download.py
+external-libraries/04-pytest/examples/assertions_and_parametrize.py
+external-libraries/04-pytest/examples/capture_output_and_logs.py
+external-libraries/04-pytest/examples/exceptions_and_warnings.py
+external-libraries/04-pytest/examples/fixtures_and_tmp_path.py
+external-libraries/04-pytest/examples/monkeypatch_environment.py

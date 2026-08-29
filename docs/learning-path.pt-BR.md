@@ -115,16 +115,16 @@ A Fase 7 está concluída com cinco capítulos revisados. Os Capítulos 01–02 
 
 A Fase 8 está concluída com nove capítulos revisados. A sequência avança de modelagem de caminhos por tempo, formatos estruturados de dados, diagnóstico em runtime, contêineres especializados, iteração lazy, aritmética decimal e finalmente contratos do sistema operacional e filesystem. O Capítulo 09 encerra a fase com estado do ambiente, fronteiras path-like, varredura e travessia determinísticas, metadados, comportamento de cópia/movimentação/remoção, capacidades de plataforma e decisões de segurança para archives.
 
-## Fase 9 · Bibliotecas Externas 🚧
+## Fase 9 · Bibliotecas Externas ✅
 
 [Abra o índice da seção Bibliotecas Externas](../external-libraries/README.pt-BR.md)
 
 1. ✅ [`pandas`: Trabalhando com Dados Tabulares](../external-libraries/01-pandas/README.pt-BR.md)
 2. ✅ [`openpyxl`: Automatizando Workbooks do Excel](../external-libraries/02-openpyxl/README.pt-BR.md)
 3. ✅ [`requests`: Consumindo APIs HTTP](../external-libraries/03-requests/README.pt-BR.md)
-4. ⏳ `pytest`
+4. ✅ [`pytest`: Engenharia de Testes Automatizados](../external-libraries/04-pytest/README.pt-BR.md)
 
-A Fase 9 está em andamento. O Capítulo 01 estabelece contratos de dados rotulados/tabulares com pandas 3.0.x. O Capítulo 02 acrescenta automação de workbooks com openpyxl 3.1.x. O Capítulo 03 acrescenta contratos HTTP/API com Requests 2.34.x: métodos, parâmetros de query, headers, JSON, timeouts, fronteiras de exceção, Sessions, verificação TLS, streaming, retries, redação de segredos, paginação e testes determinísticos com servidor local.
+A Fase 9 está concluída com quatro capítulos revisados. A sequência avança de contratos de dados tabulares por automação de workbooks do Excel e clientes HTTP/API, encerrando com contratos de testes automatizados em pytest 9.1.x: descoberta, assertions, parametrização, fixtures, recursos temporários, monkeypatching, captura, marks, isolamento determinístico e comportamento em CI.
 
 ## Fase 10 · Projetos Práticos ⏳
 
