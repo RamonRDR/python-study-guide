@@ -132,14 +132,14 @@ Phase 9 is complete with four reviewed chapters. The sequence moves from tabular
 
 1. ✅ [Expense Tracker](../practical-projects/01-expense-tracker/README.md)
 2. ✅ [Grade Calculator](../practical-projects/02-grade-calculator/README.md)
-3. ⏳ User Registration
+3. ✅ [User Registration](../practical-projects/03-user-registration/README.md)
 4. ⏳ CSV Analyzer
 5. ⏳ Report Generator
 6. ⏳ File Organizer
 7. ⏳ Fictional Reconciliation Workflow
 8. ⏳ Simulated Automation Flow
 
-Phase 10 is in progress. Project 01 integrates validated data modeling, exact `Decimal` money, collections, JSON persistence, CSV export, deterministic temporary-file handling, and automated pytest coverage. Project 02 adds configurable grade policies, exact weighted aggregation, explicit progress-versus-final state, structured reporting, and boundary-focused tests.
+Phase 10 is in progress. Project 01 integrates validated data modeling, exact `Decimal` money, collections, JSON persistence, CSV export, deterministic temporary-file handling, and automated pytest coverage. Project 02 adds configurable grade policies, exact weighted aggregation, explicit progress-versus-final state, structured reporting, and boundary-focused tests. Project 03 adds canonical identity-like data, Unicode and IDNA normalization, duplicate prevention, secondary lookup indexes, safe indexed-field updates, explicit lifecycle transitions, and mutation-focused tests without introducing authentication.
 
 ## Useful navigation
 

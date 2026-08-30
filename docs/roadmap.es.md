@@ -24,9 +24,9 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 7. Errores, archivos y módulos | Completada | Cinco capítulos revisados cubren manejo de excepciones, señalización deliberada, I/O seguro de archivos, formatos TXT/CSV/JSON e imports/módulos/paquetes |
 | 8. Biblioteca estándar | Completada | Nueve capítulos revisados cubren rutas, fecha/hora, JSON, CSV, logging, colecciones especializadas, iteración lazy, aritmética decimal y operaciones de OS/filesystem |
 | 9. Bibliotecas externas | Completada | Cuatro capítulos revisados cubren pandas, openpyxl, requests y pytest con contratos explícitos de dependencias y ejemplos deterministas |
-| 10. Proyectos prácticos | En progreso | Proyecto 01 Control de Gastos integra validación, dinero exacto, JSON, CSV y pytest en un flujo completo |
+| 10. Proyectos prácticos | En progreso | Los Proyectos 01–03 cubren flujos monetarios validados, reglas configurables de calificación y reglas canónicas de registro de usuarios con pruebas automatizadas |
 
-Las Fases 0–9 están completadas. La Fase 10: Proyectos Prácticos está en progreso con el Control de Gastos disponible como Proyecto 01. La fase de proyectos prácticos transforma conceptos ya estudiados en flujos completos con requisitos, decisiones de diseño, implementación, validación, caminos de extensión y discusión de portafolio.
+Las Fases 0–9 están completadas. La Fase 10: Proyectos Prácticos está en progreso con Control de Gastos, Calculadora de Notas y Registro de Usuarios disponibles como Proyectos 01–03. La fase de proyectos prácticos transforma conceptos ya estudiados en flujos completos con requisitos, decisiones de diseño, implementación, validación, caminos de extensión y discusión de portafolio.
 
 ## Fase 0: Base del proyecto
 
@@ -169,14 +169,14 @@ Consulta el [índice de la sección Proyectos Prácticos](../practical-projects/
 
 - [x] [Control de Gastos](../practical-projects/01-expense-tracker/README.es.md)
 - [x] [Calculadora de Notas](../practical-projects/02-grade-calculator/README.es.md)
-- [ ] Registro de Usuarios
+- [x] [Registro de Usuarios](../practical-projects/03-user-registration/README.es.md)
 - [ ] Analizador de CSV
 - [ ] Generador de Informes
 - [ ] Organizador de Archivos
 - [ ] Flujo Ficticio de Conciliación
 - [ ] Flujo Simulado de Automatización
 
-El Proyecto 01 establece el contrato de la Fase 10 con requisitos explícitos, modelado de datos validado, dinero exacto con `Decimal`, persistencia, demostración determinista, cobertura automatizada con pytest, desafíos de ampliación y discusión de portafolio. El Proyecto 02 amplía el contrato con reglas de calificación configurables, agregación ponderada exacta, informe parcial/final explícito y validación centrada en límites.
+El Proyecto 01 establece el contrato de la Fase 10 con requisitos explícitos, modelado de datos validado, dinero exacto con `Decimal`, persistencia, demostración determinista, cobertura automatizada con pytest, desafíos de ampliación y discusión de portafolio. El Proyecto 02 amplía el contrato con reglas de calificación configurables, agregación ponderada exacta, informe parcial/final explícito y validación centrada en límites. El Proyecto 03 añade datos de identidad canónicos, normalización Unicode e IDNA, prevención de duplicados, índices secundarios, actualizaciones seguras y transiciones explícitas del ciclo de vida sin introducir autenticación.
 
 Cada proyecto debe incluir:
 

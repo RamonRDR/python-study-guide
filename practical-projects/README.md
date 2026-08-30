@@ -18,7 +18,7 @@ Phase 10 combines concepts from the previous phases into complete, testable work
 
 1. ✅ [Expense Tracker](01-expense-tracker/README.md)
 2. ✅ [Grade Calculator](02-grade-calculator/README.md)
-3. ⏳ User Registration
+3. ✅ [User Registration](03-user-registration/README.md)
 4. ⏳ CSV Analyzer
 5. ⏳ Report Generator
 6. ⏳ File Organizer
@@ -38,4 +38,4 @@ Each project should include:
 - extension challenges;
 - portfolio discussion.
 
-Project 01 establishes the integration pattern with validated monetary records and persistence. Project 02 extends it with configurable grading policies, exact weighted aggregation, explicit partial/final states, structured reporting, and boundary-focused pytest coverage.
+Project 01 establishes the integration pattern with validated monetary records and persistence. Project 02 extends it with configurable grading policies, exact weighted aggregation, explicit partial/final states, structured reporting, and boundary-focused pytest coverage. Project 03 adds canonical identity-like data, duplicate prevention, secondary lookup indexes, safe indexed-field updates, and explicit user lifecycle transitions without introducing authentication.
