@@ -1,0 +1,178 @@
+name: Harden CSV summary invariants
+
+on:
+  push:
+    branches:
+      - phase-10-csv-analyzer
+
+permissions:
+  contents: write
+
+jobs:
+  harden:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: phase-10-csv-analyzer
+          fetch-depth: 0
+
+      - name: Apply invariant regression hardening
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(path: str, old: str, new: str) -> None:
+              file_path = Path(path)
+              text = file_path.read_text(encoding="utf-8")
+              count = text.count(old)
+              if count != 1:
+                  raise RuntimeError(
+                      f"{path}: expected one replacement target, found {count}"
+                  )
+              file_path.write_text(text.replace(old, new, 1), encoding="utf-8")
+
+          code_path = "practical-projects/04-csv-analyzer/csv_analyzer.py"
+          old_code = '''        if not isinstance(self.average_duration_minutes, Decimal):
+              raise TypeError("average_duration_minutes must be a Decimal")
+          if self.average_duration_minutes < 0:
+              raise ValueError("average_duration_minutes cannot be negative")
+          if not isinstance(self.severity_counts, tuple) or any(
+          '''
+          new_code = '''        if not isinstance(self.average_duration_minutes, Decimal):
+              raise TypeError("average_duration_minutes must be a Decimal")
+          if self.average_duration_minutes < 0:
+              raise ValueError("average_duration_minutes cannot be negative")
+          if self.total_records == 0:
+              expected_average = Decimal("0.00")
+              if self.total_duration_minutes != 0 or self.longest_duration_minutes != 0:
+                  raise ValueError(
+                      "empty summaries must have zero total and longest duration"
+                  )
+          else:
+              hundredths, remainder = divmod(
+                  self.total_duration_minutes * 100,
+                  self.total_records,
+              )
+              if remainder * 2 >= self.total_records:
+                  hundredths += 1
+              expected_average = Decimal(
+                  f"{hundredths // 100}.{hundredths % 100:02d}"
+              )
+              if self.longest_duration_minutes > self.total_duration_minutes:
+                  raise ValueError(
+                      "longest_duration_minutes cannot exceed total_duration_minutes"
+                  )
+              if (
+                  self.total_records == 1
+                  and self.longest_duration_minutes != self.total_duration_minutes
+              ):
+                  raise ValueError(
+                      "a one-record summary must have matching total and longest duration"
+                  )
+
+          if self.average_duration_minutes != expected_average:
+              raise ValueError(
+                  "average_duration_minutes must match total_duration_minutes "
+                  "and total_records"
+              )
+          if not isinstance(self.severity_counts, tuple) or any(
+          '''
+          replace_once(code_path, old_code, new_code)
+
+          test_path = Path(
+              "practical-projects/04-csv-analyzer/tests/test_csv_analyzer.py"
+          )
+          tests = test_path.read_text(encoding="utf-8")
+          marker = "def test_incident_summary_rejects_inconsistent_average():"
+          if marker in tests:
+              raise RuntimeError("summary invariant regressions already exist")
+          tests += '''
+
+
+def test_incident_summary_rejects_inconsistent_average():
+    severity_counts = tuple(
+        (severity, 1 if severity is Severity.LOW else 0)
+        for severity in Severity
+    )
+    with pytest.raises(ValueError, match="average_duration_minutes must match"):
+        IncidentSummary(
+            1,
+            1,
+            0,
+            5,
+            Decimal("99.00"),
+            5,
+            severity_counts,
+            (("Portal", 1),),
+        )
+
+
+def test_incident_summary_rejects_impossible_longest_duration():
+    severity_counts = tuple(
+        (severity, 2 if severity is Severity.LOW else 0)
+        for severity in Severity
+    )
+    with pytest.raises(ValueError, match="cannot exceed"):
+        IncidentSummary(
+            2,
+            1,
+            1,
+            5,
+            Decimal("2.50"),
+            6,
+            severity_counts,
+            (("Portal", 2),),
+        )
+'''
+          test_path.write_text(tests, encoding="utf-8")
+
+          replace_once(
+              "practical-projects/04-csv-analyzer/README.md",
+              "- resolved + unresolved must equal total;\n- severity counts must contain every enum value exactly once;",
+              "- resolved + unresolved must equal total;\n- average duration must match total duration divided by the record count;\n- longest duration cannot exceed total duration, with empty and one-record summaries enforcing their obvious duration constraints;\n- severity counts must contain every enum value exactly once;",
+          )
+          replace_once(
+              "practical-projects/04-csv-analyzer/README.md",
+              "**73 pytest scenarios**",
+              "**75 pytest scenarios**",
+          )
+
+          replace_once(
+              "practical-projects/04-csv-analyzer/README.pt-BR.md",
+              "- resolvidos + não resolvidos deve ser igual ao total;\n- contagens de severidade devem conter cada valor do enum exatamente uma vez;",
+              "- resolvidos + não resolvidos deve ser igual ao total;\n- a duração média deve corresponder à duração total dividida pela quantidade de registros;\n- a maior duração não pode exceder a duração total, com resumos vazios e de um único registro impondo suas restrições naturais de duração;\n- contagens de severidade devem conter cada valor do enum exatamente uma vez;",
+          )
+          replace_once(
+              "practical-projects/04-csv-analyzer/README.pt-BR.md",
+              "**73 cenários pytest**",
+              "**75 cenários pytest**",
+          )
+
+          replace_once(
+              "practical-projects/04-csv-analyzer/README.es.md",
+              "- resueltos + no resueltos debe ser igual al total;\n- los conteos de severidad deben contener cada valor del enum exactamente una vez;",
+              "- resueltos + no resueltos debe ser igual al total;\n- la duración promedio debe corresponder a la duración total dividida por la cantidad de registros;\n- la mayor duración no puede superar la duración total, y los resúmenes vacíos o de un solo registro aplican sus restricciones naturales de duración;\n- los conteos de severidad deben contener cada valor del enum exactamente una vez;",
+          )
+          replace_once(
+              "practical-projects/04-csv-analyzer/README.es.md",
+              "**73 escenarios pytest**",
+              "**75 escenarios pytest**",
+          )
+          PY
+
+      - name: Validate focused project
+        run: |
+          python -m compileall -q practical-projects/04-csv-analyzer
+          python -m pytest -q practical-projects/04-csv-analyzer/tests
+          python practical-projects/04-csv-analyzer/demo.py
+
+      - name: Commit hardening
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add practical-projects/04-csv-analyzer
+          git commit -m "Harden CSV summary invariants"
+          git push origin HEAD:phase-10-csv-analyzer
