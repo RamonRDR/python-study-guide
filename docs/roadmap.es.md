@@ -23,10 +23,10 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 6. Comentarios, documentación y código limpio | Completada | Seis capítulos revisados están disponibles y la sección educativa piloto está oficialmente completada |
 | 7. Errores, archivos y módulos | Completada | Cinco capítulos revisados cubren manejo de excepciones, señalización deliberada, I/O seguro de archivos, formatos TXT/CSV/JSON e imports/módulos/paquetes |
 | 8. Biblioteca estándar | Completada | Nueve capítulos revisados cubren rutas, fecha/hora, JSON, CSV, logging, colecciones especializadas, iteración lazy, aritmética decimal y operaciones de OS/filesystem |
-| 9. Bibliotecas externas | En progreso | Capítulos de pandas 3.0.x y openpyxl 3.1.x disponibles con contratos explícitos de dependencias y ejemplos deterministas |
-| 10. Proyectos prácticos | Planificada | Contenido todavía no iniciado |
+| 9. Bibliotecas externas | Completada | Cuatro capítulos revisados cubren pandas, openpyxl, requests y pytest con contratos explícitos de dependencias y ejemplos deterministas |
+| 10. Proyectos prácticos | En progreso | Proyecto 01 Control de Gastos integra validación, dinero exacto, JSON, CSV y pytest en un flujo completo |
 
-Las Fases 0–8 están completadas. La Fase 9: Bibliotecas Externas está en progreso con `pandas` y `openpyxl` disponibles. La fase ahora cubre transformación de datos tabulares y automatización de libros de Excel mediante contratos explícitos de dependencias de terceros, mientras `requests` y `pytest` siguen planificados.
+Las Fases 0–9 están completadas. La Fase 10: Proyectos Prácticos está en progreso con el Control de Gastos disponible como Proyecto 01. La fase de proyectos prácticos transforma conceptos ya estudiados en flujos completos con requisitos, decisiones de diseño, implementación, validación, caminos de extensión y discusión de portafolio.
 
 ## Fase 0: Base del proyecto
 
@@ -165,14 +165,18 @@ La Fase 9 está completada. El Capítulo 01 introduce pandas 3.0.x para datos ta
 
 ## Fase 10: Proyectos prácticos
 
-- Calculadora de calificaciones
-- Registro de usuarios
-- Control de gastos
-- Analizador de CSV
-- Generador de informes
-- Organizador de archivos
-- Flujo ficticio de conciliación
-- Flujo simulado de automatización
+Consulta el [índice de la sección Proyectos Prácticos](../practical-projects/README.es.md).
+
+- [x] [Control de Gastos](../practical-projects/01-expense-tracker/README.es.md)
+- [ ] Calculadora de Notas
+- [ ] Registro de Usuarios
+- [ ] Analizador de CSV
+- [ ] Generador de Informes
+- [ ] Organizador de Archivos
+- [ ] Flujo Ficticio de Conciliación
+- [ ] Flujo Simulado de Automatización
+
+El Proyecto 01 establece el contrato de la Fase 10 con requisitos explícitos, modelado de datos validado, dinero exacto con `Decimal`, persistencia JSON, exportación CSV, demostración determinista, cobertura automatizada con pytest, desafíos de ampliación y discusión de portafolio.
 
 Cada proyecto debe incluir:
 
@@ -180,7 +184,7 @@ Cada proyecto debe incluir:
 - notas de diseño;
 - implementación;
 - explicación;
-- ideas de pruebas;
+- cobertura automatizada del comportamiento importante;
 - desafíos de ampliación;
 - discusión de portafolio.
 

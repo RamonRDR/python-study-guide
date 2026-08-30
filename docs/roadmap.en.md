@@ -23,10 +23,10 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 6. Comments, documentation, and clean code | Complete | Six reviewed chapters are available and the pilot educational section is officially complete |
 | 7. Errors, files, and modules | Complete | Five reviewed chapters cover exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data formats, and imports/modules/packages |
 | 8. Standard library | Complete | Nine reviewed chapters cover paths, date/time, JSON, CSV, logging, specialized collections, lazy iteration, decimal arithmetic, and OS/filesystem operations |
-| 9. External libraries | In progress | pandas 3.0.x and openpyxl 3.1.x chapters available with explicit dependency contracts and deterministic examples |
-| 10. Practical projects | Planned | Curriculum not started |
+| 9. External libraries | Complete | Four reviewed chapters cover pandas, openpyxl, requests, and pytest with explicit dependency contracts and deterministic examples |
+| 10. Practical projects | In progress | Project 01 Expense Tracker integrates validation, exact money, JSON, CSV, and pytest in a complete workflow |
 
-Phases 0–8 are complete. Phase 9: External Libraries is in progress with `pandas` and `openpyxl` available. The phase now covers tabular-data transformation and Excel workbook automation through explicit third-party dependency contracts, while `requests` and `pytest` remain planned.
+Phases 0–9 are complete. Phase 10: Practical Projects is in progress with the Expense Tracker available as Project 01. The practical-project phase now turns previously studied concepts into complete workflows with requirements, design decisions, implementation, validation, extension paths, and portfolio discussion.
 
 ## Phase 0: Project foundation
 
@@ -165,14 +165,18 @@ Phase 9 is complete. Chapter 01 introduces pandas 3.0.x for labeled tabular data
 
 ## Phase 10: Practical projects
 
-- Grade calculator
-- User registration
-- Expense tracker
-- CSV analyzer
-- Report generator
-- File organizer
-- Fictional reconciliation workflow
-- Simulated automation flow
+See the [Practical Projects section index](../practical-projects/README.md).
+
+- [x] [Expense Tracker](../practical-projects/01-expense-tracker/README.md)
+- [ ] Grade Calculator
+- [ ] User Registration
+- [ ] CSV Analyzer
+- [ ] Report Generator
+- [ ] File Organizer
+- [ ] Fictional Reconciliation Workflow
+- [ ] Simulated Automation Flow
+
+Project 01 establishes the Phase 10 contract with explicit requirements, validated data modeling, exact `Decimal` money, JSON persistence, CSV export, deterministic demonstration, automated pytest coverage, extension challenges, and portfolio discussion.
 
 Each project should include:
 
@@ -180,7 +184,7 @@ Each project should include:
 - design notes;
 - implementation;
 - explanation;
-- test ideas;
+- automated test coverage for important behavior;
 - extension challenges;
 - portfolio discussion.
 

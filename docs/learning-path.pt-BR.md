@@ -126,9 +126,20 @@ A Fase 8 está concluída com nove capítulos revisados. A sequência avança de
 
 A Fase 9 está concluída com quatro capítulos revisados. A sequência avança de contratos de dados tabulares por automação de workbooks do Excel e clientes HTTP/API, encerrando com contratos de testes automatizados em pytest 9.1.x: descoberta, assertions, parametrização, fixtures, recursos temporários, monkeypatching, captura, marks, isolamento determinístico e comportamento em CI.
 
-## Fase 10 · Projetos Práticos ⏳
+## Fase 10 · Projetos Práticos 🚧
 
-Planejado. Os links diretos dos projetos aparecerão aqui conforme essa fase for publicada.
+[Abrir o índice da seção Projetos Práticos](../practical-projects/README.pt-BR.md)
+
+1. ✅ [Controle de Despesas](../practical-projects/01-expense-tracker/README.pt-BR.md)
+2. ⏳ Calculadora de Notas
+3. ⏳ Cadastro de Usuários
+4. ⏳ Analisador CSV
+5. ⏳ Gerador de Relatórios
+6. ⏳ Organizador de Arquivos
+7. ⏳ Fluxo Fictício de Conciliação
+8. ⏳ Fluxo Simulado de Automação
+
+A Fase 10 está em andamento. O Projeto 01 integra modelagem de dados validada, dinheiro exato com `Decimal`, coleções, persistência JSON, exportação CSV, manipulação determinística de arquivos temporários e cobertura automatizada com pytest em um fluxo completo.
 
 ## Navegação útil
 
