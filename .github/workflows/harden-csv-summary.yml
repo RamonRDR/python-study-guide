@@ -92,41 +92,50 @@ jobs:
           tests += '''
 
 
-def test_incident_summary_rejects_inconsistent_average():
-    severity_counts = tuple(
-        (severity, 1 if severity is Severity.LOW else 0)
-        for severity in Severity
-    )
-    with pytest.raises(ValueError, match="average_duration_minutes must match"):
-        IncidentSummary(
-            1,
-            1,
-            0,
-            5,
-            Decimal("99.00"),
-            5,
-            severity_counts,
-            (("Portal", 1),),
-        )
+          def test_incident_summary_rejects_inconsistent_average():
+              severity_counts = tuple(
+                  (severity, 1 if severity is Severity.LOW else 0)
+                  for severity in Severity
+              )
+              with pytest.raises(ValueError, match="average_duration_minutes must match"):
+                  IncidentSummary(
+                      1,
+                      1,
+                      0,
+                      5,
+                      Decimal("99.00"),
+                      5,
+                      severity_counts,
+                      (("Portal", 1),),
+                  )
 
 
-def test_incident_summary_rejects_impossible_longest_duration():
-    severity_counts = tuple(
-        (severity, 2 if severity is Severity.LOW else 0)
-        for severity in Severity
-    )
-    with pytest.raises(ValueError, match="cannot exceed"):
-        IncidentSummary(
-            2,
-            1,
-            1,
-            5,
-            Decimal("2.50"),
-            6,
-            severity_counts,
-            (("Portal", 2),),
-        )
-'''
+          def test_incident_summary_rejects_impossible_longest_duration():
+              severity_counts = tuple(
+                  (severity, 2 if severity is Severity.LOW else 0)
+                  for severity in Severity
+              )
+              with pytest.raises(ValueError, match="cannot exceed"):
+                  IncidentSummary(
+                      2,
+                      1,
+                      1,
+                      5,
+                      Decimal("2.50"),
+                      6,
+                      severity_counts,
+                      (("Portal", 2),),
+                  )
+          '''
+          tests = tests.replace("\n          def test_incident_summary", "\ndef test_incident_summary")
+          tests = tests.replace("\n              severity_counts", "\n    severity_counts")
+          tests = tests.replace("\n                  (severity", "\n        (severity")
+          tests = tests.replace("\n                  for severity", "\n        for severity")
+          tests = tests.replace("\n              )", "\n    )")
+          tests = tests.replace("\n              with pytest", "\n    with pytest")
+          tests = tests.replace("\n                  IncidentSummary", "\n        IncidentSummary")
+          tests = tests.replace("\n                      ", "\n            ")
+          tests = tests.replace("\n                  )", "\n        )")
           test_path.write_text(tests, encoding="utf-8")
 
           replace_once(
@@ -139,7 +148,6 @@ def test_incident_summary_rejects_impossible_longest_duration():
               "**73 pytest scenarios**",
               "**75 pytest scenarios**",
           )
-
           replace_once(
               "practical-projects/04-csv-analyzer/README.pt-BR.md",
               "- resolvidos + não resolvidos deve ser igual ao total;\n- contagens de severidade devem conter cada valor do enum exatamente uma vez;",
@@ -150,7 +158,6 @@ def test_incident_summary_rejects_impossible_longest_duration():
               "**73 cenários pytest**",
               "**75 cenários pytest**",
           )
-
           replace_once(
               "practical-projects/04-csv-analyzer/README.es.md",
               "- resueltos + no resueltos debe ser igual al total;\n- los conteos de severidad deben contener cada valor del enum exactamente una vez;",
