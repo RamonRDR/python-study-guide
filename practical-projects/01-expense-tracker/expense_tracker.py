@@ -70,6 +70,21 @@ class Expense:
     category: str
     amount: Decimal
 
+    def __post_init__(self) -> None:
+        """Enforce invariants even when callers use the dataclass constructor."""
+        object.__setattr__(self, "spent_on", parse_date(self.spent_on))
+        object.__setattr__(
+            self,
+            "description",
+            normalize_text(self.description, "description"),
+        )
+        object.__setattr__(
+            self,
+            "category",
+            normalize_text(self.category, "category"),
+        )
+        object.__setattr__(self, "amount", parse_amount(self.amount))
+
     @classmethod
     def create(
         cls,
