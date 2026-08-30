@@ -1,0 +1,230 @@
+name: Sync CSV Analyzer governance
+
+on:
+  push:
+    branches:
+      - phase-10-csv-analyzer
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: phase-10-csv-analyzer
+          fetch-depth: 0
+
+      - name: Synchronize Phase 10 governance
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(path: str, old: str, new: str) -> None:
+              file_path = Path(path)
+              text = file_path.read_text(encoding="utf-8")
+              count = text.count(old)
+              if count != 1:
+                  raise RuntimeError(
+                      f"{path}: expected one replacement target, found {count}"
+                  )
+              file_path.write_text(
+                  text.replace(old, new, 1),
+                  encoding="utf-8",
+              )
+
+          manifest = Path("scripts/example_manifest.txt")
+          manifest_text = manifest.read_text(encoding="utf-8")
+          demo_line = "practical-projects/04-csv-analyzer/demo.py"
+          if demo_line not in manifest_text.splitlines():
+              anchor = "practical-projects/03-user-registration/demo.py\n"
+              if anchor not in manifest_text:
+                  raise RuntimeError("example manifest anchor not found")
+              manifest_text = manifest_text.replace(
+                  anchor,
+                  anchor + demo_line + "\n",
+                  1,
+              )
+              manifest.write_text(manifest_text, encoding="utf-8")
+
+          old_tree = """│   └── 03-user-registration/
+          │       ├── README.md
+          │       ├── README.pt-BR.md
+          │       ├── README.es.md
+          │       ├── demo.py
+          │       ├── user_registration.py
+          │       └── tests/
+          │           ├── conftest.py
+          │           └── test_user_registration.py
+          """
+          new_tree = """│   ├── 03-user-registration/
+          │   │   ├── README.md
+          │   │   ├── README.pt-BR.md
+          │   │   ├── README.es.md
+          │   │   ├── demo.py
+          │   │   ├── user_registration.py
+          │   │   └── tests/
+          │   │       ├── conftest.py
+          │   │       └── test_user_registration.py
+          │   └── 04-csv-analyzer/
+          │       ├── README.md
+          │       ├── README.pt-BR.md
+          │       ├── README.es.md
+          │       ├── csv_analyzer.py
+          │       ├── demo.py
+          │       └── tests/
+          │           ├── conftest.py
+          │           └── test_csv_analyzer.py
+          """
+          for path in (
+              "docs/project-structure.en.md",
+              "docs/project-structure.pt-BR.md",
+              "docs/project-structure.es.md",
+          ):
+              replace_once(path, old_tree, new_tree)
+
+          replace_once(
+              "practical-projects/README.md",
+              "4. ⏳ CSV Analyzer",
+              "4. ✅ [CSV Analyzer](04-csv-analyzer/README.md)",
+          )
+          replace_once(
+              "practical-projects/README.md",
+              "Project 01 establishes the integration pattern with validated monetary records and persistence. Project 02 extends it with configurable grading policies, exact weighted aggregation, explicit partial/final states, structured reporting, and boundary-focused pytest coverage. Project 03 adds canonical identity-like data, duplicate prevention, secondary lookup indexes, safe indexed-field updates, and explicit user lifecycle transitions without introducing authentication.",
+              "Project 01 establishes the integration pattern with validated monetary records and persistence. Project 02 extends it with configurable grading policies, exact weighted aggregation, explicit partial/final states, structured reporting, and boundary-focused pytest coverage. Project 03 adds canonical identity-like data, duplicate prevention, secondary lookup indexes, safe indexed-field updates, and explicit user lifecycle transitions without introducing authentication. Project 04 adds exact CSV schemas, typed conversion, structural-versus-row failure handling, partial-success parsing, duplicate row identifiers, deterministic filtering, and aggregation without hiding ingestion behavior behind pandas.",
+          )
+
+          replace_once(
+              "practical-projects/README.pt-BR.md",
+              "4. ⏳ Analisador CSV",
+              "4. ✅ [Analisador CSV](04-csv-analyzer/README.pt-BR.md)",
+          )
+          replace_once(
+              "practical-projects/README.pt-BR.md",
+              "O Projeto 01 estabelece o padrão de integração com registros monetários validados e persistência. O Projeto 02 amplia esse padrão com políticas de notas configuráveis, agregação ponderada exata, estados parcial/final explícitos, relatório estruturado e cobertura pytest focada em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, prevenção de duplicidade, índices secundários de lookup, atualizações seguras de campos indexados e transições explícitas de ciclo de vida sem introduzir autenticação.",
+              "O Projeto 01 estabelece o padrão de integração com registros monetários validados e persistência. O Projeto 02 amplia esse padrão com políticas de notas configuráveis, agregação ponderada exata, estados parcial/final explícitos, relatório estruturado e cobertura pytest focada em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, prevenção de duplicidade, índices secundários de lookup, atualizações seguras de campos indexados e transições explícitas de ciclo de vida sem introduzir autenticação. O Projeto 04 adiciona schemas CSV exatos, conversão tipada, separação entre falhas estruturais e falhas de linha, parsing com sucesso parcial, identificadores duplicados, filtros determinísticos e agregação sem esconder a ingestão atrás de pandas.",
+          )
+
+          replace_once(
+              "practical-projects/README.es.md",
+              "4. ⏳ Analizador CSV",
+              "4. ✅ [Analizador CSV](04-csv-analyzer/README.es.md)",
+          )
+          replace_once(
+              "practical-projects/README.es.md",
+              "El Proyecto 01 establece el patrón de integración con registros monetarios validados y persistencia. El Proyecto 02 amplía ese patrón con políticas de calificación configurables, agregación ponderada exacta, estados parcial/final explícitos, informe estructurado y cobertura pytest centrada en límites. El Proyecto 03 añade datos de identidad canónicos, prevención de duplicados, índices secundarios de lookup, actualizaciones seguras de campos indexados y transiciones explícitas del ciclo de vida sin introducir autenticación.",
+              "El Proyecto 01 establece el patrón de integración con registros monetarios validados y persistencia. El Proyecto 02 amplía ese patrón con políticas de calificación configurables, agregación ponderada exacta, estados parcial/final explícitos, informe estructurado y cobertura pytest centrada en límites. El Proyecto 03 añade datos de identidad canónicos, prevención de duplicados, índices secundarios de lookup, actualizaciones seguras de campos indexados y transiciones explícitas del ciclo de vida sin introducir autenticación. El Proyecto 04 añade schemas CSV exactos, conversión tipada, separación entre fallos estructurales y fallos de fila, parsing con éxito parcial, identificadores duplicados, filtros deterministas y agregación sin ocultar la ingestión detrás de pandas.",
+          )
+
+          replace_once(
+              "docs/learning-path.en.md",
+              "4. ⏳ CSV Analyzer",
+              "4. ✅ [CSV Analyzer](../practical-projects/04-csv-analyzer/README.md)",
+          )
+          replace_once(
+              "docs/learning-path.en.md",
+              "Phase 10 is in progress. Project 01 integrates validated data modeling, exact `Decimal` money, collections, JSON persistence, CSV export, deterministic temporary-file handling, and automated pytest coverage. Project 02 adds configurable grade policies, exact weighted aggregation, explicit progress-versus-final state, structured reporting, and boundary-focused tests. Project 03 adds canonical identity-like data, Unicode and IDNA normalization, duplicate prevention, secondary lookup indexes, safe indexed-field updates, explicit lifecycle transitions, and mutation-focused tests without introducing authentication.",
+              "Phase 10 is in progress. Project 01 integrates validated data modeling, exact `Decimal` money, collections, JSON persistence, CSV export, deterministic temporary-file handling, and automated pytest coverage. Project 02 adds configurable grade policies, exact weighted aggregation, explicit progress-versus-final state, structured reporting, and boundary-focused tests. Project 03 adds canonical identity-like data, Unicode and IDNA normalization, duplicate prevention, secondary lookup indexes, safe indexed-field updates, explicit lifecycle transitions, and mutation-focused tests without introducing authentication. Project 04 adds schema-aware CSV ingestion, typed conversion, row-level rejection diagnostics, structural failures, duplicate identifier checks, deterministic filtering, and aggregation using the standard library.",
+          )
+
+          replace_once(
+              "docs/learning-path.pt-BR.md",
+              "4. ⏳ Analisador CSV",
+              "4. ✅ [Analisador CSV](../practical-projects/04-csv-analyzer/README.pt-BR.md)",
+          )
+          replace_once(
+              "docs/learning-path.pt-BR.md",
+              "A Fase 10 está em andamento. O Projeto 01 integra modelagem de dados validada, dinheiro exato com `Decimal`, coleções, persistência JSON, exportação CSV, manipulação determinística de arquivos temporários e cobertura automatizada com pytest. O Projeto 02 adiciona políticas de notas configuráveis, agregação ponderada exata, estado de progresso versus final explícito, relatório estruturado e testes focados em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários de lookup, atualizações seguras de campos indexados, transições explícitas de ciclo de vida e testes focados em mutação sem introduzir autenticação.",
+              "A Fase 10 está em andamento. O Projeto 01 integra modelagem de dados validada, dinheiro exato com `Decimal`, coleções, persistência JSON, exportação CSV, manipulação determinística de arquivos temporários e cobertura automatizada com pytest. O Projeto 02 adiciona políticas de notas configuráveis, agregação ponderada exata, estado de progresso versus final explícito, relatório estruturado e testes focados em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários de lookup, atualizações seguras de campos indexados, transições explícitas de ciclo de vida e testes focados em mutação sem introduzir autenticação. O Projeto 04 adiciona ingestão CSV consciente de schema, conversão tipada, diagnóstico de rejeições por linha, falhas estruturais, verificação de identificadores duplicados, filtros determinísticos e agregação usando a biblioteca padrão.",
+          )
+
+          replace_once(
+              "docs/learning-path.es.md",
+              "4. ⏳ Analizador CSV",
+              "4. ✅ [Analizador CSV](../practical-projects/04-csv-analyzer/README.es.md)",
+          )
+          replace_once(
+              "docs/learning-path.es.md",
+              "La Fase 10 está en progreso. El Proyecto 01 integra modelado de datos validado, dinero exacto con `Decimal`, colecciones, persistencia JSON, exportación CSV, manejo determinista de archivos temporales y cobertura automatizada con pytest. El Proyecto 02 añade políticas de calificación configurables, agregación ponderada exacta, estado de progreso frente a final explícito, informe estructurado y pruebas centradas en límites. El Proyecto 03 añade datos de identidad canónicos, normalización Unicode e IDNA, prevención de duplicados, índices secundarios de lookup, actualizaciones seguras de campos indexados, transiciones explícitas del ciclo de vida y pruebas centradas en mutación sin introducir autenticación.",
+              "La Fase 10 está en progreso. El Proyecto 01 integra modelado de datos validado, dinero exacto con `Decimal`, colecciones, persistencia JSON, exportación CSV, manejo determinista de archivos temporales y cobertura automatizada con pytest. El Proyecto 02 añade políticas de calificación configurables, agregación ponderada exacta, estado de progreso frente a final explícito, informe estructurado y pruebas centradas en límites. El Proyecto 03 añade datos de identidad canónicos, normalización Unicode e IDNA, prevención de duplicados, índices secundarios de lookup, actualizaciones seguras de campos indexados, transiciones explícitas del ciclo de vida y pruebas centradas en mutación sin introducir autenticación. El Proyecto 04 añade ingestión CSV consciente de schema, conversión tipada, diagnóstico de rechazos por fila, fallos estructurales, comprobación de identificadores duplicados, filtros deterministas y agregación mediante la biblioteca estándar.",
+          )
+
+          replace_once(
+              "docs/roadmap.en.md",
+              "| 10. Practical projects | In progress | Projects 01–03 cover validated monetary workflows, configurable grading rules, and canonical user-registration domain rules with automated tests |",
+              "| 10. Practical projects | In progress | Projects 01–04 cover validated monetary workflows, configurable grading rules, canonical user-registration rules, and schema-aware CSV ingestion with automated tests |",
+          )
+          replace_once(
+              "docs/roadmap.en.md",
+              "Phases 0–9 are complete. Phase 10: Practical Projects is in progress with Expense Tracker, Grade Calculator, and User Registration available as Projects 01–03. The practical-project phase turns previously studied concepts into complete workflows with requirements, design decisions, implementation, validation, extension paths, and portfolio discussion.",
+              "Phases 0–9 are complete. Phase 10: Practical Projects is in progress with Expense Tracker, Grade Calculator, User Registration, and CSV Analyzer available as Projects 01–04. The practical-project phase turns previously studied concepts into complete workflows with requirements, design decisions, implementation, validation, extension paths, and portfolio discussion.",
+          )
+          replace_once(
+              "docs/roadmap.en.md",
+              "- [ ] CSV Analyzer",
+              "- [x] [CSV Analyzer](../practical-projects/04-csv-analyzer/README.md)",
+          )
+          replace_once(
+              "docs/roadmap.en.md",
+              "Project 01 establishes the Phase 10 contract with explicit requirements, validated data modeling, exact `Decimal` money, persistence, deterministic demonstration, automated pytest coverage, extension challenges, and portfolio discussion. Project 02 extends the contract with configurable grading rules, exact weighted aggregation, explicit partial/final reporting, and boundary-focused validation. Project 03 adds canonical identity-like data, Unicode and IDNA normalization, duplicate prevention, secondary lookup indexes, safe indexed-field updates, explicit lifecycle transitions, and mutation-focused pytest coverage without introducing authentication.",
+              "Project 01 establishes the Phase 10 contract with explicit requirements, validated data modeling, exact `Decimal` money, persistence, deterministic demonstration, automated pytest coverage, extension challenges, and portfolio discussion. Project 02 extends the contract with configurable grading rules, exact weighted aggregation, explicit partial/final reporting, and boundary-focused validation. Project 03 adds canonical identity-like data, Unicode and IDNA normalization, duplicate prevention, secondary lookup indexes, safe indexed-field updates, explicit lifecycle transitions, and mutation-focused pytest coverage without introducing authentication. Project 04 adds strict CSV schemas, typed conversion, structural-versus-row failure handling, partial-success parsing, duplicate accepted identifiers, deterministic aggregation, and filtering with standard-library CSV mechanics exposed explicitly.",
+          )
+
+          replace_once(
+              "docs/roadmap.pt-BR.md",
+              "| 10. Projetos práticos | Em andamento | Projetos 01–03 cobrem fluxos monetários validados, regras configuráveis de notas e regras canônicas de cadastro de usuários com testes automatizados |",
+              "| 10. Projetos práticos | Em andamento | Projetos 01–04 cobrem fluxos monetários validados, regras configuráveis de notas, cadastro canônico de usuários e ingestão CSV consciente de schema com testes automatizados |",
+          )
+          replace_once(
+              "docs/roadmap.pt-BR.md",
+              "As Fases 0–9 estão concluídas. A Fase 10: Projetos Práticos está em andamento com Controle de Despesas, Calculadora de Notas e Cadastro de Usuários disponíveis como Projetos 01–03. A fase de projetos práticos transforma conceitos já estudados em fluxos completos com requisitos, decisões de design, implementação, validação, caminhos de extensão e discussão de portfólio.",
+              "As Fases 0–9 estão concluídas. A Fase 10: Projetos Práticos está em andamento com Controle de Despesas, Calculadora de Notas, Cadastro de Usuários e Analisador CSV disponíveis como Projetos 01–04. A fase de projetos práticos transforma conceitos já estudados em fluxos completos com requisitos, decisões de design, implementação, validação, caminhos de extensão e discussão de portfólio.",
+          )
+          replace_once(
+              "docs/roadmap.pt-BR.md",
+              "- [ ] Analisador de CSV",
+              "- [x] [Analisador de CSV](../practical-projects/04-csv-analyzer/README.pt-BR.md)",
+          )
+          replace_once(
+              "docs/roadmap.pt-BR.md",
+              "O Projeto 01 estabelece o contrato da Fase 10 com requisitos explícitos, modelagem de dados validada, dinheiro exato com `Decimal`, persistência, demonstração determinística, cobertura automatizada com pytest, desafios de extensão e discussão de portfólio. O Projeto 02 amplia o contrato com regras de notas configuráveis, agregação ponderada exata, relatório parcial/final explícito e validação focada em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários, atualizações seguras e transições explícitas de ciclo de vida sem introduzir autenticação.",
+              "O Projeto 01 estabelece o contrato da Fase 10 com requisitos explícitos, modelagem de dados validada, dinheiro exato com `Decimal`, persistência, demonstração determinística, cobertura automatizada com pytest, desafios de extensão e discussão de portfólio. O Projeto 02 amplia o contrato com regras de notas configuráveis, agregação ponderada exata, relatório parcial/final explícito e validação focada em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários, atualizações seguras e transições explícitas de ciclo de vida sem introduzir autenticação. O Projeto 04 adiciona schemas CSV rígidos, conversão tipada, separação entre falhas estruturais e falhas de linha, parsing com sucesso parcial, identificadores aceitos duplicados, agregação determinística e filtros com a mecânica da biblioteca padrão exposta explicitamente.",
+          )
+
+          replace_once(
+              "docs/roadmap.es.md",
+              "| 10. Proyectos prácticos | En progreso | Los Proyectos 01–03 cubren flujos monetarios validados, reglas configurables de calificación y reglas canónicas de registro de usuarios con pruebas automatizadas |",
+              "| 10. Proyectos prácticos | En progreso | Los Proyectos 01–04 cubren flujos monetarios validados, reglas configurables de calificación, registro canónico de usuarios e ingestión CSV consciente de schema con pruebas automatizadas |",
+          )
+          replace_once(
+              "docs/roadmap.es.md",
+              "Las Fases 0–9 están completadas. La Fase 10: Proyectos Prácticos está en progreso con Control de Gastos, Calculadora de Notas y Registro de Usuarios disponibles como Proyectos 01–03. La fase de proyectos prácticos transforma conceptos ya estudiados en flujos completos con requisitos, decisiones de diseño, implementación, validación, caminos de extensión y discusión de portafolio.",
+              "Las Fases 0–9 están completadas. La Fase 10: Proyectos Prácticos está en progreso con Control de Gastos, Calculadora de Notas, Registro de Usuarios y Analizador CSV disponibles como Proyectos 01–04. La fase de proyectos prácticos transforma conceptos ya estudiados en flujos completos con requisitos, decisiones de diseño, implementación, validación, caminos de extensión y discusión de portafolio.",
+          )
+          replace_once(
+              "docs/roadmap.es.md",
+              "- [ ] Analizador de CSV",
+              "- [x] [Analizador de CSV](../practical-projects/04-csv-analyzer/README.es.md)",
+          )
+          replace_once(
+              "docs/roadmap.es.md",
+              "El Proyecto 01 establece el contrato de la Fase 10 con requisitos explícitos, modelado de datos validado, dinero exacto con `Decimal`, persistencia, demostración determinista, cobertura automatizada con pytest, desafíos de ampliación y discusión de portafolio. El Proyecto 02 amplía el contrato con reglas de calificación configurables, agregación ponderada exacta, informe parcial/final explícito y validación centrada en límites. El Proyecto 03 añade datos de identidad canónicos, normalización Unicode e IDNA, prevención de duplicados, índices secundarios, actualizaciones seguras y transiciones explícitas del ciclo de vida sin introducir autenticación.",
+              "El Proyecto 01 establece el contrato de la Fase 10 con requisitos explícitos, modelado de datos validado, dinero exacto con `Decimal`, persistencia, demostración determinista, cobertura automatizada con pytest, desafíos de ampliación y discusión de portafolio. El Proyecto 02 amplía el contrato con reglas de calificación configurables, agregación ponderada exacta, informe parcial/final explícito y validación centrada en límites. El Proyecto 03 añade datos de identidad canónicos, normalización Unicode e IDNA, prevención de duplicados, índices secundarios, actualizaciones seguras y transiciones explícitas del ciclo de vida sin introducir autenticación. El Proyecto 04 añade schemas CSV estrictos, conversión tipada, separación entre fallos estructurales y fallos de fila, parsing con éxito parcial, identificadores aceptados duplicados, agregación determinista y filtros con la mecánica de la biblioteca estándar expuesta explícitamente.",
+          )
+          PY
+
+      - name: Commit synchronized documentation
+        run: |
+          if git diff --quiet; then
+            echo "No synchronization changes needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs practical-projects scripts/example_manifest.txt
+          git commit -m "Synchronize CSV Analyzer curriculum docs"
+          git push origin HEAD:phase-10-csv-analyzer
