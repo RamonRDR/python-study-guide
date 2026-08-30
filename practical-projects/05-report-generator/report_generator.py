@@ -31,6 +31,8 @@ _FORMAT_SUFFIX = {
     ReportFormat.MARKDOWN: ".md",
 }
 
+_MARKDOWN_ESCAPABLE = frozenset("!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~")
+
 
 def _normalize_readable_text(value: object, field_name: str, max_length: int) -> str:
     if not isinstance(value, str):
@@ -410,6 +412,14 @@ def _escape_markdown_cell(value: str) -> str:
     return value.replace("\\", "\\\\").replace("|", "\\|")
 
 
+def _escape_markdown_text(value: str) -> str:
+    """Escape CommonMark punctuation so validated text renders literally."""
+    return "".join(
+        f"\\{character}" if character in _MARKDOWN_ESCAPABLE else character
+        for character in value
+    )
+
+
 def render_markdown_report(report: OperationalReport) -> str:
     """Render one deterministic Markdown report."""
     if not isinstance(report, OperationalReport):
@@ -417,7 +427,7 @@ def render_markdown_report(report: OperationalReport) -> str:
 
     summary = report.summary
     lines = [
-        f"# {report.window.title}",
+        f"# {_escape_markdown_text(report.window.title)}",
         "",
         f"**Period:** {report.window.start_date.isoformat()} to {report.window.end_date.isoformat()}",
         "",
