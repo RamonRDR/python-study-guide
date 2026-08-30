@@ -126,9 +126,20 @@ Phase 8 is complete with nine reviewed chapters. The sequence moves from path mo
 
 Phase 9 is complete with four reviewed chapters. The sequence moves from tabular-data contracts through Excel workbook automation and HTTP/API clients, then closes with pytest 9.1.x automated-testing contracts: discovery, assertions, parametrization, fixtures, temporary resources, monkeypatching, capture, marks, deterministic isolation, and CI behavior.
 
-## Phase 10 · Practical Projects ⏳
+## Phase 10 · Practical Projects 🚧
 
-Planned. Direct project links will appear here as the project phase is published.
+[Open the Practical Projects section index](../practical-projects/README.md)
+
+1. ✅ [Expense Tracker](../practical-projects/01-expense-tracker/README.md)
+2. ⏳ Grade Calculator
+3. ⏳ User Registration
+4. ⏳ CSV Analyzer
+5. ⏳ Report Generator
+6. ⏳ File Organizer
+7. ⏳ Fictional Reconciliation Workflow
+8. ⏳ Simulated Automation Flow
+
+Phase 10 is in progress. Project 01 integrates validated data modeling, exact `Decimal` money, collections, JSON persistence, CSV export, deterministic temporary-file handling, and automated pytest coverage into one complete workflow.
 
 ## Useful navigation
 
