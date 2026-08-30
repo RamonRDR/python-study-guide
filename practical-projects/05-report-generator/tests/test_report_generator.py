@@ -313,6 +313,39 @@ def test_operational_report_rejects_summary_with_wrong_total() -> None:
             summary=wrong_summary,
         )
 
+    same_size_wrong_summary = summarize_activities(
+        (
+            make_record(
+                201,
+                team="Different",
+                status=WorkStatus.COMPLETED,
+                duration_minutes=20,
+                occurred_on=date(2026, 8, 1),
+            ),
+            make_record(
+                202,
+                team="Different",
+                status=WorkStatus.COMPLETED,
+                duration_minutes=20,
+                occurred_on=date(2026, 8, 2),
+            ),
+            make_record(
+                203,
+                team="Different",
+                status=WorkStatus.COMPLETED,
+                duration_minutes=20,
+                occurred_on=date(2026, 8, 3),
+            ),
+        )
+    )
+    with pytest.raises(ValueError, match="summary must match"):
+        OperationalReport(
+            window=report.window,
+            source_record_count=report.source_record_count,
+            records=report.records,
+            summary=same_size_wrong_summary,
+        )
+
 
 def test_operational_report_rejects_unsorted_records() -> None:
     report = make_report()
