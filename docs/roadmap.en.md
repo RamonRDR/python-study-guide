@@ -24,9 +24,9 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | 7. Errors, files, and modules | Complete | Five reviewed chapters cover exception handling, deliberate exception signaling, safe file I/O, TXT/CSV/JSON data formats, and imports/modules/packages |
 | 8. Standard library | Complete | Nine reviewed chapters cover paths, date/time, JSON, CSV, logging, specialized collections, lazy iteration, decimal arithmetic, and OS/filesystem operations |
 | 9. External libraries | Complete | Four reviewed chapters cover pandas, openpyxl, requests, and pytest with explicit dependency contracts and deterministic examples |
-| 10. Practical projects | In progress | Projects 01–03 cover validated monetary workflows, configurable grading rules, and canonical user-registration domain rules with automated tests |
+| 10. Practical projects | In progress | Projects 01–04 cover validated monetary workflows, configurable grading rules, canonical user-registration rules, and schema-aware CSV ingestion with automated tests |
 
-Phases 0–9 are complete. Phase 10: Practical Projects is in progress with Expense Tracker, Grade Calculator, and User Registration available as Projects 01–03. The practical-project phase turns previously studied concepts into complete workflows with requirements, design decisions, implementation, validation, extension paths, and portfolio discussion.
+Phases 0–9 are complete. Phase 10: Practical Projects is in progress with Expense Tracker, Grade Calculator, User Registration, and CSV Analyzer available as Projects 01–04. The practical-project phase turns previously studied concepts into complete workflows with requirements, design decisions, implementation, validation, extension paths, and portfolio discussion.
 
 ## Phase 0: Project foundation
 
@@ -170,13 +170,13 @@ See the [Practical Projects section index](../practical-projects/README.md).
 - [x] [Expense Tracker](../practical-projects/01-expense-tracker/README.md)
 - [x] [Grade Calculator](../practical-projects/02-grade-calculator/README.md)
 - [x] [User Registration](../practical-projects/03-user-registration/README.md)
-- [ ] CSV Analyzer
+- [x] [CSV Analyzer](../practical-projects/04-csv-analyzer/README.md)
 - [ ] Report Generator
 - [ ] File Organizer
 - [ ] Fictional Reconciliation Workflow
 - [ ] Simulated Automation Flow
 
-Project 01 establishes the Phase 10 contract with explicit requirements, validated data modeling, exact `Decimal` money, persistence, deterministic demonstration, automated pytest coverage, extension challenges, and portfolio discussion. Project 02 extends the contract with configurable grading rules, exact weighted aggregation, explicit partial/final reporting, and boundary-focused validation. Project 03 adds canonical identity-like data, Unicode and IDNA normalization, duplicate prevention, secondary lookup indexes, safe indexed-field updates, explicit lifecycle transitions, and mutation-focused pytest coverage without introducing authentication.
+Project 01 establishes the Phase 10 contract with explicit requirements, validated data modeling, exact `Decimal` money, persistence, deterministic demonstration, automated pytest coverage, extension challenges, and portfolio discussion. Project 02 extends the contract with configurable grading rules, exact weighted aggregation, explicit partial/final reporting, and boundary-focused validation. Project 03 adds canonical identity-like data, Unicode and IDNA normalization, duplicate prevention, secondary lookup indexes, safe indexed-field updates, explicit lifecycle transitions, and mutation-focused pytest coverage without introducing authentication. Project 04 adds strict CSV schemas, typed conversion, structural-versus-row failure handling, partial-success parsing, duplicate accepted identifiers, deterministic aggregation, and filtering with standard-library CSV mechanics exposed explicitly.
 
 Each project should include:
 

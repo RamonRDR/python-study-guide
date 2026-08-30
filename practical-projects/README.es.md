@@ -19,7 +19,7 @@ La Fase 10 combina conceptos de las fases anteriores en flujos completos y compr
 1. ✅ [Control de Gastos](01-expense-tracker/README.es.md)
 2. ✅ [Calculadora de Notas](02-grade-calculator/README.es.md)
 3. ✅ [Registro de Usuarios](03-user-registration/README.es.md)
-4. ⏳ Analizador CSV
+4. ✅ [Analizador CSV](04-csv-analyzer/README.es.md)
 5. ⏳ Generador de Informes
 6. ⏳ Organizador de Archivos
 7. ⏳ Flujo Ficticio de Conciliación
@@ -38,4 +38,4 @@ Cada proyecto debe incluir:
 - desafíos de extensión;
 - discusión de portafolio.
 
-El Proyecto 01 establece el patrón de integración con registros monetarios validados y persistencia. El Proyecto 02 amplía ese patrón con políticas de calificación configurables, agregación ponderada exacta, estados parcial/final explícitos, informe estructurado y cobertura pytest centrada en límites. El Proyecto 03 añade datos de identidad canónicos, prevención de duplicados, índices secundarios de lookup, actualizaciones seguras de campos indexados y transiciones explícitas del ciclo de vida sin introducir autenticación.
+El Proyecto 01 establece el patrón de integración con registros monetarios validados y persistencia. El Proyecto 02 amplía ese patrón con políticas de calificación configurables, agregación ponderada exacta, estados parcial/final explícitos, informe estructurado y cobertura pytest centrada en límites. El Proyecto 03 añade datos de identidad canónicos, prevención de duplicados, índices secundarios de lookup, actualizaciones seguras de campos indexados y transiciones explícitas del ciclo de vida sin introducir autenticación. El Proyecto 04 añade schemas CSV exactos, conversión tipada, separación entre fallos estructurales y fallos de fila, parsing con éxito parcial, identificadores duplicados, filtros deterministas y agregación sin ocultar la ingestión detrás de pandas.

@@ -133,13 +133,13 @@ A Fase 9 está concluída com quatro capítulos revisados. A sequência avança 
 1. ✅ [Controle de Despesas](../practical-projects/01-expense-tracker/README.pt-BR.md)
 2. ✅ [Calculadora de Notas](../practical-projects/02-grade-calculator/README.pt-BR.md)
 3. ✅ [Cadastro de Usuários](../practical-projects/03-user-registration/README.pt-BR.md)
-4. ⏳ Analisador CSV
+4. ✅ [Analisador CSV](../practical-projects/04-csv-analyzer/README.pt-BR.md)
 5. ⏳ Gerador de Relatórios
 6. ⏳ Organizador de Arquivos
 7. ⏳ Fluxo Fictício de Conciliação
 8. ⏳ Fluxo Simulado de Automação
 
-A Fase 10 está em andamento. O Projeto 01 integra modelagem de dados validada, dinheiro exato com `Decimal`, coleções, persistência JSON, exportação CSV, manipulação determinística de arquivos temporários e cobertura automatizada com pytest. O Projeto 02 adiciona políticas de notas configuráveis, agregação ponderada exata, estado de progresso versus final explícito, relatório estruturado e testes focados em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários de lookup, atualizações seguras de campos indexados, transições explícitas de ciclo de vida e testes focados em mutação sem introduzir autenticação.
+A Fase 10 está em andamento. O Projeto 01 integra modelagem de dados validada, dinheiro exato com `Decimal`, coleções, persistência JSON, exportação CSV, manipulação determinística de arquivos temporários e cobertura automatizada com pytest. O Projeto 02 adiciona políticas de notas configuráveis, agregação ponderada exata, estado de progresso versus final explícito, relatório estruturado e testes focados em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários de lookup, atualizações seguras de campos indexados, transições explícitas de ciclo de vida e testes focados em mutação sem introduzir autenticação. O Projeto 04 adiciona ingestão CSV consciente de schema, conversão tipada, diagnóstico de rejeições por linha, falhas estruturais, verificação de identificadores duplicados, filtros determinísticos e agregação usando a biblioteca padrão.
 
 ## Navegação útil
 
