@@ -145,7 +145,10 @@ class ReportSummary:
             self.total_duration_minutes,
             self.longest_duration_minutes,
         )
-        if any(isinstance(value, bool) or not isinstance(value, int) for value in count_fields):
+        if any(
+            isinstance(value, bool) or not isinstance(value, int)
+            for value in count_fields
+        ):
             raise TypeError("summary count and duration fields must be integers")
         if any(value < 0 for value in count_fields):
             raise ValueError("summary count and duration fields cannot be negative")
@@ -264,6 +267,9 @@ class OperationalReport:
             seen_ids.add(record.activity_id)
             if not self.window.start_date <= record.occurred_on <= self.window.end_date:
                 raise ValueError("included records must fall inside the report window")
+
+        if self.summary != summarize_activities(self.records):
+            raise ValueError("summary must match the included records")
 
     @property
     def included_record_count(self) -> int:
