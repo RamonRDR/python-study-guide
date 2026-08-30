@@ -1,4 +1,4 @@
-from decimal import Decimal, Inexact, localcontext
+from decimal import MAX_PREC, Decimal, Inexact, localcontext
 
 import pytest
 
@@ -28,6 +28,12 @@ def test_parse_percentage_accepts_scientific_notation_at_upper_bound(
     value: str | Decimal,
 ) -> None:
     assert parse_percentage(value, "score", allow_zero=True) == Decimal("100.00")
+
+
+def test_parse_percentage_accepts_zero_with_maximum_exponent() -> None:
+    value = Decimal(f"0E+{MAX_PREC}")
+
+    assert parse_percentage(value, "score", allow_zero=True) == Decimal("0.00")
 
 
 @pytest.mark.parametrize("value", ["NaN", "Infinity", "-0.01", "100.01"])
