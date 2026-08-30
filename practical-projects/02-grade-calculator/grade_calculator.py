@@ -23,8 +23,11 @@ def normalize_text(value: str, field_name: str) -> str:
 def _decimal_context_for(value: Decimal) -> Context:
     """Return a local context large enough to quantize the supplied value."""
     digits = len(value.as_tuple().digits)
-    expanded_precision = value.adjusted() + 3
-    precision = max(digits + 2, expanded_precision, 4)
+    if value.is_zero():
+        precision = max(digits + 2, 4)
+    else:
+        expanded_precision = value.adjusted() + 3
+        precision = max(digits + 2, expanded_precision, 4)
     return Context(prec=precision, rounding=ROUND_HALF_UP)
 
 
