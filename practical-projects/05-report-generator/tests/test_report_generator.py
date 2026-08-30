@@ -468,6 +468,17 @@ def test_render_markdown_report_contains_stable_tables() -> None:
     assert "| 2026-08-01 | 101 | Accounting | completed | 30 min |" in markdown
     assert markdown.endswith("\n")
 
+    escaped_title_report = build_report(
+        (),
+        title="# *Ops* [Report](x) <tag>",
+        start_date=date(2026, 8, 1),
+        end_date=date(2026, 8, 31),
+    )
+    escaped_title_markdown = render_markdown_report(escaped_title_report)
+    assert escaped_title_markdown.startswith(
+        "# \\# \\*Ops\\* \\[Report\\]\\(x\\) \\<tag\\>\n"
+    )
+
 
 def test_render_markdown_report_escapes_team_table_delimiters() -> None:
     report = build_report(
