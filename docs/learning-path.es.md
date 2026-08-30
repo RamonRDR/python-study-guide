@@ -131,7 +131,7 @@ La Fase 9 está completada con cuatro capítulos revisados. La secuencia avanza 
 [Abrir el índice de la sección Proyectos Prácticos](../practical-projects/README.es.md)
 
 1. ✅ [Control de Gastos](../practical-projects/01-expense-tracker/README.es.md)
-2. ⏳ Calculadora de Notas
+2. ✅ [Calculadora de Notas](../practical-projects/02-grade-calculator/README.es.md)
 3. ⏳ Registro de Usuarios
 4. ⏳ Analizador CSV
 5. ⏳ Generador de Informes
@@ -139,7 +139,7 @@ La Fase 9 está completada con cuatro capítulos revisados. La secuencia avanza 
 7. ⏳ Flujo Ficticio de Conciliación
 8. ⏳ Flujo Simulado de Automatización
 
-La Fase 10 está en progreso. El Proyecto 01 integra modelado de datos validado, dinero exacto con `Decimal`, colecciones, persistencia JSON, exportación CSV, manejo determinista de archivos temporales y cobertura automatizada con pytest en un flujo completo.
+La Fase 10 está en progreso. El Proyecto 01 integra modelado de datos validado, dinero exacto con `Decimal`, colecciones, persistencia JSON, exportación CSV, manejo determinista de archivos temporales y cobertura automatizada con pytest. El Proyecto 02 añade políticas de calificación configurables, agregación ponderada exacta, estado de progreso frente a final explícito, informe estructurado y pruebas centradas en límites.
 
 ## Navegación útil
 

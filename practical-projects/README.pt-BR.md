@@ -17,7 +17,7 @@ A Fase 10 combina conceitos das fases anteriores em fluxos completos e testávei
 ## Trilha de projetos
 
 1. ✅ [Controle de Despesas](01-expense-tracker/README.pt-BR.md)
-2. ⏳ Calculadora de Notas
+2. ✅ [Calculadora de Notas](02-grade-calculator/README.pt-BR.md)
 3. ⏳ Cadastro de Usuários
 4. ⏳ Analisador CSV
 5. ⏳ Gerador de Relatórios
@@ -38,4 +38,4 @@ Cada projeto deve incluir:
 - desafios de extensão;
 - discussão de portfólio.
 
-O Projeto 01 estabelece o padrão com registros monetários validados, aritmética exata com `Decimal`, persistência JSON, exportação CSV e uma suíte pytest.
+O Projeto 01 estabelece o padrão de integração com registros monetários validados e persistência. O Projeto 02 amplia esse padrão com políticas de notas configuráveis, agregação ponderada exata, estados parcial/final explícitos, relatório estruturado e cobertura pytest focada em fronteiras.

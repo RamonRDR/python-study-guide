@@ -17,7 +17,7 @@ Phase 10 combines concepts from the previous phases into complete, testable work
 ## Project path
 
 1. ✅ [Expense Tracker](01-expense-tracker/README.md)
-2. ⏳ Grade Calculator
+2. ✅ [Grade Calculator](02-grade-calculator/README.md)
 3. ⏳ User Registration
 4. ⏳ CSV Analyzer
 5. ⏳ Report Generator
@@ -38,4 +38,4 @@ Each project should include:
 - extension challenges;
 - portfolio discussion.
 
-Project 01 establishes the pattern with validated monetary records, exact `Decimal` arithmetic, JSON persistence, CSV export, and a pytest suite.
+Project 01 establishes the integration pattern with validated monetary records and persistence. Project 02 extends it with configurable grading policies, exact weighted aggregation, explicit partial/final states, structured reporting, and boundary-focused pytest coverage.
