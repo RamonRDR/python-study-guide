@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from decimal import Decimal
+from decimal import Decimal, Inexact, localcontext
 
 import pytest
 
@@ -42,6 +42,15 @@ def test_parse_amount_rejects_invalid_values(value: str) -> None:
         parse_amount(value)
 
 
+def test_parse_amount_isolated_from_caller_decimal_context() -> None:
+    with localcontext() as context:
+        context.prec = 3
+        context.traps[Inexact] = True
+
+        assert parse_amount("25.40") == Decimal("25.40")
+        assert parse_amount("25.905") == Decimal("25.91")
+
+
 def test_parse_amount_rejects_positive_value_that_rounds_to_zero() -> None:
     with pytest.raises(ValueError, match="at least 0.01"):
         parse_amount("0.004")
@@ -49,7 +58,7 @@ def test_parse_amount_rejects_positive_value_that_rounds_to_zero() -> None:
 
 def test_parse_amount_normalizes_quantize_failure() -> None:
     with pytest.raises(ValueError, match="two decimal places"):
-        parse_amount("1" + "0" * 100)
+        parse_amount("1e1000000")
 
 
 def test_invalid_add_does_not_mutate_tracker() -> None:
