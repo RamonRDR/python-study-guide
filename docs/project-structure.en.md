@@ -376,15 +376,24 @@ python-study-guide/
 │   │   └── tests/
 │   │       ├── conftest.py
 │   │       └── test_grade_calculator.py
-│   └── 03-user-registration/
+│   ├── 03-user-registration/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   ├── demo.py
+│   │   ├── user_registration.py
+│   │   └── tests/
+│   │       ├── conftest.py
+│   │       └── test_user_registration.py
+│   └── 04-csv-analyzer/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
+│       ├── csv_analyzer.py
 │       ├── demo.py
-│       ├── user_registration.py
 │       └── tests/
 │           ├── conftest.py
-│           └── test_user_registration.py
+│           └── test_csv_analyzer.py
 ├── program-flow/
 │   ├── README.md
 │   ├── README.pt-BR.md

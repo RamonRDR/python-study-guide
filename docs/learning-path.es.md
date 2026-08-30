@@ -133,13 +133,13 @@ La Fase 9 está completada con cuatro capítulos revisados. La secuencia avanza 
 1. ✅ [Control de Gastos](../practical-projects/01-expense-tracker/README.es.md)
 2. ✅ [Calculadora de Notas](../practical-projects/02-grade-calculator/README.es.md)
 3. ✅ [Registro de Usuarios](../practical-projects/03-user-registration/README.es.md)
-4. ⏳ Analizador CSV
+4. ✅ [Analizador CSV](../practical-projects/04-csv-analyzer/README.es.md)
 5. ⏳ Generador de Informes
 6. ⏳ Organizador de Archivos
 7. ⏳ Flujo Ficticio de Conciliación
 8. ⏳ Flujo Simulado de Automatización
 
-La Fase 10 está en progreso. El Proyecto 01 integra modelado de datos validado, dinero exacto con `Decimal`, colecciones, persistencia JSON, exportación CSV, manejo determinista de archivos temporales y cobertura automatizada con pytest. El Proyecto 02 añade políticas de calificación configurables, agregación ponderada exacta, estado de progreso frente a final explícito, informe estructurado y pruebas centradas en límites. El Proyecto 03 añade datos de identidad canónicos, normalización Unicode e IDNA, prevención de duplicados, índices secundarios de lookup, actualizaciones seguras de campos indexados, transiciones explícitas del ciclo de vida y pruebas centradas en mutación sin introducir autenticación.
+La Fase 10 está en progreso. El Proyecto 01 integra modelado de datos validado, dinero exacto con `Decimal`, colecciones, persistencia JSON, exportación CSV, manejo determinista de archivos temporales y cobertura automatizada con pytest. El Proyecto 02 añade políticas de calificación configurables, agregación ponderada exacta, estado de progreso frente a final explícito, informe estructurado y pruebas centradas en límites. El Proyecto 03 añade datos de identidad canónicos, normalización Unicode e IDNA, prevención de duplicados, índices secundarios de lookup, actualizaciones seguras de campos indexados, transiciones explícitas del ciclo de vida y pruebas centradas en mutación sin introducir autenticación. El Proyecto 04 añade ingestión CSV consciente de schema, conversión tipada, diagnóstico de rechazos por fila, fallos estructurales, comprobación de identificadores duplicados, filtros deterministas y agregación mediante la biblioteca estándar.
 
 ## Navegación útil
 
