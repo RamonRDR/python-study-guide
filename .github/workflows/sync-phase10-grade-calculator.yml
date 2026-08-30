@@ -1,0 +1,35 @@
+name: Sync Phase 10 Grade Calculator docs
+
+on:
+  push:
+    branches:
+      - phase-10-grade-calculator
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: phase-10-grade-calculator
+          fetch-depth: 0
+
+      - name: Synchronize Phase 10 documentation
+        run: python scripts/sync_phase10_grade_calculator.py
+
+      - name: Commit synchronized documentation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add practical-projects docs scripts/example_manifest.txt
+          if git diff --cached --quiet; then
+            echo "No documentation changes to commit."
+            exit 0
+          fi
+          git commit -m "Sync Grade Calculator curriculum docs"
+          git push origin HEAD:phase-10-grade-calculator
