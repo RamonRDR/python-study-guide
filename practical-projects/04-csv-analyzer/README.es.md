@@ -470,7 +470,7 @@ La demostración contiene intencionalmente dos filas inválidas para hacer visib
 python -m pytest -q practical-projects/04-csv-analyzer/tests
 ```
 
-La suite inicial contiene **76 escenarios pytest** que cubren helpers de parsing, validación directa de modelos, fallos de schema, CSV malformado, problemas de campo por fila, IDs duplicados, BOM UTF-8, lectura de archivos, invariantes de agregación, filtros e informe determinista.
+La suite inicial contiene **78 escenarios pytest** que cubren helpers de parsing, validación directa de modelos, fallos de schema, CSV malformado, problemas de campo por fila, IDs duplicados, BOM UTF-8, lectura de archivos, invariantes de agregación, filtros e informe determinista.
 
 ## 28. Caminos de fallo para inspeccionar manualmente
 

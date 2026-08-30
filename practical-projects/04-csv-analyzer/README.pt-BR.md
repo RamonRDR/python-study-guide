@@ -470,7 +470,7 @@ A demonstração contém intencionalmente duas linhas inválidas para tornar o c
 python -m pytest -q practical-projects/04-csv-analyzer/tests
 ```
 
-A suíte inicial contém **76 cenários pytest** cobrindo helpers de parsing, validação direta dos modelos, falhas de schema, CSV malformado, problemas de campo por linha, IDs duplicados, BOM UTF-8, leitura de arquivo, invariantes de agregação, filtros e relatório determinístico.
+A suíte inicial contém **78 cenários pytest** cobrindo helpers de parsing, validação direta dos modelos, falhas de schema, CSV malformado, problemas de campo por linha, IDs duplicados, BOM UTF-8, leitura de arquivo, invariantes de agregação, filtros e relatório determinístico.
 
 ## 28. Caminhos de falha para inspecionar manualmente
 
