@@ -1,8 +1,9 @@
+from datetime import datetime
 from decimal import Decimal
 
 import pytest
 
-from expense_tracker import Expense, ExpenseTracker, parse_amount
+from expense_tracker import Expense, ExpenseTracker, parse_amount, parse_date
 
 
 def test_expense_create_normalizes_fields() -> None:
@@ -14,10 +15,26 @@ def test_expense_create_normalizes_fields() -> None:
     assert expense.amount == Decimal("25.91")
 
 
+@pytest.mark.parametrize("value", ["20260829", "2026-W35-6", "2026-8-29"])
+def test_parse_date_requires_exact_yyyy_mm_dd_text(value: str) -> None:
+    with pytest.raises(ValueError, match="YYYY-MM-DD"):
+        parse_date(value)
+
+
+def test_parse_date_rejects_datetime_values() -> None:
+    with pytest.raises(ValueError, match="time component"):
+        parse_date(datetime(2026, 8, 29, 12, 30))
+
+
 @pytest.mark.parametrize("value", ["0", "-1", "NaN", "Infinity"])
 def test_parse_amount_rejects_invalid_values(value: str) -> None:
     with pytest.raises(ValueError):
         parse_amount(value)
+
+
+def test_parse_amount_rejects_positive_value_that_rounds_to_zero() -> None:
+    with pytest.raises(ValueError, match="at least 0.01"):
+        parse_amount("0.004")
 
 
 def test_parse_amount_normalizes_quantize_failure() -> None:
