@@ -159,9 +159,9 @@ Consulta la [ruta de aprendizaje de la sección](../external-libraries/README.es
 - [x] [`pandas`](../external-libraries/01-pandas/README.es.md)
 - [x] [`openpyxl`](../external-libraries/02-openpyxl/README.es.md)
 - [x] [`requests`](../external-libraries/03-requests/README.es.md)
-- [ ] `pytest`
+- [x] [`pytest`](../external-libraries/04-pytest/README.es.md)
 
-La Fase 9 está en progreso. El Capítulo 01 introduce pandas 3.0.x para datos tabulares etiquetados. El Capítulo 02 añade openpyxl 3.1.x para automatización de libros de Excel. El Capítulo 03 añade Requests 2.34.x para consumo HTTP/API con contratos explícitos de métodos, query/headers/cuerpos, timeouts, manejo de excepciones, Sessions, verificación TLS, streaming, seguridad de retries, paginación, redacción de secretos y pruebas HTTP locales deterministas. Los ejemplos ejecutables de bibliotecas externas usan el contrato declarado en [`requirements-external.txt`](../requirements-external.txt).
+La Fase 9 está completada. El Capítulo 01 introduce pandas 3.0.x para datos tabulares etiquetados. El Capítulo 02 añade automatización de libros con openpyxl 3.1.x. El Capítulo 03 añade contratos HTTP/API con Requests 2.34.x. El Capítulo 04 cierra la fase con contratos de pruebas automatizadas en pytest 9.1.x, cubriendo descubrimiento, assertions, fixtures, parametrización, recursos temporales, monkeypatching, captura, marks, aislamiento determinista y CI. Los ejemplos ejecutables de bibliotecas externas usan el contrato declarado en [`requirements-external.txt`](../requirements-external.txt).
 
 ## Fase 10: Proyectos prácticos
 

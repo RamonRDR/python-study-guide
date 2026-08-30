@@ -985,14 +985,15 @@ Quando este capítulo foi preparado, Requests 2.34.2 era a versão estável mais
 
 ## 83. Próximo capítulo
 
-A Fase 9 agora conecta três fronteiras práticas:
+A Fase 9 agora conecta quatro fronteiras práticas:
 
 ```text
 pandas   -> transform tabular data
 openpyxl -> construct and maintain Excel workbooks
 requests -> exchange data with HTTP services and APIs
+pytest   -> verify behavior repeatedly and automatically
 ```
 
-A próxima biblioteca planejada é **`pytest`**, quando o foco passa de usar bibliotecas externas para provar sistematicamente que o comportamento Python continua correto.
+O próximo capítulo já está publicado: [`pytest`: Engenharia de Testes Automatizados](../04-pytest/README.pt-BR.md). Ele passa do consumo de serviços externos para a comprovação sistemática de que o comportamento Python continua correto.
 
 Antes de avançar, construa pelo menos um cliente contra um servidor HTTP local. Código confiável de API começa quando o comportamento da rede se torna algo que você consegue reproduzir, inspecionar e testar.

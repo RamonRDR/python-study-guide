@@ -213,16 +213,26 @@ python-study-guide/
 │   │       ├── table_and_validation.py
 │   │       ├── workbook_basics.py
 │   │       └── write_only_export.py
-│   └── 03-requests/
+│   ├── 03-requests/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── get_with_query.py
+│   │       ├── http_error_handling.py
+│   │       ├── post_json.py
+│   │       ├── session_defaults.py
+│   │       └── stream_download.py
+│   └── 04-pytest/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           ├── get_with_query.py
-│           ├── http_error_handling.py
-│           ├── post_json.py
-│           ├── session_defaults.py
-│           └── stream_download.py
+│           ├── assertions_and_parametrize.py
+│           ├── capture_output_and_logs.py
+│           ├── exceptions_and_warnings.py
+│           ├── fixtures_and_tmp_path.py
+│           └── monkeypatch_environment.py
 ├── functions/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -558,7 +568,7 @@ python-study-guide/
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `errors-files-and-modules/`: complete Phase 7 learning path. Chapters 01–05 cover runtime exception handling, deliberate raising and custom exceptions, safe text-file I/O with `open()` and `with`, TXT/CSV/JSON parsing and writing, and code organization through imports, modules, regular packages, execution context, and dependency design, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `exercises/`: focused practice activities connected to learning chapters.
-- `external-libraries/`: Phase 9 learning path for third-party packages. It currently contains reviewed multilingual chapters for pandas 3.0.x, openpyxl 3.1.x, and Requests 2.34.x with fifteen deterministic executable examples in total; `pytest` is planned next.
+- `external-libraries/`: complete Phase 9 learning path for third-party packages. It contains reviewed multilingual chapters for pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x, and pytest 9.1.x, with twenty deterministic executable examples in total. The phase covers tabular transformations, Excel workbook automation, HTTP/API clients, and automated-testing contracts; Phase 10 practical projects come next.
 - `functions/`: complete Phase 5 learning path. Chapters 01–09 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, default values including definition-time evaluation and mutable-default safety, variable-length positional and keyword argument collection with `*args` and `**kwargs`, composition through helper and coordinating functions with explicit dependencies and simple call graphs, and explicit data-flow tracing across calls including parameter bindings, rebinding versus mutation, `None`, tuple results, and return-based handoffs, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: future small projects combining several concepts.

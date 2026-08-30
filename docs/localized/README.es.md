@@ -74,11 +74,11 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-La base del proyecto y las **Fases 1–8 están completadas**. La **Fase 9: Bibliotecas Externas está en progreso** con tres capítulos revisados de la ruta: [`pandas`](../../external-libraries/01-pandas/README.es.md), apuntando a pandas 3.0.x, [`openpyxl`](../../external-libraries/02-openpyxl/README.es.md), apuntando a openpyxl 3.1.x, y [`requests`](../../external-libraries/03-requests/README.es.md), apuntando a Requests 2.34.x.
+La base del proyecto y las **Fases 1–9 están completadas**. La **Fase 9: Bibliotecas Externas** ahora contiene cuatro capítulos revisados de la ruta: [`pandas`](../../external-libraries/01-pandas/README.es.md), [`openpyxl`](../../external-libraries/02-openpyxl/README.es.md), [`requests`](../../external-libraries/03-requests/README.es.md) y [`pytest`](../../external-libraries/04-pytest/README.es.md).
 
-La fase ahora cubre transformación de datos tabulares, automatización de libros de Excel y consumo HTTP/API. El CI del repositorio instala el contrato explícito de terceros en [`requirements-external.txt`](../../requirements-external.txt) antes de ejecutar los ejemplos aprobados.
+La fase completada cubre transformación de datos tabulares, automatización de libros de Excel, consumo HTTP/API y pruebas automatizadas. El CI del repositorio instala el contrato explícito de terceros en [`requirements-external.txt`](../../requirements-external.txt) antes de ejecutar los ejemplos aprobados.
 
-El siguiente capítulo planificado de la Fase 9 es `pytest`. Consulta el [índice de Bibliotecas Externas](../../external-libraries/README.es.md), el [roadmap](../roadmap.es.md) o la [ruta completa de aprendizaje](../learning-path.es.md) para el estado actualizado.
+La siguiente etapa planificada del currículo es **Fase 10: Proyectos Prácticos**. Consulta el [índice de Bibliotecas Externas](../../external-libraries/README.es.md), el [roadmap](../roadmap.es.md) o la [ruta completa de aprendizaje](../learning-path.es.md) para el registro de la Fase 9 completada.
 
 ## Identidad visual
 

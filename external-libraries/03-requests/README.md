@@ -985,14 +985,15 @@ At the time this chapter was prepared, Requests 2.34.2 was the latest stable rel
 
 ## 83. Next chapter
 
-Phase 9 now connects three practical boundaries:
+Phase 9 now connects four practical boundaries:
 
 ```text
 pandas   -> transform tabular data
 openpyxl -> construct and maintain Excel workbooks
 requests -> exchange data with HTTP services and APIs
+pytest   -> verify behavior repeatedly and automatically
 ```
 
-The next planned library is **`pytest`**, where the focus moves from using external libraries to systematically proving that Python behavior remains correct.
+The next chapter is now published: [`pytest`: Engineering Automated Tests](../04-pytest/README.md). It moves from consuming external services to systematically proving that Python behavior remains correct.
 
 Before moving on, build at least one client against a local HTTP server. Reliable API code starts when network behavior becomes something you can reproduce, inspect, and test.
