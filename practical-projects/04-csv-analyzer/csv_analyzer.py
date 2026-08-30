@@ -261,16 +261,17 @@ class IncidentSummary:
             expected_average = Decimal(
                 f"{hundredths // 100}.{hundredths % 100:02d}"
             )
+            minimum_longest = (
+                self.total_duration_minutes + self.total_records - 1
+            ) // self.total_records
+            if self.longest_duration_minutes < minimum_longest:
+                raise ValueError(
+                    "longest_duration_minutes is too small for "
+                    "total_duration_minutes and total_records"
+                )
             if self.longest_duration_minutes > self.total_duration_minutes:
                 raise ValueError(
                     "longest_duration_minutes cannot exceed total_duration_minutes"
-                )
-            if (
-                self.total_records == 1
-                and self.longest_duration_minutes != self.total_duration_minutes
-            ):
-                raise ValueError(
-                    "a one-record summary must have matching total and longest duration"
                 )
 
         if self.average_duration_minutes != expected_average:
@@ -278,6 +279,11 @@ class IncidentSummary:
                 "average_duration_minutes must match total_duration_minutes "
                 "and total_records"
             )
+        object.__setattr__(
+            self,
+            "average_duration_minutes",
+            expected_average,
+        )
         if not isinstance(self.severity_counts, tuple) or any(
             not isinstance(item, tuple)
             or len(item) != 2
