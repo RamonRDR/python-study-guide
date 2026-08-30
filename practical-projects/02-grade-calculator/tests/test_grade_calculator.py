@@ -23,6 +23,13 @@ def test_parse_percentage_isolated_from_caller_decimal_context() -> None:
         assert parse_percentage("25.905", "score", allow_zero=True) == Decimal("25.91")
 
 
+@pytest.mark.parametrize("value", ["1E2", Decimal("1E2")])
+def test_parse_percentage_accepts_scientific_notation_at_upper_bound(
+    value: str | Decimal,
+) -> None:
+    assert parse_percentage(value, "score", allow_zero=True) == Decimal("100.00")
+
+
 @pytest.mark.parametrize("value", ["NaN", "Infinity", "-0.01", "100.01"])
 def test_parse_percentage_rejects_invalid_scores(value: str) -> None:
     with pytest.raises(ValueError):
