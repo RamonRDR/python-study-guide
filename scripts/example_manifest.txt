@@ -180,3 +180,4 @@ external-libraries/04-pytest/examples/fixtures_and_tmp_path.py
 external-libraries/04-pytest/examples/monkeypatch_environment.py
 practical-projects/01-expense-tracker/demo.py
 practical-projects/02-grade-calculator/demo.py
+practical-projects/03-user-registration/demo.py

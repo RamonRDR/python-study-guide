@@ -367,15 +367,24 @@ python-study-guide/
 │   │   └── tests/
 │   │       ├── conftest.py
 │   │       └── test_expense_tracker.py
-│   └── 02-grade-calculator/
+│   ├── 02-grade-calculator/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   ├── demo.py
+│   │   ├── grade_calculator.py
+│   │   └── tests/
+│   │       ├── conftest.py
+│   │       └── test_grade_calculator.py
+│   └── 03-user-registration/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       ├── demo.py
-│       ├── grade_calculator.py
+│       ├── user_registration.py
 │       └── tests/
 │           ├── conftest.py
-│           └── test_grade_calculator.py
+│           └── test_user_registration.py
 ├── program-flow/
 │   ├── README.md
 │   ├── README.pt-BR.md
