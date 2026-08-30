@@ -385,6 +385,7 @@ Entre outras verificações:
 - a maior duração não pode exceder a duração total, com resumos vazios e de um único registro impondo suas restrições naturais de duração;
 - contagens de severidade devem conter cada valor do enum exatamente uma vez;
 - total das severidades deve ser igual ao total de registros;
+- nomes de serviço devem já atender ao mesmo contrato de normalização de espaços dos registros de incidente;
 - chaves de serviço devem ser únicas sem diferenciar capitalização;
 - contagens de serviço devem estar ordenadas deterministicamente;
 - total das contagens de serviço deve ser igual ao total de registros.
@@ -469,7 +470,7 @@ A demonstração contém intencionalmente duas linhas inválidas para tornar o c
 python -m pytest -q practical-projects/04-csv-analyzer/tests
 ```
 
-A suíte inicial contém **75 cenários pytest** cobrindo helpers de parsing, validação direta dos modelos, falhas de schema, CSV malformado, problemas de campo por linha, IDs duplicados, BOM UTF-8, leitura de arquivo, invariantes de agregação, filtros e relatório determinístico.
+A suíte inicial contém **76 cenários pytest** cobrindo helpers de parsing, validação direta dos modelos, falhas de schema, CSV malformado, problemas de campo por linha, IDs duplicados, BOM UTF-8, leitura de arquivo, invariantes de agregação, filtros e relatório determinístico.
 
 ## 28. Caminhos de falha para inspecionar manualmente
 

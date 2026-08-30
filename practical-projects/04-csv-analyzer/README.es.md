@@ -385,6 +385,7 @@ Entre otras comprobaciones:
 - la mayor duración no puede superar la duración total, y los resúmenes vacíos o de un solo registro aplican sus restricciones naturales de duración;
 - los conteos de severidad deben contener cada valor del enum exactamente una vez;
 - el total de severidades debe ser igual al total de registros;
+- los nombres de servicio deben cumplir previamente el mismo contrato de normalización de espacios que los registros de incidente;
 - las claves de servicio deben ser únicas sin distinguir capitalización;
 - los conteos de servicio deben estar ordenados de manera determinista;
 - el total de conteos de servicio debe ser igual al total de registros.
@@ -469,7 +470,7 @@ La demostración contiene intencionalmente dos filas inválidas para hacer visib
 python -m pytest -q practical-projects/04-csv-analyzer/tests
 ```
 
-La suite inicial contiene **75 escenarios pytest** que cubren helpers de parsing, validación directa de modelos, fallos de schema, CSV malformado, problemas de campo por fila, IDs duplicados, BOM UTF-8, lectura de archivos, invariantes de agregación, filtros e informe determinista.
+La suite inicial contiene **76 escenarios pytest** que cubren helpers de parsing, validación directa de modelos, fallos de schema, CSV malformado, problemas de campo por fila, IDs duplicados, BOM UTF-8, lectura de archivos, invariantes de agregación, filtros e informe determinista.
 
 ## 28. Caminos de fallo para inspeccionar manualmente
 

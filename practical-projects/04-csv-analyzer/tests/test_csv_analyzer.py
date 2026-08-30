@@ -536,3 +536,22 @@ def test_incident_summary_rejects_impossible_longest_duration():
             severity_counts,
             (("Portal", 2),),
         )
+
+
+def test_incident_summary_rejects_non_normalized_service_names():
+    severity_counts = tuple(
+        (severity, 1 if severity is Severity.LOW else 0)
+        for severity in Severity
+    )
+    for service in ("   ", " Portal "):
+        with pytest.raises(ValueError):
+            IncidentSummary(
+                1,
+                1,
+                0,
+                5,
+                Decimal("5.00"),
+                5,
+                severity_counts,
+                ((service, 1),),
+            )

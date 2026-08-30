@@ -385,6 +385,7 @@ Among other checks:
 - longest duration cannot exceed total duration, with empty and one-record summaries enforcing their obvious duration constraints;
 - severity counts must contain every enum value exactly once;
 - severity totals must equal total records;
+- service names must already satisfy the same whitespace normalization contract as incident records;
 - service keys must be unique case-insensitively;
 - service counts must be deterministically sorted;
 - service totals must equal total records.
@@ -469,7 +470,7 @@ The demo intentionally contains two invalid rows so rejection behavior is visibl
 python -m pytest -q practical-projects/04-csv-analyzer/tests
 ```
 
-The initial suite contains **75 pytest scenarios** covering parsing helpers, direct model validation, schema failures, malformed CSV, field-level row issues, duplicate IDs, UTF-8 BOM handling, file loading, aggregation invariants, filtering, and deterministic reporting.
+The initial suite contains **76 pytest scenarios** covering parsing helpers, direct model validation, schema failures, malformed CSV, field-level row issues, duplicate IDs, UTF-8 BOM handling, file loading, aggregation invariants, filtering, and deterministic reporting.
 
 ## 28. Failure paths to inspect manually
 

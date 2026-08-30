@@ -313,6 +313,13 @@ class IncidentSummary:
             raise TypeError(
                 "service_counts must contain (non-blank str, positive int) pairs"
             )
+        if any(
+            normalize_service(service) != service
+            for service, _ in self.service_counts
+        ):
+            raise ValueError(
+                "service_counts service names must be normalized"
+            )
         service_keys = tuple(
             service.casefold() for service, _ in self.service_counts
         )
