@@ -555,3 +555,41 @@ def test_incident_summary_rejects_non_normalized_service_names():
                 severity_counts,
                 ((service, 1),),
             )
+
+
+def test_incident_summary_enforces_minimum_longest_duration():
+    severity_counts = tuple(
+        (severity, 2 if severity is Severity.LOW else 0)
+        for severity in Severity
+    )
+    with pytest.raises(ValueError, match="too small"):
+        IncidentSummary(
+            2,
+            1,
+            1,
+            10,
+            Decimal("5.00"),
+            1,
+            severity_counts,
+            (("Portal", 2),),
+        )
+
+
+def test_incident_summary_normalizes_average_to_two_decimals():
+    severity_counts = tuple(
+        (severity, 2 if severity is Severity.LOW else 0)
+        for severity in Severity
+    )
+    for average in (Decimal("5"), Decimal("5.0"), Decimal("5.000")):
+        summary = IncidentSummary(
+            2,
+            1,
+            1,
+            10,
+            average,
+            5,
+            severity_counts,
+            (("Portal", 2),),
+        )
+        assert summary.average_duration_minutes == Decimal("5.00")
+        assert str(summary.average_duration_minutes) == "5.00"
