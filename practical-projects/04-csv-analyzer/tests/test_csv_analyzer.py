@@ -500,3 +500,39 @@ def test_incident_summary_rejects_duplicate_service_keys():
             severity_counts,
             (("Portal", 1), ("portal", 1)),
         )
+
+
+def test_incident_summary_rejects_inconsistent_average():
+    severity_counts = tuple(
+        (severity, 1 if severity is Severity.LOW else 0)
+        for severity in Severity
+    )
+    with pytest.raises(ValueError, match="average_duration_minutes must match"):
+        IncidentSummary(
+            1,
+            1,
+            0,
+            5,
+            Decimal("99.00"),
+            5,
+            severity_counts,
+            (("Portal", 1),),
+        )
+
+
+def test_incident_summary_rejects_impossible_longest_duration():
+    severity_counts = tuple(
+        (severity, 2 if severity is Severity.LOW else 0)
+        for severity in Severity
+    )
+    with pytest.raises(ValueError, match="cannot exceed"):
+        IncidentSummary(
+            2,
+            1,
+            1,
+            5,
+            Decimal("2.50"),
+            6,
+            severity_counts,
+            (("Portal", 2),),
+        )

@@ -245,6 +245,39 @@ class IncidentSummary:
             raise TypeError("average_duration_minutes must be a Decimal")
         if self.average_duration_minutes < 0:
             raise ValueError("average_duration_minutes cannot be negative")
+        if self.total_records == 0:
+            expected_average = Decimal("0.00")
+            if self.total_duration_minutes != 0 or self.longest_duration_minutes != 0:
+                raise ValueError(
+                    "empty summaries must have zero total and longest duration"
+                )
+        else:
+            hundredths, remainder = divmod(
+                self.total_duration_minutes * 100,
+                self.total_records,
+            )
+            if remainder * 2 >= self.total_records:
+                hundredths += 1
+            expected_average = Decimal(
+                f"{hundredths // 100}.{hundredths % 100:02d}"
+            )
+            if self.longest_duration_minutes > self.total_duration_minutes:
+                raise ValueError(
+                    "longest_duration_minutes cannot exceed total_duration_minutes"
+                )
+            if (
+                self.total_records == 1
+                and self.longest_duration_minutes != self.total_duration_minutes
+            ):
+                raise ValueError(
+                    "a one-record summary must have matching total and longest duration"
+                )
+
+        if self.average_duration_minutes != expected_average:
+            raise ValueError(
+                "average_duration_minutes must match total_duration_minutes "
+                "and total_records"
+            )
         if not isinstance(self.severity_counts, tuple) or any(
             not isinstance(item, tuple)
             or len(item) != 2

@@ -381,6 +381,8 @@ Não é necessário gerar uma exceção de divisão por zero.
 Entre outras verificações:
 
 - resolvidos + não resolvidos deve ser igual ao total;
+- a duração média deve corresponder à duração total dividida pela quantidade de registros;
+- a maior duração não pode exceder a duração total, com resumos vazios e de um único registro impondo suas restrições naturais de duração;
 - contagens de severidade devem conter cada valor do enum exatamente uma vez;
 - total das severidades deve ser igual ao total de registros;
 - chaves de serviço devem ser únicas sem diferenciar capitalização;
@@ -467,7 +469,7 @@ A demonstração contém intencionalmente duas linhas inválidas para tornar o c
 python -m pytest -q practical-projects/04-csv-analyzer/tests
 ```
 
-A suíte inicial contém **73 cenários pytest** cobrindo helpers de parsing, validação direta dos modelos, falhas de schema, CSV malformado, problemas de campo por linha, IDs duplicados, BOM UTF-8, leitura de arquivo, invariantes de agregação, filtros e relatório determinístico.
+A suíte inicial contém **75 cenários pytest** cobrindo helpers de parsing, validação direta dos modelos, falhas de schema, CSV malformado, problemas de campo por linha, IDs duplicados, BOM UTF-8, leitura de arquivo, invariantes de agregação, filtros e relatório determinístico.
 
 ## 28. Caminhos de falha para inspecionar manualmente
 

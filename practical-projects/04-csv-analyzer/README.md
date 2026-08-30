@@ -381,6 +381,8 @@ No division-by-zero exception is needed.
 Among other checks:
 
 - resolved + unresolved must equal total;
+- average duration must match total duration divided by the record count;
+- longest duration cannot exceed total duration, with empty and one-record summaries enforcing their obvious duration constraints;
 - severity counts must contain every enum value exactly once;
 - severity totals must equal total records;
 - service keys must be unique case-insensitively;
@@ -467,7 +469,7 @@ The demo intentionally contains two invalid rows so rejection behavior is visibl
 python -m pytest -q practical-projects/04-csv-analyzer/tests
 ```
 
-The initial suite contains **73 pytest scenarios** covering parsing helpers, direct model validation, schema failures, malformed CSV, field-level row issues, duplicate IDs, UTF-8 BOM handling, file loading, aggregation invariants, filtering, and deterministic reporting.
+The initial suite contains **75 pytest scenarios** covering parsing helpers, direct model validation, schema failures, malformed CSV, field-level row issues, duplicate IDs, UTF-8 BOM handling, file loading, aggregation invariants, filtering, and deterministic reporting.
 
 ## 28. Failure paths to inspect manually
 

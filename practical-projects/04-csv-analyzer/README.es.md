@@ -381,6 +381,8 @@ No es necesario generar una excepción por división entre cero.
 Entre otras comprobaciones:
 
 - resueltos + no resueltos debe ser igual al total;
+- la duración promedio debe corresponder a la duración total dividida por la cantidad de registros;
+- la mayor duración no puede superar la duración total, y los resúmenes vacíos o de un solo registro aplican sus restricciones naturales de duración;
 - los conteos de severidad deben contener cada valor del enum exactamente una vez;
 - el total de severidades debe ser igual al total de registros;
 - las claves de servicio deben ser únicas sin distinguir capitalización;
@@ -467,7 +469,7 @@ La demostración contiene intencionalmente dos filas inválidas para hacer visib
 python -m pytest -q practical-projects/04-csv-analyzer/tests
 ```
 
-La suite inicial contiene **73 escenarios pytest** que cubren helpers de parsing, validación directa de modelos, fallos de schema, CSV malformado, problemas de campo por fila, IDs duplicados, BOM UTF-8, lectura de archivos, invariantes de agregación, filtros e informe determinista.
+La suite inicial contiene **75 escenarios pytest** que cubren helpers de parsing, validación directa de modelos, fallos de schema, CSV malformado, problemas de campo por fila, IDs duplicados, BOM UTF-8, lectura de archivos, invariantes de agregación, filtros e informe determinista.
 
 ## 28. Caminos de fallo para inspeccionar manualmente
 
