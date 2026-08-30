@@ -1,0 +1,46 @@
+name: Sync CSV Analyzer test count
+
+on:
+  push:
+    branches:
+      - phase-10-csv-analyzer
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: phase-10-csv-analyzer
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Update localized test counts
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              Path('practical-projects/04-csv-analyzer/README.md'): ('**76 pytest scenarios**', '**78 pytest scenarios**'),
+              Path('practical-projects/04-csv-analyzer/README.pt-BR.md'): ('**76 cenários pytest**', '**78 cenários pytest**'),
+              Path('practical-projects/04-csv-analyzer/README.es.md'): ('**76 escenarios pytest**', '**78 escenarios pytest**'),
+          }
+
+          for path, (old, new) in replacements.items():
+              text = path.read_text(encoding='utf-8')
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'{path}: expected exactly 1 occurrence of {old!r}, found {count}')
+              path.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+      - name: Commit synchronized documentation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add practical-projects/04-csv-analyzer/README.md practical-projects/04-csv-analyzer/README.pt-BR.md practical-projects/04-csv-analyzer/README.es.md
+          git diff --cached --check
+          git commit -m "Synchronize CSV Analyzer test count"
+          git push origin HEAD:phase-10-csv-analyzer
