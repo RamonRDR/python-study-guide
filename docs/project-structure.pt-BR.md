@@ -355,6 +355,18 @@ python-study-guide/
 │           ├── conversion_basics.py
 │           └── conversion_surprises.py
 ├── practical-projects/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   └── 01-expense-tracker/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       ├── demo.py
+│       ├── expense_tracker.py
+│       └── tests/
+│           ├── conftest.py
+│           └── test_expense_tracker.py
 ├── program-flow/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -571,7 +583,7 @@ python-study-guide/
 - `external-libraries/`: trilha completa da Fase 9 para pacotes de terceiros. Contém capítulos multilíngues revisados de pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x e pytest 9.1.x, com vinte exemplos executáveis determinísticos no total. A fase cobre transformações tabulares, automação de workbooks do Excel, clientes HTTP/API e contratos de testes automatizados; a Fase 10 de projetos práticos vem a seguir.
 - `functions/`: trilha completa da Fase 5. Os Capítulos 01–09 cobrem definição e chamada de funções, entradas obrigatórias, valores retornados, escopo e busca de nomes, type hints para interfaces de funções, valores padrão incluindo avaliação no momento da definição e segurança com padrões mutáveis, coleta de argumentos posicionais e nomeados de quantidade variável com `*args` e `**kwargs`, composição por funções auxiliares e coordenadoras com dependências explícitas e grafos simples de chamadas e rastreamento explícito do fluxo de dados entre chamadas, incluindo vínculos de parâmetros, reatribuição versus mutação, `None`, resultados em tupla e passagens por `return`, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos.
 - `fundamentals/`: trilha completa da Fase 1. Seus seis capítulos ensinam como o Python executa um programa, como usar `print()` e `input()`, como funcionam atribuição e nomes, como reconhecer e inspecionar tipos de dados embutidos comuns e como converter valores compatíveis de forma deliberada, com explicações multilíngues alinhadas e exemplos executáveis.
-- `practical-projects/`: futuros projetos pequenos combinando diversos conceitos.
+- `practical-projects/`: espaço de projetos práticos da Fase 10. O Projeto 01, Controle de Despesas, integra modelagem de dados validada, dinheiro exato com `Decimal`, persistência JSON, exportação CSV, uma demo determinística e cobertura automatizada com pytest.
 - `program-flow/`: trilha completa da Fase 4. Os Capítulos 01–08 ensinam condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, ramificação condicional com `if`, `elif` e `else`, correspondência de padrões estruturais, repetição guiada por iteráveis com `for`, progressões numéricas com `range()`, iteração com posição usando `enumerate()`, iteração paralela com `zip()` incluindo validação explícita de comprimentos iguais com `strict=True`, repetição guiada por estado com `while`, controle deliberado de loops com `break`, `continue` e `else` de loop e como escolher e combinar ferramentas de fluxo do programa de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
 - `standard-library/`: trilha completa da Fase 8. Os Capítulos 01–09 cobrem fronteiras de filesystem com `pathlib`, modelagem de data/hora com `datetime`, contratos avançados de `json` e `csv`, `logging`, `collections` especializadas, `itertools`, `decimal` e contratos de `os`/`shutil` para estado do ambiente, travessia, metadados, cópia, movimentação, remoção recursiva, capacidades de plataforma e segurança de archives, em inglês, português do Brasil e espanhol com exemplos executáveis determinísticos.
