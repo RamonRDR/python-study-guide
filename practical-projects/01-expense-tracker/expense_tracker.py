@@ -2,23 +2,29 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from pathlib import Path
 from typing import Iterable, Mapping
 
 CENT = Decimal("0.01")
+DATE_TEXT_PATTERN = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
 
 
 def parse_date(value: date | str) -> date:
-    """Return a date from a date object or ISO YYYY-MM-DD text."""
+    """Return a plain date from a date object or strict YYYY-MM-DD text."""
+    if isinstance(value, datetime):
+        raise ValueError("date must not include a time component")
     if isinstance(value, date):
         return value
+    if not isinstance(value, str) or DATE_TEXT_PATTERN.fullmatch(value) is None:
+        raise ValueError("date must use YYYY-MM-DD")
 
     try:
         return date.fromisoformat(value)
-    except (TypeError, ValueError) as exc:
+    except ValueError as exc:
         raise ValueError("date must use YYYY-MM-DD") from exc
 
 
@@ -46,9 +52,13 @@ def parse_amount(value: Decimal | str | int) -> Decimal:
         raise ValueError("amount must be greater than zero")
 
     try:
-        return amount.quantize(CENT, rounding=ROUND_HALF_UP)
+        rounded = amount.quantize(CENT, rounding=ROUND_HALF_UP)
     except InvalidOperation as exc:
         raise ValueError("amount cannot be represented with two decimal places") from exc
+
+    if rounded <= 0:
+        raise ValueError("amount must round to at least 0.01")
+    return rounded
 
 
 @dataclass(frozen=True, slots=True)
