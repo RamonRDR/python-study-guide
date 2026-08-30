@@ -17,7 +17,7 @@ La Fase 10 combina conceptos de las fases anteriores en flujos completos y compr
 ## Ruta de proyectos
 
 1. ✅ [Control de Gastos](01-expense-tracker/README.es.md)
-2. ⏳ Calculadora de Notas
+2. ✅ [Calculadora de Notas](02-grade-calculator/README.es.md)
 3. ⏳ Registro de Usuarios
 4. ⏳ Analizador CSV
 5. ⏳ Generador de Informes
@@ -38,4 +38,4 @@ Cada proyecto debe incluir:
 - desafíos de extensión;
 - discusión de portafolio.
 
-El Proyecto 01 establece el patrón con registros monetarios validados, aritmética exacta con `Decimal`, persistencia JSON, exportación CSV y una suite pytest.
+El Proyecto 01 establece el patrón de integración con registros monetarios validados y persistencia. El Proyecto 02 amplía ese patrón con políticas de calificación configurables, agregación ponderada exacta, estados parcial/final explícitos, informe estructurado y cobertura pytest centrada en límites.

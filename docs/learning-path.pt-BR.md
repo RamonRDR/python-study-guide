@@ -131,7 +131,7 @@ A Fase 9 está concluída com quatro capítulos revisados. A sequência avança 
 [Abrir o índice da seção Projetos Práticos](../practical-projects/README.pt-BR.md)
 
 1. ✅ [Controle de Despesas](../practical-projects/01-expense-tracker/README.pt-BR.md)
-2. ⏳ Calculadora de Notas
+2. ✅ [Calculadora de Notas](../practical-projects/02-grade-calculator/README.pt-BR.md)
 3. ⏳ Cadastro de Usuários
 4. ⏳ Analisador CSV
 5. ⏳ Gerador de Relatórios
@@ -139,7 +139,7 @@ A Fase 9 está concluída com quatro capítulos revisados. A sequência avança 
 7. ⏳ Fluxo Fictício de Conciliação
 8. ⏳ Fluxo Simulado de Automação
 
-A Fase 10 está em andamento. O Projeto 01 integra modelagem de dados validada, dinheiro exato com `Decimal`, coleções, persistência JSON, exportação CSV, manipulação determinística de arquivos temporários e cobertura automatizada com pytest em um fluxo completo.
+A Fase 10 está em andamento. O Projeto 01 integra modelagem de dados validada, dinheiro exato com `Decimal`, coleções, persistência JSON, exportação CSV, manipulação determinística de arquivos temporários e cobertura automatizada com pytest. O Projeto 02 adiciona políticas de notas configuráveis, agregação ponderada exata, estado de progresso versus final explícito, relatório estruturado e testes focados em fronteiras.
 
 ## Navegação útil
 

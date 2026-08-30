@@ -168,7 +168,7 @@ Phase 9 is complete. Chapter 01 introduces pandas 3.0.x for labeled tabular data
 See the [Practical Projects section index](../practical-projects/README.md).
 
 - [x] [Expense Tracker](../practical-projects/01-expense-tracker/README.md)
-- [ ] Grade Calculator
+- [x] [Grade Calculator](../practical-projects/02-grade-calculator/README.md)
 - [ ] User Registration
 - [ ] CSV Analyzer
 - [ ] Report Generator
@@ -176,7 +176,7 @@ See the [Practical Projects section index](../practical-projects/README.md).
 - [ ] Fictional Reconciliation Workflow
 - [ ] Simulated Automation Flow
 
-Project 01 establishes the Phase 10 contract with explicit requirements, validated data modeling, exact `Decimal` money, JSON persistence, CSV export, deterministic demonstration, automated pytest coverage, extension challenges, and portfolio discussion.
+Project 01 establishes the Phase 10 contract with explicit requirements, validated data modeling, exact `Decimal` money, persistence, deterministic demonstration, automated pytest coverage, extension challenges, and portfolio discussion. Project 02 extends the contract with configurable grading rules, exact weighted aggregation, explicit partial/final reporting, and boundary-focused validation.
 
 Each project should include:
 

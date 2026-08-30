@@ -168,7 +168,7 @@ A Fase 9 está concluída. O Capítulo 01 introduz pandas 3.0.x para dados tabul
 Veja o [índice da seção Projetos Práticos](../practical-projects/README.pt-BR.md).
 
 - [x] [Controle de Despesas](../practical-projects/01-expense-tracker/README.pt-BR.md)
-- [ ] Calculadora de Notas
+- [x] [Calculadora de Notas](../practical-projects/02-grade-calculator/README.pt-BR.md)
 - [ ] Cadastro de Usuários
 - [ ] Analisador de CSV
 - [ ] Gerador de Relatórios
@@ -176,7 +176,7 @@ Veja o [índice da seção Projetos Práticos](../practical-projects/README.pt-B
 - [ ] Fluxo Fictício de Conciliação
 - [ ] Fluxo Simulado de Automação
 
-O Projeto 01 estabelece o contrato da Fase 10 com requisitos explícitos, modelagem de dados validada, dinheiro exato com `Decimal`, persistência JSON, exportação CSV, demonstração determinística, cobertura automatizada com pytest, desafios de extensão e discussão de portfólio.
+O Projeto 01 estabelece o contrato da Fase 10 com requisitos explícitos, modelagem de dados validada, dinheiro exato com `Decimal`, persistência, demonstração determinística, cobertura automatizada com pytest, desafios de extensão e discussão de portfólio. O Projeto 02 amplia o contrato com regras de notas configuráveis, agregação ponderada exata, relatório parcial/final explícito e validação focada em fronteiras.
 
 Cada projeto deve incluir:
 
