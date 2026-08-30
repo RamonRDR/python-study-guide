@@ -20,6 +20,20 @@ def test_parse_amount_rejects_invalid_values(value: str) -> None:
         parse_amount(value)
 
 
+def test_parse_amount_normalizes_quantize_failure() -> None:
+    with pytest.raises(ValueError, match="two decimal places"):
+        parse_amount("1" + "0" * 100)
+
+
+def test_invalid_add_does_not_mutate_tracker() -> None:
+    tracker = ExpenseTracker()
+
+    with pytest.raises(ValueError):
+        tracker.add("2026-08-29", "Lunch", "Food", "0")
+
+    assert tracker.expenses == ()
+
+
 def test_tracker_totals_and_case_insensitive_filtering() -> None:
     tracker = ExpenseTracker()
     tracker.add("2026-08-28", "Bus", "Transport", "12.00")
@@ -50,6 +64,17 @@ def test_load_json_rejects_wrong_top_level_shape(tmp_path) -> None:
     path.write_text('{"amount": "10.00"}', encoding="utf-8")
 
     with pytest.raises(ValueError, match="JSON list"):
+        ExpenseTracker.load_json(path)
+
+
+def test_load_json_rejects_missing_required_field(tmp_path) -> None:
+    path = tmp_path / "expenses.json"
+    path.write_text(
+        '[{"spent_on":"2026-08-29","description":"Book","category":"Study"}]',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="amount"):
         ExpenseTracker.load_json(path)
 
 
