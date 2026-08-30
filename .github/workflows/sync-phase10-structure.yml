@@ -1,0 +1,107 @@
+name: Sync Phase 10 structure
+
+on:
+  push:
+    branches:
+      - phase-10-expense-tracker
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v6
+        with:
+          ref: phase-10-expense-tracker
+
+      - name: Synchronize structure documentation and example manifest
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          subtree = """├── practical-projects/
+          │   ├── README.md
+          │   ├── README.pt-BR.md
+          │   ├── README.es.md
+          │   └── 01-expense-tracker/
+          │       ├── README.md
+          │       ├── README.pt-BR.md
+          │       ├── README.es.md
+          │       ├── demo.py
+          │       ├── expense_tracker.py
+          │       └── tests/
+          │           ├── conftest.py
+          │           └── test_expense_tracker.py"""
+
+          descriptions = {
+              "docs/project-structure.en.md": (
+                  "- `practical-projects/`: Phase 10 practical-project workspace. "
+                  "Project 01, Expense Tracker, integrates validated data modeling, exact "
+                  "`Decimal` money, JSON persistence, CSV export, a deterministic demo, "
+                  "and automated pytest coverage."
+              ),
+              "docs/project-structure.pt-BR.md": (
+                  "- `practical-projects/`: espaço de projetos práticos da Fase 10. "
+                  "O Projeto 01, Controle de Despesas, integra modelagem de dados validada, "
+                  "dinheiro exato com `Decimal`, persistência JSON, exportação CSV, uma demo "
+                  "determinística e cobertura automatizada com pytest."
+              ),
+              "docs/project-structure.es.md": (
+                  "- `practical-projects/`: espacio de proyectos prácticos de la Fase 10. "
+                  "El Proyecto 01, Control de Gastos, integra modelado de datos validado, "
+                  "dinero exacto con `Decimal`, persistencia JSON, exportación CSV, una demo "
+                  "determinista y cobertura automatizada con pytest."
+              ),
+          }
+
+          for filename, description in descriptions.items():
+              path = Path(filename)
+              text = path.read_text(encoding="utf-8")
+              marker = "├── practical-projects/\n├── program-flow/"
+              if marker not in text:
+                  raise SystemExit(f"missing practical-projects tree marker in {filename}")
+              text = text.replace(
+                  marker,
+                  f"{subtree}\n├── program-flow/",
+                  1,
+              )
+              text, count = re.subn(
+                  r"^- `practical-projects/`:.*$",
+                  description,
+                  text,
+                  count=1,
+                  flags=re.MULTILINE,
+              )
+              if count != 1:
+                  raise SystemExit(f"missing practical-projects guide entry in {filename}")
+              path.write_text(text, encoding="utf-8")
+
+          manifest = Path("scripts/example_manifest.txt")
+          target = "practical-projects/01-expense-tracker/demo.py"
+          manifest_text = manifest.read_text(encoding="utf-8")
+          entries = manifest_text.splitlines()
+          if target not in entries:
+              manifest.write_text(
+                  manifest_text.rstrip("\n") + "\n" + target + "\n",
+                  encoding="utf-8",
+              )
+          PY
+
+      - name: Commit synchronized files
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/project-structure.en.md docs/project-structure.pt-BR.md docs/project-structure.es.md scripts/example_manifest.txt
+          git commit -m "Synchronize Phase 10 project structure"
+          git push origin HEAD:phase-10-expense-tracker
