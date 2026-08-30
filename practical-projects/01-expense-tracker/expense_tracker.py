@@ -61,6 +61,32 @@ def parse_amount(value: Decimal | str | int) -> Decimal:
     return rounded
 
 
+def _amount_to_cents(amount: Decimal) -> int:
+    """Convert a validated two-decimal amount to an exact integer cent count."""
+    decimal_tuple = amount.as_tuple()
+    if decimal_tuple.exponent != -2:
+        raise ValueError("normalized amount must have exactly two decimal places")
+
+    coefficient = 0
+    for digit in decimal_tuple.digits:
+        coefficient = coefficient * 10 + digit
+
+    return -coefficient if decimal_tuple.sign else coefficient
+
+
+def _cents_to_amount(cents: int) -> Decimal:
+    """Build an exact two-decimal Decimal without using arithmetic context."""
+    digits = tuple(int(digit) for digit in str(abs(cents)))
+    sign = 1 if cents < 0 else 0
+    return Decimal((sign, digits, -2))
+
+
+def _sum_amounts(amounts: Iterable[Decimal]) -> Decimal:
+    """Sum validated amounts exactly by aggregating arbitrary-precision cents."""
+    total_cents = sum(_amount_to_cents(amount) for amount in amounts)
+    return _cents_to_amount(total_cents)
+
+
 @dataclass(frozen=True, slots=True)
 class Expense:
     """One validated expense record."""
@@ -155,18 +181,24 @@ class ExpenseTracker:
 
     def total(self, category: str | None = None) -> Decimal:
         selected = self._expenses if category is None else self.filter_by_category(category)
-        return sum((expense.amount for expense in selected), start=Decimal("0.00"))
+        return _sum_amounts(expense.amount for expense in selected)
 
     def totals_by_category(self) -> dict[str, Decimal]:
-        totals: dict[str, Decimal] = {}
+        totals_in_cents: dict[str, int] = {}
         canonical_names: dict[str, str] = {}
 
         for expense in self._expenses:
             key = expense.category.casefold()
             display_name = canonical_names.setdefault(key, expense.category)
-            totals[display_name] = totals.get(display_name, Decimal("0.00")) + expense.amount
+            totals_in_cents[display_name] = (
+                totals_in_cents.get(display_name, 0)
+                + _amount_to_cents(expense.amount)
+            )
 
-        return totals
+        return {
+            category: _cents_to_amount(total_cents)
+            for category, total_cents in totals_in_cents.items()
+        }
 
     def save_json(self, path: str | Path) -> Path:
         target = Path(path)
