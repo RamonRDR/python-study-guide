@@ -74,11 +74,11 @@ Explicações detalhadas:
 
 ## Status atual
 
-A fundação do projeto e as **Fases 1–9 estão concluídas**. A **Fase 9: Bibliotecas Externas** agora contém quatro capítulos revisados da trilha: [`pandas`](../../external-libraries/01-pandas/README.pt-BR.md), [`openpyxl`](../../external-libraries/02-openpyxl/README.pt-BR.md), [`requests`](../../external-libraries/03-requests/README.pt-BR.md) e [`pytest`](../../external-libraries/04-pytest/README.pt-BR.md).
+A fundação do projeto e as **Fases 1–9 estão concluídas**. A **Fase 10: Projetos Práticos está em andamento** com o primeiro projeto integrado, o [Controle de Despesas](../../practical-projects/01-expense-tracker/README.pt-BR.md).
 
-A fase concluída cobre transformação de dados tabulares, automação de workbooks do Excel, consumo HTTP/API e testes automatizados. O CI do repositório instala o contrato explícito de terceiros em [`requirements-external.txt`](../../requirements-external.txt) antes de executar os exemplos aprovados.
+O Projeto 01 combina modelagem de dados validada, dinheiro exato com `Decimal`, coleções, persistência JSON, exportação CSV e cobertura automatizada com pytest. O CI do repositório agora também executa a árvore de testes dos projetos práticos, além dos gates de qualidade e exemplos aprovados já existentes.
 
-A próxima etapa planejada do currículo é **Fase 10: Projetos Práticos**. Consulte o [índice de Bibliotecas Externas](../../external-libraries/README.pt-BR.md), o [roadmap](../roadmap.pt-BR.md) ou a [trilha completa de estudos](../learning-path.pt-BR.md) para o registro da Fase 9 concluída.
+Consulte o [índice de Projetos Práticos](../../practical-projects/README.pt-BR.md), o [roadmap](../roadmap.pt-BR.md) ou a [trilha completa de estudos](../learning-path.pt-BR.md) para o status atual do currículo.
 
 ## Identidade visual
 
