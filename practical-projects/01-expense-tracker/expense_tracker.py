@@ -45,7 +45,10 @@ def parse_amount(value: Decimal | str | int) -> Decimal:
     if amount <= 0:
         raise ValueError("amount must be greater than zero")
 
-    return amount.quantize(CENT, rounding=ROUND_HALF_UP)
+    try:
+        return amount.quantize(CENT, rounding=ROUND_HALF_UP)
+    except InvalidOperation as exc:
+        raise ValueError("amount cannot be represented with two decimal places") from exc
 
 
 @dataclass(frozen=True, slots=True)
