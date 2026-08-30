@@ -5,7 +5,7 @@ import json
 import re
 from dataclasses import dataclass
 from datetime import date, datetime
-from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
+from decimal import Context, Decimal, InvalidOperation, ROUND_HALF_UP
 from pathlib import Path
 from typing import Iterable, Mapping
 
@@ -51,8 +51,16 @@ def parse_amount(value: Decimal | str | int) -> Decimal:
     if amount <= 0:
         raise ValueError("amount must be greater than zero")
 
+    decimal_tuple = amount.as_tuple()
+    precision = max(
+        28,
+        len(decimal_tuple.digits),
+        amount.adjusted() + 3,
+    )
+    amount_context = Context(prec=precision, rounding=ROUND_HALF_UP)
+
     try:
-        rounded = amount.quantize(CENT, rounding=ROUND_HALF_UP)
+        rounded = amount.quantize(CENT, context=amount_context)
     except InvalidOperation as exc:
         raise ValueError("amount cannot be represented with two decimal places") from exc
 
