@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date, datetime
 from decimal import Decimal
 
 import pytest
@@ -13,6 +13,16 @@ def test_expense_create_normalizes_fields() -> None:
     assert expense.description == "Lunch"
     assert expense.category == "Food"
     assert expense.amount == Decimal("25.91")
+
+
+def test_direct_expense_constructor_enforces_validation() -> None:
+    with pytest.raises(ValueError, match="greater than zero"):
+        Expense(
+            spent_on=date(2026, 8, 29),
+            description="Lunch",
+            category="Food",
+            amount=Decimal("-1.00"),
+        )
 
 
 @pytest.mark.parametrize("value", ["20260829", "2026-W35-6", "2026-8-29"])
