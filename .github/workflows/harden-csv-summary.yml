@@ -35,51 +35,45 @@ jobs:
               file_path.write_text(text.replace(old, new, 1), encoding="utf-8")
 
           code_path = "practical-projects/04-csv-analyzer/csv_analyzer.py"
-          old_code = '''        if not isinstance(self.average_duration_minutes, Decimal):
-              raise TypeError("average_duration_minutes must be a Decimal")
-          if self.average_duration_minutes < 0:
-              raise ValueError("average_duration_minutes cannot be negative")
-          if not isinstance(self.severity_counts, tuple) or any(
-          '''
-          new_code = '''        if not isinstance(self.average_duration_minutes, Decimal):
-              raise TypeError("average_duration_minutes must be a Decimal")
-          if self.average_duration_minutes < 0:
-              raise ValueError("average_duration_minutes cannot be negative")
-          if self.total_records == 0:
-              expected_average = Decimal("0.00")
-              if self.total_duration_minutes != 0 or self.longest_duration_minutes != 0:
-                  raise ValueError(
-                      "empty summaries must have zero total and longest duration"
-                  )
-          else:
-              hundredths, remainder = divmod(
-                  self.total_duration_minutes * 100,
-                  self.total_records,
-              )
-              if remainder * 2 >= self.total_records:
-                  hundredths += 1
-              expected_average = Decimal(
-                  f"{hundredths // 100}.{hundredths % 100:02d}"
-              )
-              if self.longest_duration_minutes > self.total_duration_minutes:
-                  raise ValueError(
-                      "longest_duration_minutes cannot exceed total_duration_minutes"
-                  )
-              if (
-                  self.total_records == 1
-                  and self.longest_duration_minutes != self.total_duration_minutes
-              ):
-                  raise ValueError(
-                      "a one-record summary must have matching total and longest duration"
-                  )
-
-          if self.average_duration_minutes != expected_average:
-              raise ValueError(
-                  "average_duration_minutes must match total_duration_minutes "
-                  "and total_records"
-              )
-          if not isinstance(self.severity_counts, tuple) or any(
-          '''
+          old_code = (
+              '        if self.average_duration_minutes < 0:\n'
+              '            raise ValueError("average_duration_minutes cannot be negative")\n'
+          )
+          new_code = old_code + (
+              '        if self.total_records == 0:\n'
+              '            expected_average = Decimal("0.00")\n'
+              '            if self.total_duration_minutes != 0 or self.longest_duration_minutes != 0:\n'
+              '                raise ValueError(\n'
+              '                    "empty summaries must have zero total and longest duration"\n'
+              '                )\n'
+              '        else:\n'
+              '            hundredths, remainder = divmod(\n'
+              '                self.total_duration_minutes * 100,\n'
+              '                self.total_records,\n'
+              '            )\n'
+              '            if remainder * 2 >= self.total_records:\n'
+              '                hundredths += 1\n'
+              '            expected_average = Decimal(\n'
+              '                f"{hundredths // 100}.{hundredths % 100:02d}"\n'
+              '            )\n'
+              '            if self.longest_duration_minutes > self.total_duration_minutes:\n'
+              '                raise ValueError(\n'
+              '                    "longest_duration_minutes cannot exceed total_duration_minutes"\n'
+              '                )\n'
+              '            if (\n'
+              '                self.total_records == 1\n'
+              '                and self.longest_duration_minutes != self.total_duration_minutes\n'
+              '            ):\n'
+              '                raise ValueError(\n'
+              '                    "a one-record summary must have matching total and longest duration"\n'
+              '                )\n'
+              '\n'
+              '        if self.average_duration_minutes != expected_average:\n'
+              '            raise ValueError(\n'
+              '                "average_duration_minutes must match total_duration_minutes "\n'
+              '                "and total_records"\n'
+              '            )\n'
+          )
           replace_once(code_path, old_code, new_code)
 
           test_path = Path(
@@ -89,54 +83,43 @@ jobs:
           marker = "def test_incident_summary_rejects_inconsistent_average():"
           if marker in tests:
               raise RuntimeError("summary invariant regressions already exist")
-          tests += '''
-
-
-          def test_incident_summary_rejects_inconsistent_average():
-              severity_counts = tuple(
-                  (severity, 1 if severity is Severity.LOW else 0)
-                  for severity in Severity
-              )
-              with pytest.raises(ValueError, match="average_duration_minutes must match"):
-                  IncidentSummary(
-                      1,
-                      1,
-                      0,
-                      5,
-                      Decimal("99.00"),
-                      5,
-                      severity_counts,
-                      (("Portal", 1),),
-                  )
-
-
-          def test_incident_summary_rejects_impossible_longest_duration():
-              severity_counts = tuple(
-                  (severity, 2 if severity is Severity.LOW else 0)
-                  for severity in Severity
-              )
-              with pytest.raises(ValueError, match="cannot exceed"):
-                  IncidentSummary(
-                      2,
-                      1,
-                      1,
-                      5,
-                      Decimal("2.50"),
-                      6,
-                      severity_counts,
-                      (("Portal", 2),),
-                  )
-          '''
-          tests = tests.replace("\n          def test_incident_summary", "\ndef test_incident_summary")
-          tests = tests.replace("\n              severity_counts", "\n    severity_counts")
-          tests = tests.replace("\n                  (severity", "\n        (severity")
-          tests = tests.replace("\n                  for severity", "\n        for severity")
-          tests = tests.replace("\n              )", "\n    )")
-          tests = tests.replace("\n              with pytest", "\n    with pytest")
-          tests = tests.replace("\n                  IncidentSummary", "\n        IncidentSummary")
-          tests = tests.replace("\n                      ", "\n            ")
-          tests = tests.replace("\n                  )", "\n        )")
-          test_path.write_text(tests, encoding="utf-8")
+          test_block = (
+              '\n\n'
+              'def test_incident_summary_rejects_inconsistent_average():\n'
+              '    severity_counts = tuple(\n'
+              '        (severity, 1 if severity is Severity.LOW else 0)\n'
+              '        for severity in Severity\n'
+              '    )\n'
+              '    with pytest.raises(ValueError, match="average_duration_minutes must match"):\n'
+              '        IncidentSummary(\n'
+              '            1,\n'
+              '            1,\n'
+              '            0,\n'
+              '            5,\n'
+              '            Decimal("99.00"),\n'
+              '            5,\n'
+              '            severity_counts,\n'
+              '            (("Portal", 1),),\n'
+              '        )\n'
+              '\n\n'
+              'def test_incident_summary_rejects_impossible_longest_duration():\n'
+              '    severity_counts = tuple(\n'
+              '        (severity, 2 if severity is Severity.LOW else 0)\n'
+              '        for severity in Severity\n'
+              '    )\n'
+              '    with pytest.raises(ValueError, match="cannot exceed"):\n'
+              '        IncidentSummary(\n'
+              '            2,\n'
+              '            1,\n'
+              '            1,\n'
+              '            5,\n'
+              '            Decimal("2.50"),\n'
+              '            6,\n'
+              '            severity_counts,\n'
+              '            (("Portal", 2),),\n'
+              '        )\n'
+          )
+          test_path.write_text(tests + test_block, encoding="utf-8")
 
           replace_once(
               "practical-projects/04-csv-analyzer/README.md",
