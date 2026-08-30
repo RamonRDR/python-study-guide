@@ -76,6 +76,19 @@ def test_tracker_totals_and_case_insensitive_filtering() -> None:
     }
 
 
+def test_large_amount_aggregation_preserves_every_cent() -> None:
+    tracker = ExpenseTracker()
+    large_amount = "99999999999999999999999999.99"
+    expected_total = Decimal("199999999999999999999999999.98")
+
+    tracker.add("2026-08-28", "License A", "Software", large_amount)
+    tracker.add("2026-08-29", "License B", "software", large_amount)
+
+    assert tracker.total() == expected_total
+    assert tracker.total("SOFTWARE") == expected_total
+    assert tracker.totals_by_category() == {"Software": expected_total}
+
+
 def test_json_round_trip(tmp_path) -> None:
     tracker = ExpenseTracker()
     tracker.add("2026-08-29", "Book", "Study", "79.90")
