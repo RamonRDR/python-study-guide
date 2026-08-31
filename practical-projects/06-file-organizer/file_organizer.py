@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from enum import Enum
 from os import PathLike
@@ -319,6 +320,29 @@ def _preflight_execution(plan: OrganizationPlan) -> None:
             )
 
 
+def _move_file_no_replace(source: Path, destination: Path) -> None:
+    """Move one regular file without ever replacing an existing destination."""
+    try:
+        os.link(source, destination, follow_symlinks=False)
+    except FileExistsError as exc:
+        raise FileExistsError(
+            f"destination appeared during execution: {destination.name}"
+        ) from exc
+
+    try:
+        source.unlink()
+    except OSError as exc:
+        try:
+            destination.unlink()
+        except OSError as rollback_exc:
+            raise RuntimeError(
+                f"move rollback failed for source file: {source.name}"
+            ) from rollback_exc
+        raise OSError(
+            f"could not remove source after creating destination: {source.name}"
+        ) from exc
+
+
 def execute_plan(plan: OrganizationPlan) -> OrganizationResult:
     """Execute a previously validated plan after a full collision preflight."""
     if not isinstance(plan, OrganizationPlan):
@@ -334,7 +358,7 @@ def execute_plan(plan: OrganizationPlan) -> OrganizationResult:
 
     moved: list[Path] = []
     for action in plan.actions:
-        action.source.rename(action.destination)
+        _move_file_no_replace(action.source, action.destination)
         moved.append(action.destination)
 
     return OrganizationResult(plan=plan, moved_files=tuple(moved))
