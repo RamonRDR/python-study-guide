@@ -408,10 +408,6 @@ def render_text_report(report: OperationalReport) -> str:
     return "\n".join(lines) + "\n"
 
 
-def _escape_markdown_cell(value: str) -> str:
-    return value.replace("\\", "\\\\").replace("|", "\\|")
-
-
 def _escape_markdown_text(value: str) -> str:
     """Escape CommonMark punctuation so validated text renders literally."""
     return "".join(
@@ -454,7 +450,7 @@ def render_markdown_report(report: OperationalReport) -> str:
         lines.append("_No teams in this reporting period._")
     else:
         lines.extend(
-            f"- {_escape_markdown_cell(team)}: {count}"
+            f"- {_escape_markdown_text(team)}: {count}"
             for team, count in summary.team_counts
         )
 
@@ -470,7 +466,7 @@ def render_markdown_report(report: OperationalReport) -> str:
         )
         lines.extend(
             f"| {record.occurred_on.isoformat()} | {record.activity_id} | "
-            f"{_escape_markdown_cell(record.team)} | {record.status.value} | "
+            f"{_escape_markdown_text(record.team)} | {record.status.value} | "
             f"{record.duration_minutes} min |"
             for record in report.records
         )
