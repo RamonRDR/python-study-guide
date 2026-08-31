@@ -385,15 +385,24 @@ python-study-guide/
 │   │   └── tests/
 │   │       ├── conftest.py
 │   │       └── test_user_registration.py
-│   └── 04-csv-analyzer/
+│   ├── 04-csv-analyzer/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   ├── csv_analyzer.py
+│   │   ├── demo.py
+│   │   └── tests/
+│   │       ├── conftest.py
+│   │       └── test_csv_analyzer.py
+│   └── 05-report-generator/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
-│       ├── csv_analyzer.py
 │       ├── demo.py
+│       ├── report_generator.py
 │       └── tests/
 │           ├── conftest.py
-│           └── test_csv_analyzer.py
+│           └── test_report_generator.py
 ├── program-flow/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -610,7 +619,7 @@ python-study-guide/
 - `external-libraries/`: ruta completa de la Fase 9 para paquetes de terceros. Contiene capítulos multilingües revisados de pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x y pytest 9.1.x, con veinte ejemplos ejecutables deterministas en total. La fase cubre transformaciones tabulares, automatización de libros de Excel, clientes HTTP/API y contratos de pruebas automatizadas; la Fase 10 de proyectos prácticos viene a continuación.
 - `functions/`: ruta completa de la Fase 5. Los Capítulos 01–09 cubren definición y llamada de funciones, entradas obligatorias, valores retornados, alcance y búsqueda de nombres, type hints para interfaces de funciones, valores predeterminados incluida la evaluación al definir la función y la seguridad con valores mutables, recolección de argumentos posicionales y por palabra clave de cantidad variable con `*args` y `**kwargs`, composición mediante funciones auxiliares y coordinadoras con dependencias explícitas y grafos simples de llamadas, y seguimiento explícito del flujo de datos entre llamadas, incluidos vínculos de parámetros, reasignación frente a mutación, `None`, resultados en tupla y traspasos mediante `return`, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `fundamentals/`: ruta completa de la Fase 1. Sus seis capítulos enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres, cómo reconocer e inspeccionar tipos de datos incorporados comunes y cómo convertir valores compatibles de forma deliberada, con explicaciones multilingües alineadas y ejemplos ejecutables.
-- `practical-projects/`: espacio de Proyectos Prácticos de la Fase 10. El Proyecto 01, Control de Gastos, integra datos monetarios validados, persistencia, demostración determinista y cobertura pytest. El Proyecto 02, Calculadora de Notas, añade políticas de calificación configurables, agregación ponderada exacta, informe de progreso/final explícito y pruebas centradas en límites.
+- `practical-projects/`: espacio de Proyectos Prácticos de la Fase 10. Los Proyectos 01–05 están disponibles: Control de Gastos integra datos monetarios validados y persistencia; Calculadora de Notas añade políticas de calificación configurables y agregación ponderada exacta; Registro de Usuarios añade datos canónicos de identidad, prevención de duplicados, actualizaciones indexadas y transiciones del ciclo de vida; Analizador CSV añade ingestión estricta consciente de schema y validación con éxito parcial; Generador de Informes añade ventanas explícitas de fechas, métricas deterministas de resumen, renderización TXT/Markdown y escritura UTF-8.
 - `program-flow/`: ruta completa de la Fase 4. Los Capítulos 01–08 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else`, coincidencia de patrones estructurales, repetición guiada por iterables con `for`, progresiones numéricas con `range()`, iteración con posición usando `enumerate()`, iteración paralela con `zip()` incluida la validación explícita de longitudes iguales con `strict=True`, repetición guiada por estado con `while`, control deliberado de bucles con `break`, `continue` y `else` de bucle y cómo elegir y combinar herramientas de flujo del programa según la intención, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions.
 - `standard-library/`: ruta completa de la Fase 8. Los Capítulos 01–09 cubren fronteras de filesystem con `pathlib`, modelado de fecha/hora con `datetime`, contratos avanzados de `json` y `csv`, `logging`, `collections` especializadas, `itertools`, `decimal` y contratos de `os`/`shutil` para estado del entorno, recorrido, metadatos, copia, movimiento, eliminación recursiva, capacidades de plataforma y seguridad de archives, en inglés, portugués de Brasil y español con ejemplos ejecutables deterministas.

@@ -24,9 +24,9 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | 7. Erros, arquivos e módulos | Concluída | Cinco capítulos revisados cobrem tratamento de exceções, sinalização deliberada, I/O seguro de arquivos, formatos TXT/CSV/JSON e imports/módulos/pacotes |
 | 8. Biblioteca padrão | Concluída | Nove capítulos revisados cobrem caminhos, data/hora, JSON, CSV, logging, coleções especializadas, iteração lazy, aritmética decimal e operações de OS/filesystem |
 | 9. Bibliotecas externas | Concluída | Quatro capítulos revisados cobrem pandas, openpyxl, requests e pytest com contratos explícitos de dependências e exemplos determinísticos |
-| 10. Projetos práticos | Em andamento | Projetos 01–04 cobrem fluxos monetários validados, regras configuráveis de notas, cadastro canônico de usuários e ingestão CSV consciente de schema com testes automatizados |
+| 10. Projetos práticos | Em andamento | Projetos 01–05 cobrem fluxos monetários validados, regras configuráveis de notas, cadastro canônico de usuários, ingestão CSV consciente de schema e geração determinística de relatórios com testes automatizados |
 
-As Fases 0–9 estão concluídas. A Fase 10: Projetos Práticos está em andamento com Controle de Despesas, Calculadora de Notas, Cadastro de Usuários e Analisador CSV disponíveis como Projetos 01–04. A fase de projetos práticos transforma conceitos já estudados em fluxos completos com requisitos, decisões de design, implementação, validação, caminhos de extensão e discussão de portfólio.
+As Fases 0–9 estão concluídas. A Fase 10: Projetos Práticos está em andamento com Controle de Despesas, Calculadora de Notas, Cadastro de Usuários, Analisador CSV e Gerador de Relatórios disponíveis como Projetos 01–05. A fase de projetos práticos transforma conceitos já estudados em fluxos completos com requisitos, decisões de design, implementação, validação, caminhos de extensão e discussão de portfólio.
 
 ## Fase 0: Fundação do projeto
 
@@ -171,12 +171,12 @@ Veja o [índice da seção Projetos Práticos](../practical-projects/README.pt-B
 - [x] [Calculadora de Notas](../practical-projects/02-grade-calculator/README.pt-BR.md)
 - [x] [Cadastro de Usuários](../practical-projects/03-user-registration/README.pt-BR.md)
 - [x] [Analisador de CSV](../practical-projects/04-csv-analyzer/README.pt-BR.md)
-- [ ] Gerador de Relatórios
+- [x] [Gerador de Relatórios](../practical-projects/05-report-generator/README.pt-BR.md)
 - [ ] Organizador de Arquivos
 - [ ] Fluxo Fictício de Conciliação
 - [ ] Fluxo Simulado de Automação
 
-O Projeto 01 estabelece o contrato da Fase 10 com requisitos explícitos, modelagem de dados validada, dinheiro exato com `Decimal`, persistência, demonstração determinística, cobertura automatizada com pytest, desafios de extensão e discussão de portfólio. O Projeto 02 amplia o contrato com regras de notas configuráveis, agregação ponderada exata, relatório parcial/final explícito e validação focada em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários, atualizações seguras e transições explícitas de ciclo de vida sem introduzir autenticação. O Projeto 04 adiciona schemas CSV rígidos, conversão tipada, separação entre falhas estruturais e falhas de linha, parsing com sucesso parcial, identificadores aceitos duplicados, agregação determinística e filtros com a mecânica da biblioteca padrão exposta explicitamente.
+O Projeto 01 estabelece o contrato da Fase 10 com requisitos explícitos, modelagem de dados validada, dinheiro exato com `Decimal`, persistência, demonstração determinística, cobertura automatizada com pytest, desafios de extensão e discussão de portfólio. O Projeto 02 amplia o contrato com regras de notas configuráveis, agregação ponderada exata, relatório parcial/final explícito e validação focada em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários, atualizações seguras e transições explícitas de ciclo de vida sem introduzir autenticação. O Projeto 04 adiciona schemas CSV rígidos, conversão tipada, separação entre falhas estruturais e falhas de linha, parsing com sucesso parcial, identificadores aceitos duplicados, agregação determinística e filtros com a mecânica da biblioteca padrão exposta explicitamente. O Projeto 05 adiciona janelas inclusivas explícitas de datas, validação da identidade da origem, métricas exatas e determinísticas de resumo, construção imutável do relatório, renderização TXT/Markdown, escape específico do formato e escrita UTF-8.
 
 Cada projeto deve incluir:
 

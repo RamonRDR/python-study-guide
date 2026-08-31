@@ -182,3 +182,4 @@ practical-projects/01-expense-tracker/demo.py
 practical-projects/02-grade-calculator/demo.py
 practical-projects/03-user-registration/demo.py
 practical-projects/04-csv-analyzer/demo.py
+practical-projects/05-report-generator/demo.py
