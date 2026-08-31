@@ -24,7 +24,8 @@ By the end of this project, you should be able to:
 - represent aggregate results with validated immutable summary objects;
 - keep report construction separate from report rendering;
 - render the same report as plain text or Markdown;
-- escape Markdown table delimiters in user-facing values;
+- reject non-printing control characters from readable text fields;
+- escape CommonMark punctuation in report titles and team names;
 - write UTF-8 report files through an explicit format/suffix contract;
 - test empty periods, boundary dates, ordering, rounding, rendering, and file output.
 
@@ -84,7 +85,7 @@ The record requires:
 ```text
 activity_id      -> positive integer, bool excluded
 team             -> non-blank readable text, normalized whitespace
-a status          -> WorkStatus enum value
+status           -> WorkStatus enum value
 duration_minutes -> non-negative integer, bool excluded
 occurred_on      -> plain datetime.date value
 ```
@@ -107,7 +108,7 @@ becomes:
 Shared Services
 ```
 
-Blank values and values beyond the small project length limits are rejected.
+Blank values, values beyond the small project length limits, and non-printing control characters are rejected. This prevents terminal escape sequences, NUL bytes, and similar control data from reaching text or Markdown report output.
 
 The goal is not aggressive text correction. It is a narrow, visible normalization contract.
 
@@ -334,13 +335,15 @@ The output always ends with exactly one newline so file comparisons are stable.
 
 The same report content is expressed through a different presentation layer rather than through different aggregation logic.
 
-## 21. Markdown delimiter escaping
+## 21. CommonMark escaping
 
-Team names may contain a vertical bar (`|`) or backslash.
+Validated titles and team names may legally contain punctuation that has structural meaning in Markdown, such as `#`, `*`, `[`, `]`, `(`, `)`, `<`, `>`, `|`, or backslash.
 
-Because `|` has structural meaning inside Markdown tables, renderer output escapes backslashes first and then table delimiters.
+Before those values are inserted into Markdown output, the renderer prefixes every ASCII punctuation character in the CommonMark escapable set with a backslash. The same escaping boundary is used for the level-one report title, team-count list entries, and team cells in the records table.
 
-This is a small but important example of adapting validated domain text to the syntax of an output format.
+Because the set includes both `|` and backslash, table delimiters remain literal and existing backslashes are preserved without a separate cell-only rule.
+
+This is a small but important example of adapting validated domain text to the syntax of an output format while keeping the original domain value unchanged.
 
 ## 22. Explicit format dispatch
 
@@ -434,7 +437,7 @@ The fourth fictional record is outside August so the demo makes source-versus-in
 python -m pytest -q practical-projects/05-report-generator/tests
 ```
 
-The initial suite contains **70 pytest scenarios** covering immutable model validation, text normalization, enum boundaries, date-window rules, duplicate IDs, aggregation, two-decimal rounding, case-insensitive grouping, empty reports, deterministic ordering, summary invariants, TXT rendering, Markdown rendering and escaping, renderer dispatch, suffix validation, UTF-8 writes, and filesystem failure behavior.
+The initial suite contains **70 pytest scenarios** covering immutable model validation, text normalization and control-character rejection, enum boundaries, date-window rules, duplicate IDs, aggregation, two-decimal rounding, case-insensitive grouping, empty reports, deterministic ordering, summary invariants, TXT rendering, Markdown rendering and CommonMark escaping, renderer dispatch, suffix validation, UTF-8 writes, and filesystem failure behavior.
 
 ## 29. Failure paths to inspect manually
 
@@ -444,6 +447,7 @@ Try changing the demo or your own calls to include:
 activity_id = 0
 duplicate activity_id
 blank team
+team containing an ESC or NUL control character
 status = "completed" instead of WorkStatus.COMPLETED
 negative duration
 datetime instead of date
@@ -557,6 +561,7 @@ Before considering your own implementation complete, verify:
 
 - Are source records validated before reporting begins?
 - Are Boolean values prevented from masquerading as integers?
+- Are non-printing control characters rejected from readable text fields?
 - Are duplicate activity IDs rejected before date filtering?
 - Are both report boundary dates inclusive?
 - Are included records sorted deterministically?
@@ -566,7 +571,7 @@ Before considering your own implementation complete, verify:
 - Are team groups case-insensitive and stably ordered?
 - Does the report object use immutable public collections?
 - Can the same report be rendered without recalculating metrics?
-- Are Markdown table delimiters escaped?
+- Are report titles and team names escaped through the CommonMark punctuation boundary?
 - Does each format require its matching file suffix?
 - Are UTF-8 and newline behavior explicit?
 - Are missing directories left for the caller or the next project to manage?

@@ -81,6 +81,10 @@ def make_report() -> OperationalReport:
 def test_activity_record_normalizes_team_whitespace() -> None:
     record = make_record(1, team="  Shared   Services  ")
     assert record.team == "Shared Services"
+    with pytest.raises(ValueError, match="control characters"):
+        make_record(2, team="\x1b[2JAccounting")
+    with pytest.raises(ValueError, match="control characters"):
+        make_record(3, team="\x00Accounting")
 
 
 @pytest.mark.parametrize("activity_id", [0, -1])
@@ -144,6 +148,8 @@ def test_activity_record_requires_plain_date(occurred_on: object) -> None:
 def test_report_window_normalizes_title() -> None:
     window = ReportWindow("  Monthly   Close  ", date(2026, 8, 1), date(2026, 8, 31))
     assert window.title == "Monthly Close"
+    with pytest.raises(ValueError, match="control characters"):
+        ReportWindow("\x1b[31mReport", date(2026, 8, 1), date(2026, 8, 31))
 
 
 @pytest.mark.parametrize("title", ["", "   "])

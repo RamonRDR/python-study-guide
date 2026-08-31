@@ -24,7 +24,8 @@ Ao final deste projeto, você deverá ser capaz de:
 - representar agregados com objetos de resumo imutáveis e validados;
 - separar construção do relatório de sua renderização;
 - renderizar o mesmo relatório em texto puro ou Markdown;
-- escapar delimitadores de tabela Markdown em valores exibidos;
+- rejeitar caracteres de controle não imprimíveis em campos de texto legível;
+- escapar pontuação CommonMark em títulos de relatório e nomes de equipe;
 - gravar arquivos UTF-8 com um contrato explícito entre formato e extensão;
 - testar períodos vazios, datas-limite, ordenação, arredondamento, renderização e escrita em arquivo.
 
@@ -107,7 +108,7 @@ se torna:
 Shared Services
 ```
 
-Valores vazios e valores acima dos pequenos limites definidos pelo projeto são rejeitados.
+Valores vazios, valores acima dos pequenos limites definidos pelo projeto e caracteres de controle não imprimíveis são rejeitados. Isso impede que sequências de escape de terminal, bytes NUL e controles semelhantes cheguem à saída em texto ou Markdown.
 
 A intenção não é corrigir texto agressivamente. É manter um contrato de normalização estreito e visível.
 
@@ -334,13 +335,15 @@ A saída termina com exatamente uma quebra de linha para manter comparações de
 
 O mesmo conteúdo do relatório é expresso por uma camada de apresentação diferente, sem duplicar a lógica de agregação.
 
-## 21. Escape de delimitadores Markdown
+## 21. Escape CommonMark
 
-Nomes de equipe podem conter barra vertical (`|`) ou barra invertida.
+Títulos e nomes de equipe validados podem conter pontuação com significado estrutural em Markdown, como `#`, `*`, `[`, `]`, `(`, `)`, `<`, `>`, `|` ou barra invertida.
 
-Como `|` possui significado estrutural dentro de tabelas Markdown, a renderização escapa primeiro barras invertidas e depois os delimitadores de tabela.
+Antes de inserir esses valores na saída Markdown, o renderizador prefixa com barra invertida cada caractere de pontuação ASCII pertencente ao conjunto escapável do CommonMark. A mesma fronteira é usada no título nível um, nas entradas da lista de equipes e nas células de equipe da tabela de registros.
 
-É um exemplo pequeno, mas importante, de adaptação de texto válido do domínio para a sintaxe de um formato de saída.
+Como o conjunto inclui `|` e a própria barra invertida, delimitadores de tabela permanecem literais e barras já existentes são preservadas sem uma regra separada apenas para células.
+
+É um exemplo pequeno, mas importante, de adaptação de texto válido do domínio para a sintaxe de um formato de saída sem alterar o valor original do domínio.
 
 ## 22. Seleção explícita de formato
 
@@ -434,7 +437,7 @@ O quarto registro fictício está fora de agosto, deixando visível a diferença
 python -m pytest -q practical-projects/05-report-generator/tests
 ```
 
-A suíte inicial contém **70 cenários pytest**, cobrindo validação do modelo imutável, normalização de texto, limites de enums, regras da janela de datas, IDs duplicados, agregação, arredondamento com duas casas, agrupamento sem considerar caixa, relatórios vazios, ordenação determinística, invariantes do resumo, renderização TXT, renderização e escape Markdown, seleção de renderizador, validação de extensão, escrita UTF-8 e falhas de filesystem.
+A suíte inicial contém **70 cenários pytest**, cobrindo validação do modelo imutável, normalização de texto e rejeição de caracteres de controle, limites de enums, regras da janela de datas, IDs duplicados, agregação, arredondamento com duas casas, agrupamento sem considerar caixa, relatórios vazios, ordenação determinística, invariantes do resumo, renderização TXT, renderização Markdown e escape CommonMark, seleção de renderizador, validação de extensão, escrita UTF-8 e falhas de filesystem.
 
 ## 29. Caminhos de falha para inspecionar manualmente
 
@@ -444,6 +447,7 @@ Experimente incluir:
 activity_id = 0
 activity_id duplicado
 equipe vazia
+equipe contendo um caractere de controle ESC ou NUL
 status = "completed" em vez de WorkStatus.COMPLETED
 duração negativa
 datetime em vez de date
@@ -557,6 +561,7 @@ Antes de considerar sua implementação completa, verifique:
 
 - Os registros de origem são validados antes do relatório?
 - Valores Booleanos são impedidos de se passar por inteiros?
+- Caracteres de controle não imprimíveis são rejeitados nos campos de texto legível?
 - IDs duplicados são rejeitados antes do filtro de datas?
 - As duas datas-limite são inclusivas?
 - Os registros incluídos são ordenados deterministicamente?
@@ -566,7 +571,7 @@ Antes de considerar sua implementação completa, verifique:
 - As equipes são agrupadas ignorando caixa e ordenadas de forma estável?
 - O relatório usa coleções públicas imutáveis?
 - O mesmo relatório pode ser renderizado sem recalcular métricas?
-- Delimitadores de tabela Markdown são escapados?
+- Títulos de relatório e nomes de equipe passam pela fronteira de escape da pontuação CommonMark?
 - Cada formato exige a extensão correspondente?
 - UTF-8 e quebras de linha são explícitos?
 - Diretórios ausentes ficam sob responsabilidade do chamador ou do próximo projeto?

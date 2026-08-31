@@ -40,6 +40,8 @@ def _normalize_readable_text(value: object, field_name: str, max_length: int) ->
     normalized = " ".join(value.split())
     if not normalized:
         raise ValueError(f"{field_name} cannot be blank")
+    if not normalized.isprintable():
+        raise ValueError(f"{field_name} cannot contain control characters")
     if len(normalized) > max_length:
         raise ValueError(f"{field_name} must be at most {max_length} characters")
     return normalized

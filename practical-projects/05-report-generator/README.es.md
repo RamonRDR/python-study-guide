@@ -24,7 +24,8 @@ Al finalizar este proyecto, deberías poder:
 - representar agregados con objetos de resumen inmutables y validados;
 - separar la construcción del informe de su renderización;
 - renderizar el mismo informe como texto plano o Markdown;
-- escapar delimitadores de tablas Markdown en valores visibles;
+- rechazar caracteres de control no imprimibles en campos de texto legible;
+- escapar la puntuación CommonMark en títulos de informe y nombres de equipo;
 - escribir archivos UTF-8 mediante un contrato explícito entre formato y extensión;
 - probar períodos vacíos, fechas límite, orden, redondeo, renderización y escritura de archivos.
 
@@ -107,7 +108,7 @@ se convierte en:
 Shared Services
 ```
 
-Se rechazan valores vacíos y valores que superen los pequeños límites definidos por el proyecto.
+Se rechazan valores vacíos, valores que superen los pequeños límites definidos por el proyecto y caracteres de control no imprimibles. Esto evita que secuencias de escape del terminal, bytes NUL y controles similares lleguen a la salida de texto o Markdown.
 
 La intención no es corregir texto agresivamente, sino mantener un contrato de normalización estrecho y visible.
 
@@ -334,13 +335,15 @@ La salida termina con exactamente un salto de línea para mantener estables las 
 
 El mismo contenido se expresa mediante otra capa de presentación, sin duplicar la lógica de agregación.
 
-## 21. Escape de delimitadores Markdown
+## 21. Escape CommonMark
 
-Los nombres de equipo pueden contener barra vertical (`|`) o barra invertida.
+Los títulos y nombres de equipo validados pueden contener puntuación con significado estructural en Markdown, como `#`, `*`, `[`, `]`, `(`, `)`, `<`, `>`, `|` o barra invertida.
 
-Como `|` tiene significado estructural dentro de tablas Markdown, el renderizador escapa primero las barras invertidas y luego los delimitadores de tabla.
+Antes de insertar esos valores en la salida Markdown, el renderizador antepone una barra invertida a cada carácter de puntuación ASCII perteneciente al conjunto escapable de CommonMark. La misma frontera se usa para el título de nivel uno, las entradas de la lista de equipos y las celdas de equipo de la tabla de registros.
 
-Es un ejemplo pequeño pero importante de adaptar texto válido del dominio a la sintaxis de un formato de salida.
+Como el conjunto incluye `|` y la propia barra invertida, los delimitadores de tabla permanecen literales y las barras existentes se conservan sin una regla separada solo para celdas.
+
+Es un ejemplo pequeño pero importante de adaptar texto válido del dominio a la sintaxis de un formato de salida sin modificar el valor original del dominio.
 
 ## 22. Selección explícita de formato
 
@@ -434,7 +437,7 @@ El cuarto registro ficticio está fuera de agosto, haciendo visible la diferenci
 python -m pytest -q practical-projects/05-report-generator/tests
 ```
 
-La suite inicial contiene **70 escenarios pytest** que cubren validación del modelo inmutable, normalización de texto, límites de enums, reglas de ventana de fechas, IDs duplicados, agregación, redondeo a dos decimales, agrupación sin distinguir mayúsculas/minúsculas, informes vacíos, orden determinista, invariantes del resumen, renderización TXT, renderización y escape Markdown, selección de renderizador, validación de extensión, escritura UTF-8 y fallos del filesystem.
+La suite inicial contiene **70 escenarios pytest** que cubren validación del modelo inmutable, normalización de texto y rechazo de caracteres de control, límites de enums, reglas de ventana de fechas, IDs duplicados, agregación, redondeo a dos decimales, agrupación sin distinguir mayúsculas/minúsculas, informes vacíos, orden determinista, invariantes del resumen, renderización TXT, renderización Markdown y escape CommonMark, selección de renderizador, validación de extensión, escritura UTF-8 y fallos del filesystem.
 
 ## 29. Rutas de fallo para inspeccionar manualmente
 
@@ -444,6 +447,7 @@ Prueba con:
 activity_id = 0
 activity_id duplicado
 equipo vacío
+equipo que contenga un carácter de control ESC o NUL
 status = "completed" en vez de WorkStatus.COMPLETED
 duración negativa
 datetime en vez de date
@@ -557,6 +561,7 @@ Antes de considerar completa tu implementación, verifica:
 
 - ¿Los registros de origen se validan antes de generar el informe?
 - ¿Se evita que valores Booleanos se hagan pasar por enteros?
+- ¿Se rechazan los caracteres de control no imprimibles en los campos de texto legible?
 - ¿Los IDs duplicados se rechazan antes del filtro de fechas?
 - ¿Ambas fechas límite son inclusivas?
 - ¿Los registros incluidos se ordenan de forma determinista?
@@ -566,7 +571,7 @@ Antes de considerar completa tu implementación, verifica:
 - ¿Los equipos se agrupan sin distinguir mayúsculas/minúsculas y se ordenan de forma estable?
 - ¿El informe usa colecciones públicas inmutables?
 - ¿El mismo informe puede renderizarse sin recalcular métricas?
-- ¿Se escapan los delimitadores de tablas Markdown?
+- ¿Los títulos de informe y los nombres de equipo pasan por la frontera de escape de puntuación CommonMark?
 - ¿Cada formato exige su extensión correspondiente?
 - ¿UTF-8 y los saltos de línea son explícitos?
 - ¿Los directorios ausentes quedan bajo responsabilidad del llamador o del siguiente proyecto?
