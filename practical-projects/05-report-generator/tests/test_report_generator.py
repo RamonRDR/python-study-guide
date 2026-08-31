@@ -480,15 +480,18 @@ def test_render_markdown_report_contains_stable_tables() -> None:
     )
 
 
-def test_render_markdown_report_escapes_team_table_delimiters() -> None:
+def test_render_markdown_report_escapes_team_markdown_syntax() -> None:
+    team = r"Ops | *Core* [Team](x) <tag> \Back"
     report = build_report(
-        (make_record(1, team=r"Ops | Core\\Team"),),
+        (make_record(1, team=team),),
         title="Escaping",
         start_date=date(2026, 8, 1),
         end_date=date(2026, 8, 1),
     )
     markdown = render_markdown_report(report)
-    assert r"Ops \| Core\\\\Team" in markdown
+    escaped_team = r"Ops \| \*Core\* \[Team\]\(x\) \<tag\> \\Back"
+    assert f"- {escaped_team}: 1" in markdown
+    assert f"| 2026-08-01 | 1 | {escaped_team} | completed | 30 min |" in markdown
 
 
 def test_render_markdown_report_handles_empty_period() -> None:
