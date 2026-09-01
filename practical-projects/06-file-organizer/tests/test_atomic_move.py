@@ -107,6 +107,7 @@ def test_execute_plan_rejects_source_symlink_replacement_during_mutation(
         *,
         source_directory_fd: int,
         destination_directory_fd: int,
+        category_name: str,
         expected_identity: file_organizer._FileIdentity,
     ) -> None:
         nonlocal raced
@@ -119,6 +120,7 @@ def test_execute_plan_rejects_source_symlink_replacement_during_mutation(
             destination_name,
             source_directory_fd=source_directory_fd,
             destination_directory_fd=destination_directory_fd,
+            category_name=category_name,
             expected_identity=expected_identity,
         )
 
@@ -133,7 +135,7 @@ def test_execute_plan_rejects_source_symlink_replacement_during_mutation(
     assert not destination.exists()
 
 
-def test_source_unlink_failure_never_rolls_back_an_unverified_destination(
+def test_source_replacement_between_verify_and_removal_is_never_unlinked(
     monkeypatch: pytest.MonkeyPatch,
     tmp_path: Path,
 ) -> None:
@@ -144,27 +146,95 @@ def test_source_unlink_failure_never_rolls_back_an_unverified_destination(
     source.write_text("planned source", encoding="utf-8")
     plan = plan_organization(tmp_path)
     destination = tmp_path / "documents" / "notes.txt"
-    original_unlink = os.unlink
-    failed_source_unlink = False
 
-    def racing_unlink(
-        path: str | os.PathLike[str],
+    original_rename = os.rename
+    raced = False
+
+    def racing_rename(
+        source_path: str | os.PathLike[str],
+        destination_path: str | os.PathLike[str],
         *,
-        dir_fd: int | None = None,
+        src_dir_fd: int | None = None,
+        dst_dir_fd: int | None = None,
     ) -> None:
-        nonlocal failed_source_unlink
-        if path == source.name and dir_fd is not None and not failed_source_unlink:
-            failed_source_unlink = True
-            original_unlink(destination)
-            destination.write_text("third-party replacement", encoding="utf-8")
-            raise PermissionError("simulated source removal failure")
-        original_unlink(path, dir_fd=dir_fd)
+        nonlocal raced
+        if source_path == source.name and src_dir_fd is not None and not raced:
+            raced = True
+            source.unlink()
+            source.write_text("third-party replacement", encoding="utf-8")
+        original_rename(
+            source_path,
+            destination_path,
+            src_dir_fd=src_dir_fd,
+            dst_dir_fd=dst_dir_fd,
+        )
 
     monkeypatch.setattr(file_organizer, "_supports_secure_directory_fds", lambda: True)
-    monkeypatch.setattr(file_organizer.os, "unlink", racing_unlink)
+    monkeypatch.setattr(file_organizer.os, "rename", racing_rename)
 
-    with pytest.raises(OSError, match="destination retained for safety"):
+    with pytest.raises(FileNotFoundError, match="changed during execution"):
+        execute_plan(plan)
+
+    assert source.read_text(encoding="utf-8") == "third-party replacement"
+    assert destination.read_text(encoding="utf-8") == "planned source"
+    assert not any(
+        child.name.startswith(".file-organizer-stage-")
+        for child in tmp_path.iterdir()
+    )
+
+
+def test_category_rename_after_fd_open_aborts_before_source_removal(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+
+    category = tmp_path / "documents"
+    renamed_category = tmp_path / "documents-detached"
+    planned_destination = category / "notes.txt"
+
+    original_link = os.link
+    raced = False
+
+    def racing_link(
+        source_path: str | os.PathLike[str],
+        destination_path: str | os.PathLike[str],
+        *,
+        src_dir_fd: int | None = None,
+        dst_dir_fd: int | None = None,
+        follow_symlinks: bool = True,
+    ) -> None:
+        nonlocal raced
+        original_link(
+            source_path,
+            destination_path,
+            src_dir_fd=src_dir_fd,
+            dst_dir_fd=dst_dir_fd,
+            follow_symlinks=follow_symlinks,
+        )
+        if (
+            destination_path == source.name
+            and dst_dir_fd is not None
+            and src_dir_fd is not None
+            and not raced
+        ):
+            raced = True
+            category.rename(renamed_category)
+            category.mkdir()
+
+    monkeypatch.setattr(file_organizer, "_supports_secure_directory_fds", lambda: True)
+    monkeypatch.setattr(file_organizer.os, "link", racing_link)
+
+    with pytest.raises(ValueError, match="category directory moved during execution"):
         execute_plan(plan)
 
     assert source.read_text(encoding="utf-8") == "planned source"
-    assert destination.read_text(encoding="utf-8") == "third-party replacement"
+    assert not planned_destination.exists()
+    assert (
+        renamed_category / "notes.txt"
+    ).read_text(encoding="utf-8") == "planned source"
