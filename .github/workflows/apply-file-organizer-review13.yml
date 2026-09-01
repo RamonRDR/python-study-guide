@@ -31,6 +31,19 @@ jobs:
       - name: Apply Review 13 fix
         run: python scripts/_apply_file_organizer_review13.py
 
+      - name: Keep Linux capability stable in the injected os.link race test
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('practical-projects/06-file-organizer/tests/test_atomic_move.py')
+          text = path.read_text(encoding='utf-8')
+          old = '''    monkeypatch.setattr(file_organizer, "_rename_no_replace_at", failing_final_rename)\n    monkeypatch.setattr(file_organizer.os, "link", racing_link)\n'''
+          new = '''    monkeypatch.setattr(file_organizer, "_supports_secure_directory_fds", lambda: True)\n    monkeypatch.setattr(file_organizer, "_rename_no_replace_at", failing_final_rename)\n    monkeypatch.setattr(file_organizer.os, "link", racing_link)\n'''
+          if text.count(old) != 1:
+              raise SystemExit('expected one Review 13 test harness anchor')
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+
       - name: Validate focused suite
         run: |
           python -m compileall -q practical-projects/06-file-organizer
