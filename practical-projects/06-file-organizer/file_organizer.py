@@ -749,6 +749,31 @@ def _preserve_stage_at(stage_name: str, source_name: str, *, root_fd: int) -> No
         pass
 
 
+def _preserve_claimed_source_after_failure_at(
+    stage_name: str,
+    source_name: str,
+    *,
+    root_fd: int,
+    source_fd: int,
+    expected_identity: _FileIdentity,
+) -> str | None:
+    """Restore a proven stage or recover pinned bytes when stage identity is uncertain."""
+    try:
+        staged_identity = _regular_identity_at(stage_name, directory_fd=root_fd)
+    except OSError:
+        staged_identity = None
+
+    if staged_identity == expected_identity:
+        _preserve_stage_at(stage_name, source_name, root_fd=root_fd)
+        return None
+
+    return _recover_pinned_source_at(
+        source_fd,
+        source_name,
+        root_fd=root_fd,
+    )
+
+
 def _claim_source_at(
     source_name: str,
     *,
@@ -887,8 +912,19 @@ def _move_file_no_replace_at(
             source_directory_fd=source_directory_fd,
             destination_directory_fd=destination_directory_fd,
         )
-    except (FileExistsError, FileNotFoundError, ValueError, OSError):
-        _preserve_stage_at(stage_name, source_name, root_fd=source_directory_fd)
+    except (FileExistsError, FileNotFoundError, ValueError, OSError) as exc:
+        recovery_name = _preserve_claimed_source_after_failure_at(
+            stage_name,
+            source_name,
+            root_fd=source_directory_fd,
+            source_fd=source_fd,
+            expected_identity=expected_identity,
+        )
+        if recovery_name is not None:
+            exc.add_note(
+                "planned source data retained as "
+                f"{recovery_name}: {source_name}"
+            )
         raise
 
     try:

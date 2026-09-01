@@ -482,6 +482,66 @@ def test_staging_replacement_before_final_rename_preserves_pinned_source_data(
 
 
 
+def test_failed_final_rename_after_stage_replacement_recovers_pinned_source_data(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+    destination = tmp_path / "documents" / "notes.txt"
+    original_rename_no_replace = file_organizer._rename_no_replace_at
+    raced = False
+
+    def racing_rename_no_replace(
+        source_name: str,
+        destination_name: str,
+        *,
+        source_directory_fd: int,
+        destination_directory_fd: int,
+    ) -> None:
+        nonlocal raced
+        if source_name.startswith(".fo-stage-") and not raced:
+            raced = True
+            stage = tmp_path / source_name
+            stage.unlink()
+            stage.write_text("third-party stage", encoding="utf-8")
+            destination.write_text("late destination", encoding="utf-8")
+        original_rename_no_replace(
+            source_name,
+            destination_name,
+            source_directory_fd=source_directory_fd,
+            destination_directory_fd=destination_directory_fd,
+        )
+
+    monkeypatch.setattr(
+        file_organizer,
+        "_rename_no_replace_at",
+        racing_rename_no_replace,
+    )
+
+    with pytest.raises(FileExistsError, match="destination appeared during execution"):
+        execute_plan(plan)
+
+    assert destination.read_text(encoding="utf-8") == "late destination"
+    assert not source.exists()
+    stage_files = [
+        child for child in tmp_path.iterdir() if child.name.startswith(".fo-stage-")
+    ]
+    assert len(stage_files) == 1
+    assert stage_files[0].read_text(encoding="utf-8") == "third-party stage"
+    recovery_files = [
+        child
+        for child in tmp_path.iterdir()
+        if child.name.startswith(".fo-recovery-")
+    ]
+    assert len(recovery_files) == 1
+    assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
+
+
 def test_secure_execution_reports_readability_precondition_before_categories(
     monkeypatch: pytest.MonkeyPatch,
     tmp_path: Path,
