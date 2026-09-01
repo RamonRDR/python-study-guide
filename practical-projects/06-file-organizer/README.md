@@ -25,6 +25,8 @@ By the end of this project, you should be able to:
 - treat symlinks as a separate filesystem boundary;
 - revalidate assumptions immediately before mutation;
 - enforce exact destination no-replace behavior at the mutation step;
+- verify source identity across time-of-check/time-of-use boundaries;
+- preserve uncertain destination state instead of performing destructive rollback;
 - test filesystem code safely with temporary directories.
 
 ## Problem
@@ -76,7 +78,9 @@ The implementation must:
 12. support explicit `ERROR` and `SKIP` collision policies during planning;
 13. run a full preflight before any move;
 14. never silently replace an exact destination that appears after preflight;
-15. return a structured result after successful execution.
+15. reject a planned source whose filesystem identity changes before commit;
+16. never delete an unverified destination while handling a source-removal failure;
+17. return a structured result after successful execution.
 
 ## Deliberate scope
 
@@ -203,17 +207,16 @@ report.txt
 
 This keeps the plan portable across common filesystem behaviors.
 
-## Symlink and directory-anchor boundaries
+## Symlink boundary
 
 The organizer does not follow direct-child symlinks.
 
 It also rejects:
 
 - a source directory that is itself a symlink;
-- a category folder implemented as a symlink;
-- a category directory that is renamed or replaced after its directory descriptor is opened.
+- a category folder implemented as a symlink.
 
-On platforms with secure directory-descriptor support, the implementation compares the pinned category descriptor identity with the current named child of the source root before and after mutation. A detached category directory therefore cannot silently receive a file while execution reports the original planned path.
+On platforms with directory-descriptor support, execution pins the source and category directories with `O_DIRECTORY | O_NOFOLLOW` so a category path that becomes a symlink after preflight cannot redirect the mutation outside the workspace.
 
 ## Why preflight is not enough
 
@@ -226,29 +229,28 @@ if not destination.exists():
 
 That contains a time-of-check/time-of-use race. Another process can create the destination after the check but before the rename.
 
-On POSIX, `rename()` is allowed to replace an existing destination. That means a supposedly safe organizer could destroy newly created destination data.
-
-The same principle applies to source removal: checking a source inode and then calling `unlink()` leaves a small window in which another process could replace that directory entry.
+On POSIX, `rename()` is allowed to replace an existing destination. A planned source can also be replaced after preflight. Therefore execution must validate both destination availability and source identity at the mutation boundary.
 
 ## Exact no-replace mutation
 
-The execution path uses a same-filesystem hard link as the destination mutation guard:
+The execution path uses a same-filesystem hard-link operation as its destination guard:
 
 ```text
-1. verify source and category identities
-2. create the destination hard link without replacement
-3. verify the destination and category anchor
-4. atomically rename the source entry to a unique internal staging name
-5. verify that the staged entry is still the planned inode
-6. remove only that internal staged name
-7. verify the category anchor again before reporting success
+1. capture source identity during preflight
+2. revalidate that the source is still the same regular file
+3. create the destination hard link without replacement
+4. verify that the destination references the expected source identity
+5. revalidate the source identity again
+6. remove the original source path
 ```
 
-`os.link()` does not replace an existing destination. The staging rename avoids deleting the public source pathname after a separate identity check: if another actor replaces the source before the atomic rename, the unexpected entry is detected and preserved instead of being blindly unlinked.
+Filesystem identity is represented by the `(device, inode)` pair returned by `stat`. This lets execution distinguish “the same filename” from “the same filesystem object.” A late symlink or regular-file replacement therefore aborts execution instead of being reported as a successful move.
 
-Category directory descriptors are also revalidated against the named category path. If the category is renamed or replaced during execution, the operation raises instead of reporting a destination path that no longer points to the pinned directory.
+`os.link()` does not replace an existing destination. Because every destination folder is inside the same source directory, source and destination are intentionally on the same filesystem for this project.
 
-This does not turn the whole multi-file plan into a transaction. It provides narrower guarantees around no-replace destination creation, source-entry identity, and category-path anchoring.
+If creating the link fails, the source remains untouched. If removing the source fails after the destination has been created, the implementation deliberately **keeps the destination** and raises an error. It does not attempt an unconditional rollback unlink, because another process could have replaced that directory entry in the meantime. Preserving uncertain state is safer than deleting an object whose identity can no longer be proven.
+
+This does not turn the whole multi-file plan into a transaction. It provides narrower guarantees: exact destinations are not silently overwritten, planned sources are revalidated by identity, and failure handling does not intentionally delete an unverified destination.
 
 ## Execution flow
 
@@ -257,14 +259,11 @@ This does not turn the whole multi-file plan into a transaction. It provides nar
 1. type validation;
 2. source-directory revalidation;
 3. category-path revalidation;
-4. planned-source identity capture;
+4. capture of planned-source filesystem identities;
 5. destination collision preflight;
-6. creation/opening of required category folders;
-7. category-anchor verification;
-8. exact no-replace destination linking;
-9. atomic source staging and staged-identity verification;
-10. final category-anchor verification;
-11. construction of `OrganizationResult`.
+6. creation/opening of only required category folders;
+7. identity-verified exact no-replace moves;
+8. construction of `OrganizationResult`.
 
 A stale plan is therefore not trusted blindly.
 
@@ -296,6 +295,8 @@ Focused suite:
 python -m pytest practical-projects/06-file-organizer/tests -q
 ```
 
+The focused suite intentionally avoids embedding a fixed scenario count in this chapter because regression coverage grows as review findings are hardened.
+
 Coverage includes:
 
 - suffix classification;
@@ -310,8 +311,9 @@ Coverage includes:
 - category-path changes;
 - collision preflight;
 - a destination created between preflight and mutation;
-- category symlink and rename races;
-- source replacement between verification and final removal;
+- a category path becoming a symlink during mutation;
+- a planned source becoming a symlink during mutation;
+- source-removal failure without destructive destination rollback;
 - successful execution;
 - preservation of unrelated destination files;
 - empty plans.
@@ -346,13 +348,13 @@ Preflight raises `FileExistsError` before any move.
 
 The no-replace hard-link operation fails with `FileExistsError`; the newly created destination is preserved and the source remains in place.
 
-### Source entry changes during commit
+### Planned source identity changes during execution
 
-The source pathname is atomically staged and the staged inode is verified. An unexpected replacement is preserved and the move raises instead of deleting the replacement.
+Execution raises instead of unlinking the changed source entry or reporting the move as successful.
 
-### Category directory moves after it is opened
+### Source removal fails after destination creation
 
-The pinned descriptor and the currently named category path no longer match, so execution raises instead of returning a false planned destination.
+Execution raises and retains the destination. It deliberately avoids deleting a destination whose current identity cannot be proven safely during rollback.
 
 ## Common mistakes
 
@@ -366,13 +368,13 @@ Prefer building a plan first.
 
 The check can become stale immediately, and POSIX rename semantics can replace the destination.
 
-### Checking an inode immediately before `unlink()`
+### Treating a filename as object identity
 
-That still leaves a check-to-unlink race. If source identity matters, restructure the commit so the public pathname is detached atomically before removing an internal staged name.
+A directory entry can be replaced while keeping the same name. When concurrency matters, compare filesystem identity and file type at the mutation boundary.
 
-### Assuming an open directory descriptor still has the same pathname
+### Rolling back by blindly deleting the destination
 
-A descriptor remains attached to an inode even after that directory is renamed. Verify that the descriptor still matches the category child currently reachable from the planned root.
+A rollback path is still a mutation path. If another actor can replace the destination entry, unconditional deletion can destroy unrelated data.
 
 ### Silently inventing new filenames
 
@@ -414,6 +416,7 @@ After completing the exercise, consider:
 - an operation journal;
 - recursive discovery with explicit relative-path rules;
 - checksum-based duplicate detection;
+- a stronger platform-specific conditional source-removal primitive;
 - a rollback strategy for partially executed plans.
 
 Each extension introduces new invariants. Add the contract before adding the code.
@@ -424,7 +427,7 @@ A useful portfolio explanation is not “I wrote a script that moves files.”
 
 A stronger explanation is:
 
-> I designed a filesystem workflow with a non-mutating planning phase, deterministic classification, explicit collision policies, symlink boundaries, execution-time identity checks, category-path anchoring, and exact no-replace destination protection. Source removal uses an atomic staging step so a late pathname replacement is not blindly unlinked.
+> I designed a filesystem workflow with a non-mutating planning phase, deterministic classification, explicit collision policies, symlink boundaries, execution-time identity validation, exact no-replace destination protection, and conservative failure handling that never blindly deletes an unverified rollback target.
 
 That communicates engineering decisions, not just API usage.
 
@@ -440,7 +443,8 @@ That communicates engineering decisions, not just API usage.
 | Hold the immutable plan | `OrganizationPlan` |
 | Execute the plan | `execute_plan()` |
 | Hold successful destinations | `OrganizationResult` |
-| Enforce exact no-replace mutation | `os.link()` + atomic source staging |
+| Verify filesystem identity | `(st_dev, st_ino)` from `stat` |
+| Enforce exact no-replace mutation | `os.link()` + verified source `unlink()` |
 
 ## What comes next
 
