@@ -636,6 +636,69 @@ def _make_stage_name(source_name: str) -> str:
     return f".fo-stage-{secrets.token_hex(16)}"
 
 
+def _make_recovery_name(source_name: str) -> str:
+    """Return a bounded exclusive name for emergency source-data recovery."""
+    del source_name
+    return f".fo-recovery-{secrets.token_hex(16)}"
+
+
+def _recover_pinned_source_at(
+    source_fd: int,
+    source_name: str,
+    *,
+    root_fd: int,
+) -> str:
+    """Persist bytes from the pinned source FD into an exclusive recovery file."""
+    source_stat = os.fstat(source_fd)
+    mode = stat.S_IMODE(source_stat.st_mode)
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+    if hasattr(os, "O_CLOEXEC"):
+        flags |= os.O_CLOEXEC
+
+    recovery_fd: int | None = None
+    recovery_name = ""
+    for _ in range(16):
+        recovery_name = _make_recovery_name(source_name)
+        try:
+            recovery_fd = os.open(
+                recovery_name,
+                flags,
+                mode,
+                dir_fd=root_fd,
+            )
+        except FileExistsError:
+            continue
+        break
+
+    if recovery_fd is None:
+        raise FileExistsError(
+            f"could not allocate recovery entry for planned source: {source_name}"
+        )
+
+    original_offset = os.lseek(source_fd, 0, os.SEEK_CUR)
+    try:
+        os.lseek(source_fd, 0, os.SEEK_SET)
+        while True:
+            chunk = os.read(source_fd, 1024 * 1024)
+            if not chunk:
+                break
+            view = memoryview(chunk)
+            while view:
+                written = os.write(recovery_fd, view)
+                if written <= 0:
+                    raise OSError(
+                        "could not persist pinned source recovery data"
+                    )
+                view = view[written:]
+        os.fchmod(recovery_fd, mode)
+        os.fsync(recovery_fd)
+    finally:
+        os.lseek(source_fd, original_offset, os.SEEK_SET)
+        os.close(recovery_fd)
+
+    return recovery_name
+
+
 def _preserve_stage_at(stage_name: str, source_name: str, *, root_fd: int) -> None:
     """Best-effort restore by linking only; never delete a raced staging entry."""
     try:
@@ -772,11 +835,22 @@ def _move_file_no_replace_at(
             _preserve_stage_at(stage_name, source_name, root_fd=source_directory_fd)
             raise
 
-        _verify_destination_identity_at(
-            destination_name,
-            destination_directory_fd=destination_directory_fd,
-            expected_identity=expected_identity,
-        )
+        try:
+            _verify_destination_identity_at(
+                destination_name,
+                destination_directory_fd=destination_directory_fd,
+                expected_identity=expected_identity,
+            )
+        except RuntimeError as exc:
+            recovery_name = _recover_pinned_source_at(
+                source_fd,
+                source_name,
+                root_fd=source_directory_fd,
+            )
+            raise RuntimeError(
+                "destination does not match planned source; "
+                f"planned source data retained as {recovery_name}: {destination_name}"
+            ) from exc
         _verify_root_anchor_at(source_directory_path, source_directory_fd)
         _verify_category_anchor_at(
             root_fd=source_directory_fd,

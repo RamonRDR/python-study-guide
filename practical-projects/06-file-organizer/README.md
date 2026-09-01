@@ -272,6 +272,8 @@ Concurrency errors can leave uncertain state. Recovery therefore favors preserva
 
 If execution has already claimed the source into a staging entry and later detects an unsafe condition, it may create a no-replace hard link back to the original source name when possible. It does not blindly delete the staging entry.
 
+A staging pathname is not an inode lock. If the final rename consumes a replacement entry and destination identity verification detects the mismatch, execution leaves the unrelated destination intact and, before closing the still-pinned source file descriptor, copies the planned source bytes into an exclusive `.fo-recovery-*` regular file. This preserves recoverable data without claiming that the original inode survived the race.
+
 This can intentionally leave an internal recovery entry in unusual race/failure scenarios. That is preferable to deleting unrelated data whose current identity cannot be proven.
 
 The whole multi-file plan is not transactional.

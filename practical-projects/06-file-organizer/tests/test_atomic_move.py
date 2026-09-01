@@ -403,3 +403,59 @@ def test_execute_plan_rechecks_late_casefold_collision_before_commit(
     assert late_destination.read_text(encoding="utf-8") == "late casefold collision"
     assert not exact_destination.exists()
     assert any(child.name.startswith(".fo-stage-") for child in tmp_path.iterdir())
+
+
+
+def test_staging_replacement_before_final_rename_preserves_pinned_source_data(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+    destination = tmp_path / "documents" / "notes.txt"
+    original_rename_no_replace = file_organizer._rename_no_replace_at
+    raced = False
+
+    def racing_rename_no_replace(
+        source_name: str,
+        destination_name: str,
+        *,
+        source_directory_fd: int,
+        destination_directory_fd: int,
+    ) -> None:
+        nonlocal raced
+        if not raced:
+            raced = True
+            stage = tmp_path / source_name
+            assert stage.name.startswith(".fo-stage-")
+            stage.unlink()
+            stage.write_text("third-party replacement", encoding="utf-8")
+        original_rename_no_replace(
+            source_name,
+            destination_name,
+            source_directory_fd=source_directory_fd,
+            destination_directory_fd=destination_directory_fd,
+        )
+
+    monkeypatch.setattr(
+        file_organizer,
+        "_rename_no_replace_at",
+        racing_rename_no_replace,
+    )
+
+    with pytest.raises(RuntimeError, match="planned source data retained"):
+        execute_plan(plan)
+
+    assert destination.read_text(encoding="utf-8") == "third-party replacement"
+    recovery_files = [
+        child
+        for child in tmp_path.iterdir()
+        if child.name.startswith(".fo-recovery-")
+    ]
+    assert len(recovery_files) == 1
+    assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
+    assert not source.exists()

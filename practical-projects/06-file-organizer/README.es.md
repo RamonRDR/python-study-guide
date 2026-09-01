@@ -272,6 +272,8 @@ Los errores concurrentes pueden dejar estado incierto. La recuperación prioriza
 
 Si la ejecución ya movió el origen al staging y después detecta una condición insegura, puede crear un hard link no-replace de vuelta al nombre de origen cuando sea posible. No elimina a ciegas el staging.
 
+Un pathname de staging no funciona como lock de inode. Si el rename final consume una entrada de reemplazo y la verificación de identidad del destino detecta la divergencia, la ejecución conserva intacto el destino ajeno y, antes de cerrar el descriptor aún anclado del origen, copia los bytes planificados a un archivo regular exclusivo `.fo-recovery-*`. Esta recuperación conserva datos recuperables sin afirmar que el inode original haya sobrevivido a la carrera.
+
 En escenarios raros de carrera/fallo, esto puede dejar una entrada interna de recuperación. Es preferible a borrar datos cuya identidad actual no puede demostrarse.
 
 El plan completo de varios archivos no es transaccional.
