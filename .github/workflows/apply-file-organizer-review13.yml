@@ -1,6 +1,12 @@
 name: Apply File Organizer Review 13 fix
 
 on:
+  push:
+    branches:
+      - phase-10-file-organizer
+    paths:
+      - .github/workflows/apply-file-organizer-review13.yml
+      - scripts/_apply_file_organizer_review13.py
   workflow_dispatch:
 
 permissions:
