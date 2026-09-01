@@ -80,10 +80,10 @@ La implementación debe:
 11. detectar colisiones de destino exactas y sin distinción de mayúsculas/minúsculas durante planificación/preflight;
 12. ofrecer políticas explícitas `ERROR` y `SKIP` durante la planificación;
 13. ejecutar un preflight completo;
-14. capturar la identidad de los orígenes planificados;
+14. vincular la identidad de cada origen cuando comienza la ejecución, no durante la planificación;
 15. nunca reemplazar silenciosamente un destino exacto;
 16. volver a comprobar nombres de destino equivalentes por `casefold()` inmediatamente antes del commit;
-17. rechazar supuestos obsoletos sobre origen, raíz o categoría durante la ejecución;
+17. rechazar cambios del origen después del vínculo de identidad de ejecución y supuestos obsoletos sobre raíz/categoría;
 18. nunca ejecutar `unlink()` a ciegas sobre staging o rollback cuya identidad pueda haber cambiado;
 19. devolver un resultado estructurado solo después de verificar el destino planificado.
 
@@ -153,7 +153,7 @@ Almacena:
 - archivos omitidos por colisión;
 - symlinks hijos directos ignorados.
 
-El plan es inmutable. Crearlo no crea directorios ni mueve archivos.
+El plan es inmutable. Crearlo no crea directorios ni mueve archivos. Registra **intención de pathname/categoría**, no un descriptor abierto ni un snapshot duradero del objeto de filesystem detrás de cada pathname. Si un archivo regular se reemplaza en el mismo pathname planificado antes de que `execute_plan()` empiece a fijar los orígenes, el reemplazo es el objeto actual seleccionado por esa intención de pathname. La identidad fuerte del objeto comienza con el pinning de ejecución.
 
 ### `OrganizationResult`
 
@@ -173,7 +173,7 @@ El movimiento recursivo introduce contratos adicionales para rutas relativas, ca
 observar -> decidir -> validar -> mutar
 ```
 
-La propuesta existe como datos antes de que comiencen los efectos secundarios, lo que facilita revisión y pruebas.
+La propuesta existe como datos antes de que comiencen los efectos secundarios, lo que facilita revisión y pruebas. Esta separación deliberadamente **no** promete que un pathname siga nombrando el mismo objeto observado durante la planificación; conservar esa garantía exigiría mantener descriptores de origen vivos dentro del plan. En su lugar, la ejecución vincula el objeto regular actual en cada pathname planificado antes de crear categorías o mutar orígenes.
 
 ## Políticas de colisión
 
@@ -231,7 +231,7 @@ La implementación representa identidad con:
 
 El nombre `notes.txt` es una entrada de directorio, no la identidad del objeto del filesystem.
 
-Durante la ejecución segura en Linux, la identidad del origen se acepta **solo después de abrir el archivo** con `O_NOFOLLOW | O_NONBLOCK` cuando `O_NONBLOCK` está disponible. El `fstat()` deriva `(device, inode)` de ese descriptor ya abierto, y todos los descriptores de los orígenes planificados permanecen abiertos hasta que termina el plan. Así, un inode aceptado y luego desvinculado no puede liberarse y reutilizarse de inmediato mientras la ejecución todavía depende de su identidad. La flag nonblocking también evita que una sustitución tardía por FIFO bloquee `open()`. El pinning estabiliza la identidad del objeto, no su contenido; las escrituras concurrentes sobre el mismo inode quedan fuera de las garantías de snapshot de este proyecto.
+La planificación registra intención de pathname y no identidad del objeto de origen. Por ello, un archivo regular reemplazado en el mismo pathname **antes del pinning de ejecución** se acepta como el objeto actual seleccionado por el plan. Durante la ejecución segura en Linux, la identidad del origen se acepta **solo después de abrir el archivo actual** con `O_NOFOLLOW | O_NONBLOCK` cuando `O_NONBLOCK` está disponible. El `fstat()` deriva `(device, inode)` de ese descriptor ya abierto, y todos los descriptores de los orígenes planificados permanecen abiertos hasta que termina el plan. Así, un inode aceptado y luego desvinculado no puede liberarse y reutilizarse de inmediato mientras la ejecución todavía depende de su identidad. La flag nonblocking también evita que una sustitución tardía por FIFO bloquee `open()`. El pinning estabiliza la identidad del objeto, no su contenido; las escrituras concurrentes sobre el mismo inode quedan fuera de las garantías de snapshot de este proyecto.
 
 ## Nombres de staging de longitud fija
 
@@ -252,7 +252,7 @@ Conceptualmente:
 ```text
 1. validar rutas y ejecutar el preflight de colisiones
 2. abrir y anclar la raíz
-3. abrir todos los orígenes planificados y aceptar identidad mediante `fstat()` del descriptor fijado
+3. abrir el archivo regular actual en cada pathname planificado y aceptar identidad mediante `fstat()` del descriptor fijado
 4. mantener abiertos todos los descriptores aceptados hasta que termine el plan
 5. abrir y anclar las categorías necesarias
 6. reclamar origen -> staging corto con semántica no-replace

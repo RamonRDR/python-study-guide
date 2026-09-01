@@ -80,10 +80,10 @@ A implementação deve:
 11. detectar colisões de destino exatas e sem diferenciação de caixa durante planejamento/preflight;
 12. oferecer políticas explícitas `ERROR` e `SKIP` durante o planejamento;
 13. executar um preflight completo;
-14. capturar a identidade das origens planejadas;
+14. vincular a identidade de cada origem quando a execução começa, e não durante o planejamento;
 15. nunca substituir silenciosamente um destino exato;
 16. revalidar nomes de destino equivalentes por `casefold()` imediatamente antes do commit;
-17. rejeitar premissas obsoletas sobre origem, raiz ou categoria durante a execução;
+17. rejeitar mudanças da origem após o vínculo de identidade da execução e premissas obsoletas sobre raiz/categoria;
 18. nunca executar `unlink()` cegamente em staging ou rollback cuja identidade possa ter mudado;
 19. retornar resultado estruturado apenas após verificar o destino planejado.
 
@@ -153,7 +153,7 @@ Armazena:
 - arquivos ignorados por colisão;
 - symlinks filhos diretos ignorados.
 
-O plano é imutável. Criá-lo não cria diretórios e não move arquivos.
+O plano é imutável. Criá-lo não cria diretórios e não move arquivos. Ele registra **intenção de pathname/categoria**, e não um descriptor aberto ou snapshot durável do objeto de filesystem por trás de cada pathname. Se um arquivo regular for substituído no mesmo pathname planejado antes de `execute_plan()` começar a pinar as origens, a substituição é o objeto atual selecionado por essa intenção de pathname. A identidade forte do objeto começa no pinning da execução.
 
 ### `OrganizationResult`
 
@@ -173,7 +173,7 @@ Movimento recursivo introduz contratos adicionais para caminhos relativos, categ
 observar -> decidir -> validar -> alterar
 ```
 
-A proposta existe como dados antes de os efeitos colaterais começarem, facilitando revisão e testes.
+A proposta existe como dados antes de os efeitos colaterais começarem, facilitando revisão e testes. Essa separação deliberadamente **não** promete que um pathname ainda nomeie o mesmo objeto observado durante o planejamento; manter essa garantia exigiria descriptors de origem vivos dentro do plano. Em vez disso, a execução vincula o objeto regular atual em cada pathname planejado antes de criar categorias ou alterar origens.
 
 ## Políticas de colisão
 
@@ -231,7 +231,7 @@ A implementação representa identidade com:
 
 O nome `notes.txt` é uma entrada de diretório, não a identidade do objeto do filesystem.
 
-Durante a execução segura no Linux, a identidade da origem só é aceita **depois que o arquivo já foi aberto** com `O_NOFOLLOW | O_NONBLOCK` quando `O_NONBLOCK` está disponível. O `fstat()` deriva `(device, inode)` desse descriptor já aberto, e todos os descriptors das origens planejadas permanecem abertos até o fim do plano. Assim, um inode aceito e depois desvinculado não pode ser liberado e imediatamente reutilizado enquanto a execução ainda depende da sua identidade. A flag nonblocking também impede que uma substituição tardia por FIFO trave o `open()`. O pinning estabiliza a identidade do objeto, não o conteúdo; escritas concorrentes no mesmo inode ficam fora das garantias de snapshot deste projeto.
+O planejamento registra intenção de pathname, e não identidade do objeto de origem. Portanto, um arquivo regular substituído no mesmo pathname **antes do pinning da execução** é aceito como o objeto atual selecionado pelo plano. Durante a execução segura no Linux, a identidade da origem só é aceita **depois que o arquivo atual já foi aberto** com `O_NOFOLLOW | O_NONBLOCK` quando `O_NONBLOCK` está disponível. O `fstat()` deriva `(device, inode)` desse descriptor já aberto, e todos os descriptors das origens planejadas permanecem abertos até o fim do plano. Assim, um inode aceito e depois desvinculado não pode ser liberado e imediatamente reutilizado enquanto a execução ainda depende da sua identidade. A flag nonblocking também impede que uma substituição tardia por FIFO trave o `open()`. O pinning estabiliza a identidade do objeto, não o conteúdo; escritas concorrentes no mesmo inode ficam fora das garantias de snapshot deste projeto.
 
 ## Nomes de staging com tamanho fixo
 
@@ -252,7 +252,7 @@ Conceitualmente:
 ```text
 1. validar caminhos e executar o preflight de colisões
 2. abrir e ancorar a raiz
-3. abrir todas as origens planejadas e aceitar identidade pelo `fstat()` do descriptor pinado
+3. abrir o arquivo regular atual em cada pathname planejado e aceitar identidade pelo `fstat()` do descriptor pinado
 4. manter todos os descriptors aceitos abertos até o fim do plano
 5. abrir e ancorar as categorias necessárias
 6. reivindicar origem -> staging curto com semântica no-replace

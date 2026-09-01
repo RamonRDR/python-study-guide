@@ -357,6 +357,22 @@ def test_execute_plan_preflights_missing_source_before_mutation(tmp_path: Path) 
     assert not (tmp_path / "data").exists()
 
 
+def test_execute_plan_binds_current_source_at_execution_start(tmp_path: Path) -> None:
+    source = tmp_path / "notes.txt"
+    source.write_text("observed during planning", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+
+    source.unlink()
+    source.write_text("current at execution start", encoding="utf-8")
+
+    result = execute_plan(plan)
+
+    destination = tmp_path / "documents" / "notes.txt"
+    assert result.moved_files == (destination,)
+    assert destination.read_text(encoding="utf-8") == "current at execution start"
+    assert not source.exists()
+
+
 def test_execute_plan_preflights_new_exact_collision_before_mutation(tmp_path: Path) -> None:
     first = tmp_path / "a.txt"
     second = tmp_path / "b.csv"

@@ -80,10 +80,10 @@ The implementation must:
 11. detect exact and case-insensitive destination collisions during planning/preflight;
 12. support explicit `ERROR` and `SKIP` planning policies;
 13. run a complete execution preflight;
-14. capture planned-source filesystem identity;
+14. bind each source filesystem identity when execution begins, not during planning;
 15. never silently replace an exact destination;
 16. recheck casefold-equivalent destination names immediately before commit;
-17. reject stale source, root, or category assumptions during execution;
+17. reject source changes after execution-time identity binding and reject stale root/category assumptions;
 18. never blindly unlink a staging or rollback entry whose identity may have changed;
 19. return a structured result only after the planned destination is verified.
 
@@ -153,7 +153,7 @@ Stores:
 - files skipped because of collisions;
 - ignored direct-child symlinks.
 
-The plan is immutable. Creating it does not create directories and does not move files.
+The plan is immutable. Creating it does not create directories and does not move files. It records **pathname/category intent**, not an open descriptor or durable snapshot of the filesystem object behind each pathname. If a regular file is replaced at the same planned pathname before `execute_plan()` begins binding sources, the replacement is the current object selected by that pathname intent. Strong object identity starts at execution-time pinning.
 
 ### `OrganizationResult`
 
@@ -173,7 +173,7 @@ Recursive movement introduces additional contracts for relative paths, nested ca
 observe -> decide -> validate -> mutate
 ```
 
-The proposal exists as data before side effects begin, which makes review and testing easier.
+The proposal exists as data before side effects begin, which makes review and testing easier. This separation deliberately does **not** promise that a pathname still names the identical filesystem object observed during planning; retaining that guarantee would require keeping live source descriptors inside the plan. Execution instead binds the current regular object at each planned pathname before any category creation or source mutation.
 
 ## Collision policies
 
@@ -231,7 +231,7 @@ The implementation represents identity with:
 
 The filename `notes.txt` is a directory entry. It is not the identity of the underlying filesystem object.
 
-During secure Linux execution, source identity is accepted **only after the source has been opened** with `O_NOFOLLOW | O_NONBLOCK` when `O_NONBLOCK` is available. The following `fstat()` derives `(device, inode)` from that already-open descriptor, and every planned source descriptor stays open until the plan finishes. An accepted inode that is later unlinked therefore cannot be freed and immediately reused while execution still depends on its identity. The nonblocking flag also prevents a late FIFO replacement from hanging `open()`. Descriptor pinning stabilizes object identity, not file contents; concurrent writes to the same inode are outside this project's snapshot guarantees.
+Planning records pathname intent rather than source-object identity. Therefore a regular file replaced at the same pathname **before execution-time pinning** is accepted as the current object selected by the plan. During secure Linux execution, source identity is accepted **only after the current source has been opened** with `O_NOFOLLOW | O_NONBLOCK` when `O_NONBLOCK` is available. The following `fstat()` derives `(device, inode)` from that already-open descriptor, and every planned source descriptor stays open until the plan finishes. An accepted inode that is later unlinked therefore cannot be freed and immediately reused while execution still depends on its identity. The nonblocking flag also prevents a late FIFO replacement from hanging `open()`. Descriptor pinning stabilizes object identity, not file contents; concurrent writes to the same inode are outside this project's snapshot guarantees.
 
 ## Fixed-length staging names
 
@@ -252,7 +252,7 @@ Conceptually:
 ```text
 1. validate paths and collision preflight
 2. open and anchor the source root
-3. open every planned source and accept identity from `fstat()` on that pinned descriptor
+3. open the current regular file at every planned pathname and accept identity from `fstat()` on that pinned descriptor
 4. keep all accepted source descriptors open through plan completion
 5. open and anchor required category directories
 6. claim source name -> short internal stage with no-replace semantics
@@ -300,7 +300,7 @@ A safety-oriented example should fail honestly instead of silently downgrading i
 3. category-path revalidation;
 4. destination collision preflight;
 5. platform capability selection;
-6. Linux: pin every planned source before accepting identity and before category mutation;
+6. Linux: bind the current regular file at every planned pathname by pinning it before accepting identity and before category mutation;
 7. anchored directory setup;
 8. source claim;
 9. mutation-time casefold collision recheck;

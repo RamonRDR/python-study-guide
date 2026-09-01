@@ -150,7 +150,7 @@ Veja a [trilha de aprendizagem da seção](../standard-library/README.pt-BR.md).
 - [x] [`decimal`](../standard-library/08-decimal/README.pt-BR.md)
 - [x] [`os` e `shutil`](../standard-library/09-os-shutil/README.pt-BR.md)
 
-A Fase 8 está concluída. Os Capítulos 01–08 constroem contratos para caminhos, data/hora, formatos estruturados, logging, coleções especializadas, iteração lazy e aritmética decimal. O Capítulo 09 encerra a fase conectando essas bases a estado do ambiente do processo, interfaces path-like, varredura e travessia de diretórios, metadados, cópia, movimento, remoção recursiva, capacidades de plataforma e segurança de archives.
+A Fase 8 está concluída. Os Capítulos 01–08 constroem contratos para caminhos, data/hora, formatos estruturados, logging, coleções especializadas, iteração lazy e aritmética decimal. O Capítulo 09 encerra a fase conectando essas bases ao estado do ambiente do processo, interfaces path-like, varredura e travessia de diretórios, metadados, cópia, movimentação, exclusão recursiva, capacidades de plataforma e segurança de archives.
 
 ## Fase 9: Bibliotecas externas
 
@@ -161,7 +161,7 @@ Veja a [trilha de aprendizagem da seção](../external-libraries/README.pt-BR.md
 - [x] [`requests`](../external-libraries/03-requests/README.pt-BR.md)
 - [x] [`pytest`](../external-libraries/04-pytest/README.pt-BR.md)
 
-A Fase 9 está concluída. O Capítulo 01 introduz pandas 3.0.x para dados tabulares rotulados. O Capítulo 02 acrescenta automação de workbooks com openpyxl 3.1.x. O Capítulo 03 acrescenta contratos HTTP/API com Requests 2.34.x. O Capítulo 04 encerra a fase com contratos de testes automatizados em pytest 9.1.x, cobrindo descoberta, assertions, fixtures, parametrização, recursos temporários, monkeypatching, captura, marks, isolamento determinístico e CI. Os exemplos executáveis usam o contrato declarado em [`requirements-external.txt`](../requirements-external.txt).
+A Fase 9 está concluída. O Capítulo 01 introduz pandas 3.0.x para dados tabulares rotulados. O Capítulo 02 acrescenta automação de workbooks com openpyxl 3.1.x. O Capítulo 03 acrescenta contratos HTTP/API com Requests 2.34.x. O Capítulo 04 encerra a fase com contratos de testes automatizados em pytest 9.1.x, cobrindo descoberta, assertions, fixtures, parametrização, recursos temporários, monkeypatching, captura, marks, isolamento determinístico e CI. Os exemplos executáveis de bibliotecas externas usam o contrato declarado em [`requirements-external.txt`](../requirements-external.txt).
 
 ## Fase 10: Projetos práticos
 
@@ -170,13 +170,13 @@ Veja o [índice da seção Projetos Práticos](../practical-projects/README.pt-B
 - [x] [Controle de Despesas](../practical-projects/01-expense-tracker/README.pt-BR.md)
 - [x] [Calculadora de Notas](../practical-projects/02-grade-calculator/README.pt-BR.md)
 - [x] [Cadastro de Usuários](../practical-projects/03-user-registration/README.pt-BR.md)
-- [x] [Analisador CSV](../practical-projects/04-csv-analyzer/README.pt-BR.md)
+- [x] [Analisador de CSV](../practical-projects/04-csv-analyzer/README.pt-BR.md)
 - [x] [Gerador de Relatórios](../practical-projects/05-report-generator/README.pt-BR.md)
 - [ ] [Organizador de Arquivos](../practical-projects/06-file-organizer/README.pt-BR.md) — projeto atual
 - [ ] Fluxo Fictício de Conciliação
 - [ ] Fluxo Simulado de Automação
 
-O Projeto 01 estabelece o contrato da Fase 10 com requisitos explícitos, modelagem de dados validada, dinheiro exato com `Decimal`, persistência, demonstração determinística, cobertura automatizada com pytest, desafios de extensão e discussão de portfólio. O Projeto 02 estende o contrato com regras configuráveis de notas, agregação ponderada exata, relatórios parcial/final explícitos e validação focada em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários de lookup, atualizações seguras de campos indexados, transições explícitas de ciclo de vida e cobertura pytest focada em mutação sem introduzir autenticação. O Projeto 04 adiciona schemas CSV estritos, conversão tipada, tratamento de falhas estruturais versus falhas por linha, parsing com sucesso parcial, identificadores aceitos duplicados, agregação determinística e filtragem usando mecanismos CSV da biblioteca padrão de forma explícita. O Projeto 05 adiciona janelas inclusivas de datas, validação de identidade de origem, métricas de resumo exatas e determinísticas, construção imutável de relatórios, renderização TXT/Markdown, escape específico do formato e saída UTF-8. O Projeto 06 adiciona descoberta rasa determinística, planejamento imutável, categorias por sufixo, políticas explícitas de colisão, fronteiras de symlink, identidade `(device, inode)`, ancoragem de descriptors de raiz/categorias, nomes de staging limitados e commits atômicos no-replace sensíveis à plataforma com `renameat2(RENAME_NOREPLACE)` no Linux.
+O Projeto 01 estabelece o contrato da Fase 10 com requisitos explícitos, modelagem de dados validada, dinheiro exato com `Decimal`, persistência, demonstração determinística, cobertura automatizada com pytest, desafios de extensão e discussão de portfólio. O Projeto 02 amplia o contrato com regras de notas configuráveis, agregação ponderada exata, relatório parcial/final explícito e validação focada em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários, atualizações seguras e transições explícitas de ciclo de vida sem introduzir autenticação. O Projeto 04 adiciona schemas CSV rígidos, conversão tipada, separação entre falhas estruturais e falhas de linha, parsing com sucesso parcial, identificadores aceitos duplicados, agregação determinística e filtros com a mecânica da biblioteca padrão exposta explicitamente. O Projeto 05 adiciona janelas inclusivas explícitas de datas, validação da identidade da origem, métricas exatas e determinísticas de resumo, construção imutável do relatório, renderização TXT/Markdown, escape específico do formato e escrita UTF-8. O Projeto 06 adiciona descoberta rasa determinística, planejamento imutável, categorias por sufixo, políticas explícitas de colisão, fronteiras de symlink, identidade `(device, inode)`, ancoragem de descriptors de raiz/categorias, nomes de staging limitados e commits atômicos no-replace sensíveis à plataforma com `renameat2(RENAME_NOREPLACE)` no Linux.
 
 Cada projeto deve incluir:
 
@@ -184,22 +184,22 @@ Cada projeto deve incluir:
 - notas de design;
 - implementação;
 - explicação;
-- cobertura automatizada para comportamentos importantes;
+- cobertura automatizada dos comportamentos importantes;
 - desafios de extensão;
 - discussão de portfólio.
 
-## Gates contínuos de qualidade
+## Critérios contínuos de qualidade
 
 Cada fase deve preservar:
 
 - precisão técnica;
 - consistência multilíngue;
 - exemplos originais e seguros para publicação;
-- dados seguros para privacidade;
+- dados seguros do ponto de vista de privacidade;
 - exemplos Python executáveis quando apropriado;
-- integridade de navegação interna;
-- atenção ao PEP 8;
+- integridade da navegação interna;
+- atenção à PEP 8;
 - documentação de mudanças estruturais relevantes;
-- premissas honestas sobre dependências e versões.
+- transparência sobre dependências e pressupostos de versão.
 
-O roadmap evoluirá conforme o projeto crescer, mas as mudanças devem preservar a progressão de conceitos iniciantes para trabalho prático integrado.
+O roadmap evoluirá à medida que o projeto crescer, mas as mudanças devem preservar a progressão dos conceitos iniciais até o trabalho prático integrado.

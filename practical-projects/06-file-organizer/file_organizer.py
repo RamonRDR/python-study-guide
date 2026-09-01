@@ -173,7 +173,7 @@ class MoveAction:
 
 @dataclass(frozen=True, slots=True)
 class OrganizationPlan:
-    """Immutable organization plan produced before filesystem mutation."""
+    """Immutable pathname-intent plan produced before filesystem mutation."""
 
     source_directory: Path
     actions: tuple[MoveAction, ...]
@@ -348,7 +348,7 @@ def plan_organization(
     *,
     collision_policy: CollisionPolicy = CollisionPolicy.ERROR,
 ) -> OrganizationPlan:
-    """Build a deterministic, non-mutating plan for direct child files."""
+    """Build a deterministic, non-mutating pathname-intent plan."""
     root = _require_source_directory(source_directory)
     if not isinstance(collision_policy, CollisionPolicy):
         raise TypeError("collision_policy must be a CollisionPolicy")
@@ -559,7 +559,12 @@ def _pin_planned_sources_at(
     *,
     root_fd: int,
 ) -> dict[Path, _PinnedSource]:
-    """Pin every source before category creation or source mutation."""
+    """Pin the current regular file at every planned pathname before mutation.
+
+    OrganizationPlan intentionally stores pathname/category intent, not live file
+    descriptors or a durable filesystem-object snapshot. Identity becomes strong
+    only when execute_plan opens each pathname and accepts fstat() on that pin.
+    """
     pinned: dict[Path, _PinnedSource] = {}
     try:
         for action in plan.actions:
@@ -1055,7 +1060,12 @@ def _execute_plan_portable(
 
 
 def execute_plan(plan: OrganizationPlan) -> OrganizationResult:
-    """Execute a plan under the strongest explicitly supported platform contract."""
+    """Execute pathname intent under the strongest supported platform contract.
+
+    A plan does not freeze source-object identity between planning and execution.
+    The current regular file at each planned pathname is bound when execution
+    starts; changes after that binding are rejected under the platform contract.
+    """
     if not isinstance(plan, OrganizationPlan):
         raise TypeError("plan must be an OrganizationPlan")
 
