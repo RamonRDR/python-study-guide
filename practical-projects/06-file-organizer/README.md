@@ -22,11 +22,13 @@ By the end of this project, you should be able to:
 - separate a non-mutating planning phase from a mutating execution phase;
 - detect exact and case-insensitive destination collisions;
 - choose explicit collision policies instead of silently overwriting data;
-- treat symlinks as a filesystem boundary;
+- treat symlinks and special files as filesystem boundaries;
 - reason about time-of-check/time-of-use races;
 - compare filesystem objects by `(device, inode)` identity;
 - anchor directories with file descriptors on Linux;
-- use atomic no-replace rename semantics at the final commit boundary;
+- pin sources without blocking on late FIFO replacements;
+- use atomic no-replace rename semantics at the final exact-name commit boundary;
+- distinguish logical casefold collision checks from exact-name atomic guarantees;
 - preserve uncertain state instead of blindly deleting entries during recovery;
 - test filesystem code safely with temporary directories.
 
@@ -75,14 +77,15 @@ The implementation must:
 8. produce deterministic ordering;
 9. build an immutable plan before mutation;
 10. reject invalid category paths, including symlinked category directories;
-11. detect exact and case-insensitive destination collisions;
+11. detect exact and case-insensitive destination collisions during planning/preflight;
 12. support explicit `ERROR` and `SKIP` planning policies;
 13. run a complete execution preflight;
 14. capture planned-source filesystem identity;
 15. never silently replace an exact destination;
-16. reject stale source, root, or category assumptions during execution;
-17. never blindly unlink a staging or rollback entry whose identity may have changed;
-18. return a structured result only after the planned destination is verified.
+16. recheck casefold-equivalent destination names immediately before commit;
+17. reject stale source, root, or category assumptions during execution;
+18. never blindly unlink a staging or rollback entry whose identity may have changed;
+19. return a structured result only after the planned destination is verified.
 
 ## Deliberate scope
 
@@ -96,7 +99,8 @@ source directory
     -> execution preflight
     -> anchored category folders
     -> source claim
-    -> atomic no-replace destination commit
+    -> mutation-time casefold recheck
+    -> atomic exact-name no-replace destination commit
 ```
 
 This project intentionally excludes:
@@ -181,7 +185,7 @@ Planning raises `FileExistsError` when a destination name already exists.
 
 Conflicting source files remain in the source directory and are listed in `skipped_collisions`.
 
-Execution still refuses collisions that appear after planning.
+Execution rechecks collisions after planning. Exact-name existence is enforced atomically at the final Linux commit; casefold-equivalent names are rechecked immediately before that commit.
 
 ## Case-insensitive collision checks
 
@@ -192,7 +196,9 @@ Report.TXT
 report.txt
 ```
 
-These names are treated as a logical collision even on a case-sensitive filesystem.
+These names are treated as a logical collision during planning, preflight, and the mutation-time recheck even on a case-sensitive filesystem.
+
+There is an important boundary: on a case-sensitive filesystem, the kernel primitive `RENAME_NOREPLACE` protects only the **exact destination name**. A non-cooperating external process could still create a different casefold-equivalent name in the tiny interval after the final casefold scan. The project therefore does not claim atomic case-insensitive uniqueness where the filesystem does not provide it.
 
 ## Symlink and directory-anchor boundaries
 
@@ -225,7 +231,7 @@ The implementation represents identity with:
 
 The filename `notes.txt` is a directory entry. It is not the identity of the underlying filesystem object.
 
-During secure Linux execution, the planned source is also opened with `O_NOFOLLOW`, pinning the expected inode while the commit runs. This prevents an unlinked inode from being reused and mistaken for the originally planned source during the operation.
+During secure Linux execution, the planned source is opened with `O_NOFOLLOW | O_NONBLOCK` when `O_NONBLOCK` is available. The nonblocking flag prevents a late FIFO replacement from hanging `open()`, while the following `fstat()` still requires a regular file with the planned `(device, inode)` identity. The open descriptor pins the expected inode while the commit runs.
 
 ## Fixed-length staging names
 
@@ -247,15 +253,16 @@ Conceptually:
 1. preflight and capture source identity
 2. open and anchor the source root
 3. open and anchor required category directories
-4. pin the planned source inode with O_NOFOLLOW
+4. pin the planned source inode with O_NOFOLLOW | O_NONBLOCK
 5. atomically claim source name -> short internal stage
 6. verify stage identity and directory anchors
-7. atomically rename stage -> destination with RENAME_NOREPLACE
-8. verify destination identity and anchors
-9. report success
+7. rescan the pinned category for a casefold-equivalent destination
+8. atomically rename stage -> exact destination with RENAME_NOREPLACE
+9. verify destination identity and anchors
+10. report success
 ```
 
-`RENAME_NOREPLACE` makes destination existence part of the atomic filesystem operation. There is no separate `exists()` check followed by a replacing rename.
+`RENAME_NOREPLACE` makes **exact destination-name** existence part of the atomic filesystem operation. There is no separate `exists()` check followed by a replacing rename. The preceding casefold scan catches logical collisions visible at that boundary, but it is intentionally documented as a recheck rather than an atomic case-insensitive lock.
 
 The normal secure path does **not** finalize a move by calling `unlink()` on the staging name. This avoids transferring the same check-to-unlink race from the public source name to an internal name.
 
@@ -273,8 +280,8 @@ The whole multi-file plan is not transactional.
 
 The implementation is explicit about platform guarantees:
 
-- **Linux:** secure descriptor-anchored execution uses `renameat2(RENAME_NOREPLACE)` when available;
-- **Windows:** the fallback relies on Windows `os.rename()` refusing an existing destination and verifies source/destination/category identities around the operation;
+- **Linux:** secure descriptor-anchored execution uses `renameat2(RENAME_NOREPLACE)` when available, with atomic no-replace protection for the exact destination name and mutation-time casefold rechecks;
+- **Windows:** the fallback relies on Windows `os.rename()` refusing an existing destination and performs a best-effort casefold recheck plus source/destination/category identity validation around the operation;
 - **other POSIX platforms:** execution raises `NotImplementedError` when the project cannot enforce the required no-replace semantics safely.
 
 A safety-oriented example should fail honestly instead of silently downgrading its contract.
@@ -290,9 +297,11 @@ A safety-oriented example should fail honestly instead of silently downgrading i
 5. destination collision preflight;
 6. platform capability selection;
 7. anchored directory setup;
-8. source claim and atomic no-replace commit;
-9. destination/anchor verification;
-10. `OrganizationResult` construction.
+8. nonblocking source pin and source claim;
+9. mutation-time casefold collision recheck;
+10. atomic exact-name no-replace commit;
+11. destination/anchor verification;
+12. `OrganizationResult` construction.
 
 ## Determinism
 
@@ -334,7 +343,9 @@ Coverage includes:
 - `ERROR` and `SKIP` policies;
 - stale and missing sources;
 - late exact destinations;
-- late source symlink/file replacement;
+- late casefold-equivalent destinations before final commit;
+- late source symlink/file/FIFO replacement;
+- nonblocking source pinning;
 - category symlink and rename races;
 - source-root rename races;
 - fixed-length staging names;
@@ -362,7 +373,11 @@ Rejected before planning or execution.
 
 ### Destination appears after planning
 
-Preflight or the atomic no-replace commit raises `FileExistsError`.
+Preflight and the mutation-time casefold recheck raise `FileExistsError` for collisions they observe. The final Linux `RENAME_NOREPLACE` atomically rejects an exact-name destination that appears at the commit boundary.
+
+### Planned source becomes a FIFO or another special file
+
+The Linux source pin uses nonblocking open flags, then `fstat()` rejects the replacement as non-regular instead of hanging execution.
 
 ### Planned source changes
 
@@ -385,6 +400,14 @@ Mixing discovery and mutation makes partial failure difficult to reason about. B
 ### Treating a filename as object identity
 
 Directory entries can be replaced while preserving the same name. Use filesystem identity when the distinction matters.
+
+### Opening a possibly replaced path in blocking mode
+
+`O_NOFOLLOW` rejects symlinks but does not stop a FIFO from blocking a read-only `open()`. Use nonblocking pinning before validating the file type.
+
+### Assuming a casefold scan is an atomic lock
+
+A user-space directory scan can detect logical case-insensitive collisions, but on a case-sensitive filesystem it cannot make a later differently cased name impossible. Keep the atomic guarantee scoped to the exact name enforced by the kernel primitive.
 
 ### Checking immediately before `unlink()`
 
@@ -439,7 +462,7 @@ A useful explanation is not “I wrote a script that moves files.”
 
 A stronger version is:
 
-> I designed a filesystem workflow with deterministic planning, explicit collision policies, symlink boundaries, inode-based identity checks, descriptor-anchored directories, bounded staging names, and an atomic Linux no-replace commit using `renameat2(RENAME_NOREPLACE)`. Failure handling preserves uncertain state instead of blindly deleting entries.
+> I designed a filesystem workflow with deterministic planning, explicit collision policies, symlink/special-file boundaries, inode-based identity checks, descriptor-anchored directories, bounded staging names, mutation-time casefold rechecks, and an atomic Linux exact-name no-replace commit using `renameat2(RENAME_NOREPLACE)`. Failure handling preserves uncertain state instead of blindly deleting entries.
 
 That communicates engineering decisions, not just API usage.
 
@@ -456,7 +479,8 @@ That communicates engineering decisions, not just API usage.
 | Execute the plan | `execute_plan()` |
 | Hold successful destinations | `OrganizationResult` |
 | Identify filesystem objects | `(st_dev, st_ino)` |
-| Secure Linux commit | `renameat2(RENAME_NOREPLACE)` |
+| Logical casefold recheck | pinned-directory `listdir()` |
+| Secure Linux exact-name commit | `renameat2(RENAME_NOREPLACE)` |
 
 ## What comes next
 
