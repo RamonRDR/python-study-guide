@@ -73,6 +73,7 @@ def test_execute_plan_rejects_category_symlink_created_after_preflight(
             raise FileExistsError
         original_mkdir(path, mode, dir_fd=dir_fd)
 
+    monkeypatch.setattr(file_organizer, "_supports_secure_directory_fds", lambda: True)
     monkeypatch.setattr(file_organizer.os, "mkdir", racing_mkdir)
 
     with pytest.raises(ValueError, match="became unsafe during execution"):
