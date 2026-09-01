@@ -1,0 +1,41 @@
+name: Apply File Organizer full-review fixes
+
+on:
+  push:
+    branches:
+      - phase-10-file-organizer
+    paths:
+      - scripts/_apply_file_organizer_full_review_11.py
+      - .github/workflows/apply-file-organizer-full-review-11.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: phase-10-file-organizer
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Apply focused fixes
+        run: python scripts/_apply_file_organizer_full_review_11.py
+      - name: Validate focused project
+        run: |
+          python -m pip install --disable-pip-version-check "pytest>=9.1,<9.2"
+          python -m pytest -q practical-projects/06-file-organizer/tests
+          python -m py_compile practical-projects/06-file-organizer/file_organizer.py
+          git diff --check
+      - name: Commit clean fix set
+        run: |
+          rm scripts/_apply_file_organizer_full_review_11.py
+          rm .github/workflows/apply-file-organizer-full-review-11.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Clarify File Organizer execution identity boundary"
+          git push origin HEAD:phase-10-file-organizer
