@@ -26,6 +26,19 @@ jobs:
           python-version: "3.13"
       - name: Install pytest
         run: python -m pip install --disable-pip-version-check "pytest>=9.1,<9.2"
+      - name: Normalize helper anchor
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("scripts/_apply_file_organizer_full_review.py")
+          text = path.read_text(encoding="utf-8")
+          wrong = "El organizador no sigue symlinks hijos directos. También rechaza directorio de origen o carpeta de categoría que sea symlink. En Windows, también se rechazan carpetas de categoría que sean junctions NTFS: `is_dir()` sigue un junction, por lo que aceptarlo podría redirigir un movimiento planificado fuera del workspace."
+          current = "El organizador no sigue symlinks hijos directos. También rechaza un directorio de origen o carpeta de categoría que sea symlink. En Windows, las carpetas de categoría que sean junctions NTFS también se rechazan: `is_dir()` sigue un junction, por lo que aceptarlo podría redirigir un movimiento planificado fuera del workspace."
+          if text.count(wrong) != 1:
+              raise SystemExit("expected one Spanish helper anchor")
+          path.write_text(text.replace(wrong, current, 1), encoding="utf-8")
+          PY
       - name: Apply full-review patch
         run: python scripts/_apply_file_organizer_full_review.py
       - name: Validate focused patch
