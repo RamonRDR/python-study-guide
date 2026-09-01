@@ -320,8 +320,84 @@ def _preflight_execution(plan: OrganizationPlan) -> None:
             )
 
 
+def _supports_secure_directory_fds() -> bool:
+    """Return whether the platform can enforce no-follow directory mutation."""
+    return (
+        hasattr(os, "O_DIRECTORY")
+        and hasattr(os, "O_NOFOLLOW")
+        and os.open in os.supports_dir_fd
+        and os.mkdir in os.supports_dir_fd
+        and os.link in os.supports_dir_fd
+        and os.unlink in os.supports_dir_fd
+    )
+
+
+def _directory_open_flags() -> int:
+    flags = os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW
+    if hasattr(os, "O_CLOEXEC"):
+        flags |= os.O_CLOEXEC
+    return flags
+
+
+def _open_source_directory_fd(source_directory: Path) -> int:
+    try:
+        return os.open(source_directory, _directory_open_flags())
+    except OSError as exc:
+        raise ValueError("source_directory became unsafe during execution") from exc
+
+
+def _open_category_directory_fd(root_fd: int, category_name: str) -> int:
+    """Create/open one category directory without following a late symlink."""
+    try:
+        os.mkdir(category_name, dir_fd=root_fd)
+    except FileExistsError:
+        pass
+
+    try:
+        return os.open(category_name, _directory_open_flags(), dir_fd=root_fd)
+    except OSError as exc:
+        raise ValueError(
+            f"category directory became unsafe during execution: {category_name}"
+        ) from exc
+
+
+def _move_file_no_replace_at(
+    source_name: str,
+    destination_name: str,
+    *,
+    source_directory_fd: int,
+    destination_directory_fd: int,
+) -> None:
+    """Move one file through pinned directory descriptors without replacement."""
+    try:
+        os.link(
+            source_name,
+            destination_name,
+            src_dir_fd=source_directory_fd,
+            dst_dir_fd=destination_directory_fd,
+            follow_symlinks=False,
+        )
+    except FileExistsError as exc:
+        raise FileExistsError(
+            f"destination appeared during execution: {destination_name}"
+        ) from exc
+
+    try:
+        os.unlink(source_name, dir_fd=source_directory_fd)
+    except OSError as exc:
+        try:
+            os.unlink(destination_name, dir_fd=destination_directory_fd)
+        except OSError as rollback_exc:
+            raise RuntimeError(
+                f"move rollback failed for source file: {source_name}"
+            ) from rollback_exc
+        raise OSError(
+            f"could not remove source after creating destination: {source_name}"
+        ) from exc
+
+
 def _move_file_no_replace(source: Path, destination: Path) -> None:
-    """Move one regular file without ever replacing an existing destination."""
+    """Portable fallback that never replaces an exact existing destination."""
     try:
         os.link(source, destination, follow_symlinks=False)
     except FileExistsError as exc:
@@ -343,6 +419,63 @@ def _move_file_no_replace(source: Path, destination: Path) -> None:
         ) from exc
 
 
+def _execute_plan_with_directory_fds(plan: OrganizationPlan) -> OrganizationResult:
+    """Execute using pinned no-follow directory descriptors when supported."""
+    root_fd = _open_source_directory_fd(plan.source_directory)
+    category_fds: dict[FileCategory, int] = {}
+
+    try:
+        for category in sorted(
+            {action.category for action in plan.actions},
+            key=lambda item: item.value,
+        ):
+            category_fds[category] = _open_category_directory_fd(
+                root_fd,
+                category.value,
+            )
+
+        moved: list[Path] = []
+        for action in plan.actions:
+            _move_file_no_replace_at(
+                action.source.name,
+                action.destination.name,
+                source_directory_fd=root_fd,
+                destination_directory_fd=category_fds[action.category],
+            )
+            moved.append(action.destination)
+
+        return OrganizationResult(plan=plan, moved_files=tuple(moved))
+    finally:
+        for directory_fd in category_fds.values():
+            os.close(directory_fd)
+        os.close(root_fd)
+
+
+def _execute_plan_portable(plan: OrganizationPlan) -> OrganizationResult:
+    """Execute on platforms without directory-descriptor no-follow support."""
+    for directory in sorted(
+        {action.destination.parent for action in plan.actions},
+        key=lambda path: (path.name.casefold(), path.name),
+    ):
+        directory.mkdir(exist_ok=True)
+        if directory.is_symlink() or not directory.is_dir():
+            raise ValueError(
+                f"category directory became unsafe during execution: {directory.name}"
+            )
+
+    moved: list[Path] = []
+    for action in plan.actions:
+        if action.destination.parent.is_symlink():
+            raise ValueError(
+                "category directory became unsafe during execution: "
+                f"{action.destination.parent.name}"
+            )
+        _move_file_no_replace(action.source, action.destination)
+        moved.append(action.destination)
+
+    return OrganizationResult(plan=plan, moved_files=tuple(moved))
+
+
 def execute_plan(plan: OrganizationPlan) -> OrganizationResult:
     """Execute a previously validated plan after a full collision preflight."""
     if not isinstance(plan, OrganizationPlan):
@@ -350,15 +483,6 @@ def execute_plan(plan: OrganizationPlan) -> OrganizationResult:
 
     _preflight_execution(plan)
 
-    for directory in sorted(
-        {action.destination.parent for action in plan.actions},
-        key=lambda path: (path.name.casefold(), path.name),
-    ):
-        directory.mkdir(exist_ok=True)
-
-    moved: list[Path] = []
-    for action in plan.actions:
-        _move_file_no_replace(action.source, action.destination)
-        moved.append(action.destination)
-
-    return OrganizationResult(plan=plan, moved_files=tuple(moved))
+    if _supports_secure_directory_fds():
+        return _execute_plan_with_directory_fds(plan)
+    return _execute_plan_portable(plan)
