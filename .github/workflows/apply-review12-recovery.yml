@@ -1,0 +1,88 @@
+name: Apply Review 12 recovery fix
+
+on:
+  push:
+    branches:
+      - phase-10-file-organizer
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v6
+        with:
+          ref: phase-10-file-organizer
+          fetch-depth: 0
+
+      - name: Apply focused Review 12 patch
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          core_path = Path('practical-projects/06-file-organizer/file_organizer.py')
+          text = core_path.read_text(encoding='utf-8')
+
+          old_helper = '''def _preserve_stage_at(stage_name: str, source_name: str, *, root_fd: int) -> None:\n    """Best-effort restore by linking only; never delete a raced staging entry."""\n    try:\n        os.link(\n            stage_name,\n            source_name,\n            src_dir_fd=root_fd,\n            dst_dir_fd=root_fd,\n            follow_symlinks=False,\n        )\n    except OSError:\n        pass\n\n\n'''
+          new_helper = old_helper + '''def _preserve_claimed_source_after_failure_at(\n    stage_name: str,\n    source_name: str,\n    *,\n    root_fd: int,\n    source_fd: int,\n    expected_identity: _FileIdentity,\n) -> str | None:\n    """Restore a proven stage or recover pinned bytes when stage identity is uncertain."""\n    try:\n        staged_identity = _regular_identity_at(stage_name, directory_fd=root_fd)\n    except OSError:\n        staged_identity = None\n\n    if staged_identity == expected_identity:\n        _preserve_stage_at(stage_name, source_name, root_fd=root_fd)\n        return None\n\n    return _recover_pinned_source_at(\n        source_fd,\n        source_name,\n        root_fd=root_fd,\n    )\n\n\n'''
+          if old_helper not in text:
+              raise SystemExit('helper anchor not found')
+          text = text.replace(old_helper, new_helper, 1)
+
+          old_except = '''    except (FileExistsError, FileNotFoundError, ValueError, OSError):\n        _preserve_stage_at(stage_name, source_name, root_fd=source_directory_fd)\n        raise\n'''
+          new_except = '''    except (FileExistsError, FileNotFoundError, ValueError, OSError) as exc:\n        recovery_name = _preserve_claimed_source_after_failure_at(\n            stage_name,\n            source_name,\n            root_fd=source_directory_fd,\n            source_fd=source_fd,\n            expected_identity=expected_identity,\n        )\n        if recovery_name is not None:\n            exc.add_note(\n                "planned source data retained as "\n                f"{recovery_name}: {source_name}"\n            )\n        raise\n'''
+          if old_except not in text:
+              raise SystemExit('move failure anchor not found')
+          text = text.replace(old_except, new_except, 1)
+          core_path.write_text(text, encoding='utf-8')
+
+          test_path = Path('practical-projects/06-file-organizer/tests/test_atomic_move.py')
+          tests = test_path.read_text(encoding='utf-8')
+          anchor = '''def test_secure_execution_reports_readability_precondition_before_categories(\n'''
+          new_test = '''def test_failed_final_rename_after_stage_replacement_recovers_pinned_source_data(\n    monkeypatch: pytest.MonkeyPatch,\n    tmp_path: Path,\n) -> None:\n    if not file_organizer._supports_secure_directory_fds():\n        pytest.skip("secure directory descriptors are unavailable on this platform")\n\n    source = tmp_path / "notes.txt"\n    source.write_text("planned source", encoding="utf-8")\n    plan = plan_organization(tmp_path)\n    destination = tmp_path / "documents" / "notes.txt"\n    original_rename_no_replace = file_organizer._rename_no_replace_at\n    raced = False\n\n    def racing_rename_no_replace(\n        source_name: str,\n        destination_name: str,\n        *,\n        source_directory_fd: int,\n        destination_directory_fd: int,\n    ) -> None:\n        nonlocal raced\n        if source_name.startswith(".fo-stage-") and not raced:\n            raced = True\n            stage = tmp_path / source_name\n            stage.unlink()\n            stage.write_text("third-party stage", encoding="utf-8")\n            destination.write_text("late destination", encoding="utf-8")\n        original_rename_no_replace(\n            source_name,\n            destination_name,\n            source_directory_fd=source_directory_fd,\n            destination_directory_fd=destination_directory_fd,\n        )\n\n    monkeypatch.setattr(\n        file_organizer,\n        "_rename_no_replace_at",\n        racing_rename_no_replace,\n    )\n\n    with pytest.raises(FileExistsError, match="destination appeared during execution"):\n        execute_plan(plan)\n\n    assert destination.read_text(encoding="utf-8") == "late destination"\n    assert not source.exists()\n    stage_files = [\n        child for child in tmp_path.iterdir() if child.name.startswith(".fo-stage-")\n    ]\n    assert len(stage_files) == 1\n    assert stage_files[0].read_text(encoding="utf-8") == "third-party stage"\n    recovery_files = [\n        child\n        for child in tmp_path.iterdir()\n        if child.name.startswith(".fo-recovery-")\n    ]\n    assert len(recovery_files) == 1\n    assert recovery_files[0].read_text(encoding="utf-8") == "planned source"\n\n\n'''
+          if anchor not in tests:
+              raise SystemExit('test insertion anchor not found')
+          tests = tests.replace(anchor, new_test + anchor, 1)
+          test_path.write_text(tests, encoding='utf-8')
+
+          docs = {
+              Path('practical-projects/06-file-organizer/README.md'): (
+                  'A staging pathname is not an inode lock. If the final rename consumes a replacement entry and destination identity verification detects the mismatch, execution leaves the unrelated destination intact and, before closing the still-pinned source file descriptor, copies the planned source bytes into an exclusive `.fo-recovery-*` regular file. This preserves recoverable data without claiming that the original inode survived the race.\n',
+                  'A staging pathname is not an inode lock. After the source has been claimed, every failure path rechecks whether the staging entry still matches the pinned source identity. If it does, execution may hard-link that proven stage back to the original source name. If the stage is missing or has been replaced, execution leaves the uncertain stage untouched and, before closing the still-pinned source file descriptor, copies the planned source bytes into an exclusive `.fo-recovery-*` regular file. This also covers a final `RENAME_NOREPLACE` failure caused by a destination that appears after the stage was raced. If a replacement stage is successfully renamed and destination identity verification detects the mismatch, the unrelated destination is likewise left intact while the pinned bytes are recovered. Recovery preserves data without claiming that the original inode survived the race.\n'
+              ),
+              Path('practical-projects/06-file-organizer/README.pt-BR.md'): (
+                  'Um pathname de staging não funciona como lock de inode. Se o rename final consumir uma entrada substituta e a verificação de identidade do destino detectar a divergência, a execução mantém intacto o destino alheio e, antes de fechar o descritor ainda pinado da origem, copia os bytes planejados para um arquivo regular exclusivo `.fo-recovery-*`. Essa recuperação preserva dados recuperáveis sem afirmar que o inode original sobreviveu à corrida.\n',
+                  'Um pathname de staging não funciona como lock de inode. Depois que a origem foi claimada, todo caminho de falha revalida se a entrada de staging ainda corresponde à identidade pinada da origem. Se corresponder, a execução pode recriar o nome original por hard link a partir desse staging comprovado. Se o staging sumiu ou foi substituído, a execução deixa a entrada incerta intacta e, antes de fechar o descritor ainda pinado da origem, copia os bytes planejados para um arquivo regular exclusivo `.fo-recovery-*`. Isso também cobre uma falha final de `RENAME_NOREPLACE` causada por um destino que aparece depois de uma corrida sobre o staging. Se um staging substituto for renomeado com sucesso e a verificação de identidade do destino detectar a divergência, o destino alheio também permanece intacto enquanto os bytes pinados são recuperados. A recuperação preserva os dados sem afirmar que o inode original sobreviveu à corrida.\n'
+              ),
+              Path('practical-projects/06-file-organizer/README.es.md'): (
+                  'Un pathname de staging no funciona como lock de inode. Si el rename final consume una entrada de reemplazo y la verificación de identidad del destino detecta la divergencia, la ejecución conserva intacto el destino ajeno y, antes de cerrar el descriptor aún anclado del origen, copia los bytes planificados a un archivo regular exclusivo `.fo-recovery-*`. Esta recuperación conserva datos recuperables sin afirmar que el inode original haya sobrevivido a la carrera.\n',
+                  'Un pathname de staging no funciona como lock de inode. Después de reclamar el origen, cada ruta de fallo vuelve a comprobar si la entrada de staging todavía coincide con la identidad fijada del origen. Si coincide, la ejecución puede recrear el nombre original mediante un hard link desde ese staging comprobado. Si el staging desapareció o fue reemplazado, la ejecución deja intacta la entrada incierta y, antes de cerrar el descriptor todavía fijado del origen, copia los bytes planificados a un archivo regular exclusivo `.fo-recovery-*`. Esto también cubre un fallo final de `RENAME_NOREPLACE` causado por un destino que aparece después de una carrera sobre el staging. Si un staging de reemplazo se renombra con éxito y la verificación de identidad del destino detecta la divergencia, el destino ajeno también queda intacto mientras se recuperan los bytes fijados. La recuperación conserva los datos sin afirmar que el inode original haya sobrevivido a la carrera.\n'
+              ),
+          }
+          for path, (old, new) in docs.items():
+              doc = path.read_text(encoding='utf-8')
+              if old not in doc:
+                  raise SystemExit(f'doc anchor not found: {path}')
+              path.write_text(doc.replace(old, new, 1), encoding='utf-8')
+          PY
+
+      - name: Run focused validation
+        shell: bash
+        run: |
+          python -m pytest -q practical-projects/06-file-organizer/tests
+          python -m compileall -q practical-projects/06-file-organizer
+
+      - name: Remove temporary workflow and commit fix
+        shell: bash
+        run: |
+          rm .github/workflows/apply-review12-recovery.yml
+          git config user.name "Ramon Rodriguez"
+          git config user.email "ramoncorreka@hotmail.com"
+          git add practical-projects/06-file-organizer .github/workflows/apply-review12-recovery.yml
+          git commit -m "Recover pinned source on failed final rename"
+          git push origin HEAD:phase-10-file-organizer
