@@ -1,0 +1,249 @@
+name: Apply File Organizer recovery patch
+
+on:
+  push:
+    branches:
+      - phase-10-file-organizer
+    paths:
+      - .github/workflows/apply-file-organizer-recovery.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out feature branch
+        uses: actions/checkout@v6
+        with:
+          ref: phase-10-file-organizer
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install test dependency
+        run: python -m pip install --disable-pip-version-check "pytest>=9.1,<9.2"
+
+      - name: Apply focused staging-race recovery patch
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(path: str, old: str, new: str) -> None:
+              target = Path(path)
+              text = target.read_text(encoding="utf-8")
+              if old not in text:
+                  raise SystemExit(f"expected patch anchor not found in {path}")
+              if text.count(old) != 1:
+                  raise SystemExit(f"patch anchor is not unique in {path}")
+              target.write_text(text.replace(old, new, 1), encoding="utf-8")
+
+          implementation = "practical-projects/06-file-organizer/file_organizer.py"
+          tests = "practical-projects/06-file-organizer/tests/test_atomic_move.py"
+
+          stage_anchor = '''def _make_stage_name(source_name: str) -> str:
+              """Return a fixed-length internal name independent of the source filename."""
+              del source_name
+              return f".fo-stage-{secrets.token_hex(16)}"
+
+
+          def _preserve_stage_at(stage_name: str, source_name: str, *, root_fd: int) -> None:
+          '''
+          stage_replacement = '''def _make_stage_name(source_name: str) -> str:
+              """Return a fixed-length internal name independent of the source filename."""
+              del source_name
+              return f".fo-stage-{secrets.token_hex(16)}"
+
+
+          def _make_recovery_name(source_name: str) -> str:
+              """Return a bounded exclusive name for emergency source-data recovery."""
+              del source_name
+              return f".fo-recovery-{secrets.token_hex(16)}"
+
+
+          def _recover_pinned_source_at(
+              source_fd: int,
+              source_name: str,
+              *,
+              root_fd: int,
+          ) -> str:
+              """Copy bytes from the pinned source FD into an exclusive recovery file."""
+              source_stat = os.fstat(source_fd)
+              mode = stat.S_IMODE(source_stat.st_mode)
+              flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+              if hasattr(os, "O_CLOEXEC"):
+                  flags |= os.O_CLOEXEC
+
+              recovery_fd: int | None = None
+              recovery_name = ""
+              for _ in range(16):
+                  recovery_name = _make_recovery_name(source_name)
+                  try:
+                      recovery_fd = os.open(
+                          recovery_name,
+                          flags,
+                          mode,
+                          dir_fd=root_fd,
+                      )
+                  except FileExistsError:
+                      continue
+                  break
+              if recovery_fd is None:
+                  raise FileExistsError(
+                      f"could not allocate recovery entry for planned source: {source_name}"
+                  )
+
+              try:
+                  os.lseek(source_fd, 0, os.SEEK_SET)
+                  while True:
+                      chunk = os.read(source_fd, 1024 * 1024)
+                      if not chunk:
+                          break
+                      view = memoryview(chunk)
+                      while view:
+                          written = os.write(recovery_fd, view)
+                          if written <= 0:
+                              raise OSError("could not persist pinned source recovery data")
+                          view = view[written:]
+                  os.fchmod(recovery_fd, mode)
+                  os.fsync(recovery_fd)
+              finally:
+                  os.close(recovery_fd)
+              return recovery_name
+
+
+          def _preserve_stage_at(stage_name: str, source_name: str, *, root_fd: int) -> None:
+          '''
+          replace_once(implementation, stage_anchor, stage_replacement)
+
+          destination_anchor = '''        _verify_destination_identity_at(
+              destination_name,
+              destination_directory_fd=destination_directory_fd,
+              expected_identity=expected_identity,
+          )
+          _verify_root_anchor_at(source_directory_path, source_directory_fd)
+          '''
+          destination_replacement = '''        try:
+              _verify_destination_identity_at(
+                  destination_name,
+                  destination_directory_fd=destination_directory_fd,
+                  expected_identity=expected_identity,
+              )
+          except RuntimeError as exc:
+              recovery_name = _recover_pinned_source_at(
+                  source_fd,
+                  source_name,
+                  root_fd=source_directory_fd,
+              )
+              raise RuntimeError(
+                  "destination does not match planned source; "
+                  f"planned source data retained as {recovery_name}: {destination_name}"
+              ) from exc
+          _verify_root_anchor_at(source_directory_path, source_directory_fd)
+          '''
+          replace_once(implementation, destination_anchor, destination_replacement)
+
+          test_text = Path(tests).read_text(encoding="utf-8")
+          test_name = "test_staging_replacement_before_final_rename_preserves_pinned_source_data"
+          if test_name not in test_text:
+              test_text += '''
+
+
+def test_staging_replacement_before_final_rename_preserves_pinned_source_data(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+    destination = tmp_path / "documents" / "notes.txt"
+    original_rename_no_replace = file_organizer._rename_no_replace_at
+    raced = False
+
+    def racing_rename_no_replace(
+        source_name: str,
+        destination_name: str,
+        *,
+        source_directory_fd: int,
+        destination_directory_fd: int,
+    ) -> None:
+        nonlocal raced
+        if not raced:
+            raced = True
+            stage = tmp_path / source_name
+            stage.unlink()
+            stage.write_text("third-party replacement", encoding="utf-8")
+        original_rename_no_replace(
+            source_name,
+            destination_name,
+            source_directory_fd=source_directory_fd,
+            destination_directory_fd=destination_directory_fd,
+        )
+
+    monkeypatch.setattr(
+        file_organizer,
+        "_rename_no_replace_at",
+        racing_rename_no_replace,
+    )
+
+    with pytest.raises(RuntimeError, match="planned source data retained"):
+        execute_plan(plan)
+
+    assert destination.read_text(encoding="utf-8") == "third-party replacement"
+    recovery_files = [
+        child for child in tmp_path.iterdir() if child.name.startswith(".fo-recovery-")
+    ]
+    assert len(recovery_files) == 1
+    assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
+    assert not source.exists()
+'''
+              Path(tests).write_text(test_text, encoding="utf-8")
+
+          docs = {
+              "practical-projects/06-file-organizer/README.md": (
+                  "If execution has already claimed the source into a staging entry and later detects an unsafe condition, it may create a no-replace hard link back to the original source name when possible. It does not blindly delete the staging entry.\n\n",
+                  "If execution has already claimed the source into a staging entry and later detects an unsafe condition, it may create a no-replace hard link back to the original source name when possible. It does not blindly delete the staging entry.\n\nA staging pathname is not an inode lock. If the final rename consumes a replacement entry and destination identity verification detects the mismatch, execution keeps the unrelated destination intact and, before closing the still-pinned source file descriptor, copies the planned source bytes into an exclusive `.fo-recovery-*` regular file. This recovers the data rather than claiming the original inode survived.\n\n",
+              ),
+              "practical-projects/06-file-organizer/README.pt-BR.md": (
+                  "Se a execução já moveu a origem para staging e depois detecta condição insegura, ela pode criar um hard link no-replace de volta para o nome de origem quando possível. Ela não apaga cegamente o staging.\n\n",
+                  "Se a execução já moveu a origem para staging e depois detecta condição insegura, ela pode criar um hard link no-replace de volta para o nome de origem quando possível. Ela não apaga cegamente o staging.\n\nUm pathname de staging não funciona como lock de inode. Se o rename final consumir uma entrada substituta e a verificação de identidade do destino detectar a divergência, a execução mantém intacto o destino alheio e, antes de fechar o descritor ainda pinado da origem, copia os bytes planejados para um arquivo regular exclusivo `.fo-recovery-*`. Essa recuperação preserva os dados; ela não afirma que o inode original sobreviveu.\n\n",
+              ),
+              "practical-projects/06-file-organizer/README.es.md": (
+                  "Si la ejecución ya movió el origen al staging y después detecta una condición insegura, puede crear un hard link no-replace de vuelta al nombre de origen cuando sea posible. No elimina a ciegas el staging.\n\n",
+                  "Si la ejecución ya movió el origen al staging y después detecta una condición insegura, puede crear un hard link no-replace de vuelta al nombre de origen cuando sea posible. No elimina a ciegas el staging.\n\nUn pathname de staging no funciona como lock de inode. Si el rename final consume una entrada de reemplazo y la verificación de identidad del destino detecta la divergencia, la ejecución conserva intacto el destino ajeno y, antes de cerrar el descriptor aún anclado del origen, copia los bytes planificados a un archivo regular exclusivo `.fo-recovery-*`. Esta recuperación conserva los datos; no afirma que el inode original haya sobrevivido.\n\n",
+              ),
+          }
+          for path, (old, new) in docs.items():
+              replace_once(path, old, new)
+          PY
+
+      - name: Validate focused patch
+        run: |
+          python -m py_compile practical-projects/06-file-organizer/file_organizer.py practical-projects/06-file-organizer/tests/test_atomic_move.py
+          python -m pytest -q practical-projects/06-file-organizer/tests
+          python scripts/check_internal_links.py
+          python scripts/validate_repository_structure.py
+          git diff --check
+
+      - name: Commit patch and remove temporary workflow
+        shell: bash
+        run: |
+          rm .github/workflows/apply-file-organizer-recovery.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add practical-projects/06-file-organizer/file_organizer.py \
+                  practical-projects/06-file-organizer/tests/test_atomic_move.py \
+                  practical-projects/06-file-organizer/README.md \
+                  practical-projects/06-file-organizer/README.pt-BR.md \
+                  practical-projects/06-file-organizer/README.es.md \
+                  .github/workflows/apply-file-organizer-recovery.yml
+          git commit -m "Preserve source data after staging race"
+          git push origin HEAD:phase-10-file-organizer
