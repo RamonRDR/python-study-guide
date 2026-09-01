@@ -16,22 +16,23 @@ This project organizes direct child files into category folders while keeping di
 
 By the end of this project, you should be able to:
 
-- discover files with `pathlib` without recursively traversing a tree;
-- classify filenames deterministically from case-insensitive suffix rules;
+- discover direct files with `pathlib` without recursive traversal;
+- classify filenames deterministically with case-insensitive suffix rules;
 - model planned filesystem changes with immutable dataclasses;
 - separate a non-mutating planning phase from a mutating execution phase;
 - detect exact and case-insensitive destination collisions;
-- choose an explicit collision policy instead of silently overwriting data;
-- treat symlinks as a separate filesystem boundary;
-- revalidate assumptions immediately before mutation;
-- enforce exact destination no-replace behavior at the mutation step;
-- verify source identity across time-of-check/time-of-use boundaries;
-- preserve uncertain destination state instead of performing destructive rollback;
+- choose explicit collision policies instead of silently overwriting data;
+- treat symlinks as a filesystem boundary;
+- reason about time-of-check/time-of-use races;
+- compare filesystem objects by `(device, inode)` identity;
+- anchor directories with file descriptors on Linux;
+- use atomic no-replace rename semantics at the final commit boundary;
+- preserve uncertain state instead of blindly deleting entries during recovery;
 - test filesystem code safely with temporary directories.
 
 ## Problem
 
-Imagine a fictional workspace containing files such as:
+Imagine a fictional workspace containing:
 
 ```text
 workspace/
@@ -58,29 +59,30 @@ workspace/
     └── script.py
 ```
 
-The important challenge is not merely calling a move function. The project must make destructive filesystem decisions visible before changing anything.
+The important challenge is not merely moving files. The project makes filesystem decisions visible before mutation and refuses to claim safety guarantees the current platform cannot enforce.
 
 ## Requirements
 
 The implementation must:
 
 1. accept an existing non-symlink source directory;
-2. inspect only direct children of that directory;
+2. inspect only direct children;
 3. ignore nested directories;
 4. report direct-child symlinks separately instead of following them;
 5. classify regular files by filename suffix;
-6. preserve each filename exactly;
-7. create destination folders only when needed;
+6. preserve filenames exactly;
+7. create destination folders only when required;
 8. produce deterministic ordering;
 9. build an immutable plan before mutation;
 10. reject invalid category paths, including symlinked category directories;
-11. detect existing exact and case-insensitive destination collisions;
-12. support explicit `ERROR` and `SKIP` collision policies during planning;
-13. run a full preflight before any move;
-14. never silently replace an exact destination that appears after preflight;
-15. reject a planned source whose filesystem identity changes before commit;
-16. never delete an unverified destination while handling a source-removal failure;
-17. return a structured result after successful execution.
+11. detect exact and case-insensitive destination collisions;
+12. support explicit `ERROR` and `SKIP` planning policies;
+13. run a complete execution preflight;
+14. capture planned-source filesystem identity;
+15. never silently replace an exact destination;
+16. reject stale source, root, or category assumptions during execution;
+17. never blindly unlink a staging or rollback entry whose identity may have changed;
+18. return a structured result only after the planned destination is verified.
 
 ## Deliberate scope
 
@@ -92,24 +94,25 @@ source directory
     -> suffix classification
     -> collision-safe plan
     -> execution preflight
-    -> required category folders
-    -> identity-verified no-replace moves
+    -> anchored category folders
+    -> source claim
+    -> atomic no-replace destination commit
 ```
 
-This project intentionally does **not** include:
+This project intentionally excludes:
 
 - recursive organization;
 - MIME or content inspection;
 - automatic duplicate renaming;
 - hashing or deduplication;
-- deletion;
-- rollback transactions across the entire plan;
+- deletion as a user-facing feature;
+- whole-plan rollback transactions;
 - filesystem watchers;
 - GUI interaction;
 - cloud storage;
-- cross-filesystem organization.
+- cross-filesystem moves.
 
-Keeping these responsibilities out of scope makes the safety rules visible instead of burying them inside a general-purpose file manager.
+Keeping these responsibilities out of scope makes the safety rules easier to inspect.
 
 ## Categories
 
@@ -123,7 +126,7 @@ Keeping these responsibilities out of scope makes the safety rules visible inste
 | Archives | `archives/` | `.zip`, `.7z`, `.tar.gz`, `.tar.xz` |
 | Other | `other/` | anything not matched above |
 
-Matching is case-insensitive. Classification uses filenames only and does not open file contents.
+Matching is case-insensitive. Classification uses filenames only and never opens file contents.
 
 ## Core models
 
@@ -150,132 +153,156 @@ The plan is immutable. Creating it does not create directories and does not move
 
 ### `OrganizationResult`
 
-Records the exact planned destinations that were successfully moved.
+Records the exact planned destinations returned after successful execution.
 
 ## Discovery is intentionally shallow
 
-`discover_files()` returns only direct regular-file children.
+`discover_files()` returns direct regular-file children only.
 
-Nested directories are not traversed. This matters because recursive movement introduces additional questions:
-
-- should the relative path be preserved?
-- should category folders inside nested directories be revisited?
-- how should duplicate names from different subdirectories be handled?
-
-Those questions are useful, but they belong to a larger project.
+Recursive movement introduces additional contracts for relative paths, nested category folders, and duplicate names across directories. Those belong to a larger project.
 
 ## Planning before mutation
 
-`plan_organization()` validates the directory, scans the files, classifies them, and calculates destinations without changing the filesystem.
-
-That separation provides a useful engineering pattern:
+`plan_organization()` validates the workspace, scans direct files, classifies them, and calculates destinations without changing the filesystem.
 
 ```text
 observe -> decide -> validate -> mutate
 ```
 
-It is easier to test and review a proposed operation when the proposal exists as data before side effects begin.
+The proposal exists as data before side effects begin, which makes review and testing easier.
 
 ## Collision policies
 
-Two policies are explicit:
-
 ### `CollisionPolicy.ERROR`
 
-Planning stops with `FileExistsError` when a destination name already exists.
-
-Use this when every source file must have a conflict-free destination.
+Planning raises `FileExistsError` when a destination name already exists.
 
 ### `CollisionPolicy.SKIP`
 
-Files whose destination collides are left in the source directory and listed in `skipped_collisions`.
+Conflicting source files remain in the source directory and are listed in `skipped_collisions`.
 
-Use this when safely organizing the non-conflicting subset is acceptable.
-
-The policy is applied during planning. Execution still refuses new exact collisions that appear later.
+Execution still refuses collisions that appear after planning.
 
 ## Case-insensitive collision checks
 
-A directory may be case-sensitive on one operating system and case-insensitive on another.
-
-The project therefore compares destination names with `casefold()` during planning and preflight. For example, these are treated as a logical collision:
+Filesystems differ in case sensitivity. The organizer therefore compares logical destination names using `casefold()`.
 
 ```text
 Report.TXT
 report.txt
 ```
 
-This keeps the plan portable across common filesystem behaviors.
+These names are treated as a logical collision even on a case-sensitive filesystem.
 
-## Symlink boundary
+## Symlink and directory-anchor boundaries
 
-The organizer does not follow direct-child symlinks.
+The organizer does not follow direct-child symlinks. It also rejects a source directory or category folder that is a symlink.
 
-It also rejects:
+On the secure Linux path, the source root and required category directories are opened with `O_DIRECTORY | O_NOFOLLOW`. Their `(device, inode)` identities are repeatedly compared with the paths that should still reach them.
 
-- a source directory that is itself a symlink;
-- a category folder implemented as a symlink.
-
-On platforms with directory-descriptor support, execution pins the source and category directories with `O_DIRECTORY | O_NOFOLLOW` so a category path that becomes a symlink after preflight cannot redirect the mutation outside the workspace.
+This matters because a directory file descriptor remains attached to the same directory even if another process renames that directory. Descriptor pinning prevents symlink redirection, while anchor validation prevents execution from silently continuing inside a directory that is no longer reachable at the planned path.
 
 ## Why preflight is not enough
 
-A first implementation might do this:
+A naive implementation might do:
 
 ```python
 if not destination.exists():
     source.rename(destination)
 ```
 
-That contains a time-of-check/time-of-use race. Another process can create the destination after the check but before the rename.
+That check can become stale immediately. Another process may create the destination or replace a source or directory after validation.
 
-On POSIX, `rename()` is allowed to replace an existing destination. A planned source can also be replaced after preflight. Therefore execution must validate both destination availability and source identity at the mutation boundary.
+Preflight reduces the number of unsafe states, but concurrency-sensitive guarantees must also exist at the mutation boundary.
 
-## Exact no-replace mutation
+## Filesystem identity
 
-The execution path uses a same-filesystem hard-link operation as its destination guard:
+The implementation represents identity with:
 
 ```text
-1. capture source identity during preflight
-2. revalidate that the source is still the same regular file
-3. create the destination hard link without replacement
-4. verify that the destination references the expected source identity
-5. revalidate the source identity again
-6. remove the original source path
+(st_dev, st_ino)
 ```
 
-Filesystem identity is represented by the `(device, inode)` pair returned by `stat`. This lets execution distinguish “the same filename” from “the same filesystem object.” A late symlink or regular-file replacement therefore aborts execution instead of being reported as a successful move.
+The filename `notes.txt` is a directory entry. It is not the identity of the underlying filesystem object.
 
-`os.link()` does not replace an existing destination. Because every destination folder is inside the same source directory, source and destination are intentionally on the same filesystem for this project.
+During secure Linux execution, the planned source is also opened with `O_NOFOLLOW`, pinning the expected inode while the commit runs. This prevents an unlinked inode from being reused and mistaken for the originally planned source during the operation.
 
-If creating the link fails, the source remains untouched. If removing the source fails after the destination has been created, the implementation deliberately **keeps the destination** and raises an error. It does not attempt an unconditional rollback unlink, because another process could have replaced that directory entry in the meantime. Preserving uncertain state is safer than deleting an object whose identity can no longer be proven.
+## Fixed-length staging names
 
-This does not turn the whole multi-file plan into a transaction. It provides narrower guarantees: exact destinations are not silently overwritten, planned sources are revalidated by identity, and failure handling does not intentionally delete an unverified destination.
+The secure Linux path temporarily claims the public source entry under an internal name:
+
+```text
+.fo-stage-<32 hexadecimal characters>
+```
+
+The stage name has fixed length and never embeds the original filename. A valid long filename therefore cannot make the internal name exceed a typical filesystem `NAME_MAX` limit.
+
+## Atomic no-replace commit on Linux
+
+The secure Linux path uses `renameat2(..., RENAME_NOREPLACE)` through pinned directory descriptors.
+
+Conceptually:
+
+```text
+1. preflight and capture source identity
+2. open and anchor the source root
+3. open and anchor required category directories
+4. pin the planned source inode with O_NOFOLLOW
+5. atomically claim source name -> short internal stage
+6. verify stage identity and directory anchors
+7. atomically rename stage -> destination with RENAME_NOREPLACE
+8. verify destination identity and anchors
+9. report success
+```
+
+`RENAME_NOREPLACE` makes destination existence part of the atomic filesystem operation. There is no separate `exists()` check followed by a replacing rename.
+
+The normal secure path does **not** finalize a move by calling `unlink()` on the staging name. This avoids transferring the same check-to-unlink race from the public source name to an internal name.
+
+## Conservative recovery
+
+Concurrency errors can leave uncertain state. Recovery therefore favors preservation over destructive cleanup.
+
+If execution has already claimed the source into a staging entry and later detects an unsafe condition, it may create a no-replace hard link back to the original source name when possible. It does not blindly delete the staging entry.
+
+This can intentionally leave an internal recovery entry in unusual race/failure scenarios. That is preferable to deleting unrelated data whose current identity cannot be proven.
+
+The whole multi-file plan is not transactional.
+
+## Platform contract
+
+The implementation is explicit about platform guarantees:
+
+- **Linux:** secure descriptor-anchored execution uses `renameat2(RENAME_NOREPLACE)` when available;
+- **Windows:** the fallback relies on Windows `os.rename()` refusing an existing destination and verifies source/destination/category identities around the operation;
+- **other POSIX platforms:** execution raises `NotImplementedError` when the project cannot enforce the required no-replace semantics safely.
+
+A safety-oriented example should fail honestly instead of silently downgrading its contract.
 
 ## Execution flow
 
 `execute_plan()` performs:
 
-1. type validation;
+1. plan type validation;
 2. source-directory revalidation;
 3. category-path revalidation;
-4. capture of planned-source filesystem identities;
+4. planned-source identity capture;
 5. destination collision preflight;
-6. creation/opening of only required category folders;
-7. identity-verified exact no-replace moves;
-8. construction of `OrganizationResult`.
-
-A stale plan is therefore not trusted blindly.
+6. platform capability selection;
+7. anchored directory setup;
+8. source claim and atomic no-replace commit;
+9. destination/anchor verification;
+10. `OrganizationResult` construction.
 
 ## Determinism
 
-Files and actions are sorted by a key based on:
+Files and actions are sorted by:
 
 ```python
 (path.name.casefold(), path.name)
 ```
 
-This makes examples, tests, and review output stable instead of depending on filesystem iteration order.
+This keeps examples, tests, and review output stable.
 
 ## Running the demo
 
@@ -285,7 +312,7 @@ From the repository root:
 python practical-projects/06-file-organizer/demo.py
 ```
 
-The demo uses `TemporaryDirectory`, creates only fictional files, prints the planned moves, executes them, and shows the final workspace layout. It does not touch personal directories.
+The demo uses `TemporaryDirectory`, creates fictional files only, prints the plan, executes it, and shows the resulting folders.
 
 ## Running the tests
 
@@ -295,28 +322,25 @@ Focused suite:
 python -m pytest practical-projects/06-file-organizer/tests -q
 ```
 
-The focused suite intentionally avoids embedding a fixed scenario count in this chapter because regression coverage grows as review findings are hardened.
+The chapter intentionally avoids a fixed test count because review-driven regression coverage evolves.
 
 Coverage includes:
 
 - suffix classification;
-- path validation;
-- deterministic discovery;
-- shallow scanning;
+- deterministic shallow discovery;
 - symlink handling;
 - immutable model invariants;
 - exact and case-insensitive collisions;
 - `ERROR` and `SKIP` policies;
-- stale/missing sources;
-- category-path changes;
-- collision preflight;
-- a destination created between preflight and mutation;
-- a category path becoming a symlink during mutation;
-- a planned source becoming a symlink during mutation;
-- source-removal failure without destructive destination rollback;
-- successful execution;
-- preservation of unrelated destination files;
-- empty plans.
+- stale and missing sources;
+- late exact destinations;
+- late source symlink/file replacement;
+- category symlink and rename races;
+- source-root rename races;
+- fixed-length staging names;
+- staging finalization without `unlink()`;
+- destination identity verification;
+- successful execution and empty plans.
 
 ## Failure paths worth studying
 
@@ -336,61 +360,51 @@ Rejected before scanning.
 
 Rejected before planning or execution.
 
-### Destination exists during planning
-
-Handled according to the selected collision policy.
-
 ### Destination appears after planning
 
-Preflight raises `FileExistsError` before any move.
+Preflight or the atomic no-replace commit raises `FileExistsError`.
 
-### Exact destination appears after preflight
+### Planned source changes
 
-The no-replace hard-link operation fails with `FileExistsError`; the newly created destination is preserved and the source remains in place.
+Execution raises instead of treating the replacement as the planned file.
 
-### Planned source identity changes during execution
+### Source root or category directory is renamed/replaced
 
-Execution raises instead of unlinking the changed source entry or reporting the move as successful.
+Anchor verification raises instead of returning a path that no longer identifies the committed destination.
 
-### Source removal fails after destination creation
+### Atomic no-replace primitive is unavailable
 
-Execution raises and retains the destination. It deliberately avoids deleting a destination whose current identity cannot be proven safely during rollback.
+The unsupported platform path raises rather than weakening the safety contract silently.
 
 ## Common mistakes
 
 ### Moving while scanning
 
-Mixing discovery and mutation makes partial failure difficult to reason about.
-
-Prefer building a plan first.
-
-### Using only `Path.exists()` before `rename()`
-
-The check can become stale immediately, and POSIX rename semantics can replace the destination.
+Mixing discovery and mutation makes partial failure difficult to reason about. Build a plan first.
 
 ### Treating a filename as object identity
 
-A directory entry can be replaced while keeping the same name. When concurrency matters, compare filesystem identity and file type at the mutation boundary.
+Directory entries can be replaced while preserving the same name. Use filesystem identity when the distinction matters.
 
-### Rolling back by blindly deleting the destination
+### Checking immediately before `unlink()`
 
-A rollback path is still a mutation path. If another actor can replace the destination entry, unconditional deletion can destroy unrelated data.
+A check-to-unlink window still exists. When deletion identity matters, restructure the operation instead of adding another check.
 
-### Silently inventing new filenames
+### Assuming an open directory descriptor still has the same pathname
 
-Renaming collisions to values such as `report_2.txt` hides a policy decision. This project keeps collision behavior explicit.
+A descriptor follows the directory inode through rename. Verify its anchor against the planned path.
 
-### Following symlinks accidentally
+### Embedding the full source filename in a staging name
 
-A friendly-looking path can point outside the intended workspace.
+Valid source names may already be near `NAME_MAX`. Keep internal names bounded independently.
 
-### Assuming directory iteration order
+### Blind cleanup after a race
 
-Filesystem iteration order is not an application-level ordering contract. Sort explicitly when deterministic behavior matters.
+Cleanup is mutation too. Preserve uncertain entries rather than deleting something that may belong to another actor.
 
-### Treating a successful preflight as a transaction
+### Treating preflight as a transaction
 
-The filesystem can change after preflight. Revalidation narrows risk but does not make a multi-file operation transactional.
+The filesystem can change afterward. A multi-file plan remains a sequence of individually guarded commits.
 
 ## Exercise
 
@@ -404,30 +418,28 @@ Requirements:
 4. never access or mutate the filesystem;
 5. add tests for empty and non-empty plans.
 
-The purpose is to practice keeping presentation separate from domain and mutation logic.
-
 ## Extension challenges
 
-After completing the exercise, consider:
+Consider:
 
-- a configurable suffix-to-category mapping;
-- a user-defined category enum alternative;
-- a JSON plan export/import format with careful stale-plan validation;
-- an operation journal;
+- configurable suffix mappings;
+- user-defined categories;
+- JSON plan export/import with stale-plan validation;
+- operation journaling;
 - recursive discovery with explicit relative-path rules;
 - checksum-based duplicate detection;
-- a stronger platform-specific conditional source-removal primitive;
-- a rollback strategy for partially executed plans.
+- richer recovery/audit tooling for preserved staging entries;
+- a transactional design for a different problem domain.
 
-Each extension introduces new invariants. Add the contract before adding the code.
+Each extension introduces new invariants. Define the contract before adding code.
 
 ## Portfolio discussion
 
-A useful portfolio explanation is not “I wrote a script that moves files.”
+A useful explanation is not “I wrote a script that moves files.”
 
-A stronger explanation is:
+A stronger version is:
 
-> I designed a filesystem workflow with a non-mutating planning phase, deterministic classification, explicit collision policies, symlink boundaries, execution-time identity validation, exact no-replace destination protection, and conservative failure handling that never blindly deletes an unverified rollback target.
+> I designed a filesystem workflow with deterministic planning, explicit collision policies, symlink boundaries, inode-based identity checks, descriptor-anchored directories, bounded staging names, and an atomic Linux no-replace commit using `renameat2(RENAME_NOREPLACE)`. Failure handling preserves uncertain state instead of blindly deleting entries.
 
 That communicates engineering decisions, not just API usage.
 
@@ -443,11 +455,11 @@ That communicates engineering decisions, not just API usage.
 | Hold the immutable plan | `OrganizationPlan` |
 | Execute the plan | `execute_plan()` |
 | Hold successful destinations | `OrganizationResult` |
-| Verify filesystem identity | `(st_dev, st_ino)` from `stat` |
-| Enforce exact no-replace mutation | `os.link()` + verified source `unlink()` |
+| Identify filesystem objects | `(st_dev, st_ino)` |
+| Secure Linux commit | `renameat2(RENAME_NOREPLACE)` |
 
 ## What comes next
 
 Project 05 generated files. Project 06 owns the next boundary: discovering and organizing files safely.
 
-Project 07 will move upward again, combining validated domain records and explicit workflow states in a **fictional reconciliation workflow**.
+Project 07 moves upward again, combining validated domain records and explicit workflow states in a **fictional reconciliation workflow**.
