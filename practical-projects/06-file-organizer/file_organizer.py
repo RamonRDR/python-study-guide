@@ -1,8 +1,12 @@
 from __future__ import annotations
 
+import ctypes
+import errno
 import os
 import secrets
 import stat
+import sys
+from collections.abc import Callable
 from dataclasses import dataclass
 from enum import Enum
 from os import PathLike
@@ -31,6 +35,32 @@ _DATA_SUFFIXES = frozenset({".csv", ".json", ".xml", ".xls", ".xlsx"})
 _IMAGE_SUFFIXES = frozenset({".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"})
 _ARCHIVE_SUFFIXES = frozenset({".zip", ".tar", ".gz", ".bz2", ".xz", ".7z"})
 _COMPOUND_ARCHIVE_SUFFIXES = (".tar.gz", ".tar.bz2", ".tar.xz")
+_RENAME_NOREPLACE = 1
+_AT_FDCWD = -100
+
+
+def _load_renameat2() -> Callable[..., int] | None:
+    """Return Linux renameat2 when libc exposes the no-replace primitive."""
+    if not sys.platform.startswith("linux"):
+        return None
+    try:
+        libc = ctypes.CDLL(None, use_errno=True)
+        renameat2 = libc.renameat2
+    except (OSError, AttributeError):
+        return None
+
+    renameat2.argtypes = [
+        ctypes.c_int,
+        ctypes.c_char_p,
+        ctypes.c_int,
+        ctypes.c_char_p,
+        ctypes.c_uint,
+    ]
+    renameat2.restype = ctypes.c_int
+    return renameat2
+
+
+_RENAMEAT2 = _load_renameat2()
 
 
 @dataclass(frozen=True, slots=True)
@@ -84,7 +114,7 @@ def _identity_from_directory_stat(
 ) -> _FileIdentity:
     if not stat.S_ISDIR(stat_result.st_mode):
         raise ValueError(
-            f"category directory became unsafe during execution: {directory_name}"
+            f"directory became unsafe during execution: {directory_name}"
         )
     return _FileIdentity(stat_result.st_dev, stat_result.st_ino)
 
@@ -104,7 +134,7 @@ def _capture_directory_identity(path: Path) -> _FileIdentity:
         stat_result = path.lstat()
     except FileNotFoundError as exc:
         raise ValueError(
-            f"category directory became unsafe during execution: {path.name}"
+            f"directory became unsafe during execution: {path.name}"
         ) from exc
     return _identity_from_directory_stat(stat_result, directory_name=path.name)
 
@@ -375,14 +405,14 @@ def _preflight_execution(plan: OrganizationPlan) -> dict[Path, _FileIdentity]:
 
 
 def _supports_secure_directory_fds() -> bool:
-    """Return whether the platform can enforce no-follow directory mutation."""
+    """Return whether Linux can enforce descriptor-anchored no-replace renames."""
     return (
-        hasattr(os, "O_DIRECTORY")
+        _RENAMEAT2 is not None
+        and hasattr(os, "O_DIRECTORY")
         and hasattr(os, "O_NOFOLLOW")
         and os.open in os.supports_dir_fd
         and os.mkdir in os.supports_dir_fd
         and os.link in os.supports_dir_fd
-        and os.unlink in os.supports_dir_fd
         and os.rename in os.supports_dir_fd
         and os.stat in os.supports_dir_fd
         and os.stat in os.supports_follow_symlinks
@@ -401,6 +431,29 @@ def _open_source_directory_fd(source_directory: Path) -> int:
         return os.open(source_directory, _directory_open_flags())
     except OSError as exc:
         raise ValueError("source_directory became unsafe during execution") from exc
+
+
+def _verify_root_anchor_at(source_directory: Path, root_fd: int) -> None:
+    """Require the pinned root FD to remain reachable at the planned path."""
+    pinned = os.fstat(root_fd)
+    try:
+        current = source_directory.lstat()
+    except FileNotFoundError as exc:
+        raise ValueError("source_directory moved during execution") from exc
+
+    pinned_identity = _identity_from_directory_stat(
+        pinned,
+        directory_name=source_directory.name,
+    )
+    try:
+        current_identity = _identity_from_directory_stat(
+            current,
+            directory_name=source_directory.name,
+        )
+    except ValueError as exc:
+        raise ValueError("source_directory moved during execution") from exc
+    if pinned_identity != current_identity:
+        raise ValueError("source_directory moved during execution")
 
 
 def _open_category_directory_fd(root_fd: int, category_name: str) -> int:
@@ -425,11 +478,7 @@ def _open_category_directory_fd(root_fd: int, category_name: str) -> int:
     return category_fd
 
 
-def _regular_identity_at(
-    filename: str,
-    *,
-    directory_fd: int,
-) -> _FileIdentity:
+def _regular_identity_at(filename: str, *, directory_fd: int) -> _FileIdentity:
     try:
         stat_result = os.stat(
             filename,
@@ -459,6 +508,38 @@ def _verify_source_identity_at(
         )
 
 
+def _open_planned_source_fd_at(
+    source_name: str,
+    *,
+    root_fd: int,
+    expected_identity: _FileIdentity,
+) -> int:
+    """Pin the planned inode so an unlinked source cannot be inode-reused."""
+    flags = os.O_RDONLY | os.O_NOFOLLOW
+    if hasattr(os, "O_CLOEXEC"):
+        flags |= os.O_CLOEXEC
+    try:
+        source_fd = os.open(source_name, flags, dir_fd=root_fd)
+    except OSError as exc:
+        raise FileNotFoundError(
+            f"planned source changed during execution: {source_name}"
+        ) from exc
+
+    try:
+        current_identity = _identity_from_regular_stat(
+            os.fstat(source_fd),
+            filename=source_name,
+        )
+        if current_identity != expected_identity:
+            raise FileNotFoundError(
+                f"planned source changed during execution: {source_name}"
+            )
+    except Exception:
+        os.close(source_fd)
+        raise
+    return source_fd
+
+
 def _verify_destination_identity_at(
     destination_name: str,
     *,
@@ -480,9 +561,7 @@ def _verify_destination_identity_at(
         raise RuntimeError(
             f"destination does not match planned source: {destination_name}"
         )
-
-    destination_identity = _FileIdentity(stat_result.st_dev, stat_result.st_ino)
-    if destination_identity != expected_identity:
+    if _FileIdentity(stat_result.st_dev, stat_result.st_ino) != expected_identity:
         raise RuntimeError(
             f"destination does not match planned source: {destination_name}"
         )
@@ -522,24 +601,13 @@ def _verify_category_anchor_at(
 
 
 def _make_stage_name(source_name: str) -> str:
-    return f".file-organizer-stage-{secrets.token_hex(16)}-{source_name}"
+    """Return a fixed-length internal name independent of the source filename."""
+    del source_name
+    return f".fo-stage-{secrets.token_hex(16)}"
 
 
-def _restore_staged_regular_at(
-    stage_name: str,
-    source_name: str,
-    *,
-    root_fd: int,
-    expected_identity: _FileIdentity,
-) -> None:
-    """Best-effort no-replace restore of a verified staged regular file."""
-    try:
-        stage_identity = _regular_identity_at(stage_name, directory_fd=root_fd)
-    except FileNotFoundError:
-        return
-    if stage_identity != expected_identity:
-        return
-
+def _preserve_stage_at(stage_name: str, source_name: str, *, root_fd: int) -> None:
+    """Best-effort restore by linking only; never delete a raced staging entry."""
     try:
         os.link(
             stage_name,
@@ -548,59 +616,6 @@ def _restore_staged_regular_at(
             dst_dir_fd=root_fd,
             follow_symlinks=False,
         )
-    except FileExistsError:
-        return
-    try:
-        os.unlink(stage_name, dir_fd=root_fd)
-    except OSError:
-        pass
-
-
-def _restore_destination_to_source_at(
-    destination_name: str,
-    source_name: str,
-    *,
-    root_fd: int,
-    destination_directory_fd: int,
-    expected_identity: _FileIdentity,
-) -> None:
-    """Best-effort no-replace restore from a pinned destination to the source."""
-    try:
-        _verify_destination_identity_at(
-            destination_name,
-            destination_directory_fd=destination_directory_fd,
-            expected_identity=expected_identity,
-        )
-        os.link(
-            destination_name,
-            source_name,
-            src_dir_fd=destination_directory_fd,
-            dst_dir_fd=root_fd,
-            follow_symlinks=False,
-        )
-    except OSError:
-        return
-
-
-def _restore_staged_entry_no_replace_at(
-    stage_name: str,
-    source_name: str,
-    *,
-    root_fd: int,
-) -> None:
-    """Restore a staged non-directory entry without replacing a new source."""
-    try:
-        os.link(
-            stage_name,
-            source_name,
-            src_dir_fd=root_fd,
-            dst_dir_fd=root_fd,
-            follow_symlinks=False,
-        )
-    except OSError:
-        return
-    try:
-        os.unlink(stage_name, dir_fd=root_fd)
     except OSError:
         pass
 
@@ -611,7 +626,7 @@ def _claim_source_at(
     root_fd: int,
     expected_identity: _FileIdentity,
 ) -> str:
-    """Atomically detach the current source entry, then verify what was claimed."""
+    """Atomically detach the source name and verify the claimed regular file."""
     stage_name = _make_stage_name(source_name)
     os.rename(
         source_name,
@@ -623,122 +638,149 @@ def _claim_source_at(
     try:
         staged_identity = _regular_identity_at(stage_name, directory_fd=root_fd)
     except FileNotFoundError as exc:
-        _restore_staged_entry_no_replace_at(
-            stage_name,
-            source_name,
-            root_fd=root_fd,
-        )
+        _preserve_stage_at(stage_name, source_name, root_fd=root_fd)
         raise FileNotFoundError(
             f"planned source changed during execution: {source_name}"
         ) from exc
 
     if staged_identity != expected_identity:
-        _restore_staged_entry_no_replace_at(
-            stage_name,
-            source_name,
-            root_fd=root_fd,
-        )
+        _preserve_stage_at(stage_name, source_name, root_fd=root_fd)
         raise FileNotFoundError(
             f"planned source changed during execution: {source_name}"
         )
-
     return stage_name
+
+
+def _rename_no_replace_at(
+    source_name: str,
+    destination_name: str,
+    *,
+    source_directory_fd: int,
+    destination_directory_fd: int,
+) -> None:
+    """Atomically rename between pinned directories without replacing destination."""
+    if _RENAMEAT2 is None:
+        raise NotImplementedError("atomic no-replace rename is unavailable")
+
+    ctypes.set_errno(0)
+    result = _RENAMEAT2(
+        source_directory_fd,
+        os.fsencode(source_name),
+        destination_directory_fd,
+        os.fsencode(destination_name),
+        _RENAME_NOREPLACE,
+    )
+    if result == 0:
+        return
+
+    error_number = ctypes.get_errno()
+    if error_number == errno.EEXIST:
+        raise FileExistsError(
+            error_number,
+            "destination appeared during execution",
+            destination_name,
+        )
+    raise OSError(error_number, os.strerror(error_number), destination_name)
 
 
 def _move_file_no_replace_at(
     source_name: str,
     destination_name: str,
     *,
+    source_directory_path: Path,
     source_directory_fd: int,
     destination_directory_fd: int,
     category_name: str,
     expected_identity: _FileIdentity,
 ) -> None:
-    """Move one file without deleting an entry that changed after verification."""
-    _verify_source_identity_at(
-        source_name,
-        source_directory_fd=source_directory_fd,
-        expected_identity=expected_identity,
-    )
+    """Commit one move with anchored directories and no replace/unlink window."""
+    _verify_root_anchor_at(source_directory_path, source_directory_fd)
     _verify_category_anchor_at(
         root_fd=source_directory_fd,
         category_name=category_name,
         category_fd=destination_directory_fd,
     )
-
-    try:
-        os.link(
-            source_name,
-            destination_name,
-            src_dir_fd=source_directory_fd,
-            dst_dir_fd=destination_directory_fd,
-            follow_symlinks=False,
-        )
-    except FileExistsError as exc:
-        raise FileExistsError(
-            f"destination appeared during execution: {destination_name}"
-        ) from exc
-
-    _verify_destination_identity_at(
-        destination_name,
-        destination_directory_fd=destination_directory_fd,
-        expected_identity=expected_identity,
-    )
-    _verify_category_anchor_at(
-        root_fd=source_directory_fd,
-        category_name=category_name,
-        category_fd=destination_directory_fd,
-    )
-
-    stage_name = _claim_source_at(
+    source_fd = _open_planned_source_fd_at(
         source_name,
         root_fd=source_directory_fd,
         expected_identity=expected_identity,
     )
 
     try:
-        _verify_category_anchor_at(
-            root_fd=source_directory_fd,
-            category_name=category_name,
-            category_fd=destination_directory_fd,
-        )
-    except ValueError:
-        _restore_staged_regular_at(
-            stage_name,
+        stage_name = _claim_source_at(
             source_name,
             root_fd=source_directory_fd,
             expected_identity=expected_identity,
         )
-        raise
 
-    try:
-        os.unlink(stage_name, dir_fd=source_directory_fd)
-    except OSError as exc:
-        _restore_staged_regular_at(
-            stage_name,
-            source_name,
-            root_fd=source_directory_fd,
-            expected_identity=expected_identity,
-        )
-        raise OSError(
-            f"could not finalize source removal safely: {source_name}"
-        ) from exc
+        try:
+            _verify_root_anchor_at(source_directory_path, source_directory_fd)
+            _verify_category_anchor_at(
+                root_fd=source_directory_fd,
+                category_name=category_name,
+                category_fd=destination_directory_fd,
+            )
+            staged_identity = _regular_identity_at(
+                stage_name,
+                directory_fd=source_directory_fd,
+            )
+            if staged_identity != expected_identity:
+                raise FileNotFoundError(
+                    f"planned source changed during execution: {source_name}"
+                )
+            _rename_no_replace_at(
+                stage_name,
+                destination_name,
+                source_directory_fd=source_directory_fd,
+                destination_directory_fd=destination_directory_fd,
+            )
+        except (FileExistsError, FileNotFoundError, ValueError, OSError):
+            _preserve_stage_at(stage_name, source_name, root_fd=source_directory_fd)
+            raise
 
-    try:
-        _verify_category_anchor_at(
-            root_fd=source_directory_fd,
-            category_name=category_name,
-            category_fd=destination_directory_fd,
-        )
-    except ValueError:
-        _restore_destination_to_source_at(
+        _verify_destination_identity_at(
             destination_name,
-            source_name,
-            root_fd=source_directory_fd,
             destination_directory_fd=destination_directory_fd,
             expected_identity=expected_identity,
         )
-        raise
+        _verify_root_anchor_at(source_directory_path, source_directory_fd)
+        _verify_category_anchor_at(
+            root_fd=source_directory_fd,
+            category_name=category_name,
+            category_fd=destination_directory_fd,
+        )
+    finally:
+        os.close(source_fd)
+
+
+def _rename_no_replace_path(source: Path, destination: Path) -> None:
+    """Portable no-replace rename for Windows; Linux uses descriptor execution."""
+    if os.name != "nt":
+        raise NotImplementedError(
+            "safe execution requires Linux renameat2 or Windows rename semantics"
+        )
+    try:
+        os.rename(source, destination)
+    except FileExistsError as exc:
+        raise FileExistsError(
+            f"destination appeared during execution: {destination.name}"
+        ) from exc
+
+
+def _move_file_no_replace(
+    source: Path,
+    destination: Path,
+    expected_identity: _FileIdentity,
+) -> None:
+    """Windows fallback using its atomic no-replace rename behavior."""
+    _verify_path_identity(source, expected_identity)
+    category_identity = _capture_directory_identity(destination.parent)
+    _rename_no_replace_path(source, destination)
+    _verify_destination_path_identity(destination, expected_identity)
+    if _capture_directory_identity(destination.parent) != category_identity:
+        raise ValueError(
+            f"category directory moved during execution: {destination.parent.name}"
+        )
 
 
 def _verify_path_identity(path: Path, expected_identity: _FileIdentity) -> None:
@@ -759,100 +801,13 @@ def _verify_destination_path_identity(
         raise RuntimeError(
             f"destination changed during execution: {destination.name}"
         ) from exc
-
     if not stat.S_ISREG(stat_result.st_mode):
         raise RuntimeError(
             f"destination does not match planned source: {destination.name}"
         )
-
-    destination_identity = _FileIdentity(stat_result.st_dev, stat_result.st_ino)
-    if destination_identity != expected_identity:
+    if _FileIdentity(stat_result.st_dev, stat_result.st_ino) != expected_identity:
         raise RuntimeError(
             f"destination does not match planned source: {destination.name}"
-        )
-
-
-def _stage_source_path(source: Path, expected_identity: _FileIdentity) -> Path:
-    """Atomically move a source name to a unique internal staging name."""
-    stage = source.with_name(_make_stage_name(source.name))
-    os.rename(source, stage)
-    try:
-        _verify_path_identity(stage, expected_identity)
-    except FileNotFoundError:
-        try:
-            os.link(stage, source, follow_symlinks=False)
-        except OSError:
-            pass
-        else:
-            try:
-                stage.unlink()
-            except OSError:
-                pass
-        raise
-    return stage
-
-
-def _restore_staged_path(
-    stage: Path,
-    source: Path,
-    expected_identity: _FileIdentity,
-) -> None:
-    try:
-        _verify_path_identity(stage, expected_identity)
-        os.link(stage, source, follow_symlinks=False)
-    except OSError:
-        return
-    try:
-        stage.unlink()
-    except OSError:
-        pass
-
-
-def _move_file_no_replace(
-    source: Path,
-    destination: Path,
-    expected_identity: _FileIdentity,
-) -> None:
-    """Portable fallback using a staged source detach instead of source unlink."""
-    _verify_path_identity(source, expected_identity)
-    category_identity = _capture_directory_identity(destination.parent)
-
-    try:
-        os.link(source, destination, follow_symlinks=False)
-    except FileExistsError as exc:
-        raise FileExistsError(
-            f"destination appeared during execution: {destination.name}"
-        ) from exc
-
-    _verify_destination_path_identity(destination, expected_identity)
-    if _capture_directory_identity(destination.parent) != category_identity:
-        raise ValueError(
-            f"category directory moved during execution: {destination.parent.name}"
-        )
-
-    stage = _stage_source_path(source, expected_identity)
-
-    if _capture_directory_identity(destination.parent) != category_identity:
-        _restore_staged_path(stage, source, expected_identity)
-        raise ValueError(
-            f"category directory moved during execution: {destination.parent.name}"
-        )
-
-    try:
-        stage.unlink()
-    except OSError as exc:
-        _restore_staged_path(stage, source, expected_identity)
-        raise OSError(
-            f"could not finalize source removal safely: {source.name}"
-        ) from exc
-
-    if _capture_directory_identity(destination.parent) != category_identity:
-        try:
-            os.link(destination, source, follow_symlinks=False)
-        except OSError:
-            pass
-        raise ValueError(
-            f"category directory moved during execution: {destination.parent.name}"
         )
 
 
@@ -860,11 +815,12 @@ def _execute_plan_with_directory_fds(
     plan: OrganizationPlan,
     source_identities: dict[Path, _FileIdentity],
 ) -> OrganizationResult:
-    """Execute using pinned no-follow directory descriptors when supported."""
+    """Execute using pinned no-follow directory descriptors on Linux."""
     root_fd = _open_source_directory_fd(plan.source_directory)
     category_fds: dict[FileCategory, int] = {}
 
     try:
+        _verify_root_anchor_at(plan.source_directory, root_fd)
         for category in sorted(
             {action.category for action in plan.actions},
             key=lambda item: item.value,
@@ -879,6 +835,7 @@ def _execute_plan_with_directory_fds(
             _move_file_no_replace_at(
                 action.source.name,
                 action.destination.name,
+                source_directory_path=plan.source_directory,
                 source_directory_fd=root_fd,
                 destination_directory_fd=category_fds[action.category],
                 category_name=action.category.value,
@@ -886,6 +843,7 @@ def _execute_plan_with_directory_fds(
             )
             moved.append(action.destination)
 
+        _verify_root_anchor_at(plan.source_directory, root_fd)
         return OrganizationResult(plan=plan, moved_files=tuple(moved))
     finally:
         for directory_fd in category_fds.values():
@@ -897,7 +855,12 @@ def _execute_plan_portable(
     plan: OrganizationPlan,
     source_identities: dict[Path, _FileIdentity],
 ) -> OrganizationResult:
-    """Execute on platforms without directory-descriptor no-follow support."""
+    """Execute on Windows, where os.rename refuses an existing destination."""
+    if os.name != "nt":
+        raise NotImplementedError(
+            "safe execution requires Linux renameat2 or Windows rename semantics"
+        )
+
     for directory in sorted(
         {action.destination.parent for action in plan.actions},
         key=lambda path: (path.name.casefold(), path.name),
@@ -921,7 +884,6 @@ def _execute_plan_portable(
             source_identities[action.source],
         )
         moved.append(action.destination)
-
     return OrganizationResult(plan=plan, moved_files=tuple(moved))
 
 
@@ -931,6 +893,8 @@ def execute_plan(plan: OrganizationPlan) -> OrganizationResult:
         raise TypeError("plan must be an OrganizationPlan")
 
     source_identities = _preflight_execution(plan)
+    if not plan.actions:
+        return OrganizationResult(plan=plan, moved_files=())
 
     if _supports_secure_directory_fds():
         return _execute_plan_with_directory_fds(plan, source_identities)
