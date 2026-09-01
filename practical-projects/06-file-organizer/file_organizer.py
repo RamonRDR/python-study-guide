@@ -735,8 +735,14 @@ def _recover_pinned_source_at(
     return recovery_name
 
 
-def _preserve_stage_at(stage_name: str, source_name: str, *, root_fd: int) -> None:
-    """Best-effort restore by linking only; never delete a raced staging entry."""
+def _preserve_stage_at(
+    stage_name: str,
+    source_name: str,
+    *,
+    root_fd: int,
+    expected_identity: _FileIdentity | None = None,
+) -> bool:
+    """Best-effort restore without deleting raced entries; optionally prove result."""
     try:
         os.link(
             stage_name,
@@ -747,6 +753,18 @@ def _preserve_stage_at(stage_name: str, source_name: str, *, root_fd: int) -> No
         )
     except OSError:
         pass
+
+    if expected_identity is None:
+        return False
+
+    try:
+        restored_identity = _regular_identity_at(
+            source_name,
+            directory_fd=root_fd,
+        )
+    except OSError:
+        return False
+    return restored_identity == expected_identity
 
 
 def _preserve_claimed_source_after_failure_at(
@@ -764,8 +782,14 @@ def _preserve_claimed_source_after_failure_at(
         staged_identity = None
 
     if staged_identity == expected_identity:
-        _preserve_stage_at(stage_name, source_name, root_fd=root_fd)
-        return None
+        restored = _preserve_stage_at(
+            stage_name,
+            source_name,
+            root_fd=root_fd,
+            expected_identity=expected_identity,
+        )
+        if restored:
+            return None
 
     return _recover_pinned_source_at(
         source_fd,
