@@ -6,6 +6,7 @@ on:
       - phase-10-file-organizer
     paths:
       - scripts/_apply_file_organizer_full_review.py
+      - .github/workflows/apply-file-organizer-full-review.yml
 
 permissions:
   contents: write
