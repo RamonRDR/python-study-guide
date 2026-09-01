@@ -16,17 +16,18 @@ Este projeto organiza arquivos filhos diretos em pastas por categoria, mantendo 
 
 Ao concluir este projeto, você deverá ser capaz de:
 
-- descobrir arquivos com `pathlib` sem percorrer uma árvore recursivamente;
-- classificar nomes de arquivos de forma determinística por regras de sufixo sem diferenciar maiúsculas e minúsculas;
+- descobrir arquivos diretos com `pathlib` sem travessia recursiva;
+- classificar nomes de arquivos de forma determinística com regras de sufixo sem diferenciar maiúsculas e minúsculas;
 - modelar mudanças planejadas no filesystem com dataclasses imutáveis;
 - separar uma fase de planejamento sem mutação de uma fase de execução com efeitos colaterais;
-- detectar colisões exatas e colisões de destino ignorando diferenças de caixa;
-- escolher uma política de colisão explícita em vez de sobrescrever dados silenciosamente;
-- tratar symlinks como uma fronteira específica do filesystem;
-- revalidar premissas imediatamente antes da mutação;
-- garantir no próprio passo de mutação que um destino exato nunca seja substituído;
-- verificar a identidade da origem através de fronteiras time-of-check/time-of-use;
-- preservar estado incerto de destino em vez de executar rollback destrutivo;
+- detectar colisões de destino exatas e sem diferenciação de caixa;
+- escolher políticas de colisão explícitas em vez de sobrescrever dados silenciosamente;
+- tratar symlinks como uma fronteira do filesystem;
+- raciocinar sobre corridas time-of-check/time-of-use;
+- comparar objetos do filesystem pela identidade `(device, inode)`;
+- ancorar diretórios com file descriptors no Linux;
+- usar semântica atômica no-replace na fronteira final de commit;
+- preservar estado incerto em vez de apagar entradas cegamente durante recuperação;
 - testar código de filesystem com segurança usando diretórios temporários.
 
 ## Problema
@@ -58,29 +59,30 @@ workspace/
     └── script.py
 ```
 
-O desafio importante não é apenas chamar uma função de movimento. O projeto precisa tornar visíveis as decisões destrutivas antes de alterar qualquer coisa.
+O desafio importante não é apenas mover arquivos. O projeto torna as decisões de filesystem visíveis antes da mutação e se recusa a afirmar garantias de segurança que a plataforma atual não consegue aplicar.
 
 ## Requisitos
 
 A implementação deve:
 
 1. aceitar um diretório de origem existente que não seja symlink;
-2. inspecionar apenas filhos diretos desse diretório;
+2. inspecionar apenas filhos diretos;
 3. ignorar diretórios aninhados;
 4. registrar symlinks filhos diretos separadamente, sem segui-los;
 5. classificar arquivos regulares pelo sufixo do nome;
-6. preservar exatamente cada nome de arquivo;
+6. preservar exatamente os nomes dos arquivos;
 7. criar pastas de destino somente quando necessárias;
 8. produzir ordenação determinística;
 9. construir um plano imutável antes da mutação;
 10. rejeitar caminhos de categoria inválidos, inclusive diretórios de categoria que sejam symlinks;
 11. detectar colisões de destino exatas e sem diferenciação de caixa;
 12. oferecer políticas explícitas `ERROR` e `SKIP` durante o planejamento;
-13. executar um preflight completo antes de qualquer movimento;
-14. nunca substituir silenciosamente um destino exato que apareça depois do preflight;
-15. rejeitar uma origem planejada cuja identidade no filesystem mude antes do commit;
-16. nunca excluir um destino não verificado ao tratar falha na remoção da origem;
-17. retornar um resultado estruturado após a execução bem-sucedida.
+13. executar um preflight completo;
+14. capturar a identidade das origens planejadas;
+15. nunca substituir silenciosamente um destino exato;
+16. rejeitar premissas obsoletas sobre origem, raiz ou categoria durante a execução;
+17. nunca executar `unlink()` cegamente em staging ou rollback cuja identidade possa ter mudado;
+18. retornar resultado estruturado apenas após verificar o destino planejado.
 
 ## Escopo deliberado
 
@@ -92,24 +94,25 @@ diretório de origem
     -> classificação por sufixo
     -> plano seguro contra colisões
     -> preflight de execução
-    -> pastas de categoria necessárias
-    -> movimentos no-replace com identidade verificada
+    -> pastas de categoria ancoradas
+    -> claim da origem
+    -> commit atômico no-replace no destino
 ```
 
-Este projeto intencionalmente **não** inclui:
+Este projeto intencionalmente não inclui:
 
 - organização recursiva;
 - inspeção MIME ou de conteúdo;
 - renomeação automática de duplicados;
 - hashing ou deduplicação;
-- exclusão;
+- exclusão como funcionalidade exposta ao usuário;
 - transações de rollback para o plano inteiro;
 - watchers de filesystem;
 - interface gráfica;
 - armazenamento em nuvem;
-- organização entre filesystems diferentes.
+- movimentos entre filesystems diferentes.
 
-Manter essas responsabilidades fora do escopo deixa as regras de segurança visíveis em vez de escondê-las dentro de um gerenciador de arquivos genérico.
+Manter essas responsabilidades fora do escopo deixa as regras de segurança mais fáceis de inspecionar.
 
 ## Categorias
 
@@ -121,9 +124,9 @@ Manter essas responsabilidades fora do escopo deixa as regras de segurança vis�
 | Dados | `data/` | `.csv`, `.json`, `.xml`, `.xlsx` |
 | Imagens | `images/` | `.png`, `.jpg`, `.webp`, `.svg` |
 | Arquivos compactados | `archives/` | `.zip`, `.7z`, `.tar.gz`, `.tar.xz` |
-| Outros | `other/` | tudo o que não corresponder às regras acima |
+| Outros | `other/` | tudo o que não corresponder acima |
 
-A correspondência ignora diferenças entre maiúsculas e minúsculas. A classificação usa apenas o nome do arquivo e não abre seu conteúdo.
+A correspondência ignora diferenças entre maiúsculas e minúsculas. A classificação usa apenas nomes de arquivo e nunca abre o conteúdo.
 
 ## Modelos centrais
 
@@ -135,7 +138,7 @@ Representa um movimento planejado:
 arquivo de origem -> destino da categoria
 ```
 
-Suas invariantes exigem caminhos absolutos, o mesmo nome na origem e no destino e uma pasta de destino correspondente à categoria escolhida.
+Suas invariantes exigem caminhos absolutos, o mesmo nome na origem e destino e uma pasta correspondente à categoria escolhida.
 
 ### `OrganizationPlan`
 
@@ -150,116 +153,146 @@ O plano é imutável. Criá-lo não cria diretórios e não move arquivos.
 
 ### `OrganizationResult`
 
-Registra exatamente os destinos planejados que foram movidos com sucesso.
+Registra exatamente os destinos planejados retornados após execução bem-sucedida.
 
 ## Descoberta intencionalmente rasa
 
-`discover_files()` retorna somente arquivos regulares que são filhos diretos.
+`discover_files()` retorna somente arquivos regulares filhos diretos.
 
-Diretórios aninhados não são percorridos. Isso importa porque movimento recursivo cria perguntas adicionais:
-
-- o caminho relativo deve ser preservado?
-- pastas de categoria dentro de subdiretórios devem ser revisitadas?
-- como lidar com nomes duplicados vindos de subdiretórios diferentes?
-
-Essas perguntas são úteis, mas pertencem a um projeto maior.
+Movimento recursivo introduz contratos adicionais para caminhos relativos, categorias aninhadas e nomes duplicados entre diretórios. Esses temas pertencem a um projeto maior.
 
 ## Planejar antes de alterar
 
-`plan_organization()` valida o diretório, varre os arquivos, classifica cada um e calcula os destinos sem modificar o filesystem.
-
-Essa separação cria um padrão de engenharia útil:
+`plan_organization()` valida o workspace, varre arquivos diretos, classifica cada um e calcula destinos sem modificar o filesystem.
 
 ```text
 observar -> decidir -> validar -> alterar
 ```
 
-É mais fácil testar e revisar uma operação proposta quando ela existe como dados antes de os efeitos colaterais começarem.
+A proposta existe como dados antes de os efeitos colaterais começarem, facilitando revisão e testes.
 
 ## Políticas de colisão
 
-Duas políticas são explícitas:
-
 ### `CollisionPolicy.ERROR`
 
-O planejamento para com `FileExistsError` quando um nome de destino já existe.
+O planejamento gera `FileExistsError` quando um nome de destino já existe.
 
 ### `CollisionPolicy.SKIP`
 
-Arquivos cujo destino colide permanecem no diretório de origem e são listados em `skipped_collisions`.
+Arquivos conflitantes permanecem na origem e são listados em `skipped_collisions`.
 
-A política é aplicada no planejamento. A execução continua recusando colisões exatas novas que apareçam depois.
+A execução ainda recusa colisões que apareçam depois do planejamento.
 
 ## Colisões sem diferenciação de caixa
 
-O projeto compara nomes de destino com `casefold()` durante planejamento e preflight. Por exemplo:
+Filesystems variam quanto à sensibilidade de caixa. O organizador compara nomes lógicos de destino usando `casefold()`.
 
 ```text
 Report.TXT
 report.txt
 ```
 
-Esses nomes são tratados como uma colisão lógica.
+Esses nomes são tratados como colisão lógica mesmo em um filesystem case-sensitive.
 
-## Fronteira de symlink
+## Fronteiras de symlink e ancoragem de diretórios
 
-O organizador não segue symlinks filhos diretos.
+O organizador não segue symlinks filhos diretos. Também rejeita diretório de origem ou pasta de categoria que seja symlink.
 
-Ele também rejeita:
+No caminho seguro do Linux, a raiz e as categorias necessárias são abertas com `O_DIRECTORY | O_NOFOLLOW`. Suas identidades `(device, inode)` são comparadas repetidamente com os caminhos que ainda deveriam alcançá-las.
 
-- um diretório de origem que seja symlink;
-- uma pasta de categoria implementada como symlink.
-
-Em plataformas com suporte a descritores de diretório, a execução fixa a origem e as pastas de categoria usando `O_DIRECTORY | O_NOFOLLOW`. Assim, uma categoria que vire symlink depois do preflight não consegue redirecionar a mutação para fora do workspace.
+Isso importa porque um file descriptor continua preso ao mesmo diretório mesmo quando outro processo renomeia esse diretório. O pinning impede redirecionamento por symlink; a validação de âncora impede continuar silenciosamente em um diretório que não está mais acessível pelo caminho planejado.
 
 ## Por que o preflight não basta
 
-Uma implementação inicial poderia fazer:
+Uma implementação ingênua poderia fazer:
 
 ```python
 if not destination.exists():
     source.rename(destination)
 ```
 
-Isso contém uma corrida de time-of-check/time-of-use. Outro processo pode criar o destino depois da checagem e antes do rename.
+Essa checagem pode ficar obsoleta imediatamente. Outro processo pode criar o destino ou substituir uma origem ou diretório depois da validação.
 
-Em POSIX, `rename()` pode substituir um destino existente. Além disso, uma origem planejada pode ser substituída depois do preflight. Por isso, a execução precisa validar tanto a disponibilidade do destino quanto a identidade da origem no momento da mutação.
+O preflight reduz estados inseguros, mas garantias sensíveis a concorrência também precisam existir na fronteira de mutação.
 
-## Mutação exata no-replace
+## Identidade no filesystem
 
-A execução usa hard link no mesmo filesystem como proteção de destino:
+A implementação representa identidade com:
 
 ```text
-1. capturar a identidade da origem no preflight
-2. revalidar que a origem continua sendo o mesmo arquivo regular
-3. criar o hard link de destino sem substituição
-4. verificar que o destino referencia a identidade esperada da origem
-5. revalidar novamente a identidade da origem
-6. remover o caminho de origem original
+(st_dev, st_ino)
 ```
 
-A identidade do filesystem é representada pelo par `(device, inode)` retornado por `stat`. Isso permite diferenciar “o mesmo nome” de “o mesmo objeto do filesystem”. Uma substituição tardia por symlink ou por outro arquivo regular aborta a execução em vez de ser relatada como movimento bem-sucedido.
+O nome `notes.txt` é uma entrada de diretório, não a identidade do objeto do filesystem.
 
-`os.link()` não substitui um destino existente. Como toda pasta de destino fica dentro do mesmo diretório de origem, origem e destino permanecem intencionalmente no mesmo filesystem neste projeto.
+Durante a execução segura no Linux, a origem planejada também é aberta com `O_NOFOLLOW`, fixando o inode esperado enquanto o commit ocorre. Isso evita que um inode liberado seja reutilizado e confundido com a origem planejada.
 
-Se a criação do link falhar, a origem permanece intacta. Se a remoção da origem falhar depois da criação do destino, a implementação deliberadamente **mantém o destino** e gera erro. Ela não executa um `unlink()` de rollback incondicional, porque outro processo poderia ter substituído aquela entrada de diretório nesse intervalo. Preservar estado incerto é mais seguro do que excluir algo cuja identidade não pode mais ser comprovada.
+## Nomes de staging com tamanho fixo
 
-Isso não transforma o plano inteiro em uma transação. As garantias são mais estreitas: destinos exatos não são sobrescritos silenciosamente, origens planejadas são revalidadas por identidade e o tratamento de falha não exclui intencionalmente um destino não verificado.
+O caminho seguro do Linux reivindica temporariamente a entrada pública da origem com um nome interno:
+
+```text
+.fo-stage-<32 caracteres hexadecimais>
+```
+
+O staging tem tamanho fixo e nunca incorpora o nome original. Assim, um filename válido e longo não faz o nome interno ultrapassar um limite típico `NAME_MAX`.
+
+## Commit atômico no-replace no Linux
+
+O caminho seguro do Linux usa `renameat2(..., RENAME_NOREPLACE)` por meio de file descriptors ancorados.
+
+Conceitualmente:
+
+```text
+1. executar preflight e capturar identidade da origem
+2. abrir e ancorar a raiz
+3. abrir e ancorar as categorias necessárias
+4. fixar o inode da origem com O_NOFOLLOW
+5. reivindicar atomicamente origem -> staging curto
+6. verificar identidade do staging e âncoras
+7. renomear atomicamente staging -> destino com RENAME_NOREPLACE
+8. verificar identidade do destino e âncoras
+9. reportar sucesso
+```
+
+`RENAME_NOREPLACE` transforma a existência do destino em parte da própria operação atômica. Não existe uma checagem `exists()` separada seguida de rename substitutivo.
+
+O caminho seguro normal não finaliza o movimento com `unlink()` do staging. Isso evita apenas transferir a mesma janela check-to-unlink do nome público para um nome interno.
+
+## Recuperação conservadora
+
+Erros concorrentes podem deixar estado incerto. A recuperação prioriza preservação em vez de limpeza destrutiva.
+
+Se a execução já moveu a origem para staging e depois detecta condição insegura, ela pode criar um hard link no-replace de volta para o nome de origem quando possível. Ela não apaga cegamente o staging.
+
+Em cenários raros de corrida/falha, isso pode deixar uma entrada interna de recuperação. É preferível a excluir dados cuja identidade atual não pode ser comprovada.
+
+O plano inteiro de múltiplos arquivos não é transacional.
+
+## Contrato de plataforma
+
+A implementação explicita as garantias por plataforma:
+
+- **Linux:** execução segura com FDs ancorados usa `renameat2(RENAME_NOREPLACE)` quando disponível;
+- **Windows:** o fallback usa o comportamento de `os.rename()` que recusa destino existente e verifica identidades ao redor da operação;
+- **outros POSIX:** a execução gera `NotImplementedError` quando não consegue aplicar a semântica no-replace exigida com segurança.
+
+Um exemplo orientado a segurança deve falhar de forma honesta em vez de reduzir silenciosamente seu contrato.
 
 ## Fluxo de execução
 
 `execute_plan()` realiza:
 
-1. validação de tipo;
+1. validação do tipo do plano;
 2. revalidação do diretório de origem;
 3. revalidação dos caminhos de categoria;
 4. captura das identidades das origens planejadas;
-5. preflight de colisões de destino;
-6. criação/abertura apenas das pastas necessárias;
-7. movimentos exatos no-replace com identidade verificada;
-8. construção de `OrganizationResult`.
-
-Um plano antigo, portanto, não é aceito cegamente.
+5. preflight de colisões;
+6. seleção da capacidade da plataforma;
+7. preparação dos diretórios ancorados;
+8. claim da origem e commit atômico no-replace;
+9. verificação do destino e das âncoras;
+10. construção de `OrganizationResult`.
 
 ## Determinismo
 
@@ -269,7 +302,7 @@ Arquivos e ações são ordenados por:
 (path.name.casefold(), path.name)
 ```
 
-Isso mantém exemplos, testes e revisão estáveis em vez de depender da ordem de iteração do filesystem.
+Isso mantém exemplos, testes e revisão estáveis.
 
 ## Executando o demo
 
@@ -279,7 +312,7 @@ A partir da raiz do repositório:
 python practical-projects/06-file-organizer/demo.py
 ```
 
-O demo usa `TemporaryDirectory`, cria apenas arquivos fictícios, mostra os movimentos planejados, executa o plano e exibe o layout final. Ele não toca em diretórios pessoais.
+O demo usa `TemporaryDirectory`, cria apenas arquivos fictícios, imprime o plano, executa e mostra as pastas resultantes.
 
 ## Executando os testes
 
@@ -289,28 +322,25 @@ Suíte focada:
 python -m pytest practical-projects/06-file-organizer/tests -q
 ```
 
-Este capítulo evita embutir uma contagem fixa de cenários porque a cobertura de regressão cresce conforme findings de revisão são endurecidos.
+O capítulo evita contagem fixa de testes porque a cobertura de regressão evolui conforme os reviews.
 
 A cobertura inclui:
 
 - classificação por sufixo;
-- validação de caminhos;
-- descoberta determinística;
-- varredura rasa;
+- descoberta rasa e determinística;
 - tratamento de symlinks;
 - invariantes dos modelos imutáveis;
 - colisões exatas e sem diferenciação de caixa;
 - políticas `ERROR` e `SKIP`;
 - origens ausentes ou obsoletas;
-- mudanças em caminhos de categoria;
-- preflight de colisões;
-- destino criado entre preflight e mutação;
-- categoria virando symlink durante a mutação;
-- origem planejada virando symlink durante a mutação;
-- falha na remoção da origem sem rollback destrutivo do destino;
-- execução bem-sucedida;
-- preservação de arquivos de destino não relacionados;
-- planos vazios.
+- destinos exatos tardios;
+- substituição tardia da origem por symlink/arquivo;
+- corridas de symlink e rename da categoria;
+- corridas de rename da raiz;
+- staging com tamanho fixo;
+- finalização do staging sem `unlink()`;
+- verificação da identidade do destino;
+- execução bem-sucedida e planos vazios.
 
 ## Caminhos de falha importantes
 
@@ -318,7 +348,7 @@ A cobertura inclui:
 
 Gera `FileNotFoundError`.
 
-### Caminho de origem é um arquivo regular
+### Caminho de origem é arquivo regular
 
 Gera `NotADirectoryError`.
 
@@ -330,59 +360,51 @@ Gera `NotADirectoryError`.
 
 É rejeitado antes do planejamento ou execução.
 
-### Destino existe durante o planejamento
-
-É tratado conforme a política de colisão selecionada.
-
 ### Destino aparece depois do planejamento
 
-O preflight gera `FileExistsError` antes de qualquer movimento.
+O preflight ou o commit atômico no-replace gera `FileExistsError`.
 
-### Destino exato aparece depois do preflight
+### Origem planejada muda
 
-A operação de hard link no-replace falha com `FileExistsError`; o destino recém-criado é preservado e a origem permanece no lugar.
+A execução gera erro em vez de tratar a substituição como o arquivo planejado.
 
-### Identidade da origem planejada muda durante a execução
+### Raiz ou categoria é renomeada/substituída
 
-A execução gera erro em vez de remover a entrada alterada ou relatar o movimento como sucesso.
+A validação de âncora gera erro em vez de retornar um caminho que não identifica mais o destino comprometido.
 
-### Remoção da origem falha depois da criação do destino
+### Primitiva atômica no-replace indisponível
 
-A execução gera erro e mantém o destino. Ela evita deliberadamente excluir um destino cuja identidade atual não pode ser comprovada com segurança durante rollback.
+A plataforma não suportada gera erro em vez de enfraquecer silenciosamente o contrato.
 
 ## Erros comuns
 
 ### Mover enquanto varre
 
-Misturar descoberta e mutação torna falhas parciais difíceis de entender. Prefira construir um plano primeiro.
+Misturar descoberta e mutação torna falhas parciais difíceis de raciocinar. Construa o plano primeiro.
 
-### Usar apenas `Path.exists()` antes de `rename()`
+### Tratar nome como identidade
 
-A checagem pode ficar obsoleta imediatamente, e a semântica POSIX de rename pode substituir o destino.
+Entradas de diretório podem ser substituídas mantendo o mesmo nome. Use identidade do filesystem quando essa diferença importa.
 
-### Tratar nome de arquivo como identidade do objeto
+### Verificar imediatamente antes de `unlink()`
 
-Uma entrada de diretório pode ser substituída mantendo o mesmo nome. Quando concorrência importa, compare identidade do filesystem e tipo do arquivo na fronteira de mutação.
+Ainda existe uma janela check-to-unlink. Quando a identidade da exclusão importa, reestruture a operação em vez de adicionar outra checagem.
 
-### Fazer rollback apagando cegamente o destino
+### Assumir que um FD aberto ainda tem o mesmo pathname
 
-O caminho de rollback também é um caminho de mutação. Se outro ator puder substituir a entrada de destino, uma exclusão incondicional pode destruir dados não relacionados.
+O descriptor acompanha o inode do diretório após rename. Verifique sua âncora contra o caminho planejado.
 
-### Inventar novos nomes silenciosamente
+### Embutir o nome completo da origem no staging
 
-Renomear colisões para valores como `report_2.txt` esconde uma decisão de política.
+Nomes válidos podem já estar próximos do `NAME_MAX`. Mantenha nomes internos limitados independentemente.
 
-### Seguir symlinks sem perceber
+### Limpar cegamente depois de uma corrida
 
-Um caminho aparentemente simples pode apontar para fora do workspace pretendido.
+Cleanup também é mutação. Preserve entradas incertas em vez de apagar algo que pode pertencer a outro ator.
 
-### Assumir ordem de iteração do diretório
+### Tratar preflight como transação
 
-A ordem de iteração do filesystem não é um contrato de ordenação da aplicação.
-
-### Tratar um preflight bem-sucedido como transação
-
-O filesystem pode mudar depois do preflight. Revalidação reduz o risco, mas não torna uma operação de múltiplos arquivos transacional.
+O filesystem pode mudar depois. Um plano de vários arquivos continua sendo uma sequência de commits individualmente protegidos.
 
 ## Exercício
 
@@ -391,39 +413,41 @@ Estenda o organizador com um **renderizador de dry run** sem alterar o comportam
 Requisitos:
 
 1. aceitar um `OrganizationPlan`;
-2. retornar texto determinístico e legível;
+2. retornar texto legível e determinístico;
 3. mostrar movimentos planejados, colisões ignoradas e symlinks ignorados;
-4. nunca acessar nem modificar o filesystem;
+4. nunca acessar ou modificar o filesystem;
 5. adicionar testes para planos vazios e não vazios.
 
 ## Desafios de extensão
 
-Depois do exercício, considere:
+Considere:
 
-- mapeamento configurável de sufixos para categorias;
-- alternativa com categorias definidas pelo usuário;
-- exportação/importação JSON do plano com validação cuidadosa de plano obsoleto;
+- mapeamento configurável de sufixos;
+- categorias definidas pelo usuário;
+- exportação/importação JSON com validação de plano obsoleto;
 - journal de operações;
 - descoberta recursiva com regras explícitas de caminho relativo;
-- detecção de duplicidade por checksum;
-- uma primitiva condicional de remoção de origem ainda mais forte e específica de plataforma;
-- estratégia de rollback para planos parcialmente executados.
+- deduplicação por checksum;
+- tooling de recuperação/auditoria para entradas de staging preservadas;
+- design transacional para outro domínio de problema.
 
-Cada extensão adiciona novas invariantes. Defina o contrato antes de adicionar o código.
+Cada extensão introduz novas invariantes. Defina o contrato antes de adicionar código.
 
 ## Discussão de portfólio
 
-Uma explicação mais forte seria:
+Uma explicação útil não é “eu escrevi um script que move arquivos”.
 
-> Eu projetei um fluxo de filesystem com fase de planejamento sem mutação, classificação determinística, políticas explícitas de colisão, fronteiras de symlink, validação de identidade na execução, proteção exata no-replace do destino e tratamento conservador de falhas que nunca apaga cegamente um alvo de rollback não verificado.
+Uma versão mais forte é:
 
-Isso comunica decisões de engenharia, não apenas uso de API.
+> Eu projetei um fluxo de filesystem com planejamento determinístico, políticas explícitas de colisão, fronteiras de symlink, identidade por inode, diretórios ancorados por descriptors, nomes de staging limitados e commit atômico no-replace no Linux com `renameat2(RENAME_NOREPLACE)`. O tratamento de falhas preserva estado incerto em vez de apagar entradas cegamente.
+
+Isso comunica decisões de engenharia, não apenas uso de APIs.
 
 ## Referência rápida
 
 | Tarefa | Função/tipo |
 |---|---|
-| Classificar um nome de arquivo | `classify_path()` |
+| Classificar filename | `classify_path()` |
 | Descobrir arquivos regulares diretos | `discover_files()` |
 | Construir uma proposta segura | `plan_organization()` |
 | Escolher comportamento de colisão | `CollisionPolicy` |
@@ -431,11 +455,11 @@ Isso comunica decisões de engenharia, não apenas uso de API.
 | Manter o plano imutável | `OrganizationPlan` |
 | Executar o plano | `execute_plan()` |
 | Manter destinos bem-sucedidos | `OrganizationResult` |
-| Verificar identidade do filesystem | `(st_dev, st_ino)` de `stat` |
-| Garantir mutação exata no-replace | `os.link()` + `unlink()` da origem verificada |
+| Identificar objetos do filesystem | `(st_dev, st_ino)` |
+| Commit seguro no Linux | `renameat2(RENAME_NOREPLACE)` |
 
 ## O que vem depois
 
 O Projeto 05 gerou arquivos. O Projeto 06 assume a próxima fronteira: descobrir e organizar arquivos com segurança.
 
-O Projeto 07 volta a subir de nível, combinando registros de domínio validados e estados explícitos de workflow em um **fluxo fictício de conciliação**.
+O Projeto 07 sobe novamente de nível, combinando registros de domínio validados e estados explícitos de workflow em um **fluxo fictício de conciliação**.
