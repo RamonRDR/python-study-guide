@@ -1,6 +1,6 @@
 <div align="center">
 
-# Project 06 · File Organizer
+# File Organizer
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
@@ -8,79 +8,60 @@
 
 [← Back to Practical Projects](../README.md)
 
-> **Phase 10 · Practical Projects**
+Project 06 turns filesystem concepts from Phase 8 into a small but deliberate organization workflow. The goal is not to build a desktop file manager. The goal is to practice discovery, classification, planning, collision handling, symlink boundaries, and safe mutation as separate engineering concerns.
 
-This project organizes direct child files into category folders while keeping discovery, planning, collision handling, and filesystem mutation explicit and testable.
-
-## Learning objectives
+## What you will practice
 
 By the end of this project, you should be able to:
 
-- discover files with `pathlib` without recursively traversing a tree;
-- classify filenames deterministically from case-insensitive suffix rules;
-- model planned filesystem changes with immutable dataclasses;
-- separate a non-mutating planning phase from a mutating execution phase;
-- detect exact and case-insensitive destination collisions;
-- choose an explicit collision policy instead of silently overwriting data;
-- treat symlinks as a separate filesystem boundary;
-- revalidate assumptions immediately before mutation;
-- enforce exact destination no-replace behavior at the mutation step;
-- test filesystem code safely with temporary directories.
+- discover direct regular-file children with `pathlib`;
+- classify files by normalized suffix rules;
+- model planned filesystem operations as immutable data;
+- separate observation and planning from mutation;
+- handle exact and case-insensitive destination collisions explicitly;
+- ignore or reject symlinks at trust boundaries;
+- revalidate a plan immediately before execution;
+- prevent exact destination replacement during the mutation itself;
+- pin POSIX source/category directories with no-follow directory descriptors so late symlinks cannot redirect moves;
+- test filesystem race conditions with `pytest`, `tmp_path`, and monkeypatching;
+- run a deterministic file workflow without touching personal directories.
 
-## Problem
-
-Imagine a fictional workspace containing files such as:
-
-```text
-workspace/
-├── notes.txt
-├── rows.csv
-├── photo.png
-├── backup.tar.gz
-└── script.py
-```
-
-The organizer should produce:
+## Project files
 
 ```text
-workspace/
-├── documents/
-│   └── notes.txt
-├── data/
-│   └── rows.csv
-├── images/
-│   └── photo.png
-├── archives/
-│   └── backup.tar.gz
-└── other/
-    └── script.py
+06-file-organizer/
+├── README.md
+├── README.pt-BR.md
+├── README.es.md
+├── demo.py
+├── file_organizer.py
+└── tests/
+    ├── conftest.py
+    ├── test_atomic_move.py
+    └── test_file_organizer.py
 ```
-
-The important challenge is not merely calling a move function. The project must make destructive filesystem decisions visible before changing anything.
 
 ## Requirements
 
-The implementation must:
+The organizer must:
 
-1. accept an existing non-symlink source directory;
-2. inspect only direct children of that directory;
-3. ignore nested directories;
-4. report direct-child symlinks separately instead of following them;
-5. classify regular files by filename suffix;
-6. preserve each filename exactly;
-7. create destination folders only when needed;
-8. produce deterministic ordering;
-9. build an immutable plan before mutation;
-10. reject invalid category paths, including symlinked category directories;
-11. detect existing exact and case-insensitive destination collisions;
-12. support explicit `ERROR` and `SKIP` collision policies during planning;
-13. run a full preflight before any move;
-14. never silently replace an exact destination that appears after preflight;
-15. return a structured result after successful execution.
+1. accept one source directory;
+2. inspect only direct children;
+3. classify regular files into explicit categories;
+4. preserve original filenames;
+5. build an immutable organization plan before changing the filesystem;
+6. detect destination collisions case-insensitively during planning;
+7. support explicit `ERROR` and `SKIP` collision policies;
+8. reject source/category directory symlinks at validation boundaries;
+9. ignore direct-child file symlinks instead of following them;
+10. revalidate planned sources and destinations before mutation;
+11. create only category directories actually required by the plan;
+12. never replace an exact destination that appears after planning;
+13. prevent late category symlinks from redirecting POSIX mutations outside the workspace;
+14. return an immutable execution result;
+15. remain deterministic for the same directory state.
 
-## Deliberate scope
-
-The pipeline is:
+## Workflow
 
 ```text
 source directory
@@ -89,6 +70,7 @@ source directory
     -> collision-safe plan
     -> execution preflight
     -> required category folders
+    -> no-follow directory pinning when supported
     -> no-replace moves
 ```
 
@@ -212,7 +194,9 @@ It also rejects:
 - a source directory that is itself a symlink;
 - a category folder implemented as a symlink.
 
-This keeps the project from unexpectedly moving files through a path that points outside the intended workspace.
+On platforms that support secure directory file descriptors, execution goes further: the source directory and each required category directory are opened with `O_DIRECTORY | O_NOFOLLOW`, and mutation happens relative to those pinned descriptors. A category path that becomes a symlink after preflight is therefore rejected before use, while a path changed after the real directory is opened cannot redirect the move through that symlink.
+
+On platforms without those descriptor primitives, the portable fallback rechecks the category path immediately after creation and before each move. The POSIX descriptor path provides the stronger race-resistant boundary demonstrated by the dedicated regression test.
 
 ## Why preflight is not enough
 
@@ -227,6 +211,8 @@ That contains a time-of-check/time-of-use race. Another process can create the d
 
 On POSIX, `rename()` is allowed to replace an existing destination. That means a supposedly safe organizer could destroy newly created destination data.
 
+A similar race exists for category directories: a real directory can be absent during preflight and a symlink can appear before mutation. Checking the path again is useful, but on POSIX the stronger defense is to open the intended directory without following symlinks and perform the mutation through that descriptor.
+
 ## Exact no-replace mutation
 
 The execution path therefore uses a same-filesystem hard-link operation as its mutation guard:
@@ -239,9 +225,11 @@ The execution path therefore uses a same-filesystem hard-link operation as its m
 
 `os.link()` does not replace an existing destination. Because every destination folder is inside the same source directory, source and destination are intentionally on the same filesystem for this project.
 
+When directory-descriptor support is available, the link uses `src_dir_fd` and `dst_dir_fd`, with `follow_symlinks=False`, so the operation is anchored to pinned source/category directories instead of resolving a late category symlink through a pathname.
+
 If the link cannot be created, the source remains untouched. If removing the source fails after the link was created, the implementation attempts to remove the destination link before propagating the failure.
 
-This does not turn the whole multi-file plan into a transaction. It solves a narrower and important guarantee: an exact destination is never silently overwritten by the mutation primitive.
+This does not turn the whole multi-file plan into a transaction. It solves narrower and important guarantees: an exact destination is never silently overwritten by the mutation primitive, and a late POSIX category symlink cannot redirect the move outside the planned workspace.
 
 ## Execution flow
 
@@ -252,9 +240,10 @@ This does not turn the whole multi-file plan into a transaction. It solves a nar
 3. category-path revalidation;
 4. planned-source revalidation;
 5. destination collision preflight;
-6. creation of only required category folders;
-7. each exact no-replace move;
-8. construction of `OrganizationResult`.
+6. creation/opening of only required category folders;
+7. no-follow directory pinning on supported platforms;
+8. each exact no-replace move;
+9. construction of `OrganizationResult`.
 
 A stale plan is therefore not trusted blindly.
 
@@ -286,138 +275,159 @@ Focused suite:
 python -m pytest practical-projects/06-file-organizer/tests -q
 ```
 
-The current focused suite contains **57 pytest scenarios**.
+The current focused suite contains **58 pytest scenarios**.
 
 Coverage includes:
 
 - suffix classification;
-- path validation;
-- deterministic discovery;
-- shallow scanning;
-- symlink handling;
+- compound archive suffixes;
+- invalid path-like inputs;
+- shallow deterministic discovery;
+- source-directory validation;
+- symlink discovery behavior;
 - immutable model invariants;
-- exact and case-insensitive collisions;
-- `ERROR` and `SKIP` policies;
+- exact and casefold collisions;
+- both collision policies;
+- empty plans;
 - stale/missing sources;
-- category-path changes;
-- collision preflight;
-- a destination created between preflight and mutation;
-- successful execution;
-- preservation of unrelated destination files;
-- empty plans.
+- category path replacement;
+- destination creation after planning;
+- exact destination creation between preflight and mutation;
+- category symlink creation between preflight and mutation;
+- successful moves;
+- preservation of unrelated existing files.
 
-## Failure paths worth studying
+## Failure paths worth understanding
 
 ### Missing source directory
 
-Raises `FileNotFoundError`.
+Fails before planning.
 
-### Source path is a regular file
+### Source directory is a file
 
-Raises `NotADirectoryError`.
+Fails with `NotADirectoryError`.
 
-### Source directory is a symlink
+### Category path is a regular file
 
-Rejected before scanning.
+Planning/execution refuses to treat it as a folder.
 
-### Category path is a file or symlink
+### Category path is a symlink
 
-Rejected before planning or execution.
+The organizer rejects it. On POSIX-capable execution, a symlink introduced after preflight is also blocked by no-follow directory opening.
 
-### Destination exists during planning
+### Destination already exists
 
-Handled according to the selected collision policy.
+`ERROR` stops planning; `SKIP` records the source without moving it.
 
 ### Destination appears after planning
 
-Preflight raises `FileExistsError` before any move.
+Preflight refuses the stale plan.
 
-### Exact destination appears after preflight
+### Destination appears after preflight
 
-The no-replace hard-link operation fails with `FileExistsError`; the newly created destination is preserved and the source remains in place.
+The no-replace hard-link operation raises instead of overwriting the late destination.
+
+### Category symlink appears after preflight
+
+The POSIX secure path refuses to open the category with `O_NOFOLLOW`, so the source remains in place and the external symlink target is not written.
+
+### Planned source disappears or becomes a symlink
+
+Execution refuses the plan before normal mutation begins.
 
 ## Common mistakes
 
-### Moving while scanning
+### Moving files while discovering them
 
-Mixing discovery and mutation makes partial failure difficult to reason about.
+This mixes observation and mutation, making partial failure harder to reason about.
 
 Prefer building a plan first.
 
-### Using only `Path.exists()` before `rename()`
+### Using only `destination.exists()` before `rename()`
 
-The check can become stale immediately, and POSIX rename semantics can replace the destination.
+That check cannot prevent a destination from appearing immediately afterward.
 
-### Silently inventing new filenames
+Use a mutation primitive that itself refuses replacement.
 
-Renaming collisions to values such as `report_2.txt` hides a policy decision. This project keeps collision behavior explicit.
+### Trusting a category pathname after preflight
 
-### Following symlinks accidentally
+A late symlink can change what that pathname means.
 
-A friendly-looking path can point outside the intended workspace.
+On POSIX-capable systems, open the intended directory with no-follow semantics and perform mutations relative to the pinned descriptor.
 
-### Assuming directory iteration order
+### Automatically renaming duplicates
 
-Filesystem iteration order is not an application-level ordering contract. Sort explicitly when deterministic behavior matters.
+A suffix like `(1)` may look convenient, but it silently changes identity and belongs to a separate policy.
 
-### Treating a successful preflight as a transaction
+Keep the collision policy explicit.
 
-The filesystem can change after preflight. Revalidation narrows risk but does not make a multi-file operation transactional.
+### Following symlinks by accident
+
+Filesystem helpers often follow symlinks unless you deliberately define a boundary.
+
+Decide whether links are data, aliases, or forbidden paths before mutation.
 
 ## Exercise
 
-Extend the organizer with a **dry-run renderer** without changing execution behavior.
+Extend the planning layer with a new category named `CODE` for `.py`, `.js`, `.ts`, and `.sql` files.
 
 Requirements:
 
-1. accept an `OrganizationPlan`;
-2. return deterministic human-readable text;
-3. show planned moves, skipped collisions, and ignored symlinks;
-4. never access or mutate the filesystem;
-5. add tests for empty and non-empty plans.
+1. add the enum member;
+2. update classification rules;
+3. preserve deterministic ordering;
+4. add focused tests;
+5. do not change collision or symlink behavior.
 
-The purpose is to practice keeping presentation separate from domain and mutation logic.
+Then explain why classification belongs before execution rather than inside the move loop.
 
 ## Extension challenges
 
-After completing the exercise, consider:
+After the base contract is clear, try one at a time:
 
-- a configurable suffix-to-category mapping;
-- a user-defined category enum alternative;
-- a JSON plan export/import format with careful stale-plan validation;
-- an operation journal;
-- recursive discovery with explicit relative-path rules;
-- checksum-based duplicate detection;
-- a rollback strategy for partially executed plans.
+- a dry-run renderer that prints the plan without executing it;
+- user-supplied extension/category mappings with validation;
+- a result summary grouped by category;
+- explicit rollback for earlier moves when a later move fails;
+- a platform capability report explaining which no-follow protections are available;
+- an opt-in recursive planner with preserved relative paths.
 
-Each extension introduces new invariants. Add the contract before adding the code.
+Each extension introduces a new responsibility. Keep it explicit rather than silently changing the current contract.
 
 ## Portfolio discussion
 
-A useful portfolio explanation is not “I wrote a script that moves files.”
+This project is useful in a portfolio because the interesting part is not the five destination folders. It is the safety reasoning around side effects.
 
-A stronger explanation is:
+You can discuss:
 
-> I designed a filesystem workflow with a non-mutating planning phase, deterministic classification, explicit collision policies, symlink boundaries, execution-time revalidation, and exact no-replace destination protection. The behavior is covered by temporary-filesystem tests, including a simulated race between preflight and mutation.
+- why planning is separated from execution;
+- why collisions are policies instead of accidental behavior;
+- why casefold checks improve portability;
+- why symlinks define a trust boundary;
+- why preflight alone cannot close a TOCTOU race;
+- why `rename()` was replaced with a no-replace hard-link strategy;
+- why POSIX directory descriptors and `O_NOFOLLOW` close the late-category-symlink redirect found during review;
+- why the project stays intentionally shallow and same-filesystem;
+- how tests simulate filesystem changes between planning, preflight, and mutation.
 
-That communicates engineering decisions, not just API usage.
+Those are engineering decisions, not merely syntax demonstrations.
 
 ## Quick reference
 
-| Task | Function/type |
-|---|---|
-| Classify a filename | `classify_path()` |
-| Discover direct regular files | `discover_files()` |
-| Build a safe proposal | `plan_organization()` |
-| Choose collision behavior | `CollisionPolicy` |
-| Describe one move | `MoveAction` |
-| Hold the immutable plan | `OrganizationPlan` |
-| Execute the plan | `execute_plan()` |
-| Hold successful destinations | `OrganizationResult` |
-| Enforce exact no-replace mutation | `os.link()` + source `unlink()` |
+```python
+from file_organizer import (
+    CollisionPolicy,
+    FileCategory,
+    classify_path,
+    discover_files,
+    execute_plan,
+    plan_organization,
+)
 
-## What comes next
+category = classify_path("report.PDF")
+files = discover_files("workspace")
+plan = plan_organization("workspace", collision_policy=CollisionPolicy.ERROR)
+result = execute_plan(plan)
+```
 
-Project 05 generated files. Project 06 owns the next boundary: discovering and organizing files safely.
-
-Project 07 will move upward again, combining validated domain records and explicit workflow states in a **fictional reconciliation workflow**.
+The central lesson is simple: **filesystem automation should make its plan and safety boundaries explicit before it mutates anything.**
