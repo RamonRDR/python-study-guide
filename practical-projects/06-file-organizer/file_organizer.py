@@ -305,11 +305,21 @@ def discover_files(source_directory: str | PathLike[str]) -> tuple[Path, ...]:
     return files
 
 
+def _is_directory_redirect(path: Path) -> bool:
+    """Return whether a directory entry redirects traversal to another location."""
+    if path.is_symlink():
+        return True
+    is_junction = getattr(path, "is_junction", None)
+    return bool(is_junction is not None and is_junction())
+
+
 def _validate_category_locations(source_directory: Path) -> None:
     for category in FileCategory:
         target = source_directory / category.value
-        if target.is_symlink():
-            raise ValueError(f"category directory cannot be a symlink: {target.name}")
+        if _is_directory_redirect(target):
+            raise ValueError(
+                f"category directory cannot be a symlink or junction: {target.name}"
+            )
         if target.exists() and not target.is_dir():
             raise NotADirectoryError(
                 f"category path exists but is not a directory: {target.name}"
@@ -994,14 +1004,14 @@ def _execute_plan_portable(
         key=lambda path: (path.name.casefold(), path.name),
     ):
         directory.mkdir(exist_ok=True)
-        if directory.is_symlink() or not directory.is_dir():
+        if _is_directory_redirect(directory) or not directory.is_dir():
             raise ValueError(
                 f"category directory became unsafe during execution: {directory.name}"
             )
 
     moved: list[Path] = []
     for action in plan.actions:
-        if action.destination.parent.is_symlink():
+        if _is_directory_redirect(action.destination.parent):
             raise ValueError(
                 "category directory became unsafe during execution: "
                 f"{action.destination.parent.name}"

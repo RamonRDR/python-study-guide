@@ -202,7 +202,7 @@ Há uma fronteira importante: em um filesystem case-sensitive, a primitiva do ke
 
 ## Fronteiras de symlink e ancoragem de diretórios
 
-O organizador não segue symlinks filhos diretos. Também rejeita diretório de origem ou pasta de categoria que seja symlink.
+O organizador não segue symlinks filhos diretos. Também rejeita diretório de origem ou pasta de categoria que seja symlink. No Windows, pastas de categoria que sejam junctions NTFS também são rejeitadas: `is_dir()` segue um junction, então aceitá-lo poderia redirecionar uma movimentação planejada para fora do workspace.
 
 No caminho seguro do Linux, a raiz e as categorias necessárias são abertas com `O_DIRECTORY | O_NOFOLLOW`. Suas identidades `(device, inode)` são comparadas repetidamente com os caminhos que ainda deveriam alcançá-las.
 

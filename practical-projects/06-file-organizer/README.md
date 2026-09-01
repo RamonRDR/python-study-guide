@@ -202,7 +202,7 @@ There is an important boundary: on a case-sensitive filesystem, the kernel primi
 
 ## Symlink and directory-anchor boundaries
 
-The organizer does not follow direct-child symlinks. It also rejects a source directory or category folder that is a symlink.
+The organizer does not follow direct-child symlinks. It also rejects a source directory or category folder that is a symlink. On Windows, category folders that are NTFS junctions are rejected too: `is_dir()` follows a junction, so accepting one could redirect a planned move outside the workspace.
 
 On the secure Linux path, the source root and required category directories are opened with `O_DIRECTORY | O_NOFOLLOW`. Their `(device, inode)` identities are repeatedly compared with the paths that should still reach them.
 

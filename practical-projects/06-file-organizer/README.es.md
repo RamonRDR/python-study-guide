@@ -202,7 +202,7 @@ Hay una frontera importante: en un filesystem case-sensitive, la primitiva del k
 
 ## Fronteras de symlink y anclaje de directorios
 
-El organizador no sigue symlinks hijos directos. También rechaza un directorio de origen o carpeta de categoría que sea symlink.
+El organizador no sigue symlinks hijos directos. También rechaza un directorio de origen o carpeta de categoría que sea symlink. En Windows, las carpetas de categoría que sean junctions NTFS también se rechazan: `is_dir()` sigue un junction, por lo que aceptarlo podría redirigir un movimiento planificado fuera del workspace.
 
 En la ruta segura de Linux, la raíz y las categorías necesarias se abren con `O_DIRECTORY | O_NOFOLLOW`. Sus identidades `(device, inode)` se comparan repetidamente con las rutas que todavía deberían alcanzarlas.
 

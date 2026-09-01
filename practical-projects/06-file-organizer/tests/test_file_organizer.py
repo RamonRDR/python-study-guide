@@ -2,6 +2,7 @@ from pathlib import Path
 
 import pytest
 
+import file_organizer
 from file_organizer import (
     CollisionPolicy,
     FileCategory,
@@ -198,6 +199,51 @@ def test_plan_organization_rejects_category_directory_symlink(tmp_path: Path) ->
 
     with pytest.raises(ValueError, match="category directory cannot be a symlink"):
         plan_organization(tmp_path)
+
+
+def test_plan_organization_rejects_category_directory_junction(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    source = tmp_path / "notes.txt"
+    source.write_text("x", encoding="utf-8")
+    documents = tmp_path / "documents"
+    documents.mkdir()
+    original_is_junction = getattr(Path, "is_junction", lambda self: False)
+
+    def fake_is_junction(path: Path) -> bool:
+        return path == documents or original_is_junction(path)
+
+    monkeypatch.setattr(Path, "is_junction", fake_is_junction, raising=False)
+
+    with pytest.raises(ValueError, match="symlink or junction"):
+        plan_organization(tmp_path)
+
+    assert source.read_text(encoding="utf-8") == "x"
+
+
+def test_windows_portable_execution_rejects_late_category_junction(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    source = tmp_path / "notes.txt"
+    source.write_text("planned", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+    documents = tmp_path / "documents"
+    identities = {source.resolve(): file_organizer._capture_path_identity(source.resolve())}
+    original_is_junction = getattr(Path, "is_junction", lambda self: False)
+
+    def fake_is_junction(path: Path) -> bool:
+        return path == documents or original_is_junction(path)
+
+    monkeypatch.setattr(Path, "is_junction", fake_is_junction, raising=False)
+    monkeypatch.setattr(file_organizer.os, "name", "nt")
+
+    with pytest.raises(ValueError, match="category directory became unsafe"):
+        file_organizer._execute_plan_portable(plan, identities)
+
+    assert source.read_text(encoding="utf-8") == "planned"
+    assert not (documents / "notes.txt").exists()
 
 
 def test_plan_empty_directory_is_valid(tmp_path: Path) -> None:
