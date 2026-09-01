@@ -41,9 +41,139 @@ jobs:
           PY
       - name: Apply full-review patch
         run: python scripts/_apply_file_organizer_full_review.py
+      - name: Align race tests with new claim boundary
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("practical-projects/06-file-organizer/tests/test_atomic_move.py")
+          text = path.read_text(encoding="utf-8")
+
+          old = '''    with pytest.raises(FileNotFoundError, match="regular file|changed during execution"):
+              execute_plan(plan)
+
+          assert source.is_symlink()
+          assert outside.read_text(encoding="utf-8") == "target data"
+          assert not destination.exists()
+          '''
+          new = '''    with pytest.raises(FileNotFoundError, match="planned source data retained"):
+              execute_plan(plan)
+
+          assert source.is_symlink()
+          assert outside.read_text(encoding="utf-8") == "target data"
+          assert not destination.exists()
+          recovery_files = [
+              child for child in tmp_path.iterdir() if child.name.startswith(".fo-recovery-")
+          ]
+          assert len(recovery_files) == 1
+          assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
+          '''
+          if text.count(old) != 1:
+              raise SystemExit("source-symlink race anchor mismatch")
+          text = text.replace(old, new, 1)
+
+          start = text.index('    original_rename = os.rename\n', text.index('def test_source_replacement_during_claim_is_preserved_without_unlink'))
+          end_marker = '    assert retained[0].read_text(encoding="utf-8") == "third-party replacement"\n'
+          end = text.index(end_marker, start) + len(end_marker)
+          replacement = '''    original_rename_no_replace = file_organizer._rename_no_replace_at
+              raced = False
+
+              def racing_rename_no_replace(
+                  source_name: str,
+                  destination_name: str,
+                  *,
+                  source_directory_fd: int,
+                  destination_directory_fd: int,
+              ) -> None:
+                  nonlocal raced
+                  if (
+                      source_name == source.name
+                      and source_directory_fd == destination_directory_fd
+                      and not raced
+                  ):
+                      raced = True
+                      source.unlink()
+                      source.write_text("third-party replacement", encoding="utf-8")
+                  original_rename_no_replace(
+                      source_name,
+                      destination_name,
+                      source_directory_fd=source_directory_fd,
+                      destination_directory_fd=destination_directory_fd,
+                  )
+
+              monkeypatch.setattr(file_organizer, "_supports_secure_directory_fds", lambda: True)
+              monkeypatch.setattr(
+                  file_organizer,
+                  "_rename_no_replace_at",
+                  racing_rename_no_replace,
+              )
+
+              with pytest.raises(FileNotFoundError, match="planned source data retained"):
+                  execute_plan(plan)
+
+              assert source.read_text(encoding="utf-8") == "third-party replacement"
+              assert not destination.exists()
+              recovery_files = [
+                  child for child in tmp_path.iterdir() if child.name.startswith(".fo-recovery-")
+              ]
+              assert len(recovery_files) == 1
+              assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
+              retained = [
+                  child for child in tmp_path.iterdir() if child.name.startswith(".fo-stage-")
+              ]
+              assert len(retained) == 1
+              assert retained[0].read_text(encoding="utf-8") == "third-party replacement"
+          '''
+          # The triple-quoted block above is indented by the workflow Python itself.
+          replacement = '\n'.join(line[4:] if line.startswith('    ') else line for line in replacement.splitlines()) + '\n'
+          text = text[:start] + replacement + text[end:]
+
+          old = '''        if not raced:
+                      raced = True
+                      category.rename(detached)
+                      category.mkdir()
+          '''
+          new = '''        if source_directory_fd != destination_directory_fd and not raced:
+                      raced = True
+                      category.rename(detached)
+                      category.mkdir()
+          '''
+          if text.count(old) != 1:
+              raise SystemExit("category final-commit race anchor mismatch")
+          text = text.replace(old, new, 1)
+
+          old = '''        if not raced:
+                      raced = True
+                      workspace.rename(detached)
+          '''
+          new = '''        if source_directory_fd != destination_directory_fd and not raced:
+                      raced = True
+                      workspace.rename(detached)
+          '''
+          if text.count(old) != 1:
+              raise SystemExit("root final-commit race anchor mismatch")
+          text = text.replace(old, new, 1)
+
+          old = '''        if not raced:
+                      raced = True
+                      stage = tmp_path / source_name
+                      assert stage.name.startswith(".fo-stage-")
+          '''
+          new = '''        if source_name.startswith(".fo-stage-") and not raced:
+                      raced = True
+                      stage = tmp_path / source_name
+                      assert stage.name.startswith(".fo-stage-")
+          '''
+          if text.count(old) != 1:
+              raise SystemExit("staging replacement race anchor mismatch")
+          text = text.replace(old, new, 1)
+
+          path.write_text(text, encoding="utf-8")
+          PY
       - name: Validate focused patch
         run: |
           python -m py_compile practical-projects/06-file-organizer/file_organizer.py
+          python -m py_compile practical-projects/06-file-organizer/tests/test_atomic_move.py
           python -m pytest -q practical-projects/06-file-organizer/tests
           git diff --check
       - name: Commit functional changes
