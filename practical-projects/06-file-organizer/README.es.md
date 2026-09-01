@@ -22,11 +22,13 @@ Al finalizar este proyecto, deberías poder:
 - separar una fase de planificación sin mutación de una fase de ejecución con efectos secundarios;
 - detectar colisiones de destino exactas y sin distinción de mayúsculas/minúsculas;
 - elegir políticas de colisión explícitas en lugar de sobrescribir datos silenciosamente;
-- tratar los symlinks como una frontera del filesystem;
+- tratar los symlinks y archivos especiales como fronteras del filesystem;
 - razonar sobre carreras time-of-check/time-of-use;
 - comparar objetos del filesystem mediante identidad `(device, inode)`;
 - anclar directorios con file descriptors en Linux;
-- usar semántica atómica no-replace en la frontera final del commit;
+- fijar orígenes sin bloquear ante sustituciones tardías por FIFO;
+- usar semántica atómica no-replace en la frontera final de commit del nombre exacto;
+- distinguir comprobaciones lógicas con `casefold()` de garantías atómicas de nombre exacto;
 - conservar estado incierto en lugar de borrar entradas a ciegas durante recuperación;
 - probar código de filesystem de forma segura con directorios temporales.
 
@@ -75,14 +77,15 @@ La implementación debe:
 8. producir un orden determinista;
 9. construir un plan inmutable antes de mutar;
 10. rechazar rutas de categoría inválidas, incluidos directorios de categoría que sean symlinks;
-11. detectar colisiones de destino exactas y sin distinción de mayúsculas/minúsculas;
+11. detectar colisiones de destino exactas y sin distinción de mayúsculas/minúsculas durante planificación/preflight;
 12. ofrecer políticas explícitas `ERROR` y `SKIP` durante la planificación;
 13. ejecutar un preflight completo;
 14. capturar la identidad de los orígenes planificados;
 15. nunca reemplazar silenciosamente un destino exacto;
-16. rechazar supuestos obsoletos sobre origen, raíz o categoría durante la ejecución;
-17. nunca ejecutar `unlink()` a ciegas sobre staging o rollback cuya identidad pueda haber cambiado;
-18. devolver un resultado estructurado solo después de verificar el destino planificado.
+16. volver a comprobar nombres de destino equivalentes por `casefold()` inmediatamente antes del commit;
+17. rechazar supuestos obsoletos sobre origen, raíz o categoría durante la ejecución;
+18. nunca ejecutar `unlink()` a ciegas sobre staging o rollback cuya identidad pueda haber cambiado;
+19. devolver un resultado estructurado solo después de verificar el destino planificado.
 
 ## Alcance deliberado
 
@@ -96,7 +99,8 @@ directorio de origen
     -> preflight de ejecución
     -> carpetas de categoría ancladas
     -> claim del origen
-    -> commit atómico no-replace en el destino
+    -> nueva comprobación casefold durante la mutación
+    -> commit atómico no-replace del nombre exacto en el destino
 ```
 
 Este proyecto excluye intencionalmente:
@@ -181,7 +185,7 @@ La planificación genera `FileExistsError` cuando ya existe un nombre de destino
 
 Los archivos conflictivos permanecen en el origen y aparecen en `skipped_collisions`.
 
-La ejecución sigue rechazando colisiones que aparezcan después de planificar.
+La ejecución vuelve a comprobar colisiones después de planificar. La existencia del nombre exacto se hace cumplir de forma atómica en el commit final de Linux; los nombres equivalentes por `casefold()` se vuelven a comprobar inmediatamente antes de ese commit.
 
 ## Colisiones sin distinción de mayúsculas/minúsculas
 
@@ -192,7 +196,9 @@ Report.TXT
 report.txt
 ```
 
-Estos nombres se consideran una colisión lógica incluso en un filesystem case-sensitive.
+Estos nombres se consideran una colisión lógica durante planificación, preflight y la comprobación inmediatamente anterior al commit, incluso en un filesystem case-sensitive.
+
+Hay una frontera importante: en un filesystem case-sensitive, la primitiva del kernel `RENAME_NOREPLACE` protege únicamente el **nombre exacto del destino**. Un proceso externo no cooperativo todavía puede crear otro nombre equivalente por `casefold()` en el pequeño intervalo posterior al último escaneo. Por ello, el proyecto no afirma unicidad atómica case-insensitive donde el filesystem no ofrece esa garantía.
 
 ## Fronteras de symlink y anclaje de directorios
 
@@ -225,7 +231,7 @@ La implementación representa identidad con:
 
 El nombre `notes.txt` es una entrada de directorio, no la identidad del objeto del filesystem.
 
-Durante la ejecución segura en Linux, el origen planificado también se abre con `O_NOFOLLOW`, fijando el inode esperado mientras se ejecuta el commit. Esto evita que un inode liberado sea reutilizado y confundido con el origen planificado.
+Durante la ejecución segura en Linux, el origen planificado se abre con `O_NOFOLLOW | O_NONBLOCK` cuando `O_NONBLOCK` está disponible. La flag nonblocking impide que una sustitución tardía por FIFO bloquee `open()`, mientras el `fstat()` posterior sigue exigiendo un archivo regular con la identidad `(device, inode)` planificada. El descriptor abierto fija el inode esperado durante el commit.
 
 ## Nombres de staging de longitud fija
 
@@ -247,15 +253,16 @@ Conceptualmente:
 1. ejecutar preflight y capturar identidad del origen
 2. abrir y anclar la raíz
 3. abrir y anclar las categorías necesarias
-4. fijar el inode del origen con O_NOFOLLOW
+4. fijar el inode del origen con O_NOFOLLOW | O_NONBLOCK
 5. reclamar atómicamente origen -> staging corto
 6. verificar identidad del staging y anclajes
-7. renombrar atómicamente staging -> destino con RENAME_NOREPLACE
-8. verificar identidad del destino y anclajes
-9. informar éxito
+7. escanear de nuevo la categoría anclada buscando un destino equivalente por casefold
+8. renombrar atómicamente staging -> destino exacto con RENAME_NOREPLACE
+9. verificar identidad del destino y anclajes
+10. informar éxito
 ```
 
-`RENAME_NOREPLACE` convierte la existencia del destino en parte de la propia operación atómica. No existe una comprobación `exists()` separada seguida de un rename que pueda reemplazar.
+`RENAME_NOREPLACE` convierte la existencia del **nombre exacto del destino** en parte de la propia operación atómica. No existe una comprobación `exists()` separada seguida de un rename que pueda reemplazar. El escaneo `casefold()` previo detecta colisiones lógicas visibles en esa frontera, pero se documenta como una nueva comprobación y no como un lock atómico case-insensitive.
 
 La ruta segura normal no finaliza el movimiento con `unlink()` del staging. Así no se traslada la misma ventana check-to-unlink del nombre público a un nombre interno.
 
@@ -273,8 +280,8 @@ El plan completo de varios archivos no es transaccional.
 
 La implementación hace explícitas las garantías por plataforma:
 
-- **Linux:** ejecución segura con FDs anclados usa `renameat2(RENAME_NOREPLACE)` cuando está disponible;
-- **Windows:** el fallback usa el comportamiento de `os.rename()` que rechaza un destino existente y verifica identidades alrededor de la operación;
+- **Linux:** ejecución segura con FDs anclados usa `renameat2(RENAME_NOREPLACE)` cuando está disponible, con protección atómica no-replace para el nombre exacto del destino y nuevas comprobaciones `casefold()` durante la mutación;
+- **Windows:** el fallback usa el comportamiento de `os.rename()` que rechaza un destino existente y realiza una nueva comprobación `casefold()` best-effort junto con validaciones de identidad alrededor de la operación;
 - **otros POSIX:** la ejecución genera `NotImplementedError` cuando no puede aplicar de forma segura la semántica no-replace requerida.
 
 Un ejemplo orientado a seguridad debe fallar honestamente en vez de degradar su contrato de forma silenciosa.
@@ -290,9 +297,11 @@ Un ejemplo orientado a seguridad debe fallar honestamente en vez de degradar su 
 5. preflight de colisiones;
 6. selección de capacidades de plataforma;
 7. preparación de directorios anclados;
-8. claim del origen y commit atómico no-replace;
-9. verificación de destino y anclajes;
-10. construcción de `OrganizationResult`.
+8. pinning nonblocking y claim del origen;
+9. nueva comprobación de colisión por `casefold()` durante la mutación;
+10. commit atómico no-replace del nombre exacto;
+11. verificación de destino y anclajes;
+12. construcción de `OrganizationResult`.
 
 ## Determinismo
 
@@ -334,7 +343,9 @@ La cobertura incluye:
 - políticas `ERROR` y `SKIP`;
 - orígenes ausentes u obsoletos;
 - destinos exactos tardíos;
-- sustitución tardía del origen por symlink/archivo;
+- destinos tardíos equivalentes por `casefold()` antes del commit final;
+- sustitución tardía del origen por symlink/archivo/FIFO;
+- pinning nonblocking del origen;
 - carreras de symlink y rename de categoría;
 - carreras de rename de la raíz;
 - staging de longitud fija;
@@ -362,7 +373,11 @@ Se rechaza antes de planificar o ejecutar.
 
 ### Destino aparece después de la planificación
 
-El preflight o el commit atómico no-replace genera `FileExistsError`.
+El preflight y la nueva comprobación `casefold()` durante la mutación generan `FileExistsError` para las colisiones que observan. El `RENAME_NOREPLACE` final de Linux rechaza de forma atómica un destino con nombre exacto que aparezca en la frontera del commit.
+
+### El origen planificado se convierte en FIFO u otro archivo especial
+
+El pinning de Linux usa flags nonblocking y luego `fstat()` rechaza la sustitución por no ser un archivo regular, en lugar de bloquear la ejecución.
 
 ### Origen planificado cambia
 
@@ -385,6 +400,14 @@ Mezclar descubrimiento y mutación hace difícil razonar sobre fallos parciales.
 ### Tratar un nombre como identidad
 
 Las entradas de directorio pueden sustituirse conservando el mismo nombre. Usa identidad del filesystem cuando esa diferencia importe.
+
+### Abrir una ruta sustituible en modo bloqueante
+
+`O_NOFOLLOW` rechaza symlinks, pero no evita que un FIFO bloquee un `open()` de solo lectura. Usa pinning nonblocking antes de validar el tipo de archivo.
+
+### Suponer que un escaneo `casefold()` es un lock atómico
+
+Un escaneo en user space puede detectar colisiones lógicas sin distinción de caja, pero en un filesystem case-sensitive no puede impedir que aparezca después otro nombre con distinta combinación de mayúsculas/minúsculas. Mantén la garantía atómica limitada al nombre exacto aplicado por la primitiva del kernel.
 
 ### Comprobar inmediatamente antes de `unlink()`
 
@@ -439,7 +462,7 @@ Una explicación útil no es “escribí un script que mueve archivos”.
 
 Una versión más fuerte es:
 
-> Diseñé un flujo de filesystem con planificación determinista, políticas explícitas de colisión, fronteras de symlink, identidad por inode, directorios anclados por descriptors, nombres de staging acotados y commit atómico no-replace en Linux mediante `renameat2(RENAME_NOREPLACE)`. El manejo de fallos conserva estado incierto en lugar de borrar entradas a ciegas.
+> Diseñé un flujo de filesystem con planificación determinista, políticas explícitas de colisión, fronteras de symlink/archivo especial, identidad por inode, directorios anclados por descriptors, nombres de staging acotados, nuevas comprobaciones `casefold()` durante la mutación y commit atómico no-replace del nombre exacto en Linux mediante `renameat2(RENAME_NOREPLACE)`. El manejo de fallos conserva estado incierto en lugar de borrar entradas a ciegas.
 
 Eso comunica decisiones de ingeniería, no solo uso de APIs.
 
@@ -456,7 +479,8 @@ Eso comunica decisiones de ingeniería, no solo uso de APIs.
 | Ejecutar el plan | `execute_plan()` |
 | Mantener destinos exitosos | `OrganizationResult` |
 | Identificar objetos del filesystem | `(st_dev, st_ino)` |
-| Commit seguro en Linux | `renameat2(RENAME_NOREPLACE)` |
+| Nueva comprobación lógica por `casefold()` | `listdir()` sobre el directorio anclado |
+| Commit seguro del nombre exacto en Linux | `renameat2(RENAME_NOREPLACE)` |
 
 ## Qué sigue
 
