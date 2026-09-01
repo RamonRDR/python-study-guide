@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import stat
 from dataclasses import dataclass
 from enum import Enum
 from os import PathLike
@@ -31,6 +32,14 @@ _ARCHIVE_SUFFIXES = frozenset({".zip", ".tar", ".gz", ".bz2", ".xz", ".7z"})
 _COMPOUND_ARCHIVE_SUFFIXES = (".tar.gz", ".tar.bz2", ".tar.xz")
 
 
+@dataclass(frozen=True, slots=True)
+class _FileIdentity:
+    """Stable filesystem identity captured before mutation."""
+
+    device: int
+    inode: int
+
+
 def _coerce_path(value: str | PathLike[str], field_name: str) -> Path:
     if isinstance(value, bool) or not isinstance(value, (str, PathLike)):
         raise TypeError(f"{field_name} must be a path-like value")
@@ -53,6 +62,28 @@ def _require_source_directory(value: str | PathLike[str]) -> Path:
 
 def _path_sort_key(path: Path) -> tuple[str, str]:
     return path.name.casefold(), path.name
+
+
+def _identity_from_stat(
+    stat_result: os.stat_result,
+    *,
+    filename: str,
+) -> _FileIdentity:
+    if not stat.S_ISREG(stat_result.st_mode):
+        raise FileNotFoundError(
+            f"planned source is no longer a regular file: {filename}"
+        )
+    return _FileIdentity(stat_result.st_dev, stat_result.st_ino)
+
+
+def _capture_path_identity(path: Path) -> _FileIdentity:
+    try:
+        stat_result = path.lstat()
+    except FileNotFoundError as exc:
+        raise FileNotFoundError(
+            f"planned source is no longer a regular file: {path.name}"
+        ) from exc
+    return _identity_from_stat(stat_result, filename=path.name)
 
 
 @dataclass(frozen=True, slots=True)
@@ -293,18 +324,16 @@ def plan_organization(
     )
 
 
-def _preflight_execution(plan: OrganizationPlan) -> None:
+def _preflight_execution(plan: OrganizationPlan) -> dict[Path, _FileIdentity]:
     root = _require_source_directory(plan.source_directory)
     if root != plan.source_directory:
         raise ValueError("source_directory no longer resolves to the planned directory")
 
     _validate_category_locations(root)
 
-    for action in plan.actions:
-        if action.source.is_symlink() or not action.source.is_file():
-            raise FileNotFoundError(
-                f"planned source is no longer a regular file: {action.source.name}"
-            )
+    source_identities = {
+        action.source: _capture_path_identity(action.source) for action in plan.actions
+    }
 
     for action in plan.actions:
         target_directory = action.destination.parent
@@ -319,6 +348,8 @@ def _preflight_execution(plan: OrganizationPlan) -> None:
                 f"destination appeared after planning: {action.destination.name}"
             )
 
+    return source_identities
+
 
 def _supports_secure_directory_fds() -> bool:
     """Return whether the platform can enforce no-follow directory mutation."""
@@ -329,6 +360,8 @@ def _supports_secure_directory_fds() -> bool:
         and os.mkdir in os.supports_dir_fd
         and os.link in os.supports_dir_fd
         and os.unlink in os.supports_dir_fd
+        and os.stat in os.supports_dir_fd
+        and os.stat in os.supports_follow_symlinks
     )
 
 
@@ -361,14 +394,84 @@ def _open_category_directory_fd(root_fd: int, category_name: str) -> int:
         ) from exc
 
 
+def _regular_identity_at(
+    filename: str,
+    *,
+    directory_fd: int,
+) -> _FileIdentity:
+    try:
+        stat_result = os.stat(
+            filename,
+            dir_fd=directory_fd,
+            follow_symlinks=False,
+        )
+    except FileNotFoundError as exc:
+        raise FileNotFoundError(
+            f"planned source is no longer a regular file: {filename}"
+        ) from exc
+    return _identity_from_stat(stat_result, filename=filename)
+
+
+def _verify_source_identity_at(
+    source_name: str,
+    *,
+    source_directory_fd: int,
+    expected_identity: _FileIdentity,
+) -> None:
+    current_identity = _regular_identity_at(
+        source_name,
+        directory_fd=source_directory_fd,
+    )
+    if current_identity != expected_identity:
+        raise FileNotFoundError(
+            f"planned source changed during execution: {source_name}"
+        )
+
+
+def _verify_destination_identity_at(
+    destination_name: str,
+    *,
+    destination_directory_fd: int,
+    expected_identity: _FileIdentity,
+) -> None:
+    try:
+        stat_result = os.stat(
+            destination_name,
+            dir_fd=destination_directory_fd,
+            follow_symlinks=False,
+        )
+    except FileNotFoundError as exc:
+        raise RuntimeError(
+            f"destination changed during execution: {destination_name}"
+        ) from exc
+
+    if not stat.S_ISREG(stat_result.st_mode):
+        raise RuntimeError(
+            f"destination does not match planned source: {destination_name}"
+        )
+
+    destination_identity = _FileIdentity(stat_result.st_dev, stat_result.st_ino)
+    if destination_identity != expected_identity:
+        raise RuntimeError(
+            f"destination does not match planned source: {destination_name}"
+        )
+
+
 def _move_file_no_replace_at(
     source_name: str,
     destination_name: str,
     *,
     source_directory_fd: int,
     destination_directory_fd: int,
+    expected_identity: _FileIdentity,
 ) -> None:
-    """Move one file through pinned directory descriptors without replacement."""
+    """Move one verified regular file through pinned directory descriptors."""
+    _verify_source_identity_at(
+        source_name,
+        source_directory_fd=source_directory_fd,
+        expected_identity=expected_identity,
+    )
+
     try:
         os.link(
             source_name,
@@ -382,22 +485,65 @@ def _move_file_no_replace_at(
             f"destination appeared during execution: {destination_name}"
         ) from exc
 
+    _verify_destination_identity_at(
+        destination_name,
+        destination_directory_fd=destination_directory_fd,
+        expected_identity=expected_identity,
+    )
+    _verify_source_identity_at(
+        source_name,
+        source_directory_fd=source_directory_fd,
+        expected_identity=expected_identity,
+    )
+
     try:
         os.unlink(source_name, dir_fd=source_directory_fd)
     except OSError as exc:
-        try:
-            os.unlink(destination_name, dir_fd=destination_directory_fd)
-        except OSError as rollback_exc:
-            raise RuntimeError(
-                f"move rollback failed for source file: {source_name}"
-            ) from rollback_exc
         raise OSError(
-            f"could not remove source after creating destination: {source_name}"
+            "could not remove source after creating destination; "
+            f"destination retained for safety: {source_name}"
         ) from exc
 
 
-def _move_file_no_replace(source: Path, destination: Path) -> None:
-    """Portable fallback that never replaces an exact existing destination."""
+def _verify_path_identity(path: Path, expected_identity: _FileIdentity) -> None:
+    current_identity = _capture_path_identity(path)
+    if current_identity != expected_identity:
+        raise FileNotFoundError(
+            f"planned source changed during execution: {path.name}"
+        )
+
+
+def _verify_destination_path_identity(
+    destination: Path,
+    expected_identity: _FileIdentity,
+) -> None:
+    try:
+        stat_result = destination.lstat()
+    except FileNotFoundError as exc:
+        raise RuntimeError(
+            f"destination changed during execution: {destination.name}"
+        ) from exc
+
+    if not stat.S_ISREG(stat_result.st_mode):
+        raise RuntimeError(
+            f"destination does not match planned source: {destination.name}"
+        )
+
+    destination_identity = _FileIdentity(stat_result.st_dev, stat_result.st_ino)
+    if destination_identity != expected_identity:
+        raise RuntimeError(
+            f"destination does not match planned source: {destination.name}"
+        )
+
+
+def _move_file_no_replace(
+    source: Path,
+    destination: Path,
+    expected_identity: _FileIdentity,
+) -> None:
+    """Portable fallback that verifies identity and never replaces a destination."""
+    _verify_path_identity(source, expected_identity)
+
     try:
         os.link(source, destination, follow_symlinks=False)
     except FileExistsError as exc:
@@ -405,21 +551,22 @@ def _move_file_no_replace(source: Path, destination: Path) -> None:
             f"destination appeared during execution: {destination.name}"
         ) from exc
 
+    _verify_destination_path_identity(destination, expected_identity)
+    _verify_path_identity(source, expected_identity)
+
     try:
         source.unlink()
     except OSError as exc:
-        try:
-            destination.unlink()
-        except OSError as rollback_exc:
-            raise RuntimeError(
-                f"move rollback failed for source file: {source.name}"
-            ) from rollback_exc
         raise OSError(
-            f"could not remove source after creating destination: {source.name}"
+            "could not remove source after creating destination; "
+            f"destination retained for safety: {source.name}"
         ) from exc
 
 
-def _execute_plan_with_directory_fds(plan: OrganizationPlan) -> OrganizationResult:
+def _execute_plan_with_directory_fds(
+    plan: OrganizationPlan,
+    source_identities: dict[Path, _FileIdentity],
+) -> OrganizationResult:
     """Execute using pinned no-follow directory descriptors when supported."""
     root_fd = _open_source_directory_fd(plan.source_directory)
     category_fds: dict[FileCategory, int] = {}
@@ -441,6 +588,7 @@ def _execute_plan_with_directory_fds(plan: OrganizationPlan) -> OrganizationResu
                 action.destination.name,
                 source_directory_fd=root_fd,
                 destination_directory_fd=category_fds[action.category],
+                expected_identity=source_identities[action.source],
             )
             moved.append(action.destination)
 
@@ -451,7 +599,10 @@ def _execute_plan_with_directory_fds(plan: OrganizationPlan) -> OrganizationResu
         os.close(root_fd)
 
 
-def _execute_plan_portable(plan: OrganizationPlan) -> OrganizationResult:
+def _execute_plan_portable(
+    plan: OrganizationPlan,
+    source_identities: dict[Path, _FileIdentity],
+) -> OrganizationResult:
     """Execute on platforms without directory-descriptor no-follow support."""
     for directory in sorted(
         {action.destination.parent for action in plan.actions},
@@ -470,7 +621,11 @@ def _execute_plan_portable(plan: OrganizationPlan) -> OrganizationResult:
                 "category directory became unsafe during execution: "
                 f"{action.destination.parent.name}"
             )
-        _move_file_no_replace(action.source, action.destination)
+        _move_file_no_replace(
+            action.source,
+            action.destination,
+            source_identities[action.source],
+        )
         moved.append(action.destination)
 
     return OrganizationResult(plan=plan, moved_files=tuple(moved))
@@ -481,8 +636,8 @@ def execute_plan(plan: OrganizationPlan) -> OrganizationResult:
     if not isinstance(plan, OrganizationPlan):
         raise TypeError("plan must be an OrganizationPlan")
 
-    _preflight_execution(plan)
+    source_identities = _preflight_execution(plan)
 
     if _supports_secure_directory_fds():
-        return _execute_plan_with_directory_fds(plan)
-    return _execute_plan_portable(plan)
+        return _execute_plan_with_directory_fds(plan, source_identities)
+    return _execute_plan_portable(plan, source_identities)
