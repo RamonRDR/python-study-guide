@@ -394,15 +394,25 @@ python-study-guide/
 │   │   └── tests/
 │   │       ├── conftest.py
 │   │       └── test_csv_analyzer.py
-│   └── 05-report-generator/
+│   ├── 05-report-generator/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   ├── demo.py
+│   │   ├── report_generator.py
+│   │   └── tests/
+│   │       ├── conftest.py
+│   │       └── test_report_generator.py
+│   └── 06-file-organizer/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       ├── demo.py
-│       ├── report_generator.py
+│       ├── file_organizer.py
 │       └── tests/
 │           ├── conftest.py
-│           └── test_report_generator.py
+│           ├── test_atomic_move.py
+│           └── test_file_organizer.py
 ├── program-flow/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -619,7 +629,7 @@ python-study-guide/
 - `external-libraries/`: complete Phase 9 learning path for third-party packages. It contains reviewed multilingual chapters for pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x, and pytest 9.1.x, with twenty deterministic executable examples in total. The phase covers tabular transformations, Excel workbook automation, HTTP/API clients, and automated-testing contracts; Phase 10 practical projects come next.
 - `functions/`: complete Phase 5 learning path. Chapters 01–09 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, default values including definition-time evaluation and mutable-default safety, variable-length positional and keyword argument collection with `*args` and `**kwargs`, composition through helper and coordinating functions with explicit dependencies and simple call graphs, and explicit data-flow tracing across calls including parameter bindings, rebinding versus mutation, `None`, tuple results, and return-based handoffs, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
-- `practical-projects/`: Phase 10 practical-project workspace. Projects 01–05 are available: Expense Tracker integrates validated monetary data and persistence; Grade Calculator adds configurable grading policies and exact weighted aggregation; User Registration adds canonical identity-like data, duplicate prevention, indexed updates, and lifecycle transitions; CSV Analyzer adds strict schema-aware ingestion and partial-success validation; Report Generator adds explicit date windows, deterministic summary metrics, TXT/Markdown rendering, and UTF-8 file output.
+- `practical-projects/`: Phase 10 practical-project workspace. Projects 01–05 are complete and Project 06 File Organizer is in progress. Project 06 adds deterministic shallow discovery, immutable planning, collision policies, symlink boundaries, filesystem identity checks, descriptor-anchored directories, bounded staging names, atomic Linux no-replace commit behavior, a deterministic demo, and focused regression tests.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
 - `standard-library/`: complete Phase 8 learning path. Chapters 01–09 cover `pathlib` filesystem boundaries, `datetime` date/time modeling, advanced `json` and `csv` contracts, `logging`, specialized `collections`, `itertools`, `decimal`, and `os`/`shutil` contracts for environment state, traversal, metadata, copy, move, recursive removal, platform capabilities, and archive safety, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
