@@ -12,6 +12,9 @@ def test_execute_plan_never_replaces_destination_created_after_preflight(
     monkeypatch: pytest.MonkeyPatch,
     tmp_path: Path,
 ) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
     source = tmp_path / "notes.txt"
     source.write_text("planned source", encoding="utf-8")
     plan = plan_organization(tmp_path)
