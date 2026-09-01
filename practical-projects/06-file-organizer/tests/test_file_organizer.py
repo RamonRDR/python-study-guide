@@ -1,3 +1,5 @@
+import os
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -469,3 +471,42 @@ def test_execute_plan_keeps_existing_unrelated_category_files(tmp_path: Path) ->
 
     assert existing.read_text(encoding="utf-8") == "old"
     assert (documents / "new.txt").read_text(encoding="utf-8") == "new"
+
+
+def test_internal_recovery_artifacts_are_reserved_from_future_plans(tmp_path: Path) -> None:
+    (tmp_path / ".fo-stage-deadbeef").write_text("stage", encoding="utf-8")
+    (tmp_path / ".fo-recovery-deadbeef").write_text("recovery", encoding="utf-8")
+    (tmp_path / "notes.txt").write_text("user", encoding="utf-8")
+
+    plan = plan_organization(tmp_path)
+
+    assert tuple(action.source.name for action in plan.actions) == ("notes.txt",)
+
+
+@pytest.mark.skipif(os.name != "nt", reason="requires Windows NTFS junction semantics")
+def test_windows_real_source_and_category_junctions_are_rejected(tmp_path: Path) -> None:
+    outside = tmp_path / "outside"
+    outside.mkdir()
+
+    source_junction = tmp_path / "workspace-link"
+    subprocess.run(
+        ["cmd", "/c", "mklink", "/J", str(source_junction), str(outside)],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    with pytest.raises(ValueError, match="symlink or junction"):
+        plan_organization(source_junction)
+
+    workspace = tmp_path / "workspace"
+    workspace.mkdir()
+    (workspace / "notes.txt").write_text("x", encoding="utf-8")
+    category_junction = workspace / "documents"
+    subprocess.run(
+        ["cmd", "/c", "mklink", "/J", str(category_junction), str(outside)],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    with pytest.raises(ValueError, match="symlink or junction"):
+        plan_organization(workspace)

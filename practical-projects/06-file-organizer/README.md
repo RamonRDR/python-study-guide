@@ -202,7 +202,7 @@ There is an important boundary: on a case-sensitive filesystem, the kernel primi
 
 ## Symlink and directory-anchor boundaries
 
-The organizer does not follow direct-child symlinks. It also rejects a source directory or category folder that is a symlink. On Windows, category folders that are NTFS junctions are rejected too: `is_dir()` follows a junction, so accepting one could redirect a planned move outside the workspace.
+The organizer does not follow direct-child symlinks. It rejects a source directory or category folder that is a symlink. On Windows, source directories and category folders that are NTFS junctions are rejected too: `is_dir()` follows a junction, so accepting one could redirect discovery or a planned move outside the workspace.
 
 On the secure Linux path, the source root and required category directories are opened with `O_DIRECTORY | O_NOFOLLOW`. Their `(device, inode)` identities are repeatedly compared with the paths that should still reach them.
 
@@ -231,7 +231,7 @@ The implementation represents identity with:
 
 The filename `notes.txt` is a directory entry. It is not the identity of the underlying filesystem object.
 
-During secure Linux execution, the planned source is opened with `O_NOFOLLOW | O_NONBLOCK` when `O_NONBLOCK` is available. The nonblocking flag prevents a late FIFO replacement from hanging `open()`, while the following `fstat()` still requires a regular file with the planned `(device, inode)` identity. The open descriptor pins the expected inode while the commit runs.
+During secure Linux execution, source identity is accepted **only after the source has been opened** with `O_NOFOLLOW | O_NONBLOCK` when `O_NONBLOCK` is available. The following `fstat()` derives `(device, inode)` from that already-open descriptor, and every planned source descriptor stays open until the plan finishes. An accepted inode that is later unlinked therefore cannot be freed and immediately reused while execution still depends on its identity. The nonblocking flag also prevents a late FIFO replacement from hanging `open()`. Descriptor pinning stabilizes object identity, not file contents; concurrent writes to the same inode are outside this project's snapshot guarantees.
 
 ## Fixed-length staging names
 
@@ -250,16 +250,17 @@ The secure Linux path uses `renameat2(..., RENAME_NOREPLACE)` through pinned dir
 Conceptually:
 
 ```text
-1. preflight and capture source identity
+1. validate paths and collision preflight
 2. open and anchor the source root
-3. open and anchor required category directories
-4. pin the planned source inode with O_NOFOLLOW | O_NONBLOCK
-5. atomically claim source name -> short internal stage
-6. verify stage identity and directory anchors
-7. rescan the pinned category for a casefold-equivalent destination
-8. atomically rename stage -> exact destination with RENAME_NOREPLACE
-9. verify destination identity and anchors
-10. report success
+3. open every planned source and accept identity from `fstat()` on that pinned descriptor
+4. keep all accepted source descriptors open through plan completion
+5. open and anchor required category directories
+6. claim source name -> short internal stage with no-replace semantics
+7. verify stage identity and directory anchors
+8. rescan the pinned category for a casefold-equivalent destination
+9. atomically rename stage -> exact destination with RENAME_NOREPLACE
+10. verify destination identity and anchors
+11. report success
 ```
 
 `RENAME_NOREPLACE` makes **exact destination-name** existence part of the atomic filesystem operation. There is no separate `exists()` check followed by a replacing rename. The preceding casefold scan catches logical collisions visible at that boundary, but it is intentionally documented as a recheck rather than an atomic case-insensitive lock.
@@ -276,7 +277,7 @@ A staging pathname is not an inode lock. If the final rename consumes a replacem
 
 Safe Linux execution therefore deliberately requires read access to each planned regular file. Readability is validated before category directories are created and again when the source inode is pinned for mutation; permission failures are reported as `PermissionError`, not as a false source-identity change.
 
-This can intentionally leave an internal recovery entry in unusual race/failure scenarios. That is preferable to deleting unrelated data whose current identity cannot be proven.
+This can intentionally leave an internal recovery entry in unusual race/failure scenarios. The `.fo-stage-*` and `.fo-recovery-*` prefixes are reserved internal namespaces and are excluded from later discovery so recovery evidence is not accidentally reorganized. That is preferable to deleting or reclassifying uncertain data whose current identity cannot be proven.
 
 The whole multi-file plan is not transactional.
 
@@ -285,7 +286,7 @@ The whole multi-file plan is not transactional.
 The implementation is explicit about platform guarantees:
 
 - **Linux:** secure descriptor-anchored execution uses `renameat2(RENAME_NOREPLACE)` when available, with atomic no-replace protection for the exact destination name and mutation-time casefold rechecks;
-- **Windows:** the fallback relies on Windows `os.rename()` refusing an existing destination and performs a best-effort casefold recheck plus source/destination/category identity validation around the operation;
+- **Windows:** the guarded portable path relies on Windows `os.rename()` refusing an existing destination and performs best-effort casefold, redirect, and identity checks. It does **not** claim the descriptor-pinned adversarial race resistance of the Linux path;
 - **other POSIX platforms:** execution raises `NotImplementedError` when the project cannot enforce the required no-replace semantics safely.
 
 A safety-oriented example should fail honestly instead of silently downgrading its contract.
@@ -297,11 +298,11 @@ A safety-oriented example should fail honestly instead of silently downgrading i
 1. plan type validation;
 2. source-directory revalidation;
 3. category-path revalidation;
-4. planned-source identity capture;
-5. destination collision preflight;
-6. platform capability selection;
+4. destination collision preflight;
+5. platform capability selection;
+6. Linux: pin every planned source before accepting identity and before category mutation;
 7. anchored directory setup;
-8. nonblocking source pin and source claim;
+8. source claim;
 9. mutation-time casefold collision recheck;
 10. atomic exact-name no-replace commit;
 11. destination/anchor verification;

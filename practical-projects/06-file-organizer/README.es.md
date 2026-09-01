@@ -202,7 +202,7 @@ Hay una frontera importante: en un filesystem case-sensitive, la primitiva del k
 
 ## Fronteras de symlink y anclaje de directorios
 
-El organizador no sigue symlinks hijos directos. También rechaza un directorio de origen o carpeta de categoría que sea symlink. En Windows, las carpetas de categoría que sean junctions NTFS también se rechazan: `is_dir()` sigue un junction, por lo que aceptarlo podría redirigir un movimiento planificado fuera del workspace.
+El organizador no sigue symlinks hijos directos. También rechaza directorio de origen o carpeta de categoría que sea symlink. En Windows, tanto el directorio de origen como las carpetas de categoría se rechazan cuando son junctions NTFS: `is_dir()` sigue un junction, por lo que aceptarlo podría redirigir el descubrimiento o un movimiento fuera del workspace.
 
 En la ruta segura de Linux, la raíz y las categorías necesarias se abren con `O_DIRECTORY | O_NOFOLLOW`. Sus identidades `(device, inode)` se comparan repetidamente con las rutas que todavía deberían alcanzarlas.
 
@@ -231,7 +231,7 @@ La implementación representa identidad con:
 
 El nombre `notes.txt` es una entrada de directorio, no la identidad del objeto del filesystem.
 
-Durante la ejecución segura en Linux, el origen planificado se abre con `O_NOFOLLOW | O_NONBLOCK` cuando `O_NONBLOCK` está disponible. La flag nonblocking impide que una sustitución tardía por FIFO bloquee `open()`, mientras el `fstat()` posterior sigue exigiendo un archivo regular con la identidad `(device, inode)` planificada. El descriptor abierto fija el inode esperado durante el commit.
+Durante la ejecución segura en Linux, la identidad del origen se acepta **solo después de abrir el archivo** con `O_NOFOLLOW | O_NONBLOCK` cuando `O_NONBLOCK` está disponible. El `fstat()` deriva `(device, inode)` de ese descriptor ya abierto, y todos los descriptores de los orígenes planificados permanecen abiertos hasta que termina el plan. Así, un inode aceptado y luego desvinculado no puede liberarse y reutilizarse de inmediato mientras la ejecución todavía depende de su identidad. La flag nonblocking también evita que una sustitución tardía por FIFO bloquee `open()`. El pinning estabiliza la identidad del objeto, no su contenido; las escrituras concurrentes sobre el mismo inode quedan fuera de las garantías de snapshot de este proyecto.
 
 ## Nombres de staging de longitud fija
 
@@ -250,16 +250,17 @@ La ruta segura de Linux usa `renameat2(..., RENAME_NOREPLACE)` mediante file des
 Conceptualmente:
 
 ```text
-1. ejecutar preflight y capturar identidad del origen
+1. validar rutas y ejecutar el preflight de colisiones
 2. abrir y anclar la raíz
-3. abrir y anclar las categorías necesarias
-4. fijar el inode del origen con O_NOFOLLOW | O_NONBLOCK
-5. reclamar atómicamente origen -> staging corto
-6. verificar identidad del staging y anclajes
-7. escanear de nuevo la categoría anclada buscando un destino equivalente por casefold
-8. renombrar atómicamente staging -> destino exacto con RENAME_NOREPLACE
-9. verificar identidad del destino y anclajes
-10. informar éxito
+3. abrir todos los orígenes planificados y aceptar identidad mediante `fstat()` del descriptor fijado
+4. mantener abiertos todos los descriptores aceptados hasta que termine el plan
+5. abrir y anclar las categorías necesarias
+6. reclamar origen -> staging corto con semántica no-replace
+7. verificar identidad del staging y anclajes
+8. escanear de nuevo la categoría anclada buscando un destino equivalente por casefold
+9. renombrar atómicamente staging -> destino exacto con RENAME_NOREPLACE
+10. verificar identidad del destino y anclajes
+11. informar éxito
 ```
 
 `RENAME_NOREPLACE` convierte la existencia del **nombre exacto del destino** en parte de la propia operación atómica. No existe una comprobación `exists()` separada seguida de un rename que pueda reemplazar. El escaneo `casefold()` previo detecta colisiones lógicas visibles en esa frontera, pero se documenta como una nueva comprobación y no como un lock atómico case-insensitive.
@@ -276,7 +277,7 @@ Un pathname de staging no funciona como lock de inode. Si el rename final consum
 
 Por ello, la ejecución segura en Linux exige deliberadamente permiso de lectura para cada archivo regular planificado. La legibilidad se valida antes de crear los directorios de categoría y de nuevo al fijar el inode del origen para la mutación; los fallos de permisos se informan como `PermissionError`, no como un falso cambio de identidad del origen.
 
-En escenarios raros de carrera/fallo, esto puede dejar una entrada interna de recuperación. Es preferible a borrar datos cuya identidad actual no puede demostrarse.
+En escenarios raros de carrera/fallo, esto puede dejar una entrada interna de recuperación. Los prefijos `.fo-stage-*` y `.fo-recovery-*` son namespaces internos reservados y quedan fuera de descubrimientos futuros para que la evidencia de recuperación no se reorganice por accidente. Es preferible a borrar o reclasificar datos cuya identidad actual no puede demostrarse.
 
 El plan completo de varios archivos no es transaccional.
 
@@ -285,7 +286,7 @@ El plan completo de varios archivos no es transaccional.
 La implementación hace explícitas las garantías por plataforma:
 
 - **Linux:** ejecución segura con FDs anclados usa `renameat2(RENAME_NOREPLACE)` cuando está disponible, con protección atómica no-replace para el nombre exacto del destino y nuevas comprobaciones `casefold()` durante la mutación;
-- **Windows:** el fallback usa el comportamiento de `os.rename()` que rechaza un destino existente y realiza una nueva comprobación `casefold()` best-effort junto con validaciones de identidad alrededor de la operación;
+- **Windows:** la ruta portátil protegida usa `os.rename()` rechazando un destino existente y realiza comprobaciones best-effort de `casefold()`, redirección e identidad. **No** afirma tener la misma resistencia a carreras adversariales basada en descriptores fijados que la ruta Linux;
 - **otros POSIX:** la ejecución genera `NotImplementedError` cuando no puede aplicar de forma segura la semántica no-replace requerida.
 
 Un ejemplo orientado a seguridad debe fallar honestamente en vez de degradar su contrato de forma silenciosa.
@@ -297,11 +298,11 @@ Un ejemplo orientado a seguridad debe fallar honestamente en vez de degradar su 
 1. validación del tipo del plan;
 2. revalidación del directorio de origen;
 3. revalidación de rutas de categoría;
-4. captura de identidades de los orígenes planificados;
-5. preflight de colisiones;
-6. selección de capacidades de plataforma;
+4. preflight de colisiones;
+5. selección de capacidades de plataforma;
+6. Linux: fijar todos los orígenes antes de aceptar identidad y antes de mutar categorías;
 7. preparación de directorios anclados;
-8. pinning nonblocking y claim del origen;
+8. claim del origen;
 9. nueva comprobación de colisión por `casefold()` durante la mutación;
 10. commit atómico no-replace del nombre exacto;
 11. verificación de destino y anclajes;

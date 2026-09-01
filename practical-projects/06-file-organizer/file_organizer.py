@@ -36,7 +36,7 @@ _IMAGE_SUFFIXES = frozenset({".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"})
 _ARCHIVE_SUFFIXES = frozenset({".zip", ".tar", ".gz", ".bz2", ".xz", ".7z"})
 _COMPOUND_ARCHIVE_SUFFIXES = (".tar.gz", ".tar.bz2", ".tar.xz")
 _RENAME_NOREPLACE = 1
-_AT_FDCWD = -100
+_INTERNAL_PREFIXES = (".fo-stage-", ".fo-recovery-")
 
 
 def _load_renameat2() -> Callable[..., int] | None:
@@ -65,10 +65,18 @@ _RENAMEAT2 = _load_renameat2()
 
 @dataclass(frozen=True, slots=True)
 class _FileIdentity:
-    """Stable filesystem identity captured before mutation."""
+    """Stable filesystem identity captured while an object is pinned."""
 
     device: int
     inode: int
+
+
+@dataclass(frozen=True, slots=True)
+class _PinnedSource:
+    """Descriptor and identity accepted together for one planned source."""
+
+    fd: int
+    identity: _FileIdentity
 
 
 def _coerce_path(value: str | PathLike[str], field_name: str) -> Path:
@@ -82,8 +90,9 @@ def _coerce_path(value: str | PathLike[str], field_name: str) -> Path:
 
 def _require_source_directory(value: str | PathLike[str]) -> Path:
     path = _coerce_path(value, "source_directory")
-    if path.is_symlink():
-        raise ValueError("source_directory cannot be a symlink")
+    is_junction = getattr(path, "is_junction", None)
+    if path.is_symlink() or bool(is_junction is not None and is_junction()):
+        raise ValueError("source_directory cannot be a symlink or junction")
     if not path.exists():
         raise FileNotFoundError(f"source_directory does not exist: {path}")
     if not path.is_dir():
@@ -290,6 +299,8 @@ def _scan_source_directory(
     symlinks: list[Path] = []
 
     for child in sorted(source_directory.iterdir(), key=_path_sort_key):
+        if child.name.startswith(_INTERNAL_PREFIXES):
+            continue
         if child.is_symlink():
             symlinks.append(child.absolute())
         elif child.is_file():
@@ -387,16 +398,12 @@ def plan_organization(
     )
 
 
-def _preflight_execution(plan: OrganizationPlan) -> dict[Path, _FileIdentity]:
+def _preflight_execution(plan: OrganizationPlan) -> None:
     root = _require_source_directory(plan.source_directory)
     if root != plan.source_directory:
         raise ValueError("source_directory no longer resolves to the planned directory")
 
     _validate_category_locations(root)
-
-    source_identities = {
-        action.source: _capture_path_identity(action.source) for action in plan.actions
-    }
 
     for action in plan.actions:
         target_directory = action.destination.parent
@@ -411,7 +418,14 @@ def _preflight_execution(plan: OrganizationPlan) -> dict[Path, _FileIdentity]:
                 f"destination appeared after planning: {action.destination.name}"
             )
 
-    return source_identities
+
+def _capture_portable_source_identities(
+    plan: OrganizationPlan,
+) -> dict[Path, _FileIdentity]:
+    """Capture best-effort pathname identities for the guarded Windows path."""
+    return {
+        action.source: _capture_path_identity(action.source) for action in plan.actions
+    }
 
 
 def _supports_secure_directory_fds() -> bool:
@@ -507,29 +521,12 @@ def _regular_identity_at(filename: str, *, directory_fd: int) -> _FileIdentity:
     return _identity_from_regular_stat(stat_result, filename=filename)
 
 
-def _verify_source_identity_at(
-    source_name: str,
-    *,
-    source_directory_fd: int,
-    expected_identity: _FileIdentity,
-) -> None:
-    current_identity = _regular_identity_at(
-        source_name,
-        directory_fd=source_directory_fd,
-    )
-    if current_identity != expected_identity:
-        raise FileNotFoundError(
-            f"planned source changed during execution: {source_name}"
-        )
-
-
 def _open_planned_source_fd_at(
     source_name: str,
     *,
     root_fd: int,
-    expected_identity: _FileIdentity,
-) -> int:
-    """Pin the planned inode without blocking on a late special-file replacement."""
+) -> _PinnedSource:
+    """Open first, then accept identity from the descriptor pinning the inode."""
     flags = os.O_RDONLY | os.O_NOFOLLOW
     if hasattr(os, "O_NONBLOCK"):
         flags |= os.O_NONBLOCK
@@ -547,18 +544,34 @@ def _open_planned_source_fd_at(
         ) from exc
 
     try:
-        current_identity = _identity_from_regular_stat(
+        identity = _identity_from_regular_stat(
             os.fstat(source_fd),
             filename=source_name,
         )
-        if current_identity != expected_identity:
-            raise FileNotFoundError(
-                f"planned source changed during execution: {source_name}"
-            )
     except Exception:
         os.close(source_fd)
         raise
-    return source_fd
+    return _PinnedSource(fd=source_fd, identity=identity)
+
+
+def _pin_planned_sources_at(
+    plan: OrganizationPlan,
+    *,
+    root_fd: int,
+) -> dict[Path, _PinnedSource]:
+    """Pin every source before category creation or source mutation."""
+    pinned: dict[Path, _PinnedSource] = {}
+    try:
+        for action in plan.actions:
+            pinned[action.source] = _open_planned_source_fd_at(
+                action.source.name,
+                root_fd=root_fd,
+            )
+    except Exception:
+        for source in pinned.values():
+            os.close(source.fd)
+        raise
+    return pinned
 
 
 def _verify_destination_identity_at(
@@ -738,13 +751,27 @@ def _claim_source_at(
     expected_identity: _FileIdentity,
 ) -> str:
     """Atomically detach the source name and verify the claimed regular file."""
-    stage_name = _make_stage_name(source_name)
-    os.rename(
-        source_name,
-        stage_name,
-        src_dir_fd=root_fd,
-        dst_dir_fd=root_fd,
-    )
+    stage_name = ""
+    for _ in range(16):
+        stage_name = _make_stage_name(source_name)
+        try:
+            _rename_no_replace_at(
+                source_name,
+                stage_name,
+                source_directory_fd=root_fd,
+                destination_directory_fd=root_fd,
+            )
+        except FileExistsError:
+            continue
+        except FileNotFoundError as exc:
+            raise FileNotFoundError(
+                f"planned source changed during execution: {source_name}"
+            ) from exc
+        break
+    else:
+        raise FileExistsError(
+            f"could not allocate staging entry for planned source: {source_name}"
+        )
 
     try:
         staged_identity = _regular_identity_at(stage_name, directory_fd=root_fd)
@@ -802,19 +829,15 @@ def _move_file_no_replace_at(
     source_directory_fd: int,
     destination_directory_fd: int,
     category_name: str,
+    source_fd: int,
     expected_identity: _FileIdentity,
 ) -> None:
-    """Commit one move with anchored directories and no replace/unlink window."""
+    """Commit one move using the source descriptor pinned before mutation."""
     _verify_root_anchor_at(source_directory_path, source_directory_fd)
     _verify_category_anchor_at(
         root_fd=source_directory_fd,
         category_name=category_name,
         category_fd=destination_directory_fd,
-    )
-    source_fd = _open_planned_source_fd_at(
-        source_name,
-        root_fd=source_directory_fd,
-        expected_identity=expected_identity,
     )
 
     try:
@@ -823,60 +846,68 @@ def _move_file_no_replace_at(
             root_fd=source_directory_fd,
             expected_identity=expected_identity,
         )
+    except FileNotFoundError as exc:
+        recovery_name = _recover_pinned_source_at(
+            source_fd,
+            source_name,
+            root_fd=source_directory_fd,
+        )
+        raise FileNotFoundError(
+            "planned source changed after it was pinned; "
+            f"planned source data retained as {recovery_name}: {source_name}"
+        ) from exc
 
-        try:
-            _verify_root_anchor_at(source_directory_path, source_directory_fd)
-            _verify_category_anchor_at(
-                root_fd=source_directory_fd,
-                category_name=category_name,
-                category_fd=destination_directory_fd,
-            )
-            staged_identity = _regular_identity_at(
-                stage_name,
-                directory_fd=source_directory_fd,
-            )
-            if staged_identity != expected_identity:
-                raise FileNotFoundError(
-                    f"planned source changed during execution: {source_name}"
-                )
-            _verify_no_casefold_destination_collision_at(
-                destination_name,
-                destination_directory_fd=destination_directory_fd,
-            )
-            _rename_no_replace_at(
-                stage_name,
-                destination_name,
-                source_directory_fd=source_directory_fd,
-                destination_directory_fd=destination_directory_fd,
-            )
-        except (FileExistsError, FileNotFoundError, ValueError, OSError):
-            _preserve_stage_at(stage_name, source_name, root_fd=source_directory_fd)
-            raise
-
-        try:
-            _verify_destination_identity_at(
-                destination_name,
-                destination_directory_fd=destination_directory_fd,
-                expected_identity=expected_identity,
-            )
-        except RuntimeError as exc:
-            recovery_name = _recover_pinned_source_at(
-                source_fd,
-                source_name,
-                root_fd=source_directory_fd,
-            )
-            raise RuntimeError(
-                "destination does not match planned source; "
-                f"planned source data retained as {recovery_name}: {destination_name}"
-            ) from exc
+    try:
         _verify_root_anchor_at(source_directory_path, source_directory_fd)
         _verify_category_anchor_at(
             root_fd=source_directory_fd,
             category_name=category_name,
             category_fd=destination_directory_fd,
         )
-    finally:
-        os.close(source_fd)
+        staged_identity = _regular_identity_at(
+            stage_name,
+            directory_fd=source_directory_fd,
+        )
+        if staged_identity != expected_identity:
+            raise FileNotFoundError(
+                f"planned source changed during execution: {source_name}"
+            )
+        _verify_no_casefold_destination_collision_at(
+            destination_name,
+            destination_directory_fd=destination_directory_fd,
+        )
+        _rename_no_replace_at(
+            stage_name,
+            destination_name,
+            source_directory_fd=source_directory_fd,
+            destination_directory_fd=destination_directory_fd,
+        )
+    except (FileExistsError, FileNotFoundError, ValueError, OSError):
+        _preserve_stage_at(stage_name, source_name, root_fd=source_directory_fd)
+        raise
+
+    try:
+        _verify_destination_identity_at(
+            destination_name,
+            destination_directory_fd=destination_directory_fd,
+            expected_identity=expected_identity,
+        )
+    except RuntimeError as exc:
+        recovery_name = _recover_pinned_source_at(
+            source_fd,
+            source_name,
+            root_fd=source_directory_fd,
+        )
+        raise RuntimeError(
+            "destination does not match planned source; "
+            f"planned source data retained as {recovery_name}: {destination_name}"
+        ) from exc
+    _verify_root_anchor_at(source_directory_path, source_directory_fd)
+    _verify_category_anchor_at(
+        root_fd=source_directory_fd,
+        category_name=category_name,
+        category_fd=destination_directory_fd,
+    )
 
 
 def _rename_no_replace_path(source: Path, destination: Path) -> None:
@@ -940,24 +971,18 @@ def _verify_destination_path_identity(
 
 def _execute_plan_with_directory_fds(
     plan: OrganizationPlan,
-    source_identities: dict[Path, _FileIdentity],
 ) -> OrganizationResult:
-    """Execute using pinned no-follow directory descriptors on Linux."""
+    """Execute using sources and directories pinned before Linux mutation."""
     root_fd = _open_source_directory_fd(plan.source_directory)
+    pinned_sources: dict[Path, _PinnedSource] = {}
     category_fds: dict[FileCategory, int] = {}
 
     try:
         _verify_root_anchor_at(plan.source_directory, root_fd)
 
-        # Readability is a deliberate secure-execution prerequisite because
-        # pinned-FD recovery must be able to persist the planned source bytes.
-        for action in plan.actions:
-            validation_fd = _open_planned_source_fd_at(
-                action.source.name,
-                root_fd=root_fd,
-                expected_identity=source_identities[action.source],
-            )
-            os.close(validation_fd)
+        # Accept identity only from already-open descriptors. Keeping every
+        # descriptor alive prevents accepted inodes from being freed/reused.
+        pinned_sources = _pin_planned_sources_at(plan, root_fd=root_fd)
 
         for category in sorted(
             {action.category for action in plan.actions},
@@ -970,6 +995,7 @@ def _execute_plan_with_directory_fds(
 
         moved: list[Path] = []
         for action in plan.actions:
+            pinned_source = pinned_sources[action.source]
             _move_file_no_replace_at(
                 action.source.name,
                 action.destination.name,
@@ -977,7 +1003,8 @@ def _execute_plan_with_directory_fds(
                 source_directory_fd=root_fd,
                 destination_directory_fd=category_fds[action.category],
                 category_name=action.category.value,
-                expected_identity=source_identities[action.source],
+                source_fd=pinned_source.fd,
+                expected_identity=pinned_source.identity,
             )
             moved.append(action.destination)
 
@@ -986,6 +1013,8 @@ def _execute_plan_with_directory_fds(
     finally:
         for directory_fd in category_fds.values():
             os.close(directory_fd)
+        for source in pinned_sources.values():
+            os.close(source.fd)
         os.close(root_fd)
 
 
@@ -1026,14 +1055,16 @@ def _execute_plan_portable(
 
 
 def execute_plan(plan: OrganizationPlan) -> OrganizationResult:
-    """Execute a previously validated plan after a full collision preflight."""
+    """Execute a plan under the strongest explicitly supported platform contract."""
     if not isinstance(plan, OrganizationPlan):
         raise TypeError("plan must be an OrganizationPlan")
 
-    source_identities = _preflight_execution(plan)
+    _preflight_execution(plan)
     if not plan.actions:
         return OrganizationResult(plan=plan, moved_files=())
 
     if _supports_secure_directory_fds():
-        return _execute_plan_with_directory_fds(plan, source_identities)
+        return _execute_plan_with_directory_fds(plan)
+
+    source_identities = _capture_portable_source_identities(plan)
     return _execute_plan_portable(plan, source_identities)

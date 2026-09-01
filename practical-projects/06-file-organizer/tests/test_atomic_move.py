@@ -113,6 +113,7 @@ def test_execute_plan_rejects_source_symlink_replacement_during_mutation(
         source_directory_fd: int,
         destination_directory_fd: int,
         category_name: str,
+        source_fd: int,
         expected_identity: file_organizer._FileIdentity,
     ) -> None:
         nonlocal raced
@@ -127,13 +128,14 @@ def test_execute_plan_rejects_source_symlink_replacement_during_mutation(
             source_directory_fd=source_directory_fd,
             destination_directory_fd=destination_directory_fd,
             category_name=category_name,
+            source_fd=source_fd,
             expected_identity=expected_identity,
         )
 
     monkeypatch.setattr(file_organizer, "_supports_secure_directory_fds", lambda: True)
     monkeypatch.setattr(file_organizer, "_move_file_no_replace_at", racing_move)
 
-    with pytest.raises(FileNotFoundError, match="regular file|changed during execution"):
+    with pytest.raises(FileNotFoundError, match="planned source data retained"):
         execute_plan(plan)
 
     assert source.is_symlink()
@@ -153,37 +155,52 @@ def test_source_replacement_during_claim_is_preserved_without_unlink(
     plan = plan_organization(tmp_path)
     destination = tmp_path / "documents" / "notes.txt"
 
-    original_rename = os.rename
+    original_rename_no_replace = file_organizer._rename_no_replace_at
     raced = False
 
-    def racing_rename(
-        source_path: str | os.PathLike[str],
-        destination_path: str | os.PathLike[str],
+    def racing_rename_no_replace(
+        source_name: str,
+        destination_name: str,
         *,
-        src_dir_fd: int | None = None,
-        dst_dir_fd: int | None = None,
+        source_directory_fd: int,
+        destination_directory_fd: int,
     ) -> None:
         nonlocal raced
-        if source_path == source.name and src_dir_fd is not None and not raced:
+        if (
+            source_name == source.name
+            and source_directory_fd == destination_directory_fd
+            and not raced
+        ):
             raced = True
             source.unlink()
             source.write_text("third-party replacement", encoding="utf-8")
-        original_rename(
-            source_path,
-            destination_path,
-            src_dir_fd=src_dir_fd,
-            dst_dir_fd=dst_dir_fd,
+        original_rename_no_replace(
+            source_name,
+            destination_name,
+            source_directory_fd=source_directory_fd,
+            destination_directory_fd=destination_directory_fd,
         )
 
     monkeypatch.setattr(file_organizer, "_supports_secure_directory_fds", lambda: True)
-    monkeypatch.setattr(file_organizer.os, "rename", racing_rename)
+    monkeypatch.setattr(
+        file_organizer,
+        "_rename_no_replace_at",
+        racing_rename_no_replace,
+    )
 
-    with pytest.raises(FileNotFoundError, match="changed during execution"):
+    with pytest.raises(FileNotFoundError, match="planned source data retained"):
         execute_plan(plan)
 
     assert source.read_text(encoding="utf-8") == "third-party replacement"
     assert not destination.exists()
-    retained = [child for child in tmp_path.iterdir() if child.name.startswith(".fo-stage-")]
+    recovery_files = [
+        child for child in tmp_path.iterdir() if child.name.startswith(".fo-recovery-")
+    ]
+    assert len(recovery_files) == 1
+    assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
+    retained = [
+        child for child in tmp_path.iterdir() if child.name.startswith(".fo-stage-")
+    ]
     assert len(retained) == 1
     assert retained[0].read_text(encoding="utf-8") == "third-party replacement"
 
@@ -211,7 +228,7 @@ def test_category_rename_after_fd_open_never_reports_false_destination(
         destination_directory_fd: int,
     ) -> None:
         nonlocal raced
-        if not raced:
+        if source_directory_fd != destination_directory_fd and not raced:
             raced = True
             category.rename(detached)
             category.mkdir()
@@ -259,7 +276,7 @@ def test_source_root_rename_after_fd_open_never_reports_false_destination(
         destination_directory_fd: int,
     ) -> None:
         nonlocal raced
-        if not raced:
+        if source_directory_fd != destination_directory_fd and not raced:
             raced = True
             workspace.rename(detached)
         original_rename_no_replace(
@@ -428,7 +445,7 @@ def test_staging_replacement_before_final_rename_preserves_pinned_source_data(
         destination_directory_fd: int,
     ) -> None:
         nonlocal raced
-        if not raced:
+        if source_name.startswith(".fo-stage-") and not raced:
             raced = True
             stage = tmp_path / source_name
             assert stage.name.startswith(".fo-stage-")
@@ -540,3 +557,44 @@ def test_category_fd_is_closed_when_anchor_verification_fails(
 
     assert opened_category_fd is not None
     assert opened_category_fd in closed_fds
+
+
+def test_source_identity_is_accepted_only_after_descriptor_pin(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+    destination = tmp_path / "documents" / "notes.txt"
+    original_pin = file_organizer._pin_planned_sources_at
+    raced = False
+
+    def racing_pin(
+        plan_value: file_organizer.OrganizationPlan,
+        *,
+        root_fd: int,
+    ) -> dict[Path, file_organizer._PinnedSource]:
+        nonlocal raced
+        pinned = original_pin(plan_value, root_fd=root_fd)
+        if not raced:
+            raced = True
+            source.unlink()
+            source.write_text("third-party replacement", encoding="utf-8")
+        return pinned
+
+    monkeypatch.setattr(file_organizer, "_pin_planned_sources_at", racing_pin)
+
+    with pytest.raises(FileNotFoundError, match="planned source data retained"):
+        execute_plan(plan)
+
+    assert source.read_text(encoding="utf-8") == "third-party replacement"
+    assert not destination.exists()
+    recovery_files = [
+        child for child in tmp_path.iterdir() if child.name.startswith(".fo-recovery-")
+    ]
+    assert len(recovery_files) == 1
+    assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
