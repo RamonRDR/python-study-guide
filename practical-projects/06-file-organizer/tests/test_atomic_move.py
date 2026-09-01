@@ -1,4 +1,5 @@
 import os
+import stat
 from pathlib import Path
 
 import pytest
@@ -315,3 +316,90 @@ def test_successful_execution_never_unlinks_a_staging_entry(
     assert result.moved_count == 1
     assert not source.exists()
     assert (tmp_path / "documents" / "notes.txt").read_text(encoding="utf-8") == "planned source"
+
+
+def test_source_pin_uses_nonblocking_open_and_rejects_late_fifo(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+    if not hasattr(os, "mkfifo") or not hasattr(os, "O_NONBLOCK"):
+        pytest.skip("FIFO or O_NONBLOCK is unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+    original_open = os.open
+    raced = False
+    observed_flags: list[int] = []
+
+    def racing_open(
+        path: str | os.PathLike[str],
+        flags: int,
+        mode: int = 0o777,
+        *,
+        dir_fd: int | None = None,
+    ) -> int:
+        nonlocal raced
+        if path == source.name and dir_fd is not None and not raced:
+            raced = True
+            observed_flags.append(flags)
+            source.unlink()
+            os.mkfifo(source)
+        return original_open(path, flags, mode, dir_fd=dir_fd)
+
+    monkeypatch.setattr(file_organizer, "_supports_secure_directory_fds", lambda: True)
+    monkeypatch.setattr(file_organizer.os, "open", racing_open)
+
+    with pytest.raises(FileNotFoundError, match="regular file|changed during execution"):
+        execute_plan(plan)
+
+    assert observed_flags
+    assert observed_flags[0] & os.O_NONBLOCK
+    assert stat.S_ISFIFO(source.lstat().st_mode)
+    assert not (tmp_path / "documents" / "notes.txt").exists()
+
+
+def test_execute_plan_rechecks_late_casefold_collision_before_commit(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "Report.TXT"
+    source.write_text("planned source", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+    category = tmp_path / "documents"
+    late_destination = category / "report.txt"
+    exact_destination = category / "Report.TXT"
+    original_claim = file_organizer._claim_source_at
+    raced = False
+
+    def racing_claim(
+        source_name: str,
+        *,
+        root_fd: int,
+        expected_identity: file_organizer._FileIdentity,
+    ) -> str:
+        nonlocal raced
+        stage_name = original_claim(
+            source_name,
+            root_fd=root_fd,
+            expected_identity=expected_identity,
+        )
+        if not raced:
+            raced = True
+            late_destination.write_text("late casefold collision", encoding="utf-8")
+        return stage_name
+
+    monkeypatch.setattr(file_organizer, "_claim_source_at", racing_claim)
+
+    with pytest.raises(FileExistsError, match="case-insensitive destination"):
+        execute_plan(plan)
+
+    assert source.read_text(encoding="utf-8") == "planned source"
+    assert late_destination.read_text(encoding="utf-8") == "late casefold collision"
+    assert not exact_destination.exists()
+    assert any(child.name.startswith(".fo-stage-") for child in tmp_path.iterdir())
