@@ -93,9 +93,10 @@ def test_execute_plan_rejects_source_symlink_replacement_during_mutation(
 
     source = tmp_path / "notes.txt"
     source.write_text("planned source", encoding="utf-8")
-    target = tmp_path / "target.txt"
-    target.write_text("target data", encoding="utf-8")
     plan = plan_organization(tmp_path)
+
+    outside = tmp_path.parent / f"{tmp_path.name}-source-target.txt"
+    outside.write_text("target data", encoding="utf-8")
     destination = tmp_path / "documents" / "notes.txt"
     original_move = file_organizer._move_file_no_replace_at
     raced = False
@@ -112,7 +113,7 @@ def test_execute_plan_rejects_source_symlink_replacement_during_mutation(
         if not raced:
             raced = True
             source.unlink()
-            source.symlink_to(target)
+            source.symlink_to(outside)
         original_move(
             source_name,
             destination_name,
@@ -128,7 +129,7 @@ def test_execute_plan_rejects_source_symlink_replacement_during_mutation(
         execute_plan(plan)
 
     assert source.is_symlink()
-    assert target.read_text(encoding="utf-8") == "target data"
+    assert outside.read_text(encoding="utf-8") == "target data"
     assert not destination.exists()
 
 
