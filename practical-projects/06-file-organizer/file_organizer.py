@@ -416,6 +416,7 @@ def _supports_secure_directory_fds() -> bool:
         and os.rename in os.supports_dir_fd
         and os.stat in os.supports_dir_fd
         and os.stat in os.supports_follow_symlinks
+        and os.listdir in os.supports_fd
     )
 
 
@@ -514,8 +515,10 @@ def _open_planned_source_fd_at(
     root_fd: int,
     expected_identity: _FileIdentity,
 ) -> int:
-    """Pin the planned inode so an unlinked source cannot be inode-reused."""
+    """Pin the planned inode without blocking on a late special-file replacement."""
     flags = os.O_RDONLY | os.O_NOFOLLOW
+    if hasattr(os, "O_NONBLOCK"):
+        flags |= os.O_NONBLOCK
     if hasattr(os, "O_CLOEXEC"):
         flags |= os.O_CLOEXEC
     try:
@@ -597,6 +600,33 @@ def _verify_category_anchor_at(
     if pinned_identity != current_identity:
         raise ValueError(
             f"category directory moved during execution: {category_name}"
+        )
+
+
+def _verify_no_casefold_destination_collision_at(
+    destination_name: str,
+    *,
+    destination_directory_fd: int,
+) -> None:
+    """Reject a casefold-equivalent entry visible immediately before commit."""
+    destination_key = destination_name.casefold()
+    try:
+        current_names = os.listdir(destination_directory_fd)
+    except OSError as exc:
+        raise ValueError("category directory became unsafe during execution") from exc
+
+    if any(name.casefold() == destination_key for name in current_names):
+        raise FileExistsError(
+            f"case-insensitive destination appeared during execution: {destination_name}"
+        )
+
+
+def _verify_no_casefold_destination_collision_path(destination: Path) -> None:
+    """Best-effort Windows recheck for a casefold-equivalent destination."""
+    destination_key = destination.name.casefold()
+    if any(child.name.casefold() == destination_key for child in destination.parent.iterdir()):
+        raise FileExistsError(
+            f"case-insensitive destination appeared during execution: {destination.name}"
         )
 
 
@@ -728,6 +758,10 @@ def _move_file_no_replace_at(
                 raise FileNotFoundError(
                     f"planned source changed during execution: {source_name}"
                 )
+            _verify_no_casefold_destination_collision_at(
+                destination_name,
+                destination_directory_fd=destination_directory_fd,
+            )
             _rename_no_replace_at(
                 stage_name,
                 destination_name,
@@ -775,6 +809,7 @@ def _move_file_no_replace(
     """Windows fallback using its atomic no-replace rename behavior."""
     _verify_path_identity(source, expected_identity)
     category_identity = _capture_directory_identity(destination.parent)
+    _verify_no_casefold_destination_collision_path(destination)
     _rename_no_replace_path(source, destination)
     _verify_destination_path_identity(destination, expected_identity)
     if _capture_directory_identity(destination.parent) != category_identity:
