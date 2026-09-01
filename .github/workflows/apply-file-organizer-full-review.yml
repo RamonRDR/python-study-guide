@@ -49,33 +49,35 @@ jobs:
           path = Path("practical-projects/06-file-organizer/tests/test_atomic_move.py")
           text = path.read_text(encoding="utf-8")
 
-          old = '''    with pytest.raises(FileNotFoundError, match="regular file|changed during execution"):
-              execute_plan(plan)
+          def rewrite_function(name: str, transform):
+              global text
+              start = text.index(f"def {name}(")
+              next_start = text.find("\ndef ", start + 1)
+              end = len(text) if next_start == -1 else next_start + 1
+              block = text[start:end]
+              updated = transform(block)
+              if updated == block:
+                  raise SystemExit(f"no changes made in {name}")
+              text = text[:start] + updated + text[end:]
 
-          assert source.is_symlink()
-          assert outside.read_text(encoding="utf-8") == "target data"
-          assert not destination.exists()
-          '''
-          new = '''    with pytest.raises(FileNotFoundError, match="planned source data retained"):
-              execute_plan(plan)
+          def source_symlink(block: str) -> str:
+              block = block.replace(
+                  'with pytest.raises(FileNotFoundError, match="regular file|changed during execution"):',
+                  'with pytest.raises(FileNotFoundError, match="planned source data retained"):',
+                  1,
+              )
+              return block
 
-          assert source.is_symlink()
-          assert outside.read_text(encoding="utf-8") == "target data"
-          assert not destination.exists()
-          recovery_files = [
-              child for child in tmp_path.iterdir() if child.name.startswith(".fo-recovery-")
-          ]
-          assert len(recovery_files) == 1
-          assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
-          '''
-          if text.count(old) != 1:
-              raise SystemExit("source-symlink race anchor mismatch")
-          text = text.replace(old, new, 1)
+          rewrite_function(
+              "test_execute_plan_rejects_source_symlink_replacement_during_mutation",
+              source_symlink,
+          )
 
-          start = text.index('    original_rename = os.rename\n', text.index('def test_source_replacement_during_claim_is_preserved_without_unlink'))
-          end_marker = '    assert retained[0].read_text(encoding="utf-8") == "third-party replacement"\n'
-          end = text.index(end_marker, start) + len(end_marker)
-          replacement = '''    original_rename_no_replace = file_organizer._rename_no_replace_at
+          def source_claim(block: str) -> str:
+              start = block.index("    original_rename = os.rename\n")
+              end_marker = '    assert retained[0].read_text(encoding="utf-8") == "third-party replacement"\n'
+              end = block.index(end_marker, start) + len(end_marker)
+              replacement = '''    original_rename_no_replace = file_organizer._rename_no_replace_at
               raced = False
 
               def racing_rename_no_replace(
@@ -124,49 +126,48 @@ jobs:
               assert len(retained) == 1
               assert retained[0].read_text(encoding="utf-8") == "third-party replacement"
           '''
-          # The triple-quoted block above is indented by the workflow Python itself.
-          replacement = '\n'.join(line[4:] if line.startswith('    ') else line for line in replacement.splitlines()) + '\n'
-          text = text[:start] + replacement + text[end:]
+              return block[:start] + replacement + block[end:]
 
-          old = '''        if not raced:
-                      raced = True
-                      category.rename(detached)
-                      category.mkdir()
-          '''
-          new = '''        if source_directory_fd != destination_directory_fd and not raced:
-                      raced = True
-                      category.rename(detached)
-                      category.mkdir()
-          '''
-          if text.count(old) != 1:
-              raise SystemExit("category final-commit race anchor mismatch")
-          text = text.replace(old, new, 1)
+          rewrite_function(
+              "test_source_replacement_during_claim_is_preserved_without_unlink",
+              source_claim,
+          )
 
-          old = '''        if not raced:
-                      raced = True
-                      workspace.rename(detached)
-          '''
-          new = '''        if source_directory_fd != destination_directory_fd and not raced:
-                      raced = True
-                      workspace.rename(detached)
-          '''
-          if text.count(old) != 1:
-              raise SystemExit("root final-commit race anchor mismatch")
-          text = text.replace(old, new, 1)
+          def category_race(block: str) -> str:
+              return block.replace(
+                  "        if not raced:\n            raced = True\n            category.rename(detached)",
+                  "        if source_directory_fd != destination_directory_fd and not raced:\n            raced = True\n            category.rename(detached)",
+                  1,
+              )
 
-          old = '''        if not raced:
-                      raced = True
-                      stage = tmp_path / source_name
-                      assert stage.name.startswith(".fo-stage-")
-          '''
-          new = '''        if source_name.startswith(".fo-stage-") and not raced:
-                      raced = True
-                      stage = tmp_path / source_name
-                      assert stage.name.startswith(".fo-stage-")
-          '''
-          if text.count(old) != 1:
-              raise SystemExit("staging replacement race anchor mismatch")
-          text = text.replace(old, new, 1)
+          rewrite_function(
+              "test_category_rename_after_fd_open_never_reports_false_destination",
+              category_race,
+          )
+
+          def root_race(block: str) -> str:
+              return block.replace(
+                  "        if not raced:\n            raced = True\n            workspace.rename(detached)",
+                  "        if source_directory_fd != destination_directory_fd and not raced:\n            raced = True\n            workspace.rename(detached)",
+                  1,
+              )
+
+          rewrite_function(
+              "test_source_root_rename_after_fd_open_never_reports_false_destination",
+              root_race,
+          )
+
+          def staging_race(block: str) -> str:
+              return block.replace(
+                  "        if not raced:\n            raced = True\n            stage = tmp_path / source_name",
+                  "        if source_name.startswith(\".fo-stage-\") and not raced:\n            raced = True\n            stage = tmp_path / source_name",
+                  1,
+              )
+
+          rewrite_function(
+              "test_staging_replacement_before_final_rename_preserves_pinned_source_data",
+              staging_race,
+          )
 
           path.write_text(text, encoding="utf-8")
           PY
