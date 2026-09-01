@@ -24,9 +24,9 @@ Este roadmap acompaña tanto la ruta educativa como la base del repositorio que 
 | 7. Errores, archivos y módulos | Completada | Cinco capítulos revisados cubren manejo de excepciones, señalización deliberada, I/O seguro de archivos, formatos TXT/CSV/JSON e imports/módulos/paquetes |
 | 8. Biblioteca estándar | Completada | Nueve capítulos revisados cubren rutas, fecha/hora, JSON, CSV, logging, colecciones especializadas, iteración lazy, aritmética decimal y operaciones de OS/filesystem |
 | 9. Bibliotecas externas | Completada | Cuatro capítulos revisados cubren pandas, openpyxl, requests y pytest con contratos explícitos de dependencias y ejemplos deterministas |
-| 10. Proyectos prácticos | En progreso | Los Proyectos 01–05 cubren flujos monetarios validados, reglas configurables de calificación, registro canónico de usuarios, ingestión CSV consciente de schema y generación determinista de informes con pruebas automatizadas |
+| 10. Proyectos prácticos | En progreso | Los Proyectos 01–05 están completados; el Proyecto 06 Organizador de Archivos está en progreso con planificación determinista, seguridad de colisiones, identidad de filesystem, directorios anclados y commit atómico no-replace |
 
-Las Fases 0–9 están completadas. La Fase 10: Proyectos Prácticos está en progreso con Control de Gastos, Calculadora de Notas, Registro de Usuarios, Analizador CSV y Generador de Informes disponibles como Proyectos 01–05. La fase de proyectos prácticos transforma conceptos ya estudiados en flujos completos con requisitos, decisiones de diseño, implementación, validación, caminos de extensión y discusión de portafolio.
+Las Fases 0–9 están completadas. La Fase 10: Proyectos Prácticos está en progreso con Control de Gastos, Calculadora de Notas, Registro de Usuarios, Analizador CSV y Generador de Informes completados como Proyectos 01–05, mientras que Organizador de Archivos es el Proyecto 06 actual. La fase transforma conceptos ya estudiados en flujos completos con requisitos, decisiones de diseño, implementación, validación, caminos de extensión y discusión de portafolio.
 
 ## Fase 0: Base del proyecto
 
@@ -161,7 +161,7 @@ Consulta la [ruta de aprendizaje de la sección](../external-libraries/README.es
 - [x] [`requests`](../external-libraries/03-requests/README.es.md)
 - [x] [`pytest`](../external-libraries/04-pytest/README.es.md)
 
-La Fase 9 está completada. El Capítulo 01 introduce pandas 3.0.x para datos tabulares etiquetados. El Capítulo 02 añade automatización de libros con openpyxl 3.1.x. El Capítulo 03 añade contratos HTTP/API con Requests 2.34.x. El Capítulo 04 cierra la fase con contratos de pruebas automatizadas en pytest 9.1.x, cubriendo descubrimiento, assertions, fixtures, parametrización, recursos temporales, monkeypatching, captura, marks, aislamiento determinista y CI. Los ejemplos ejecutables de bibliotecas externas usan el contrato declarado en [`requirements-external.txt`](../requirements-external.txt).
+La Fase 9 está completada. El Capítulo 01 introduce pandas 3.0.x para datos tabulares etiquetados. El Capítulo 02 añade automatización de libros con openpyxl 3.1.x. El Capítulo 03 añade contratos HTTP/API con Requests 2.34.x. El Capítulo 04 cierra la fase con contratos de pruebas automatizadas en pytest 9.1.x, cubriendo descubrimiento, assertions, fixtures, parametrización, recursos temporales, monkeypatching, captura, marks, aislamiento determinista y CI. Los ejemplos ejecutables usan el contrato declarado en [`requirements-external.txt`](../requirements-external.txt).
 
 ## Fase 10: Proyectos prácticos
 
@@ -170,13 +170,13 @@ Consulta el [índice de la sección Proyectos Prácticos](../practical-projects/
 - [x] [Control de Gastos](../practical-projects/01-expense-tracker/README.es.md)
 - [x] [Calculadora de Notas](../practical-projects/02-grade-calculator/README.es.md)
 - [x] [Registro de Usuarios](../practical-projects/03-user-registration/README.es.md)
-- [x] [Analizador de CSV](../practical-projects/04-csv-analyzer/README.es.md)
+- [x] [Analizador CSV](../practical-projects/04-csv-analyzer/README.es.md)
 - [x] [Generador de Informes](../practical-projects/05-report-generator/README.es.md)
-- [ ] Organizador de Archivos
+- [ ] [Organizador de Archivos](../practical-projects/06-file-organizer/README.es.md) — proyecto actual
 - [ ] Flujo Ficticio de Conciliación
 - [ ] Flujo Simulado de Automatización
 
-El Proyecto 01 establece el contrato de la Fase 10 con requisitos explícitos, modelado de datos validado, dinero exacto con `Decimal`, persistencia, demostración determinista, cobertura automatizada con pytest, desafíos de ampliación y discusión de portafolio. El Proyecto 02 amplía el contrato con reglas de calificación configurables, agregación ponderada exacta, informe parcial/final explícito y validación centrada en límites. El Proyecto 03 añade datos de identidad canónicos, normalización Unicode e IDNA, prevención de duplicados, índices secundarios, actualizaciones seguras y transiciones explícitas del ciclo de vida sin introducir autenticación. El Proyecto 04 añade schemas CSV estrictos, conversión tipada, separación entre fallos estructurales y fallos de fila, parsing con éxito parcial, identificadores aceptados duplicados, agregación determinista y filtros con la mecánica de la biblioteca estándar expuesta explícitamente. El Proyecto 05 añade ventanas inclusivas explícitas de fechas, validación de identidad del origen, métricas exactas y deterministas de resumen, construcción inmutable del informe, renderización TXT/Markdown, escape específico del formato y escritura UTF-8.
+El Proyecto 01 establece el contrato de la Fase 10 con requisitos explícitos, modelado de datos validado, dinero exacto con `Decimal`, persistencia, demostración determinista, cobertura automatizada con pytest, desafíos de extensión y discusión de portafolio. El Proyecto 02 extiende el contrato con reglas configurables de calificación, agregación ponderada exacta, informes parcial/final explícitos y validación centrada en límites. El Proyecto 03 añade datos de identidad canónicos, normalización Unicode e IDNA, prevención de duplicados, índices secundarios de lookup, actualizaciones seguras de campos indexados, transiciones explícitas del ciclo de vida y cobertura pytest centrada en mutación sin introducir autenticación. El Proyecto 04 añade schemas CSV estrictos, conversión tipada, manejo de fallos estructurales frente a fallos por fila, parsing con éxito parcial, identificadores aceptados duplicados, agregación determinista y filtrado usando mecanismos CSV de la biblioteca estándar de forma explícita. El Proyecto 05 añade ventanas inclusivas de fechas, validación de identidad de origen, métricas de resumen exactas y deterministas, construcción inmutable de informes, renderización TXT/Markdown, escape específico del formato y salida UTF-8. El Proyecto 06 añade descubrimiento superficial determinista, planificación inmutable, categorías por sufijo, políticas explícitas de colisión, fronteras de symlink, identidad `(device, inode)`, anclaje de descriptors de raíz/categorías, nombres de staging acotados y commits atómicos no-replace sensibles a la plataforma con `renameat2(RENAME_NOREPLACE)` en Linux.
 
 Cada proyecto debe incluir:
 
@@ -184,22 +184,22 @@ Cada proyecto debe incluir:
 - notas de diseño;
 - implementación;
 - explicación;
-- cobertura automatizada del comportamiento importante;
-- desafíos de ampliación;
+- cobertura automatizada para comportamientos importantes;
+- desafíos de extensión;
 - discusión de portafolio.
 
-## Criterios continuos de calidad
+## Gates continuos de calidad
 
 Cada fase debe preservar:
 
 - precisión técnica;
 - consistencia multilingüe;
 - ejemplos originales y seguros para publicación;
-- datos seguros desde el punto de vista de la privacidad;
-- ejemplos ejecutables de Python cuando corresponda;
-- integridad de la navegación interna;
+- datos seguros para privacidad;
+- ejemplos Python ejecutables cuando corresponda;
+- integridad de navegación interna;
 - atención a PEP 8;
 - documentación de cambios estructurales relevantes;
-- transparencia sobre dependencias y supuestos de versión.
+- supuestos honestos sobre dependencias y versiones.
 
-El roadmap evolucionará a medida que el proyecto crezca, pero los cambios deben preservar la progresión desde los conceptos iniciales hasta el trabajo práctico integrado.
+El roadmap evolucionará a medida que crezca el proyecto, pero los cambios deben preservar la progresión desde conceptos iniciales hasta trabajo práctico integrado.
