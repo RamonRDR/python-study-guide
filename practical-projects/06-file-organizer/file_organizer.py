@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import secrets
 import stat
 from dataclasses import dataclass
 from enum import Enum
@@ -64,7 +65,7 @@ def _path_sort_key(path: Path) -> tuple[str, str]:
     return path.name.casefold(), path.name
 
 
-def _identity_from_stat(
+def _identity_from_regular_stat(
     stat_result: os.stat_result,
     *,
     filename: str,
@@ -76,6 +77,18 @@ def _identity_from_stat(
     return _FileIdentity(stat_result.st_dev, stat_result.st_ino)
 
 
+def _identity_from_directory_stat(
+    stat_result: os.stat_result,
+    *,
+    directory_name: str,
+) -> _FileIdentity:
+    if not stat.S_ISDIR(stat_result.st_mode):
+        raise ValueError(
+            f"category directory became unsafe during execution: {directory_name}"
+        )
+    return _FileIdentity(stat_result.st_dev, stat_result.st_ino)
+
+
 def _capture_path_identity(path: Path) -> _FileIdentity:
     try:
         stat_result = path.lstat()
@@ -83,7 +96,17 @@ def _capture_path_identity(path: Path) -> _FileIdentity:
         raise FileNotFoundError(
             f"planned source is no longer a regular file: {path.name}"
         ) from exc
-    return _identity_from_stat(stat_result, filename=path.name)
+    return _identity_from_regular_stat(stat_result, filename=path.name)
+
+
+def _capture_directory_identity(path: Path) -> _FileIdentity:
+    try:
+        stat_result = path.lstat()
+    except FileNotFoundError as exc:
+        raise ValueError(
+            f"category directory became unsafe during execution: {path.name}"
+        ) from exc
+    return _identity_from_directory_stat(stat_result, directory_name=path.name)
 
 
 @dataclass(frozen=True, slots=True)
@@ -360,6 +383,7 @@ def _supports_secure_directory_fds() -> bool:
         and os.mkdir in os.supports_dir_fd
         and os.link in os.supports_dir_fd
         and os.unlink in os.supports_dir_fd
+        and os.rename in os.supports_dir_fd
         and os.stat in os.supports_dir_fd
         and os.stat in os.supports_follow_symlinks
     )
@@ -387,11 +411,18 @@ def _open_category_directory_fd(root_fd: int, category_name: str) -> int:
         pass
 
     try:
-        return os.open(category_name, _directory_open_flags(), dir_fd=root_fd)
+        category_fd = os.open(category_name, _directory_open_flags(), dir_fd=root_fd)
     except OSError as exc:
         raise ValueError(
             f"category directory became unsafe during execution: {category_name}"
         ) from exc
+
+    _verify_category_anchor_at(
+        root_fd=root_fd,
+        category_name=category_name,
+        category_fd=category_fd,
+    )
+    return category_fd
 
 
 def _regular_identity_at(
@@ -409,7 +440,7 @@ def _regular_identity_at(
         raise FileNotFoundError(
             f"planned source is no longer a regular file: {filename}"
         ) from exc
-    return _identity_from_stat(stat_result, filename=filename)
+    return _identity_from_regular_stat(stat_result, filename=filename)
 
 
 def _verify_source_identity_at(
@@ -457,19 +488,182 @@ def _verify_destination_identity_at(
         )
 
 
+def _verify_category_anchor_at(
+    *,
+    root_fd: int,
+    category_name: str,
+    category_fd: int,
+) -> None:
+    """Require the pinned category FD to remain the named child of the root."""
+    pinned = os.fstat(category_fd)
+    try:
+        current = os.stat(
+            category_name,
+            dir_fd=root_fd,
+            follow_symlinks=False,
+        )
+    except FileNotFoundError as exc:
+        raise ValueError(
+            f"category directory moved during execution: {category_name}"
+        ) from exc
+
+    pinned_identity = _identity_from_directory_stat(
+        pinned,
+        directory_name=category_name,
+    )
+    current_identity = _identity_from_directory_stat(
+        current,
+        directory_name=category_name,
+    )
+    if pinned_identity != current_identity:
+        raise ValueError(
+            f"category directory moved during execution: {category_name}"
+        )
+
+
+def _make_stage_name(source_name: str) -> str:
+    return f".file-organizer-stage-{secrets.token_hex(16)}-{source_name}"
+
+
+def _restore_staged_regular_at(
+    stage_name: str,
+    source_name: str,
+    *,
+    root_fd: int,
+    expected_identity: _FileIdentity,
+) -> None:
+    """Best-effort no-replace restore of a verified staged regular file."""
+    try:
+        stage_identity = _regular_identity_at(stage_name, directory_fd=root_fd)
+    except FileNotFoundError:
+        return
+    if stage_identity != expected_identity:
+        return
+
+    try:
+        os.link(
+            stage_name,
+            source_name,
+            src_dir_fd=root_fd,
+            dst_dir_fd=root_fd,
+            follow_symlinks=False,
+        )
+    except FileExistsError:
+        return
+    try:
+        os.unlink(stage_name, dir_fd=root_fd)
+    except OSError:
+        pass
+
+
+def _restore_destination_to_source_at(
+    destination_name: str,
+    source_name: str,
+    *,
+    root_fd: int,
+    destination_directory_fd: int,
+    expected_identity: _FileIdentity,
+) -> None:
+    """Best-effort no-replace restore from a pinned destination to the source."""
+    try:
+        _verify_destination_identity_at(
+            destination_name,
+            destination_directory_fd=destination_directory_fd,
+            expected_identity=expected_identity,
+        )
+        os.link(
+            destination_name,
+            source_name,
+            src_dir_fd=destination_directory_fd,
+            dst_dir_fd=root_fd,
+            follow_symlinks=False,
+        )
+    except OSError:
+        return
+
+
+def _restore_staged_entry_no_replace_at(
+    stage_name: str,
+    source_name: str,
+    *,
+    root_fd: int,
+) -> None:
+    """Restore a staged non-directory entry without replacing a new source."""
+    try:
+        os.link(
+            stage_name,
+            source_name,
+            src_dir_fd=root_fd,
+            dst_dir_fd=root_fd,
+            follow_symlinks=False,
+        )
+    except OSError:
+        return
+    try:
+        os.unlink(stage_name, dir_fd=root_fd)
+    except OSError:
+        pass
+
+
+def _claim_source_at(
+    source_name: str,
+    *,
+    root_fd: int,
+    expected_identity: _FileIdentity,
+) -> str:
+    """Atomically detach the current source entry, then verify what was claimed."""
+    stage_name = _make_stage_name(source_name)
+    os.rename(
+        source_name,
+        stage_name,
+        src_dir_fd=root_fd,
+        dst_dir_fd=root_fd,
+    )
+
+    try:
+        staged_identity = _regular_identity_at(stage_name, directory_fd=root_fd)
+    except FileNotFoundError as exc:
+        _restore_staged_entry_no_replace_at(
+            stage_name,
+            source_name,
+            root_fd=root_fd,
+        )
+        raise FileNotFoundError(
+            f"planned source changed during execution: {source_name}"
+        ) from exc
+
+    if staged_identity != expected_identity:
+        _restore_staged_entry_no_replace_at(
+            stage_name,
+            source_name,
+            root_fd=root_fd,
+        )
+        raise FileNotFoundError(
+            f"planned source changed during execution: {source_name}"
+        )
+
+    return stage_name
+
+
 def _move_file_no_replace_at(
     source_name: str,
     destination_name: str,
     *,
     source_directory_fd: int,
     destination_directory_fd: int,
+    category_name: str,
     expected_identity: _FileIdentity,
 ) -> None:
-    """Move one verified regular file through pinned directory descriptors."""
+    """Move one file without deleting an entry that changed after verification."""
     _verify_source_identity_at(
         source_name,
         source_directory_fd=source_directory_fd,
         expected_identity=expected_identity,
+    )
+    _verify_category_anchor_at(
+        root_fd=source_directory_fd,
+        category_name=category_name,
+        category_fd=destination_directory_fd,
     )
 
     try:
@@ -490,19 +684,61 @@ def _move_file_no_replace_at(
         destination_directory_fd=destination_directory_fd,
         expected_identity=expected_identity,
     )
-    _verify_source_identity_at(
+    _verify_category_anchor_at(
+        root_fd=source_directory_fd,
+        category_name=category_name,
+        category_fd=destination_directory_fd,
+    )
+
+    stage_name = _claim_source_at(
         source_name,
-        source_directory_fd=source_directory_fd,
+        root_fd=source_directory_fd,
         expected_identity=expected_identity,
     )
 
     try:
-        os.unlink(source_name, dir_fd=source_directory_fd)
+        _verify_category_anchor_at(
+            root_fd=source_directory_fd,
+            category_name=category_name,
+            category_fd=destination_directory_fd,
+        )
+    except ValueError:
+        _restore_staged_regular_at(
+            stage_name,
+            source_name,
+            root_fd=source_directory_fd,
+            expected_identity=expected_identity,
+        )
+        raise
+
+    try:
+        os.unlink(stage_name, dir_fd=source_directory_fd)
     except OSError as exc:
+        _restore_staged_regular_at(
+            stage_name,
+            source_name,
+            root_fd=source_directory_fd,
+            expected_identity=expected_identity,
+        )
         raise OSError(
-            "could not remove source after creating destination; "
-            f"destination retained for safety: {source_name}"
+            f"could not finalize source removal safely: {source_name}"
         ) from exc
+
+    try:
+        _verify_category_anchor_at(
+            root_fd=source_directory_fd,
+            category_name=category_name,
+            category_fd=destination_directory_fd,
+        )
+    except ValueError:
+        _restore_destination_to_source_at(
+            destination_name,
+            source_name,
+            root_fd=source_directory_fd,
+            destination_directory_fd=destination_directory_fd,
+            expected_identity=expected_identity,
+        )
+        raise
 
 
 def _verify_path_identity(path: Path, expected_identity: _FileIdentity) -> None:
@@ -536,13 +772,50 @@ def _verify_destination_path_identity(
         )
 
 
+def _stage_source_path(source: Path, expected_identity: _FileIdentity) -> Path:
+    """Atomically move a source name to a unique internal staging name."""
+    stage = source.with_name(_make_stage_name(source.name))
+    os.rename(source, stage)
+    try:
+        _verify_path_identity(stage, expected_identity)
+    except FileNotFoundError:
+        try:
+            os.link(stage, source, follow_symlinks=False)
+        except OSError:
+            pass
+        else:
+            try:
+                stage.unlink()
+            except OSError:
+                pass
+        raise
+    return stage
+
+
+def _restore_staged_path(
+    stage: Path,
+    source: Path,
+    expected_identity: _FileIdentity,
+) -> None:
+    try:
+        _verify_path_identity(stage, expected_identity)
+        os.link(stage, source, follow_symlinks=False)
+    except OSError:
+        return
+    try:
+        stage.unlink()
+    except OSError:
+        pass
+
+
 def _move_file_no_replace(
     source: Path,
     destination: Path,
     expected_identity: _FileIdentity,
 ) -> None:
-    """Portable fallback that verifies identity and never replaces a destination."""
+    """Portable fallback using a staged source detach instead of source unlink."""
     _verify_path_identity(source, expected_identity)
+    category_identity = _capture_directory_identity(destination.parent)
 
     try:
         os.link(source, destination, follow_symlinks=False)
@@ -552,15 +825,35 @@ def _move_file_no_replace(
         ) from exc
 
     _verify_destination_path_identity(destination, expected_identity)
-    _verify_path_identity(source, expected_identity)
+    if _capture_directory_identity(destination.parent) != category_identity:
+        raise ValueError(
+            f"category directory moved during execution: {destination.parent.name}"
+        )
+
+    stage = _stage_source_path(source, expected_identity)
+
+    if _capture_directory_identity(destination.parent) != category_identity:
+        _restore_staged_path(stage, source, expected_identity)
+        raise ValueError(
+            f"category directory moved during execution: {destination.parent.name}"
+        )
 
     try:
-        source.unlink()
+        stage.unlink()
     except OSError as exc:
+        _restore_staged_path(stage, source, expected_identity)
         raise OSError(
-            "could not remove source after creating destination; "
-            f"destination retained for safety: {source.name}"
+            f"could not finalize source removal safely: {source.name}"
         ) from exc
+
+    if _capture_directory_identity(destination.parent) != category_identity:
+        try:
+            os.link(destination, source, follow_symlinks=False)
+        except OSError:
+            pass
+        raise ValueError(
+            f"category directory moved during execution: {destination.parent.name}"
+        )
 
 
 def _execute_plan_with_directory_fds(
@@ -588,6 +881,7 @@ def _execute_plan_with_directory_fds(
                 action.destination.name,
                 source_directory_fd=root_fd,
                 destination_directory_fd=category_fds[action.category],
+                category_name=action.category.value,
                 expected_identity=source_identities[action.source],
             )
             moved.append(action.destination)
