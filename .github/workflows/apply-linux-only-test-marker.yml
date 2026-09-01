@@ -1,0 +1,39 @@
+name: Apply Linux-only File Organizer test marker
+
+on:
+  push:
+    branches:
+      - phase-10-file-organizer
+    paths:
+      - scripts/_mark_file_organizer_linux_test.py
+      - .github/workflows/apply-linux-only-test-marker.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: phase-10-file-organizer
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Apply patch
+        run: python scripts/_mark_file_organizer_linux_test.py
+      - name: Validate focused suite
+        run: |
+          python -m pip install --disable-pip-version-check "pytest>=9.1,<9.2"
+          python -m pytest -q practical-projects/06-file-organizer/tests
+          git diff --check
+      - name: Commit patch
+        run: |
+          rm scripts/_mark_file_organizer_linux_test.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A practical-projects/06-file-organizer/tests scripts/_mark_file_organizer_linux_test.py
+          git commit -m "Mark secure rename race test as Linux-only"
+          git push origin HEAD:phase-10-file-organizer
