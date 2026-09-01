@@ -274,6 +274,8 @@ Si la ejecución ya movió el origen al staging y después detecta una condició
 
 Un pathname de staging no funciona como lock de inode. Si el rename final consume una entrada de reemplazo y la verificación de identidad del destino detecta la divergencia, la ejecución conserva intacto el destino ajeno y, antes de cerrar el descriptor aún anclado del origen, copia los bytes planificados a un archivo regular exclusivo `.fo-recovery-*`. Esta recuperación conserva datos recuperables sin afirmar que el inode original haya sobrevivido a la carrera.
 
+Por ello, la ejecución segura en Linux exige deliberadamente permiso de lectura para cada archivo regular planificado. La legibilidad se valida antes de crear los directorios de categoría y de nuevo al fijar el inode del origen para la mutación; los fallos de permisos se informan como `PermissionError`, no como un falso cambio de identidad del origen.
+
 En escenarios raros de carrera/fallo, esto puede dejar una entrada interna de recuperación. Es preferible a borrar datos cuya identidad actual no puede demostrarse.
 
 El plan completo de varios archivos no es transaccional.

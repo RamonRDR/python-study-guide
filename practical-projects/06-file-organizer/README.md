@@ -274,6 +274,8 @@ If execution has already claimed the source into a staging entry and later detec
 
 A staging pathname is not an inode lock. If the final rename consumes a replacement entry and destination identity verification detects the mismatch, execution leaves the unrelated destination intact and, before closing the still-pinned source file descriptor, copies the planned source bytes into an exclusive `.fo-recovery-*` regular file. This preserves recoverable data without claiming that the original inode survived the race.
 
+Safe Linux execution therefore deliberately requires read access to each planned regular file. Readability is validated before category directories are created and again when the source inode is pinned for mutation; permission failures are reported as `PermissionError`, not as a false source-identity change.
+
 This can intentionally leave an internal recovery entry in unusual race/failure scenarios. That is preferable to deleting unrelated data whose current identity cannot be proven.
 
 The whole multi-file plan is not transactional.

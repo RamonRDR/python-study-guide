@@ -471,11 +471,15 @@ def _open_category_directory_fd(root_fd: int, category_name: str) -> int:
             f"category directory became unsafe during execution: {category_name}"
         ) from exc
 
-    _verify_category_anchor_at(
-        root_fd=root_fd,
-        category_name=category_name,
-        category_fd=category_fd,
-    )
+    try:
+        _verify_category_anchor_at(
+            root_fd=root_fd,
+            category_name=category_name,
+            category_fd=category_fd,
+        )
+    except Exception:
+        os.close(category_fd)
+        raise
     return category_fd
 
 
@@ -523,6 +527,10 @@ def _open_planned_source_fd_at(
         flags |= os.O_CLOEXEC
     try:
         source_fd = os.open(source_name, flags, dir_fd=root_fd)
+    except PermissionError as exc:
+        raise PermissionError(
+            f"planned source must be readable for safe execution: {source_name}"
+        ) from exc
     except OSError as exc:
         raise FileNotFoundError(
             f"planned source changed during execution: {source_name}"
@@ -930,6 +938,17 @@ def _execute_plan_with_directory_fds(
 
     try:
         _verify_root_anchor_at(plan.source_directory, root_fd)
+
+        # Readability is a deliberate secure-execution prerequisite because
+        # pinned-FD recovery must be able to persist the planned source bytes.
+        for action in plan.actions:
+            validation_fd = _open_planned_source_fd_at(
+                action.source.name,
+                root_fd=root_fd,
+                expected_identity=source_identities[action.source],
+            )
+            os.close(validation_fd)
+
         for category in sorted(
             {action.category for action in plan.actions},
             key=lambda item: item.value,

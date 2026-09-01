@@ -459,3 +459,84 @@ def test_staging_replacement_before_final_rename_preserves_pinned_source_data(
     assert len(recovery_files) == 1
     assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
     assert not source.exists()
+
+
+
+def test_secure_execution_reports_readability_precondition_before_categories(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    plan = plan_organization(tmp_path)
+    original_open = os.open
+
+    def permission_denied_open(
+        path: str | os.PathLike[str],
+        flags: int,
+        mode: int = 0o777,
+        *,
+        dir_fd: int | None = None,
+    ) -> int:
+        if path == source.name and dir_fd is not None:
+            raise PermissionError("simulated unreadable source")
+        return original_open(path, flags, mode, dir_fd=dir_fd)
+
+    monkeypatch.setattr(file_organizer, "_supports_secure_directory_fds", lambda: True)
+    monkeypatch.setattr(file_organizer.os, "open", permission_denied_open)
+
+    with pytest.raises(PermissionError, match="must be readable for safe execution"):
+        execute_plan(plan)
+
+    assert source.read_text(encoding="utf-8") == "planned source"
+    assert not (tmp_path / "documents").exists()
+
+
+def test_category_fd_is_closed_when_anchor_verification_fails(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    root_fd = file_organizer._open_source_directory_fd(tmp_path)
+    original_open = os.open
+    original_close = os.close
+    opened_category_fd: int | None = None
+    closed_fds: list[int] = []
+
+    def tracking_open(
+        path: str | os.PathLike[str],
+        flags: int,
+        mode: int = 0o777,
+        *,
+        dir_fd: int | None = None,
+    ) -> int:
+        nonlocal opened_category_fd
+        fd = original_open(path, flags, mode, dir_fd=dir_fd)
+        if path == "documents" and dir_fd == root_fd:
+            opened_category_fd = fd
+        return fd
+
+    def tracking_close(fd: int) -> None:
+        closed_fds.append(fd)
+        original_close(fd)
+
+    def failing_anchor(**_: object) -> None:
+        raise ValueError("simulated category anchor race")
+
+    monkeypatch.setattr(file_organizer.os, "open", tracking_open)
+    monkeypatch.setattr(file_organizer.os, "close", tracking_close)
+    monkeypatch.setattr(file_organizer, "_verify_category_anchor_at", failing_anchor)
+
+    try:
+        with pytest.raises(ValueError, match="simulated category anchor race"):
+            file_organizer._open_category_directory_fd(root_fd, "documents")
+    finally:
+        original_close(root_fd)
+
+    assert opened_category_fd is not None
+    assert opened_category_fd in closed_fds
