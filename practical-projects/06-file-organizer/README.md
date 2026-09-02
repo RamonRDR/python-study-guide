@@ -386,7 +386,7 @@ The Linux source pin uses nonblocking open flags, then `fstat()` rejects the rep
 
 ### Planned source changes
 
-Execution raises instead of treating the replacement as the planned file.
+A regular-file replacement before execution-time binding is accepted as the current object selected by the plan. Changes after binding are rejected instead of being treated as the bound source.
 
 ### Source root or category directory is renamed/replaced
 
