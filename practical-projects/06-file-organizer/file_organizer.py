@@ -732,23 +732,24 @@ def _recover_pinned_source_at(
                 view = view[written:]
         os.fchmod(recovery_fd, mode)
         os.fsync(recovery_fd)
-
-        try:
-            recovery_path_identity = _regular_identity_at(
-                recovery_name,
-                directory_fd=root_fd,
-            )
-        except OSError as exc:
-            raise RuntimeError(
-                f"recovery pathname changed during execution: {recovery_name}"
-            ) from exc
-        if recovery_path_identity != recovery_identity:
-            raise RuntimeError(
-                f"recovery pathname changed during execution: {recovery_name}"
-            )
+        os.fsync(root_fd)
     finally:
         os.lseek(source_fd, original_offset, os.SEEK_SET)
         os.close(recovery_fd)
+
+    try:
+        recovery_path_identity = _regular_identity_at(
+            recovery_name,
+            directory_fd=root_fd,
+        )
+    except OSError as exc:
+        raise RuntimeError(
+            f"recovery pathname changed during execution: {recovery_name}"
+        ) from exc
+    if recovery_path_identity != recovery_identity:
+        raise RuntimeError(
+            f"recovery pathname changed during execution: {recovery_name}"
+        )
 
     return recovery_name
 

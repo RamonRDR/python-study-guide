@@ -57,6 +57,97 @@ def test_recovery_path_removed_during_fsync_is_not_reported_as_retained(
         os.close(root_fd)
 
 
+def test_recovery_path_removed_after_descriptor_close_is_not_reported_as_retained(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    root_fd = file_organizer._open_source_directory_fd(tmp_path)
+    source_fd = os.open(source, os.O_RDONLY)
+    original_close = os.close
+    recovery_unlinked = False
+
+    def unlink_recovery_after_descriptor_close(fd: int) -> None:
+        nonlocal recovery_unlinked
+        is_recovery_fd = (
+            fd not in {source_fd, root_fd}
+            and stat.S_ISREG(os.fstat(fd).st_mode)
+        )
+        original_close(fd)
+        if not is_recovery_fd or recovery_unlinked:
+            return
+        recovery_files = [
+            child
+            for child in tmp_path.iterdir()
+            if child.name.startswith(".fo-recovery-")
+        ]
+        assert len(recovery_files) == 1
+        recovery_files[0].unlink()
+        recovery_unlinked = True
+
+    monkeypatch.setattr(file_organizer.os, "close", unlink_recovery_after_descriptor_close)
+
+    try:
+        with pytest.raises(RuntimeError, match="recovery pathname changed during execution"):
+            file_organizer._recover_pinned_source_at(
+                source_fd,
+                source.name,
+                root_fd=root_fd,
+            )
+
+        assert recovery_unlinked
+        assert not any(
+            child.name.startswith(".fo-recovery-") for child in tmp_path.iterdir()
+        )
+        os.lseek(source_fd, 0, os.SEEK_SET)
+        assert os.read(source_fd, 1024) == b"planned source"
+    finally:
+        os.close(source_fd)
+        os.close(root_fd)
+
+
+def test_recovery_syncs_root_directory_after_recovery_file(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    root_fd = file_organizer._open_source_directory_fd(tmp_path)
+    source_fd = os.open(source, os.O_RDONLY)
+    original_fsync = os.fsync
+    sync_order: list[str] = []
+
+    def tracking_fsync(fd: int) -> None:
+        if fd == root_fd:
+            sync_order.append("root")
+        elif stat.S_ISREG(os.fstat(fd).st_mode):
+            sync_order.append("recovery")
+        original_fsync(fd)
+
+    monkeypatch.setattr(file_organizer.os, "fsync", tracking_fsync)
+
+    try:
+        recovery_name = file_organizer._recover_pinned_source_at(
+            source_fd,
+            source.name,
+            root_fd=root_fd,
+        )
+
+        assert sync_order == ["recovery", "root"]
+        recovery_path = tmp_path / recovery_name
+        assert recovery_path.read_text(encoding="utf-8") == "planned source"
+    finally:
+        os.close(source_fd)
+        os.close(root_fd)
+
+
 def test_execute_plan_never_replaces_destination_created_after_preflight(
     monkeypatch: pytest.MonkeyPatch,
     tmp_path: Path,
@@ -474,7 +565,6 @@ def test_execute_plan_rechecks_late_casefold_collision_before_commit(
     assert any(child.name.startswith(".fo-stage-") for child in tmp_path.iterdir())
 
 
-
 def test_staging_replacement_before_final_rename_preserves_pinned_source_data(
     monkeypatch: pytest.MonkeyPatch,
     tmp_path: Path,
@@ -528,9 +618,6 @@ def test_staging_replacement_before_final_rename_preserves_pinned_source_data(
     assert len(recovery_files) == 1
     assert recovery_files[0].read_text(encoding="utf-8") == "planned source"
     assert not source.exists()
-
-
-
 
 
 def test_failed_final_rename_stage_changes_during_restore_recovers_pinned_source_data(
