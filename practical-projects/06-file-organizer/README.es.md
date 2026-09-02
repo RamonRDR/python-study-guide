@@ -386,7 +386,7 @@ El pinning de Linux usa flags nonblocking y luego `fstat()` rechaza la sustituci
 
 ### Origen planificado cambia
 
-La ejecución genera error en vez de tratar la sustitución como el archivo planificado.
+Una sustitución por otro archivo regular antes del vínculo de identidad de ejecución se acepta como el objeto actual seleccionado por el plan. Los cambios posteriores a ese vínculo se rechazan en lugar de tratarse como el origen vinculado.
 
 ### Raíz o categoría se renombra/sustituye
 
