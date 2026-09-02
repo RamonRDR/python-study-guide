@@ -81,17 +81,27 @@ class ReconciliationItem:
                 )
 
         if self.status is ReconciliationStatus.LEFT_ONLY:
-            if self.left is None or self.right is not None or self.difference is not None:
+            if (
+                self.left is None
+                or self.right is not None
+                or self.difference is not None
+            ):
                 raise ValueError("left_only requires only a left record")
             return
 
         if self.status is ReconciliationStatus.RIGHT_ONLY:
-            if self.left is not None or self.right is None or self.difference is not None:
+            if (
+                self.left is not None
+                or self.right is None
+                or self.difference is not None
+            ):
                 raise ValueError("right_only requires only a right record")
             return
 
         if self.left is None or self.right is None or self.difference is None:
-            raise ValueError("matched comparisons require both records and a difference")
+            raise ValueError(
+                "matched comparisons require both records and a difference"
+            )
 
         expected_difference = self.left.amount - self.right.amount
         if self.difference != expected_difference:
