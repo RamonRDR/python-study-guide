@@ -485,7 +485,7 @@ Eso comunica decisiones de ingeniería, no solo uso de APIs.
 | Mantener destinos exitosos | `OrganizationResult` |
 | Identificar objetos del filesystem | `(st_dev, st_ino)` |
 | Nueva comprobación lógica por `casefold()` | `listdir()` sobre el directorio anclado |
-| Commit seguro del nombre exacto en Linux | `renameat2(RENAME_NOREPLACE)` |
+| Commit seguro del nombre exato en Linux | `renameat2(RENAME_NOREPLACE)` |
 
 ## Qué sigue
 
