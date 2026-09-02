@@ -8,6 +8,55 @@ import file_organizer
 from file_organizer import execute_plan, plan_organization
 
 
+def test_recovery_path_removed_during_fsync_is_not_reported_as_retained(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    if not file_organizer._supports_secure_directory_fds():
+        pytest.skip("secure directory descriptors are unavailable on this platform")
+
+    source = tmp_path / "notes.txt"
+    source.write_text("planned source", encoding="utf-8")
+    root_fd = file_organizer._open_source_directory_fd(tmp_path)
+    source_fd = os.open(source, os.O_RDONLY)
+    original_fsync = os.fsync
+    recovery_unlinked = False
+
+    def unlink_recovery_during_fsync(fd: int) -> None:
+        nonlocal recovery_unlinked
+        original_fsync(fd)
+        if fd == source_fd or recovery_unlinked:
+            return
+        recovery_files = [
+            child
+            for child in tmp_path.iterdir()
+            if child.name.startswith(".fo-recovery-")
+        ]
+        assert len(recovery_files) == 1
+        recovery_files[0].unlink()
+        recovery_unlinked = True
+
+    monkeypatch.setattr(file_organizer.os, "fsync", unlink_recovery_during_fsync)
+
+    try:
+        with pytest.raises(RuntimeError, match="recovery pathname changed during execution"):
+            file_organizer._recover_pinned_source_at(
+                source_fd,
+                source.name,
+                root_fd=root_fd,
+            )
+
+        assert recovery_unlinked
+        assert not any(
+            child.name.startswith(".fo-recovery-") for child in tmp_path.iterdir()
+        )
+        os.lseek(source_fd, 0, os.SEEK_SET)
+        assert os.read(source_fd, 1024) == b"planned source"
+    finally:
+        os.close(source_fd)
+        os.close(root_fd)
+
+
 def test_execute_plan_never_replaces_destination_created_after_preflight(
     monkeypatch: pytest.MonkeyPatch,
     tmp_path: Path,

@@ -684,7 +684,7 @@ def _recover_pinned_source_at(
     *,
     root_fd: int,
 ) -> str:
-    """Persist bytes from the pinned source FD into an exclusive recovery file."""
+    """Persist bytes from the pinned source FD into a proven recovery pathname."""
     source_stat = os.fstat(source_fd)
     mode = stat.S_IMODE(source_stat.st_mode)
     flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
@@ -711,6 +711,10 @@ def _recover_pinned_source_at(
             f"could not allocate recovery entry for planned source: {source_name}"
         )
 
+    recovery_identity = _identity_from_regular_stat(
+        os.fstat(recovery_fd),
+        filename=recovery_name,
+    )
     original_offset = os.lseek(source_fd, 0, os.SEEK_CUR)
     try:
         os.lseek(source_fd, 0, os.SEEK_SET)
@@ -728,6 +732,20 @@ def _recover_pinned_source_at(
                 view = view[written:]
         os.fchmod(recovery_fd, mode)
         os.fsync(recovery_fd)
+
+        try:
+            recovery_path_identity = _regular_identity_at(
+                recovery_name,
+                directory_fd=root_fd,
+            )
+        except OSError as exc:
+            raise RuntimeError(
+                f"recovery pathname changed during execution: {recovery_name}"
+            ) from exc
+        if recovery_path_identity != recovery_identity:
+            raise RuntimeError(
+                f"recovery pathname changed during execution: {recovery_name}"
+            )
     finally:
         os.lseek(source_fd, original_offset, os.SEEK_SET)
         os.close(recovery_fd)
