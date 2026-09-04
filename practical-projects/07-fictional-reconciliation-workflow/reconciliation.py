@@ -17,18 +17,26 @@ class ReconciliationStatus(StrEnum):
     RIGHT_ONLY = "right_only"
 
 
-def _decimal_to_cents(value: Decimal) -> int:
-    """Convert an exact cent-representable Decimal to integer cents.
-
-    The conversion uses only the Decimal coefficient and exponent, so its
-    result is independent of the active Decimal arithmetic context.
-    """
-
-    sign, digits, exponent = value.as_tuple()
+def _digits_to_int(digits: tuple[int, ...]) -> int:
+    """Build an integer coefficient from Decimal digits without context math."""
 
     coefficient = 0
     for digit in digits:
         coefficient = coefficient * 10 + digit
+    return coefficient
+
+
+def _decimal_to_cents(value: Decimal) -> int:
+    """Convert an exact cent-representable Decimal to integer cents.
+
+    The conversion uses only the Decimal coefficient and exponent, so its
+    result is independent of the active Decimal arithmetic context. For
+    sub-cent exponents, discarded positions are inspected from the existing
+    digit tuple instead of materializing a potentially enormous power of ten.
+    """
+
+    sign, digits, exponent = value.as_tuple()
+    coefficient = _digits_to_int(digits)
 
     if coefficient == 0:
         return 0
@@ -36,10 +44,14 @@ def _decimal_to_cents(value: Decimal) -> int:
     if exponent >= -2:
         cents = coefficient * (10 ** (exponent + 2))
     else:
-        divisor = 10 ** (-2 - exponent)
-        cents, remainder = divmod(coefficient, divisor)
-        if remainder:
+        discarded_places = -2 - exponent
+        if discarded_places >= len(digits):
             raise ValueError("amount must have at most two decimal places")
+
+        split_at = len(digits) - discarded_places
+        if any(digits[split_at:]):
+            raise ValueError("amount must have at most two decimal places")
+        cents = _digits_to_int(digits[:split_at])
 
     return -cents if sign else cents
 
@@ -61,6 +73,17 @@ def _subtract_amounts(left: Decimal, right: Decimal) -> Decimal:
     return _cents_to_decimal(_decimal_to_cents(left) - _decimal_to_cents(right))
 
 
+def _validate_printable_text(value: str, *, field_name: str) -> str:
+    """Normalize surrounding whitespace and reject non-printable content."""
+
+    normalized = value.strip()
+    if not normalized:
+        raise ValueError(f"{field_name} must not be empty")
+    if not normalized.isprintable():
+        raise ValueError(f"{field_name} must contain only printable characters")
+    return normalized
+
+
 @dataclass(frozen=True, slots=True)
 class ReconciliationRecord:
     """One validated monetary record selected for reconciliation."""
@@ -74,9 +97,10 @@ class ReconciliationRecord:
         if not isinstance(self.amount, Decimal):
             raise TypeError("amount must be a Decimal")
 
-        normalized_id = self.reference_id.strip()
-        if not normalized_id:
-            raise ValueError("reference_id must not be empty")
+        normalized_id = _validate_printable_text(
+            self.reference_id,
+            field_name="reference_id",
+        )
 
         if not self.amount.is_finite():
             raise ValueError("amount must be finite")
@@ -101,6 +125,8 @@ class ReconciliationItem:
     def __post_init__(self) -> None:
         if not isinstance(self.reference_id, str) or not self.reference_id:
             raise ValueError("reference_id must be a non-empty string")
+        if not self.reference_id.isprintable():
+            raise ValueError("reference_id must contain only printable characters")
         if not isinstance(self.status, ReconciliationStatus):
             raise TypeError("status must be a ReconciliationStatus")
 
@@ -172,14 +198,20 @@ class ReconciliationReport:
     items: tuple[ReconciliationItem, ...]
     summary: ReconciliationSummary
 
+    def __post_init__(self) -> None:
+        left_label = _validate_source_name(self.left_name, field_name="left_name")
+        right_label = _validate_source_name(self.right_name, field_name="right_name")
+        if left_label == right_label:
+            raise ValueError("left_name and right_name must be different")
+
+        object.__setattr__(self, "left_name", left_label)
+        object.__setattr__(self, "right_name", right_label)
+
 
 def _validate_source_name(name: str, *, field_name: str) -> str:
     if not isinstance(name, str):
         raise TypeError(f"{field_name} must be a string")
-    normalized = name.strip()
-    if not normalized:
-        raise ValueError(f"{field_name} must not be empty")
-    return normalized
+    return _validate_printable_text(name, field_name=field_name)
 
 
 def _index_records(
