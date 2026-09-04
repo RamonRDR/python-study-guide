@@ -2,7 +2,7 @@ from decimal import Decimal, localcontext
 
 import pytest
 
-from reconciliation import ReconciliationRecord, reconcile
+from reconciliation import MAX_INTEGER_DIGITS, ReconciliationRecord, reconcile
 
 
 def record(reference_id: str, amount: str) -> ReconciliationRecord:
@@ -27,13 +27,22 @@ def test_record_accepts_large_exact_amount_beyond_default_precision() -> None:
     assert item.amount.as_tuple().exponent == -2
 
 
-def test_record_accepts_amount_beyond_integer_string_digit_limit() -> None:
-    amount = Decimal("1e5000")
+def test_record_accepts_documented_integer_digit_boundary() -> None:
+    amount = Decimal(f"{'9' * MAX_INTEGER_DIGITS}.99")
 
     item = ReconciliationRecord("REF-001", amount)
 
     assert item.amount == amount
     assert item.amount.as_tuple().exponent == -2
+
+
+@pytest.mark.parametrize("amount", ["1e100", "-1e100", "1e1000000"])
+def test_record_rejects_amount_above_integer_digit_limit(amount: str) -> None:
+    with pytest.raises(
+        ValueError,
+        match=rf"at most {MAX_INTEGER_DIGITS} integer digits",
+    ):
+        ReconciliationRecord("REF-001", Decimal(amount))
 
 
 def test_record_rejects_extreme_subcent_exponent_without_large_power() -> None:
