@@ -27,6 +27,15 @@ def test_record_accepts_large_exact_amount_beyond_default_precision() -> None:
     assert item.amount.as_tuple().exponent == -2
 
 
+def test_record_accepts_amount_beyond_integer_string_digit_limit() -> None:
+    amount = Decimal("1e5000")
+
+    item = ReconciliationRecord("REF-001", amount)
+
+    assert item.amount == amount
+    assert item.amount.as_tuple().exponent == -2
+
+
 def test_record_rejects_extreme_subcent_exponent_without_large_power() -> None:
     amount = Decimal("1e-1000000000")
 
