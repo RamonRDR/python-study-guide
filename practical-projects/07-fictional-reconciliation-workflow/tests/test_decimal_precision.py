@@ -2,6 +2,7 @@ from decimal import Decimal, localcontext
 
 import pytest
 
+import reconciliation
 from reconciliation import MAX_INTEGER_DIGITS, ReconciliationRecord, reconcile
 
 
@@ -50,6 +51,26 @@ def test_record_rejects_extreme_subcent_exponent_without_large_power() -> None:
 
     with pytest.raises(ValueError, match="at most two decimal places"):
         ReconciliationRecord("REF-001", amount)
+
+
+def test_record_discards_long_fractional_zero_tail_before_integer_conversion(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    observed_digit_lengths: list[int] = []
+    original_digits_to_int = reconciliation._digits_to_int
+
+    def recording_digits_to_int(digits: tuple[int, ...]) -> int:
+        observed_digit_lengths.append(len(digits))
+        return original_digits_to_int(digits)
+
+    monkeypatch.setattr(reconciliation, "_digits_to_int", recording_digits_to_int)
+    amount = Decimal("1." + "0" * 200_000)
+
+    item = ReconciliationRecord("REF-001", amount)
+
+    assert item.amount == Decimal("1.00")
+    assert observed_digit_lengths
+    assert max(observed_digit_lengths) <= 3
 
 
 def test_reconcile_preserves_difference_beyond_decimal_context_precision() -> None:
