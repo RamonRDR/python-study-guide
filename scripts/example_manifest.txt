@@ -184,3 +184,4 @@ practical-projects/03-user-registration/demo.py
 practical-projects/04-csv-analyzer/demo.py
 practical-projects/05-report-generator/demo.py
 practical-projects/06-file-organizer/demo.py
+practical-projects/07-fictional-reconciliation-workflow/demo.py
