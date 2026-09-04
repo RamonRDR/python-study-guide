@@ -57,12 +57,13 @@ def _decimal_to_cents(value: Decimal) -> int:
 
 
 def _cents_to_decimal(cents: int) -> Decimal:
-    """Build a two-decimal Decimal without using arithmetic context precision."""
+    """Build a two-decimal Decimal without context or integer-string limits."""
 
     if cents == 0:
         return Decimal("0.00")
 
-    digits = tuple(int(character) for character in str(abs(cents)))
+    magnitude = Decimal(abs(cents))
+    digits = magnitude.as_tuple().digits
     sign = 1 if cents < 0 else 0
     return Decimal((sign, digits, -2))
 
