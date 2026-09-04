@@ -3,11 +3,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from decimal import Decimal, InvalidOperation
+from decimal import Decimal
 from enum import StrEnum
 from typing import Iterable
-
-CENT = Decimal("0.01")
 
 
 class ReconciliationStatus(StrEnum):
@@ -20,16 +18,30 @@ class ReconciliationStatus(StrEnum):
 
 
 def _decimal_to_cents(value: Decimal) -> int:
-    """Convert a canonical two-decimal value to exact integer cents."""
+    """Convert an exact cent-representable Decimal to integer cents.
+
+    The conversion uses only the Decimal coefficient and exponent, so its
+    result is independent of the active Decimal arithmetic context.
+    """
 
     sign, digits, exponent = value.as_tuple()
-    if exponent != -2:
-        raise ValueError("value must use exactly two decimal places")
 
     coefficient = 0
     for digit in digits:
         coefficient = coefficient * 10 + digit
-    return -coefficient if sign else coefficient
+
+    if coefficient == 0:
+        return 0
+
+    if exponent >= -2:
+        cents = coefficient * (10 ** (exponent + 2))
+    else:
+        divisor = 10 ** (-2 - exponent)
+        cents, remainder = divmod(coefficient, divisor)
+        if remainder:
+            raise ValueError("amount must have at most two decimal places")
+
+    return -cents if sign else cents
 
 
 def _cents_to_decimal(cents: int) -> Decimal:
@@ -69,17 +81,8 @@ class ReconciliationRecord:
         if not self.amount.is_finite():
             raise ValueError("amount must be finite")
 
-        try:
-            normalized_amount = self.amount.quantize(CENT)
-        except InvalidOperation as exc:
-            raise ValueError(
-                "amount cannot be represented with two decimal places"
-            ) from exc
-
-        if self.amount != normalized_amount:
-            raise ValueError("amount must have at most two decimal places")
-        if normalized_amount == 0:
-            normalized_amount = abs(normalized_amount)
+        cents = _decimal_to_cents(self.amount)
+        normalized_amount = _cents_to_decimal(cents)
 
         object.__setattr__(self, "reference_id", normalized_id)
         object.__setattr__(self, "amount", normalized_amount)
