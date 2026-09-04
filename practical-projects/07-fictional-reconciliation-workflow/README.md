@@ -67,7 +67,7 @@ The workflow must:
 1. accept two iterables of `ReconciliationRecord`;
 2. reject empty reference identifiers;
 3. require finite `Decimal` amounts;
-4. accept only amounts exactly representable at cent precision;
+4. accept only amounts exactly representable at cent precision and with at most 100 integer digits;
 5. normalize surrounding whitespace in reference identifiers;
 6. canonicalize accepted amounts to two decimal places;
 7. reject duplicate references inside either source;
@@ -78,6 +78,8 @@ The workflow must:
 12. build deterministic summary counts;
 13. calculate total absolute mismatch magnitude;
 14. render a stable text report.
+
+The 100-integer-digit boundary is an explicit resource-safety contract for this educational project. It is intentionally far above realistic sample values while preventing compact scientific notation such as `1e1000000` from expanding into enormous Python integers.
 
 ## Deliberate scope
 
@@ -123,6 +125,7 @@ The record:
 - requires an actual `Decimal`;
 - rejects `NaN` and infinities;
 - rejects values beyond cent precision;
+- rejects amounts whose integer part exceeds 100 digits;
 - stores accepted amounts in canonical two-decimal form.
 
 Negative amounts are allowed because a generic workflow may represent reversals or adjustments.
@@ -216,7 +219,7 @@ Decimal("275.50")
 
 instead of `float`.
 
-Creating `Decimal` from text preserves the intended decimal value. The record then enforces the project's two-decimal monetary boundary.
+Creating `Decimal` from text preserves the intended decimal value. The record then enforces the project's two-decimal monetary boundary and a maximum of 100 integer digits before any integer-cent expansion occurs.
 
 ## Basic example
 
@@ -284,6 +287,12 @@ ReconciliationRecord("REF-001", Decimal("10.001"))
 
 raises `ValueError` because the amount exceeds cent precision.
 
+```python
+ReconciliationRecord("REF-001", Decimal("1e100"))
+```
+
+raises `ValueError` because the amount would require 101 integer digits, beyond the documented 100-digit boundary.
+
 Duplicate references inside one source also raise `ValueError`. The workflow does not guess whether the first or last duplicate should win.
 
 ## Common mistakes
@@ -316,7 +325,7 @@ Run the focused suite from the repository root:
 python -m pytest -q practical-projects/07-fictional-reconciliation-workflow/tests
 ```
 
-The initial tests cover validation, duplicate detection, all four statuses, positive and negative differences, generators, deterministic ordering, source labels, case sensitivity, item invariants, empty input, summaries, and deterministic rendering.
+The initial tests cover validation, duplicate detection, all four statuses, positive and negative differences, generators, deterministic ordering, source labels, case sensitivity, item invariants, empty input, exact-money precision boundaries, magnitude limits, summaries, and deterministic rendering.
 
 ## Exercise
 
@@ -350,6 +359,7 @@ Useful points to explain in a portfolio:
 
 - stable domain keys;
 - exact monetary values;
+- explicit magnitude boundaries;
 - duplicate rejection;
 - indexed lookup;
 - deterministic states and ordering;
@@ -364,7 +374,7 @@ Useful points to explain in a portfolio:
 Input:       two iterables of ReconciliationRecord
 Key:         normalized reference_id
 Matching:    exact and case-sensitive
-Money:       finite Decimal at cent precision
+Money:       finite Decimal, cent precision, <= 100 integer digits
 Statuses:    matched / amount_mismatch / left_only / right_only
 Difference:  left.amount - right.amount
 Ordering:    ascending reference_id
