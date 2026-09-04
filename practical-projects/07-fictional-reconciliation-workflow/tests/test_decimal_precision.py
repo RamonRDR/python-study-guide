@@ -1,10 +1,28 @@
-from decimal import Decimal
+from decimal import Decimal, localcontext
 
 from reconciliation import ReconciliationRecord, reconcile
 
 
 def record(reference_id: str, amount: str) -> ReconciliationRecord:
     return ReconciliationRecord(reference_id, Decimal(amount))
+
+
+def test_record_accepts_valid_amount_under_low_decimal_precision() -> None:
+    with localcontext() as context:
+        context.prec = 3
+        item = ReconciliationRecord("REF-001", Decimal("10.00"))
+
+    assert item.amount == Decimal("10.00")
+    assert item.amount.as_tuple().exponent == -2
+
+
+def test_record_accepts_large_exact_amount_beyond_default_precision() -> None:
+    amount = Decimal("99999999999999999999999999.99")
+
+    item = ReconciliationRecord("REF-001", amount)
+
+    assert item.amount == amount
+    assert item.amount.as_tuple().exponent == -2
 
 
 def test_reconcile_preserves_difference_beyond_decimal_context_precision() -> None:
