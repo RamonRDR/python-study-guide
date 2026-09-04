@@ -52,20 +52,18 @@ def _decimal_to_cents(value: Decimal) -> int:
 
     The conversion uses only the Decimal coefficient and exponent, so its
     result is independent of the active Decimal arithmetic context. For
-    sub-cent exponents, discarded positions are inspected from the existing
-    digit tuple instead of materializing a potentially enormous power of ten.
+    sub-cent exponents, discarded positions are inspected before converting
+    digits into an integer. That avoids building enormous temporary integers
+    when a value contains a very long tail of fractional zeros.
     External record values are magnitude-checked before calling this helper.
     """
 
     sign, digits, exponent = value.as_tuple()
-    coefficient = _digits_to_int(digits)
 
-    if coefficient == 0:
+    if not any(digits):
         return 0
 
-    if exponent >= -2:
-        cents = coefficient * (10 ** (exponent + 2))
-    else:
+    if exponent < -2:
         discarded_places = -2 - exponent
         if discarded_places >= len(digits):
             raise ValueError("amount must have at most two decimal places")
@@ -73,7 +71,11 @@ def _decimal_to_cents(value: Decimal) -> int:
         split_at = len(digits) - discarded_places
         if any(digits[split_at:]):
             raise ValueError("amount must have at most two decimal places")
+
         cents = _digits_to_int(digits[:split_at])
+    else:
+        coefficient = _digits_to_int(digits)
+        cents = coefficient * (10 ** (exponent + 2))
 
     return -cents if sign else cents
 
