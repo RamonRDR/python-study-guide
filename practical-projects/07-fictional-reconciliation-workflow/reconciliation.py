@@ -19,6 +19,36 @@ class ReconciliationStatus(StrEnum):
     RIGHT_ONLY = "right_only"
 
 
+def _decimal_to_cents(value: Decimal) -> int:
+    """Convert a canonical two-decimal value to exact integer cents."""
+
+    sign, digits, exponent = value.as_tuple()
+    if exponent != -2:
+        raise ValueError("value must use exactly two decimal places")
+
+    coefficient = 0
+    for digit in digits:
+        coefficient = coefficient * 10 + digit
+    return -coefficient if sign else coefficient
+
+
+def _cents_to_decimal(cents: int) -> Decimal:
+    """Build a two-decimal Decimal without using arithmetic context precision."""
+
+    if cents == 0:
+        return Decimal("0.00")
+
+    digits = tuple(int(character) for character in str(abs(cents)))
+    sign = 1 if cents < 0 else 0
+    return Decimal((sign, digits, -2))
+
+
+def _subtract_amounts(left: Decimal, right: Decimal) -> Decimal:
+    """Return an exact signed difference for canonical monetary amounts."""
+
+    return _cents_to_decimal(_decimal_to_cents(left) - _decimal_to_cents(right))
+
+
 @dataclass(frozen=True, slots=True)
 class ReconciliationRecord:
     """One validated monetary record selected for reconciliation."""
@@ -103,7 +133,7 @@ class ReconciliationItem:
                 "matched comparisons require both records and a difference"
             )
 
-        expected_difference = self.left.amount - self.right.amount
+        expected_difference = _subtract_amounts(self.left.amount, self.right.amount)
         if self.difference != expected_difference:
             raise ValueError("difference must equal left amount minus right amount")
 
@@ -193,14 +223,14 @@ def _build_summary(
     right_only = sum(
         item.status is ReconciliationStatus.RIGHT_ONLY for item in item_tuple
     )
-    total_absolute_difference = sum(
-        (
-            abs(item.difference)
-            for item in item_tuple
-            if item.status is ReconciliationStatus.AMOUNT_MISMATCH
-            and item.difference is not None
-        ),
-        start=Decimal("0.00"),
+    total_absolute_difference_cents = sum(
+        abs(_decimal_to_cents(item.difference))
+        for item in item_tuple
+        if item.status is ReconciliationStatus.AMOUNT_MISMATCH
+        and item.difference is not None
+    )
+    total_absolute_difference = _cents_to_decimal(
+        total_absolute_difference_cents
     )
 
     return ReconciliationSummary(
@@ -264,7 +294,7 @@ def reconcile(
             )
             continue
 
-        difference = left.amount - right.amount
+        difference = _subtract_amounts(left.amount, right.amount)
         status = (
             ReconciliationStatus.MATCHED
             if difference == Decimal("0.00")
