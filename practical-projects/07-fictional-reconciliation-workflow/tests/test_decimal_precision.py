@@ -1,5 +1,7 @@
 from decimal import Decimal, localcontext
 
+import pytest
+
 from reconciliation import ReconciliationRecord, reconcile
 
 
@@ -23,6 +25,13 @@ def test_record_accepts_large_exact_amount_beyond_default_precision() -> None:
 
     assert item.amount == amount
     assert item.amount.as_tuple().exponent == -2
+
+
+def test_record_rejects_extreme_subcent_exponent_without_large_power() -> None:
+    amount = Decimal("1e-1000000000")
+
+    with pytest.raises(ValueError, match="at most two decimal places"):
+        ReconciliationRecord("REF-001", amount)
 
 
 def test_reconcile_preserves_difference_beyond_decimal_context_precision() -> None:
