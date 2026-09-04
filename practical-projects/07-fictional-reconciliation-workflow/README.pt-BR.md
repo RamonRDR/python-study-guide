@@ -100,7 +100,9 @@ Separar a ingestão mantém visível a pergunta principal:
 ├── reconciliation.py
 └── tests/
     ├── conftest.py
-    └── test_reconciliation.py
+    ├── test_decimal_precision.py
+    ├── test_reconciliation.py
+    └── test_text_safety.py
 ```
 
 ## Modelo principal
