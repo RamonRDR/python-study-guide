@@ -4,8 +4,18 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from decimal import Decimal
-from enum import StrEnum
 from typing import Iterable
+
+try:
+    from enum import StrEnum
+except ImportError:  # Python < 3.11
+    from enum import Enum
+
+    class StrEnum(str, Enum):
+        """Minimal compatibility backport of enum.StrEnum behavior."""
+
+        def __str__(self) -> str:
+            return self.value
 
 
 MAX_INTEGER_DIGITS = 100
