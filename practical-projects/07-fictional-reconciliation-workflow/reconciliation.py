@@ -8,6 +8,9 @@ from enum import StrEnum
 from typing import Iterable
 
 
+MAX_INTEGER_DIGITS = 100
+
+
 class ReconciliationStatus(StrEnum):
     """Possible outcomes for one reference during reconciliation."""
 
@@ -26,6 +29,24 @@ def _digits_to_int(digits: tuple[int, ...]) -> int:
     return coefficient
 
 
+def _integer_digit_count(value: Decimal) -> int:
+    """Return the number of digits in the integer part without expansion."""
+
+    _, digits, exponent = value.as_tuple()
+    if not any(digits):
+        return 1
+    return max(1, len(digits) + exponent)
+
+
+def _validate_amount_magnitude(value: Decimal) -> None:
+    """Reject monetary inputs beyond the project's explicit size boundary."""
+
+    if _integer_digit_count(value) > MAX_INTEGER_DIGITS:
+        raise ValueError(
+            f"amount must have at most {MAX_INTEGER_DIGITS} integer digits"
+        )
+
+
 def _decimal_to_cents(value: Decimal) -> int:
     """Convert an exact cent-representable Decimal to integer cents.
 
@@ -33,6 +54,7 @@ def _decimal_to_cents(value: Decimal) -> int:
     result is independent of the active Decimal arithmetic context. For
     sub-cent exponents, discarded positions are inspected from the existing
     digit tuple instead of materializing a potentially enormous power of ten.
+    External record values are magnitude-checked before calling this helper.
     """
 
     sign, digits, exponent = value.as_tuple()
@@ -106,6 +128,7 @@ class ReconciliationRecord:
         if not self.amount.is_finite():
             raise ValueError("amount must be finite")
 
+        _validate_amount_magnitude(self.amount)
         cents = _decimal_to_cents(self.amount)
         normalized_amount = _cents_to_decimal(cents)
 
