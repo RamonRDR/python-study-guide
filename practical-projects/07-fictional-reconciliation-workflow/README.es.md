@@ -67,7 +67,7 @@ El flujo debe:
 1. aceptar dos iterables de `ReconciliationRecord`;
 2. rechazar identificadores de referencia vacíos;
 3. exigir importes `Decimal` finitos;
-4. aceptar solo importes exactamente representables con precisión de centavos;
+4. aceptar solo importes exactamente representables con precisión de centavos y con un máximo de 100 dígitos en la parte entera;
 5. eliminar espacios alrededor de los identificadores;
 6. canonicalizar los importes aceptados a dos decimales;
 7. rechazar referencias duplicadas dentro de cualquiera de las fuentes;
@@ -78,6 +78,8 @@ El flujo debe:
 12. generar conteos de resumen deterministas;
 13. calcular la magnitud absoluta total de las divergencias;
 14. renderizar un informe de texto estable.
+
+El límite de 100 dígitos enteros es un contrato explícito de seguridad de recursos para este proyecto educativo. Está muy por encima de los valores realistas de los ejemplos, pero impide que notaciones científicas compactas como `1e1000000` se expandan a enteros gigantescos en Python.
 
 ## Alcance deliberado
 
@@ -123,6 +125,7 @@ El registro:
 - exige un `Decimal` real;
 - rechaza `NaN` e infinitos;
 - rechaza valores más allá de la precisión de centavos;
+- rechaza importes cuya parte entera supere 100 dígitos;
 - almacena los importes aceptados en forma canónica de dos decimales.
 
 Los importes negativos están permitidos porque un flujo genérico puede representar reversiones o ajustes.
@@ -216,7 +219,7 @@ Decimal("275.50")
 
 en lugar de `float`.
 
-Crear `Decimal` a partir de texto conserva el valor decimal deseado. El registro aplica después la frontera monetaria de dos decimales del proyecto.
+Crear `Decimal` a partir de texto conserva el valor decimal deseado. El registro aplica después la frontera monetaria de dos decimales y el máximo de 100 dígitos enteros antes de cualquier expansión a centavos enteros.
 
 ## Ejemplo básico
 
@@ -284,6 +287,12 @@ ReconciliationRecord("REF-001", Decimal("10.001"))
 
 genera `ValueError` porque el importe supera la precisión de centavos.
 
+```python
+ReconciliationRecord("REF-001", Decimal("1e100"))
+```
+
+genera `ValueError` porque el importe requeriría 101 dígitos enteros, por encima del límite documentado de 100 dígitos.
+
 Las referencias duplicadas dentro de una fuente también generan `ValueError`. El flujo no intenta adivinar si debería prevalecer el primer o el último duplicado.
 
 ## Errores comunes
@@ -316,7 +325,7 @@ Ejecuta la suite enfocada desde la raíz del repositorio:
 python -m pytest -q practical-projects/07-fictional-reconciliation-workflow/tests
 ```
 
-Las pruebas iniciales cubren validación, duplicados, los cuatro estados, diferencias positivas y negativas, generators, orden determinista, etiquetas de fuentes, sensibilidad a caja, invariantes de elementos, entrada vacía, resúmenes y renderizado determinista.
+Las pruebas iniciales cubren validación, duplicados, los cuatro estados, diferencias positivas y negativas, generators, orden determinista, etiquetas de fuentes, sensibilidad a caja, invariantes de elementos, entrada vacía, límites de precisión monetaria, límites de magnitud, resúmenes y renderizado determinista.
 
 ## Ejercicio
 
@@ -350,6 +359,7 @@ Puntos útiles para explicar en un portafolio:
 
 - claves de dominio estables;
 - importes monetarios exactos;
+- límites explícitos de magnitud;
 - rechazo de duplicados;
 - consulta indexada;
 - estados y orden deterministas;
@@ -364,7 +374,7 @@ Puntos útiles para explicar en un portafolio:
 Entrada:      dos iterables de ReconciliationRecord
 Clave:        reference_id normalizado
 Matching:     exacto y sensible a mayúsculas/minúsculas
-Dinero:       Decimal finito con precisión de centavos
+Dinero:       Decimal finito, precisión de centavos, <= 100 dígitos enteros
 Estados:      matched / amount_mismatch / left_only / right_only
 Diferencia:   left.amount - right.amount
 Orden:        reference_id ascendente
