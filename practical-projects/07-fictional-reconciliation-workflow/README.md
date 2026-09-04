@@ -100,7 +100,9 @@ Keeping ingestion separate makes the core question easier to study:
 ├── reconciliation.py
 └── tests/
     ├── conftest.py
-    └── test_reconciliation.py
+    ├── test_decimal_precision.py
+    ├── test_reconciliation.py
+    └── test_text_safety.py
 ```
 
 ## Core model
