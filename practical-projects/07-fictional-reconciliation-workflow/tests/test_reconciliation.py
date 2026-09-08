@@ -24,6 +24,14 @@ class AttachmentLookalike:
     amount = Decimal("10.00")
 
 
+def test_domain_models_avoid_slots_only_dataclass_configuration() -> None:
+    source_record = record("REF-001", "10.00")
+    report = reconcile([source_record], [])
+
+    models = (source_record, report.items[0], report.summary, report)
+    assert all(hasattr(model, "__dict__") for model in models)
+
+
 def test_record_trims_reference_id_and_canonicalizes_amount() -> None:
     item = record("  REF-001  ", "10")
 
