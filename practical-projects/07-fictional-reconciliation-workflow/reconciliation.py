@@ -246,6 +246,7 @@ class ReconciliationReport:
 
         object.__setattr__(self, "left_name", left_label)
         object.__setattr__(self, "right_name", right_label)
+        object.__setattr__(self, "summary", expected_summary)
 
 
 def _validate_source_name(name: str, *, field_name: str) -> str:
