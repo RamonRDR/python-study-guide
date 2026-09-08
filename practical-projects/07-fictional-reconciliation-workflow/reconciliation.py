@@ -169,7 +169,11 @@ class ReconciliationItem:
         if self.difference is not None and not isinstance(self.difference, Decimal):
             raise TypeError("difference must be a Decimal or None")
 
-        for record in (self.left, self.right):
+        for field_name, record in (("left", self.left), ("right", self.right)):
+            if record is not None and not isinstance(record, ReconciliationRecord):
+                raise TypeError(
+                    f"{field_name} must be a ReconciliationRecord or None"
+                )
             if record is not None and record.reference_id != self.reference_id:
                 raise ValueError(
                     "item reference_id must match every attached record"
