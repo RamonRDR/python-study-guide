@@ -285,6 +285,27 @@ def test_reconciliation_report_rejects_summary_unrelated_to_items() -> None:
         )
 
 
+def test_reconciliation_report_canonicalizes_negative_zero_summary() -> None:
+    supplied_summary = ReconciliationSummary(
+        total_items=0,
+        matched=0,
+        amount_mismatches=0,
+        left_only=0,
+        right_only=0,
+        total_absolute_difference=Decimal("-0.00"),
+    )
+
+    report = ReconciliationReport(
+        left_name="Source A",
+        right_name="Source B",
+        items=(),
+        summary=supplied_summary,
+    )
+
+    assert report.summary.total_absolute_difference.as_tuple().sign == 0
+    assert f"{report.summary.total_absolute_difference:.2f}" == "0.00"
+
+
 def test_render_text_report_is_deterministic() -> None:
     report = reconcile(
         [
