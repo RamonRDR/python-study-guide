@@ -306,6 +306,68 @@ def test_reconciliation_report_canonicalizes_negative_zero_summary() -> None:
     assert f"{report.summary.total_absolute_difference:.2f}" == "0.00"
 
 
+def test_reconciliation_report_canonicalizes_direct_item_order() -> None:
+    item_b = ReconciliationItem(
+        reference_id="REF-B",
+        status=ReconciliationStatus.LEFT_ONLY,
+        left=record("REF-B", "20.00"),
+        right=None,
+        difference=None,
+    )
+    item_a = ReconciliationItem(
+        reference_id="REF-A",
+        status=ReconciliationStatus.LEFT_ONLY,
+        left=record("REF-A", "10.00"),
+        right=None,
+        difference=None,
+    )
+    supplied_summary = ReconciliationSummary(
+        total_items=2,
+        matched=0,
+        amount_mismatches=0,
+        left_only=2,
+        right_only=0,
+        total_absolute_difference=Decimal("0.00"),
+    )
+
+    report = ReconciliationReport(
+        left_name="Source A",
+        right_name="Source B",
+        items=(item_b, item_a),
+        summary=supplied_summary,
+    )
+
+    assert [item.reference_id for item in report.items] == ["REF-A", "REF-B"]
+    rendered = render_text_report(report)
+    assert rendered.index("[LEFT_ONLY] REF-A") < rendered.index("[LEFT_ONLY] REF-B")
+
+
+def test_reconciliation_report_rejects_duplicate_reference_ids() -> None:
+    item = ReconciliationItem(
+        reference_id="REF-001",
+        status=ReconciliationStatus.LEFT_ONLY,
+        left=record("REF-001", "10.00"),
+        right=None,
+        difference=None,
+    )
+    duplicate_summary = ReconciliationSummary(
+        total_items=2,
+        matched=0,
+        amount_mismatches=0,
+        left_only=2,
+        right_only=0,
+        total_absolute_difference=Decimal("0.00"),
+    )
+
+    with pytest.raises(ValueError, match="unique reference_id"):
+        ReconciliationReport(
+            left_name="Source A",
+            right_name="Source B",
+            items=(item, item),
+            summary=duplicate_summary,
+        )
+
+
 def test_render_text_report_is_deterministic() -> None:
     report = reconcile(
         [
