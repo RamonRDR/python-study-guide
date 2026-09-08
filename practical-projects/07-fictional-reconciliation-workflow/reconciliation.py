@@ -240,12 +240,25 @@ class ReconciliationReport:
         if left_label == right_label:
             raise ValueError("left_name and right_name must be different")
 
-        expected_summary = _build_summary(self.items)
+        if not isinstance(self.items, tuple):
+            raise TypeError("items must be a tuple of ReconciliationItem values")
+        if any(not isinstance(item, ReconciliationItem) for item in self.items):
+            raise TypeError("items must contain only ReconciliationItem values")
+
+        reference_ids = [item.reference_id for item in self.items]
+        if len(reference_ids) != len(set(reference_ids)):
+            raise ValueError("report items must have unique reference_id values")
+
+        canonical_items = tuple(
+            sorted(self.items, key=lambda item: item.reference_id)
+        )
+        expected_summary = _build_summary(canonical_items)
         if self.summary != expected_summary:
             raise ValueError("summary must match report items")
 
         object.__setattr__(self, "left_name", left_label)
         object.__setattr__(self, "right_name", right_label)
+        object.__setattr__(self, "items", canonical_items)
         object.__setattr__(self, "summary", expected_summary)
 
 
