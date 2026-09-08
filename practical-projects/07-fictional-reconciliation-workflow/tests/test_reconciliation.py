@@ -5,7 +5,9 @@ import pytest
 from reconciliation import (
     ReconciliationItem,
     ReconciliationRecord,
+    ReconciliationReport,
     ReconciliationStatus,
+    ReconciliationSummary,
     reconcile,
     render_text_report,
 )
@@ -253,6 +255,33 @@ def test_reconciliation_item_rejects_wrong_difference() -> None:
             left=left,
             right=right,
             difference=Decimal("4.00"),
+        )
+
+
+def test_reconciliation_report_rejects_summary_unrelated_to_items() -> None:
+    left = record("REF-001", "10.00")
+    item = ReconciliationItem(
+        reference_id="REF-001",
+        status=ReconciliationStatus.LEFT_ONLY,
+        left=left,
+        right=None,
+        difference=None,
+    )
+    unrelated_summary = ReconciliationSummary(
+        total_items=0,
+        matched=0,
+        amount_mismatches=0,
+        left_only=0,
+        right_only=0,
+        total_absolute_difference=Decimal("0.00"),
+    )
+
+    with pytest.raises(ValueError, match="summary must match report items"):
+        ReconciliationReport(
+            left_name="Source A",
+            right_name="Source B",
+            items=(item,),
+            summary=unrelated_summary,
         )
 
 
