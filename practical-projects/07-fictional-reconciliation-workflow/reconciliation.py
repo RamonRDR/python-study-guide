@@ -119,7 +119,7 @@ def _validate_printable_text(value: str, *, field_name: str) -> str:
     return normalized
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class ReconciliationRecord:
     """One validated monetary record selected for reconciliation."""
 
@@ -148,7 +148,7 @@ class ReconciliationRecord:
         object.__setattr__(self, "amount", normalized_amount)
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class ReconciliationItem:
     """Reconciliation outcome for exactly one reference id."""
 
@@ -217,7 +217,7 @@ class ReconciliationItem:
             raise ValueError("amount_mismatch items require a non-zero difference")
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class ReconciliationSummary:
     """Aggregate counts for one reconciliation run."""
 
@@ -229,7 +229,7 @@ class ReconciliationSummary:
     total_absolute_difference: Decimal
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True)
 class ReconciliationReport:
     """Complete immutable result for one pair of fictional sources."""
 
