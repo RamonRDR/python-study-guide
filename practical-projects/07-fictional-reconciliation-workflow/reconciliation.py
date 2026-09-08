@@ -240,6 +240,10 @@ class ReconciliationReport:
         if left_label == right_label:
             raise ValueError("left_name and right_name must be different")
 
+        expected_summary = _build_summary(self.items)
+        if self.summary != expected_summary:
+            raise ValueError("summary must match report items")
+
         object.__setattr__(self, "left_name", left_label)
         object.__setattr__(self, "right_name", right_label)
 
