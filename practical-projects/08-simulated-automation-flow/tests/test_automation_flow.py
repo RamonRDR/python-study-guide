@@ -146,6 +146,20 @@ def test_result_rejects_success_when_processing_creates_duplicates() -> None:
         )
 
 
+def test_result_rejects_evidence_from_another_run() -> None:
+    old_result = run_automation(AutomationRequest("OLD", ("alpha",)))
+    new_request = AutomationRequest("NEW", ("ALPHA",))
+
+    with pytest.raises(ValueError, match="evidence"):
+        AutomationResult(
+            request=new_request,
+            status=RunStatus.SUCCEEDED,
+            steps=old_result.steps,
+            events=old_result.events,
+            output_items=("ALPHA",),
+        )
+
+
 def test_result_rejects_non_contiguous_event_sequence() -> None:
     valid = run_automation(make_request())
     first = valid.events[0]
