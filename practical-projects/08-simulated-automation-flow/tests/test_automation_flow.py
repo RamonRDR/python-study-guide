@@ -49,6 +49,31 @@ def test_successful_run_is_deterministic_and_complete() -> None:
     assert len(first.evidence) == 8
 
 
+def test_verify_rejects_collisions_created_by_processing() -> None:
+    request = AutomationRequest("RUN-UNICODE", ("ß", "SS"))
+
+    result = run_automation(request)
+
+    assert result.status is RunStatus.FAILED
+    assert tuple(step.status for step in result.steps) == (
+        StepStatus.SUCCEEDED,
+        StepStatus.SUCCEEDED,
+        StepStatus.FAILED,
+        StepStatus.SKIPPED,
+    )
+    assert result.steps[2].message == (
+        "Verification failed: processed items must be unique."
+    )
+    assert result.output_items == ()
+
+
+def test_request_rejects_non_printable_text() -> None:
+    with pytest.raises(ValueError, match="printable"):
+        AutomationRequest("RUN\n001", ("alpha",))
+    with pytest.raises(ValueError, match="printable"):
+        AutomationRequest("RUN-001", ("alpha\tbeta",))
+
+
 def test_failure_stops_execution_and_preserves_prior_evidence() -> None:
     result = run_automation(
         make_request(),
