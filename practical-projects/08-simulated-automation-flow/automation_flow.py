@@ -206,6 +206,8 @@ class AutomationResult:
             expected_output = tuple(item.upper() for item in self.request.items)
             if self.output_items != expected_output:
                 raise ValueError("successful output_items must match processed items")
+            if len(expected_output) != len(set(expected_output)):
+                raise ValueError("successful output_items must be unique")
         else:
             failed_indexes = [
                 index
