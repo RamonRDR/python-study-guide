@@ -265,6 +265,7 @@ class AutomationResult:
 def _success_evidence(
     step: StepName,
     request: AutomationRequest,
+    processed_items: tuple[str, ...],
 ) -> tuple[Evidence, ...]:
     if step is StepName.PREPARE:
         return (
@@ -273,16 +274,16 @@ def _success_evidence(
         )
     if step is StepName.PROCESS:
         return (
-            Evidence(step, "processed_count", str(len(request.items))),
+            Evidence(step, "processed_count", str(len(processed_items))),
             Evidence(step, "transformation", "uppercase"),
         )
     if step is StepName.VERIFY:
         return (
-            Evidence(step, "verified_count", str(len(request.items))),
+            Evidence(step, "verified_count", str(len(processed_items))),
             Evidence(step, "verification", "count-and-uniqueness"),
         )
     return (
-        Evidence(step, "published_count", str(len(request.items))),
+        Evidence(step, "published_count", str(len(processed_items))),
         Evidence(step, "result", "ready"),
     )
 
@@ -319,6 +320,7 @@ def run_automation(
 
     step_results: list[StepResult] = []
     events: list[AutomationEvent] = []
+    processed_items: tuple[str, ...] = ()
     failed = False
 
     for step in STEP_ORDER:
@@ -349,7 +351,25 @@ def run_automation(
             failed = True
             continue
 
-        evidence = _success_evidence(step, request)
+        if step is StepName.PROCESS:
+            processed_items = tuple(item.upper() for item in request.items)
+
+        if step is StepName.VERIFY and len(processed_items) != len(
+            set(processed_items)
+        ):
+            message = "Verification failed: processed items must be unique."
+            step_results.append(
+                StepResult(
+                    step=step,
+                    status=StepStatus.FAILED,
+                    message=message,
+                )
+            )
+            _append_event(events, step, EventType.FAILED, message)
+            failed = True
+            continue
+
+        evidence = _success_evidence(step, request, processed_items)
         message = f"{step.value} completed."
         step_results.append(
             StepResult(
@@ -362,7 +382,7 @@ def run_automation(
         _append_event(events, step, EventType.SUCCEEDED, message)
 
     status = RunStatus.FAILED if failed else RunStatus.SUCCEEDED
-    output_items = () if failed else tuple(item.upper() for item in request.items)
+    output_items = () if failed else processed_items
     return AutomationResult(
         request=request,
         status=status,
