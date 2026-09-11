@@ -132,6 +132,20 @@ def test_result_rejects_inconsistent_success_contract() -> None:
         )
 
 
+def test_result_rejects_success_when_processing_creates_duplicates() -> None:
+    collision_request = AutomationRequest("RUN-UNICODE", ("ß", "SS"))
+    valid_success = run_automation(make_request())
+
+    with pytest.raises(ValueError, match="unique"):
+        AutomationResult(
+            request=collision_request,
+            status=RunStatus.SUCCEEDED,
+            steps=valid_success.steps,
+            events=valid_success.events,
+            output_items=("SS", "SS"),
+        )
+
+
 def test_result_rejects_non_contiguous_event_sequence() -> None:
     valid = run_automation(make_request())
     first = valid.events[0]
