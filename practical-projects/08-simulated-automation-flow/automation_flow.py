@@ -199,14 +199,14 @@ class AutomationResult:
         if tuple(step.step for step in self.steps) != STEP_ORDER:
             raise ValueError("steps must contain the complete canonical step order")
 
+        expected_processed_items = tuple(item.upper() for item in self.request.items)
         statuses = tuple(step.status for step in self.steps)
         if self.status is RunStatus.SUCCEEDED:
             if any(status is not StepStatus.SUCCEEDED for status in statuses):
                 raise ValueError("successful runs require every step to succeed")
-            expected_output = tuple(item.upper() for item in self.request.items)
-            if self.output_items != expected_output:
+            if self.output_items != expected_processed_items:
                 raise ValueError("successful output_items must match processed items")
-            if len(expected_output) != len(set(expected_output)):
+            if len(expected_processed_items) != len(set(expected_processed_items)):
                 raise ValueError("successful output_items must be unique")
         else:
             failed_indexes = [
@@ -229,6 +229,24 @@ class AutomationResult:
                 raise ValueError("steps after a failure must be skipped")
             if self.output_items:
                 raise ValueError("failed runs must not publish output_items")
+
+        for step_result in self.steps:
+            if step_result.status is not StepStatus.SUCCEEDED:
+                continue
+            processed_items = (
+                ()
+                if step_result.step is StepName.PREPARE
+                else expected_processed_items
+            )
+            expected_evidence = _success_evidence(
+                step_result.step,
+                self.request,
+                processed_items,
+            )
+            if step_result.evidence != expected_evidence:
+                raise ValueError(
+                    "successful step evidence must match the enclosing request"
+                )
 
         expected_events: list[tuple[StepName, EventType]] = []
         for step in self.steps:
