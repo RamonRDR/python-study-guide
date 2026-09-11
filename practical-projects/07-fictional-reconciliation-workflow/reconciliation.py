@@ -206,6 +206,8 @@ class ReconciliationItem:
         if self.difference != expected_difference:
             raise ValueError("difference must equal left amount minus right amount")
 
+        object.__setattr__(self, "difference", expected_difference)
+
         if self.status is ReconciliationStatus.MATCHED and self.difference != Decimal(
             "0.00"
         ):
