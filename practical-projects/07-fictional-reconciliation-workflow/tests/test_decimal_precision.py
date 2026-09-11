@@ -3,7 +3,13 @@ from decimal import Decimal, localcontext
 import pytest
 
 import reconciliation
-from reconciliation import MAX_INTEGER_DIGITS, ReconciliationRecord, reconcile
+from reconciliation import (
+    MAX_INTEGER_DIGITS,
+    ReconciliationItem,
+    ReconciliationRecord,
+    ReconciliationStatus,
+    reconcile,
+)
 
 
 def record(reference_id: str, amount: str) -> ReconciliationRecord:
@@ -71,6 +77,23 @@ def test_record_discards_long_fractional_zero_tail_before_integer_conversion(
     assert item.amount == Decimal("1.00")
     assert observed_digit_lengths
     assert max(observed_digit_lengths) <= 3
+
+
+def test_reconciliation_item_canonicalizes_negative_zero_difference() -> None:
+    left = record("REF-001", "10.00")
+    right = record("REF-001", "10.00")
+
+    item = ReconciliationItem(
+        reference_id="REF-001",
+        status=ReconciliationStatus.MATCHED,
+        left=left,
+        right=right,
+        difference=Decimal("-0.00"),
+    )
+
+    assert item.difference == Decimal("0.00")
+    assert item.difference.as_tuple().sign == 0
+    assert item.difference.as_tuple().exponent == -2
 
 
 def test_reconcile_preserves_difference_beyond_decimal_context_precision() -> None:
