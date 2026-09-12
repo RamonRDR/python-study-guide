@@ -146,6 +146,30 @@ def test_result_rejects_success_when_processing_creates_duplicates() -> None:
         )
 
 
+def test_result_rejects_verify_success_when_processing_creates_duplicates() -> None:
+    collision_request = AutomationRequest("RUN", ("ß", "SS"))
+    finalize_failure = run_automation(
+        AutomationRequest("RUN", ("alpha", "beta")),
+        policy=SimulationPolicy(fail_at=StepName.FINALIZE),
+    )
+
+    assert tuple(step.status for step in finalize_failure.steps) == (
+        StepStatus.SUCCEEDED,
+        StepStatus.SUCCEEDED,
+        StepStatus.SUCCEEDED,
+        StepStatus.FAILED,
+    )
+
+    with pytest.raises(ValueError, match="unique"):
+        AutomationResult(
+            request=collision_request,
+            status=RunStatus.FAILED,
+            steps=finalize_failure.steps,
+            events=finalize_failure.events,
+            output_items=(),
+        )
+
+
 def test_result_rejects_evidence_from_another_run() -> None:
     old_result = run_automation(AutomationRequest("OLD", ("alpha",)))
     new_request = AutomationRequest("NEW", ("ALPHA",))
