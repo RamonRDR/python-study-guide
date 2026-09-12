@@ -371,6 +371,10 @@ Uma falha não deve apagar o que já foi concluído. Preservar evidência torna 
 
 Entrada ruim deve falhar imediatamente. Uma requisição válida que falha durante execução deve retornar um resultado de falha estruturado.
 
+### Simular sistemas externos de forma literal demais
+
+Credenciais falsas, telas SAP falsas, `sleep()` e mocks de rede podem desviar a atenção da lição principal. Este projeto modela a fronteira de orquestração em vez de imitar sistemas externos.
+
 ## Testes
 
 Execute a suíte focada a partir da raiz do repositório:
