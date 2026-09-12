@@ -160,6 +160,26 @@ def test_result_rejects_evidence_from_another_run() -> None:
         )
 
 
+def test_result_rejects_event_messages_from_a_different_failure() -> None:
+    request = AutomationRequest("RUN-UNICODE", ("ß", "SS"))
+    collision_result = run_automation(request)
+    injected_result = run_automation(
+        request,
+        policy=SimulationPolicy(fail_at=StepName.VERIFY),
+    )
+
+    assert collision_result.steps[2].message != injected_result.steps[2].message
+
+    with pytest.raises(ValueError, match="events"):
+        AutomationResult(
+            request=request,
+            status=collision_result.status,
+            steps=collision_result.steps,
+            events=injected_result.events,
+            output_items=collision_result.output_items,
+        )
+
+
 def test_result_rejects_non_contiguous_event_sequence() -> None:
     valid = run_automation(make_request())
     first = valid.events[0]
