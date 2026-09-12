@@ -248,28 +248,43 @@ class AutomationResult:
                     "successful step evidence must match the enclosing request"
                 )
 
-        expected_events: list[tuple[StepName, EventType]] = []
+        expected_events: list[tuple[StepName, EventType, str]] = []
         for step in self.steps:
             if step.status is StepStatus.SUCCEEDED:
                 expected_events.extend(
                     [
-                        (step.step, EventType.STARTED),
-                        (step.step, EventType.SUCCEEDED),
+                        (
+                            step.step,
+                            EventType.STARTED,
+                            f"{step.step.value} started.",
+                        ),
+                        (step.step, EventType.SUCCEEDED, step.message),
                     ]
                 )
             elif step.status is StepStatus.FAILED:
                 expected_events.extend(
                     [
-                        (step.step, EventType.STARTED),
-                        (step.step, EventType.FAILED),
+                        (
+                            step.step,
+                            EventType.STARTED,
+                            f"{step.step.value} started.",
+                        ),
+                        (step.step, EventType.FAILED, step.message),
                     ]
                 )
             else:
-                expected_events.append((step.step, EventType.SKIPPED))
+                expected_events.append(
+                    (step.step, EventType.SKIPPED, step.message)
+                )
 
-        actual_events = [(event.step, event.event_type) for event in self.events]
+        actual_events = [
+            (event.step, event.event_type, event.message)
+            for event in self.events
+        ]
         if actual_events != expected_events:
-            raise ValueError("events must match the canonical step lifecycle")
+            raise ValueError(
+                "events must match the canonical step lifecycle and messages"
+            )
         if tuple(event.sequence for event in self.events) != tuple(
             range(1, len(self.events) + 1)
         ):
