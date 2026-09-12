@@ -201,13 +201,18 @@ class AutomationResult:
 
         expected_processed_items = tuple(item.upper() for item in self.request.items)
         statuses = tuple(step.status for step in self.steps)
+        verify_result = self.steps[STEP_ORDER.index(StepName.VERIFY)]
+        if (
+            verify_result.status is StepStatus.SUCCEEDED
+            and len(expected_processed_items) != len(set(expected_processed_items))
+        ):
+            raise ValueError("successful verify requires unique processed items")
+
         if self.status is RunStatus.SUCCEEDED:
             if any(status is not StepStatus.SUCCEEDED for status in statuses):
                 raise ValueError("successful runs require every step to succeed")
             if self.output_items != expected_processed_items:
                 raise ValueError("successful output_items must match processed items")
-            if len(expected_processed_items) != len(set(expected_processed_items)):
-                raise ValueError("successful output_items must be unique")
         else:
             failed_indexes = [
                 index
