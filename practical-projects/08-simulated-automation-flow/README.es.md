@@ -371,6 +371,10 @@ Un fallo no debe borrar lo que ya tuvo éxito. Conservar evidencia hace explicab
 
 La entrada incorrecta debe fallar inmediatamente. Una solicitud válida que falla durante la ejecución debe devolver un resultado de fallo estructurado.
 
+### Simular sistemas externos de forma demasiado literal
+
+Credenciales falsas, pantallas SAP falsas, `sleep()` y mocks de red pueden desviar la atención de la lección principal. Este proyecto modela el límite de orquestación en lugar de imitar sistemas externos.
+
 ## Pruebas
 
 Ejecuta la suite enfocada desde la raíz del repositorio:
