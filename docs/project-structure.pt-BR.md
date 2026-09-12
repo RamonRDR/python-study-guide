@@ -413,17 +413,26 @@ python-study-guide/
 │   │       ├── conftest.py
 │   │       ├── test_atomic_move.py
 │   │       └── test_file_organizer.py
-│   └── 07-fictional-reconciliation-workflow/
+│   ├── 07-fictional-reconciliation-workflow/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   ├── demo.py
+│   │   ├── reconciliation.py
+│   │   └── tests/
+│   │       ├── conftest.py
+│   │       ├── test_decimal_precision.py
+│   │       ├── test_reconciliation.py
+│   │       └── test_text_safety.py
+│   └── 08-simulated-automation-flow/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
+│       ├── automation_flow.py
 │       ├── demo.py
-│       ├── reconciliation.py
 │       └── tests/
 │           ├── conftest.py
-│           ├── test_decimal_precision.py
-│           ├── test_reconciliation.py
-│           └── test_text_safety.py
+│           └── test_automation_flow.py
 ├── program-flow/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -640,7 +649,7 @@ python-study-guide/
 - `external-libraries/`: trilha completa da Fase 9 para pacotes de terceiros. Contém capítulos multilíngues revisados de pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x e pytest 9.1.x, com vinte exemplos executáveis determinísticos no total. A fase cobre transformações tabulares, automação de workbooks do Excel, clientes HTTP/API e contratos de testes automatizados; a Fase 10 de projetos práticos vem a seguir.
 - `functions/`: trilha completa da Fase 5. Os Capítulos 01–09 cobrem definição e chamada de funções, entradas obrigatórias, valores retornados, escopo e busca de nomes, type hints para interfaces de funções, valores padrão incluindo avaliação no momento da definição e segurança com padrões mutáveis, coleta de argumentos posicionais e nomeados de quantidade variável com `*args` e `**kwargs`, composição por funções auxiliares e coordenadoras com dependências explícitas e grafos simples de chamadas e rastreamento explícito do fluxo de dados entre chamadas, incluindo vínculos de parâmetros, reatribuição versus mutação, `None`, resultados em tupla e passagens por `return`, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos.
 - `fundamentals/`: trilha completa da Fase 1. Seus seis capítulos ensinam como o Python executa um programa, como usar `print()` e `input()`, como funcionam atribuição e nomes, como reconhecer e inspecionar tipos de dados embutidos comuns e como converter valores compatíveis de forma deliberada, com explicações multilíngues alinhadas e exemplos executáveis.
-- `practical-projects/`: espaço de Projetos Práticos da Fase 10. Os Projetos 01–06 estão concluídos e o Projeto 07 Fluxo Fictício de Conciliação está em andamento; o Projeto 08 Fluxo Simulado de Automação permanece planejado. O Projeto 06 adiciona descoberta rasa determinística, planejamento imutável, políticas de colisão, fronteiras de symlink, verificações de identidade do filesystem, diretórios ancorados por descriptors, nomes de staging limitados, commit atômico no-replace no Linux, demo determinístico e testes focados de regressão. O Projeto 07 adiciona modelos imutáveis de conciliação, aritmética exata em centavos inteiros, matching e ordenação determinísticos, rejeição de duplicidades, estados explícitos de conciliação, invariantes validadas de relatório, renderização textual estável e testes focados de regressão para precisão e segurança.
+- `practical-projects/`: espaço de Projetos Práticos da Fase 10. Os Projetos 01–07 estão concluídos e o Projeto 08 Fluxo Simulado de Automação está em andamento como último projeto planejado. O Projeto 07 adiciona modelos imutáveis de conciliação, aritmética exata em centavos inteiros, matching e ordenação determinísticos, rejeição de duplicidades, estados explícitos de conciliação, invariantes validadas de relatório, renderização textual estável e testes focados de regressão para precisão e segurança. O Projeto 08 adiciona requisições e resultados imutáveis de automação, plano fixo de execução `prepare → process → verify → finalize`, logs determinísticos de eventos, evidências estruturadas, injeção controlada de falha, propagação fail-fast, verificação pós-processamento, semântica de etapas puladas, renderização estável e testes de regressão focados em invariantes sem integrações externas.
 - `program-flow/`: trilha completa da Fase 4. Os Capítulos 01–08 ensinam condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, ramificação condicional com `if`, `elif` e `else`, correspondência de padrões estruturais, repetição guiada por iteráveis com `for`, progressões numéricas com `range()`, iteração com posição usando `enumerate()`, iteração paralela com `zip()` incluindo validação explícita de comprimentos iguais com `strict=True`, repetição guiada por estado com `while`, controle deliberado de loops com `break`, `continue` e `else` de loop e como escolher e combinar ferramentas de fluxo do programa de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
 - `standard-library/`: trilha completa da Fase 8. Os Capítulos 01–09 cobrem fronteiras de filesystem com `pathlib`, modelagem de data/hora com `datetime`, contratos avançados de `json` e `csv`, `logging`, `collections` especializadas, `itertools`, `decimal` e contratos de `os`/`shutil` para estado do ambiente, travessia, metadados, cópia, movimentação, remoção recursiva, capacidades de plataforma e segurança de archives, em inglês, português do Brasil e espanhol com exemplos executáveis determinísticos.
