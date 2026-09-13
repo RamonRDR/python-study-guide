@@ -74,9 +74,9 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-La base del proyecto y las **Fases 1–9 están completadas**. La **Fase 10: Proyectos Prácticos está en progreso** con el primer proyecto integrado, el [Control de Gastos](../../practical-projects/01-expense-tracker/README.es.md).
+La base del proyecto y las **Fases 1–10 están completadas**. La **Fase 10: Proyectos Prácticos está completada**, con los ocho proyectos planificados implementados, documentados, probados, revisados e integrados.
 
-El Proyecto 01 combina modelado de datos validado, dinero exacto con `Decimal`, colecciones, persistencia JSON, exportación CSV y cobertura automatizada con pytest. El CI del repositorio ahora también ejecuta el árbol de pruebas de proyectos prácticos, además de los controles de calidad y ejemplos aprobados ya existentes.
+La fase de proyectos prácticos cierra la ruta combinando modelos de datos validados, flujos deterministas, aritmética exacta, persistencia e informes, automatización del filesystem, conciliación, orquestación, evidencia estructurada y cobertura automatizada de regresión a lo largo de los ocho proyectos.
 
 Consulta el [índice de Proyectos Prácticos](../../practical-projects/README.es.md), el [roadmap](../roadmap.es.md) o la [ruta completa de aprendizaje](../learning-path.es.md) para el estado actual del currículo.
 

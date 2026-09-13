@@ -74,9 +74,9 @@ Detailed explanations:
 
 ## Current status
 
-The project foundation and **Phases 1–9 are complete**. **Phase 10: Practical Projects is in progress** with the first integrated project, the [Expense Tracker](practical-projects/01-expense-tracker/README.md).
+The project foundation and **Phases 1–10 are complete**. **Phase 10: Practical Projects is complete** with all eight planned projects implemented, documented, tested, reviewed, and integrated.
 
-Project 01 combines validated data modeling, exact `Decimal` money, collections, JSON persistence, CSV export, and automated pytest coverage. Repository CI now runs the practical-project test tree in addition to the existing quality gates and approved examples.
+The practical-project phase closes by combining validated data models, deterministic workflows, exact arithmetic, persistence and reporting, filesystem automation, reconciliation, orchestration, structured evidence, and automated regression coverage across the eight projects.
 
 See the [Practical Projects index](practical-projects/README.md), [roadmap](docs/roadmap.en.md), or [full learning path](docs/learning-path.en.md) for the current curriculum status.
 
