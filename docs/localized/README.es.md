@@ -8,6 +8,43 @@
 
 [🇺🇸 English](../../README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
+<p>
+  <img alt="Python 3.13 CI" src="https://img.shields.io/badge/Python-3.13%20CI-3776AB?logo=python&amp;logoColor=white" />
+  <a href="../../LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-2E7D32" /></a>
+  <img alt="Documentation EN · PT-BR · ES" src="https://img.shields.io/badge/Documentation-EN%20%C2%B7%20PT--BR%20%C2%B7%20ES-4169E1" />
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml"><img alt="GitHub Actions Repository quality" src="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml/badge.svg" /></a>
+</p>
+
+<p>
+  <img alt="Python stdlib examples" src="https://img.shields.io/badge/Python%20stdlib-examples-3776AB?logo=python&amp;logoColor=white" />
+  <img alt="pandas 3.0.x" src="https://img.shields.io/badge/pandas-3.0.x-150458?logo=pandas&amp;logoColor=white" />
+  <img alt="openpyxl 3.1.x" src="https://img.shields.io/badge/openpyxl-3.1.x-227245" />
+  <img alt="requests 2.34.x" src="https://img.shields.io/badge/requests-2.34.x-4B0082" />
+  <img alt="pytest 9.1.x" src="https://img.shields.io/badge/pytest-9.1.x-0A9EDC?logo=pytest&amp;logoColor=white" />
+</p>
+
+<p>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="unittest 11 passing" src="https://img.shields.io/badge/unittest-11%20passing-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="pytest Linux 406 passing" src="https://img.shields.io/badge/pytest%20Linux-406%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="pytest Linux 1 skipped" src="https://img.shields.io/badge/pytest%20Linux-1%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="pytest Windows 63 passing" src="https://img.shields.io/badge/pytest%20Windows-63%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="pytest Windows 17 skipped" src="https://img.shields.io/badge/pytest%20Windows-17%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
+</p>
+
+<p>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="Examples 184 passed" src="https://img.shields.io/badge/Examples-184%20passed-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="Markdown links 2487 checked" src="https://img.shields.io/badge/Markdown%20links-2487%20checked-2486C4" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="Repository structure valid" src="https://img.shields.io/badge/Repository%20structure-valid-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="compileall passed" src="https://img.shields.io/badge/compileall-passed-2E7D32?logo=python&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/tree/main/practical-projects"><img alt="Practical projects 8 complete" src="https://img.shields.io/badge/Practical%20projects-8%20complete-7057FF" /></a>
+</p>
+
+<p>
+  <a href="https://github.com/RamonRDR/python-study-guide/tree/main/docs/ai-assisted-development"><img alt="ChatGPT / Codex AI-assisted" src="https://img.shields.io/badge/ChatGPT%20%2F%20Codex-AI--assisted-412991?logo=openai&amp;logoColor=white" /></a>
+</p>
+
+<sub>Los números de pruebas y calidad son resultados verificados en <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104">GitHub Actions (13/09/2026 UTC)</a>, no recuentos en tiempo real. Las suites pytest de Linux y Windows se solapan y no deben sumarse. Las versiones de dependencias representan rangos compatibles, no instalaciones fijadas.</sub>
+
 </div>
 
 Una guía práctica y multilingüe para estudiar Python, comprender cómo se conectan sus partes y aplicar los conceptos mediante ejemplos claros.
