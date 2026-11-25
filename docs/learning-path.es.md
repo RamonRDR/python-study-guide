@@ -6,7 +6,7 @@ Usa esta página como el **índice general del curso**. Todos los capítulos de 
 
 Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores pueden estar completadas antes que fases anteriores todavía planificadas, pero la numeración sigue representando la secuencia de aprendizaje recomendada.
 
-Currículo publicado: 75 lecciones y ocho proyectos prácticos (83 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
+Currículo publicado: 82 lecciones y ocho proyectos prácticos (90 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
 
 ## Leyenda de estado
 
@@ -169,7 +169,7 @@ Practica depuración manual, SDD, TDD y revisión aplicada a Python tras la Fase
 
 ## Fase 11: Resolución de problemas y live coding
 
-Se incluyen siete lecciones de fundamentos y una lección de retos con el piloto Contador de vocales; la expansión de retos y la práctica cronometrada siguen planificadas.
+Siete lecciones de fundamentos y ocho de retos ofrecen 22 ejercicios (11 fáciles, 11 medios). Retos difíciles y práctica cronometrada siguen planificados.
 
 [Abrir módulo](../problem-solving-and-live-coding/README.es.md)
 
@@ -181,6 +181,13 @@ Se incluyen siete lecciones de fundamentos y una lección de retos con el piloto
 6. [Algoritmos de ordenación](../problem-solving-and-live-coding/06-sorting-algorithms/README.es.md)
 7. [Patrones de resolución de problemas](../problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md)
 8. [Retos de cadenas y números](../problem-solving-and-live-coding/08-strings-and-numbers/README.es.md)
+9. [Retos de colecciones](../problem-solving-and-live-coding/09-collections/README.es.md)
+10. [Retos de funciones y recursividad](../problem-solving-and-live-coding/10-functions-and-recursion/README.es.md)
+11. [Retos de búsqueda y ordenación](../problem-solving-and-live-coding/11-searching-and-sorting/README.es.md)
+12. [Retos de algoritmos y complejidad](../problem-solving-and-live-coding/12-algorithms-and-complexity/README.es.md)
+13. [Retos de depuración](../problem-solving-and-live-coding/13-debugging-challenges/README.es.md)
+14. [Retos de refactorización](../problem-solving-and-live-coding/14-refactoring-challenges/README.es.md)
+15. [Retos mixtos](../problem-solving-and-live-coding/15-mixed-challenges/README.es.md)
 
 ## Navegación útil
 

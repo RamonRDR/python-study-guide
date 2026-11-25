@@ -1,0 +1,230 @@
+{
+  "id": "problem-solving.refactor-shipping-fee",
+  "chapter_id": "problem-solving.refactoring",
+  "difficulty": "easy",
+  "estimated_minutes": 15,
+  "title": {
+    "en": "Refactor Shipping Fee",
+    "pt-BR": "Refatorar taxa de entrega",
+    "es": "Refactorizar tarifa de envío"
+  },
+  "prompt": {
+    "en": "Refactor the working starter without changing behavior. For nonnegative order totals in fictional units, shipping is free at total >= 100 or for members; otherwise it costs 12. Use one clear combined condition and avoid duplicate returns.",
+    "pt-BR": "Refatore código inicial funcional sem mudar comportamento. Para totais não negativos em unidades fictícias, entrega é grátis em total >= 100 ou para membros; senão custa 12. Use condição combinada clara e evite retornos duplicados.",
+    "es": "Refactoriza código inicial funcional sin cambiar comportamiento. Para totales no negativos en unidades ficticias, envío es gratis con total >= 100 o para miembros; si no cuesta 12. Usa condición combinada clara y evita retornos duplicados."
+  },
+  "concepts": [
+    "conditions",
+    "conditionals",
+    "refactoring",
+    "automated-tests",
+    "functions",
+    "edge-cases"
+  ],
+  "constraints": {
+    "en": [
+      "Refactor the working starter without changing behavior. For nonnegative order totals in fictional units, shipping is free at total >= 100 or for members; otherwise it costs 12. Use one clear combined condition and avoid duplicate returns.",
+      "Only the stated input domain is graded; return the specified value and exact types, without printing, external dependencies or changing mutable arguments. Do not use the reference during the independent attempt.",
+      "Functional tests cannot certify readability or structural refactoring; review the diff manually."
+    ],
+    "pt-BR": [
+      "Refatore código inicial funcional sem mudar comportamento. Para totais não negativos em unidades fictícias, entrega é grátis em total >= 100 ou para membros; senão custa 12. Use condição combinada clara e evite retornos duplicados.",
+      "Somente o domínio declarado é avaliado; retorne valor e tipos exatos, sem imprimir, dependências externas nem modificar argumentos mutáveis. Não use a referência durante a tentativa independente.",
+      "Testes funcionais não certificam legibilidade nem refatoração estrutural; revise o diff manualmente."
+    ],
+    "es": [
+      "Refactoriza código inicial funcional sin cambiar comportamiento. Para totales no negativos en unidades ficticias, envío es gratis con total >= 100 o para miembros; si no cuesta 12. Usa condición combinada clara y evita retornos duplicados.",
+      "Solo se evalúa el dominio declarado; devuelve valor y tipos exactos, sin imprimir, dependencias externas ni modificar argumentos mutables. No uses la referencia durante el intento independiente.",
+      "Pruebas funcionales no certifican legibilidad ni refactorización estructural; revisa el diff manualmente."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        99,
+        false
+      ],
+      "expected": 12,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        100,
+        false
+      ],
+      "expected": 0,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/refactor-shipping-fee/starter.py",
+  "hints": {
+    "en": [
+      "Write boundary cases before editing.",
+      "Identify which two branches return the same value.",
+      "Combine the conditions with or; retain the fallback fee."
+    ],
+    "pt-BR": [
+      "Escreva casos de limite antes de editar.",
+      "Identifique dois ramos com mesmo retorno.",
+      "Combine condições com or e mantenha taxa alternativa."
+    ],
+    "es": [
+      "Escribe casos límite antes de editar.",
+      "Identifica dos ramas con mismo retorno.",
+      "Combina condiciones con or y conserva tarifa alternativa."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/refactor-shipping-fee/solution.py",
+  "explanation": {
+    "en": "The two free-shipping conditions form an inclusive OR. Consolidating them preserves output and makes the business rule visible.",
+    "pt-BR": "As duas condições de gratuidade formam OR inclusivo. Consolidá-las preserva saída e evidencia regra de negócio.",
+    "es": "Las dos condiciones de gratuidad forman OR inclusivo. Consolidarlas conserva salida y hace visible la regla de negocio."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(1)",
+      "pt-BR": "O(1)",
+      "es": "O(1)"
+    },
+    "space": {
+      "en": "O(1)",
+      "pt-BR": "O(1)",
+      "es": "O(1)"
+    },
+    "assumptions": {
+      "en": "Complexity uses the fixed-cost model for bounded integer operations and string labels of bounded length; n is input length, m the second input length, k distinct values, d decimal digits, e exponent, as applicable. Output storage is excluded from auxiliary space. Hash-based times are expected, not worst-case bounds.",
+      "pt-BR": "Complexidade usa modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado; n é tamanho da entrada, m tamanho da segunda, k valores distintos, d dígitos decimais, e expoente, conforme aplicável. Armazenamento da saída é excluído do espaço auxiliar. Tempos com hash são esperados, não limites de pior caso.",
+      "es": "Complejidad usa modelo de coste fijo para enteros acotados y etiquetas de longitud acotada; n es longitud de entrada, m longitud de segunda, k valores distintos, d dígitos decimales, e exponente, según corresponda. Se excluye almacenamiento de salida del espacio auxiliar. Tiempos con hash son esperados, no cotas de peor caso."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "shipping_fee",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          99,
+          false
+        ],
+        "expected": 12
+      },
+      {
+        "id": "case-02",
+        "args": [
+          100,
+          false
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-03",
+        "args": [
+          0,
+          true
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-04",
+        "args": [
+          100,
+          true
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-05",
+        "args": [
+          0,
+          false
+        ],
+        "expected": 12
+      },
+      {
+        "id": "case-06",
+        "args": [
+          101,
+          false
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+      "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+      "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+    },
+    {
+      "en": "program-flow/02-if-elif-and-else/README.md",
+      "pt-BR": "program-flow/02-if-elif-and-else/README.pt-BR.md",
+      "es": "program-flow/02-if-elif-and-else/README.es.md"
+    },
+    {
+      "en": "comments-and-documentation/06-pep8-and-readability/README.md",
+      "pt-BR": "comments-and-documentation/06-pep8-and-readability/README.pt-BR.md",
+      "es": "comments-and-documentation/06-pep8-and-readability/README.es.md"
+    },
+    {
+      "en": "manual-programming-practices/03-test-driven-development/README.md",
+      "pt-BR": "manual-programming-practices/03-test-driven-development/README.pt-BR.md",
+      "es": "manual-programming-practices/03-test-driven-development/README.es.md"
+    }
+  ],
+  "practice_mode": "refactor"
+}

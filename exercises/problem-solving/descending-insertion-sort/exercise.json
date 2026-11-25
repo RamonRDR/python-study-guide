@@ -1,0 +1,263 @@
+{
+  "id": "problem-solving.descending-insertion-sort",
+  "chapter_id": "problem-solving.searching-and-sorting",
+  "difficulty": "medium",
+  "estimated_minutes": 25,
+  "title": {
+    "en": "Descending Insertion Sort",
+    "pt-BR": "Insertion sort decrescente",
+    "es": "Insertion sort descendente"
+  },
+  "prompt": {
+    "en": "Return a new list of the same integers in descending order using insertion sort. Preserve duplicates and input; do not use sorted or list.sort.",
+    "pt-BR": "Retorne nova lista dos mesmos inteiros em ordem decrescente usando insertion sort. Preserve duplicados e entrada; não use sorted nem list.sort.",
+    "es": "Devuelve lista nueva de los mismos enteros en orden descendente usando insertion sort. Conserva duplicados y entrada; no uses sorted ni list.sort."
+  },
+  "concepts": [
+    "lists",
+    "list-methods",
+    "enumerate-range",
+    "sorting",
+    "functions",
+    "edge-cases"
+  ],
+  "constraints": {
+    "en": [
+      "Return a new list of the same integers in descending order using insertion sort. Preserve duplicates and input; do not use sorted or list.sort.",
+      "Only the stated input domain is graded; return the specified value and exact types, without printing, external dependencies or changing mutable arguments. Do not use the reference during the independent attempt."
+    ],
+    "pt-BR": [
+      "Retorne nova lista dos mesmos inteiros em ordem decrescente usando insertion sort. Preserve duplicados e entrada; não use sorted nem list.sort.",
+      "Somente o domínio declarado é avaliado; retorne valor e tipos exatos, sem imprimir, dependências externas nem modificar argumentos mutáveis. Não use a referência durante a tentativa independente."
+    ],
+    "es": [
+      "Devuelve lista nueva de los mismos enteros en orden descendente usando insertion sort. Conserva duplicados y entrada; no uses sorted ni list.sort.",
+      "Solo se evalúa el dominio declarado; devuelve valor y tipos exactos, sin imprimir, dependencias externas ni modificar argumentos mutables. No uses la referencia durante el intento independiente."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        []
+      ],
+      "expected": [],
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          3,
+          1,
+          2
+        ]
+      ],
+      "expected": [
+        3,
+        2,
+        1
+      ],
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/descending-insertion-sort/starter.py",
+  "hints": {
+    "en": [
+      "Copy the list and treat the first element as a sorted prefix.",
+      "Save each next value and shift smaller prefix values to the right.",
+      "Insert into the resulting gap; equal values need not shift."
+    ],
+    "pt-BR": [
+      "Copie lista e trate primeiro elemento como prefixo ordenado.",
+      "Guarde cada próximo valor e desloque valores menores do prefixo à direita.",
+      "Insira na lacuna resultante; iguais não precisam deslocar."
+    ],
+    "es": [
+      "Copia lista y trata primer elemento como prefijo ordenado.",
+      "Guarda cada valor siguiente y desplaza valores menores del prefijo a la derecha.",
+      "Inserta en el hueco resultante; iguales no necesitan desplazarse."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/descending-insertion-sort/solution.py",
+  "explanation": {
+    "en": "Changing the comparison from greater to smaller reverses the prefix ordering while preserving the insertion-sort invariant. A copy protects input.",
+    "pt-BR": "Trocar comparação de maior para menor inverte ordem do prefixo mantendo invariante do insertion sort. A cópia protege entrada.",
+    "es": "Cambiar comparación de mayor a menor invierte orden del prefijo manteniendo invariante de insertion sort. La copia protege entrada."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n²)",
+      "pt-BR": "O(n²)",
+      "es": "O(n²)"
+    },
+    "space": {
+      "en": "O(1) excluding output",
+      "pt-BR": "O(1) excluindo saída",
+      "es": "O(1) excluyendo salida"
+    },
+    "assumptions": {
+      "en": "Complexity uses the fixed-cost model for bounded integer operations and string labels of bounded length; n is input length, m the second input length, k distinct values, d decimal digits, e exponent, as applicable. Output storage is excluded from auxiliary space. Hash-based times are expected, not worst-case bounds.",
+      "pt-BR": "Complexidade usa modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado; n é tamanho da entrada, m tamanho da segunda, k valores distintos, d dígitos decimais, e expoente, conforme aplicável. Armazenamento da saída é excluído do espaço auxiliar. Tempos com hash são esperados, não limites de pior caso.",
+      "es": "Complejidad usa modelo de coste fijo para enteros acotados y etiquetas de longitud acotada; n es longitud de entrada, m longitud de segunda, k valores distintos, d dígitos decimales, e exponente, según corresponda. Se excluye almacenamiento de salida del espacio auxiliar. Tiempos con hash son esperados, no cotas de peor caso."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "descending_sort",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "id": "case-02",
+        "args": [
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "id": "case-03",
+        "args": [
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "case-04",
+        "args": [
+          [
+            0,
+            -2,
+            4
+          ]
+        ],
+        "expected": [
+          4,
+          0,
+          -2
+        ]
+      },
+      {
+        "id": "case-05",
+        "args": [
+          [
+            9
+          ]
+        ],
+        "expected": [
+          9
+        ]
+      },
+      {
+        "id": "case-06",
+        "args": [
+          [
+            4,
+            3,
+            2
+          ]
+        ],
+        "expected": [
+          4,
+          3,
+          2
+        ]
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "collections/01-list-creation-and-indexing/README.md",
+      "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+      "es": "collections/01-list-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "collections/02-modifying-lists-and-methods/README.md",
+      "pt-BR": "collections/02-modifying-lists-and-methods/README.pt-BR.md",
+      "es": "collections/02-modifying-lists-and-methods/README.es.md"
+    },
+    {
+      "en": "program-flow/05-range-enumerate-and-zip/README.md",
+      "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+      "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/06-sorting-algorithms/README.md",
+      "pt-BR": "problem-solving-and-live-coding/06-sorting-algorithms/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/06-sorting-algorithms/README.es.md"
+    }
+  ],
+  "practice_mode": "implement"
+}

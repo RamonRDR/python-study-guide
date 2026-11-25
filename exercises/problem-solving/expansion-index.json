@@ -1,0 +1,131 @@
+{
+  "status": "preliminary",
+  "exercises": [
+    {
+      "id": "problem-solving.ascii-digit-counter",
+      "path": "exercises/problem-solving/ascii-digit-counter/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/08-strings-and-numbers",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.sum-digits",
+      "path": "exercises/problem-solving/sum-digits/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/08-strings-and-numbers",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.literal-palindrome",
+      "path": "exercises/problem-solving/literal-palindrome/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/08-strings-and-numbers",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.unique-in-order",
+      "path": "exercises/problem-solving/unique-in-order/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/09-collections",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.label-counts",
+      "path": "exercises/problem-solving/label-counts/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/09-collections",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.first-repeated-label",
+      "path": "exercises/problem-solving/first-repeated-label/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/09-collections",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.merge-inventory",
+      "path": "exercises/problem-solving/merge-inventory/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/09-collections",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.clamp-value",
+      "path": "exercises/problem-solving/clamp-value/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/10-functions-and-recursion",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.recursive-factorial",
+      "path": "exercises/problem-solving/recursive-factorial/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/10-functions-and-recursion",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.recursive-power",
+      "path": "exercises/problem-solving/recursive-power/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/10-functions-and-recursion",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.linear-first-index",
+      "path": "exercises/problem-solving/linear-first-index/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/11-searching-and-sorting",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.binary-insertion-index",
+      "path": "exercises/problem-solving/binary-insertion-index/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/11-searching-and-sorting",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.descending-insertion-sort",
+      "path": "exercises/problem-solving/descending-insertion-sort/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/11-searching-and-sorting",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.unordered-pair-count",
+      "path": "exercises/problem-solving/unordered-pair-count/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/12-algorithms-and-complexity",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.has-duplicate",
+      "path": "exercises/problem-solving/has-duplicate/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/12-algorithms-and-complexity",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.debug-positive-count",
+      "path": "exercises/problem-solving/debug-positive-count/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/13-debugging-challenges",
+      "practice_mode": "debug"
+    },
+    {
+      "id": "problem-solving.debug-negative-window",
+      "path": "exercises/problem-solving/debug-negative-window/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/13-debugging-challenges",
+      "practice_mode": "debug"
+    },
+    {
+      "id": "problem-solving.refactor-shipping-fee",
+      "path": "exercises/problem-solving/refactor-shipping-fee/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/14-refactoring-challenges",
+      "practice_mode": "refactor"
+    },
+    {
+      "id": "problem-solving.refactor-score-summary",
+      "path": "exercises/problem-solving/refactor-score-summary/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/14-refactoring-challenges",
+      "practice_mode": "refactor"
+    },
+    {
+      "id": "problem-solving.total-short-lengths",
+      "path": "exercises/problem-solving/total-short-lengths/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/15-mixed-challenges",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.most-frequent-label",
+      "path": "exercises/problem-solving/most-frequent-label/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/15-mixed-challenges",
+      "practice_mode": "implement"
+    }
+  ]
+}

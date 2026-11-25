@@ -1,0 +1,245 @@
+{
+  "id": "problem-solving.binary-insertion-index",
+  "chapter_id": "problem-solving.searching-and-sorting",
+  "difficulty": "medium",
+  "estimated_minutes": 22,
+  "title": {
+    "en": "Binary Insertion Index",
+    "pt-BR": "Índice de inserção binária",
+    "es": "Índice de inserción binaria"
+  },
+  "prompt": {
+    "en": "Given an ascending sorted integer list, return the first index where target could be inserted without breaking order, before equal values. Return len(values) if all are smaller. Use binary search; do not mutate or validate sortedness by scanning.",
+    "pt-BR": "Dada lista crescente ordenada de inteiros, retorne primeiro índice onde alvo pode ser inserido sem quebrar ordem, antes dos iguais. Retorne len(values) se todos menores. Use busca binária; não altere nem valide ordenação por varredura.",
+    "es": "Dada lista ordenada ascendente de enteros, devuelve primer índice donde insertar objetivo sin romper orden, antes de iguales. Devuelve len(values) si todos son menores. Usa búsqueda binaria; no modifiques ni valides orden recorriendo."
+  },
+  "concepts": [
+    "lists",
+    "while-loops",
+    "search",
+    "functions",
+    "edge-cases"
+  ],
+  "constraints": {
+    "en": [
+      "Given an ascending sorted integer list, return the first index where target could be inserted without breaking order, before equal values. Return len(values) if all are smaller. Use binary search; do not mutate or validate sortedness by scanning.",
+      "Only the stated input domain is graded; return the specified value and exact types, without printing, external dependencies or changing mutable arguments. Do not use the reference during the independent attempt."
+    ],
+    "pt-BR": [
+      "Dada lista crescente ordenada de inteiros, retorne primeiro índice onde alvo pode ser inserido sem quebrar ordem, antes dos iguais. Retorne len(values) se todos menores. Use busca binária; não altere nem valide ordenação por varredura.",
+      "Somente o domínio declarado é avaliado; retorne valor e tipos exatos, sem imprimir, dependências externas nem modificar argumentos mutáveis. Não use a referência durante a tentativa independente."
+    ],
+    "es": [
+      "Dada lista ordenada ascendente de enteros, devuelve primer índice donde insertar objetivo sin romper orden, antes de iguales. Devuelve len(values) si todos son menores. Usa búsqueda binaria; no modifiques ni valides orden recorriendo.",
+      "Solo se evalúa el dominio declarado; devuelve valor y tipos exactos, sin imprimir, dependencias externas ni modificar argumentos mutables. No uses la referencia durante el intento independiente."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        [],
+        3
+      ],
+      "expected": 0,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          2,
+          4,
+          4,
+          7
+        ],
+        4
+      ],
+      "expected": 1,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/binary-insertion-index/starter.py",
+  "hints": {
+    "en": [
+      "Use a half-open interval from zero to len(values).",
+      "Discard through mid only when the middle value is strictly smaller.",
+      "When the bounds meet, return that index without accessing the list again."
+    ],
+    "pt-BR": [
+      "Use intervalo semiaberto de zero a len(values).",
+      "Descarte até mid apenas quando valor central for estritamente menor.",
+      "Quando limites se igualarem, retorne índice sem acessar lista novamente."
+    ],
+    "es": [
+      "Usa intervalo semiabierto de cero a len(values).",
+      "Descarta hasta mid solo si valor central es estrictamente menor.",
+      "Cuando límites coincidan, devuelve índice sin acceder otra vez a lista."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/binary-insertion-index/solution.py",
+  "explanation": {
+    "en": "The shrinking interval retains the first position whose value is not smaller, or the end sentinel. Unlike exact search, an absent value still has an insertion index.",
+    "pt-BR": "Intervalo decrescente mantém primeira posição cujo valor não é menor, ou sentinela final. Ao contrário da busca exata, valor ausente ainda tem índice de inserção.",
+    "es": "El intervalo decreciente mantiene primera posición cuyo valor no es menor, o centinela final. A diferencia de búsqueda exacta, valor ausente tiene índice de inserción."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(log n)",
+      "pt-BR": "O(log n)",
+      "es": "O(log n)"
+    },
+    "space": {
+      "en": "O(1)",
+      "pt-BR": "O(1)",
+      "es": "O(1)"
+    },
+    "assumptions": {
+      "en": "Complexity uses the fixed-cost model for bounded integer operations and string labels of bounded length; n is input length, m the second input length, k distinct values, d decimal digits, e exponent, as applicable. Output storage is excluded from auxiliary space. Hash-based times are expected, not worst-case bounds.",
+      "pt-BR": "Complexidade usa modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado; n é tamanho da entrada, m tamanho da segunda, k valores distintos, d dígitos decimais, e expoente, conforme aplicável. Armazenamento da saída é excluído do espaço auxiliar. Tempos com hash são esperados, não limites de pior caso.",
+      "es": "Complejidad usa modelo de coste fijo para enteros acotados y etiquetas de longitud acotada; n es longitud de entrada, m longitud de segunda, k valores distintos, d dígitos decimales, e exponente, según corresponda. Se excluye almacenamiento de salida del espacio auxiliar. Tiempos con hash son esperados, no cotas de peor caso."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "insertion_index",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          [],
+          3
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-02",
+        "args": [
+          [
+            2,
+            4,
+            4,
+            7
+          ],
+          4
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-03",
+        "args": [
+          [
+            2,
+            4,
+            7
+          ],
+          5
+        ],
+        "expected": 2
+      },
+      {
+        "id": "case-04",
+        "args": [
+          [
+            2,
+            4
+          ],
+          1
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-05",
+        "args": [
+          [
+            2,
+            4
+          ],
+          9
+        ],
+        "expected": 2
+      },
+      {
+        "id": "case-06",
+        "args": [
+          [
+            4,
+            4,
+            4
+          ],
+          4
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "collections/01-list-creation-and-indexing/README.md",
+      "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+      "es": "collections/01-list-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "program-flow/06-while-loops-and-state-driven-repetition/README.md",
+      "pt-BR": "program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md",
+      "es": "program-flow/06-while-loops-and-state-driven-repetition/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/05-searching-algorithms/README.md",
+      "pt-BR": "problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/05-searching-algorithms/README.es.md"
+    }
+  ],
+  "practice_mode": "implement"
+}

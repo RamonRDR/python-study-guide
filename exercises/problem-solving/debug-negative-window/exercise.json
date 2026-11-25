@@ -1,0 +1,258 @@
+{
+  "id": "problem-solving.debug-negative-window",
+  "chapter_id": "problem-solving.debugging",
+  "difficulty": "medium",
+  "estimated_minutes": 22,
+  "title": {
+    "en": "Debug a Negative Window",
+    "pt-BR": "Depurar janela negativa",
+    "es": "Depurar ventana negativa"
+  },
+  "prompt": {
+    "en": "Fix the supplied fixed-window algorithm. Given an integer list and valid size 1 <= size <= len(values), return the largest sum of exactly size consecutive elements. All-negative lists are valid. Preserve input and use a single rolling window.",
+    "pt-BR": "Corrija algoritmo de janela fixa fornecido. Dados lista de inteiros e size válido 1 <= size <= len(values), retorne maior soma de exatamente size elementos consecutivos. Listas só negativas são válidas. Preserve entrada e use uma janela móvel.",
+    "es": "Corrige algoritmo de ventana fija suministrado. Dados lista de enteros y size válido 1 <= size <= len(values), devuelve mayor suma de exactamente size elementos consecutivos. Listas solo negativas son válidas. Conserva entrada y usa una ventana móvil."
+  },
+  "concepts": [
+    "lists",
+    "enumerate-range",
+    "problem-solving-patterns",
+    "debugging",
+    "functions",
+    "edge-cases"
+  ],
+  "constraints": {
+    "en": [
+      "Fix the supplied fixed-window algorithm. Given an integer list and valid size 1 <= size <= len(values), return the largest sum of exactly size consecutive elements. All-negative lists are valid. Preserve input and use a single rolling window.",
+      "Only the stated input domain is graded; return the specified value and exact types, without printing, external dependencies or changing mutable arguments. Do not use the reference during the independent attempt."
+    ],
+    "pt-BR": [
+      "Corrija algoritmo de janela fixa fornecido. Dados lista de inteiros e size válido 1 <= size <= len(values), retorne maior soma de exatamente size elementos consecutivos. Listas só negativas são válidas. Preserve entrada e use uma janela móvel.",
+      "Somente o domínio declarado é avaliado; retorne valor e tipos exatos, sem imprimir, dependências externas nem modificar argumentos mutáveis. Não use a referência durante a tentativa independente."
+    ],
+    "es": [
+      "Corrige algoritmo de ventana fija suministrado. Dados lista de enteros y size válido 1 <= size <= len(values), devuelve mayor suma de exactamente size elementos consecutivos. Listas solo negativas son válidas. Conserva entrada y usa una ventana móvil.",
+      "Solo se evalúa el dominio declarado; devuelve valor y tipos exactos, sin imprimir, dependencias externas ni modificar argumentos mutables. No uses la referencia durante el intento independiente."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        [
+          -4,
+          -2,
+          -3
+        ],
+        2
+      ],
+      "expected": -5,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          4,
+          -1,
+          3,
+          2
+        ],
+        2
+      ],
+      "expected": 5,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/debug-negative-window/starter.py",
+  "hints": {
+    "en": [
+      "Run the starter on [-4, -2, -3] with size 2.",
+      "Zero is not the sum of any valid window in that case.",
+      "Initialize best with the first actual window sum, then update it as the window moves."
+    ],
+    "pt-BR": [
+      "Execute inicial em [-4, -2, -3] com size 2.",
+      "Zero não é soma de nenhuma janela válida nesse caso.",
+      "Inicialize best com soma da primeira janela real e atualize ao mover."
+    ],
+    "es": [
+      "Ejecuta inicial con [-4, -2, -3] y size 2.",
+      "Cero no es suma de ninguna ventana válida en ese caso.",
+      "Inicializa best con suma de primera ventana real y actualiza al mover."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/debug-negative-window/solution.py",
+  "explanation": {
+    "en": "Initializing best at zero invents a nonexistent window when every sum is negative. The first actual sum establishes a valid baseline.",
+    "pt-BR": "Inicializar best em zero inventa janela inexistente quando todas somas são negativas. Primeira soma real estabelece base válida.",
+    "es": "Inicializar best en cero inventa ventana inexistente si todas sumas son negativas. Primera suma real establece base válida."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n)",
+      "pt-BR": "O(n)",
+      "es": "O(n)"
+    },
+    "space": {
+      "en": "O(1)",
+      "pt-BR": "O(1)",
+      "es": "O(1)"
+    },
+    "assumptions": {
+      "en": "Complexity uses the fixed-cost model for bounded integer operations and string labels of bounded length; n is input length, m the second input length, k distinct values, d decimal digits, e exponent, as applicable. Output storage is excluded from auxiliary space. Hash-based times are expected, not worst-case bounds.",
+      "pt-BR": "Complexidade usa modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado; n é tamanho da entrada, m tamanho da segunda, k valores distintos, d dígitos decimais, e expoente, conforme aplicável. Armazenamento da saída é excluído do espaço auxiliar. Tempos com hash são esperados, não limites de pior caso.",
+      "es": "Complejidad usa modelo de coste fijo para enteros acotados y etiquetas de longitud acotada; n es longitud de entrada, m longitud de segunda, k valores distintos, d dígitos decimales, e exponente, según corresponda. Se excluye almacenamiento de salida del espacio auxiliar. Tiempos con hash son esperados, no cotas de peor caso."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "max_window_sum",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          [
+            -4,
+            -2,
+            -3
+          ],
+          2
+        ],
+        "expected": -5
+      },
+      {
+        "id": "case-02",
+        "args": [
+          [
+            4,
+            -1,
+            3,
+            2
+          ],
+          2
+        ],
+        "expected": 5
+      },
+      {
+        "id": "case-03",
+        "args": [
+          [
+            1,
+            2,
+            3
+          ],
+          3
+        ],
+        "expected": 6
+      },
+      {
+        "id": "case-04",
+        "args": [
+          [
+            -8
+          ],
+          1
+        ],
+        "expected": -8
+      },
+      {
+        "id": "case-05",
+        "args": [
+          [
+            1,
+            -5,
+            2
+          ],
+          1
+        ],
+        "expected": 2
+      },
+      {
+        "id": "case-06",
+        "args": [
+          [
+            0,
+            0
+          ],
+          2
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "collections/01-list-creation-and-indexing/README.md",
+      "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+      "es": "collections/01-list-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "program-flow/05-range-enumerate-and-zip/README.md",
+      "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+      "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/07-problem-solving-patterns/README.md",
+      "pt-BR": "problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md"
+    },
+    {
+      "en": "manual-programming-practices/01-manual-coding-and-debugging/README.md",
+      "pt-BR": "manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md",
+      "es": "manual-programming-practices/01-manual-coding-and-debugging/README.es.md"
+    }
+  ],
+  "practice_mode": "debug"
+}
