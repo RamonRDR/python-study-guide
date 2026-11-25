@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Status as of 2026-11-25: Sprints 00–01 merged; Sprint 02 onboarding submitted for validation and review.
+Status as of 2026-11-25: Sprints 00–02 merged; Sprint 03 documentation and badge updates submitted for validation and review.
 
 | Task | Sprint | Dependency | Status |
 | --- | --- | --- | --- |
@@ -13,8 +13,8 @@ Status as of 2026-11-25: Sprints 00–01 merged; Sprint 02 onboarding submitted 
 | T00-05 Verify specification PR, CI and Codex findings | 00 | T00-04 | Done ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T00-06 Obtain approval and merge | 00 | T00-05 | Done ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T01-01 Inventory navigation and implement locale-safe links/tests | 01 | T00-06 | Done ([PR #88](https://github.com/RamonRDR/python-study-guide/pull/88)) |
-| T02-01 Author six Getting Started lessons, including project environments, dependency management and Git basics; link to Fundamentals and map future cross-guide references | 02 | T01-01 | Implemented; CI and review pending |
-| T03-01 Align README, roadmap, learning path, structure and badges | 03 | T02-01 | Pending |
+| T02-01 Author six Getting Started lessons, including project environments, dependency management and Git basics; link to Fundamentals and map future cross-guide references | 02 | T01-01 | Done ([PR #89](https://github.com/RamonRDR/python-study-guide/pull/89)) |
+| T03-01 Align README, roadmap, learning path, structure and badges | 03 | T02-01 | Implemented; CI and review pending |
 | T04-01 Add manual practice and engineering guidance | 04 | T03-01 | Pending |
 | T05-00 Map all FR-05 prerequisites to existing lessons and teach missing concepts in EN/PT-BR/ES before challenge publication | 05 | T04-01 | Pending |
 | T05-01 Pilot challenge records and grading tests | 05 | T05-00 | Pending |

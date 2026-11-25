@@ -15,6 +15,7 @@ Este roadmap acompanha tanto a trilha educacional quanto a fundação do reposit
 | Fase | Status | Resultado atual |
 |---|---|---|
 | 0. Fundação do projeto | Concluída | Fundação disponível, auditada e oficialmente concluída |
+| 00. Primeiros passos (ordem curricular) | Concluída | Seis aulas introdutórias revisadas em três idiomas |
 | 1. Fundamentos | Concluída | Seis capítulos revisados cobrem execução, entrada e saída, variáveis e nomes, tipos de dados embutidos, inspeção de tipos e conversão de tipos |
 | 2. Textos e números | Concluída | Quatro capítulos revisados cobrem criação de strings, métodos comuns, comportamento numérico e booleano, precisão de ponto flutuante e funções numéricas embutidas |
 | 3. Coleções | Concluída | Seis capítulos revisados cobrem listas, tuplas, dicionários, conjuntos e escolha da coleção pela intenção |
@@ -195,6 +196,17 @@ Cada projeto deve incluir:
 - cobertura automatizada dos comportamentos importantes;
 - desafios de extensão;
 - discussão de portfólio.
+
+## Phase II: Learning Hub Foundation (roadmap de engenharia)
+
+Esta fase de engenharia não renumera o currículo original. Sprints 00–02 integradas (PRs #87–#89). A Sprint 03 alinha documentação pública e evidências; o trabalho posterior permanece planejado. O repositório segue independente da futura plataforma web.
+
+| Currículo futuro | Status |
+| --- | --- |
+| 11. Resolução de problemas e live coding | Planejado |
+| 12. Preparação para entrevistas técnicas | Planejado |
+
+[Plano de implementação](specs/learning-hub-foundation/implementation-plan.pt-BR.md) · [Registro de integração de guias relacionados](specs/learning-hub-foundation/related-guides.pt-BR.md)
 
 ## Critérios contínuos de qualidade
 

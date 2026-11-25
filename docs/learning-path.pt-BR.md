@@ -6,13 +6,15 @@ Use esta página como o **sumário geral do curso**. Todos os capítulos de apre
 
 Se você está começando do zero, siga a ordem das fases. Algumas fases posteriores podem já estar concluídas antes de fases anteriores planejadas, mas a numeração continua representando a sequência de aprendizagem recomendada.
 
+Currículo publicado: 63 aulas e oito projetos práticos (71 entradas). Comece por Primeiros passos se nunca programou. Capítulos futuros são registrados no roadmap, não vinculados como aulas publicadas.
+
 ## Legenda de status
 
 - ✅ **Disponível:** publicado e revisado
 - 🚧 **Em andamento:** a fase já começou, mas ainda não está concluída
 - ⏳ **Planejado:** ainda não disponível como seção completa de aprendizagem
 
-## Ordem curricular 00 · Primeiros passos
+## Ordem curricular 00 · Primeiros passos ✅
 
 Este módulo introdutório vem antes da Fase 1 e não substitui a Fase 0 histórica (Fundação do projeto).
 

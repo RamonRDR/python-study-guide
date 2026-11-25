@@ -12,7 +12,10 @@ python-study-guide/
 │   ├── ISSUE_TEMPLATE/
 │   ├── workflows/
 │   │   └── quality-checks.yml
-│   └── pull_request_template.md
+│   ├── pull_request_template.md
+│   ├── pull_request_template.pt-BR.md
+│   └── pull_request_template.es.md
+├── .gitignore
 ├── AGENTS.md
 ├── AUTHORS.md
 ├── CODE_OF_CONDUCT.md
@@ -127,6 +130,8 @@ python-study-guide/
 │           ├── collection_tradeoffs.py
 │           └── study_workspace.py
 ├── docs/
+│   ├── adr/
+│   ├── specs/
 │   ├── ai-assisted-development/
 │   ├── localized/
 │   ├── learning-path.en.md
@@ -310,6 +315,35 @@ python-study-guide/
 │           ├── rebinding_and_mutation.py
 │           └── trace_score_pipeline.py
 ├── getting-started/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   ├── 01-install-python/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 02-configure-vscode/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 03-run-your-first-program/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── first_program.py
+│   ├── 04-virtual-environments/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 05-packages-and-dependencies/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   └── 06-git-and-version-control/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       └── README.es.md
 ├── fundamentals/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -503,6 +537,8 @@ python-study-guide/
 │           ├── select_and_classify.py
 │           └── state_driven_workflow.py
 ├── scripts/
+│   ├── check_chapter_navigation.py
+│   ├── check_documentation_languages.py
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
 │   ├── run_examples.py
@@ -625,6 +661,13 @@ python-study-guide/
 │           ├── numeric_summary.py
 │           └── rounding_behavior.py
 └── tests/
+    ├── README.md
+    ├── README.pt-BR.md
+    ├── README.es.md
+    ├── test_chapter_navigation.py
+    ├── test_check_internal_links.py
+    ├── test_documentation_languages.py
+    └── test_validate_repository_structure.py
 ```
 
 ## Guia dos arquivos da raiz
@@ -645,6 +688,7 @@ python-study-guide/
 - `comments-and-documentation/`: trilha completa da Fase 6. Há capítulos revisados sobre comentários, docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e PEP 8 e legibilidade, cada um em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `collections/`: trilha completa da Fase 3. Seus seis capítulos ensinam criação, leitura, mutação e métodos comuns de listas, cópia rasa, tuplas e imutabilidade, mapeamentos chave-valor e views de dicionários, unicidade e relações de conjuntos e como escolher entre listas, tuplas, dicionários e conjuntos de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `docs/`: trilhas completas de estudos, roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
+- `docs/adr/` e `docs/specs/`: decisões de arquitetura trilíngues, especificações da Phase II, registro de tarefas, critérios de aceite, contrato de integração e referências futuras entre guias.
 - `errors-files-and-modules/`: trilha completa da Fase 7. Os Capítulos 01–05 cobrem tratamento de exceções em runtime, levantamento deliberado e exceções personalizadas, I/O seguro de arquivos de texto com `open()` e `with`, parsing e escrita de TXT/CSV/JSON e organização do código por imports, módulos, pacotes regulares, contexto de execução e design de dependências, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: trilha completa da Fase 9 para pacotes de terceiros. Contém capítulos multilíngues revisados de pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x e pytest 9.1.x, com vinte exemplos executáveis determinísticos no total. A fase cobre transformações tabulares, automação de workbooks do Excel, clientes HTTP/API e contratos de testes automatizados; a Fase 10 de projetos práticos também está concluída.
@@ -653,7 +697,7 @@ python-study-guide/
 - `fundamentals/`: trilha completa da Fase 1. Seus seis capítulos ensinam como o Python executa um programa, como usar `print()` e `input()`, como funcionam atribuição e nomes, como reconhecer e inspecionar tipos de dados embutidos comuns e como converter valores compatíveis de forma deliberada, com explicações multilíngues alinhadas e exemplos executáveis.
 - `practical-projects/`: espaço completo de Projetos Práticos da Fase 10. Os Projetos 01–08 estão concluídos, revisados e integrados. O Projeto 07 adiciona modelos imutáveis de conciliação, aritmética exata em centavos inteiros, matching e ordenação determinísticos, rejeição de duplicidades, estados explícitos de conciliação, invariantes validadas de relatório, renderização textual estável e testes focados de regressão para precisão e segurança. O Projeto 08 encerra a fase com requisições e resultados imutáveis de automação, plano fixo de execução `prepare → process → verify → finalize`, logs determinísticos de eventos, evidências estruturadas, injeção controlada de falha, propagação fail-fast, verificação pós-processamento, semântica de etapas puladas, renderização estável e testes de regressão focados em invariantes sem integrações externas.
 - `program-flow/`: trilha completa da Fase 4. Os Capítulos 01–08 ensinam condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, ramificação condicional com `if`, `elif` e `else`, correspondência de padrões estruturais, repetição guiada por iteráveis com `for`, progressões numéricas com `range()`, iteração com posição usando `enumerate()`, iteração paralela com `zip()` incluindo validação explícita de comprimentos iguais com `strict=True`, repetição guiada por estado com `while`, controle deliberado de loops com `break`, `continue` e `else` de loop e como escolher e combinar ferramentas de fluxo do programa de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
-- `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions.
+- `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions. As ferramentas de qualidade verificam exemplos aprovados, links internos, paridade das famílias de idiomas, navegação de capítulos e caminhos obrigatórios. O job Windows cobre testes de File Organizer; o job Linux executa a suíte completa de projetos práticos.
 - `standard-library/`: trilha completa da Fase 8. Os Capítulos 01–09 cobrem fronteiras de filesystem com `pathlib`, modelagem de data/hora com `datetime`, contratos avançados de `json` e `csv`, `logging`, `collections` especializadas, `itertools`, `decimal` e contratos de `os`/`shutil` para estado do ambiente, travessia, metadados, cópia, movimentação, remoção recursiva, capacidades de plataforma e segurança de archives, em inglês, português do Brasil e espanhol com exemplos executáveis determinísticos.
 - `strings-and-numbers/`: trilha completa da Fase 2. Seus quatro capítulos revisados cobrem criação e indexação de strings, métodos comuns, comportamento de inteiros, ponto flutuante e booleanos, precisão de ponto flutuante e `round()`, `abs()`, `min()`, `max()` e `sum()` em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `tests/`: testes de regressão das ferramentas de qualidade e, futuramente, do conteúdo educacional.

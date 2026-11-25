@@ -6,13 +6,15 @@ Usa esta página como el **índice general del curso**. Todos los capítulos de 
 
 Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores pueden estar completadas antes que fases anteriores todavía planificadas, pero la numeración sigue representando la secuencia de aprendizaje recomendada.
 
+Currículo publicado: 63 lecciones y ocho proyectos prácticos (71 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
+
 ## Leyenda de estado
 
 - ✅ **Disponible:** publicado y revisado
 - 🚧 **En progreso:** la fase ya comenzó, pero todavía no está completa
 - ⏳ **Planificado:** aún no disponible como sección completa de aprendizaje
 
-## Orden curricular 00 · Primeros pasos
+## Orden curricular 00 · Primeros pasos ✅
 
 Este módulo introductorio viene antes de la Fase 1 y no sustituye la Fase 0 histórica (Base del proyecto).
 

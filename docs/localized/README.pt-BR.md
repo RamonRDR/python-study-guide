@@ -12,7 +12,7 @@
   <img alt="Python 3.13 CI" src="https://img.shields.io/badge/Python-3.13%20CI-3776AB?logo=python&amp;logoColor=white" />
   <a href="../../LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-2E7D32" /></a>
   <img alt="Documentation EN · PT-BR · ES" src="https://img.shields.io/badge/Documentation-EN%20%C2%B7%20PT--BR%20%C2%B7%20ES-4169E1" />
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml"><img alt="GitHub Actions Repository quality" src="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml/badge.svg" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml"><img alt="GitHub Actions Repository quality" src="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml/badge.svg?branch=main" /></a>
 </p>
 
 <p>
@@ -24,18 +24,18 @@
 </p>
 
 <p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="unittest 11 passing" src="https://img.shields.io/badge/unittest-11%20passing-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="pytest Linux 406 passing" src="https://img.shields.io/badge/pytest%20Linux-406%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="pytest Linux 1 skipped" src="https://img.shields.io/badge/pytest%20Linux-1%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="pytest Windows 63 passing" src="https://img.shields.io/badge/pytest%20Windows-63%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="pytest Windows 17 skipped" src="https://img.shields.io/badge/pytest%20Windows-17%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="unittest 26 passing" src="https://img.shields.io/badge/unittest-26%20passing-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="pytest Linux 406 passing" src="https://img.shields.io/badge/pytest%20Linux-406%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="pytest Linux 1 skipped" src="https://img.shields.io/badge/pytest%20Linux-1%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="pytest Windows 63 passing" src="https://img.shields.io/badge/pytest%20Windows-63%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="pytest Windows 17 skipped" src="https://img.shields.io/badge/pytest%20Windows-17%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
 </p>
 
 <p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="Examples 184 passed" src="https://img.shields.io/badge/Examples-184%20passed-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="Markdown links 2487 checked" src="https://img.shields.io/badge/Markdown%20links-2487%20checked-2486C4" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="Repository structure valid" src="https://img.shields.io/badge/Repository%20structure-valid-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104"><img alt="compileall passed" src="https://img.shields.io/badge/compileall-passed-2E7D32?logo=python&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="Examples 185 passed" src="https://img.shields.io/badge/Examples-185%20passed-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="Markdown links 3744 checked" src="https://img.shields.io/badge/Markdown%20links-3744%20checked-2486C4" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="Repository structure valid" src="https://img.shields.io/badge/Repository%20structure-valid-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="compileall passed" src="https://img.shields.io/badge/compileall-passed-2E7D32?logo=python&amp;logoColor=white" /></a>
   <a href="https://github.com/RamonRDR/python-study-guide/tree/main/practical-projects"><img alt="Practical projects 8 complete" src="https://img.shields.io/badge/Practical%20projects-8%20complete-7057FF" /></a>
 </p>
 
@@ -43,7 +43,12 @@
   <a href="https://github.com/RamonRDR/python-study-guide/tree/main/docs/ai-assisted-development"><img alt="ChatGPT / Codex AI-assisted" src="https://img.shields.io/badge/ChatGPT%20%2F%20Codex-AI--assisted-412991?logo=openai&amp;logoColor=white" /></a>
 </p>
 
-<sub>Os números de testes e qualidade são resultados verificados no <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/34731456104">GitHub Actions (13/09/2026 UTC)</a>, não contagens em tempo real. As suítes pytest de Linux e Windows se sobrepõem e não devem ser somadas. As versões das dependências representam faixas compatíveis, não instalações fixadas.</sub>
+<p>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="Chapter navigation 213 documents" src="https://img.shields.io/badge/Chapter%20navigation-213%20documents-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819"><img alt="Documentation language check passed" src="https://img.shields.io/badge/Documentation%20parity-passed-2E7D32" /></a>
+</p>
+
+<sub>Resultados verificados: <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/45681747819">GitHub Actions execução 777 (25/11/2026 UTC)</a>, PR #89, head <code>b096faf</code>, antes do squash merge. As contagens não são em tempo real. Windows corresponde ao subconjunto File Organizer da suíte Linux de projetos; não some os resultados. Os links internos são verificados pelo script do repositório, não a disponibilidade de URLs externas. Os badges de dependências representam faixas suportadas, não um lockfile.</sub>
 
 </div>
 
@@ -61,7 +66,7 @@ As explicações estão disponíveis em inglês, português brasileiro e espanho
 
 Nunca programou? Comece por [Primeiros passos](../../getting-started/README.pt-BR.md) para instalar Python, preparar seu editor, executar o primeiro arquivo, criar um ambiente isolado por projeto, gerenciar dependências e registrar alterações com Git. Depois siga a trilha completa.
 
-Cada capítulo segue uma estrutura consistente:
+Os capítulos centrais da linguagem seguem uma estrutura consistente (a introdução e os projetos práticos a adaptam ao seu objetivo):
 
 1. O que é
 2. Por que existe
@@ -75,9 +80,25 @@ Cada capítulo segue uma estrutura consistente:
 10. Checklist de revisão
 11. Resumo para consulta rápida
 
+## Pré-requisitos
+
+Um computador com instalação Python suportada e editor de texto basta para estudo local. Comece por Primeiros passos; use o interpretador verificado do projeto nos comandos. Instale pacotes externos somente quando a aula precisar. As bibliotecas posteriores usam o [contrato de dependências](../../requirements-external.txt) do repositório. Nenhum serviço pago ou assistente de IA é necessário.
+
 ## Roadmap de aprendizagem
 
-O guia cresce dos fundamentos do Python até funções, documentação, tratamento de erros, arquivos, biblioteca padrão, bibliotecas externas, testes e projetos práticos.
+| Ordem | Módulo | Aulas/projetos |
+| --- | --- | ---: |
+| 00 | [Primeiros passos](../../getting-started/README.pt-BR.md) | 6 |
+| 01 | [Fundamentos](../../fundamentals/README.pt-BR.md) | 6 |
+| 02 | [Textos e números](../../strings-and-numbers/README.pt-BR.md) | 4 |
+| 03 | [Coleções](../../collections/README.pt-BR.md) | 6 |
+| 04 | [Fluxo do programa](../../program-flow/README.pt-BR.md) | 8 |
+| 05 | [Funções](../../functions/README.pt-BR.md) | 9 |
+| 06 | [Comentários e documentação](../../comments-and-documentation/README.pt-BR.md) | 6 |
+| 07 | [Erros, arquivos e módulos](../../errors-files-and-modules/README.pt-BR.md) | 5 |
+| 08 | [Biblioteca padrão](../../standard-library/README.pt-BR.md) | 9 |
+| 09 | [Bibliotecas externas](../../external-libraries/README.pt-BR.md) | 4 |
+| 10 | [Projetos práticos](../../practical-projects/README.pt-BR.md) | 8 |
 
 - [Trilha completa de estudos: links diretos para todos os capítulos publicados](../learning-path.pt-BR.md)
 - [Roadmap em Português](../roadmap.pt-BR.md)
@@ -114,7 +135,11 @@ Explicações detalhadas:
 
 ## Status atual
 
-A fundação do projeto e as **Fases 1–10 estão concluídas**. A **Fase 10: Projetos Práticos está concluída**, com os oito projetos planejados implementados, documentados, testados, revisados e integrados.
+**Phase II: Learning Hub Foundation** está em andamento. Auditoria/especificação, navegação e Primeiros passos foram integrados nos PRs #87–#89. As próximas entregas incluem prática manual e engenharia, desafios de código, preparação para entrevistas técnicas, quizzes e contrato de conteúdo versionado. São planos, não aulas publicadas. O guia permanece independente; o futuro Learning Hub web e o Git Study Guide separado não são pré-requisitos.
+
+[Plano de implementação da Phase II](../specs/learning-hub-foundation/implementation-plan.pt-BR.md)
+
+A fundação original do projeto, **Primeiros passos (seis aulas)** e as **Fases 1–10 estão concluídas**. O currículo atual contém 63 aulas e oito projetos práticos, em 11 módulos e três idiomas. A **Fase 10: Projetos Práticos está concluída**, com os oito projetos planejados implementados, documentados, testados, revisados e integrados.
 
 A fase de projetos práticos encerra a trilha combinando modelos de dados validados, fluxos determinísticos, aritmética exata, persistência e relatórios, automação de filesystem, conciliação, orquestração, evidências estruturadas e cobertura automatizada de regressão ao longo dos oito projetos.
 
