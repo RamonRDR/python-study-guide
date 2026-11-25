@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../03-test-driven-development/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../03-test-driven-development/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md)
 <!-- /chapter-navigation:top -->
 
 ## Objetivo
@@ -75,5 +75,5 @@ Primero resuelve y explica sin implementación ni corrección generada por IA. U
 **Referencia rápida:** necesidad → spec → plan → rama → prueba/código/refactorización → revisión del diff → commit → PR/CI opcionales → aprobación humana → fusión. Para reglas de contribución, lee [CONTRIBUTING](../../docs/localized/CONTRIBUTING.es.md).
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../03-test-driven-development/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../03-test-driven-development/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md)
 <!-- /chapter-navigation:bottom -->

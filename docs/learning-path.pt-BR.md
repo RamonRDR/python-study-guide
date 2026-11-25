@@ -6,7 +6,7 @@ Use esta página como o **sumário geral do curso**. Todos os capítulos de apre
 
 Se você está começando do zero, siga a ordem das fases. Algumas fases posteriores podem já estar concluídas antes de fases anteriores planejadas, mas a numeração continua representando a sequência de aprendizagem recomendada.
 
-Currículo publicado: 67 aulas e oito projetos práticos (75 entradas). Comece por Primeiros passos se nunca programou. Capítulos futuros são registrados no roadmap, não vinculados como aulas publicadas.
+Currículo publicado: 74 aulas e oito projetos práticos (82 entradas). Comece por Primeiros passos se nunca programou. Capítulos futuros são registrados no roadmap, não vinculados como aulas publicadas.
 
 ## Legenda de status
 
@@ -158,7 +158,7 @@ A Fase 10 está concluída com oito projetos práticos revisados. O Projeto 01 i
 
 ## Módulo complementar · Prática manual e engenharia de software ✅
 
-Pratique depuração manual, SDD, TDD e revisão aplicada a Python após a Fase 10, antes da Fase 11 planejada. Este módulo não renumera as fases originais.
+Pratique depuração manual, SDD, TDD e revisão aplicada a Python após a Fase 10, antes da Fase 11. Este módulo não renumera as fases originais.
 
 [Abrir módulo complementar](../manual-programming-practices/README.pt-BR.md)
 
@@ -166,6 +166,20 @@ Pratique depuração manual, SDD, TDD e revisão aplicada a Python após a Fase 
 2. [Desenvolvimento orientado por especificações](../manual-programming-practices/02-specification-driven-development/README.pt-BR.md)
 3. [Desenvolvimento orientado por testes](../manual-programming-practices/03-test-driven-development/README.pt-BR.md)
 4. [Fluxo profissional de Python](../manual-programming-practices/04-professional-workflow/README.pt-BR.md)
+
+## Fase 11: Resolução de problemas e live coding
+
+Sete aulas de fundamentos estão incluídas; o banco de desafios e a prática cronometrada permanecem planejados.
+
+[Abrir módulo](../problem-solving-and-live-coding/README.pt-BR.md)
+
+1. [Fundamentos de resolução de problemas](../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md)
+2. [Restrições e casos de borda](../problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md)
+3. [Complexidade algorítmica](../problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md)
+4. [Recursividade](../problem-solving-and-live-coding/04-recursion/README.pt-BR.md)
+5. [Algoritmos de busca](../problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md)
+6. [Algoritmos de ordenação](../problem-solving-and-live-coding/06-sorting-algorithms/README.pt-BR.md)
+7. [Padrões de resolução de problemas](../problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md)
 
 ## Navegação útil
 
