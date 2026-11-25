@@ -17,11 +17,11 @@ Solicitud ficticia: "Mostrar cuántas páginas faltan en un libro." Pregunta: ¿
 | ID | Requisito |
 | --- | --- |
 | R1 | Función `remaining_pages(total_pages, pages_read)` devuelve entero igual al total menos leídas. |
-| R2 | Acepta solo enteros, excluyendo bool; si no, lanza TypeError. |
+| R2 | Acepta solo valores del tipo int nativo (no bool ni subclases de int); si no, lanza TypeError. |
 | R3 | Ambos enteros no negativos y pages_read no puede superar total_pages; si no, lanza ValueError. |
 | R4 | Sin prompts, impresión, archivos ni red dentro de la función; quien llama se ocupa de mostrar. |
 
-Fuera de alcance: base de datos, interfaz, porcentajes, progreso entre libros. Errores de tipo preceden a errores de valor si ocurren ambos. El contrato acepta subclases de int salvo bool; sin convertir cadenas o floats.
+Fuera de alcance: base de datos, interfaz, porcentajes, progreso entre libros. Errores de tipo preceden a errores de valor si ocurren ambos. La restricción al tipo exacto es una elección deliberada del ejercicio: evita comportamiento sobrescrito por subclases. Sin convertir cadenas o floats.
 
 ## 2. Criterios de aceptación
 

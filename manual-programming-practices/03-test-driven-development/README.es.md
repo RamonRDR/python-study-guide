@@ -41,7 +41,7 @@ En shell compatible descubre la prueba; usa comillas dobles para el patrón si e
 
 ## 2. Green: implementa solo el primer comportamiento
 
-Sustituye el provisional por `return total_pages - pages_read`. Ejecuta otra vez. Debe pasar. Añade pruebas AC2, después AC3 y AC4 en incrementos pequeños. Usa `self.assertRaises(ValueError)` o `self.assertRaises(TypeError)` como gestores de contexto. Ejecuta cada prueba nueva antes de implementar el comportamiento faltante; la resta sola fallará en pruebas de rangos inválidos. Valida tipos antes de rangos, incluido bool, porque bool es subclase de int. Añade prueba sin salida (AC5) con stdout/stderr redirigidos, luego comprueba precedencia de error de tipo y subclase int aceptada. No debilites una prueba que falla para que pase.
+Sustituye el provisional por `return total_pages - pages_read`. Ejecuta otra vez. Debe pasar. Añade pruebas AC2, después AC3 y AC4 en incrementos pequeños. Usa `self.assertRaises(ValueError)` o `self.assertRaises(TypeError)` como gestores de contexto. Ejecuta cada prueba nueva antes de implementar el comportamiento faltante; la resta sola fallará en pruebas de rangos inválidos. Valida los tipos exactos antes de los rangos con type(value) is int; esto excluye deliberadamente bool (subclase de int) y otras subclases de int. Añade prueba sin salida (AC5) con stdout/stderr redirigidos, luego comprueba precedencia de error de tipo y rechazo de una subclase de int. No debilites una prueba que falla para que pase.
 
 ## 3. Refactor: mejora y comprueba
 

@@ -17,11 +17,11 @@ Fictional request: "Show how many pages remain in a book." Ask: what if the book
 | ID | Requirement |
 | --- | --- |
 | R1 | Function `remaining_pages(total_pages, pages_read)` returns an integer equal to total minus read. |
-| R2 | Accept only integers, excluding bool; otherwise raise TypeError. |
+| R2 | Accept only built-in int values (not bool or int subclasses); otherwise raise TypeError. |
 | R3 | Both integers are nonnegative and pages_read cannot exceed total_pages; otherwise raise ValueError. |
 | R4 | No input prompts, printing, files or network inside the function; the caller owns display. |
 
-Out of scope: database, GUI, percentages, progress across books. Type errors take precedence over value errors when both occur. The contract accepts int subclasses except bool; no coercion of strings or floats.
+Out of scope: database, GUI, percentages, progress across books. Type errors take precedence over value errors when both occur. The exact-type restriction is a deliberate exercise choice: it avoids overridden subclass behavior. There is no coercion of strings or floats.
 
 ## 2. Acceptance criteria
 

@@ -41,7 +41,7 @@ On a supported shell this discovers the test; use double quotes around the patte
 
 ## 2. Green: implement only the first behavior
 
-Replace the placeholder with `return total_pages - pages_read`. Rerun the test. Expect it to pass. Add tests for AC2, then AC3 and AC4 in small increments. Use `self.assertRaises(ValueError)` or `self.assertRaises(TypeError)` as context managers. Run each new test before implementing its missing behavior; the subtraction alone will fail invalid-range tests. Check types before ranges, including bool, because bool is a subclass of int. Add the no-output test (AC5) using redirected stdout/stderr, then verify type-error precedence and the accepted int subclass case. Do not weaken a failing test to make it green.
+Replace the placeholder with `return total_pages - pages_read`. Rerun the test. Expect it to pass. Add tests for AC2, then AC3 and AC4 in small increments. Use `self.assertRaises(ValueError)` or `self.assertRaises(TypeError)` as context managers. Run each new test before implementing its missing behavior; the subtraction alone will fail invalid-range tests. Check exact types before ranges using type(value) is int; this deliberately excludes bool (a subclass of int) and other int subclasses. Add the no-output test (AC5) using redirected stdout/stderr, then verify type-error precedence and rejection of an int subclass. Do not weaken a failing test to make it green.
 
 ## 3. Refactor and verify
 

@@ -41,7 +41,7 @@ Em shell compatível, isso descobre o teste; use aspas duplas no padrão se nece
 
 ## 2. Green: implemente apenas o primeiro comportamento
 
-Substitua o provisório por `return total_pages - pages_read`. Execute novamente. Deve passar. Adicione testes de AC2, depois AC3 e AC4 em incrementos pequenos. Use `self.assertRaises(ValueError)` ou `self.assertRaises(TypeError)` como gerenciadores de contexto. Execute cada teste novo antes de implementar o comportamento faltante; a subtração sozinha falhará nos testes de intervalos inválidos. Valide tipos antes de intervalos, incluindo bool, pois bool é subclasse de int. Adicione teste de ausência de saída (AC5) com stdout/stderr redirecionados, depois verifique precedência de erro de tipo e caso de subclasse de int aceita. Não enfraqueça teste com falha para passar.
+Substitua o provisório por `return total_pages - pages_read`. Execute novamente. Deve passar. Adicione testes de AC2, depois AC3 e AC4 em incrementos pequenos. Use `self.assertRaises(ValueError)` ou `self.assertRaises(TypeError)` como gerenciadores de contexto. Execute cada teste novo antes de implementar o comportamento faltante; a subtração sozinha falhará nos testes de intervalos inválidos. Valide os tipos exatos antes dos intervalos com type(value) is int; isso exclui deliberadamente bool (subclasse de int) e outras subclasses de int. Adicione teste de ausência de saída (AC5) com stdout/stderr redirecionados, depois verifique precedência de erro de tipo e rejeição de subclasse de int. Não enfraqueça teste com falha para passar.
 
 ## 3. Refactor: melhore e verifique
 

@@ -32,11 +32,12 @@ class ReadingProgressTests(unittest.TestCase):
         with self.assertRaises(TypeError):
             remaining_pages(-1, "7")
 
-    def test_int_subclass(self):
+    def test_reject_int_subclass(self):
         class PageCount(int):
             pass
 
-        self.assertEqual(remaining_pages(PageCount(20), 7), 13)
+        with self.assertRaises(TypeError):
+            remaining_pages(PageCount(20), 7)
 
     def test_no_terminal_output(self):
         stdout = io.StringIO()
