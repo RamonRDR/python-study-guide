@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Status as of 2026-11-25: Sprints 00–03 merged; Sprint 04 complementary engineering module submitted for validation and review.
+Status as of 2026-11-25: Sprints 00–04 merged; Sprint 05 foundations submitted for review.
 
 | Task | Sprint | Dependency | Status |
 | --- | --- | --- | --- |
@@ -15,8 +15,8 @@ Status as of 2026-11-25: Sprints 00–03 merged; Sprint 04 complementary enginee
 | T01-01 Inventory navigation and implement locale-safe links/tests | 01 | T00-06 | Done ([PR #88](https://github.com/RamonRDR/python-study-guide/pull/88)) |
 | T02-01 Author six Getting Started lessons, including project environments, dependency management and Git basics; link to Fundamentals and map future cross-guide references | 02 | T01-01 | Done ([PR #89](https://github.com/RamonRDR/python-study-guide/pull/89)) |
 | T03-01 Align README, roadmap, learning path, structure and badges | 03 | T02-01 | Done ([PR #90](https://github.com/RamonRDR/python-study-guide/pull/90)) |
-| T04-01 Add manual practice and engineering guidance | 04 | T03-01 | Implemented; CI and review pending |
-| T05-00 Map all FR-05 prerequisites to existing lessons and teach missing concepts in EN/PT-BR/ES before challenge publication | 05 | T04-01 | Pending |
+| T04-01 Add manual practice and engineering guidance | 04 | T03-01 | Done ([PR #91](https://github.com/RamonRDR/python-study-guide/pull/91)) |
+| T05-00 Map all FR-05 prerequisites to existing lessons and teach missing concepts in EN/PT-BR/ES before challenge publication | 05 | T04-01 | Foundations and map submitted; review pending ([map](prerequisite-map.md)) |
 | T05-01 Pilot challenge records and grading tests | 05 | T05-00 | Pending |
 | T05-02 Expand challenges by topic/difficulty | 05 | T05-01 | Pending |
 | T06-01 Map remaining interview-specific prerequisite gaps and teach necessary concepts not covered in Sprint 05 | 06 | T05-02 | Pending |

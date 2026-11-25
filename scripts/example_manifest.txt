@@ -188,3 +188,12 @@ practical-projects/06-file-organizer/demo.py
 practical-projects/07-fictional-reconciliation-workflow/demo.py
 practical-projects/08-simulated-automation-flow/demo.py
 manual-programming-practices/03-test-driven-development/examples/reading_progress.py
+
+# Phase 11: deterministic foundation examples
+problem-solving-and-live-coding/01-problem-solving-fundamentals/examples/study_minutes.py
+problem-solving-and-live-coding/02-constraints-and-edge-cases/examples/capacity.py
+problem-solving-and-live-coding/03-algorithmic-complexity/examples/operation_counts.py
+problem-solving-and-live-coding/04-recursion/examples/recursive_sum.py
+problem-solving-and-live-coding/05-searching-algorithms/examples/search.py
+problem-solving-and-live-coding/06-sorting-algorithms/examples/sort.py
+problem-solving-and-live-coding/07-problem-solving-patterns/examples/patterns.py

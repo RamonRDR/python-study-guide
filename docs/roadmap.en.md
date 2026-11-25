@@ -199,15 +199,29 @@ Each project should include:
 
 ## Complementary module · Manual Programming & Engineering Practices
 
-Practice manual debugging, SDD, TDD and a Python-specific review workflow after Phase 10, before planned Phase 11. This module does not renumber the original phases. [Open the complementary module](../manual-programming-practices/README.md).
+Practice manual debugging, SDD, TDD and a Python-specific review workflow after Phase 10, before Phase 11. This module does not renumber the original phases. [Open the complementary module](../manual-programming-practices/README.md).
+
+## Phase 11: Problem Solving & Live Coding
+
+Seven foundation lessons are included; the challenge bank and timed practice remain planned.
+
+[Open module](../problem-solving-and-live-coding/README.md)
+
+1. [Problem-Solving Fundamentals](../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md)
+2. [Constraints and Edge Cases](../problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md)
+3. [Algorithmic Complexity](../problem-solving-and-live-coding/03-algorithmic-complexity/README.md)
+4. [Recursion](../problem-solving-and-live-coding/04-recursion/README.md)
+5. [Searching Algorithms](../problem-solving-and-live-coding/05-searching-algorithms/README.md)
+6. [Sorting Algorithms](../problem-solving-and-live-coding/06-sorting-algorithms/README.md)
+7. [Problem-Solving Patterns](../problem-solving-and-live-coding/07-problem-solving-patterns/README.md)
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
-This engineering phase does not renumber the original curriculum. Sprints 00–03 are merged (PRs #87–#90). Sprint 04 adds the complementary manual programming and engineering module; subsequent work remains planned. The repository stays independent of the future web platform.
+This engineering phase does not renumber the original curriculum. Sprints 00–04 are merged (PRs #87–#91). Sprint 05 foundations are submitted for review; the pilot and challenge expansion remain planned. The repository stays independent of the future web platform.
 
 | Future curriculum | Status |
 | --- | --- |
-| 11. Problem Solving & Live Coding | Planned |
+| 11. Problem Solving & Live Coding | Foundations in review; challenges planned |
 | 12. Technical Interview Preparation | Planned |
 
 [Implementation plan](specs/learning-hub-foundation/implementation-plan.md) · [Related-guide integration register](specs/learning-hub-foundation/related-guides.md)

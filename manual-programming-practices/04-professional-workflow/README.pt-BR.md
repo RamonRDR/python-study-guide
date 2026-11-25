@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../03-test-driven-development/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md)
+[← Anterior](../03-test-driven-development/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
 ## Objetivo
@@ -75,5 +75,5 @@ Primeiro resolva e explique sem implementação ou correção gerada por IA. Use
 **Referência rápida:** necessidade → spec → plano → branch → teste/código/refatoração → revisão do diff → commit → PR/CI opcionais → aprovação humana → merge. Para regras de contribuição, leia [CONTRIBUTING](../../docs/localized/CONTRIBUTING.pt-BR.md).
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../03-test-driven-development/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md)
+[← Anterior](../03-test-driven-development/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md)
 <!-- /chapter-navigation:bottom -->

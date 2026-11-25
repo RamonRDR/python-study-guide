@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Previous](../03-test-driven-development/README.md) · [Module index](../README.md)
+[← Previous](../03-test-driven-development/README.md) · [Module index](../README.md) · [Next →](../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md)
 <!-- /chapter-navigation:top -->
 
 ## Goal
@@ -75,5 +75,5 @@ First solve and explain the problem without AI-generated implementation or gradi
 **Quick reference:** need → spec → plan → branch → test/code/refactor → review diff → commit → optional PR/CI → human approval → merge. For more detailed contributor rules, read [CONTRIBUTING](../../CONTRIBUTING.md).
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../03-test-driven-development/README.md) · [Module index](../README.md)
+[← Previous](../03-test-driven-development/README.md) · [Module index](../README.md) · [Next →](../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md)
 <!-- /chapter-navigation:bottom -->

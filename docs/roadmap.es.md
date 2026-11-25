@@ -199,15 +199,29 @@ Cada proyecto debe incluir:
 
 ## Módulo complementario · Práctica manual e ingeniería de software
 
-Practica depuración manual, SDD, TDD y revisión aplicada a Python tras la Fase 10, antes de la Fase 11 planificada. Este módulo no renumera las fases originales. [Abrir módulo complementario](../manual-programming-practices/README.es.md).
+Practica depuración manual, SDD, TDD y revisión aplicada a Python tras la Fase 10, antes de la Fase 11. Este módulo no renumera las fases originales. [Abrir módulo complementario](../manual-programming-practices/README.es.md).
+
+## Fase 11: Resolución de problemas y live coding
+
+Se incluyen siete lecciones de fundamentos; el banco de retos y la práctica cronometrada siguen planificados.
+
+[Abrir módulo](../problem-solving-and-live-coding/README.es.md)
+
+1. [Fundamentos de resolución de problemas](../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md)
+2. [Restricciones y casos límite](../problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md)
+3. [Complejidad algorítmica](../problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md)
+4. [Recursividad](../problem-solving-and-live-coding/04-recursion/README.es.md)
+5. [Algoritmos de búsqueda](../problem-solving-and-live-coding/05-searching-algorithms/README.es.md)
+6. [Algoritmos de ordenación](../problem-solving-and-live-coding/06-sorting-algorithms/README.es.md)
+7. [Patrones de resolución de problemas](../problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md)
 
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 
-Esta fase de ingeniería no renumera el currículo original. Sprints 00–03 fusionados (PR #87–#90). El Sprint 04 añade el módulo complementario de práctica manual e ingeniería; el trabajo posterior sigue planificado. El repositorio permanece independiente de la futura plataforma web.
+Esta fase de ingeniería no renumera el currículo original. Sprints 00–04 fusionados (PRs #87–#91). Fundamentos del Sprint 05 enviados a revisión; piloto y expansión de retos siguen planificados. El repositorio permanece independiente de la futura plataforma web.
 
 | Currículo futuro | Estado |
 | --- | --- |
-| 11. Resolución de problemas y live coding | Planificado |
+| 11. Resolución de problemas y live coding | Fundamentos en revisión; retos planificados |
 | 12. Preparación para entrevistas técnicas | Planificado |
 
 [Plan de implementación](specs/learning-hub-foundation/implementation-plan.es.md) · [Registro de integración de guías relacionadas](specs/learning-hub-foundation/related-guides.es.md)
