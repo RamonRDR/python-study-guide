@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Functions](../README.md) · [← Previous: Default Values](../06-default-values/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../06-default-values/README.md) · [Module index](../README.md) · [Next →](../08-functions-working-together/README.md)
+<!-- /chapter-navigation:top -->
 
 Earlier chapters gave functions required parameters, return values, scope, type hints, and safe defaults. This chapter adds a new design option: a function can collect a **variable number of arguments** when the exact count is intentionally flexible.
 
@@ -692,3 +694,7 @@ Primary Python documentation:
 - [Python 3.13 Tutorial: Arbitrary Argument Lists](https://docs.python.org/3.13/tutorial/controlflow.html#arbitrary-argument-lists)
 - [Python 3.13 Tutorial: Keyword Arguments](https://docs.python.org/3.13/tutorial/controlflow.html#keyword-arguments)
 - [Python 3.13 Language Reference: Function definitions](https://docs.python.org/3.13/reference/compound_stmts.html#function-definitions)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../06-default-values/README.md) · [Module index](../README.md) · [Next →](../08-functions-working-together/README.md)
+<!-- /chapter-navigation:bottom -->

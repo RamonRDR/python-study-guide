@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Program Flow](../README.md) · [← Previous: Conditions, Comparisons, and Boolean Logic](../01-conditions-comparisons-and-boolean-logic/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../01-conditions-comparisons-and-boolean-logic/README.md) · [Module index](../README.md) · [Next →](../03-match-and-case/README.md)
+<!-- /chapter-navigation:top -->
 
 Conditions answer questions. An `if` statement lets the program **do something because of the answer**.
 
@@ -1143,3 +1145,7 @@ You now know how conditions choose among branches. Next, you will learn how `mat
 - [Python Tutorial: `if` Statements](https://docs.python.org/3.13/tutorial/controlflow.html#if-statements)
 - [Python 3.13 language reference: Indentation](https://docs.python.org/3.13/reference/lexical_analysis.html#indentation)
 - [PEP 8: Indentation and compound statements](https://peps.python.org/pep-0008/#indentation)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-conditions-comparisons-and-boolean-logic/README.md) · [Module index](../README.md) · [Next →](../03-match-and-case/README.md)
+<!-- /chapter-navigation:bottom -->

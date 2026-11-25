@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Practical Projects](../README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../01-expense-tracker/README.md) · [Module index](../README.md) · [Next →](../03-user-registration/README.md)
+<!-- /chapter-navigation:top -->
 
 This is the second project in **Phase 10: Practical Projects**. It focuses on configurable rules, weighted aggregation, validation, progress reporting, and deterministic tests without repeating the persistence boundaries from Project 01.
 
@@ -331,3 +333,7 @@ Before considering your own implementation complete, verify:
 Project 02 adds configurable rules and weighted aggregation to the Phase 10 pattern.
 
 The next planned project is **User Registration**, which will focus on identity-like data validation, duplicate prevention, lookup behavior, and clearer service-layer boundaries without introducing real authentication or personal data.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-expense-tracker/README.md) · [Module index](../README.md) · [Next →](../03-user-registration/README.md)
+<!-- /chapter-navigation:bottom -->

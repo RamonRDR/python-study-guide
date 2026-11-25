@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: Comments versus logging](../05-comments-vs-logging/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../05-comments-vs-logging/README.md) · [Module index](../README.md) · [Next →](../../errors-files-and-modules/01-try-except-else-finally/README.md)
+<!-- /chapter-navigation:top -->
 
 PEP 8 is the style guide for Python code in the standard library and a widely used reference for Python projects. Its purpose is not to make every file visually identical. Its purpose is to improve readability and consistency so that readers spend less effort decoding presentation and more effort understanding behavior.
 
@@ -348,4 +350,6 @@ A clean formatter or linter result is useful evidence, not a replacement for hum
 - [PEP 8 — Style Guide for Python Code](https://peps.python.org/pep-0008/)
 - [Python tutorial — Coding style](https://docs.python.org/3/tutorial/controlflow.html#intermezzo-coding-style)
 
-[← Back to the section index](../README.md) · [← Previous chapter: Comments versus logging](../05-comments-vs-logging/README.md)
+<!-- chapter-navigation:bottom -->
+[← Previous](../05-comments-vs-logging/README.md) · [Module index](../README.md) · [Next →](../../errors-files-and-modules/01-try-except-else-finally/README.md)
+<!-- /chapter-navigation:bottom -->

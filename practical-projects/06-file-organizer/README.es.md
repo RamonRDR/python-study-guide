@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Proyectos Prácticos](../README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../05-report-generator/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../07-fictional-reconciliation-workflow/README.es.md)
+<!-- /chapter-navigation:top -->
 
 > **Fase 10 · Proyectos Prácticos**
 
@@ -492,3 +494,7 @@ Eso comunica decisiones de ingeniería, no solo uso de APIs.
 El Proyecto 05 generó archivos. El Proyecto 06 toma la siguiente frontera: descubrir y organizar archivos con seguridad.
 
 El Proyecto 07 vuelve a subir de nivel, combinando registros de dominio validados y estados explícitos de workflow en un **flujo ficticio de conciliación**.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../05-report-generator/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../07-fictional-reconciliation-workflow/README.es.md)
+<!-- /chapter-navigation:bottom -->

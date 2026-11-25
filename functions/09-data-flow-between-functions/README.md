@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Functions](../README.md) · [← Previous: Functions Working Together](../08-functions-working-together/README.md) · [Next phase: Comments and Documentation →](../../comments-and-documentation/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../08-functions-working-together/README.md) · [Module index](../README.md) · [Next →](../../comments-and-documentation/01-comments/README.md)
+<!-- /chapter-navigation:top -->
 
 When functions work together, values move through a program. An argument enters a function, a parameter receives it, local names may transform it, and a return value can carry a result back to the caller or forward to another function.
 
@@ -943,3 +945,7 @@ Next in the recommended learning sequence: [Comments, Documentation, and Clean C
 - [Python 3.13 Tutorial: More on Defining Functions](https://docs.python.org/3.13/tutorial/controlflow.html#more-on-defining-functions)
 - [Python 3.13 Language Reference: `return` statement](https://docs.python.org/3.13/reference/simple_stmts.html#the-return-statement)
 - [Python 3.13 Data Model](https://docs.python.org/3.13/reference/datamodel.html)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../08-functions-working-together/README.md) · [Module index](../README.md) · [Next →](../../comments-and-documentation/01-comments/README.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Functions](../README.md) · [← Previous: `*args` and `**kwargs`](../07-args-and-kwargs/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../07-args-and-kwargs/README.md) · [Module index](../README.md) · [Next →](../09-data-flow-between-functions/README.md)
+<!-- /chapter-navigation:top -->
 
 A useful program rarely depends on one giant function. More often, several small functions **divide the work, call one another, and connect their results**.
 
@@ -887,3 +889,7 @@ Primary Python documentation:
 - [Python 3.13 Tutorial: Defining Functions](https://docs.python.org/3.13/tutorial/controlflow.html#defining-functions)
 - [Python 3.13 Tutorial: More on Defining Functions](https://docs.python.org/3.13/tutorial/controlflow.html#more-on-defining-functions)
 - [Python 3.13 Language Reference: The `return` statement](https://docs.python.org/3.13/reference/simple_stmts.html#the-return-statement)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../07-args-and-kwargs/README.md) · [Module index](../README.md) · [Next →](../09-data-flow-between-functions/README.md)
+<!-- /chapter-navigation:bottom -->

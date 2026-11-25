@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Standard Library](../README.pt-BR.md) · [← Anterior: `decimal`](../08-decimal/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../08-decimal/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../external-libraries/01-pandas/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 O capítulo anterior de `pathlib` apresentou objetos de caminho como a forma padrão de alto nível para representar e manipular caminhos do sistema de arquivos. Este capítulo desce um nível e amplia o alcance.
 
@@ -1415,3 +1417,7 @@ Este capítulo encerra a **Fase 8: Standard Library**.
 A fase começou com modelagem orientada a objetos em `pathlib` e avançou por contratos de data e hora, formatos estruturados de dados, logging, coleções especializadas, iteração lazy, aritmética decimal e finalmente a própria fronteira do sistema operacional.
 
 Continue com a **Fase 9: Bibliotecas Externas**: [`pandas` — Trabalhando com Dados Tabulares](../../external-libraries/01-pandas/README.pt-BR.md).
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../08-decimal/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../external-libraries/01-pandas/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

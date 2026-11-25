@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Program Flow](../README.md) · [← Previous: `range()`, `enumerate()`, and `zip()`](../05-range-enumerate-and-zip/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../05-range-enumerate-and-zip/README.md) · [Module index](../README.md) · [Next →](../07-break-continue-and-loop-else/README.md)
+<!-- /chapter-navigation:top -->
 
 A `for` loop repeats work by consuming items from an iterable. A `while` loop answers a different question:
 
@@ -862,3 +864,7 @@ You now know the normal condition-driven life cycle of a `while` loop. Next, the
 - [Python 3.13 reference: The `while` statement](https://docs.python.org/3.13/reference/compound_stmts.html#the-while-statement)
 - [Python 3.13 built-in types: Truth Value Testing](https://docs.python.org/3.13/library/stdtypes.html#truth-value-testing)
 - [Python 3.13 tutorial: First Steps Towards Programming](https://docs.python.org/3.13/tutorial/introduction.html#first-steps-towards-programming)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../05-range-enumerate-and-zip/README.md) · [Module index](../README.md) · [Next →](../07-break-continue-and-loop-else/README.md)
+<!-- /chapter-navigation:bottom -->

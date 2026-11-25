@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Errors, Files, and Modules](../README.md) · [← Previous phase: Comments and Documentation](../../comments-and-documentation/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../../comments-and-documentation/06-pep8-and-readability/README.md) · [Module index](../README.md) · [Next →](../02-raise-and-custom-exceptions/README.md)
+<!-- /chapter-navigation:top -->
 
 Programs do not always follow the happy path. A conversion can receive invalid text, a division can use zero, a dictionary lookup can miss a key, or a later file operation can fail.
 
@@ -898,3 +900,7 @@ Next planned chapter: **Raising and Custom Exceptions**.
 - [Python 3.13 Language Reference: The `try` statement](https://docs.python.org/3.13/reference/compound_stmts.html#the-try-statement)
 - [Python 3.13 Execution Model: Exceptions](https://docs.python.org/3.13/reference/executionmodel.html#exceptions)
 - [Python 3.13 Built-in Exceptions](https://docs.python.org/3.13/library/exceptions.html)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../../comments-and-documentation/06-pep8-and-readability/README.md) · [Module index](../README.md) · [Next →](../02-raise-and-custom-exceptions/README.md)
+<!-- /chapter-navigation:bottom -->

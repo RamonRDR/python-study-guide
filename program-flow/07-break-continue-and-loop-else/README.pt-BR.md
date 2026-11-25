@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Fluxo do Programa](../README.pt-BR.md) · [← Anterior: Loops `while` e Repetição Guiada por Estado](../06-while-loops-and-state-driven-repetition/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../06-while-loops-and-state-driven-repetition/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../08-choosing-and-combining-program-flow/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Loops normalmente seguem sua regra natural de repetição: um loop `for` consome seu iterável, e um loop `while` continua enquanto sua condição permanecer verdadeira. Às vezes, porém, um programa precisa **parar antes do fim, pular o restante de uma iteração ou distinguir o encerramento normal de uma saída antecipada**.
 
@@ -865,3 +867,7 @@ Agora você já conhece as principais ferramentas de seleção e repetição da 
 - [Referência da linguagem Python 3.13: `while`](https://docs.python.org/3.13/reference/compound_stmts.html#the-while-statement)
 - [Referência da linguagem Python 3.13: `for`](https://docs.python.org/3.13/reference/compound_stmts.html#the-for-statement)
 - [Tutorial Python 3.13: `break`, `continue` e `else` de loops](https://docs.python.org/3.13/tutorial/controlflow.html#break-and-continue-statements)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../06-while-loops-and-state-driven-repetition/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../08-choosing-and-combining-program-flow/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

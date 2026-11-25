@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Flujo del Programa](../README.es.md) · [← Anterior: Bucles `for` e Iteración](../04-for-loops-and-iteration/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-for-loops-and-iteration/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-while-loops-and-state-driven-repetition/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Un bucle `for` simple suele ser suficiente cuando solo necesitas cada elemento. A veces, sin embargo, el bucle también necesita **números, posiciones o elementos de más de un iterable**.
 
@@ -902,3 +904,7 @@ Ahora sabes repetir trabajo para elementos y dar forma a la iteración cuando el
 - [Tutorial de Python 3.13: Técnicas de iteración](https://docs.python.org/3.13/tutorial/datastructures.html#looping-techniques)
 - [Funciones incorporadas de Python 3.13: `enumerate()` y `zip()`](https://docs.python.org/3.13/library/functions.html)
 - [Tipos incorporados de Python 3.13: Ranges](https://docs.python.org/3.13/library/stdtypes.html#typesseq-range)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-for-loops-and-iteration/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-while-loops-and-state-driven-repetition/README.es.md)
+<!-- /chapter-navigation:bottom -->

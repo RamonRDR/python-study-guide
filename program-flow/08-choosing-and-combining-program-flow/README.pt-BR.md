@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Fluxo do Programa](../README.pt-BR.md) · [← Anterior: `break`, `continue` e `else` de Loops](../07-break-continue-and-loop-else/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../07-break-continue-and-loop-else/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../functions/01-defining-and-calling-functions/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Conhecer cada ferramenta de fluxo do programa separadamente é apenas o começo. Programas reais normalmente precisam que **seleção e repetição trabalhem juntas**.
 
@@ -1167,3 +1169,7 @@ Referências primárias usadas neste capítulo:
 - [Python 3.13 Language Reference: Compound Statements](https://docs.python.org/3.13/reference/compound_stmts.html)
 - [Python 3.13 Built-in Functions](https://docs.python.org/3.13/library/functions.html)
 - [Python 3.13 Built-in Types: `range`](https://docs.python.org/3.13/library/stdtypes.html#ranges)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../07-break-continue-and-loop-else/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../functions/01-defining-and-calling-functions/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

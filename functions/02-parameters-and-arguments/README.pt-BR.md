@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Funções](../README.pt-BR.md) · [← Anterior: Definindo e Chamando Funções](../01-defining-and-calling-functions/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-defining-and-calling-functions/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-return-values/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 O Capítulo 01 deu um nome ao comportamento. O Capítulo 02 faz esse comportamento **trabalhar com valores de entrada diferentes**.
 
@@ -705,3 +707,7 @@ Documentação primária do Python:
 - [Tutorial do Python 3.13: Argumentos nomeados](https://docs.python.org/pt-br/3.13/tutorial/controlflow.html#keyword-arguments)
 - [Referência da Linguagem Python 3.13: Definições de função](https://docs.python.org/pt-br/3.13/reference/compound_stmts.html#function-definitions)
 - [Referência da Linguagem Python 3.13: Chamadas](https://docs.python.org/pt-br/3.13/reference/expressions.html#calls)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-defining-and-calling-functions/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-return-values/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

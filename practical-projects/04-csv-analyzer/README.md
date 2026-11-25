@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Practical Projects](../README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-user-registration/README.md) · [Module index](../README.md) · [Next →](../05-report-generator/README.md)
+<!-- /chapter-navigation:top -->
 
 This is the fourth project in **Phase 10: Practical Projects**. It focuses on CSV boundaries, explicit schemas, typed row conversion, row-level validation, structural failures, deterministic aggregation, and testable analysis without depending on pandas.
 
@@ -617,3 +619,7 @@ Before considering your own implementation complete, verify:
 Project 04 adds schema-aware CSV ingestion, row-level validation, typed conversion, partial-success policy, deterministic filtering, and aggregation to the Phase 10 progression.
 
 The next planned project is **Report Generator**, which will shift the focus from ingesting structured data to composing structured output and presentation-ready reports.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-user-registration/README.md) · [Module index](../README.md) · [Next →](../05-report-generator/README.md)
+<!-- /chapter-navigation:bottom -->

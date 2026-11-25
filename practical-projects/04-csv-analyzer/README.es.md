@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Proyectos Prácticos](../README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-user-registration/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../05-report-generator/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Este es el cuarto proyecto de la **Fase 10: Proyectos Prácticos**. Se enfoca en fronteras CSV, schemas explícitos, conversión tipada de filas, validación por fila, fallos estructurales, agregación determinista y análisis comprobable sin depender de pandas.
 
@@ -617,3 +619,7 @@ Antes de considerar completa tu propia implementación, verifica:
 El Proyecto 04 añade ingestión CSV consciente de schema, validación por fila, conversión tipada, política de éxito parcial, filtros deterministas y agregación a la progresión de la Fase 10.
 
 El siguiente proyecto planificado es el **Generador de Informes**, que cambiará el foco desde la ingestión de datos estructurados hacia la composición de salidas estructuradas e informes listos para presentación.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-user-registration/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../05-report-generator/README.es.md)
+<!-- /chapter-navigation:bottom -->

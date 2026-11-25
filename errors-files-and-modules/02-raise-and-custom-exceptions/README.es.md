@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Errores, Archivos y Módulos](../README.es.md) · [← Capítulo anterior: Manejo de Excepciones](../01-try-except-else-finally/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-try-except-else-finally/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-open-and-with/README.es.md)
+<!-- /chapter-navigation:top -->
 
 El Capítulo 01 se concentró en **manejar excepciones que ya ocurren**. Este capítulo añade el otro lado del contrato: decidir cuándo tu propio código debe informar deliberadamente que una operación no puede continuar normalmente.
 
@@ -949,3 +951,7 @@ Próximo capítulo planificado: **`open()` y `with`**.
 - [Python 3.14 Tutorial: User-defined Exceptions](https://docs.python.org/3.14/tutorial/errors.html#user-defined-exceptions)
 - [Python 3.14 Built-in Exceptions](https://docs.python.org/3.14/library/exceptions.html)
 - [Python 3.14 Language Reference: The `assert` statement](https://docs.python.org/3.14/reference/simple_stmts.html#the-assert-statement)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-try-except-else-finally/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-open-and-with/README.es.md)
+<!-- /chapter-navigation:bottom -->

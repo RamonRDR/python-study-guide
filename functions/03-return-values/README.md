@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Functions](../README.md) · [← Previous: Parameters and Arguments](../02-parameters-and-arguments/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-parameters-and-arguments/README.md) · [Module index](../README.md) · [Next →](../04-scope/README.md)
+<!-- /chapter-navigation:top -->
 
 Chapter 01 named behavior. Chapter 02 let callers send values into that behavior. This chapter completes the first data round trip:
 
@@ -693,3 +695,7 @@ Primary Python documentation:
 
 - [Python 3.13 Tutorial: Defining Functions](https://docs.python.org/3.13/tutorial/controlflow.html#defining-functions)
 - [Python 3.13 Language Reference: The `return` statement](https://docs.python.org/3.13/reference/simple_stmts.html#the-return-statement)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-parameters-and-arguments/README.md) · [Module index](../README.md) · [Next →](../04-scope/README.md)
+<!-- /chapter-navigation:bottom -->

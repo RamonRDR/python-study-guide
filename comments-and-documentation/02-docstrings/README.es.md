@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Comentarios](../01-comments/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-comments/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-meaningful-names/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Una docstring explica la finalidad y el uso público de un módulo, función, clase o método de Python. A diferencia de un comentario común, la docstring se almacena como documentación del objeto y puede ser leída por personas, editores, generadores de documentación, `help()` y herramientas de introspección.
 
@@ -598,3 +600,7 @@ Antes de aprobar una docstring, pregunta:
 ## Principio final
 
 Una docstring útil describe el contrato que necesita quien lee. Debe revelar la finalidad y las garantías importantes sin convertir la implementación en una segunda copia frágil escrita en prosa.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-comments/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-meaningful-names/README.es.md)
+<!-- /chapter-navigation:bottom -->

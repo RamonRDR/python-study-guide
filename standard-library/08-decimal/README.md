@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Standard Library](../README.md) · [← Previous: `itertools`](../07-itertools/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../07-itertools/README.md) · [Module index](../README.md) · [Next →](../09-os-shutil/README.md)
+<!-- /chapter-navigation:top -->
 
 Python's built-in `float` is the right tool for a large amount of numerical work, but it models numbers with binary floating-point. Chapter 03 of Strings and Numbers already showed why a value such as `0.1` may not have an exact binary representation.
 
@@ -1380,3 +1382,7 @@ Primary references used for this chapter:
 Continue with [Chapter 09: `os` and `shutil`](../09-os-shutil/README.md).
 
 The next chapter moves from numeric contracts to operating-system and filesystem-operation contracts: environment state, path-like interfaces, traversal, metadata, copying, moving, recursive removal, archive safety, and the boundary between `pathlib`, `os`, and `shutil`.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../07-itertools/README.md) · [Module index](../README.md) · [Next →](../09-os-shutil/README.md)
+<!-- /chapter-navigation:bottom -->

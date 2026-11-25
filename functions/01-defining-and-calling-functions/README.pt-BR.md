@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Funções](../README.pt-BR.md) · [← Fase anterior: Fluxo do Programa](../../program-flow/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../../program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-parameters-and-arguments/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Funções dão um nome significativo a comportamentos que um programa pode precisar executar mais de uma vez.
 
@@ -738,3 +740,7 @@ Documentação primária do Python:
 - [Python 3.13 Tutorial: Defining Functions](https://docs.python.org/3.13/tutorial/controlflow.html#defining-functions)
 - [Python 3.13 Language Reference: Function definitions](https://docs.python.org/3.13/reference/compound_stmts.html#function-definitions)
 - [Python 3.13 Language Reference: Calls](https://docs.python.org/3.13/reference/expressions.html#calls)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-parameters-and-arguments/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

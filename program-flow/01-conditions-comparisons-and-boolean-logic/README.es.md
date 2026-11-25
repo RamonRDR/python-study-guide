@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Flujo del Programa](../README.es.md) · [← Fase anterior: Elegir la Colección Adecuada](../../collections/06-choosing-the-right-collection/README.es.md) · [Siguiente: `if`, `elif` y `else` →](../02-if-elif-and-else/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../../collections/06-choosing-the-right-collection/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-if-elif-and-else/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Las condiciones son las preguntas que un programa puede evaluar antes de decidir qué debe ocurrir a continuación.
 
@@ -982,3 +984,7 @@ Allí, estas condiciones dejan de ser valores que solo imprimes y comienzan a co
 - [Tipos incorporados de Python 3.13: pruebas de valor de verdad y operaciones booleanas](https://docs.python.org/3.13/library/stdtypes.html#truth-value-testing)
 - [Referencia del lenguaje Python 3.13: comparaciones](https://docs.python.org/3.13/reference/expressions.html#comparisons)
 - [PEP 8: recomendaciones de programación](https://peps.python.org/pep-0008/#programming-recommendations)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../collections/06-choosing-the-right-collection/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-if-elif-and-else/README.es.md)
+<!-- /chapter-navigation:bottom -->

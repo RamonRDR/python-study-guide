@@ -6,7 +6,11 @@
 
 </div>
 
-[← Capítulo anterior: Conjuntos e valores únicos](../05-sets-and-unique-values/README.pt-BR.md) · [Voltar ao índice de Coleções](../README.pt-BR.md) · [Ver o roadmap](../../docs/roadmap.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../05-sets-and-unique-values/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
+
+[Ver o roadmap](../../docs/roadmap.pt-BR.md)
 
 Agora você conhece quatro modelos importantes de coleções embutidas: listas, tuplas, dicionários e conjuntos.
 
@@ -819,3 +823,7 @@ Referências oficiais usadas para verificação técnica:
 
 - [Tutorial do Python: Estruturas de Dados](https://docs.python.org/pt-br/3/tutorial/datastructures.html)
 - [Tipos embutidos do Python](https://docs.python.org/pt-br/3/library/stdtypes.html)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../05-sets-and-unique-values/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

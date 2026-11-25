@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Errors, Files, and Modules](../README.md) · [← Previous chapter: Handling Exceptions](../01-try-except-else-finally/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../01-try-except-else-finally/README.md) · [Module index](../README.md) · [Next →](../03-open-and-with/README.md)
+<!-- /chapter-navigation:top -->
 
 Chapter 01 focused on **handling exceptions that already occur**. This chapter adds the other side of the contract: deciding when your own code should deliberately report that an operation cannot continue normally.
 
@@ -949,3 +951,7 @@ Next planned chapter: **`open()` and `with`**.
 - [Python 3.14 Tutorial: User-defined Exceptions](https://docs.python.org/3.14/tutorial/errors.html#user-defined-exceptions)
 - [Python 3.14 Built-in Exceptions](https://docs.python.org/3.14/library/exceptions.html)
 - [Python 3.14 Language Reference: The `assert` statement](https://docs.python.org/3.14/reference/simple_stmts.html#the-assert-statement)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-try-except-else-finally/README.md) · [Module index](../README.md) · [Next →](../03-open-and-with/README.md)
+<!-- /chapter-navigation:bottom -->

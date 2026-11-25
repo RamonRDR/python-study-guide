@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Standard Library](../README.md) · [← Previous: Working with Dates and Time Calculations Using `datetime`](../02-datetime/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-datetime/README.md) · [Module index](../README.md) · [Next →](../04-csv/README.md)
+<!-- /chapter-navigation:top -->
 
 Phase 7 introduced JSON as a structured data format and taught the practical difference between `load()`, `loads()`, `dump()`, and `dumps()`. This chapter goes one layer deeper.
 
@@ -1097,3 +1099,7 @@ If those answers are explicit, the JSON boundary becomes much easier to test and
 ## Next chapter
 
 Continue with [**Chapter 04: Controlling CSV Dialects and Tabular Text Contracts**](../04-csv/README.md). It deepens dialects, quoting, escaping, row-shape validation, sniffing, encoding boundaries, and spreadsheet-consumer considerations.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-datetime/README.md) · [Module index](../README.md) · [Next →](../04-csv/README.md)
+<!-- /chapter-navigation:bottom -->

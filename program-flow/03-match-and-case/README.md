@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Program Flow](../README.md) · [← Previous: `if`, `elif`, and `else`](../02-if-elif-and-else/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-if-elif-and-else/README.md) · [Module index](../README.md) · [Next →](../04-for-loops-and-iteration/README.md)
+<!-- /chapter-navigation:top -->
 
 An `if` statement asks whether a condition is truthy. A `match` statement asks whether a value **fits a pattern**.
 
@@ -925,3 +927,7 @@ You now know how Python can select behavior from conditions and from data patter
 - [Python 3.13 tutorial: `match` Statements](https://docs.python.org/3.13/tutorial/controlflow.html#match-statements)
 - [PEP 634: Structural Pattern Matching — Specification](https://peps.python.org/pep-0634/)
 - [PEP 636: Structural Pattern Matching — Tutorial](https://peps.python.org/pep-0636/)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-if-elif-and-else/README.md) · [Module index](../README.md) · [Next →](../04-for-loops-and-iteration/README.md)
+<!-- /chapter-navigation:bottom -->

@@ -2,6 +2,11 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
+
+<!-- chapter-navigation:top -->
+[← Previous](../../errors-files-and-modules/05-imports-modules-and-packages/README.md) · [Module index](../README.md) · [Next →](../02-datetime/README.md)
+<!-- /chapter-navigation:top -->
+
 `pathlib` is the standard-library module for representing and manipulating filesystem paths as objects.
 
 Earlier chapters used strings such as `"notes.txt"` and `"reports/data.csv"` when opening files. That works, but paths have structure: they contain directories, names, stems, suffixes, parents, and platform-specific separators. `pathlib` gives that structure a dedicated API.
@@ -769,3 +774,7 @@ Continue with **[Chapter 02: `datetime` and Time Calculations](../02-datetime/RE
 - [Python 3.14 `pathlib` - object-oriented filesystem paths](https://docs.python.org/3.14/library/pathlib.html)
 - [Python 3.14 `os.PathLike` and `os.fspath()`](https://docs.python.org/3.14/library/os.html#os.PathLike)
 - [Python 3.14 built-in `open()`](https://docs.python.org/3.14/library/functions.html#open)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../../errors-files-and-modules/05-imports-modules-and-packages/README.md) · [Module index](../README.md) · [Next →](../02-datetime/README.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Erros, Arquivos e Módulos](../README.pt-BR.md) · [← Anterior: Trabalhando com TXT, CSV e JSON](../04-txt-csv-and-json/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-txt-csv-and-json/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../standard-library/01-pathlib/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 À medida que os programas crescem, manter cada função, constante, parser e fluxo de trabalho em um único arquivo fica mais difícil de entender e manter. O sistema de importação do Python permite dividir o código em **módulos** e organizar módulos relacionados em **pacotes**.
 
@@ -1032,3 +1034,7 @@ usar deliberadamente módulos da biblioteca padrão do Python
 - Referência da linguagem Python 3.14, The import statement: <https://docs.python.org/3.14/reference/simple_stmts.html#import>
 - Documentação de linha de comando do Python 3.14, `-m`: <https://docs.python.org/3.14/using/cmdline.html#cmdoption-m>
 - Documentação do Python 3.14 sobre `__main__`: <https://docs.python.org/3.14/library/__main__.html>
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-txt-csv-and-json/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../standard-library/01-pathlib/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

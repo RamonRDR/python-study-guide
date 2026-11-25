@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Flujo del Programa](../README.es.md) · [← Anterior: `range()`, `enumerate()` y `zip()`](../05-range-enumerate-and-zip/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../05-range-enumerate-and-zip/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../07-break-continue-and-loop-else/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Un bucle `for` repite trabajo consumiendo elementos de un iterable. Un bucle `while` responde a una pregunta diferente:
 
@@ -862,3 +864,7 @@ Ahora conoces el ciclo de vida normal de un bucle `while` guiado por condición.
 - [Referencia de Python 3.13: la instrucción `while`](https://docs.python.org/3.13/reference/compound_stmts.html#the-while-statement)
 - [Tipos incorporados de Python 3.13: pruebas de valor de verdad](https://docs.python.org/3.13/library/stdtypes.html#truth-value-testing)
 - [Tutorial de Python 3.13: primeros pasos hacia la programación](https://docs.python.org/3.13/tutorial/introduction.html#first-steps-towards-programming)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../05-range-enumerate-and-zip/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../07-break-continue-and-loop-else/README.es.md)
+<!-- /chapter-navigation:bottom -->

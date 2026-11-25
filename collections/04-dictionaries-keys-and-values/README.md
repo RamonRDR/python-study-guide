@@ -6,7 +6,9 @@
 
 </div>
 
-[← Previous chapter: Tuples and immutability](../03-tuples-and-immutability/README.md) · [Back to the Collections index](../README.md) · [Next chapter: Sets and unique values →](../05-sets-and-unique-values/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-tuples-and-immutability/README.md) · [Module index](../README.md) · [Next →](../05-sets-and-unique-values/README.md)
+<!-- /chapter-navigation:top -->
 
 Lists and tuples organize values by **position**. Dictionaries introduce a different model: each stored value is associated with a **key**.
 
@@ -1089,3 +1091,7 @@ Official references used for technical verification:
 - [Python Tutorial: Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
 - [Python Built-in Types: Mapping Types — `dict`](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict)
 - [Python Glossary: hashable](https://docs.python.org/3/glossary.html#term-hashable)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-tuples-and-immutability/README.md) · [Module index](../README.md) · [Next →](../05-sets-and-unique-values/README.md)
+<!-- /chapter-navigation:bottom -->

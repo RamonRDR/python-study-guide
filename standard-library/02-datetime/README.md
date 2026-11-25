@@ -2,6 +2,11 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
+
+<!-- chapter-navigation:top -->
+[← Previous](../01-pathlib/README.md) · [Module index](../README.md) · [Next →](../03-json/README.md)
+<!-- /chapter-navigation:top -->
+
 Python's `datetime` module provides explicit objects for dates, clock times, combined date-and-time values, durations, fixed UTC offsets, parsing, formatting, comparison, and arithmetic.
 
 Strings such as `"2026-08-27"` are useful for storage and communication, but they do not automatically know how many days separate two dates, whether a year is a leap year, or how to add a duration safely. The `datetime` module gives those concepts dedicated types and rules.
@@ -703,3 +708,7 @@ Continue with [**Chapter 03: Controlling JSON Serialization and Decoding Contrac
 - [Python 3.14 `datetime` - Basic date and time types](https://docs.python.org/3.14/library/datetime.html)
 - [Python 3.14 `strftime()` and `strptime()` format codes](https://docs.python.org/3.14/library/datetime.html#strftime-and-strptime-format-codes)
 - [Python 3.14 `zoneinfo` - IANA time zone support](https://docs.python.org/3.14/library/zoneinfo.html)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-pathlib/README.md) · [Module index](../README.md) · [Next →](../03-json/README.md)
+<!-- /chapter-navigation:bottom -->

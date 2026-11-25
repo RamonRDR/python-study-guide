@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to External Libraries](../README.md) · [← Previous: `openpyxl`](../02-openpyxl/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-openpyxl/README.md) · [Module index](../README.md) · [Next →](../04-pytest/README.md)
+<!-- /chapter-navigation:top -->
 
 Local files are only one kind of boundary. Modern Python programs also exchange data with web services, internal APIs, SaaS platforms, authentication servers, storage endpoints, and other systems over HTTP. The `requests` package gives Python a compact, readable HTTP client while still exposing the protocol concepts that reliable integrations need.
 
@@ -997,3 +999,7 @@ pytest   -> verify behavior repeatedly and automatically
 The next chapter is now published: [`pytest`: Engineering Automated Tests](../04-pytest/README.md). It moves from consuming external services to systematically proving that Python behavior remains correct.
 
 Before moving on, build at least one client against a local HTTP server. Reliable API code starts when network behavior becomes something you can reproduce, inspect, and test.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-openpyxl/README.md) · [Module index](../README.md) · [Next →](../04-pytest/README.md)
+<!-- /chapter-navigation:bottom -->

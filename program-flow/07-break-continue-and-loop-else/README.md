@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Program Flow](../README.md) · [← Previous: `while` Loops and State-Driven Repetition](../06-while-loops-and-state-driven-repetition/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../06-while-loops-and-state-driven-repetition/README.md) · [Module index](../README.md) · [Next →](../08-choosing-and-combining-program-flow/README.md)
+<!-- /chapter-navigation:top -->
 
 Loops normally follow their natural repetition rule: a `for` loop consumes its iterable, and a `while` loop keeps running while its condition remains truthy. Sometimes a program needs to **stop early, skip the rest of one iteration, or distinguish normal completion from an early exit**.
 
@@ -865,3 +867,7 @@ You now have the main selection and repetition tools of Phase 4: conditions, `if
 - [Python 3.13 language reference: `while`](https://docs.python.org/3.13/reference/compound_stmts.html#the-while-statement)
 - [Python 3.13 language reference: `for`](https://docs.python.org/3.13/reference/compound_stmts.html#the-for-statement)
 - [Python 3.13 tutorial: `break`, `continue`, and loop `else`](https://docs.python.org/3.13/tutorial/controlflow.html#break-and-continue-statements)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../06-while-loops-and-state-driven-repetition/README.md) · [Module index](../README.md) · [Next →](../08-choosing-and-combining-program-flow/README.md)
+<!-- /chapter-navigation:bottom -->

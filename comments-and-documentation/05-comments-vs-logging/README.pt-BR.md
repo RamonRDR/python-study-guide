@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: Marcadores de tarefas](../04-task-markers/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-task-markers/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-pep8-and-readability/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Comentários e logs comunicam informações, mas falam sobre momentos diferentes. Um comentário explica o código-fonte para quem o lê. Um log registra um evento ocorrido enquanto o programa estava em execução.
 
@@ -547,3 +549,7 @@ Comentários preservam raciocínio no código-fonte. Logging preserva evidência
 - [Python Logging HOWTO](https://docs.python.org/pt-br/3/howto/logging.html)
 - [Referência do módulo `logging`](https://docs.python.org/pt-br/3/library/logging.html)
 - [Python Logging Cookbook](https://docs.python.org/3/howto/logging-cookbook.html)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-task-markers/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-pep8-and-readability/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Errors, Files, and Modules](../README.md) · [← Previous: Raising and Custom Exceptions](../02-raise-and-custom-exceptions/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-raise-and-custom-exceptions/README.md) · [Module index](../README.md) · [Next →](../04-txt-csv-and-json/README.md)
+<!-- /chapter-navigation:top -->
 
 Programs often need data to survive after the process ends. A text file can store notes, configuration, exports, logs, or intermediate results that a later execution can read again.
 
@@ -845,3 +847,7 @@ modules and packages
 - Python 3.14 tutorial, Reading and Writing Files: <https://docs.python.org/3.14/tutorial/inputoutput.html#reading-and-writing-files>
 - Python 3.14 language reference, `with` statement: <https://docs.python.org/3.14/reference/compound_stmts.html#the-with-statement>
 - Python 3.14 `io` documentation, Text Encoding: <https://docs.python.org/3.14/library/io.html#text-encoding>
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-raise-and-custom-exceptions/README.md) · [Module index](../README.md) · [Next →](../04-txt-csv-and-json/README.md)
+<!-- /chapter-navigation:bottom -->

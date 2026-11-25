@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Standard Library](../README.es.md) · [← Capítulo anterior: Logging](../05-logging/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../05-logging/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../07-itertools/README.es.md)
+<!-- /chapter-navigation:top -->
 
 La Fase 3 presentó los cuatro modelos de colecciones de propósito general: `list`, `tuple`, `dict` y `set`. Este capítulo no reemplaza esos tipos integrados. Estudia el módulo `collections` como un conjunto de contenedores especializados para situaciones donde las **operaciones necesarias** son más específicas que el modelo de una colección general.
 
@@ -1186,3 +1188,7 @@ Referencias primarias usadas en este capítulo:
 Continúa con el [Capítulo 07: `itertools`](../07-itertools/README.es.md).
 
 El próximo capítulo cambia de **contenedores** especializados a **pipelines de iteradores** especializados: componiendo transformaciones lazy, repetición, slicing, agrupación e iteración combinatoria sin crear colecciones intermedias innecesarias.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../05-logging/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../07-itertools/README.es.md)
+<!-- /chapter-navigation:bottom -->

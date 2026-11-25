@@ -2,6 +2,11 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
+
+<!-- chapter-navigation:top -->
+[← Anterior](../01-pathlib/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-json/README.es.md)
+<!-- /chapter-navigation:top -->
+
 El módulo `datetime` de Python proporciona objetos explícitos para fechas, horas, valores combinados de fecha y hora, duraciones, desplazamientos fijos respecto de UTC, parsing, formato, comparación y aritmética.
 
 Strings como `"2026-08-27"` son útiles para almacenamiento y comunicación, pero no saben automáticamente cuántos días separan dos fechas, si un año es bisiesto o cómo sumar una duración correctamente. El módulo `datetime` da tipos y reglas propios a esos conceptos.
@@ -701,3 +706,7 @@ Continúa con el [**Capítulo 03: Controlando Contratos de Serialización y Deco
 - [Python 3.14 `datetime` - tipos básicos de fecha y hora](https://docs.python.org/3.14/library/datetime.html)
 - [Python 3.14 códigos de formato de `strftime()` y `strptime()`](https://docs.python.org/3.14/library/datetime.html#strftime-and-strptime-format-codes)
 - [Python 3.14 `zoneinfo` - soporte para zonas IANA](https://docs.python.org/3.14/library/zoneinfo.html)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-pathlib/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-json/README.es.md)
+<!-- /chapter-navigation:bottom -->

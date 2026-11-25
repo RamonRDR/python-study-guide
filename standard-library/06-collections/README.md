@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Standard Library](../README.md) · [← Previous chapter: Logging](../05-logging/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../05-logging/README.md) · [Module index](../README.md) · [Next →](../07-itertools/README.md)
+<!-- /chapter-navigation:top -->
 
 Phase 3 introduced the four general-purpose collection models: `list`, `tuple`, `dict`, and `set`. This chapter does not replace those built-ins. It studies the `collections` module as a set of specialized containers for cases where the **operations you need** are more specific than the general container model.
 
@@ -1186,3 +1188,7 @@ Primary references used for this chapter:
 Continue to [Chapter 07: `itertools`](../07-itertools/README.md).
 
 The next chapter shifts from specialized **containers** to specialized **iterator pipelines**: composing lazy transformations, repetition, slicing, grouping, and combinatoric iteration without building unnecessary intermediate collections.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../05-logging/README.md) · [Module index](../README.md) · [Next →](../07-itertools/README.md)
+<!-- /chapter-navigation:bottom -->

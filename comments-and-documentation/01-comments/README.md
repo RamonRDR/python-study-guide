@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section overview](../README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../../functions/09-data-flow-between-functions/README.md) · [Module index](../README.md) · [Next →](../02-docstrings/README.md)
+<!-- /chapter-navigation:top -->
 
 Comments help readers understand decisions, constraints, and context that are not obvious from the code alone. They are valuable when they preserve reasoning. They become noise when they merely repeat what the code already says.
 
@@ -637,3 +639,7 @@ Before keeping or adding a comment, ask:
 ## Final principle
 
 A useful comment leaves the code easier to understand after the reader has processed both. If deleting the comment changes nothing about understanding, the code probably did not need it.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../../functions/09-data-flow-between-functions/README.md) · [Module index](../README.md) · [Next →](../02-docstrings/README.md)
+<!-- /chapter-navigation:bottom -->

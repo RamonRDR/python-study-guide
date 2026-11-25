@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Functions](../README.md) · [← Previous: Defining and Calling Functions](../01-defining-and-calling-functions/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../01-defining-and-calling-functions/README.md) · [Module index](../README.md) · [Next →](../03-return-values/README.md)
+<!-- /chapter-navigation:top -->
 
 Chapter 01 gave behavior a name. Chapter 02 makes that behavior **work with different input values**.
 
@@ -705,3 +707,7 @@ Primary Python documentation:
 - [Python 3.13 Tutorial: Keyword Arguments](https://docs.python.org/3.13/tutorial/controlflow.html#keyword-arguments)
 - [Python 3.13 Language Reference: Function definitions](https://docs.python.org/3.13/reference/compound_stmts.html#function-definitions)
 - [Python 3.13 Language Reference: Calls](https://docs.python.org/3.13/reference/expressions.html#calls)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-defining-and-calling-functions/README.md) · [Module index](../README.md) · [Next →](../03-return-values/README.md)
+<!-- /chapter-navigation:bottom -->

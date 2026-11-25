@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Funciones](../README.es.md) · [← Anterior: Alcance](../04-scope/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-scope/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-default-values/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Los capítulos anteriores establecieron definición, entradas, retornos y alcance. Este capítulo añade la descripción de tipos en la interfaz:
 
@@ -644,7 +646,6 @@ describe the interface with type hints
 
 El próximo capítulo añade **Valores Predeterminados**, haciendo opcionales algunos argumentos de llamada.
 
-[← Anterior: Alcance](../04-scope/README.es.md) · [Volver a Funciones](../README.es.md)
 
 ## Referencias
 
@@ -653,3 +654,7 @@ Documentación primaria de Python:
 - [Python 3.13 `typing` — Support for type hints](https://docs.python.org/3.13/library/typing.html)
 - [Python 3.13 Data model — anotaciones de función y `__annotations__`](https://docs.python.org/3.13/reference/datamodel.html)
 - [Python 3.13 Tipos incorporados — relación entre `bool` e `int`](https://docs.python.org/3.13/library/stdtypes.html)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-scope/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-default-values/README.es.md)
+<!-- /chapter-navigation:bottom -->

@@ -2,6 +2,11 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
+
+<!-- chapter-navigation:top -->
+[← Anterior](../../errors-files-and-modules/05-imports-modules-and-packages/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-datetime/README.es.md)
+<!-- /chapter-navigation:top -->
+
 `pathlib` es el módulo de la biblioteca estándar para representar y manipular rutas del sistema de archivos como objetos.
 
 En capítulos anteriores usamos strings como `"notes.txt"` y `"reports/data.csv"` al abrir archivos. Eso funciona, pero las rutas tienen estructura: directorios, nombres, stems, sufijos, padres y separadores dependientes de la plataforma. `pathlib` ofrece una API específica para esa estructura.
@@ -765,3 +770,7 @@ Continúa con **[Capítulo 02: `datetime` y Cálculos de Tiempo](../02-datetime/
 - [Python 3.14 `pathlib` - rutas de sistema de archivos orientadas a objetos](https://docs.python.org/3.14/library/pathlib.html)
 - [Python 3.14 `os.PathLike` y `os.fspath()`](https://docs.python.org/3.14/library/os.html#os.PathLike)
 - [Python 3.14 función incorporada `open()`](https://docs.python.org/3.14/library/functions.html#open)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../errors-files-and-modules/05-imports-modules-and-packages/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-datetime/README.es.md)
+<!-- /chapter-navigation:bottom -->

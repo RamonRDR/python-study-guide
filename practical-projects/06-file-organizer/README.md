@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Practical Projects](../README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../05-report-generator/README.md) · [Module index](../README.md) · [Next →](../07-fictional-reconciliation-workflow/README.md)
+<!-- /chapter-navigation:top -->
 
 > **Phase 10 · Practical Projects**
 
@@ -492,3 +494,7 @@ That communicates engineering decisions, not just API usage.
 Project 05 generated files. Project 06 owns the next boundary: discovering and organizing files safely.
 
 Project 07 moves upward again, combining validated domain records and explicit workflow states in a **fictional reconciliation workflow**.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../05-report-generator/README.md) · [Module index](../README.md) · [Next →](../07-fictional-reconciliation-workflow/README.md)
+<!-- /chapter-navigation:bottom -->

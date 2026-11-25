@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Projetos Práticos](../README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-csv-analyzer/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-file-organizer/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Este é o quinto projeto da **Fase 10: Projetos Práticos**. O foco é transformar registros de domínio já validados em um pipeline confiável de relatórios: janelas explícitas de período, agregação determinística, resumos independentes da apresentação, múltiplos renderizadores e saída segura em arquivos de texto.
 
@@ -582,3 +584,7 @@ Antes de considerar sua implementação completa, verifique:
 O Projeto 05 transforma registros validados em artefatos de relatório determinísticos mantendo agregação, renderização e persistência separadas.
 
 A seguir, **Projeto 06: File Organizer** desloca o foco do conteúdo de um único arquivo para fluxos controlados de filesystem: descobrir arquivos, classificá-los, planejar movimentos, tratar colisões e manter as operações seguras e testáveis.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-csv-analyzer/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-file-organizer/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

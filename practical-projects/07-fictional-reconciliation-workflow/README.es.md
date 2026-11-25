@@ -2,7 +2,11 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-[← Volver a Proyectos Prácticos](../README.es.md)
+
+
+<!-- chapter-navigation:top -->
+[← Anterior](../06-file-organizer/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../08-simulated-automation-flow/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Este es el **Proyecto 07 de la Fase 10: Proyectos Prácticos**. Convierte dos colecciones ficticias de registros en un informe de conciliación explícito y determinista.
 
@@ -385,3 +389,7 @@ Salida:       ReconciliationReport inmutable
 ## Próximo proyecto
 
 Después de que este proyecto sea revisado, la Fase 10 continúa con el **Proyecto 08: Flujo Simulado de Automatización**.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../06-file-organizer/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../08-simulated-automation-flow/README.es.md)
+<!-- /chapter-navigation:bottom -->

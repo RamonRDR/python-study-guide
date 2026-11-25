@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Funções](../README.pt-BR.md) · [← Anterior: Type Hints](../05-type-hints/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../05-type-hints/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../07-args-and-kwargs/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Os capítulos anteriores mostraram como funções recebem argumentos, devolvem valores, resolvem nomes e descrevem tipos esperados. Este capítulo adiciona mais uma decisão de interface:
 
@@ -790,3 +792,7 @@ python functions/06-default-values/examples/safe_list_default.py
 ---
 
 Próximo: **07. `*args` e `**kwargs`**.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../05-type-hints/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../07-args-and-kwargs/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

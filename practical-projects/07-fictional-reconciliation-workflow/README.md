@@ -2,7 +2,11 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-[← Back to Practical Projects](../README.md)
+
+
+<!-- chapter-navigation:top -->
+[← Previous](../06-file-organizer/README.md) · [Module index](../README.md) · [Next →](../08-simulated-automation-flow/README.md)
+<!-- /chapter-navigation:top -->
 
 This is **Project 07 of Phase 10: Practical Projects**. It turns two fictional record collections into an explicit, deterministic reconciliation report.
 
@@ -385,3 +389,7 @@ Output:      immutable ReconciliationReport
 ## Next project
 
 After this project is reviewed, Phase 10 continues with **Project 08: Simulated Automation Flow**.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../06-file-organizer/README.md) · [Module index](../README.md) · [Next →](../08-simulated-automation-flow/README.md)
+<!-- /chapter-navigation:bottom -->

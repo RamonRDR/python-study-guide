@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Bibliotecas Externas](../README.pt-BR.md) · [← Anterior: `requests`](../03-requests/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-requests/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../practical-projects/01-expense-tracker/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Software fica mais fácil de alterar quando o comportamento esperado pode ser verificado repetidamente e de forma automática. O `pytest` fornece um modelo de testes conciso baseado em funções Python normais, instruções `assert`, fixtures reutilizáveis, parametrização, relatórios de falha ricos e um sistema extensível de plugins.
 
@@ -1277,3 +1279,7 @@ Isso encerra a **Fase 9: Bibliotecas Externas**.
 A próxima fase sai de habilidades isoladas de bibliotecas e entra em trabalho integrado de portfólio: **Fase 10: Projetos Práticos**.
 
 Antes de avançar, pratique escrevendo testes que tornem falhas informativas. Uma suíte é mais valiosa quando dá confiança para alterar o código, e não quando apenas produz um número verde.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-requests/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../practical-projects/01-expense-tracker/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: Docstrings](../02-docstrings/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-docstrings/README.md) · [Module index](../README.md) · [Next →](../04-task-markers/README.md)
+<!-- /chapter-navigation:top -->
 
 A name is one of the smallest design decisions in a program, but it may be read hundreds of times. Good names reduce the amount of context a reader must reconstruct and help code communicate intention before a comment or docstring is needed.
 
@@ -658,4 +660,6 @@ Meaningful names are executable documentation woven directly into the code. They
 
 Choose names that remain true, reveal the program's vocabulary, and reduce the number of guesses a reader must make.
 
-[← Previous chapter: Docstrings](../02-docstrings/README.md) · [Back to the section index](../README.md) · Next chapter: Task markers
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-docstrings/README.md) · [Module index](../README.md) · [Next →](../04-task-markers/README.md)
+<!-- /chapter-navigation:bottom -->

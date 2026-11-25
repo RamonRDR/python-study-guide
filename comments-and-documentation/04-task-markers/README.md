@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: Meaningful names](../03-meaningful-names/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-meaningful-names/README.md) · [Module index](../README.md) · [Next →](../05-comments-vs-logging/README.md)
+<!-- /chapter-navigation:top -->
 
 Task markers are short labels inside comments that draw attention to work, constraints, risks, or temporary decisions. They can make unfinished work visible, but vague or abandoned markers quickly become wallpaper.
 
@@ -508,3 +510,7 @@ Before accepting a marker, verify:
 | Completed work | remove or update both the marker and its tracking item |
 
 Task markers are useful when they create a bridge from code to responsible follow-up. Without context and closure, that bridge becomes decorative scaffolding.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-meaningful-names/README.md) · [Module index](../README.md) · [Next →](../05-comments-vs-logging/README.md)
+<!-- /chapter-navigation:bottom -->

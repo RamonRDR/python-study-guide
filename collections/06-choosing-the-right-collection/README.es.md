@@ -6,7 +6,11 @@
 
 </div>
 
-[← Capítulo anterior: Conjuntos y valores únicos](../05-sets-and-unique-values/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · [Ver el roadmap](../../docs/roadmap.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../05-sets-and-unique-values/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md)
+<!-- /chapter-navigation:top -->
+
+[Ver el roadmap](../../docs/roadmap.es.md)
 
 Ahora conoces cuatro modelos importantes de colecciones incorporadas: listas, tuplas, diccionarios y conjuntos.
 
@@ -819,3 +823,7 @@ Referencias oficiales utilizadas para la verificación técnica:
 
 - [Tutorial de Python: Estructuras de datos](https://docs.python.org/es/3/tutorial/datastructures.html)
 - [Tipos incorporados de Python](https://docs.python.org/es/3/library/stdtypes.html)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../05-sets-and-unique-values/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md)
+<!-- /chapter-navigation:bottom -->

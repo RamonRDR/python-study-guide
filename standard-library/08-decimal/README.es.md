@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Biblioteca Estándar](../README.es.md) · [← Anterior: `itertools`](../07-itertools/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../07-itertools/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../09-os-shutil/README.es.md)
+<!-- /chapter-navigation:top -->
 
 El `float` integrado de Python es la herramienta correcta para una gran cantidad de trabajo numérico, pero modela números con punto flotante binario. El Capítulo 03 de Strings y Números ya mostró por qué un valor como `0.1` puede no tener una representación binaria exacta.
 
@@ -1380,3 +1382,7 @@ Referencias primarias utilizadas para este capítulo:
 Continúa con el [Capítulo 09: `os` y `shutil`](../09-os-shutil/README.es.md).
 
 El siguiente capítulo pasa de contratos numéricos a contratos de operaciones del sistema operativo y filesystem: estado del entorno, interfaces path-like, recorrido, metadatos, copia, movimiento, eliminación recursiva, seguridad de archives y la frontera entre `pathlib`, `os` y `shutil`.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../07-itertools/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../09-os-shutil/README.es.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: Nomes significativos](../03-meaningful-names/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-meaningful-names/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../05-comments-vs-logging/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Marcadores de tarefas são rótulos curtos inseridos em comentários para destacar trabalhos, restrições, riscos ou decisões temporárias. Eles podem tornar pendências visíveis, mas marcadores vagos ou abandonados rapidamente viram papel de parede.
 
@@ -508,3 +510,7 @@ Antes de aceitar um marcador, verifique:
 | Trabalho concluído | remover ou atualizar tanto o marcador quanto o item de acompanhamento |
 
 Marcadores de tarefas são úteis quando criam uma ponte entre o código e o acompanhamento responsável. Sem contexto e encerramento, essa ponte vira apenas um andaime decorativo.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-meaningful-names/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../05-comments-vs-logging/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

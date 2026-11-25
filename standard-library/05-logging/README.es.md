@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Biblioteca Estándar](../README.es.md) · [← Capítulo anterior: CSV](../04-csv/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-csv/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-collections/README.es.md)
+<!-- /chapter-navigation:top -->
 
 El capítulo anterior sobre logging en la Fase 6 presentó el propósito del logging, los niveles estándar, los loggers de módulo, la configuración bajo responsabilidad de la aplicación, handlers, formatters, propagación, logging de excepciones, privacidad y la diferencia entre logs y comentarios.
 
@@ -1476,3 +1478,7 @@ Por eso el logging avanzado trata menos de imprimir mensajes y más de diseñar 
 ## Próximo capítulo
 
 Continúa con el [Capítulo 06: `collections`](../06-collections/README.es.md). Estudia contenedores especializados como `Counter`, `defaultdict`, `deque`, registros de tuplas nombradas, mappings por capas, herramientas de reordenación, bases wrapper e interfaces de colección como elecciones explícitas de estructura de datos y no trucos de conveniencia.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-csv/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-collections/README.es.md)
+<!-- /chapter-navigation:bottom -->

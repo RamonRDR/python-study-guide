@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Fluxo do Programa](../README.pt-BR.md) · [← Anterior: `if`, `elif` e `else`](../02-if-elif-and-else/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-if-elif-and-else/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-for-loops-and-iteration/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Uma instrução `if` pergunta se uma condição é verdadeira no contexto Booleano. Uma instrução `match` pergunta se um valor **corresponde a um padrão**.
 
@@ -925,3 +927,7 @@ Agora você sabe como o Python pode selecionar comportamento a partir de condiç
 - [Tutorial Python 3.13: instruções `match`](https://docs.python.org/pt-br/3.13/tutorial/controlflow.html#match-statements)
 - [PEP 634: Structural Pattern Matching — Specification](https://peps.python.org/pep-0634/)
 - [PEP 636: Structural Pattern Matching — Tutorial](https://peps.python.org/pep-0636/)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-if-elif-and-else/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-for-loops-and-iteration/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

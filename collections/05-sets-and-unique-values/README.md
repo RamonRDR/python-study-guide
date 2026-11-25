@@ -6,7 +6,9 @@
 
 </div>
 
-[← Previous chapter: Dictionaries: keys and values](../04-dictionaries-keys-and-values/README.md) · [Back to the Collections index](../README.md) · [Next chapter: Choosing the right collection →](../06-choosing-the-right-collection/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../04-dictionaries-keys-and-values/README.md) · [Module index](../README.md) · [Next →](../06-choosing-the-right-collection/README.md)
+<!-- /chapter-navigation:top -->
 
 Lists and tuples organize values by position. Dictionaries organize values by keys. Sets introduce another model: a value is either **a member of the collection or it is not**.
 
@@ -1119,3 +1121,7 @@ Official references used for technical verification:
 - [Python Tutorial: Sets](https://docs.python.org/3/tutorial/datastructures.html#sets)
 - [Python Built-in Types: Set Types — `set`, `frozenset`](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
 - [Python Glossary: hashable](https://docs.python.org/3/glossary.html#term-hashable)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../04-dictionaries-keys-and-values/README.md) · [Module index](../README.md) · [Next →](../06-choosing-the-right-collection/README.md)
+<!-- /chapter-navigation:bottom -->

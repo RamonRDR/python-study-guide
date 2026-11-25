@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Practical Projects](../README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../04-csv-analyzer/README.md) · [Module index](../README.md) · [Next →](../06-file-organizer/README.md)
+<!-- /chapter-navigation:top -->
 
 This is the fifth project in **Phase 10: Practical Projects**. It focuses on turning validated domain records into a trustworthy reporting pipeline: explicit reporting windows, deterministic aggregation, presentation-independent summaries, multiple renderers, and safe text-file output.
 
@@ -582,3 +584,7 @@ Before considering your own implementation complete, verify:
 Project 05 turns validated records into deterministic report artifacts while keeping aggregation, rendering, and persistence separate.
 
 Next, **Project 06: File Organizer** shifts attention from the contents of one output file to controlled filesystem workflows: discovering files, classifying them, planning moves, handling collisions, and keeping operations safe and testable.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../04-csv-analyzer/README.md) · [Module index](../README.md) · [Next →](../06-file-organizer/README.md)
+<!-- /chapter-navigation:bottom -->

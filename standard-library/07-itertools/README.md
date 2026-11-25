@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Standard Library](../README.md) · [← Previous chapter: Collections](../06-collections/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../06-collections/README.md) · [Module index](../README.md) · [Next →](../08-decimal/README.md)
+<!-- /chapter-navigation:top -->
 
 Earlier chapters introduced `for`, iterables, the basic iterable-versus-iterator distinction, and helpers such as `range()`, `enumerate()`, and `zip()`. This chapter goes further: it studies `itertools` as a toolkit for composing **lazy iterator pipelines** with explicit consumption, buffering, grouping, and combinatoric contracts.
 
@@ -1147,3 +1149,7 @@ Primary references used for this chapter:
 Continue with [Chapter 08: `decimal`](../08-decimal/README.md).
 
 The next chapter moves from lazy iteration contracts to **numeric precision contracts**: decimal representation, contexts, rounding, traps, quantization, and exact arithmetic for values where binary floating-point behavior is not the desired model.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../06-collections/README.md) · [Module index](../README.md) · [Next →](../08-decimal/README.md)
+<!-- /chapter-navigation:bottom -->

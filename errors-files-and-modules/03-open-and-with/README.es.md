@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Errores, Archivos y Módulos](../README.es.md) · [← Anterior: Lanzar Excepciones y Crear Excepciones Personalizadas](../02-raise-and-custom-exceptions/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-raise-and-custom-exceptions/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-txt-csv-and-json/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Los programas suelen necesitar que los datos sigan existiendo después de que el proceso termina. Un archivo de texto puede almacenar notas, configuración, exportaciones, logs o resultados intermedios que una ejecución posterior podrá leer de nuevo.
 
@@ -845,3 +847,7 @@ módulos y paquetes
 - Tutorial de Python 3.14, Reading and Writing Files: <https://docs.python.org/3.14/tutorial/inputoutput.html#reading-and-writing-files>
 - Referencia del lenguaje Python 3.14, instrucción `with`: <https://docs.python.org/3.14/reference/compound_stmts.html#the-with-statement>
 - Documentación `io` de Python 3.14, Text Encoding: <https://docs.python.org/3.14/library/io.html#text-encoding>
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-raise-and-custom-exceptions/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-txt-csv-and-json/README.es.md)
+<!-- /chapter-navigation:bottom -->

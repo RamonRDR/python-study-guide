@@ -6,7 +6,11 @@
 
 </div>
 
-[← Previous chapter: Sets and unique values](../05-sets-and-unique-values/README.md) · [Back to the Collections index](../README.md) · [View the roadmap](../../docs/roadmap.en.md)
+<!-- chapter-navigation:top -->
+[← Previous](../05-sets-and-unique-values/README.md) · [Module index](../README.md) · [Next →](../../program-flow/01-conditions-comparisons-and-boolean-logic/README.md)
+<!-- /chapter-navigation:top -->
+
+[View the roadmap](../../docs/roadmap.en.md)
 
 You now know four important built-in collection models: lists, tuples, dictionaries, and sets.
 
@@ -819,3 +823,7 @@ Official references used for technical verification:
 
 - [Python Tutorial: Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
 - [Python Built-in Types](https://docs.python.org/3/library/stdtypes.html)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../05-sets-and-unique-values/README.md) · [Module index](../README.md) · [Next →](../../program-flow/01-conditions-comparisons-and-boolean-logic/README.md)
+<!-- /chapter-navigation:bottom -->

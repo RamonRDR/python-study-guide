@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Funciones](../README.es.md) · [← Anterior: Funciones Trabajando Juntas](../08-functions-working-together/README.es.md) · [Siguiente fase: Comentarios y Documentación →](../../comments-and-documentation/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../08-functions-working-together/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../comments-and-documentation/01-comments/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Cuando las funciones trabajan juntas, los valores recorren el programa. Un argumento entra en una función, un parámetro lo recibe, los nombres locales pueden transformarlo y un valor retornado puede llevar un resultado de vuelta al llamador o hacia otra función.
 
@@ -943,3 +945,7 @@ Siguiente paso en la secuencia recomendada: [Comentarios, Documentación y Códi
 - [Python 3.13 Tutorial: More on Defining Functions](https://docs.python.org/3.13/tutorial/controlflow.html#more-on-defining-functions)
 - [Python 3.13 Language Reference: `return` statement](https://docs.python.org/3.13/reference/simple_stmts.html#the-return-statement)
 - [Python 3.13 Data Model](https://docs.python.org/3.13/reference/datamodel.html)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../08-functions-working-together/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../comments-and-documentation/01-comments/README.es.md)
+<!-- /chapter-navigation:bottom -->

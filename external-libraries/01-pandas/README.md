@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to External Libraries](../README.md) · [← Previous phase: `os` + `shutil`](../../standard-library/09-os-shutil/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../../standard-library/09-os-shutil/README.md) · [Module index](../README.md) · [Next →](../02-openpyxl/README.md)
+<!-- /chapter-navigation:top -->
 
 Phase 9 begins where the standard library stops: adding third-party packages with their own release cycles, dependency contracts, and domain-specific abstractions.
 
@@ -1370,3 +1372,7 @@ The official documentation identifies pandas 3.0.5 as the current stable documen
 `pandas` is now followed by **`openpyxl`**, which moves from table semantics to Excel workbook structure.
 
 Continue with [`openpyxl`: Automating Excel Workbooks](../02-openpyxl/README.md) to learn worksheet/cell operations, formula boundaries, styles, tables, validation metadata, optimized modes, and safe workbook round trips.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../../standard-library/09-os-shutil/README.md) · [Module index](../README.md) · [Next →](../02-openpyxl/README.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Capítulo anterior: Diccionarios: claves y valores](../04-dictionaries-keys-and-values/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · [Próximo capítulo: Elegir la colección adecuada →](../06-choosing-the-right-collection/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-dictionaries-keys-and-values/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-choosing-the-right-collection/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Las listas y las tuplas organizan valores por posición. Los diccionarios organizan valores mediante claves. Los conjuntos introducen otro modelo: un valor **pertenece a la colección o no pertenece**.
 
@@ -1119,3 +1121,7 @@ Referencias oficiales utilizadas para la verificación técnica:
 - [Tutorial de Python: Conjuntos](https://docs.python.org/3/tutorial/datastructures.html#sets)
 - [Tipos incorporados de Python: Tipos de conjunto — `set`, `frozenset`](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
 - [Glosario de Python: hashable](https://docs.python.org/3/glossary.html#term-hashable)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-dictionaries-keys-and-values/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-choosing-the-right-collection/README.es.md)
+<!-- /chapter-navigation:bottom -->

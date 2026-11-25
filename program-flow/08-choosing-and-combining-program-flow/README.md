@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Program Flow](../README.md) · [← Previous: `break`, `continue`, and Loop `else`](../07-break-continue-and-loop-else/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../07-break-continue-and-loop-else/README.md) · [Module index](../README.md) · [Next →](../../functions/01-defining-and-calling-functions/README.md)
+<!-- /chapter-navigation:top -->
 
 Knowing each program-flow tool separately is only the beginning. Real programs usually need **selection and repetition to work together**.
 
@@ -1167,3 +1169,7 @@ Primary references used for this chapter:
 - [Python 3.13 Language Reference: Compound Statements](https://docs.python.org/3.13/reference/compound_stmts.html)
 - [Python 3.13 Built-in Functions](https://docs.python.org/3.13/library/functions.html)
 - [Python 3.13 Built-in Types: `range`](https://docs.python.org/3.13/library/stdtypes.html#ranges)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../07-break-continue-and-loop-else/README.md) · [Module index](../README.md) · [Next →](../../functions/01-defining-and-calling-functions/README.md)
+<!-- /chapter-navigation:bottom -->

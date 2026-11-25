@@ -6,7 +6,9 @@
 
 </div>
 
-[← Previous chapter: Modifying lists and common list methods](../02-modifying-lists-and-methods/README.md) · [Back to the Collections index](../README.md) · [Next chapter: Dictionaries: keys and values](../04-dictionaries-keys-and-values/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-modifying-lists-and-methods/README.md) · [Module index](../README.md) · [Next →](../04-dictionaries-keys-and-values/README.md)
+<!-- /chapter-navigation:top -->
 
 Lists taught you what it means for a collection to be mutable. Tuples introduce the contrasting idea: an ordered sequence whose item positions cannot be replaced, added to, or removed from after the tuple is created.
 
@@ -738,3 +740,7 @@ Official references used for technical verification:
 - [Python Built-in Types: Common Sequence Operations](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations)
 - [Python Built-in Types: Tuples](https://docs.python.org/3/library/stdtypes.html#tuples)
 - [Python Data Model: Tuples](https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-modifying-lists-and-methods/README.md) · [Module index](../README.md) · [Next →](../04-dictionaries-keys-and-values/README.md)
+<!-- /chapter-navigation:bottom -->
