@@ -1010,6 +1010,50 @@ python-study-guide/
 │       └── examples/
 │           ├── numeric_summary.py
 │           └── rounding_behavior.py
+├── technical-interview-preparation/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   ├── 01-understanding-technical-interviews/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 02-live-coding-and-take-home/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 03-python-fundamentals-review/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 04-data-structures-and-algorithms-review/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 05-classes-and-objects/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── reading_session.py
+│   ├── 06-attributes-methods-and-object-behavior/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── study_group.py
+│   ├── 07-inheritance-polymorphism-and-composition/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── notifications.py
+│   └── 08-encapsulation-abstraction-and-solid/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       ├── README.es.md
+│       └── examples/
+│           └── stock.py
 └── tests/
     ├── README.md
     ├── README.pt-BR.md
@@ -1017,6 +1061,7 @@ python-study-guide/
     ├── test_chapter_navigation.py
     ├── test_check_internal_links.py
     ├── test_documentation_languages.py
+    ├── test_interview_oop_foundations.py
     ├── test_problem_solving_expansion.py
     ├── test_problem_solving_foundations.py
     ├── test_problem_solving_pilot.py
@@ -1050,7 +1095,8 @@ python-study-guide/
 - `fundamentals/`: trilha completa da Fase 1. Seus seis capítulos ensinam como o Python executa um programa, como usar `print()` e `input()`, como funcionam atribuição e nomes, como reconhecer e inspecionar tipos de dados embutidos comuns e como converter valores compatíveis de forma deliberada, com explicações multilíngues alinhadas e exemplos executáveis.
 - `manual-programming-practices/`: módulo complementar de engenharia com quatro aulas após a Fase 10, implementação e testes compartilhados de progresso de leitura; sem novas dependências.
 - `practical-projects/`: espaço completo de Projetos Práticos da Fase 10. Os Projetos 01–08 estão concluídos, revisados e integrados. O Projeto 07 adiciona modelos imutáveis de conciliação, aritmética exata em centavos inteiros, matching e ordenação determinísticos, rejeição de duplicidades, estados explícitos de conciliação, invariantes validadas de relatório, renderização textual estável e testes focados de regressão para precisão e segurança. O Projeto 08 encerra a fase com requisições e resultados imutáveis de automação, plano fixo de execução `prepare → process → verify → finalize`, logs determinísticos de eventos, evidências estruturadas, injeção controlada de falha, propagação fail-fast, verificação pós-processamento, semântica de etapas puladas, renderização estável e testes de regressão focados em invariantes sem integrações externas.
-- `problem-solving-and-live-coding/`: Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 fáceis, 12 médios, seis difíceis), incluindo duas tentativas cronometradas. Validação final da Sprint 05 pendente.
+- `problem-solving-and-live-coding/`: Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 fáceis, 12 médios, seis difíceis), incluindo duas tentativas cronometradas. Sprint 05 concluída ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
+- `technical-interview-preparation/`: Em andamento: oito aulas iniciais sobre fundamentos de entrevistas, revisão e OOP. Demais aulas, perguntas e simulados planejados.
 - `program-flow/`: trilha completa da Fase 4. Os Capítulos 01–08 ensinam condições, comparações, teste de valor de verdade, pertencimento, identidade, lógica booleana, ramificação condicional com `if`, `elif` e `else`, correspondência de padrões estruturais, repetição guiada por iteráveis com `for`, progressões numéricas com `range()`, iteração com posição usando `enumerate()`, iteração paralela com `zip()` incluindo validação explícita de comprimentos iguais com `strict=True`, repetição guiada por estado com `while`, controle deliberado de loops com `break`, `continue` e `else` de loop e como escolher e combinar ferramentas de fluxo do programa de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis determinísticos.
 - `scripts/`: ferramentas de manutenção sem dependências externas, utilizadas localmente e pelo GitHub Actions. As ferramentas de qualidade verificam exemplos aprovados, links internos, paridade das famílias de idiomas, navegação de capítulos e caminhos obrigatórios. O job Windows cobre testes de File Organizer; o job Linux executa a suíte completa de projetos práticos.
 - `standard-library/`: trilha completa da Fase 8. Os Capítulos 01–09 cobrem fronteiras de filesystem com `pathlib`, modelagem de data/hora com `datetime`, contratos avançados de `json` e `csv`, `logging`, `collections` especializadas, `itertools`, `decimal` e contratos de `os`/`shutil` para estado do ambiente, travessia, metadados, cópia, movimentação, remoção recursiva, capacidades de plataforma e segurança de archives, em inglês, português do Brasil e espanhol com exemplos executáveis determinísticos.

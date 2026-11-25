@@ -101,6 +101,7 @@ A computer with a supported Python installation and a text editor is enough for 
 | 10 | [Practical Projects](practical-projects/README.md) | 8 |
 | Supplement | [Manual Programming & Engineering Practices](manual-programming-practices/README.md) | 4 |
 | 11 | [Problem Solving & Live Coding](problem-solving-and-live-coding/README.md) | 16 |
+| 12 | [Technical Interview Preparation](technical-interview-preparation/README.md) | 8 |
 
 - [Full learning path: direct links to every published chapter](docs/learning-path.en.md)
 - [Roadmap in English](docs/roadmap.en.md)
@@ -128,6 +129,7 @@ python-study-guide/
 ├── scripts/
 ├── standard-library/
 ├── strings-and-numbers/
+├── technical-interview-preparation/
 └── tests/
 ```
 
@@ -139,17 +141,17 @@ Detailed explanations:
 
 ## Current status
 
-**Phase II: Learning Hub Foundation** is in progress. PRs #87–#94 are merged. Phase 11 contains 30 challenges; final advanced/timed validation is pending. Technical interview preparation, quizzes and a versioned content contract remain planned. The guide remains independently usable; the future web Learning Hub and separate Git Study Guide are not prerequisites.
+**Phase II: Learning Hub Foundation** is in progress. PRs #87–#95 are merged; Phase 11 is complete. Phase 12 foundations are in progress; quizzes and a versioned content contract remain planned. The guide remains independent of the future web Learning Hub and Git Study Guide.
 
 [Phase II implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md)
 
-The original project foundation, **Getting Started (six lessons)** and **Phases 1–10 are complete**. The current curriculum contains 83 lessons and eight practical projects, across 13 modules and three languages. **Phase 10: Practical Projects is complete** with all eight planned projects implemented, documented, tested, reviewed, and integrated.
+The original project foundation, **Getting Started (six lessons)** and **Phases 1–10 are complete**. The current curriculum contains 91 lessons and eight practical projects, across 14 modules and three languages. **Phase 10: Practical Projects is complete** with all eight planned projects implemented, documented, tested, reviewed, and integrated.
 
 The practical-project phase closes by combining validated data models, deterministic workflows, exact arithmetic, persistence and reporting, filesystem automation, reconciliation, orchestration, structured evidence, and automated regression coverage across the eight projects.
 
 See the [Practical Projects index](practical-projects/README.md), [roadmap](docs/roadmap.en.md), or [full learning path](docs/learning-path.en.md) for the current curriculum status.
 
-Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Final Sprint 05 validation is pending.
+Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Sprint 05 completed ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
 
 [Exercise bank](exercises/README.md)
 

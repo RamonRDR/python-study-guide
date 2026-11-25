@@ -203,7 +203,7 @@ Practice manual debugging, SDD, TDD and a Python-specific review workflow after 
 
 ## Phase 11: Problem Solving & Live Coding
 
-Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Final Sprint 05 validation is pending.
+Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Sprint 05 completed ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
 
 [Open module](../problem-solving-and-live-coding/README.md)
 
@@ -224,14 +224,18 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 15. [Mixed Challenges](../problem-solving-and-live-coding/15-mixed-challenges/README.md)
 16. [Timed Live Coding](../problem-solving-and-live-coding/16-timed-live-coding/README.md)
 
+## Phase 12: Technical Interview Preparation
+
+In progress: eight initial lessons on interview fundamentals, review and OOP. Remaining lessons, questions and mocks are planned. [Technical Interview Preparation](../technical-interview-preparation/README.md).
+
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
-This engineering phase does not renumber the original curriculum. Sprints 00–04 and Sprint 05 foundations, pilot and easy/medium expansion are merged (PRs #87–#94). Advanced and timed exercises are submitted for final Sprint 05 review. The repository stays independent of the future web platform.
+This engineering phase does not renumber the original curriculum. Sprints 00–05 are merged (PRs #87–#95). Sprint 06 is in progress. The repository stays independent of the future web platform.
 
 | Future curriculum | Status |
 | --- | --- |
-| 11. Problem Solving & Live Coding | 30 exercises authored; final review pending |
-| 12. Technical Interview Preparation | Planned |
+| 11. Problem Solving & Live Coding | Complete; 30 challenges |
+| 12. Technical Interview Preparation | In progress; eight lessons |
 
 [Implementation plan](specs/learning-hub-foundation/implementation-plan.md) · [Related-guide integration register](specs/learning-hub-foundation/related-guides.md)
 
