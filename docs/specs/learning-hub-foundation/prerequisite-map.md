@@ -2,7 +2,7 @@
 
 [🇺🇸 English](prerequisite-map.md) · [🇧🇷 Português](prerequisite-map.pt-BR.md) · [🇪🇸 Español](prerequisite-map.es.md)
 
-Baseline: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. The audit inspected the curriculum tree and relevant English lesson sections; coverage refers to actual instruction sampled, not a complete semantic review of all translations. Each row requires review before publication of a dependent challenge. Categories are planned, not published exercise IDs. The introductory timed workflow is taught in the first foundation lesson; the dedicated chapter will expand it before publishing timed challenges. No timed challenge is published here.
+Baseline: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. The audit inspected the curriculum tree and relevant English lesson sections; coverage refers to actual instruction sampled, not a complete semantic review of all translations. Each row requires review before publication of a dependent challenge. Categories are planned, not published exercise IDs. At baseline, timed challenges were planned. The foundation lesson introduced the workflow and chapter 16 now expands it; see the advanced and timed prerequisite gate below.
 
 | Concept | Baseline lesson | Coverage at baseline | Supplement | Challenge category | Validation |
 | --- | --- | --- | --- | --- | --- |

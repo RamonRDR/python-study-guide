@@ -44,3 +44,15 @@ Comandos ou verificações realizados:
 
 ## Notas ao revisor
 <!-- Decisões, incertezas ou pontos que merecem revisão. -->
+
+## Auditoria final pré-merge (após CI e Codex Review)
+
+- SHA do head auditado:
+- Execução bem-sucedida do CI:
+- Evidência do Codex Review:
+- Verificações de escopo, código, testes, pré-requisitos, idiomas, regressões, privacidade e segurança:
+- Findings, correções, limitações e bloqueios pendentes:
+- [ ] Auditoria concluída no head atual; sem bloqueios de merge pendentes.
+- [ ] Aprovação explícita do mantenedor para squash merge obtida após auditoria.
+
+Se o head mudar, repita CI, Codex Review e auditoria antes de pedir aprovação.

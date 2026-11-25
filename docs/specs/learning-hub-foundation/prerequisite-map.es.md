@@ -2,7 +2,7 @@
 
 [🇺🇸 English](prerequisite-map.md) · [🇧🇷 Português](prerequisite-map.pt-BR.md) · [🇪🇸 Español](prerequisite-map.es.md)
 
-Base: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. La auditoría inspeccionó el árbol curricular y secciones relevantes de lecciones en inglés; cobertura se refiere a instrucción muestreada, no a revisión semántica completa de traducciones. Cada fila requiere revisión antes de publicar un reto dependiente. Las categorías son planificadas, no IDs de ejercicios publicados. El flujo cronometrado introductorio se enseña en la primera lección de fundamentos; la lección dedicada lo ampliará antes de publicar retos cronometrados. Aquí no se publica ninguno.
+Base: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. La auditoría inspeccionó el árbol curricular y secciones relevantes de lecciones en inglés; cobertura se refiere a instrucción muestreada, no a revisión semántica completa de traducciones. Cada fila requiere revisión antes de publicar un reto dependiente. Las categorías son planificadas, no IDs de ejercicios publicados. En la línea de base, los retos cronometrados estaban planificados. La lección de fundamentos introdujo el flujo y la lección 16 lo amplía ahora; consulta el control avanzado y cronometrado abajo.
 
 | Concepto | Lección base | Cobertura en la base | Complemento | Categoría de reto | Validación |
 | --- | --- | --- | --- | --- | --- |

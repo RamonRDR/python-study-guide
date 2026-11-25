@@ -20,6 +20,8 @@
 - [04-recursion](../../../problem-solving-and-live-coding/04-recursion/README.es.md)
 - [09-data-flow-between-functions](../../../functions/09-data-flow-between-functions/README.es.md)
 - [10-functions-and-recursion](../../../problem-solving-and-live-coding/10-functions-and-recursion/README.es.md)
+- [04-scope](../../../functions/04-scope/README.es.md)
+- [08-functions-working-together](../../../functions/08-functions-working-together/README.es.md)
 
 ## Contrato
 

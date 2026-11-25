@@ -21,7 +21,9 @@
     "list-methods",
     "type-checking",
     "recursion",
-    "mutation-and-data-flow"
+    "mutation-and-data-flow",
+    "scope",
+    "function-composition"
   ],
   "constraints": {
     "en": [
@@ -316,6 +318,16 @@
       "en": "problem-solving-and-live-coding/10-functions-and-recursion/README.md",
       "pt-BR": "problem-solving-and-live-coding/10-functions-and-recursion/README.pt-BR.md",
       "es": "problem-solving-and-live-coding/10-functions-and-recursion/README.es.md"
+    },
+    {
+      "en": "functions/04-scope/README.md",
+      "pt-BR": "functions/04-scope/README.pt-BR.md",
+      "es": "functions/04-scope/README.es.md"
+    },
+    {
+      "en": "functions/08-functions-working-together/README.md",
+      "pt-BR": "functions/08-functions-working-together/README.pt-BR.md",
+      "es": "functions/08-functions-working-together/README.es.md"
     }
   ],
   "practice_mode": "implement"

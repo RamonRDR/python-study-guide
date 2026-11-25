@@ -4,6 +4,8 @@
 
 Base: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. A auditoria inspecionou a árvore curricular e seções relevantes das aulas em inglês; cobertura refere-se à instrução amostrada, não à revisão semântica completa das traduções. Cada linha requer revisão antes de publicar desafio dependente. Categorias são planejadas, não IDs de exercícios publicados. O fluxo cronometrado introdutório é ensinado na primeira aula de fundamentos; a aula dedicada o ampliará antes de publicar desafios cronometrados. Nenhum desafio cronometrado é publicado aqui.
 
+O parágrafo da base descreve a auditoria histórica, não a contagem atual de desafios publicados. A prática cronometrada atual está documentada abaixo.
+
 | Conceito | Aula de base | Cobertura na base | Complemento | Categoria de desafio | Validação |
 | --- | --- | --- | --- | --- | --- |
 | Raciocínio lógico | [Aula de base](../../../program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md) | Coberto | [Fundamentos de resolução de problemas](../../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md) | Todos | PR #92 de fundamentos integrado; verificar por desafio |
