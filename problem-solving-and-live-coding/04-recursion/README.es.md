@@ -6,7 +6,7 @@
 [← Anterior](../03-algorithmic-complexity/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../05-searching-algorithms/README.es.md)
 <!-- /chapter-navigation:top -->
 
-**Requisitos previos:** [Return values](../../functions/03-return-values/README.es.md) · [Scope](../../functions/04-scope/README.es.md) · [Functions](../../functions/08-functions-working-together/README.es.md) · [Complexity](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md)
+**Requisitos previos:** [Valores de retorno](../../functions/03-return-values/README.es.md) · [Ámbito](../../functions/04-scope/README.es.md) · [Funciones](../../functions/08-functions-working-together/README.es.md) · [Complejidad](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md)
 
 ## Objetivo
 

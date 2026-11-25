@@ -6,7 +6,7 @@
 [← Anterior](../../manual-programming-practices/04-professional-workflow/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-constraints-and-edge-cases/README.es.md)
 <!-- /chapter-navigation:top -->
 
-**Requisitos previos:** [Program Flow](../../program-flow/08-choosing-and-combining-program-flow/README.es.md) · [Functions](../../functions/08-functions-working-together/README.es.md) · [SDD](../../manual-programming-practices/02-specification-driven-development/README.es.md)
+**Requisitos previos:** [Flujo de programa](../../program-flow/08-choosing-and-combining-program-flow/README.es.md) · [Funciones](../../functions/08-functions-working-together/README.es.md) · [SDD](../../manual-programming-practices/02-specification-driven-development/README.es.md)
 
 ## Objetivo
 
@@ -23,6 +23,10 @@ Divide en identificar un valor válido, acumular los minutos que cumplen y devol
 ## 3. Implementar y verificar
 
 El ejemplo compartido usa una meta configurable, 20 por defecto. Intenta escribirlo primero; después compara con el [ejemplo](examples/study_minutes.py). El contrato supone entradas y meta enteras no negativas; no exige validación adicional. Prueba entrada vacía, justo el límite, ausencia de coincidencias y valores repetidos. Si devolver demasiado pronto produce 0, rastrea la indentación y mueve el retorno fuera del bucle.
+
+## 4. Preparación para live coding
+
+Un intento cronometrado es una restricción de práctica, no una medida del valor personal. Antes de empezar, confirma herramientas permitidas, contrato y duración. Para una sesión de 10 minutos, reserva unos 2 minutos para lectura y ejemplos, 2 para plan, 4 para implementación y 2 para pruebas y explicación. Adapta el reparto si hace falta. Piensa en voz alta sobre supuestos y casos límite; si te bloqueas, declara el siguiente paso más pequeño en vez de adivinar en silencio. Para al llegar al límite, registra lo que funcionó y lo pendiente y termina sin cronómetro. Importa más la corrección que la velocidad. No consultes referencia ni IA durante el intento independiente. La futura lección de retos cronometrados ampliará este flujo.
 
 ## Práctica
 

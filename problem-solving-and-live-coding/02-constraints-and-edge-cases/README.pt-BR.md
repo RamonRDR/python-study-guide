@@ -6,7 +6,7 @@
 [← Anterior](../01-problem-solving-fundamentals/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-algorithmic-complexity/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
-**Pré-requisitos:** [Parameters](../../functions/02-parameters-and-arguments/README.pt-BR.md) · [Return values](../../functions/03-return-values/README.pt-BR.md) · [pytest](../../external-libraries/04-pytest/README.pt-BR.md) · [TDD](../../manual-programming-practices/03-test-driven-development/README.pt-BR.md)
+**Pré-requisitos:** [Parâmetros](../../functions/02-parameters-and-arguments/README.pt-BR.md) · [Valores de retorno](../../functions/03-return-values/README.pt-BR.md) · [pytest](../../external-libraries/04-pytest/README.pt-BR.md) · [TDD](../../manual-programming-practices/03-test-driven-development/README.pt-BR.md)
 
 ## Objetivo
 
@@ -30,7 +30,7 @@ Caso de borda é um limite ou condição válida incomum; entrada inválida viol
 
 ## 2. Converter exemplos em testes
 
-Escreva o resultado esperado independentemente da implementação. Use igualdade exata para booleanos e verifique tipos de exceção para entradas inválidas. Em Python, `isinstance(True, int)` é verdadeiro; o requisito de inteiro exato exige `type(value) is int`. Use comparação inclusiva somente após validar argumentos. Veja o [exemplo](examples/capacity.py). Uma solução com limite superior estrito falharia no teste em que tamanho iguala capacidade; isso verifica a capacidade de detectar erros. Evite testar texto de exceções salvo exigência do contrato.
+Escreva o resultado esperado independentemente da implementação. Use verificações de identidade como assertIs(result, True) para esses retornos booleanos exatos e verifique tipos de exceção para entradas inválidas. Em Python, `isinstance(True, int)` é verdadeiro; o requisito de inteiro exato exige `type(value) is int`. Use comparação inclusiva somente após validar argumentos. Veja o [exemplo](examples/capacity.py). Uma solução com limite superior estrito falharia no teste em que tamanho iguala capacidade; isso verifica a capacidade de detectar erros. Evite testar texto de exceções salvo exigência do contrato.
 
 ## Prática
 

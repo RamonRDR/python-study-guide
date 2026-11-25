@@ -6,7 +6,7 @@
 [← Anterior](../06-sorting-algorithms/README.es.md) · [Índice del módulo](../README.es.md)
 <!-- /chapter-navigation:top -->
 
-**Requisitos previos:** [Dictionaries](../../collections/04-dictionaries-keys-and-values/README.es.md) · [Sets](../../collections/05-sets-and-unique-values/README.es.md) · [Complexity](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md)
+**Requisitos previos:** [Diccionarios](../../collections/04-dictionaries-keys-and-values/README.es.md) · [Conjuntos](../../collections/05-sets-and-unique-values/README.es.md) · [Complejidad](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md)
 
 ## Objetivo
 
@@ -22,7 +22,7 @@ Para lista de enteros ordenada ascendente, decide si dos **índices diferentes**
 
 ## 3. Ventana deslizante fija
 
-Para hallar la suma máxima de k enteros consecutivos (1 <= k <= len(values)), suma los primeros k una vez; en cada movimiento, resta el valor que sale y suma el que entra. Guarda la mejor suma. Para [4, -1, 3, 2], k=2, las sumas son 3, 2, 5; resultado 5. Inicia la mejor con la primera suma, no cero, porque todos los valores pueden ser negativos. La implementación compartida calcula la primera suma con un bucle, sin rebanada; O(n) de tiempo y O(1) de espacio auxiliar. Una ventana fija no es un subconjunto arbitrario; tampoco se afirma que reglas de ventana variable funcionen con negativos.
+Para hallar la suma máxima de k enteros consecutivos (1 <= k <= len(values)), suma los primeros k una vez; en cada movimiento, resta el valor que sale y suma el que entra. Guarda la mejor suma. Para [4, -1, 3, 2], k=2, las sumas son 3, 2, 5; resultado 5. Inicia la mejor con la primera suma, no cero, porque todos los valores pueden ser negativos. La implementación compartida calcula la primera suma con un bucle, sin rebanada; O(n) de tiempo y O(1) de espacio auxiliar. El ejemplo exige k entero exacto y lanza TypeError para tipo incorrecto o ValueError para tamaño fuera del intervalo permitido. Una ventana fija no es un subconjunto arbitrario; tampoco se afirma que reglas de ventana variable funcionen con negativos.
 
 ## Práctica
 

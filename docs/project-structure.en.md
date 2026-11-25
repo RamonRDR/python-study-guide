@@ -736,6 +736,7 @@ python-study-guide/
     ├── test_chapter_navigation.py
     ├── test_check_internal_links.py
     ├── test_documentation_languages.py
+    ├── test_problem_solving_foundations.py
     └── test_validate_repository_structure.py
 ```
 
@@ -757,7 +758,7 @@ python-study-guide/
 - `comments-and-documentation/`: complete Phase 6 learning path. Reviewed chapters are available for comments, docstrings, meaningful names, task markers, comments versus logging, and PEP 8 and readability, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `collections/`: complete Phase 3 learning path. Its six chapters teach list creation, reading, mutation, common methods, shallow copying, tuples and immutability, dictionary key-value mappings and views, set uniqueness and relationships, and how to choose among lists, tuples, dictionaries, and sets by intent, in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
-- `docs/adr/` and `docs/specs/`: trilingual architecture decisions, Phase II specifications, task register, acceptance criteria, integration contract and future related-guide references.
+- `docs/adr/` and `docs/specs/`: trilingual architecture decisions, Phase II specifications, task register, acceptance criteria, integration contract and future related-guide references. The FR-05 prerequisite map is in the learning-hub-foundation directory.
 - `errors-files-and-modules/`: complete Phase 7 learning path. Chapters 01–05 cover runtime exception handling, deliberate raising and custom exceptions, safe text-file I/O with `open()` and `with`, TXT/CSV/JSON parsing and writing, and code organization through imports, modules, regular packages, execution context, and dependency design, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: complete Phase 9 learning path for third-party packages. It contains reviewed multilingual chapters for pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x, and pytest 9.1.x, with twenty deterministic executable examples in total. The phase covers tabular transformations, Excel workbook automation, HTTP/API clients, and automated-testing contracts; Phase 10 practical projects are also complete.

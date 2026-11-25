@@ -2,7 +2,7 @@
 
 [🇺🇸 English](prerequisite-map.md) · [🇧🇷 Português](prerequisite-map.pt-BR.md) · [🇪🇸 Español](prerequisite-map.es.md)
 
-Baseline: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. The audit inspected the curriculum tree and relevant English lesson sections; coverage refers to actual instruction sampled, not a complete semantic review of all translations. Each row requires review before publication of a dependent challenge. Categories are planned, not published exercise IDs. The timed workflow is taught in the future timed-practice chapter before any timed exercise; no timed exercise is published here.
+Baseline: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. The audit inspected the curriculum tree and relevant English lesson sections; coverage refers to actual instruction sampled, not a complete semantic review of all translations. Each row requires review before publication of a dependent challenge. Categories are planned, not published exercise IDs. The introductory timed workflow is taught in the first foundation lesson; the dedicated chapter will expand it before publishing timed challenges. No timed challenge is published here.
 
 | Concept | Baseline lesson | Coverage at baseline | Supplement | Challenge category | Validation |
 | --- | --- | --- | --- | --- | --- |
@@ -29,6 +29,6 @@ Baseline: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. The audit inspected the cu
 | Automated tests | [Baseline lesson](../../../manual-programming-practices/03-test-driven-development/README.md) | Covered | [Constraints and Edge Cases](../../../problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md) | All | Review pending |
 | Problem-solving strategies | [Baseline lesson](../../../manual-programming-practices/02-specification-driven-development/README.md) | Partial | [Problem-Solving Fundamentals](../../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md) | Mixed | Review pending |
 | Frequency maps, two pointers, windows | [Baseline lesson](../../../collections/04-dictionaries-keys-and-values/README.md) | Partial | [Problem-Solving Patterns](../../../problem-solving-and-live-coding/07-problem-solving-patterns/README.md) | Collections, mixed | Review pending |
-| Timed live coding | [Baseline lesson](../../../manual-programming-practices/01-manual-coding-and-debugging/README.md) | Gap | Planned timed-practice instruction | Timed practice | Review pending |
+| Timed live coding | [Baseline lesson](../../../manual-programming-practices/01-manual-coding-and-debugging/README.md) | Gap | [Problem-Solving Fundamentals](../../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md) | Timed practice | Review pending |
 
 For the pilot, also check string methods, numeric built-ins, list methods, while loops, function parameters/returns and testing; these are taught in the original modules. For every new exercise, record its stable ID, exact prerequisites, coverage evidence and validation result before publication. If a challenge introduces a pattern not taught here, add instruction in all three languages first. Do not equate a mention or an existing built-in with algorithm instruction. Keep debugging and refactoring practice connected to their existing lessons.

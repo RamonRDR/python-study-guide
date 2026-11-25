@@ -6,7 +6,7 @@
 [← Anterior](../04-recursion/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-sorting-algorithms/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
-**Pré-requisitos:** [Lists](../../collections/01-list-creation-and-indexing/README.pt-BR.md) · [Loop control](../../program-flow/07-break-continue-and-loop-else/README.pt-BR.md) · [Complexity](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md)
+**Pré-requisitos:** [Listas](../../collections/01-list-creation-and-indexing/README.pt-BR.md) · [Controle de loops](../../program-flow/07-break-continue-and-loop-else/README.pt-BR.md) · [Complexidade](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md)
 
 ## Objetivo
 

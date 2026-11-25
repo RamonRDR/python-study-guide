@@ -736,6 +736,7 @@ python-study-guide/
     ├── test_chapter_navigation.py
     ├── test_check_internal_links.py
     ├── test_documentation_languages.py
+    ├── test_problem_solving_foundations.py
     └── test_validate_repository_structure.py
 ```
 
@@ -757,7 +758,7 @@ python-study-guide/
 - `comments-and-documentation/`: trilha completa da Fase 6. Há capítulos revisados sobre comentários, docstrings, nomes significativos, marcadores de tarefas, comentários versus logging e PEP 8 e legibilidade, cada um em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `collections/`: trilha completa da Fase 3. Seus seis capítulos ensinam criação, leitura, mutação e métodos comuns de listas, cópia rasa, tuplas e imutabilidade, mapeamentos chave-valor e views de dicionários, unicidade e relações de conjuntos e como escolher entre listas, tuplas, dicionários e conjuntos de acordo com a intenção, em inglês, português brasileiro e espanhol, com exemplos executáveis seguros.
 - `docs/`: trilhas completas de estudos, roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
-- `docs/adr/` e `docs/specs/`: decisões de arquitetura trilíngues, especificações da Phase II, registro de tarefas, critérios de aceite, contrato de integração e referências futuras entre guias.
+- `docs/adr/` e `docs/specs/`: decisões de arquitetura trilíngues, especificações da Phase II, registro de tarefas, critérios de aceite, contrato de integração e referências futuras entre guias. O mapa de pré-requisitos FR-05 está no diretório learning-hub-foundation.
 - `errors-files-and-modules/`: trilha completa da Fase 7. Os Capítulos 01–05 cobrem tratamento de exceções em runtime, levantamento deliberado e exceções personalizadas, I/O seguro de arquivos de texto com `open()` e `with`, parsing e escrita de TXT/CSV/JSON e organização do código por imports, módulos, pacotes regulares, contexto de execução e design de dependências, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos.
 - `exercises/`: atividades práticas relacionadas aos capítulos.
 - `external-libraries/`: trilha completa da Fase 9 para pacotes de terceiros. Contém capítulos multilíngues revisados de pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x e pytest 9.1.x, com vinte exemplos executáveis determinísticos no total. A fase cobre transformações tabulares, automação de workbooks do Excel, clientes HTTP/API e contratos de testes automatizados; a Fase 10 de projetos práticos também está concluída.

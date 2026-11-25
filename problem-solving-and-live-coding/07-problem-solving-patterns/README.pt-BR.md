@@ -6,7 +6,7 @@
 [← Anterior](../06-sorting-algorithms/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
-**Pré-requisitos:** [Dictionaries](../../collections/04-dictionaries-keys-and-values/README.pt-BR.md) · [Sets](../../collections/05-sets-and-unique-values/README.pt-BR.md) · [Complexity](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md)
+**Pré-requisitos:** [Dicionários](../../collections/04-dictionaries-keys-and-values/README.pt-BR.md) · [Sets](../../collections/05-sets-and-unique-values/README.pt-BR.md) · [Complexidade](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md)
 
 ## Objetivo
 
@@ -22,7 +22,7 @@ Para lista crescente ordenada de inteiros, determine se dois **índices diferent
 
 ## 3. Janela deslizante fixa
 
-Para obter soma máxima de k inteiros consecutivos (1 <= k <= len(values)), some os primeiros k valores uma vez; a cada movimento, subtraia o valor que sai e adicione o que entra. Guarde a melhor soma. Para [4, -1, 3, 2], k=2, somas são 3, 2, 5; resultado 5. Inicie melhor com a primeira soma, não zero, pois todos os valores podem ser negativos. A implementação compartilhada calcula a primeira soma com loop, sem fatia; O(n) de tempo e O(1) de espaço auxiliar. Janela fixa não é subconjunto arbitrário; a aula também não afirma que regras de janela variável funcionam com negativos.
+Para obter soma máxima de k inteiros consecutivos (1 <= k <= len(values)), some os primeiros k valores uma vez; a cada movimento, subtraia o valor que sai e adicione o que entra. Guarde a melhor soma. Para [4, -1, 3, 2], k=2, somas são 3, 2, 5; resultado 5. Inicie melhor com a primeira soma, não zero, pois todos os valores podem ser negativos. A implementação compartilhada calcula a primeira soma com loop, sem fatia; O(n) de tempo e O(1) de espaço auxiliar. O exemplo exige k inteiro exato e gera TypeError para tipo errado ou ValueError para tamanho fora do intervalo permitido. Janela fixa não é subconjunto arbitrário; a aula também não afirma que regras de janela variável funcionam com negativos.
 
 ## Prática
 

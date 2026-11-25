@@ -24,6 +24,10 @@ Break the task into identifying a qualifying value, accumulating qualifying minu
 
 The shared example uses a configurable goal, default 20. Try writing it first; then compare with the [example](examples/study_minutes.py). The contract assumes nonnegative integer inputs and goal; no extra validation is required. Test empty input, exactly the threshold, no matching values, and repeated values. If returning too early produces 0, trace the indentation and move the return outside the loop.
 
+## 4. Prepare for live coding
+
+A timed attempt is a practice constraint, not a measure of personal worth. Before starting, confirm the allowed tools, input contract and duration. For a 10-minute practice session, reserve roughly 2 minutes for reading and examples, 2 for a plan, 4 for implementation and 2 for tests and explanation. Adapt the allocation if necessary. Think aloud about assumptions and edge cases; if blocked, state the smallest next step rather than silently guessing. Stop at the time limit, record what worked and what remains, then finish without the timer. Accuracy matters more than speed. Do not consult the reference or an AI during the independent attempt. The dedicated timed challenge chapter will build on this workflow.
+
 ## Practice
 
 Change the fictional requirement: return the **number** of qualifying days, not the minutes. Write two hand-calculated examples, pseudocode and a function before consulting a solution. Explain why the two contracts differ. For the original example, the new answer is 2.

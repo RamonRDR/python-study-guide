@@ -22,7 +22,7 @@ For an ascending sorted integer list, decide whether two **different indices** s
 
 ## 3. Fixed sliding window
 
-To find the maximum sum of k consecutive integers (1 <= k <= len(values)), sum the first k values once; for each move, subtract the outgoing value and add the incoming one. Track the best sum. For [4, -1, 3, 2], k=2, sums are 3, 2, 5; result 5. Start best at the first sum, not zero, because all values may be negative. The shared implementation computes the first sum with a loop rather than a slice; O(n) time and O(1) auxiliary space. A fixed window is not an arbitrary subset, nor does this lesson claim that variable-window rules work for negative values.
+To find the maximum sum of k consecutive integers (1 <= k <= len(values)), sum the first k values once; for each move, subtract the outgoing value and add the incoming one. Track the best sum. For [4, -1, 3, 2], k=2, sums are 3, 2, 5; result 5. Start best at the first sum, not zero, because all values may be negative. The shared implementation computes the first sum with a loop rather than a slice; O(n) time and O(1) auxiliary space. The example requires an exact integer k and raises TypeError for wrong types or ValueError for a size outside the permitted range. A fixed window is not an arbitrary subset, nor does this lesson claim that variable-window rules work for negative values.
 
 ## Practice
 

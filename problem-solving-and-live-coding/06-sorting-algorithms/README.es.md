@@ -6,7 +6,7 @@
 [← Anterior](../05-searching-algorithms/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../07-problem-solving-patterns/README.es.md)
 <!-- /chapter-navigation:top -->
 
-**Requisitos previos:** [List methods](../../collections/02-modifying-lists-and-methods/README.es.md) · [range](../../program-flow/05-range-enumerate-and-zip/README.es.md) · [Complexity](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md)
+**Requisitos previos:** [Métodos de listas](../../collections/02-modifying-lists-and-methods/README.es.md) · [range](../../program-flow/05-range-enumerate-and-zip/README.es.md) · [Complejidad](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md)
 
 ## Objetivo
 

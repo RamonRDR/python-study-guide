@@ -30,7 +30,7 @@ An edge case is a boundary or unusual valid condition; an invalid input violates
 
 ## 2. Turn examples into tests
 
-Write the expected output independently of the implementation. Use exact equality for these Boolean outputs and check exception types for invalid inputs. In Python, `isinstance(True, int)` is true, so the exact-integer requirement needs `type(value) is int`. Use an inclusive comparison only after validating arguments. See the [example](examples/capacity.py). A solution that uses a strict upper bound would fail the group-size-equals-capacity test; this is a useful discrimination check. Avoid testing exception message text unless the contract requires it.
+Write the expected output independently of the implementation. Use identity checks such as assertIs(result, True) for these exact Boolean outputs and check exception types for invalid inputs. In Python, `isinstance(True, int)` is true, so the exact-integer requirement needs `type(value) is int`. Use an inclusive comparison only after validating arguments. See the [example](examples/capacity.py). A solution that uses a strict upper bound would fail the group-size-equals-capacity test; this is a useful discrimination check. Avoid testing exception message text unless the contract requires it.
 
 ## Practice
 

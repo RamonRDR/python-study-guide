@@ -2,7 +2,7 @@
 
 [🇺🇸 English](prerequisite-map.md) · [🇧🇷 Português](prerequisite-map.pt-BR.md) · [🇪🇸 Español](prerequisite-map.es.md)
 
-Base: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. A auditoria inspecionou a árvore curricular e seções relevantes das aulas em inglês; cobertura refere-se à instrução amostrada, não à revisão semântica completa das traduções. Cada linha requer revisão antes de publicar desafio dependente. Categorias são planejadas, não IDs de exercícios publicados. O fluxo cronometrado será ensinado na futura aula de prática cronometrada antes de qualquer exercício desse tipo; nenhum é publicado aqui.
+Base: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. A auditoria inspecionou a árvore curricular e seções relevantes das aulas em inglês; cobertura refere-se à instrução amostrada, não à revisão semântica completa das traduções. Cada linha requer revisão antes de publicar desafio dependente. Categorias são planejadas, não IDs de exercícios publicados. O fluxo cronometrado introdutório é ensinado na primeira aula de fundamentos; a aula dedicada o ampliará antes de publicar desafios cronometrados. Nenhum desafio cronometrado é publicado aqui.
 
 | Conceito | Aula de base | Cobertura na base | Complemento | Categoria de desafio | Validação |
 | --- | --- | --- | --- | --- | --- |
@@ -29,6 +29,6 @@ Base: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. A auditoria inspecionou a árv
 | Testes automatizados | [Aula de base](../../../manual-programming-practices/03-test-driven-development/README.pt-BR.md) | Coberto | [Restrições e casos de borda](../../../problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md) | Todos | Revisão pendente |
 | Estratégias de resolução | [Aula de base](../../../manual-programming-practices/02-specification-driven-development/README.pt-BR.md) | Parcial | [Fundamentos de resolução de problemas](../../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md) | Mistos | Revisão pendente |
 | Mapas de frequência, dois ponteiros, janelas | [Aula de base](../../../collections/04-dictionaries-keys-and-values/README.pt-BR.md) | Parcial | [Padrões de resolução de problemas](../../../problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md) | Coleções, mistos | Revisão pendente |
-| Live coding cronometrado | [Aula de base](../../../manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md) | Lacuna | Instrução cronometrada planejada | Prática cronometrada | Revisão pendente |
+| Live coding cronometrado | [Aula de base](../../../manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md) | Lacuna | [Fundamentos de resolução de problemas](../../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md) | Prática cronometrada | Revisão pendente |
 
 Para o piloto, confira também métodos de strings, recursos numéricos nativos, métodos de listas, loops while, parâmetros/retornos e testes; são ensinados nos módulos originais. Para cada novo exercício, registre ID estável, pré-requisitos exatos, evidência de cobertura e resultado de validação antes da publicação. Se introduzir padrão não ensinado aqui, acrescente instrução nos três idiomas primeiro. Não confunda menção ou recurso nativo existente com ensino de algoritmo. Conecte depuração e refatoração às aulas existentes.

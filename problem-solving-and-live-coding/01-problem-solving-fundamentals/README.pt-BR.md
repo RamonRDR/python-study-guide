@@ -6,7 +6,7 @@
 [← Anterior](../../manual-programming-practices/04-professional-workflow/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-constraints-and-edge-cases/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
-**Pré-requisitos:** [Program Flow](../../program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md) · [Functions](../../functions/08-functions-working-together/README.pt-BR.md) · [SDD](../../manual-programming-practices/02-specification-driven-development/README.pt-BR.md)
+**Pré-requisitos:** [Fluxo de programa](../../program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md) · [Funções](../../functions/08-functions-working-together/README.pt-BR.md) · [SDD](../../manual-programming-practices/02-specification-driven-development/README.pt-BR.md)
 
 ## Objetivo
 
@@ -23,6 +23,10 @@ Divida em identificar um valor elegível, acumular os minutos elegíveis e retor
 ## 3. Implementar e verificar
 
 O exemplo compartilhado usa meta configurável, padrão 20. Tente escrever primeiro; depois compare com o [exemplo](examples/study_minutes.py). O contrato assume entradas e meta inteiras não negativas; não exige validação adicional. Teste entrada vazia, exatamente o limite, ausência de correspondências e valores repetidos. Se retornar cedo demais e obter 0, rastreie a indentação e mova o retorno para fora do loop.
+
+## 4. Preparação para live coding
+
+Uma tentativa cronometrada é uma restrição de prática, não uma medida de valor pessoal. Antes de começar, confirme ferramentas permitidas, contrato e duração. Para uma sessão de 10 minutos, reserve cerca de 2 minutos para leitura e exemplos, 2 para plano, 4 para implementação e 2 para testes e explicação. Adapte a divisão se necessário. Pense em voz alta sobre hipóteses e casos de borda; se travar, declare o menor próximo passo em vez de adivinhar em silêncio. Pare no limite, registre o que funcionou e o que falta e termine sem cronômetro. Correção importa mais que velocidade. Não consulte referência nem IA durante a tentativa independente. A futura aula de desafios cronometrados aprofundará esse fluxo.
 
 ## Prática
 

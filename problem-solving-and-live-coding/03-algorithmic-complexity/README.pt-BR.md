@@ -6,7 +6,7 @@
 [← Anterior](../02-constraints-and-edge-cases/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-recursion/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
-**Pré-requisitos:** [for](../../program-flow/04-for-loops-and-iteration/README.pt-BR.md) · [while](../../program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md) · [Collections](../../collections/06-choosing-the-right-collection/README.pt-BR.md)
+**Pré-requisitos:** [for](../../program-flow/04-for-loops-and-iteration/README.pt-BR.md) · [while](../../program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md) · [Coleções](../../collections/06-choosing-the-right-collection/README.pt-BR.md)
 
 ## Objetivo
 

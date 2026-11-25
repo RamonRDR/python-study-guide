@@ -6,7 +6,7 @@
 [← Anterior](../01-problem-solving-fundamentals/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-algorithmic-complexity/README.es.md)
 <!-- /chapter-navigation:top -->
 
-**Requisitos previos:** [Parameters](../../functions/02-parameters-and-arguments/README.es.md) · [Return values](../../functions/03-return-values/README.es.md) · [pytest](../../external-libraries/04-pytest/README.es.md) · [TDD](../../manual-programming-practices/03-test-driven-development/README.es.md)
+**Requisitos previos:** [Parámetros](../../functions/02-parameters-and-arguments/README.es.md) · [Valores de retorno](../../functions/03-return-values/README.es.md) · [pytest](../../external-libraries/04-pytest/README.es.md) · [TDD](../../manual-programming-practices/03-test-driven-development/README.es.md)
 
 ## Objetivo
 
@@ -30,7 +30,7 @@ Un caso límite es una frontera o condición válida poco usual; una entrada inv
 
 ## 2. Convertir ejemplos en pruebas
 
-Escribe el resultado esperado independientemente de la implementación. Usa igualdad exacta para booleanos y comprueba tipos de excepción para entradas inválidas. En Python, `isinstance(True, int)` es verdadero; el requisito de entero exacto exige `type(value) is int`. Usa una comparación inclusiva solo tras validar los argumentos. Consulta el [ejemplo](examples/capacity.py). Una solución con límite superior estricto fallaría cuando tamaño iguala capacidad; esto comprueba la capacidad de detectar errores. Evita probar el texto de excepciones salvo que el contrato lo exija.
+Escribe el resultado esperado independientemente de la implementación. Usa comprobaciones de identidad como assertIs(result, True) para estos retornos booleanos exactos y comprueba tipos de excepción para entradas inválidas. En Python, `isinstance(True, int)` es verdadero; el requisito de entero exacto exige `type(value) is int`. Usa una comparación inclusiva solo tras validar los argumentos. Consulta el [ejemplo](examples/capacity.py). Una solución con límite superior estricto fallaría cuando tamaño iguala capacidad; esto comprueba la capacidad de detectar errores. Evita probar el texto de excepciones salvo que el contrato lo exija.
 
 ## Práctica
 
