@@ -54,7 +54,7 @@ The following group map complements the exact localized prerequisite paths in ea
 
 ## Advanced and timed prerequisite gate
 
-The following chapter sections teach the adaptations before their exercise links; each exercise also lists exact locale-specific prerequisite paths. All prior foundations come from the merged base; the new instruction is part of this final PR. Timing and explanations are self-assessed, not machine-graded. Final CI, review and maintainer approval are pending.
+The following sections teach the adaptations before exercise links; each exercise also lists exact localized prerequisite paths. Timing and explanations are self-assessed, not machine-graded. PR #95 was merged as `21c00c32b91a0116c8a50e89687b91f8efa04cb5`; [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45720384626) passed.
 
 | Concept | Exercise | Instruction before practice |
 | --- | --- | --- |

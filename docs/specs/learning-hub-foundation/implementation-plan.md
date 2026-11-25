@@ -14,7 +14,12 @@ Status: proposed for review. Execute only after specification PR approval and me
 | 03 | docs/readme-and-badges | Update three READMEs, paths, roadmap and structure; badge evidence only. |
 | 04 | feat/manual-programming-practices | Teach manual practice and SDD/TDD; reference existing AI-assisted maintenance guidance. Apply a small Python-specific branch/PR/test/review workflow without duplicating the independent Git course. |
 | 05 | feat/problem-solving-live-coding | Audit prerequisites for all FR-05 topics; teach missing concepts in all three languages before the corresponding practice; then pilot one challenge against the preliminary contract and expand by concept/difficulty with tests. |
-| 06 | feat/technical-interview-preparation | Audit and teach remaining interview-specific prerequisites not covered in Sprint 05, then questions and timed mock sets; include rubrics and locale alignment. |
+| 06A1 | feat/interview-foundations | Lessons 01–08, prerequisite map, OOP |
+| 06A2 | feat/interview-python-internals | Lessons 09–14, internals and memory |
+| 06A3 | feat/interview-backend-and-databases | Lessons 15–21, backend, SQL, engineering; T06-01 gate |
+| 06B | feat/technical-interview-pilot | Lesson 22, nine pilot questions and validation |
+| 06C | feat/technical-interview-question-bank | 48 additional technical questions |
+| 06D | feat/mock-and-international-interviews | Lessons 23–24, three behavioral/international questions and three mocks; AC-06 |
 | 07 | feat/quiz-and-exercise-bank | Materialize versioned records and schemas; validate IDs, translations, scoring, solutions and representative incorrect implementations. |
 | 08 | feat/learning-hub-content-contract | Finalize curriculum manifest, consumer validation, reference fixtures, versioning and compatibility metadata. |
 | 09 | docs/learning-hub-handoff | Full QA, final review, evidence and approved revision handoff. |

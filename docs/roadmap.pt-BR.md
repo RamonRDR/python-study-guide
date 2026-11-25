@@ -203,7 +203,7 @@ Pratique depuração manual, SDD, TDD e revisão aplicada a Python após a Fase 
 
 ## Fase 11: Resolução de problemas e live coding
 
-Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 fáceis, 12 médios, seis difíceis), incluindo duas tentativas cronometradas. Validação final da Sprint 05 pendente.
+Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 fáceis, 12 médios, seis difíceis), incluindo duas tentativas cronometradas. Sprint 05 concluída ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
 
 [Abrir módulo](../problem-solving-and-live-coding/README.pt-BR.md)
 
@@ -224,14 +224,18 @@ Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 f
 15. [Desafios mistos](../problem-solving-and-live-coding/15-mixed-challenges/README.pt-BR.md)
 16. [Live coding cronometrado](../problem-solving-and-live-coding/16-timed-live-coding/README.pt-BR.md)
 
+## Fase 12: Preparação para entrevistas técnicas
+
+Em andamento: oito aulas iniciais sobre fundamentos de entrevistas, revisão e OOP. Demais aulas, perguntas e simulados planejados. [Preparação para entrevistas técnicas](../technical-interview-preparation/README.pt-BR.md).
+
 ## Phase II: Learning Hub Foundation (roadmap de engenharia)
 
-Esta fase de engenharia não renumera o currículo original. Sprints 00–04, fundamentos, piloto e expansão fácil/média da Sprint 05 integrados (PRs #87–#94). Exercícios avançados e cronometrados submetidos à revisão final da Sprint 05. O repositório segue independente da futura plataforma web.
+Esta fase de engenharia não renumera o currículo original. Sprints 00–05 integradas (PRs #87–#95). Sprint 06 em andamento. O repositório segue independente da futura plataforma web.
 
 | Currículo futuro | Status |
 | --- | --- |
-| 11. Resolução de problemas e live coding | 30 exercícios escritos; revisão final pendente |
-| 12. Preparação para entrevistas técnicas | Planejado |
+| 11. Resolução de problemas e live coding | Concluída; 30 desafios |
+| 12. Preparação para entrevistas técnicas | Em andamento; oito aulas |
 
 [Plano de implementação](specs/learning-hub-foundation/implementation-plan.pt-BR.md) · [Registro de integração de guias relacionados](specs/learning-hub-foundation/related-guides.pt-BR.md)
 

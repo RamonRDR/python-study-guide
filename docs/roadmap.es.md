@@ -203,7 +203,7 @@ Practica depuración manual, SDD, TDD y revisión aplicada a Python tras la Fase
 
 ## Fase 11: Resolución de problemas y live coding
 
-Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fáciles, 12 medios, seis difíciles), incluidas dos prácticas cronometradas. Validación final del Sprint 05 pendiente.
+Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fáciles, 12 medios, seis difíciles), incluidas dos prácticas cronometradas. Sprint 05 completado ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
 
 [Abrir módulo](../problem-solving-and-live-coding/README.es.md)
 
@@ -224,14 +224,18 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 15. [Retos mixtos](../problem-solving-and-live-coding/15-mixed-challenges/README.es.md)
 16. [Live coding cronometrado](../problem-solving-and-live-coding/16-timed-live-coding/README.es.md)
 
+## Fase 12: Preparación para entrevistas técnicas
+
+En curso: ocho lecciones iniciales sobre fundamentos de entrevistas, repaso y OOP. Demás lecciones, preguntas y simulaciones previstas. [Preparación para entrevistas técnicas](../technical-interview-preparation/README.es.md).
+
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 
-Esta fase de ingeniería no renumera el currículo original. Sprints 00–04, fundamentos, piloto y expansión fácil/media del Sprint 05 fusionados (PRs #87–#94). Retos avanzados y cronometrados enviados a revisión final del Sprint 05. El repositorio permanece independiente de la futura plataforma web.
+Esta fase de ingeniería no renumera el currículo original. Sprints 00–05 fusionados (PRs #87–#95). Sprint 06 en curso. El repositorio permanece independiente de la futura plataforma web.
 
 | Currículo futuro | Estado |
 | --- | --- |
-| 11. Resolución de problemas y live coding | 30 retos escritos; revisión final pendiente |
-| 12. Preparación para entrevistas técnicas | Planificado |
+| 11. Resolución de problemas y live coding | Completada; 30 retos |
+| 12. Preparación para entrevistas técnicas | En curso; ocho lecciones |
 
 [Plan de implementación](specs/learning-hub-foundation/implementation-plan.es.md) · [Registro de integración de guías relacionadas](specs/learning-hub-foundation/related-guides.es.md)
 

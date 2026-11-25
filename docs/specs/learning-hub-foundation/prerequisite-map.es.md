@@ -54,7 +54,7 @@ El mapa por grupo siguiente complementa rutas localizadas exactas de cada JSON y
 
 ## Control de requisitos avanzados y cronometrados
 
-Las secciones siguientes enseñan adaptaciones antes de enlaces de retos; cada reto lista rutas exactas por idioma. Fundamentos previos vienen de base fusionada; instrucción nueva forma parte de PR final. Tiempo y explicaciones se autoevalúan, no se califican por máquina. CI, revisión y aprobación finales pendientes.
+Las secciones siguientes enseñan adaptaciones antes de enlaces de retos; cada reto lista rutas exactas por idioma. Tiempo y explicaciones se autoevalúan, no se califican por máquina. PR #95 fusionado como `21c00c32b91a0116c8a50e89687b91f8efa04cb5`; [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/45720384626) aprobada.
 
 | Concepto | Reto | Instrucción antes de práctica |
 | --- | --- | --- |

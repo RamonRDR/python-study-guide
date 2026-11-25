@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../15-mixed-challenges/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md)
+[← Anterior](../15-mixed-challenges/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../technical-interview-preparation/01-understanding-technical-interviews/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
 ## Preparação antes de começar
@@ -35,5 +35,5 @@ Registre um ponto por critério atendido: contrato/casos de borda claros, plano 
 - [Cronometrado: maior sequência elegível](../../exercises/problem-solving/timed-longest-streak/README.pt-BR.md) · Média · 20 min
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../15-mixed-challenges/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md)
+[← Anterior](../15-mixed-challenges/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../technical-interview-preparation/01-understanding-technical-interviews/README.pt-BR.md)
 <!-- /chapter-navigation:bottom -->

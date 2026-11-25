@@ -197,3 +197,7 @@ problem-solving-and-live-coding/04-recursion/examples/recursive_sum.py
 problem-solving-and-live-coding/05-searching-algorithms/examples/search.py
 problem-solving-and-live-coding/06-sorting-algorithms/examples/sort.py
 problem-solving-and-live-coding/07-problem-solving-patterns/examples/patterns.py
+technical-interview-preparation/05-classes-and-objects/examples/reading_session.py
+technical-interview-preparation/06-attributes-methods-and-object-behavior/examples/study_group.py
+technical-interview-preparation/07-inheritance-polymorphism-and-composition/examples/notifications.py
+technical-interview-preparation/08-encapsulation-abstraction-and-solid/examples/stock.py

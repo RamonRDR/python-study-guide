@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Previous](../15-mixed-challenges/README.md) · [Module index](../README.md)
+[← Previous](../15-mixed-challenges/README.md) · [Module index](../README.md) · [Next →](../../technical-interview-preparation/01-understanding-technical-interviews/README.md)
 <!-- /chapter-navigation:top -->
 
 ## Prepare before starting
@@ -35,5 +35,5 @@ Record one point for each criterion met: clear contract/edge cases, justified pl
 - [Timed: Longest Qualifying Streak](../../exercises/problem-solving/timed-longest-streak/README.md) · Medium · 20 min
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../15-mixed-challenges/README.md) · [Module index](../README.md)
+[← Previous](../15-mixed-challenges/README.md) · [Module index](../README.md) · [Next →](../../technical-interview-preparation/01-understanding-technical-interviews/README.md)
 <!-- /chapter-navigation:bottom -->

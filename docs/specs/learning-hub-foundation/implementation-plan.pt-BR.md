@@ -14,7 +14,12 @@ Status: proposta para revisão. Executar somente após aprovação e merge do PR
 | 03 | docs/readme-and-badges | Atualizar três READMEs, trilhas, roadmap e estrutura; badges somente com evidências. |
 | 04 | feat/manual-programming-practices | Ensinar prática manual e SDD/TDD; referenciar orientação existente de manutenção por IA. Aplicar fluxo pequeno de branch/PR/teste/revisão específico de Python, sem duplicar o curso independente de Git. |
 | 05 | feat/problem-solving-live-coding | Auditar pré-requisitos de todos os tópicos FR-05; ensinar conceitos ausentes nos três idiomas antes da prática correspondente; depois pilotar desafio conforme contrato preliminar e expandir por conceito/dificuldade com testes. |
-| 06 | feat/technical-interview-preparation | Auditar e ensinar pré-requisitos restantes específicos de entrevistas não cobertos na Sprint 05; depois perguntas e simulações cronometradas; rubricas e paridade de idiomas. |
+| 06A1 | feat/interview-foundations | Aulas 01–08, mapa de pré-requisitos, OOP |
+| 06A2 | feat/interview-python-internals | Aulas 09–14, internals e memória |
+| 06A3 | feat/interview-backend-and-databases | Aulas 15–21, backend, SQL, engenharia; gate T06-01 |
+| 06B | feat/technical-interview-pilot | Aula 22, nove perguntas piloto e validação |
+| 06C | feat/technical-interview-question-bank | 48 perguntas técnicas adicionais |
+| 06D | feat/mock-and-international-interviews | Aulas 23–24, três perguntas comportamentais/internacionais e três simulados; AC-06 |
 | 07 | feat/quiz-and-exercise-bank | Materializar registros e schemas versionados; validar IDs, traduções, pontuação, soluções e implementações incorretas representativas. |
 | 08 | feat/learning-hub-content-contract | Finalizar manifesto, validação do consumidor, fixtures, versionamento e compatibilidade. |
 | 09 | docs/learning-hub-handoff | QA completo, revisão final, evidências e handoff de revisão aprovada. |
