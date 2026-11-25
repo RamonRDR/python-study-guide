@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Status em 25/11/2026: Sprints 00–04 integradas; fundamentos da Sprint 05 submetidos à revisão.
+Status em 25/11/2026: Sprints 00–04 e fundamentos da Sprint 05 integrados; piloto submetido à revisão.
 
 | Tarefa | Sprint | Dependência | Status |
 | --- | --- | --- | --- |
@@ -16,8 +16,8 @@ Status em 25/11/2026: Sprints 00–04 integradas; fundamentos da Sprint 05 subme
 | T02-01 Criar seis aulas Getting Started, incluindo ambientes por projeto, gerenciamento de dependências e Git básico; conectar Fundamentals e mapear referências futuras entre guias | 02 | T01-01 | Concluído ([PR #89](https://github.com/RamonRDR/python-study-guide/pull/89)) |
 | T03-01 Alinhar README, roadmap, trilha, estrutura e badges | 03 | T02-01 | Concluído ([PR #90](https://github.com/RamonRDR/python-study-guide/pull/90)) |
 | T04-01 Adicionar prática manual e engenharia | 04 | T03-01 | Concluído ([PR #91](https://github.com/RamonRDR/python-study-guide/pull/91)) |
-| T05-00 Mapear todos os pré-requisitos FR-05 às aulas existentes e ensinar conceitos ausentes em EN/PT-BR/ES antes da publicação dos desafios | 05 | T04-01 | Fundamentos e mapa submetidos; revisão pendente ([mapa](prerequisite-map.pt-BR.md)) |
-| T05-01 Pilotar desafios e testes de correção | 05 | T05-00 | Pendente |
+| T05-00 Mapear todos os pré-requisitos FR-05 às aulas existentes e ensinar conceitos ausentes em EN/PT-BR/ES antes da publicação dos desafios | 05 | T04-01 | Concluído ([PR #92](https://github.com/RamonRDR/python-study-guide/pull/92); [mapa](prerequisite-map.pt-BR.md)) |
+| T05-01 Pilotar desafios e testes de correção | 05 | T05-00 | Piloto submetido; revisão pendente |
 | T05-02 Expandir desafios por tema/dificuldade | 05 | T05-01 | Pendente |
 | T06-01 Mapear lacunas restantes específicas de entrevistas e ensinar conceitos necessários não cobertos na Sprint 05 | 06 | T05-02 | Pendente |
 | T06-02 Criar perguntas e simulações/rubricas | 06 | T06-01 | Pendente |

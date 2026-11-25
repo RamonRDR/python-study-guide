@@ -1,0 +1,276 @@
+{
+  "id": "problem-solving.vowel-counter",
+  "chapter_id": "problem-solving.strings-and-numbers",
+  "difficulty": "easy",
+  "estimated_minutes": 10,
+  "title": {
+    "en": "Vowel Counter",
+    "pt-BR": "Contador de vogais",
+    "es": "Contador de vocales"
+  },
+  "prompt": {
+    "en": "Implement count_vowels(text) and return the number of ASCII vowels A, E, I, O, U (uppercase or lowercase) in the input string. Count repeated occurrences; ignore every other character.",
+    "pt-BR": "Implemente count_vowels(text) e retorne a quantidade de vogais ASCII A, E, I, O, U (maiúsculas ou minúsculas) na string de entrada. Conte ocorrências repetidas; ignore todos os demais caracteres.",
+    "es": "Implementa count_vowels(text) y devuelve la cantidad de vocales ASCII A, E, I, O, U (mayúsculas o minúsculas) en la cadena de entrada. Cuenta apariciones repetidas; ignora todos los demás caracteres."
+  },
+  "concepts": [
+    "strings",
+    "membership",
+    "conditionals",
+    "iteration",
+    "functions",
+    "accumulators",
+    "algorithmic-complexity"
+  ],
+  "constraints": {
+    "en": [
+      "Input is a Python str, including empty strings; other input types are outside the contract.",
+      "Only the ten literal ASCII characters aeiouAEIOU count. Accented letters, y/Y, digits, punctuation, whitespace and other Unicode characters do not count.",
+      "Return an int, not a string, Boolean or printed output. No external dependencies or input/output operations are needed."
+    ],
+    "pt-BR": [
+      "A entrada é uma str Python, inclusive vazia; outros tipos estão fora do contrato.",
+      "Apenas os dez caracteres ASCII literais aeiouAEIOU contam. Letras acentuadas, y/Y, dígitos, pontuação, espaços e outros caracteres Unicode não contam.",
+      "Retorne um int, não string, booleano ou saída impressa. Não são necessárias dependências externas nem operações de entrada/saída."
+    ],
+    "es": [
+      "La entrada es una str de Python, incluso vacía; otros tipos están fuera del contrato.",
+      "Solo cuentan los diez caracteres ASCII literales aeiouAEIOU. Las letras acentuadas, y/Y, dígitos, puntuación, espacios y otros caracteres Unicode no cuentan.",
+      "Devuelve un int, no una cadena, booleano ni salida impresa. No se necesitan dependencias externas ni operaciones de entrada/salida."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        "Hello, World!"
+      ],
+      "expected": 3,
+      "explanation": {
+        "en": "e, o and o count.",
+        "pt-BR": "e, o e o contam.",
+        "es": "e, o y o cuentan."
+      }
+    },
+    {
+      "args": [
+        "AEIOU"
+      ],
+      "expected": 5,
+      "explanation": {
+        "en": "All five uppercase vowels count.",
+        "pt-BR": "As cinco vogais maiúsculas contam.",
+        "es": "Las cinco vocales mayúsculas cuentan."
+      }
+    },
+    {
+      "args": [
+        ""
+      ],
+      "expected": 0,
+      "explanation": {
+        "en": "No characters to count.",
+        "pt-BR": "Não há caracteres para contar.",
+        "es": "No hay caracteres que contar."
+      }
+    },
+    {
+      "args": [
+        "Aéİu🙂"
+      ],
+      "expected": 2,
+      "explanation": {
+        "en": "Only A and u count.",
+        "pt-BR": "Apenas A e u contam.",
+        "es": "Solo A y u cuentan."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/vowel-counter/starter.py",
+  "hints": {
+    "en": [
+      "What value should the counter have before reading any character?",
+      "Iterate over the original string with for; use a membership test against the literal ASCII vowel string.",
+      "Increment only on a match, then return the counter after the loop."
+    ],
+    "pt-BR": [
+      "Qual deve ser o valor do contador antes de ler qualquer caractere?",
+      "Percorra a string original com for; teste pertinência na string literal de vogais ASCII.",
+      "Incremente apenas quando houver correspondência e retorne o contador após o loop."
+    ],
+    "es": [
+      "¿Qué valor debe tener el contador antes de leer cualquier carácter?",
+      "Recorre la cadena original con for; comprueba pertenencia en la cadena literal de vocales ASCII.",
+      "Incrementa solo si hay coincidencia y devuelve el contador después del bucle."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/vowel-counter/solution.py",
+  "explanation": {
+    "en": "Start at zero. For each original character, increment once if it belongs to aeiouAEIOU. Return the accumulated count after the loop. This counts duplicates and handles uppercase without Unicode case conversion. Converting the entire string with lower() can turn U+0130 (İ) into an ASCII i plus a combining mark, changing the specified contract. Returning inside the loop would ignore later characters.",
+    "pt-BR": "Comece em zero. Para cada caractere original, incremente uma vez se pertencer a aeiouAEIOU. Retorne a contagem acumulada após o loop. Isso conta repetições e trata maiúsculas sem conversão de caixa Unicode. Converter a string inteira com lower() pode transformar U+0130 (İ) em i ASCII seguido de uma marca combinante, alterando o contrato. Retornar dentro do loop ignoraria caracteres posteriores.",
+    "es": "Empieza en cero. Por cada carácter original, incrementa una vez si pertenece a aeiouAEIOU. Devuelve el conteo acumulado después del bucle. Esto cuenta repeticiones y trata mayúsculas sin convertir el caso Unicode. Convertir toda la cadena con lower() puede transformar U+0130 (İ) en i ASCII seguido de una marca combinante, cambiando el contrato. Devolver dentro del bucle ignoraría caracteres posteriores."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n), one pass over n Python string characters; membership in a fixed ten-character string is bounded.",
+      "pt-BR": "O(n), uma passagem pelos n caracteres da string Python; pertinência em uma string fixa de dez caracteres tem custo limitado.",
+      "es": "O(n), una pasada por los n caracteres de la cadena Python; la pertenencia en una cadena fija de diez caracteres tiene coste acotado."
+    },
+    "space": {
+      "en": "O(1) auxiliary variables in the usual fixed-cost model; the counter uses O(log n) bits if arbitrary integer bit storage is counted.",
+      "pt-BR": "O(1) variáveis auxiliares no modelo usual de custo fixo; o contador usa O(log n) bits se contabilizado armazenamento de inteiros arbitrários.",
+      "es": "O(1) variables auxiliares en el modelo habitual de coste fijo; el contador usa O(log n) bits si se contabiliza almacenamiento de enteros arbitrarios."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "count_vowels",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "empty",
+        "args": [
+          ""
+        ],
+        "expected": 0
+      },
+      {
+        "id": "single-vowel",
+        "args": [
+          "a"
+        ],
+        "expected": 1
+      },
+      {
+        "id": "single-consonant",
+        "args": [
+          "z"
+        ],
+        "expected": 0
+      },
+      {
+        "id": "mixed",
+        "args": [
+          "Hello, World!"
+        ],
+        "expected": 3
+      },
+      {
+        "id": "uppercase",
+        "args": [
+          "AEIOU"
+        ],
+        "expected": 5
+      },
+      {
+        "id": "repeated",
+        "args": [
+          "aaaa"
+        ],
+        "expected": 4
+      },
+      {
+        "id": "all-ascii-vowels",
+        "args": [
+          "aeiouAEIOU"
+        ],
+        "expected": 10
+      },
+      {
+        "id": "no-vowels",
+        "args": [
+          "rhythm 123!"
+        ],
+        "expected": 0
+      },
+      {
+        "id": "accents-and-unicode",
+        "args": [
+          "áéíóúÜİı"
+        ],
+        "expected": 0
+      },
+      {
+        "id": "mixed-unicode",
+        "args": [
+          "Aéİu🙂"
+        ],
+        "expected": 2
+      },
+      {
+        "id": "whitespace",
+        "args": [
+          "\n\t "
+        ],
+        "expected": 0
+      },
+      {
+        "id": "vowels-at-end",
+        "args": [
+          "xyzAE"
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "strings-and-numbers/01-string-creation-and-indexing/README.md",
+      "pt-BR": "strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md",
+      "es": "strings-and-numbers/01-string-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "strings-and-numbers/02-common-string-methods/README.md",
+      "pt-BR": "strings-and-numbers/02-common-string-methods/README.pt-BR.md",
+      "es": "strings-and-numbers/02-common-string-methods/README.es.md"
+    },
+    {
+      "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+      "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+      "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    }
+  ]
+}

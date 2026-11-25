@@ -203,7 +203,7 @@ Pratique depuração manual, SDD, TDD e revisão aplicada a Python após a Fase 
 
 ## Fase 11: Resolução de problemas e live coding
 
-Sete aulas de fundamentos estão incluídas; o banco de desafios e a prática cronometrada permanecem planejados.
+Sete aulas de fundamentos e uma aula de desafios com o piloto Contador de vogais estão incluídas; a expansão dos desafios e a prática cronometrada permanecem planejadas.
 
 [Abrir módulo](../problem-solving-and-live-coding/README.pt-BR.md)
 
@@ -214,14 +214,15 @@ Sete aulas de fundamentos estão incluídas; o banco de desafios e a prática cr
 5. [Algoritmos de busca](../problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md)
 6. [Algoritmos de ordenação](../problem-solving-and-live-coding/06-sorting-algorithms/README.pt-BR.md)
 7. [Padrões de resolução de problemas](../problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md)
+8. [Desafios de strings e números](../problem-solving-and-live-coding/08-strings-and-numbers/README.pt-BR.md)
 
 ## Phase II: Learning Hub Foundation (roadmap de engenharia)
 
-Esta fase de engenharia não renumera o currículo original. Sprints 00–04 integradas (PRs #87–#91). Fundamentos da Sprint 05 submetidos à revisão; piloto e expansão de desafios permanecem planejados. O repositório segue independente da futura plataforma web.
+Esta fase de engenharia não renumera o currículo original. Sprints 00–04 e fundamentos da Sprint 05 integrados (PRs #87–#92). O primeiro piloto foi submetido à revisão; expansão permanece planejada. O repositório segue independente da futura plataforma web.
 
 | Currículo futuro | Status |
 | --- | --- |
-| 11. Resolução de problemas e live coding | Fundamentos em revisão; desafios planejados |
+| 11. Resolução de problemas e live coding | Fundamentos integrados; piloto em revisão |
 | 12. Preparação para entrevistas técnicas | Planejado |
 
 [Plano de implementação](specs/learning-hub-foundation/implementation-plan.pt-BR.md) · [Registro de integração de guias relacionados](specs/learning-hub-foundation/related-guides.pt-BR.md)

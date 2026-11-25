@@ -100,7 +100,7 @@ A computer with a supported Python installation and a text editor is enough for 
 | 09 | [External Libraries](external-libraries/README.md) | 4 |
 | 10 | [Practical Projects](practical-projects/README.md) | 8 |
 | Supplement | [Manual Programming & Engineering Practices](manual-programming-practices/README.md) | 4 |
-| 11 | [Problem Solving & Live Coding](problem-solving-and-live-coding/README.md) | 7 |
+| 11 | [Problem Solving & Live Coding](problem-solving-and-live-coding/README.md) | 8 |
 
 - [Full learning path: direct links to every published chapter](docs/learning-path.en.md)
 - [Roadmap in English](docs/roadmap.en.md)
@@ -143,13 +143,15 @@ Detailed explanations:
 
 [Phase II implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md)
 
-The original project foundation, **Getting Started (six lessons)** and **Phases 1–10 are complete**. The current curriculum contains 74 lessons and eight practical projects, across 13 modules and three languages. **Phase 10: Practical Projects is complete** with all eight planned projects implemented, documented, tested, reviewed, and integrated.
+The original project foundation, **Getting Started (six lessons)** and **Phases 1–10 are complete**. The current curriculum contains 75 lessons and eight practical projects, across 13 modules and three languages. **Phase 10: Practical Projects is complete** with all eight planned projects implemented, documented, tested, reviewed, and integrated.
 
 The practical-project phase closes by combining validated data models, deterministic workflows, exact arithmetic, persistence and reporting, filesystem automation, reconciliation, orchestration, structured evidence, and automated regression coverage across the eight projects.
 
 See the [Practical Projects index](practical-projects/README.md), [roadmap](docs/roadmap.en.md), or [full learning path](docs/learning-path.en.md) for the current curriculum status.
 
-Seven foundation lessons are included; the challenge bank and timed practice remain planned.
+Seven foundation lessons and one challenge chapter with the Vowel Counter pilot are included; challenge expansion and timed practice remain planned.
+
+[Vowel Counter](exercises/problem-solving/vowel-counter/README.md)
 
 ## Visual identity
 
