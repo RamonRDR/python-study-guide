@@ -26,7 +26,7 @@ O exemplo compartilhado usa meta configurável, padrão 20. Tente escrever prime
 
 ## 4. Preparação para live coding
 
-Uma tentativa cronometrada é uma restrição de prática, não uma medida de valor pessoal. Antes de começar, confirme ferramentas permitidas, contrato e duração. Para uma sessão de 10 minutos, reserve cerca de 2 minutos para leitura e exemplos, 2 para plano, 4 para implementação e 2 para testes e explicação. Adapte a divisão se necessário. Pense em voz alta sobre hipóteses e casos de borda; se travar, declare o menor próximo passo em vez de adivinhar em silêncio. Pare no limite, registre o que funcionou e o que falta e termine sem cronômetro. Correção importa mais que velocidade. Não consulte referência nem IA durante a tentativa independente. A futura aula de desafios cronometrados aprofundará esse fluxo.
+Uma tentativa cronometrada é uma restrição de prática, não uma medida de valor pessoal. Antes de começar, confirme ferramentas permitidas, contrato e duração. Para uma sessão de 10 minutos, reserve cerca de 2 minutos para leitura e exemplos, 2 para plano, 4 para implementação e 2 para testes e explicação. Adapte a divisão se necessário. Pense em voz alta sobre hipóteses e casos de borda; se travar, declare o menor próximo passo em vez de adivinhar em silêncio. Pare no limite, registre o que funcionou e o que falta e termine sem cronômetro. Correção importa mais que velocidade. Não consulte referência nem IA durante a tentativa independente. A [aula de live coding cronometrado](../16-timed-live-coding/README.pt-BR.md) aprofunda esse fluxo após fundamentos e prática.
 
 ## Prática
 

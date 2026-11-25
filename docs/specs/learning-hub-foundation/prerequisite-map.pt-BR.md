@@ -4,6 +4,8 @@
 
 Base: `9102bbbf8f8dd846f2fb9682dd3f55bcacc10c95`. A auditoria inspecionou a árvore curricular e seções relevantes das aulas em inglês; cobertura refere-se à instrução amostrada, não à revisão semântica completa das traduções. Cada linha requer revisão antes de publicar desafio dependente. Categorias são planejadas, não IDs de exercícios publicados. O fluxo cronometrado introdutório é ensinado na primeira aula de fundamentos; a aula dedicada o ampliará antes de publicar desafios cronometrados. Nenhum desafio cronometrado é publicado aqui.
 
+O parágrafo da base descreve a auditoria histórica, não a contagem atual de desafios publicados. A prática cronometrada atual está documentada abaixo.
+
 | Conceito | Aula de base | Cobertura na base | Complemento | Categoria de desafio | Validação |
 | --- | --- | --- | --- | --- | --- |
 | Raciocínio lógico | [Aula de base](../../../program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md) | Coberto | [Fundamentos de resolução de problemas](../../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md) | Todos | PR #92 de fundamentos integrado; verificar por desafio |
@@ -39,7 +41,7 @@ Para o piloto, confira também métodos de strings, recursos numéricos nativos,
 
 ## Gate de pré-requisitos da expansão fácil/média
 
-O mapa por grupo abaixo complementa caminhos localizados exatos em cada JSON e README de exercício. Todas as aulas de fundamentos referenciadas existem na base integrada. Introduções das aulas ensinam pequenas adaptações (comparação de palíndromo, recorrência de fatorial/potência e aritmética de pares não ordenados) antes dos exercícios correspondentes. Nenhum difícil ou cronometrado é publicado aqui. CI e revisão independente desta expansão permanecem pendentes.
+O mapa por grupo abaixo complementa caminhos localizados exatos em cada JSON e README de exercício. Todas as aulas de fundamentos referenciadas existem na base integrada. Introduções das aulas ensinam pequenas adaptações (comparação de palíndromo, recorrência de fatorial/potência e aritmética de pares não ordenados) antes dos exercícios correspondentes. Escopo fácil/médio aprovado no CI e Codex Review do [PR #94](https://github.com/RamonRDR/python-study-guide/pull/94), head `1932dddc01`, integrado em `61d9a0d70dafc0a012284c753d5fdb55302d310d`.
 
 | Grupo de conceitos | Exercícios | Evidência de ensino |
 | --- | --- | --- |
@@ -51,3 +53,18 @@ O mapa por grupo abaixo complementa caminhos localizados exatos em cada JSON e R
 | Bugs de limite e janelas negativas | [`debug-positive-count`](../../../exercises/problem-solving/debug-positive-count/README.pt-BR.md), [`debug-negative-window`](../../../exercises/problem-solving/debug-negative-window/README.pt-BR.md) | [01-manual-coding-and-debugging](../../../manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md), [02-constraints-and-edge-cases](../../../problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md), [07-problem-solving-patterns](../../../problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md) |
 | Preservação de comportamento na refatoração | [`refactor-shipping-fee`](../../../exercises/problem-solving/refactor-shipping-fee/README.pt-BR.md), [`refactor-score-summary`](../../../exercises/problem-solving/refactor-score-summary/README.pt-BR.md) | [06-pep8-and-readability](../../../comments-and-documentation/06-pep8-and-readability/README.pt-BR.md), [03-test-driven-development](../../../manual-programming-practices/03-test-driven-development/README.pt-BR.md) |
 | Decomposição e desempate por frequência | [`total-short-lengths`](../../../exercises/problem-solving/total-short-lengths/README.pt-BR.md), [`most-frequent-label`](../../../exercises/problem-solving/most-frequent-label/README.pt-BR.md) | [01-problem-solving-fundamentals](../../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md), [07-problem-solving-patterns](../../../problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md) |
+
+## Gate de pré-requisitos avançados e cronometrados
+
+As seções abaixo ensinam adaptações antes dos links dos exercícios; cada exercício também lista caminhos exatos por idioma. Fundamentos prévios vêm da base integrada; instrução nova faz parte deste PR final. Tempo e explicações são autoavaliados, não corrigidos por máquina. CI, revisão e aprovação finais pendentes.
+
+| Conceito | Exercício | Instrução antes da prática |
+| --- | --- | --- |
+| Janela variável e últimas posições | [`longest-distinct-substring`](../../../exercises/problem-solving/longest-distinct-substring/README.pt-BR.md) | [Instrução da aula](../../../problem-solving-and-live-coding/08-strings-and-numbers/README.pt-BR.md) |
+| Recursão aninhada e acumulador compartilhado | [`recursive-flatten`](../../../exercises/problem-solving/recursive-flatten/README.pt-BR.md) | [Instrução da aula](../../../problem-solving-and-live-coding/10-functions-and-recursion/README.pt-BR.md) |
+| Fronteiras binárias | [`binary-target-range`](../../../exercises/problem-solving/binary-target-range/README.pt-BR.md) | [Instrução da aula](../../../problem-solving-and-live-coding/11-searching-and-sorting/README.pt-BR.md) |
+| Intercalação com dois ponteiros | [`merge-sorted-lists`](../../../exercises/problem-solving/merge-sorted-lists/README.pt-BR.md) | [Instrução da aula](../../../problem-solving-and-live-coding/11-searching-and-sorting/README.pt-BR.md) |
+| Multiplicidades de pares agrupados | [`sorted-pair-multiplicity`](../../../exercises/problem-solving/sorted-pair-multiplicity/README.pt-BR.md) | [Instrução da aula](../../../problem-solving-and-live-coding/12-algorithms-and-complexity/README.pt-BR.md) |
+| Agregação e conciliação ordenada | [`inventory-reconciliation`](../../../exercises/problem-solving/inventory-reconciliation/README.pt-BR.md) | [Instrução da aula](../../../problem-solving-and-live-coding/15-mixed-challenges/README.pt-BR.md) |
+| Prática independente cronometrada e contagem inclusiva | [`timed-threshold-count`](../../../exercises/problem-solving/timed-threshold-count/README.pt-BR.md) | [Instrução da aula](../../../problem-solving-and-live-coding/16-timed-live-coding/README.pt-BR.md) |
+| Prática cronometrada e sequências contíguas | [`timed-longest-streak`](../../../exercises/problem-solving/timed-longest-streak/README.pt-BR.md) | [Instrução da aula](../../../problem-solving-and-live-coding/16-timed-live-coding/README.pt-BR.md) |

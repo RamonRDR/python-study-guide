@@ -1,0 +1,334 @@
+{
+  "id": "problem-solving.recursive-flatten",
+  "chapter_id": "problem-solving.functions-and-recursion",
+  "difficulty": "hard",
+  "estimated_minutes": 35,
+  "title": {
+    "en": "Flatten Nested Lists",
+    "pt-BR": "Achatar listas aninhadas",
+    "es": "Aplanar listas anidadas"
+  },
+  "prompt": {
+    "en": "Given a finite nested list containing only integers and lists, with at most 10 nested list levels below the outer list, return a new flat list of integers in left-to-right depth-first order. Preserve duplicates and input. Use recursion; no cycles or shared mutable references are provided.",
+    "pt-BR": "Dada lista aninhada finita contendo apenas inteiros e listas, com até 10 níveis de listas abaixo da externa, retorne nova lista plana de inteiros em ordem esquerda-direita em profundidade. Preserve duplicados e entrada. Use recursividade; não há ciclos nem referências mutáveis compartilhadas.",
+    "es": "Dada lista anidada finita con solo enteros y listas, con hasta 10 niveles de listas bajo la exterior, devuelve nueva lista plana de enteros en orden izquierda-derecha en profundidad. Conserva duplicados y entrada. Usa recursividad; no hay ciclos ni referencias mutables compartidas."
+  },
+  "concepts": [
+    "functions",
+    "edge-cases",
+    "algorithmic-complexity",
+    "lists",
+    "list-methods",
+    "type-checking",
+    "recursion",
+    "mutation-and-data-flow",
+    "scope",
+    "function-composition"
+  ],
+  "constraints": {
+    "en": [
+      "Given a finite nested list containing only integers and lists, with at most 10 nested list levels below the outer list, return a new flat list of integers in left-to-right depth-first order. Preserve duplicates and input. Use recursion; no cycles or shared mutable references are provided.",
+      "Only stated input domains are graded. Return exact types and values; do not print, mutate inputs or add dependencies. Algorithm choices and complexity require manual review; functional tests cannot prove them."
+    ],
+    "pt-BR": [
+      "Dada lista aninhada finita contendo apenas inteiros e listas, com até 10 níveis de listas abaixo da externa, retorne nova lista plana de inteiros em ordem esquerda-direita em profundidade. Preserve duplicados e entrada. Use recursividade; não há ciclos nem referências mutáveis compartilhadas.",
+      "Somente domínios declarados são avaliados. Retorne tipos e valores exatos; não imprima, altere entradas nem adicione dependências. Escolha algorítmica e complexidade exigem revisão manual; testes funcionais não as provam."
+    ],
+    "es": [
+      "Dada lista anidada finita con solo enteros y listas, con hasta 10 niveles de listas bajo la exterior, devuelve nueva lista plana de enteros en orden izquierda-derecha en profundidad. Conserva duplicados y entrada. Usa recursividad; no hay ciclos ni referencias mutables compartidas.",
+      "Solo se evalúan dominios declarados. Devuelve tipos y valores exactos; no imprimas, modifiques entradas ni añadas dependencias. Elección algorítmica y complejidad requieren revisión manual; pruebas funcionales no las demuestran."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        []
+      ],
+      "expected": [],
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          1,
+          [
+            2,
+            [
+              3
+            ]
+          ],
+          4
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          [
+            []
+          ],
+          [],
+          [
+            0
+          ]
+        ]
+      ],
+      "expected": [
+        0
+      ],
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/recursive-flatten/starter.py",
+  "hints": {
+    "en": [
+      "Use one result list shared by a recursive helper.",
+      "For each item, distinguish a list from an integer.",
+      "Visit a nested list immediately; append an integer directly."
+    ],
+    "pt-BR": [
+      "Use uma lista de resultado compartilhada por função auxiliar recursiva.",
+      "Para cada item, diferencie lista de inteiro.",
+      "Visite lista interna imediatamente; acrescente inteiro diretamente."
+    ],
+    "es": [
+      "Usa una lista de resultado compartida por función auxiliar recursiva.",
+      "Por cada elemento, distingue lista de entero.",
+      "Visita lista interna inmediatamente; añade entero directamente."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/recursive-flatten/solution.py",
+  "explanation": {
+    "en": "A helper traverses every list in order and appends each leaf integer once. Empty lists add nothing. Sharing one output accumulator avoids repeated copying; stack depth is the nesting depth.",
+    "pt-BR": "Auxiliar percorre cada lista em ordem e acrescenta cada inteiro folha uma vez. Listas vazias não acrescentam nada. Um acumulador de saída evita cópias repetidas; profundidade de pilha é profundidade de aninhamento.",
+    "es": "Auxiliar recorre cada lista en orden y añade cada entero hoja una vez. Listas vacías no añaden nada. Un acumulador de salida evita copias repetidas; profundidad de pila es profundidad de anidamiento."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n)",
+      "pt-BR": "O(n)",
+      "es": "O(n)"
+    },
+    "space": {
+      "en": "O(h)",
+      "pt-BR": "O(h)",
+      "es": "O(h)"
+    },
+    "assumptions": {
+      "en": "Fixed-cost model for bounded integer operations and bounded-length labels, expected hash behavior when applicable. n/m are input lengths (for nested lists n counts all visited items and list nodes), k distinct keys, h nesting depth. Required output excluded from auxiliary space; recursion uses O(h) frames.",
+      "pt-BR": "Modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado, comportamento hash esperado quando aplicável. n/m são tamanhos (em listas aninhadas n conta todos itens e nós de lista visitados), k chaves distintas, h profundidade. Saída exigida excluída de espaço auxiliar; recursividade usa O(h) quadros.",
+      "es": "Modelo de coste fijo para enteros acotados y etiquetas de longitud acotada, comportamiento hash esperado cuando aplica. n/m son tamaños (en listas anidadas n cuenta elementos y nodos de lista visitados), k claves distintas, h profundidad. Salida requerida excluida de espacio auxiliar; recursividad usa O(h) marcos."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "flatten",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "id": "case-02",
+        "args": [
+          [
+            1,
+            [
+              2,
+              [
+                3
+              ]
+            ],
+            4
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "id": "case-03",
+        "args": [
+          [
+            [
+              []
+            ],
+            [],
+            [
+              0
+            ]
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      },
+      {
+        "id": "case-04",
+        "args": [
+          [
+            [
+              1,
+              1
+            ],
+            [
+              -2
+            ],
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          1,
+          -2,
+          1
+        ]
+      },
+      {
+        "id": "case-05",
+        "args": [
+          [
+            7
+          ]
+        ],
+        "expected": [
+          7
+        ]
+      },
+      {
+        "id": "case-06",
+        "args": [
+          [
+            [
+              [
+                [
+                  [
+                    [
+                      9
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ],
+        "expected": [
+          9
+        ]
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "collections/01-list-creation-and-indexing/README.md",
+      "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+      "es": "collections/01-list-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "collections/02-modifying-lists-and-methods/README.md",
+      "pt-BR": "collections/02-modifying-lists-and-methods/README.pt-BR.md",
+      "es": "collections/02-modifying-lists-and-methods/README.es.md"
+    },
+    {
+      "en": "fundamentals/05-type-and-isinstance/README.md",
+      "pt-BR": "fundamentals/05-type-and-isinstance/README.pt-BR.md",
+      "es": "fundamentals/05-type-and-isinstance/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/04-recursion/README.md",
+      "pt-BR": "problem-solving-and-live-coding/04-recursion/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/04-recursion/README.es.md"
+    },
+    {
+      "en": "functions/09-data-flow-between-functions/README.md",
+      "pt-BR": "functions/09-data-flow-between-functions/README.pt-BR.md",
+      "es": "functions/09-data-flow-between-functions/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/10-functions-and-recursion/README.md",
+      "pt-BR": "problem-solving-and-live-coding/10-functions-and-recursion/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/10-functions-and-recursion/README.es.md"
+    },
+    {
+      "en": "functions/04-scope/README.md",
+      "pt-BR": "functions/04-scope/README.pt-BR.md",
+      "es": "functions/04-scope/README.es.md"
+    },
+    {
+      "en": "functions/08-functions-working-together/README.md",
+      "pt-BR": "functions/08-functions-working-together/README.pt-BR.md",
+      "es": "functions/08-functions-working-together/README.es.md"
+    }
+  ],
+  "practice_mode": "implement"
+}

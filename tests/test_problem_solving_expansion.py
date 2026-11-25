@@ -36,6 +36,14 @@ APPROVED = (
     "refactor-score-summary",
     "total-short-lengths",
     "most-frequent-label",
+    "longest-distinct-substring",
+    "recursive-flatten",
+    "binary-target-range",
+    "merge-sorted-lists",
+    "sorted-pair-multiplicity",
+    "inventory-reconciliation",
+    "timed-threshold-count",
+    "timed-longest-streak",
 )
 
 
@@ -118,14 +126,47 @@ class ExpansionTests(unittest.TestCase):
                     ).as_posix(),
                 )
                 chapter = REPOSITORY / entry["chapter_path"]
+                slug_to_id = {"13-debugging-challenges": "debugging",
+                              "14-refactoring-challenges": "refactoring",
+                              "15-mixed-challenges": "mixed"}
+                self.assertEqual(record["chapter_id"], "problem-solving." +
+                                 slug_to_id.get(chapter.name, chapter.name[3:]))
                 for name in ("README.md", "README.pt-BR.md", "README.es.md"):
                     self.assertTrue((chapter / name).is_file(), name)
+
+    def test_full_bank_distribution_and_timed_metadata(self):
+        from collections import Counter
+
+        pilot = json.loads((ROOT / "vowel-counter" / "exercise.json").read_text(
+            encoding="utf-8"
+        ))
+        records = [pilot, *self.records.values()]
+        self.assertEqual(len(records), 30)
+        self.assertEqual(len({record["id"] for record in records}), 30)
+        self.assertEqual(Counter(record["difficulty"] for record in records),
+                         {"easy": 12, "medium": 12, "hard": 6})
+        self.assertEqual(sum(len(record["tests"]["cases"]) for record in records),
+                         192)
+        timed = [record for record in records if "timed_practice" in record]
+        self.assertEqual({record["id"] for record in timed}, {
+            "problem-solving.timed-threshold-count",
+            "problem-solving.timed-longest-streak",
+        })
+        self.assertEqual({record["timed_practice"]["duration_minutes"]
+                          for record in timed}, {10, 20})
+        for record in timed:
+            self.assertEqual(record["chapter_id"], "problem-solving.timed-live-coding")
+            self.assertEqual(record["timed_practice"]["duration_minutes"],
+                             record["estimated_minutes"])
+            self.assertIs(record["timed_practice"]["independent_first_attempt"], True)
+            self.assertEqual(record["timed_practice"]["grading"], "self_assessment")
+            self.assertEqual(record["execution"], "unverified")
 
     def test_record_contract_and_locales(self):
         for slug, record in self.records.items():
             with self.subTest(slug=slug):
                 directory = ROOT / slug
-                self.assertIn(record["difficulty"], {"easy", "medium"})
+                self.assertIn(record["difficulty"], {"easy", "medium", "hard"})
                 self.assertGreater(record["estimated_minutes"], 0)
                 self.assertTrue(record["concepts"])
                 self.assertEqual(len(record["concepts"]), len(set(record["concepts"])))
@@ -207,6 +248,93 @@ class ExpansionTests(unittest.TestCase):
                 else:
                     self.assertEqual(record["practice_mode"], "implement")
                     self.assertEqual(len(failed), len(record["tests"]["cases"]))
+
+    def test_advanced_and_timed_against_independent_oracles(self):
+        """Exercise real trusted references against small deterministic domains."""
+        from itertools import combinations, combinations_with_replacement, product
+
+        def reference(slug):
+            self.assertIn(slug, APPROVED)
+            return runpy.run_path(str(ROOT / slug / "solution.py"))[
+                self.records[slug]["tests"]["function_name"]
+            ]
+
+        def check(candidate, args, expected):
+            self.assertEqual(
+                failures(candidate, [{"id": "oracle", "args": args,
+                                      "expected": expected}], new_container=True),
+                [],
+                (candidate.__name__, args, expected),
+            )
+
+        distinct = reference("longest-distinct-substring")
+        for length in range(6):
+            for chars in product("ab🙂", repeat=length):
+                text = "".join(chars)
+                best = max(
+                    (end - start for start in range(length + 1)
+                     for end in range(start, length + 1)
+                     if len(set(text[start:end])) == end - start),
+                    default=0,
+                )
+                check(distinct, [text], best)
+
+        flatten = reference("recursive-flatten")
+        for depth in range(11):
+            nested = [0, -1, 0]
+            for _ in range(depth):
+                nested = [[], nested, []]
+            check(flatten, [nested], [0, -1, 0])
+
+        bounds = reference("binary-target-range")
+        pairs = reference("sorted-pair-multiplicity")
+        merge = reference("merge-sorted-lists")
+        sorted_inputs = [
+            list(values) for length in range(5)
+            for values in combinations_with_replacement((-2, 0, 2), length)
+        ]
+        for values in sorted_inputs:
+            for target in range(-4, 5):
+                matches = [i for i, value in enumerate(values) if value == target]
+                check(bounds, [values, target],
+                      [matches[0], matches[-1]] if matches else [-1, -1])
+                expected = sum(a + b == target for a, b in combinations(values, 2))
+                check(pairs, [values, target], expected)
+            for other in sorted_inputs:
+                check(merge, [values, other], sorted(values + other))
+
+        count = reference("timed-threshold-count")
+        streak = reference("timed-longest-streak")
+        for length in range(5):
+            for sequence in product((-1, 0, 1), repeat=length):
+                values = list(sequence)
+                for threshold in (-1, 0, 1, 2):
+                    check(count, [values, threshold],
+                          len([value for value in values if value >= threshold]))
+                    best = max(
+                        (end - start for start in range(length + 1)
+                         for end in range(start, length + 1)
+                         if all(value >= threshold for value in values[start:end])),
+                        default=0,
+                    )
+                    check(streak, [values, threshold], best)
+
+        reconcile = reference("inventory-reconciliation")
+        rows = [("a", 0), ("a", 1), ("b", 1)]
+        inputs = [
+            [list(row) for row in sequence] for length in range(3)
+            for sequence in product(rows, repeat=length)
+        ]
+        for expected in inputs:
+            for actual in inputs:
+                labels = list(dict.fromkeys(row[0] for row in expected + actual))
+                output = []
+                for label in labels:
+                    before = sum(q for key, q in expected if key == label)
+                    after = sum(q for key, q in actual if key == label)
+                    if before != after:
+                        output.append([label, before, after, after - before])
+                check(reconcile, [expected, actual], output)
 
     def test_comparator_rejects_nested_type_coercion(self):
         self.assertFalse(exact_equal(True, 1))

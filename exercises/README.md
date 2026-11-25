@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Seven foundation lessons and eight challenge chapters provide 22 exercises (11 easy, 11 medium). Difficult and timed practice remain planned.
+Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Final Sprint 05 validation is pending.
 
 Start with the linked foundation chapters and practice independently. Python 3.13 baseline; all browser execution classifications remain unverified. Public references are inspectable.
 
@@ -12,6 +12,7 @@ Start with the linked foundation chapters and practice independently. Python 3.1
 - [ASCII Digit Counter](problem-solving/ascii-digit-counter/README.md) · Easy · 10 min
 - [Sum of Digits](problem-solving/sum-digits/README.md) · Easy · 12 min
 - [Literal Palindrome](problem-solving/literal-palindrome/README.md) · Medium · 18 min
+- [Longest Distinct Substring](problem-solving/longest-distinct-substring/README.md) · Hard · 35 min
 
 ## [Collections Challenges](../problem-solving-and-live-coding/09-collections/README.md)
 
@@ -25,17 +26,21 @@ Start with the linked foundation chapters and practice independently. Python 3.1
 - [Clamp a Value](problem-solving/clamp-value/README.md) · Easy · 10 min
 - [Recursive Factorial](problem-solving/recursive-factorial/README.md) · Medium · 18 min
 - [Recursive Integer Power](problem-solving/recursive-power/README.md) · Medium · 20 min
+- [Flatten Nested Lists](problem-solving/recursive-flatten/README.md) · Hard · 35 min
 
 ## [Searching and Sorting Challenges](../problem-solving-and-live-coding/11-searching-and-sorting/README.md)
 
 - [First Matching Index](problem-solving/linear-first-index/README.md) · Easy · 12 min
 - [Binary Insertion Index](problem-solving/binary-insertion-index/README.md) · Medium · 22 min
 - [Descending Insertion Sort](problem-solving/descending-insertion-sort/README.md) · Medium · 25 min
+- [Binary Target Range](problem-solving/binary-target-range/README.md) · Hard · 32 min
+- [Merge Sorted Lists](problem-solving/merge-sorted-lists/README.md) · Hard · 30 min
 
 ## [Algorithms and Complexity Challenges](../problem-solving-and-live-coding/12-algorithms-and-complexity/README.md)
 
 - [Count Unordered Pairs](problem-solving/unordered-pair-count/README.md) · Easy · 12 min
 - [Detect a Duplicate](problem-solving/has-duplicate/README.md) · Medium · 18 min
+- [Count Target Pairs with Duplicates](problem-solving/sorted-pair-multiplicity/README.md) · Hard · 40 min
 
 ## [Debugging Challenges](../problem-solving-and-live-coding/13-debugging-challenges/README.md)
 
@@ -51,5 +56,11 @@ Start with the linked foundation chapters and practice independently. Python 3.1
 
 - [Total Length of Short Labels](problem-solving/total-short-lengths/README.md) · Easy · 15 min
 - [Most Frequent Label](problem-solving/most-frequent-label/README.md) · Medium · 25 min
+- [Reconcile Inventory Records](problem-solving/inventory-reconciliation/README.md) · Hard · 40 min
 
-The [expansion index](problem-solving/expansion-index.json) is preliminary and covers only the 21 new records; the pilot has its own record. Final schemas and curriculum integration remain planned.
+## [Timed Live Coding](../problem-solving-and-live-coding/16-timed-live-coding/README.md)
+
+- [Timed: Threshold Count](problem-solving/timed-threshold-count/README.md) · Easy · 10 min
+- [Timed: Longest Qualifying Streak](problem-solving/timed-longest-streak/README.md) · Medium · 20 min
+
+The [expansion index](problem-solving/expansion-index.json) is preliminary and contains 29 records; the pilot has its own record. Final schemas and curriculum integration remain planned.

@@ -35,4 +35,6 @@ Usar snapshot de conteúdo fixado por revisão no build do site, caminhos relati
 
 Para cada PR: consultar especificações, registrar escopo, revisar diffs, executar verificações aplicáveis, informar omissões, solicitar Codex Review, corrigir findings, revalidar e obter aprovação explícita. Atualizar tarefas no mesmo PR quando possível; histórico Git evidencia merge. Manter roadmap educacional separado. Toda documentação pública deve ter EN, PT-BR e ES no mesmo PR; verificar estruturalmente e revisar equivalência humana.
 
+Após CI e Codex Review aprovarem o head exato, conclua a Final Pre-Merge Audit definida em AGENTS.md e registre evidências no PR. Qualquer alteração do head invalida verificações e auditoria; repita antes da aprovação do mantenedor.
+
 [Registro de integração de guias relacionados](related-guides.pt-BR.md)

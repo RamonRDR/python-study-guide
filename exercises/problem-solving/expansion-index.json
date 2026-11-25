@@ -126,6 +126,54 @@
       "path": "exercises/problem-solving/most-frequent-label/exercise.json",
       "chapter_path": "problem-solving-and-live-coding/15-mixed-challenges",
       "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.longest-distinct-substring",
+      "path": "exercises/problem-solving/longest-distinct-substring/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/08-strings-and-numbers",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.recursive-flatten",
+      "path": "exercises/problem-solving/recursive-flatten/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/10-functions-and-recursion",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.binary-target-range",
+      "path": "exercises/problem-solving/binary-target-range/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/11-searching-and-sorting",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.merge-sorted-lists",
+      "path": "exercises/problem-solving/merge-sorted-lists/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/11-searching-and-sorting",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.sorted-pair-multiplicity",
+      "path": "exercises/problem-solving/sorted-pair-multiplicity/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/12-algorithms-and-complexity",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.inventory-reconciliation",
+      "path": "exercises/problem-solving/inventory-reconciliation/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/15-mixed-challenges",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.timed-threshold-count",
+      "path": "exercises/problem-solving/timed-threshold-count/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/16-timed-live-coding",
+      "practice_mode": "implement"
+    },
+    {
+      "id": "problem-solving.timed-longest-streak",
+      "path": "exercises/problem-solving/timed-longest-streak/exercise.json",
+      "chapter_path": "problem-solving-and-live-coding/16-timed-live-coding",
+      "practice_mode": "implement"
     }
   ]
 }

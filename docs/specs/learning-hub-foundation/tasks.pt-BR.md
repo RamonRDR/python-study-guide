@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Status em 25/11/2026: Sprints 00–04, fundamentos e piloto da Sprint 05 integrados; expansão fácil/média submetida à revisão.
+Status em 25/11/2026: Sprints 00–04, fundamentos, piloto e expansão fácil/média da Sprint 05 integrados; fechamento avançado/cronometrado submetido à revisão final.
 
 | Tarefa | Sprint | Dependência | Status |
 | --- | --- | --- | --- |
@@ -18,7 +18,7 @@ Status em 25/11/2026: Sprints 00–04, fundamentos e piloto da Sprint 05 integra
 | T04-01 Adicionar prática manual e engenharia | 04 | T03-01 | Concluído ([PR #91](https://github.com/RamonRDR/python-study-guide/pull/91)) |
 | T05-00 Mapear todos os pré-requisitos FR-05 às aulas existentes e ensinar conceitos ausentes em EN/PT-BR/ES antes da publicação dos desafios | 05 | T04-01 | Concluído ([PR #92](https://github.com/RamonRDR/python-study-guide/pull/92); [mapa](prerequisite-map.pt-BR.md)) |
 | T05-01 Pilotar desafios e testes de correção | 05 | T05-00 | Concluído ([PR #93](https://github.com/RamonRDR/python-study-guide/pull/93)) |
-| T05-02 Expandir desafios por tema/dificuldade | 05 | T05-01 | Expansão fácil/média submetida; difíceis e cronometrados pendentes |
+| T05-02 Expandir desafios por tema/dificuldade | 05 | T05-01 | Fácil/média integrada ([PR #94](https://github.com/RamonRDR/python-study-guide/pull/94)); avançados/cronometrados escritos, CI/revisão/aprovação finais pendentes |
 | T06-01 Mapear lacunas restantes específicas de entrevistas e ensinar conceitos necessários não cobertos na Sprint 05 | 06 | T05-02 | Pendente |
 | T06-02 Criar perguntas e simulações/rubricas | 06 | T06-01 | Pendente |
 | T07-01 Finalizar e validar schemas/registros de quiz/exercício | 07 | T06-02 | Pendente |

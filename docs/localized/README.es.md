@@ -100,7 +100,7 @@ Una computadora con una instalación Python compatible y un editor de texto bast
 | 09 | [Bibliotecas externas](../../external-libraries/README.es.md) | 4 |
 | 10 | [Proyectos prácticos](../../practical-projects/README.es.md) | 8 |
 | Complemento | [Práctica manual e ingeniería de software](../../manual-programming-practices/README.es.md) | 4 |
-| 11 | [Resolución de problemas y live coding](../../problem-solving-and-live-coding/README.es.md) | 15 |
+| 11 | [Resolución de problemas y live coding](../../problem-solving-and-live-coding/README.es.md) | 16 |
 
 - [Ruta completa de aprendizaje: enlaces directos a todos los capítulos publicados](../learning-path.es.md)
 - [Roadmap en Español](../roadmap.es.md)
@@ -139,17 +139,17 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-**Phase II: Learning Hub Foundation** está en curso. Sprints 00–03 fusionados en PR #87–#90. El módulo complementario de práctica manual e ingeniería añade cuatro lecciones; desafíos de código, preparación para entrevistas técnicas, cuestionarios y un contrato de contenido versionado siguen planificados. La guía sigue siendo independiente; el futuro Learning Hub web y la guía Git independiente no son requisitos.
+**Phase II: Learning Hub Foundation** está en curso. PR #87–#94 fusionados. Fase 11 contiene 30 retos; validación final de avanzados/cronometrados pendiente. Preparación para entrevistas técnicas, cuestionarios y contrato de contenido versionado siguen planificados. La guía sigue siendo independiente; el futuro Learning Hub web y la guía Git independiente no son requisitos.
 
 [Plan de implementación de Phase II](../specs/learning-hub-foundation/implementation-plan.es.md)
 
-La base original del proyecto, **Primeros pasos (seis lecciones)** y las **Fases 1–10 están completadas**. El currículo actual contiene 82 lecciones y ocho proyectos prácticos, en 13 módulos y tres idiomas. La **Fase 10: Proyectos Prácticos está completada**, con los ocho proyectos planificados implementados, documentados, probados, revisados e integrados.
+La base original del proyecto, **Primeros pasos (seis lecciones)** y las **Fases 1–10 están completadas**. El currículo actual contiene 83 lecciones y ocho proyectos prácticos, en 13 módulos y tres idiomas. La **Fase 10: Proyectos Prácticos está completada**, con los ocho proyectos planificados implementados, documentados, probados, revisados e integrados.
 
 La fase de proyectos prácticos cierra la ruta combinando modelos de datos validados, flujos deterministas, aritmética exacta, persistencia e informes, automatización del filesystem, conciliación, orquestación, evidencia estructurada y cobertura automatizada de regresión a lo largo de los ocho proyectos.
 
 Consulta el [índice de Proyectos Prácticos](../../practical-projects/README.es.md), el [roadmap](../roadmap.es.md) o la [ruta completa de aprendizaje](../learning-path.es.md) para el estado actual del currículo.
 
-Siete lecciones de fundamentos y ocho de retos ofrecen 22 ejercicios (11 fáciles, 11 medios). Retos difíciles y práctica cronometrada siguen planificados.
+Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fáciles, 12 medios, seis difíciles), incluidas dos prácticas cronometradas. Validación final del Sprint 05 pendiente.
 
 [Banco de retos](../../exercises/README.es.md)
 

@@ -1,0 +1,250 @@
+{
+  "id": "problem-solving.longest-distinct-substring",
+  "chapter_id": "problem-solving.strings-and-numbers",
+  "difficulty": "hard",
+  "estimated_minutes": 35,
+  "title": {
+    "en": "Longest Distinct Substring",
+    "pt-BR": "Maior substring sem repetição",
+    "es": "Mayor subcadena sin repetición"
+  },
+  "prompt": {
+    "en": "Return the length of the longest contiguous substring containing no repeated exact characters. Empty input returns 0. Compare original Python characters, not normalized text. Aim for expected linear time.",
+    "pt-BR": "Retorne o comprimento da maior substring contígua sem caracteres exatos repetidos. Entrada vazia retorna 0. Compare caracteres Python originais, sem normalizar. Busque tempo linear esperado.",
+    "es": "Devuelve la longitud de la mayor subcadena contigua sin caracteres exactos repetidos. Entrada vacía devuelve 0. Compara caracteres Python originales, sin normalizar. Busca tiempo lineal esperado."
+  },
+  "concepts": [
+    "functions",
+    "edge-cases",
+    "algorithmic-complexity",
+    "strings",
+    "dictionaries",
+    "enumerate-range",
+    "problem-solving-patterns"
+  ],
+  "constraints": {
+    "en": [
+      "Return the length of the longest contiguous substring containing no repeated exact characters. Empty input returns 0. Compare original Python characters, not normalized text. Aim for expected linear time.",
+      "Only stated input domains are graded. Return exact types and values; do not print, mutate inputs or add dependencies. Algorithm choices and complexity require manual review; functional tests cannot prove them."
+    ],
+    "pt-BR": [
+      "Retorne o comprimento da maior substring contígua sem caracteres exatos repetidos. Entrada vazia retorna 0. Compare caracteres Python originais, sem normalizar. Busque tempo linear esperado.",
+      "Somente domínios declarados são avaliados. Retorne tipos e valores exatos; não imprima, altere entradas nem adicione dependências. Escolha algorítmica e complexidade exigem revisão manual; testes funcionais não as provam."
+    ],
+    "es": [
+      "Devuelve la longitud de la mayor subcadena contigua sin caracteres exactos repetidos. Entrada vacía devuelve 0. Compara caracteres Python originales, sin normalizar. Busca tiempo lineal esperado.",
+      "Solo se evalúan dominios declarados. Devuelve tipos y valores exactos; no imprimas, modifiques entradas ni añadas dependencias. Elección algorítmica y complejidad requieren revisión manual; pruebas funcionales no las demuestran."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        ""
+      ],
+      "expected": 0,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        "abba"
+      ],
+      "expected": 2,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        "abcabcbb"
+      ],
+      "expected": 3,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/longest-distinct-substring/starter.py",
+  "hints": {
+    "en": [
+      "Track the last position of each character.",
+      "If a repeated character lies inside the current window, move the left boundary past its last occurrence.",
+      "Never move left backwards; update best length after recording the current position."
+    ],
+    "pt-BR": [
+      "Registre última posição de cada caractere.",
+      "Se repetição estiver dentro da janela atual, mova limite esquerdo após última ocorrência.",
+      "Nunca mova left para trás; atualize melhor comprimento após registrar posição atual."
+    ],
+    "es": [
+      "Registra última posición de cada carácter.",
+      "Si repetición está dentro de ventana actual, mueve límite izquierdo tras última aparición.",
+      "Nunca muevas left hacia atrás; actualiza mejor longitud tras registrar posición actual."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/longest-distinct-substring/solution.py",
+  "explanation": {
+    "en": "The current window contains unique characters. A repeated character invalidates only positions through its previous occurrence inside that window. max(left, previous + 1) preserves monotonic progress. Each right endpoint is visited once.",
+    "pt-BR": "A janela atual tem caracteres únicos. Repetição invalida apenas posições até ocorrência anterior dentro da janela. max(left, previous + 1) preserva progresso monotônico. Cada extremo direito é visitado uma vez.",
+    "es": "La ventana actual tiene caracteres únicos. Repetición invalida solo posiciones hasta aparición anterior dentro de ventana. max(left, previous + 1) conserva progreso monótono. Cada extremo derecho se visita una vez."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n) expected",
+      "pt-BR": "O(n) esperado",
+      "es": "O(n) esperado"
+    },
+    "space": {
+      "en": "O(k)",
+      "pt-BR": "O(k)",
+      "es": "O(k)"
+    },
+    "assumptions": {
+      "en": "Fixed-cost model for bounded integer operations and bounded-length labels, expected hash behavior when applicable. n/m are input lengths (for nested lists n counts all visited items and list nodes), k distinct keys, h nesting depth. Required output excluded from auxiliary space; recursion uses O(h) frames.",
+      "pt-BR": "Modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado, comportamento hash esperado quando aplicável. n/m são tamanhos (em listas aninhadas n conta todos itens e nós de lista visitados), k chaves distintas, h profundidade. Saída exigida excluída de espaço auxiliar; recursividade usa O(h) quadros.",
+      "es": "Modelo de coste fijo para enteros acotados y etiquetas de longitud acotada, comportamiento hash esperado cuando aplica. n/m son tamaños (en listas anidadas n cuenta elementos y nodos de lista visitados), k claves distintas, h profundidad. Salida requerida excluida de espacio auxiliar; recursividad usa O(h) marcos."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "longest_distinct_length",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          ""
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-02",
+        "args": [
+          "abba"
+        ],
+        "expected": 2
+      },
+      {
+        "id": "case-03",
+        "args": [
+          "abcabcbb"
+        ],
+        "expected": 3
+      },
+      {
+        "id": "case-04",
+        "args": [
+          "bbbbb"
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-05",
+        "args": [
+          "pwwkew"
+        ],
+        "expected": 3
+      },
+      {
+        "id": "case-06",
+        "args": [
+          "dvdf"
+        ],
+        "expected": 3
+      },
+      {
+        "id": "case-07",
+        "args": [
+          "a🙂aé"
+        ],
+        "expected": 3
+      },
+      {
+        "id": "case-08",
+        "args": [
+          "Aa"
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "strings-and-numbers/01-string-creation-and-indexing/README.md",
+      "pt-BR": "strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md",
+      "es": "strings-and-numbers/01-string-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "collections/04-dictionaries-keys-and-values/README.md",
+      "pt-BR": "collections/04-dictionaries-keys-and-values/README.pt-BR.md",
+      "es": "collections/04-dictionaries-keys-and-values/README.es.md"
+    },
+    {
+      "en": "program-flow/05-range-enumerate-and-zip/README.md",
+      "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+      "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/07-problem-solving-patterns/README.md",
+      "pt-BR": "problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/08-strings-and-numbers/README.md",
+      "pt-BR": "problem-solving-and-live-coding/08-strings-and-numbers/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/08-strings-and-numbers/README.es.md"
+    }
+  ],
+  "practice_mode": "implement"
+}

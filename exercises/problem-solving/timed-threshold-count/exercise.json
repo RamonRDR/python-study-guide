@@ -1,0 +1,268 @@
+{
+  "id": "problem-solving.timed-threshold-count",
+  "chapter_id": "problem-solving.timed-live-coding",
+  "difficulty": "easy",
+  "estimated_minutes": 10,
+  "title": {
+    "en": "Timed: Threshold Count",
+    "pt-BR": "Cronometrado: contar pelo limite",
+    "es": "Cronometrado: contar por límite"
+  },
+  "prompt": {
+    "en": "Return the number of integer values greater than or equal to threshold. Preserve the list; empty input returns zero. Count repeated occurrences, not distinct values.",
+    "pt-BR": "Retorne a quantidade de inteiros maiores ou iguais ao limite. Preserve lista; entrada vazia retorna zero. Conte ocorrências repetidas, não valores distintos.",
+    "es": "Devuelve cantidad de enteros mayores o iguales al límite. Conserva lista; entrada vacía devuelve cero. Cuenta apariciones repetidas, no valores distintos."
+  },
+  "concepts": [
+    "functions",
+    "edge-cases",
+    "algorithmic-complexity",
+    "lists",
+    "conditions",
+    "timed-practice"
+  ],
+  "constraints": {
+    "en": [
+      "Return the number of integer values greater than or equal to threshold. Preserve the list; empty input returns zero. Count repeated occurrences, not distinct values.",
+      "Only stated input domains are graded. Return exact types and values; do not print, mutate inputs or add dependencies. Algorithm choices and complexity require manual review; functional tests cannot prove them.",
+      "Use a personal timer. Work independently, no hints, reference or AI during the first attempt. At the limit record progress, stop the clock, then finish and compare. Timing is self-reported, not graded by CI."
+    ],
+    "pt-BR": [
+      "Retorne a quantidade de inteiros maiores ou iguais ao limite. Preserve lista; entrada vazia retorna zero. Conte ocorrências repetidas, não valores distintos.",
+      "Somente domínios declarados são avaliados. Retorne tipos e valores exatos; não imprima, altere entradas nem adicione dependências. Escolha algorítmica e complexidade exigem revisão manual; testes funcionais não as provam.",
+      "Use cronômetro pessoal. Trabalhe sozinho, sem dicas, referência ou IA na primeira tentativa. No limite registre progresso, pare o cronômetro, termine e compare. Tempo é autorrelatado, não avaliado pelo CI."
+    ],
+    "es": [
+      "Devuelve cantidad de enteros mayores o iguales al límite. Conserva lista; entrada vacía devuelve cero. Cuenta apariciones repetidas, no valores distintos.",
+      "Solo se evalúan dominios declarados. Devuelve tipos y valores exactos; no imprimas, modifiques entradas ni añadas dependencias. Elección algorítmica y complejidad requieren revisión manual; pruebas funcionales no las demuestran.",
+      "Usa temporizador personal. Trabaja de forma independiente, sin pistas, referencia ni IA en el primer intento. Al límite registra progreso, para el reloj, termina y compara. Tiempo es autorregistrado, no evaluado por CI."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        [],
+        2
+      ],
+      "expected": 0,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          2,
+          2,
+          3,
+          1
+        ],
+        2
+      ],
+      "expected": 3,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          -3,
+          -2,
+          0
+        ],
+        -2
+      ],
+      "expected": 2,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/timed-threshold-count/starter.py",
+  "hints": {
+    "en": [
+      "Initialize a counter before iteration.",
+      "Use an inclusive comparison.",
+      "Return after processing the entire list."
+    ],
+    "pt-BR": [
+      "Inicialize contador antes de iterar.",
+      "Use comparação inclusiva.",
+      "Retorne após processar toda lista."
+    ],
+    "es": [
+      "Inicializa contador antes de iterar.",
+      "Usa comparación inclusiva.",
+      "Devuelve tras procesar toda lista."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/timed-threshold-count/solution.py",
+  "explanation": {
+    "en": "The counter counts exactly the qualifying elements already processed. An inclusive comparison handles equality and the empty loop leaves zero.",
+    "pt-BR": "Contador conta exatamente elementos elegíveis processados. Comparação inclusiva trata igualdade e loop vazio deixa zero.",
+    "es": "Contador cuenta exactamente elementos válidos procesados. Comparación inclusiva trata igualdad y bucle vacío deja cero."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n)",
+      "pt-BR": "O(n)",
+      "es": "O(n)"
+    },
+    "space": {
+      "en": "O(1)",
+      "pt-BR": "O(1)",
+      "es": "O(1)"
+    },
+    "assumptions": {
+      "en": "Fixed-cost model for bounded integer operations and bounded-length labels, expected hash behavior when applicable. n/m are input lengths (for nested lists n counts all visited items and list nodes), k distinct keys, h nesting depth. Required output excluded from auxiliary space; recursion uses O(h) frames.",
+      "pt-BR": "Modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado, comportamento hash esperado quando aplicável. n/m são tamanhos (em listas aninhadas n conta todos itens e nós de lista visitados), k chaves distintas, h profundidade. Saída exigida excluída de espaço auxiliar; recursividade usa O(h) quadros.",
+      "es": "Modelo de coste fijo para enteros acotados y etiquetas de longitud acotada, comportamiento hash esperado cuando aplica. n/m son tamaños (en listas anidadas n cuenta elementos y nodos de lista visitados), k claves distintas, h profundidad. Salida requerida excluida de espacio auxiliar; recursividad usa O(h) marcos."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "count_at_least",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          [],
+          2
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-02",
+        "args": [
+          [
+            2,
+            2,
+            3,
+            1
+          ],
+          2
+        ],
+        "expected": 3
+      },
+      {
+        "id": "case-03",
+        "args": [
+          [
+            -3,
+            -2,
+            0
+          ],
+          -2
+        ],
+        "expected": 2
+      },
+      {
+        "id": "case-04",
+        "args": [
+          [
+            1
+          ],
+          1
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-05",
+        "args": [
+          [
+            1,
+            2
+          ],
+          5
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-06",
+        "args": [
+          [
+            4,
+            5
+          ],
+          0
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "collections/01-list-creation-and-indexing/README.md",
+      "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+      "es": "collections/01-list-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+      "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+      "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/16-timed-live-coding/README.md",
+      "pt-BR": "problem-solving-and-live-coding/16-timed-live-coding/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/16-timed-live-coding/README.es.md"
+    }
+  ],
+  "practice_mode": "implement",
+  "timed_practice": {
+    "duration_minutes": 10,
+    "independent_first_attempt": true,
+    "grading": "self_assessment"
+  }
+}

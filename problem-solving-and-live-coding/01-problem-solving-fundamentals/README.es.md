@@ -26,7 +26,7 @@ El ejemplo compartido usa una meta configurable, 20 por defecto. Intenta escribi
 
 ## 4. Preparación para live coding
 
-Un intento cronometrado es una restricción de práctica, no una medida del valor personal. Antes de empezar, confirma herramientas permitidas, contrato y duración. Para una sesión de 10 minutos, reserva unos 2 minutos para lectura y ejemplos, 2 para plan, 4 para implementación y 2 para pruebas y explicación. Adapta el reparto si hace falta. Piensa en voz alta sobre supuestos y casos límite; si te bloqueas, declara el siguiente paso más pequeño en vez de adivinar en silencio. Para al llegar al límite, registra lo que funcionó y lo pendiente y termina sin cronómetro. Importa más la corrección que la velocidad. No consultes referencia ni IA durante el intento independiente. La futura lección de retos cronometrados ampliará este flujo.
+Un intento cronometrado es una restricción de práctica, no una medida del valor personal. Antes de empezar, confirma herramientas permitidas, contrato y duración. Para una sesión de 10 minutos, reserva unos 2 minutos para lectura y ejemplos, 2 para plan, 4 para implementación y 2 para pruebas y explicación. Adapta el reparto si hace falta. Piensa en voz alta sobre supuestos y casos límite; si te bloqueas, declara el siguiente paso más pequeño en vez de adivinar en silencio. Para al llegar al límite, registra lo que funcionó y lo pendiente y termina sin cronómetro. Importa más la corrección que la velocidad. No consultes referencia ni IA durante el intento independiente. La [lección de live coding cronometrado](../16-timed-live-coding/README.es.md) amplía este flujo después de fundamentos y práctica.
 
 ## Práctica
 

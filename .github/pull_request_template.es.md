@@ -44,3 +44,15 @@ Comandos o controles realizados:
 
 ## Notas al revisor
 <!-- Decisiones, incertidumbres o puntos que merecen revisión. -->
+
+## Auditoría final previa a la fusión (tras CI y Codex Review)
+
+- SHA del head auditado:
+- Ejecución exitosa de CI:
+- Evidencia de Codex Review:
+- Controles de alcance, código, pruebas, requisitos, idiomas, regresiones, privacidad y seguridad:
+- Hallazgos, correcciones, limitaciones y bloqueos pendientes:
+- [ ] Auditoría completada en head actual; sin bloqueos de fusión pendientes.
+- [ ] Aprobación explícita del mantenedor para squash merge obtenida tras auditoría.
+
+Si cambia head, repite CI, Codex Review y auditoría antes de pedir aprobación.

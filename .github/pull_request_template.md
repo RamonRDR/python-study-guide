@@ -69,3 +69,15 @@ Responsibility for understanding and verifying the submitted work remains human.
 ## Reviewer notes
 
 <!-- Mention decisions, uncertainties, or areas that deserve closer review. -->
+
+## Final Pre-Merge Audit (after CI and Codex Review)
+
+- Audited head SHA:
+- Successful CI run:
+- Codex Review evidence:
+- Scope, code, tests, learning prerequisites, locale alignment, regressions, privacy and security checks:
+- Findings, corrections, limitations and unresolved blockers:
+- [ ] Audit completed on the current head; no unresolved merge blockers.
+- [ ] Explicit maintainer approval for squash merge obtained after audit.
+
+If the head changes, repeat CI, Codex Review and audit before requesting approval.

@@ -26,7 +26,7 @@ The shared example uses a configurable goal, default 20. Try writing it first; t
 
 ## 4. Prepare for live coding
 
-A timed attempt is a practice constraint, not a measure of personal worth. Before starting, confirm the allowed tools, input contract and duration. For a 10-minute practice session, reserve roughly 2 minutes for reading and examples, 2 for a plan, 4 for implementation and 2 for tests and explanation. Adapt the allocation if necessary. Think aloud about assumptions and edge cases; if blocked, state the smallest next step rather than silently guessing. Stop at the time limit, record what worked and what remains, then finish without the timer. Accuracy matters more than speed. Do not consult the reference or an AI during the independent attempt. The dedicated timed challenge chapter will build on this workflow.
+A timed attempt is a practice constraint, not a measure of personal worth. Before starting, confirm the allowed tools, input contract and duration. For a 10-minute practice session, reserve roughly 2 minutes for reading and examples, 2 for a plan, 4 for implementation and 2 for tests and explanation. Adapt the allocation if necessary. Think aloud about assumptions and edge cases; if blocked, state the smallest next step rather than silently guessing. Stop at the time limit, record what worked and what remains, then finish without the timer. Accuracy matters more than speed. Do not consult the reference or an AI during the independent attempt. The [timed live coding chapter](../16-timed-live-coding/README.md) builds on this workflow after the foundation and practice chapters.
 
 ## Practice
 
