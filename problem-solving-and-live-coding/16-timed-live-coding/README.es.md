@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../15-mixed-challenges/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../15-mixed-challenges/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../technical-interview-preparation/01-understanding-technical-interviews/README.es.md)
 <!-- /chapter-navigation:top -->
 
 ## Preparación antes de comenzar
@@ -35,5 +35,5 @@ Registra un punto por criterio cumplido: contrato/casos límite claros, plan jus
 - [Cronometrado: mayor racha válida](../../exercises/problem-solving/timed-longest-streak/README.es.md) · Media · 20 min
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../15-mixed-challenges/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../15-mixed-challenges/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../technical-interview-preparation/01-understanding-technical-interviews/README.es.md)
 <!-- /chapter-navigation:bottom -->

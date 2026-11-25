@@ -6,7 +6,7 @@ Use this page as the **master table of contents for the course**. Every publishe
 
 If you are starting from zero, follow the phase order. Completed later phases may already be available before earlier planned phases, but the phase numbers still represent the intended learning sequence.
 
-Published curriculum: 83 lessons and eight practical projects (91 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
+Published curriculum: 91 lessons and eight practical projects (99 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
 
 ## Status legend
 
@@ -169,7 +169,7 @@ Practice manual debugging, SDD, TDD and a Python-specific review workflow after 
 
 ## Phase 11: Problem Solving & Live Coding
 
-Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Final Sprint 05 validation is pending.
+Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Sprint 05 completed ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
 
 [Open module](../problem-solving-and-live-coding/README.md)
 
@@ -189,6 +189,19 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 14. [Refactoring Challenges](../problem-solving-and-live-coding/14-refactoring-challenges/README.md)
 15. [Mixed Challenges](../problem-solving-and-live-coding/15-mixed-challenges/README.md)
 16. [Timed Live Coding](../problem-solving-and-live-coding/16-timed-live-coding/README.md)
+
+## Phase 12: Technical Interview Preparation
+
+In progress: first eight lessons; remaining lessons and interviews are planned.
+
+1. [Understanding Technical Interviews](../technical-interview-preparation/01-understanding-technical-interviews/README.md)
+2. [Live Coding and Take-Home Assignments](../technical-interview-preparation/02-live-coding-and-take-home/README.md)
+3. [Python Fundamentals Review](../technical-interview-preparation/03-python-fundamentals-review/README.md)
+4. [Data Structures and Algorithms Review](../technical-interview-preparation/04-data-structures-and-algorithms-review/README.md)
+5. [Classes and Objects](../technical-interview-preparation/05-classes-and-objects/README.md)
+6. [Attributes, Methods and Object Behavior](../technical-interview-preparation/06-attributes-methods-and-object-behavior/README.md)
+7. [Inheritance, Polymorphism and Composition](../technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.md)
+8. [Encapsulation, Abstraction and SOLID](../technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.md)
 
 ## Useful navigation
 

@@ -6,7 +6,7 @@ Usa esta página como el **índice general del curso**. Todos los capítulos de 
 
 Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores pueden estar completadas antes que fases anteriores todavía planificadas, pero la numeración sigue representando la secuencia de aprendizaje recomendada.
 
-Currículo publicado: 83 lecciones y ocho proyectos prácticos (91 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
+Currículo publicado: 91 lecciones y ocho proyectos prácticos (99 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
 
 ## Leyenda de estado
 
@@ -169,7 +169,7 @@ Practica depuración manual, SDD, TDD y revisión aplicada a Python tras la Fase
 
 ## Fase 11: Resolución de problemas y live coding
 
-Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fáciles, 12 medios, seis difíciles), incluidas dos prácticas cronometradas. Validación final del Sprint 05 pendiente.
+Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fáciles, 12 medios, seis difíciles), incluidas dos prácticas cronometradas. Sprint 05 completado ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
 
 [Abrir módulo](../problem-solving-and-live-coding/README.es.md)
 
@@ -189,6 +189,19 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 14. [Retos de refactorización](../problem-solving-and-live-coding/14-refactoring-challenges/README.es.md)
 15. [Retos mixtos](../problem-solving-and-live-coding/15-mixed-challenges/README.es.md)
 16. [Live coding cronometrado](../problem-solving-and-live-coding/16-timed-live-coding/README.es.md)
+
+## Fase 12: Preparación para entrevistas técnicas
+
+En curso: primeras ocho lecciones; demás lecciones y entrevistas previstas.
+
+1. [Entender las entrevistas técnicas](../technical-interview-preparation/01-understanding-technical-interviews/README.es.md)
+2. [Live coding y tareas take-home](../technical-interview-preparation/02-live-coding-and-take-home/README.es.md)
+3. [Repaso de fundamentos de Python](../technical-interview-preparation/03-python-fundamentals-review/README.es.md)
+4. [Repaso de estructuras de datos y algoritmos](../technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md)
+5. [Clases y objetos](../technical-interview-preparation/05-classes-and-objects/README.es.md)
+6. [Atributos, métodos y comportamiento de objetos](../technical-interview-preparation/06-attributes-methods-and-object-behavior/README.es.md)
+7. [Herencia, polimorfismo y composición](../technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.es.md)
+8. [Encapsulación, abstracción y SOLID](../technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.es.md)
 
 ## Navegación útil
 
