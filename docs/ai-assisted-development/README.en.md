@@ -14,6 +14,8 @@ The guiding principle is simple:
 
 > Use AI to expand your ability to think, build, verify, and learn. Do not use it to surrender responsibility for the result.
 
+For independent student practice, see [Manual Programming & Engineering Practices](../../manual-programming-practices/README.md). That module teaches manual debugging, specifications and testing separately from AI-assisted repository maintenance.
+
 ## Purpose of this document
 
 This page explains:

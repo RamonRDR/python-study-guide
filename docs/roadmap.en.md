@@ -197,9 +197,13 @@ Each project should include:
 - extension challenges;
 - portfolio discussion.
 
+## Complementary module · Manual Programming & Engineering Practices
+
+Practice manual debugging, SDD, TDD and a Python-specific review workflow after Phase 10, before planned Phase 11. This module does not renumber the original phases. [Open the complementary module](../manual-programming-practices/README.md).
+
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
-This engineering phase does not renumber the original curriculum. Sprints 00–02 are merged (PRs #87–#89). Sprint 03 aligns public documentation and evidence; subsequent work remains planned. The repository stays independent of the future web platform.
+This engineering phase does not renumber the original curriculum. Sprints 00–03 are merged (PRs #87–#90). Sprint 04 adds the complementary manual programming and engineering module; subsequent work remains planned. The repository stays independent of the future web platform.
 
 | Future curriculum | Status |
 | --- | --- |

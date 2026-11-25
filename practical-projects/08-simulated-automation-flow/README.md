@@ -5,7 +5,7 @@
 
 
 <!-- chapter-navigation:top -->
-[← Previous](../07-fictional-reconciliation-workflow/README.md) · [Module index](../README.md)
+[← Previous](../07-fictional-reconciliation-workflow/README.md) · [Module index](../README.md) · [Next →](../../manual-programming-practices/01-manual-coding-and-debugging/README.md)
 <!-- /chapter-navigation:top -->
 
 This is **Project 08 of Phase 10: Practical Projects** and the final planned project in the phase.
@@ -469,5 +469,5 @@ External I/O: none
 This is the final planned practical project in Phase 10. Once its implementation, documentation, CI checks, and review cycle are complete, the practical-project phase can be marked complete.
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../07-fictional-reconciliation-workflow/README.md) · [Module index](../README.md)
+[← Previous](../07-fictional-reconciliation-workflow/README.md) · [Module index](../README.md) · [Next →](../../manual-programming-practices/01-manual-coding-and-debugging/README.md)
 <!-- /chapter-navigation:bottom -->

@@ -6,7 +6,7 @@ Use this page as the **master table of contents for the course**. Every publishe
 
 If you are starting from zero, follow the phase order. Completed later phases may already be available before earlier planned phases, but the phase numbers still represent the intended learning sequence.
 
-Published curriculum: 63 lessons and eight practical projects (71 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
+Published curriculum: 67 lessons and eight practical projects (75 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
 
 ## Status legend
 
@@ -155,6 +155,17 @@ Phase 9 is complete with four reviewed chapters. The sequence moves from tabular
 8. ✅ [Simulated Automation Flow](../practical-projects/08-simulated-automation-flow/README.md)
 
 Phase 10 is complete with eight reviewed practical projects. Project 01 integrates validated data modeling, exact `Decimal` money, collections, JSON persistence, CSV export, deterministic temporary-file handling, and automated pytest coverage. Project 02 adds configurable grade policies, exact weighted aggregation, explicit progress-versus-final state, structured reporting, and boundary-focused tests. Project 03 adds canonical identity-like data, Unicode and IDNA normalization, duplicate prevention, secondary lookup indexes, safe indexed-field updates, explicit lifecycle transitions, and mutation-focused tests without introducing authentication. Project 04 adds schema-aware CSV ingestion, typed conversion, row-level rejection diagnostics, structural failures, duplicate identifier checks, deterministic filtering, and aggregation using the standard library. Project 05 adds explicit reporting windows, deterministic summaries, exact two-decimal metrics, immutable report boundaries, TXT/Markdown rendering, format-aware escaping, and UTF-8 file output. Project 06 adds deterministic shallow file discovery, suffix classification, immutable dry-run planning, explicit collision policies, symlink boundaries, `(device, inode)` identity checks, source/category/root anchoring, bounded staging names, and platform-aware atomic no-replace commit behavior with Linux `renameat2(RENAME_NOREPLACE)`. Project 07 adds immutable reconciliation models, exact integer-cent arithmetic, deterministic matching and ordering, duplicate rejection, explicit reconciliation statuses, validated report invariants, stable text rendering, and regression coverage for precision and safety boundaries. Project 08 adds immutable automation requests and results, a fixed execution plan, deterministic event logs, structured evidence, controlled failure injection, fail-fast propagation, skipped-step semantics, output publication rules, and invariant-focused regression coverage without external integrations.
+
+## Complementary module · Manual Programming & Engineering Practices ✅
+
+Practice manual debugging, SDD, TDD and a Python-specific review workflow after Phase 10, before planned Phase 11. This module does not renumber the original phases.
+
+[Open the complementary module](../manual-programming-practices/README.md)
+
+1. [Manual Coding and Debugging](../manual-programming-practices/01-manual-coding-and-debugging/README.md)
+2. [Specification-Driven Development](../manual-programming-practices/02-specification-driven-development/README.md)
+3. [Test-Driven Development](../manual-programming-practices/03-test-driven-development/README.md)
+4. [Professional Python Workflow](../manual-programming-practices/04-professional-workflow/README.md)
 
 ## Useful navigation
 

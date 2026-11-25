@@ -14,6 +14,8 @@ O princípio orientador é simples:
 
 > Use a IA para ampliar sua capacidade de pensar, construir, verificar e aprender. Não a utilize para abandonar a responsabilidade pelo resultado.
 
+Para prática independente do estudante, veja [Prática manual e engenharia de software](../../manual-programming-practices/README.pt-BR.md). O módulo ensina depuração manual, especificações e testes separadamente da manutenção do repositório assistida por IA.
+
 ## Objetivo deste documento
 
 Esta página explica:

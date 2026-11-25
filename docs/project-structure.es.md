@@ -389,6 +389,29 @@ python-study-guide/
 │       └── examples/
 │           ├── conversion_basics.py
 │           └── conversion_surprises.py
+├── manual-programming-practices/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   ├── 01-manual-coding-and-debugging/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 02-specification-driven-development/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 03-test-driven-development/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── reading_progress.py
+│   │       └── test_reading_progress.py
+│   └── 04-professional-workflow/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       └── README.es.md
 ├── practical-projects/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -695,6 +718,7 @@ python-study-guide/
 - `functions/`: ruta completa de la Fase 5. Los Capítulos 01–09 cubren definición y llamada de funciones, entradas obligatorias, valores retornados, alcance y búsqueda de nombres, type hints para interfaces de funciones, valores predeterminados incluida la evaluación al definir la función y la seguridad con valores mutables, recolección de argumentos posicionales y por palabra clave de cantidad variable con `*args` y `**kwargs`, composición mediante funciones auxiliares y coordinadoras con dependencias explícitas y grafos simples de llamadas, y seguimiento explícito del flujo de datos entre llamadas, incluidos vínculos de parámetros, reasignación frente a mutación, `None`, resultados en tupla y traspasos mediante `return`, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `getting-started/`: orden curricular introductorio 00, con instalación de Python, configuración del editor, primera ejecución manual de archivo, entornos virtuales por proyecto, gestión de dependencias y Git básico en los tres idiomas. La Fase 0 histórica sigue siendo Base del proyecto.
 - `fundamentals/`: ruta completa de la Fase 1. Sus seis capítulos enseñan cómo Python ejecuta un programa, cómo usar `print()` e `input()`, cómo funcionan la asignación y los nombres, cómo reconocer e inspeccionar tipos de datos incorporados comunes y cómo convertir valores compatibles de forma deliberada, con explicaciones multilingües alineadas y ejemplos ejecutables.
+- `manual-programming-practices/`: módulo complementario de ingeniería de cuatro lecciones tras la Fase 10, implementación y pruebas compartidas de progreso de lectura; sin nuevas dependencias.
 - `practical-projects/`: espacio completo de Proyectos Prácticos de la Fase 10. Los Proyectos 01–08 están completados, revisados e integrados. El Proyecto 07 añade modelos inmutables de conciliación, aritmética exacta en centavos enteros, matching y orden deterministas, rechazo de duplicados, estados explícitos de conciliación, invariantes validadas del informe, renderizado de texto estable y pruebas de regresión enfocadas en precisión y seguridad. El Proyecto 08 cierra la fase con solicitudes y resultados inmutables de automatización, un plan fijo de ejecución `prepare → process → verify → finalize`, logs deterministas de eventos, evidencia estructurada, inyección controlada de fallos, propagación fail-fast, verificación posterior al procesamiento, semántica de pasos omitidos, renderizado estable y pruebas de regresión centradas en invariantes sin integraciones externas.
 - `program-flow/`: ruta completa de la Fase 4. Los Capítulos 01–08 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else`, coincidencia de patrones estructurales, repetición guiada por iterables con `for`, progresiones numéricas con `range()`, iteración con posición usando `enumerate()`, iteración paralela con `zip()` incluida la validación explícita de longitudes iguales con `strict=True`, repetición guiada por estado con `while`, control deliberado de bucles con `break`, `continue` y `else` de bucle y cómo elegir y combinar herramientas de flujo del programa según la intención, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions. Las herramientas de calidad verifican ejemplos aprobados, enlaces internos, paridad de familias de idiomas, navegación de capítulos y rutas obligatorias. El job Windows cubre pruebas de File Organizer; el job Linux ejecuta la suite completa de proyectos prácticos.

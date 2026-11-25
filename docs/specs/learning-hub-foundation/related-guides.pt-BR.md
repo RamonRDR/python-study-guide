@@ -11,7 +11,7 @@ Status: planejado, não publicado. O mantenedor aprovou guias independentes e re
 | `getting-started/04-virtual-environments/README.pt-BR.md` | Exclusões e ambientes gerados | Publicação pendente |
 | `getting-started/05-packages-and-dependencies/README.pt-BR.md` | Arquivos de dependência e reprodução | Publicação pendente |
 | `getting-started/06-git-and-version-control/README.pt-BR.md` | Fundamentos Git, remotos e recuperação segura | Publicação pendente |
-| Local futuro na Sprint 04 | Fluxo profissional branch/PR/teste/revisão | Publicação pendente |
+| `manual-programming-practices/04-professional-workflow/README.pt-BR.md` | Fluxo profissional branch/PR/teste/revisão | Publicação pendente |
 | `docs/localized/CONTRIBUTING.pt-BR.md` | Fluxo de contribuição | Publicação pendente |
 | `docs/ai-assisted-development/README.pt-BR.md` | Revisão assistida por IA e CI | Publicação pendente |
 | `docs/roadmap.pt-BR.md` | Roadmap entre guias | Publicação pendente |

@@ -41,6 +41,9 @@ jobs:
       - name: Run quality script tests
         run: python -m unittest discover -s tests -p 'test_*.py'
 
+      - name: Run engineering practice tests
+        run: python -m unittest discover -s manual-programming-practices/03-test-driven-development/examples -p 'test_*.py'
+
       - name: Run approved examples
         run: python scripts/run_examples.py
 
