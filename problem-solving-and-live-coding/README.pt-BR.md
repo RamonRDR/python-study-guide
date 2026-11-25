@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Sete aulas de fundamentos e oito aulas de desafios oferecem 22 exercícios (11 fáceis, 11 médios). Desafios difíceis e prática cronometrada permanecem planejados.
+Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 fáceis, 12 médios, seis difíceis), incluindo duas tentativas cronometradas. Validação final da Sprint 05 pendente.
 
 1. [Fundamentos de resolução de problemas](01-problem-solving-fundamentals/README.pt-BR.md)
 2. [Restrições e casos de borda](02-constraints-and-edge-cases/README.pt-BR.md)
@@ -19,5 +19,6 @@ Sete aulas de fundamentos e oito aulas de desafios oferecem 22 exercícios (11 f
 13. [Desafios de depuração](13-debugging-challenges/README.pt-BR.md)
 14. [Desafios de refatoração](14-refactoring-challenges/README.pt-BR.md)
 15. [Desafios mistos](15-mixed-challenges/README.pt-BR.md)
+16. [Live coding cronometrado](16-timed-live-coding/README.pt-BR.md)
 
 [Trilha de aprendizagem](../docs/learning-path.pt-BR.md) · [Mapa de pré-requisitos](../docs/specs/learning-hub-foundation/prerequisite-map.pt-BR.md)

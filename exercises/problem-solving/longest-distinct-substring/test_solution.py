@@ -1,0 +1,13 @@
+"""Trusted incorrect implementation for discrimination tests."""
+
+
+def wrong_solution(text: str) -> int:
+    last = {}
+    left = 0
+    best = 0
+    for right, character in enumerate(text):
+        if character in last:
+            left = last[character] + 1
+        last[character] = right
+        best = max(best, right - left + 1)
+    return best

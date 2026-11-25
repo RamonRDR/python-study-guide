@@ -36,6 +36,14 @@ APPROVED = (
     "refactor-score-summary",
     "total-short-lengths",
     "most-frequent-label",
+    "longest-distinct-substring",
+    "recursive-flatten",
+    "binary-target-range",
+    "merge-sorted-lists",
+    "sorted-pair-multiplicity",
+    "inventory-reconciliation",
+    "timed-threshold-count",
+    "timed-longest-streak",
 )
 
 
@@ -118,14 +126,47 @@ class ExpansionTests(unittest.TestCase):
                     ).as_posix(),
                 )
                 chapter = REPOSITORY / entry["chapter_path"]
+                slug_to_id = {"13-debugging-challenges": "debugging",
+                              "14-refactoring-challenges": "refactoring",
+                              "15-mixed-challenges": "mixed"}
+                self.assertEqual(record["chapter_id"], "problem-solving." +
+                                 slug_to_id.get(chapter.name, chapter.name[3:]))
                 for name in ("README.md", "README.pt-BR.md", "README.es.md"):
                     self.assertTrue((chapter / name).is_file(), name)
+
+    def test_full_bank_distribution_and_timed_metadata(self):
+        from collections import Counter
+
+        pilot = json.loads((ROOT / "vowel-counter" / "exercise.json").read_text(
+            encoding="utf-8"
+        ))
+        records = [pilot, *self.records.values()]
+        self.assertEqual(len(records), 30)
+        self.assertEqual(len({record["id"] for record in records}), 30)
+        self.assertEqual(Counter(record["difficulty"] for record in records),
+                         {"easy": 12, "medium": 12, "hard": 6})
+        self.assertEqual(sum(len(record["tests"]["cases"]) for record in records),
+                         192)
+        timed = [record for record in records if "timed_practice" in record]
+        self.assertEqual({record["id"] for record in timed}, {
+            "problem-solving.timed-threshold-count",
+            "problem-solving.timed-longest-streak",
+        })
+        self.assertEqual({record["timed_practice"]["duration_minutes"]
+                          for record in timed}, {10, 20})
+        for record in timed:
+            self.assertEqual(record["chapter_id"], "problem-solving.timed-live-coding")
+            self.assertEqual(record["timed_practice"]["duration_minutes"],
+                             record["estimated_minutes"])
+            self.assertIs(record["timed_practice"]["independent_first_attempt"], True)
+            self.assertEqual(record["timed_practice"]["grading"], "self_assessment")
+            self.assertEqual(record["execution"], "unverified")
 
     def test_record_contract_and_locales(self):
         for slug, record in self.records.items():
             with self.subTest(slug=slug):
                 directory = ROOT / slug
-                self.assertIn(record["difficulty"], {"easy", "medium"})
+                self.assertIn(record["difficulty"], {"easy", "medium", "hard"})
                 self.assertGreater(record["estimated_minutes"], 0)
                 self.assertTrue(record["concepts"])
                 self.assertEqual(len(record["concepts"]), len(set(record["concepts"])))

@@ -1,0 +1,294 @@
+{
+  "id": "problem-solving.timed-longest-streak",
+  "chapter_id": "problem-solving.timed-live-coding",
+  "difficulty": "medium",
+  "estimated_minutes": 20,
+  "title": {
+    "en": "Timed: Longest Qualifying Streak",
+    "pt-BR": "Cronometrado: maior sequência elegível",
+    "es": "Cronometrado: mayor racha válida"
+  },
+  "prompt": {
+    "en": "Return the longest contiguous run of integer values greater than or equal to threshold. Empty input or no qualifying values returns zero. A value below threshold breaks the run; preserve input.",
+    "pt-BR": "Retorne o comprimento da maior sequência contígua de inteiros maiores ou iguais ao limite. Entrada vazia ou sem elegíveis retorna zero. Valor abaixo do limite interrompe sequência; preserve entrada.",
+    "es": "Devuelve longitud de mayor racha contigua de enteros mayores o iguales al límite. Entrada vacía o sin válidos devuelve cero. Valor inferior rompe racha; conserva entrada."
+  },
+  "concepts": [
+    "functions",
+    "edge-cases",
+    "algorithmic-complexity",
+    "lists",
+    "conditions",
+    "problem-solving-patterns",
+    "timed-practice"
+  ],
+  "constraints": {
+    "en": [
+      "Return the longest contiguous run of integer values greater than or equal to threshold. Empty input or no qualifying values returns zero. A value below threshold breaks the run; preserve input.",
+      "Only stated input domains are graded. Return exact types and values; do not print, mutate inputs or add dependencies. Algorithm choices and complexity require manual review; functional tests cannot prove them.",
+      "Use a personal timer. Work independently, no hints, reference or AI during the first attempt. At the limit record progress, stop the clock, then finish and compare. Timing is self-reported, not graded by CI."
+    ],
+    "pt-BR": [
+      "Retorne o comprimento da maior sequência contígua de inteiros maiores ou iguais ao limite. Entrada vazia ou sem elegíveis retorna zero. Valor abaixo do limite interrompe sequência; preserve entrada.",
+      "Somente domínios declarados são avaliados. Retorne tipos e valores exatos; não imprima, altere entradas nem adicione dependências. Escolha algorítmica e complexidade exigem revisão manual; testes funcionais não as provam.",
+      "Use cronômetro pessoal. Trabalhe sozinho, sem dicas, referência ou IA na primeira tentativa. No limite registre progresso, pare o cronômetro, termine e compare. Tempo é autorrelatado, não avaliado pelo CI."
+    ],
+    "es": [
+      "Devuelve longitud de mayor racha contigua de enteros mayores o iguales al límite. Entrada vacía o sin válidos devuelve cero. Valor inferior rompe racha; conserva entrada.",
+      "Solo se evalúan dominios declarados. Devuelve tipos y valores exactos; no imprimas, modifiques entradas ni añadas dependencias. Elección algorítmica y complejidad requieren revisión manual; pruebas funcionales no las demuestran.",
+      "Usa temporizador personal. Trabaja de forma independiente, sin pistas, referencia ni IA en el primer intento. Al límite registra progreso, para el reloj, termina y compara. Tiempo es autorregistrado, no evaluado por CI."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        [],
+        2
+      ],
+      "expected": 0,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          2,
+          2,
+          0,
+          3,
+          4,
+          2
+        ],
+        2
+      ],
+      "expected": 3,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          0,
+          0
+        ],
+        1
+      ],
+      "expected": 0,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/timed-longest-streak/starter.py",
+  "hints": {
+    "en": [
+      "Keep the current run length and the best run length separately.",
+      "Reset the current length to zero on a failing value.",
+      "Update best after extending a run; do not add disconnected runs."
+    ],
+    "pt-BR": [
+      "Mantenha comprimento atual e melhor separados.",
+      "Zere comprimento atual em valor não elegível.",
+      "Atualize melhor após estender sequência; não some sequências separadas."
+    ],
+    "es": [
+      "Mantén longitud actual y mejor separadas.",
+      "Pon longitud actual a cero en valor no válido.",
+      "Actualiza mejor tras extender racha; no sumes rachas separadas."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/timed-longest-streak/solution.py",
+  "explanation": {
+    "en": "The current counter describes the qualifying suffix ending at the current position. Resetting on a failure preserves contiguity. Tracking the maximum handles a run at the beginning, middle or end.",
+    "pt-BR": "Contador atual descreve sufixo elegível que termina na posição atual. Zerar em falha preserva contiguidade. Guardar máximo trata sequência no início, meio ou fim.",
+    "es": "Contador actual describe sufijo válido que termina en posición actual. Reiniciar al fallar conserva contigüidad. Guardar máximo trata racha al inicio, medio o final."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n)",
+      "pt-BR": "O(n)",
+      "es": "O(n)"
+    },
+    "space": {
+      "en": "O(1)",
+      "pt-BR": "O(1)",
+      "es": "O(1)"
+    },
+    "assumptions": {
+      "en": "Fixed-cost model for bounded integer operations and bounded-length labels, expected hash behavior when applicable. n/m are input lengths (for nested lists n counts all visited items and list nodes), k distinct keys, h nesting depth. Required output excluded from auxiliary space; recursion uses O(h) frames.",
+      "pt-BR": "Modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado, comportamento hash esperado quando aplicável. n/m são tamanhos (em listas aninhadas n conta todos itens e nós de lista visitados), k chaves distintas, h profundidade. Saída exigida excluída de espaço auxiliar; recursividade usa O(h) quadros.",
+      "es": "Modelo de coste fijo para enteros acotados y etiquetas de longitud acotada, comportamiento hash esperado cuando aplica. n/m son tamaños (en listas anidadas n cuenta elementos y nodos de lista visitados), k claves distintas, h profundidad. Salida requerida excluida de espacio auxiliar; recursividad usa O(h) marcos."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "longest_streak",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          [],
+          2
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-02",
+        "args": [
+          [
+            2,
+            2,
+            0,
+            3,
+            4,
+            2
+          ],
+          2
+        ],
+        "expected": 3
+      },
+      {
+        "id": "case-03",
+        "args": [
+          [
+            0,
+            0
+          ],
+          1
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-04",
+        "args": [
+          [
+            1,
+            1,
+            1
+          ],
+          1
+        ],
+        "expected": 3
+      },
+      {
+        "id": "case-05",
+        "args": [
+          [
+            5,
+            0,
+            5
+          ],
+          5
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-06",
+        "args": [
+          [
+            -1,
+            -2,
+            -1,
+            -1
+          ],
+          -1
+        ],
+        "expected": 2
+      },
+      {
+        "id": "case-07",
+        "args": [
+          [
+            2,
+            2,
+            0,
+            2
+          ],
+          2
+        ],
+        "expected": 2
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "collections/01-list-creation-and-indexing/README.md",
+      "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+      "es": "collections/01-list-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+      "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+      "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/07-problem-solving-patterns/README.md",
+      "pt-BR": "problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/16-timed-live-coding/README.md",
+      "pt-BR": "problem-solving-and-live-coding/16-timed-live-coding/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/16-timed-live-coding/README.es.md"
+    }
+  ],
+  "practice_mode": "implement",
+  "timed_practice": {
+    "duration_minutes": 20,
+    "independent_first_attempt": true,
+    "grading": "self_assessment"
+  }
+}

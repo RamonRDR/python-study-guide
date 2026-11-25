@@ -100,7 +100,7 @@ A computer with a supported Python installation and a text editor is enough for 
 | 09 | [External Libraries](external-libraries/README.md) | 4 |
 | 10 | [Practical Projects](practical-projects/README.md) | 8 |
 | Supplement | [Manual Programming & Engineering Practices](manual-programming-practices/README.md) | 4 |
-| 11 | [Problem Solving & Live Coding](problem-solving-and-live-coding/README.md) | 15 |
+| 11 | [Problem Solving & Live Coding](problem-solving-and-live-coding/README.md) | 16 |
 
 - [Full learning path: direct links to every published chapter](docs/learning-path.en.md)
 - [Roadmap in English](docs/roadmap.en.md)
@@ -139,17 +139,17 @@ Detailed explanations:
 
 ## Current status
 
-**Phase II: Learning Hub Foundation** is in progress. Sprints 00–03 were merged in PRs #87–#90. The complementary manual programming and engineering module adds four lessons; coding challenges, technical interview preparation, quizzes and a versioned content contract remain planned. The guide remains independently usable; the future web Learning Hub and separate Git Study Guide are not prerequisites.
+**Phase II: Learning Hub Foundation** is in progress. PRs #87–#94 are merged. Phase 11 contains 30 challenges; final advanced/timed validation is pending. Technical interview preparation, quizzes and a versioned content contract remain planned. The guide remains independently usable; the future web Learning Hub and separate Git Study Guide are not prerequisites.
 
 [Phase II implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md)
 
-The original project foundation, **Getting Started (six lessons)** and **Phases 1–10 are complete**. The current curriculum contains 82 lessons and eight practical projects, across 13 modules and three languages. **Phase 10: Practical Projects is complete** with all eight planned projects implemented, documented, tested, reviewed, and integrated.
+The original project foundation, **Getting Started (six lessons)** and **Phases 1–10 are complete**. The current curriculum contains 83 lessons and eight practical projects, across 13 modules and three languages. **Phase 10: Practical Projects is complete** with all eight planned projects implemented, documented, tested, reviewed, and integrated.
 
 The practical-project phase closes by combining validated data models, deterministic workflows, exact arithmetic, persistence and reporting, filesystem automation, reconciliation, orchestration, structured evidence, and automated regression coverage across the eight projects.
 
 See the [Practical Projects index](practical-projects/README.md), [roadmap](docs/roadmap.en.md), or [full learning path](docs/learning-path.en.md) for the current curriculum status.
 
-Seven foundation lessons and eight challenge chapters provide 22 exercises (11 easy, 11 medium). Difficult and timed practice remain planned.
+Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Final Sprint 05 validation is pending.
 
 [Exercise bank](exercises/README.md)
 

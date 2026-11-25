@@ -39,7 +39,7 @@ For the pilot, also check string methods, numeric built-ins, list methods, while
 
 ## Easy/medium expansion prerequisite gate
 
-The following group map complements the exact localized prerequisite paths in each exercise JSON and README. All referenced foundation lessons exist in the merged base. Chapter introductions teach the small adaptations (palindrome comparison, factorial/power recurrence and unordered pair arithmetic) before the corresponding exercises. No difficult or timed exercise is published here. CI and independent review remain pending for this expansion.
+The following group map complements the exact localized prerequisite paths in each exercise JSON and README. All referenced foundation lessons exist in the merged base. Chapter introductions teach the small adaptations (palindrome comparison, factorial/power recurrence and unordered pair arithmetic) before the corresponding exercises. The easy/medium scope passed CI and Codex Review on [PR #94](https://github.com/RamonRDR/python-study-guide/pull/94), head `1932dddc01`, merged as `61d9a0d70dafc0a012284c753d5fdb55302d310d`.
 
 | Concept group | Exercises | Teaching evidence |
 | --- | --- | --- |
@@ -51,3 +51,18 @@ The following group map complements the exact localized prerequisite paths in ea
 | Boundary bugs and negative windows | [`debug-positive-count`](../../../exercises/problem-solving/debug-positive-count/README.md), [`debug-negative-window`](../../../exercises/problem-solving/debug-negative-window/README.md) | [01-manual-coding-and-debugging](../../../manual-programming-practices/01-manual-coding-and-debugging/README.md), [02-constraints-and-edge-cases](../../../problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md), [07-problem-solving-patterns](../../../problem-solving-and-live-coding/07-problem-solving-patterns/README.md) |
 | Preserving behavior during refactoring | [`refactor-shipping-fee`](../../../exercises/problem-solving/refactor-shipping-fee/README.md), [`refactor-score-summary`](../../../exercises/problem-solving/refactor-score-summary/README.md) | [06-pep8-and-readability](../../../comments-and-documentation/06-pep8-and-readability/README.md), [03-test-driven-development](../../../manual-programming-practices/03-test-driven-development/README.md) |
 | Decomposition and frequency tie-breaking | [`total-short-lengths`](../../../exercises/problem-solving/total-short-lengths/README.md), [`most-frequent-label`](../../../exercises/problem-solving/most-frequent-label/README.md) | [01-problem-solving-fundamentals](../../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md), [07-problem-solving-patterns](../../../problem-solving-and-live-coding/07-problem-solving-patterns/README.md) |
+
+## Advanced and timed prerequisite gate
+
+The following chapter sections teach the adaptations before their exercise links; each exercise also lists exact locale-specific prerequisite paths. All prior foundations come from the merged base; the new instruction is part of this final PR. Timing and explanations are self-assessed, not machine-graded. Final CI, review and maintainer approval are pending.
+
+| Concept | Exercise | Instruction before practice |
+| --- | --- | --- |
+| Variable window and last-seen indices | [`longest-distinct-substring`](../../../exercises/problem-solving/longest-distinct-substring/README.md) | [Chapter instruction](../../../problem-solving-and-live-coding/08-strings-and-numbers/README.md) |
+| Nested recursion and shared accumulator | [`recursive-flatten`](../../../exercises/problem-solving/recursive-flatten/README.md) | [Chapter instruction](../../../problem-solving-and-live-coding/10-functions-and-recursion/README.md) |
+| Binary boundaries | [`binary-target-range`](../../../exercises/problem-solving/binary-target-range/README.md) | [Chapter instruction](../../../problem-solving-and-live-coding/11-searching-and-sorting/README.md) |
+| Two-pointer merge | [`merge-sorted-lists`](../../../exercises/problem-solving/merge-sorted-lists/README.md) | [Chapter instruction](../../../problem-solving-and-live-coding/11-searching-and-sorting/README.md) |
+| Grouped pair multiplicities | [`sorted-pair-multiplicity`](../../../exercises/problem-solving/sorted-pair-multiplicity/README.md) | [Chapter instruction](../../../problem-solving-and-live-coding/12-algorithms-and-complexity/README.md) |
+| Aggregation and ordered reconciliation | [`inventory-reconciliation`](../../../exercises/problem-solving/inventory-reconciliation/README.md) | [Chapter instruction](../../../problem-solving-and-live-coding/15-mixed-challenges/README.md) |
+| Timed independent practice and inclusive counting | [`timed-threshold-count`](../../../exercises/problem-solving/timed-threshold-count/README.md) | [Chapter instruction](../../../problem-solving-and-live-coding/16-timed-live-coding/README.md) |
+| Timed practice and contiguous runs | [`timed-longest-streak`](../../../exercises/problem-solving/timed-longest-streak/README.md) | [Chapter instruction](../../../problem-solving-and-live-coding/16-timed-live-coding/README.md) |

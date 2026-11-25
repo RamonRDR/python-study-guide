@@ -203,7 +203,7 @@ Practica depuración manual, SDD, TDD y revisión aplicada a Python tras la Fase
 
 ## Fase 11: Resolución de problemas y live coding
 
-Siete lecciones de fundamentos y ocho de retos ofrecen 22 ejercicios (11 fáciles, 11 medios). Retos difíciles y práctica cronometrada siguen planificados.
+Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fáciles, 12 medios, seis difíciles), incluidas dos prácticas cronometradas. Validación final del Sprint 05 pendiente.
 
 [Abrir módulo](../problem-solving-and-live-coding/README.es.md)
 
@@ -222,14 +222,15 @@ Siete lecciones de fundamentos y ocho de retos ofrecen 22 ejercicios (11 fácile
 13. [Retos de depuración](../problem-solving-and-live-coding/13-debugging-challenges/README.es.md)
 14. [Retos de refactorización](../problem-solving-and-live-coding/14-refactoring-challenges/README.es.md)
 15. [Retos mixtos](../problem-solving-and-live-coding/15-mixed-challenges/README.es.md)
+16. [Live coding cronometrado](../problem-solving-and-live-coding/16-timed-live-coding/README.es.md)
 
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 
-Esta fase de ingeniería no renumera el currículo original. Sprints 00–04, fundamentos y piloto del Sprint 05 fusionados (PRs #87–#93). Expansión fácil y media enviada a revisión; retos difíciles y práctica cronometrada siguen planificados. El repositorio permanece independiente de la futura plataforma web.
+Esta fase de ingeniería no renumera el currículo original. Sprints 00–04, fundamentos, piloto y expansión fácil/media del Sprint 05 fusionados (PRs #87–#94). Retos avanzados y cronometrados enviados a revisión final del Sprint 05. El repositorio permanece independiente de la futura plataforma web.
 
 | Currículo futuro | Estado |
 | --- | --- |
-| 11. Resolución de problemas y live coding | Piloto fusionado; expansión en revisión |
+| 11. Resolución de problemas y live coding | 30 retos escritos; revisión final pendiente |
 | 12. Preparación para entrevistas técnicas | Planificado |
 
 [Plan de implementación](specs/learning-hub-foundation/implementation-plan.es.md) · [Registro de integración de guías relacionadas](specs/learning-hub-foundation/related-guides.es.md)

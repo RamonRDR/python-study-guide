@@ -39,7 +39,7 @@ Para el piloto, comprueba también métodos de cadenas, funciones numéricas inc
 
 ## Control de requisitos previos de expansión fácil/media
 
-El mapa por grupo siguiente complementa rutas localizadas exactas de cada JSON y README de reto. Todas las lecciones de fundamentos referenciadas existen en la base fusionada. Introducciones enseñan pequeñas adaptaciones (comparación de palíndromo, recurrencia de factorial/potencia y aritmética de pares no ordenados) antes de los retos correspondientes. No se publica ningún difícil ni cronometrado aquí. CI y revisión independiente de la expansión siguen pendientes.
+El mapa por grupo siguiente complementa rutas localizadas exactas de cada JSON y README de reto. Todas las lecciones de fundamentos referenciadas existen en la base fusionada. Introducciones enseñan pequeñas adaptaciones (comparación de palíndromo, recurrencia de factorial/potencia y aritmética de pares no ordenados) antes de los retos correspondientes. Alcance fácil/medio aprobado en CI y Codex Review del [PR #94](https://github.com/RamonRDR/python-study-guide/pull/94), head `1932dddc01`, fusionado como `61d9a0d70dafc0a012284c753d5fdb55302d310d`.
 
 | Grupo de conceptos | Retos | Evidencia de enseñanza |
 | --- | --- | --- |
@@ -51,3 +51,18 @@ El mapa por grupo siguiente complementa rutas localizadas exactas de cada JSON y
 | Errores de límite y ventanas negativas | [`debug-positive-count`](../../../exercises/problem-solving/debug-positive-count/README.es.md), [`debug-negative-window`](../../../exercises/problem-solving/debug-negative-window/README.es.md) | [01-manual-coding-and-debugging](../../../manual-programming-practices/01-manual-coding-and-debugging/README.es.md), [02-constraints-and-edge-cases](../../../problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md), [07-problem-solving-patterns](../../../problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md) |
 | Conservación de comportamiento al refactorizar | [`refactor-shipping-fee`](../../../exercises/problem-solving/refactor-shipping-fee/README.es.md), [`refactor-score-summary`](../../../exercises/problem-solving/refactor-score-summary/README.es.md) | [06-pep8-and-readability](../../../comments-and-documentation/06-pep8-and-readability/README.es.md), [03-test-driven-development](../../../manual-programming-practices/03-test-driven-development/README.es.md) |
 | Descomposición y desempate por frecuencia | [`total-short-lengths`](../../../exercises/problem-solving/total-short-lengths/README.es.md), [`most-frequent-label`](../../../exercises/problem-solving/most-frequent-label/README.es.md) | [01-problem-solving-fundamentals](../../../problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md), [07-problem-solving-patterns](../../../problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md) |
+
+## Control de requisitos avanzados y cronometrados
+
+Las secciones siguientes enseñan adaptaciones antes de enlaces de retos; cada reto lista rutas exactas por idioma. Fundamentos previos vienen de base fusionada; instrucción nueva forma parte de PR final. Tiempo y explicaciones se autoevalúan, no se califican por máquina. CI, revisión y aprobación finales pendientes.
+
+| Concepto | Reto | Instrucción antes de práctica |
+| --- | --- | --- |
+| Ventana variable y últimas posiciones | [`longest-distinct-substring`](../../../exercises/problem-solving/longest-distinct-substring/README.es.md) | [Instrucción de lección](../../../problem-solving-and-live-coding/08-strings-and-numbers/README.es.md) |
+| Recursión anidada y acumulador compartido | [`recursive-flatten`](../../../exercises/problem-solving/recursive-flatten/README.es.md) | [Instrucción de lección](../../../problem-solving-and-live-coding/10-functions-and-recursion/README.es.md) |
+| Fronteras binarias | [`binary-target-range`](../../../exercises/problem-solving/binary-target-range/README.es.md) | [Instrucción de lección](../../../problem-solving-and-live-coding/11-searching-and-sorting/README.es.md) |
+| Fusión con dos punteros | [`merge-sorted-lists`](../../../exercises/problem-solving/merge-sorted-lists/README.es.md) | [Instrucción de lección](../../../problem-solving-and-live-coding/11-searching-and-sorting/README.es.md) |
+| Multiplicidades de pares agrupados | [`sorted-pair-multiplicity`](../../../exercises/problem-solving/sorted-pair-multiplicity/README.es.md) | [Instrucción de lección](../../../problem-solving-and-live-coding/12-algorithms-and-complexity/README.es.md) |
+| Agregación y conciliación ordenada | [`inventory-reconciliation`](../../../exercises/problem-solving/inventory-reconciliation/README.es.md) | [Instrucción de lección](../../../problem-solving-and-live-coding/15-mixed-challenges/README.es.md) |
+| Práctica independiente cronometrada y conteo inclusivo | [`timed-threshold-count`](../../../exercises/problem-solving/timed-threshold-count/README.es.md) | [Instrucción de lección](../../../problem-solving-and-live-coding/16-timed-live-coding/README.es.md) |
+| Práctica cronometrada y rachas contiguas | [`timed-longest-streak`](../../../exercises/problem-solving/timed-longest-streak/README.es.md) | [Instrucción de lección](../../../problem-solving-and-live-coding/16-timed-live-coding/README.es.md) |

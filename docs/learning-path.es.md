@@ -6,7 +6,7 @@ Usa esta página como el **índice general del curso**. Todos los capítulos de 
 
 Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores pueden estar completadas antes que fases anteriores todavía planificadas, pero la numeración sigue representando la secuencia de aprendizaje recomendada.
 
-Currículo publicado: 82 lecciones y ocho proyectos prácticos (90 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
+Currículo publicado: 83 lecciones y ocho proyectos prácticos (91 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
 
 ## Leyenda de estado
 
@@ -169,7 +169,7 @@ Practica depuración manual, SDD, TDD y revisión aplicada a Python tras la Fase
 
 ## Fase 11: Resolución de problemas y live coding
 
-Siete lecciones de fundamentos y ocho de retos ofrecen 22 ejercicios (11 fáciles, 11 medios). Retos difíciles y práctica cronometrada siguen planificados.
+Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fáciles, 12 medios, seis difíciles), incluidas dos prácticas cronometradas. Validación final del Sprint 05 pendiente.
 
 [Abrir módulo](../problem-solving-and-live-coding/README.es.md)
 
@@ -188,6 +188,7 @@ Siete lecciones de fundamentos y ocho de retos ofrecen 22 ejercicios (11 fácile
 13. [Retos de depuración](../problem-solving-and-live-coding/13-debugging-challenges/README.es.md)
 14. [Retos de refactorización](../problem-solving-and-live-coding/14-refactoring-challenges/README.es.md)
 15. [Retos mixtos](../problem-solving-and-live-coding/15-mixed-challenges/README.es.md)
+16. [Live coding cronometrado](../problem-solving-and-live-coding/16-timed-live-coding/README.es.md)
 
 ## Navegación útil
 
