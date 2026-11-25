@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Estado al 25/11/2026: Sprints 00–04, fundamentos, piloto y expansión fácil/media del Sprint 05 fusionados; cierre avanzado/cronometrado enviado a revisión final.
+Estado al 25/11/2026: Sprints 00–05 fusionados; plan del Sprint 06 aprobado, auditoría de requisitos previos y fundamentos en curso.
 
 | Tarea | Sprint | Dependencia | Estado |
 | --- | --- | --- | --- |
@@ -18,8 +18,8 @@ Estado al 25/11/2026: Sprints 00–04, fundamentos, piloto y expansión fácil/m
 | T04-01 Añadir práctica manual e ingeniería | 04 | T03-01 | Completado ([PR #91](https://github.com/RamonRDR/python-study-guide/pull/91)) |
 | T05-00 Mapear todos los requisitos previos FR-05 a las lecciones existentes y enseñar conceptos ausentes en EN/PT-BR/ES antes de publicar retos | 05 | T04-01 | Completado ([PR #92](https://github.com/RamonRDR/python-study-guide/pull/92); [mapa](prerequisite-map.es.md)) |
 | T05-01 Pilotar retos y pruebas de corrección | 05 | T05-00 | Completado ([PR #93](https://github.com/RamonRDR/python-study-guide/pull/93)) |
-| T05-02 Ampliar retos por tema/dificultad | 05 | T05-01 | Fácil/media fusionada ([PR #94](https://github.com/RamonRDR/python-study-guide/pull/94)); avanzados/cronometrados escritos, CI/revisión/aprobación finales pendientes |
-| T06-01 Mapear carencias restantes específicas de entrevistas y enseñar conceptos necesarios no cubiertos en Sprint 05 | 06 | T05-02 | Pendiente |
+| T05-02 Ampliar retos por tema/dificultad | 05 | T05-01 | Hecho ([PR #94](https://github.com/RamonRDR/python-study-guide/pull/94), [PR #95](https://github.com/RamonRDR/python-study-guide/pull/95), `21c00c32b91a0116c8a50e89687b91f8efa04cb5`, [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45720384626)) |
+| T06-01 Mapear carencias restantes específicas de entrevistas y enseñar conceptos necesarios no cubiertos en Sprint 05 | 06 | T05-02 | En curso ([mapa](interview-prerequisite-map.es.md)) |
 | T06-02 Crear preguntas y simulaciones/rúbricas | 06 | T06-01 | Pendiente |
 | T07-01 Finalizar y validar esquemas/registros de cuestionario/ejercicio | 07 | T06-02 | Pendiente |
 | T08-01 Finalizar manifiesto y fixtures de integración | 08 | T07-01 | Pendiente |
