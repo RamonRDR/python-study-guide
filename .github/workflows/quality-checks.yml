@@ -53,6 +53,9 @@ jobs:
       - name: Check public documentation languages
         run: python scripts/check_documentation_languages.py
 
+      - name: Check chapter navigation
+        run: python scripts/check_chapter_navigation.py
+
       - name: Validate repository structure
         run: python scripts/validate_repository_structure.py
 
