@@ -6,7 +6,7 @@ Use this page as the **master table of contents for the course**. Every publishe
 
 If you are starting from zero, follow the phase order. Completed later phases may already be available before earlier planned phases, but the phase numbers still represent the intended learning sequence.
 
-Published curriculum: 91 lessons and eight practical projects (99 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
+Published curriculum: 97 lessons and eight practical projects (105 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
 
 ## Status legend
 
@@ -192,7 +192,7 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 
 ## Phase 12: Technical Interview Preparation
 
-In progress: first eight lessons; remaining lessons and interviews are planned.
+In progress: fourteen lessons cover interview foundations, review, OOP and Python internals. Backend, SQL, question bank and mocks remain planned; no interview bank is published yet.
 
 1. [Understanding Technical Interviews](../technical-interview-preparation/01-understanding-technical-interviews/README.md)
 2. [Live Coding and Take-Home Assignments](../technical-interview-preparation/02-live-coding-and-take-home/README.md)
@@ -202,6 +202,12 @@ In progress: first eight lessons; remaining lessons and interviews are planned.
 6. [Attributes, Methods and Object Behavior](../technical-interview-preparation/06-attributes-methods-and-object-behavior/README.md)
 7. [Inheritance, Polymorphism and Composition](../technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.md)
 8. [Encapsulation, Abstraction and SOLID](../technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.md)
+9. [Object Identity, References and Copying](../technical-interview-preparation/09-object-identity-references-and-copying/README.md)
+10. [Python Memory Management](../technical-interview-preparation/10-python-memory-management/README.md)
+11. [Iterators, Generators and Comprehensions](../technical-interview-preparation/11-iterators-generators-and-comprehensions/README.md)
+12. [Closures and Decorators](../technical-interview-preparation/12-closures-and-decorators/README.md)
+13. [Context Managers](../technical-interview-preparation/13-context-managers/README.md)
+14. [Concurrency, Parallelism and the GIL](../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md)
 
 ## Useful navigation
 

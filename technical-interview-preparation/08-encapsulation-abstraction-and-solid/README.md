@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Previous](../07-inheritance-polymorphism-and-composition/README.md) · [Module index](../README.md)
+[← Previous](../07-inheritance-polymorphism-and-composition/README.md) · [Module index](../README.md) · [Next →](../09-object-identity-references-and-copying/README.md)
 <!-- /chapter-navigation:top -->
 
 ## Prerequisites
@@ -48,5 +48,5 @@ Add a fake reader returning 7 and verify remaining without modifying it. Attempt
 - [abc](https://docs.python.org/3.13/library/abc.html)
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../07-inheritance-polymorphism-and-composition/README.md) · [Module index](../README.md)
+[← Previous](../07-inheritance-polymorphism-and-composition/README.md) · [Module index](../README.md) · [Next →](../09-object-identity-references-and-copying/README.md)
 <!-- /chapter-navigation:bottom -->

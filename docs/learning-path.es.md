@@ -6,7 +6,7 @@ Usa esta página como el **índice general del curso**. Todos los capítulos de 
 
 Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores pueden estar completadas antes que fases anteriores todavía planificadas, pero la numeración sigue representando la secuencia de aprendizaje recomendada.
 
-Currículo publicado: 91 lecciones y ocho proyectos prácticos (99 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
+Currículo publicado: 97 lecciones y ocho proyectos prácticos (105 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
 
 ## Leyenda de estado
 
@@ -192,7 +192,7 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 
 ## Fase 12: Preparación para entrevistas técnicas
 
-En curso: primeras ocho lecciones; demás lecciones y entrevistas previstas.
+En curso: catorce lecciones cubren fundamentos de entrevistas, repaso, OOP e internals de Python. Backend, SQL, banco de preguntas y simulaciones siguen previstos; aún no se publica un banco de entrevistas.
 
 1. [Entender las entrevistas técnicas](../technical-interview-preparation/01-understanding-technical-interviews/README.es.md)
 2. [Live coding y tareas take-home](../technical-interview-preparation/02-live-coding-and-take-home/README.es.md)
@@ -202,6 +202,12 @@ En curso: primeras ocho lecciones; demás lecciones y entrevistas previstas.
 6. [Atributos, métodos y comportamiento de objetos](../technical-interview-preparation/06-attributes-methods-and-object-behavior/README.es.md)
 7. [Herencia, polimorfismo y composición](../technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.es.md)
 8. [Encapsulación, abstracción y SOLID](../technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.es.md)
+9. [Identidad de objetos, referencias y copias](../technical-interview-preparation/09-object-identity-references-and-copying/README.es.md)
+10. [Gestión de memoria en Python](../technical-interview-preparation/10-python-memory-management/README.es.md)
+11. [Iteradores, generadores y comprensiones](../technical-interview-preparation/11-iterators-generators-and-comprehensions/README.es.md)
+12. [Cierres y decoradores](../technical-interview-preparation/12-closures-and-decorators/README.es.md)
+13. [Gestores de contexto](../technical-interview-preparation/13-context-managers/README.es.md)
+14. [Concurrencia, paralelismo y GIL](../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md)
 
 ## Navegación útil
 

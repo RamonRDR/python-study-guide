@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../07-inheritance-polymorphism-and-composition/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../07-inheritance-polymorphism-and-composition/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../09-object-identity-references-and-copying/README.es.md)
 <!-- /chapter-navigation:top -->
 
 ## Requisitos previos
@@ -48,5 +48,5 @@ Añade un lector doble que devuelva 7 y verifica remaining sin modificarlo. Inte
 - [abc](https://docs.python.org/3.13/library/abc.html)
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../07-inheritance-polymorphism-and-composition/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../07-inheritance-polymorphism-and-composition/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../09-object-identity-references-and-copying/README.es.md)
 <!-- /chapter-navigation:bottom -->

@@ -201,3 +201,9 @@ technical-interview-preparation/05-classes-and-objects/examples/reading_session.
 technical-interview-preparation/06-attributes-methods-and-object-behavior/examples/study_group.py
 technical-interview-preparation/07-inheritance-polymorphism-and-composition/examples/notifications.py
 technical-interview-preparation/08-encapsulation-abstraction-and-solid/examples/stock.py
+technical-interview-preparation/09-object-identity-references-and-copying/examples/copy_plan.py
+technical-interview-preparation/10-python-memory-management/examples/bounded_cache.py
+technical-interview-preparation/11-iterators-generators-and-comprehensions/examples/eligible_rows.py
+technical-interview-preparation/12-closures-and-decorators/examples/call_counter.py
+technical-interview-preparation/13-context-managers/examples/managed_session.py
+technical-interview-preparation/14-concurrency-parallelism-and-the-gil/examples/safe_counter.py
