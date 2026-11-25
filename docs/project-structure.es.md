@@ -1048,12 +1048,48 @@ python-study-guide/
 │   │   ├── README.es.md
 │   │   └── examples/
 │   │       └── notifications.py
-│   └── 08-encapsulation-abstraction-and-solid/
+│   ├── 08-encapsulation-abstraction-and-solid/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── stock.py
+│   ├── 09-object-identity-references-and-copying/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── copy_plan.py
+│   ├── 10-python-memory-management/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── bounded_cache.py
+│   ├── 11-iterators-generators-and-comprehensions/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── eligible_rows.py
+│   ├── 12-closures-and-decorators/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── call_counter.py
+│   ├── 13-context-managers/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── managed_session.py
+│   └── 14-concurrency-parallelism-and-the-gil/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       ├── README.es.md
 │       └── examples/
-│           └── stock.py
+│           └── safe_counter.py
 └── tests/
     ├── README.md
     ├── README.pt-BR.md
@@ -1062,6 +1098,7 @@ python-study-guide/
     ├── test_check_internal_links.py
     ├── test_documentation_languages.py
     ├── test_interview_oop_foundations.py
+    ├── test_interview_python_internals.py
     ├── test_problem_solving_expansion.py
     ├── test_problem_solving_foundations.py
     ├── test_problem_solving_pilot.py
@@ -1096,7 +1133,7 @@ python-study-guide/
 - `manual-programming-practices/`: módulo complementario de ingeniería de cuatro lecciones tras la Fase 10, implementación y pruebas compartidas de progreso de lectura; sin nuevas dependencias.
 - `practical-projects/`: espacio completo de Proyectos Prácticos de la Fase 10. Los Proyectos 01–08 están completados, revisados e integrados. El Proyecto 07 añade modelos inmutables de conciliación, aritmética exacta en centavos enteros, matching y orden deterministas, rechazo de duplicados, estados explícitos de conciliación, invariantes validadas del informe, renderizado de texto estable y pruebas de regresión enfocadas en precisión y seguridad. El Proyecto 08 cierra la fase con solicitudes y resultados inmutables de automatización, un plan fijo de ejecución `prepare → process → verify → finalize`, logs deterministas de eventos, evidencia estructurada, inyección controlada de fallos, propagación fail-fast, verificación posterior al procesamiento, semántica de pasos omitidos, renderizado estable y pruebas de regresión centradas en invariantes sin integraciones externas.
 - `problem-solving-and-live-coding/`: Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fáciles, 12 medios, seis difíciles), incluidas dos prácticas cronometradas. Sprint 05 completado ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
-- `technical-interview-preparation/`: En curso: ocho lecciones iniciales sobre fundamentos de entrevistas, repaso y OOP. Demás lecciones, preguntas y simulaciones previstas.
+- `technical-interview-preparation/`: En curso: catorce lecciones cubren fundamentos de entrevistas, repaso, OOP e internals de Python. Backend, SQL, preguntas y simulaciones siguen previstos.
 - `program-flow/`: ruta completa de la Fase 4. Los Capítulos 01–08 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else`, coincidencia de patrones estructurales, repetición guiada por iterables con `for`, progresiones numéricas con `range()`, iteración con posición usando `enumerate()`, iteración paralela con `zip()` incluida la validación explícita de longitudes iguales con `strict=True`, repetición guiada por estado con `while`, control deliberado de bucles con `break`, `continue` y `else` de bucle y cómo elegir y combinar herramientas de flujo del programa según la intención, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions. Las herramientas de calidad verifican ejemplos aprobados, enlaces internos, paridad de familias de idiomas, navegación de capítulos y rutas obligatorias. El job Windows cubre pruebas de File Organizer; el job Linux ejecuta la suite completa de proyectos prácticos.
 - `standard-library/`: ruta completa de la Fase 8. Los Capítulos 01–09 cubren fronteras de filesystem con `pathlib`, modelado de fecha/hora con `datetime`, contratos avanzados de `json` y `csv`, `logging`, `collections` especializadas, `itertools`, `decimal` y contratos de `os`/`shutil` para estado del entorno, recorrido, metadatos, copia, movimiento, eliminación recursiva, capacidades de plataforma y seguridad de archives, en inglés, portugués de Brasil y español con ejemplos ejecutables deterministas.

@@ -49,3 +49,14 @@ The initial target is 24 lessons, 60 questions (24 junior, 24 mid-level, 12 seni
 Selected prerequisite sections compared across EN/PT-BR/ES: identity/equality and None (Program Flow 01), parameter rebinding and mutation (Functions 09), mutable defaults (Functions 06), collection choice/hashability (Collections 06), fixed and variable windows (Phase 11 chapters 07–08). This is targeted semantic evidence, not an exhaustive translation audit. The new Phase 12 index links to lessons 01–08; remaining lesson and question-specific gates stay open.
 
 [Phase 12 index](../../../technical-interview-preparation/README.md)
+
+## A2 instructional evidence
+
+A1 merged in [PR #96](https://github.com/RamonRDR/python-study-guide/pull/96) at `48588d620fbdfb3d9243ba4f31321e3460c06ca5`; [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45724935972) succeeded. A2 adds the following instruction (pending PR validation). Rechecked localized scope/LEGB, mutation/rebinding, shallow-copy aliases, iteration, itertools and with/finally sections; the earlier baseline coverage column remains historical. Exact question-level gates and T06-01 stay open.
+
+- [09-object-identity-references-and-copying](../../../technical-interview-preparation/09-object-identity-references-and-copying/README.md): Identity and copying: aliasing, nested copies, memo and hash contract.
+- [10-python-memory-management](../../../technical-interview-preparation/10-python-memory-management/README.md): Memory: reachability, reference counting, cyclic GC, weak references, bounded retention and measurement.
+- [11-iterators-generators-and-comprehensions](../../../technical-interview-preparation/11-iterators-generators-and-comprehensions/README.md): Iteration: protocol, yield, eager comprehensions and exhaustion.
+- [12-closures-and-decorators](../../../technical-interview-preparation/12-closures-and-decorators/README.md): Closures: LEGB, nonlocal, late binding, decorators, wraps and forwarding.
+- [13-context-managers](../../../technical-interview-preparation/13-context-managers/README.md): Context managers: entry/exit, suppression and cleanup.
+- [14-concurrency-parallelism-and-the-gil](../../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md): Concurrency: workload choice, conventional/experimental CPython 3.13, locks and futures.
