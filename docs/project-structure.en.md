@@ -389,6 +389,29 @@ python-study-guide/
 │       └── examples/
 │           ├── conversion_basics.py
 │           └── conversion_surprises.py
+├── manual-programming-practices/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   ├── 01-manual-coding-and-debugging/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 02-specification-driven-development/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 03-test-driven-development/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       ├── reading_progress.py
+│   │       └── test_reading_progress.py
+│   └── 04-professional-workflow/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       └── README.es.md
 ├── practical-projects/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -695,6 +718,7 @@ python-study-guide/
 - `functions/`: complete Phase 5 learning path. Chapters 01–09 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, default values including definition-time evaluation and mutable-default safety, variable-length positional and keyword argument collection with `*args` and `**kwargs`, composition through helper and coordinating functions with explicit dependencies and simple call graphs, and explicit data-flow tracing across calls including parameter bindings, rebinding versus mutation, `None`, tuple results, and return-based handoffs, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `getting-started/`: introductory curriculum order 00, with Python installation, editor setup, manual first-file execution, project-local virtual environments, dependency management and Git basics in all three languages. Historical Phase 0 remains Project Foundation.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
+- `manual-programming-practices/`: complementary four-lesson engineering module after Phase 10, with shared reading-progress implementation and tests; no new dependencies.
 - `practical-projects/`: complete Phase 10 practical-project workspace. Projects 01–08 are complete, reviewed, and integrated. Project 07 adds immutable reconciliation models, exact integer-cent arithmetic, deterministic matching and ordering, duplicate rejection, explicit reconciliation statuses, validated report invariants, stable text rendering, and focused precision and safety regression tests. Project 08 closes the phase with immutable automation requests and results, a fixed `prepare → process → verify → finalize` execution plan, deterministic event logs, structured evidence, controlled failure injection, fail-fast propagation, post-processing verification, skipped-step semantics, stable rendering, and focused invariant regression tests without external integrations.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions. The repository quality tools verify approved examples, internal links, language-family parity, chapter navigation and required paths. The Windows job covers File Organizer tests; the Linux job runs the complete practical-project suite.

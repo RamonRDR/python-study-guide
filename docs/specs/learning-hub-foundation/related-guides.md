@@ -11,7 +11,7 @@ Status: planned, not published. The maintainer approved independent, reciprocal 
 | `getting-started/04-virtual-environments/README.md` | Ignore rules and generated environments | Pending publication |
 | `getting-started/05-packages-and-dependencies/README.md` | Dependency files and reproducibility | Pending publication |
 | `getting-started/06-git-and-version-control/README.md` | Git fundamentals, remotes, safe recovery | Pending publication |
-| Future Sprint 04 location | Professional branch/PR/test/review workflow | Pending publication |
+| `manual-programming-practices/04-professional-workflow/README.md` | Professional branch/PR/test/review workflow | Pending publication |
 | `CONTRIBUTING.md` | Contributor workflow | Pending publication |
 | `docs/ai-assisted-development/README.en.md` | AI-assisted review and CI | Pending publication |
 | `docs/roadmap.en.md` | Cross-guide roadmap | Pending publication |

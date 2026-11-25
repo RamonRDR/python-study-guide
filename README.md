@@ -99,6 +99,7 @@ A computer with a supported Python installation and a text editor is enough for 
 | 08 | [Standard Library](standard-library/README.md) | 9 |
 | 09 | [External Libraries](external-libraries/README.md) | 4 |
 | 10 | [Practical Projects](practical-projects/README.md) | 8 |
+| Supplement | [Manual Programming & Engineering Practices](manual-programming-practices/README.md) | 4 |
 
 - [Full learning path: direct links to every published chapter](docs/learning-path.en.md)
 - [Roadmap in English](docs/roadmap.en.md)
@@ -119,6 +120,7 @@ python-study-guide/
 ├── functions/
 ├── getting-started/
 ├── fundamentals/
+├── manual-programming-practices/
 ├── practical-projects/
 ├── program-flow/
 ├── scripts/
@@ -135,11 +137,11 @@ Detailed explanations:
 
 ## Current status
 
-**Phase II: Learning Hub Foundation** is in progress. Repository audit/specification, chapter navigation and Getting Started were merged in PRs #87–#89. Future work includes manual programming and engineering practices, coding challenges, technical interview preparation, quizzes and a versioned content contract. These are planned, not published lessons. The guide remains independently usable; the future web Learning Hub and separate Git Study Guide are not prerequisites.
+**Phase II: Learning Hub Foundation** is in progress. Sprints 00–03 were merged in PRs #87–#90. The complementary manual programming and engineering module adds four lessons; coding challenges, technical interview preparation, quizzes and a versioned content contract remain planned. The guide remains independently usable; the future web Learning Hub and separate Git Study Guide are not prerequisites.
 
 [Phase II implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md)
 
-The original project foundation, **Getting Started (six lessons)** and **Phases 1–10 are complete**. The current curriculum contains 63 lessons and eight practical projects, across 11 modules and three languages. **Phase 10: Practical Projects is complete** with all eight planned projects implemented, documented, tested, reviewed, and integrated.
+The original project foundation, **Getting Started (six lessons)** and **Phases 1–10 are complete**. The current curriculum contains 67 lessons and eight practical projects, across 12 modules and three languages. **Phase 10: Practical Projects is complete** with all eight planned projects implemented, documented, tested, reviewed, and integrated.
 
 The practical-project phase closes by combining validated data models, deterministic workflows, exact arithmetic, persistence and reporting, filesystem automation, reconciliation, orchestration, structured evidence, and automated regression coverage across the eight projects.
 

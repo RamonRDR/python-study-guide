@@ -6,7 +6,7 @@ Use esta página como o **sumário geral do curso**. Todos os capítulos de apre
 
 Se você está começando do zero, siga a ordem das fases. Algumas fases posteriores podem já estar concluídas antes de fases anteriores planejadas, mas a numeração continua representando a sequência de aprendizagem recomendada.
 
-Currículo publicado: 63 aulas e oito projetos práticos (71 entradas). Comece por Primeiros passos se nunca programou. Capítulos futuros são registrados no roadmap, não vinculados como aulas publicadas.
+Currículo publicado: 67 aulas e oito projetos práticos (75 entradas). Comece por Primeiros passos se nunca programou. Capítulos futuros são registrados no roadmap, não vinculados como aulas publicadas.
 
 ## Legenda de status
 
@@ -155,6 +155,17 @@ A Fase 9 está concluída com quatro capítulos revisados. A sequência avança 
 8. ✅ [Fluxo Simulado de Automação](../practical-projects/08-simulated-automation-flow/README.pt-BR.md)
 
 A Fase 10 está concluída com oito projetos práticos revisados. O Projeto 01 integra modelagem de dados validada, dinheiro exato com `Decimal`, coleções, persistência JSON, exportação CSV, manipulação determinística de arquivos temporários e cobertura automatizada com pytest. O Projeto 02 adiciona políticas de notas configuráveis, agregação ponderada exata, estado de progresso versus final explícito, relatório estruturado e testes focados em fronteiras. O Projeto 03 adiciona dados de identidade canônicos, normalização Unicode e IDNA, prevenção de duplicidade, índices secundários de lookup, atualizações seguras de campos indexados, transições explícitas de ciclo de vida e testes focados em mutação sem introduzir autenticação. O Projeto 04 adiciona ingestão CSV consciente de schema, conversão tipada, diagnóstico de rejeições por linha, falhas estruturais, verificação de identificadores duplicados, filtros determinísticos e agregação usando a biblioteca padrão. O Projeto 05 adiciona janelas explícitas de relatório, resumos determinísticos, métricas exatas com duas casas decimais, fronteiras imutáveis de relatório, renderização TXT/Markdown, escape específico do formato e escrita UTF-8. O Projeto 06 adiciona descoberta rasa e determinística de arquivos, classificação por sufixo, planejamento dry-run imutável, políticas explícitas de colisão, fronteiras de symlink, identidade `(device, inode)`, ancoragem de raiz/categorias, nomes de staging limitados e commit atômico no-replace sensível à plataforma com `renameat2(RENAME_NOREPLACE)` no Linux. O Projeto 07 adiciona modelos imutáveis de conciliação, aritmética exata em centavos inteiros, matching e ordenação determinísticos, rejeição de duplicidades, estados explícitos de conciliação, invariantes validadas de relatório, renderização textual estável e cobertura de regressão para fronteiras de precisão e segurança. O Projeto 08 adiciona requisições e resultados imutáveis de automação, plano fixo de execução, logs determinísticos de eventos, evidências estruturadas, injeção controlada de falha, propagação fail-fast, semântica de etapas puladas, regras de publicação da saída e cobertura de regressão focada em invariantes sem integrações externas.
+
+## Módulo complementar · Prática manual e engenharia de software ✅
+
+Pratique depuração manual, SDD, TDD e revisão aplicada a Python após a Fase 10, antes da Fase 11 planejada. Este módulo não renumera as fases originais.
+
+[Abrir módulo complementar](../manual-programming-practices/README.pt-BR.md)
+
+1. [Programação manual e depuração](../manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md)
+2. [Desenvolvimento orientado por especificações](../manual-programming-practices/02-specification-driven-development/README.pt-BR.md)
+3. [Desenvolvimento orientado por testes](../manual-programming-practices/03-test-driven-development/README.pt-BR.md)
+4. [Fluxo profissional de Python](../manual-programming-practices/04-professional-workflow/README.pt-BR.md)
 
 ## Navegação útil
 

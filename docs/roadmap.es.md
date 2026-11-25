@@ -197,9 +197,13 @@ Cada proyecto debe incluir:
 - desafíos de ampliación;
 - discusión de portafolio.
 
+## Módulo complementario · Práctica manual e ingeniería de software
+
+Practica depuración manual, SDD, TDD y revisión aplicada a Python tras la Fase 10, antes de la Fase 11 planificada. Este módulo no renumera las fases originales. [Abrir módulo complementario](../manual-programming-practices/README.es.md).
+
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 
-Esta fase de ingeniería no renumera el currículo original. Sprints 00–02 fusionados (PR #87–#89). El Sprint 03 alinea documentación pública y evidencias; el trabajo posterior sigue planificado. El repositorio permanece independiente de la futura plataforma web.
+Esta fase de ingeniería no renumera el currículo original. Sprints 00–03 fusionados (PR #87–#90). El Sprint 04 añade el módulo complementario de práctica manual e ingeniería; el trabajo posterior sigue planificado. El repositorio permanece independiente de la futura plataforma web.
 
 | Currículo futuro | Estado |
 | --- | --- |

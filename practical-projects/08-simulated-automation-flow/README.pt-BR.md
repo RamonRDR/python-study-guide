@@ -5,7 +5,7 @@
 
 
 <!-- chapter-navigation:top -->
-[← Anterior](../07-fictional-reconciliation-workflow/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md)
+[← Anterior](../07-fictional-reconciliation-workflow/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
 Este é o **Projeto 08 da Fase 10: Projetos Práticos** e o último projeto planejado da fase.
@@ -454,5 +454,5 @@ I/O externo:   nenhum
 Este é o último projeto prático planejado da Fase 10. Depois que implementação, documentação, CI e ciclo de review estiverem concluídos, a fase de projetos práticos poderá ser marcada como concluída.
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../07-fictional-reconciliation-workflow/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md)
+[← Anterior](../07-fictional-reconciliation-workflow/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md)
 <!-- /chapter-navigation:bottom -->

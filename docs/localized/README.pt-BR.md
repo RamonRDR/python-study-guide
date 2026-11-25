@@ -99,6 +99,7 @@ Um computador com instalação Python suportada e editor de texto basta para est
 | 08 | [Biblioteca padrão](../../standard-library/README.pt-BR.md) | 9 |
 | 09 | [Bibliotecas externas](../../external-libraries/README.pt-BR.md) | 4 |
 | 10 | [Projetos práticos](../../practical-projects/README.pt-BR.md) | 8 |
+| Complemento | [Prática manual e engenharia de software](../../manual-programming-practices/README.pt-BR.md) | 4 |
 
 - [Trilha completa de estudos: links diretos para todos os capítulos publicados](../learning-path.pt-BR.md)
 - [Roadmap em Português](../roadmap.pt-BR.md)
@@ -119,6 +120,7 @@ python-study-guide/
 ├── functions/
 ├── getting-started/
 ├── fundamentals/
+├── manual-programming-practices/
 ├── practical-projects/
 ├── program-flow/
 ├── scripts/
@@ -135,11 +137,11 @@ Explicações detalhadas:
 
 ## Status atual
 
-**Phase II: Learning Hub Foundation** está em andamento. Auditoria/especificação, navegação e Primeiros passos foram integrados nos PRs #87–#89. As próximas entregas incluem prática manual e engenharia, desafios de código, preparação para entrevistas técnicas, quizzes e contrato de conteúdo versionado. São planos, não aulas publicadas. O guia permanece independente; o futuro Learning Hub web e o Git Study Guide separado não são pré-requisitos.
+**Phase II: Learning Hub Foundation** está em andamento. Sprints 00–03 integradas nos PRs #87–#90. O módulo complementar de prática manual e engenharia acrescenta quatro aulas; desafios de código, preparação para entrevistas técnicas, quizzes e contrato de conteúdo versionado permanecem planejados. O guia permanece independente; o futuro Learning Hub web e o Git Study Guide separado não são pré-requisitos.
 
 [Plano de implementação da Phase II](../specs/learning-hub-foundation/implementation-plan.pt-BR.md)
 
-A fundação original do projeto, **Primeiros passos (seis aulas)** e as **Fases 1–10 estão concluídas**. O currículo atual contém 63 aulas e oito projetos práticos, em 11 módulos e três idiomas. A **Fase 10: Projetos Práticos está concluída**, com os oito projetos planejados implementados, documentados, testados, revisados e integrados.
+A fundação original do projeto, **Primeiros passos (seis aulas)** e as **Fases 1–10 estão concluídas**. O currículo atual contém 67 aulas e oito projetos práticos, em 12 módulos e três idiomas. A **Fase 10: Projetos Práticos está concluída**, com os oito projetos planejados implementados, documentados, testados, revisados e integrados.
 
 A fase de projetos práticos encerra a trilha combinando modelos de dados validados, fluxos determinísticos, aritmética exata, persistência e relatórios, automação de filesystem, conciliação, orquestração, evidências estruturadas e cobertura automatizada de regressão ao longo dos oito projetos.
 
