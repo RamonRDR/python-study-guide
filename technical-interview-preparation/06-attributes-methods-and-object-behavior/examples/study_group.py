@@ -6,7 +6,7 @@ class StudyGroup:
 
     def __init__(self, label: str) -> None:
         if not self.valid_label(label):
-            raise ValueError("label cannot be blank")
+            raise ValueError("label must be a nonblank string")
         self.label = label
         self.members: list[str] = []
 
@@ -15,6 +15,8 @@ class StudyGroup:
 
     @classmethod
     def from_label(cls, label: str):
+        if not cls.valid_label(label):
+            raise ValueError("label must be a nonblank string")
         return cls(label.strip())
 
     @staticmethod

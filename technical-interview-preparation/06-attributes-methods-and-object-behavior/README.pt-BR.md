@@ -22,7 +22,7 @@ Um atributo de instância armazena dados por objeto; um atributo de classe norma
 | Classe | cls | Construtores alternativos ou comportamento da classe |
 | Estático | Nenhum | Utilitário relacionado sem estado implícito |
 
-Os marcadores nativos `@classmethod` e `@staticmethod` alteram vinculação; o mecanismo geral de decorators é ensinado depois. No exemplo, `from_label` chama cls para poder construir uma subclasse; `valid_label` não precisa de instância. Um método estático não é automaticamente puro.
+Os marcadores nativos `@classmethod` e `@staticmethod` alteram vinculação; o mecanismo geral de decorators é ensinado depois. No exemplo, `from_label` chama cls para poder construir uma subclasse; `valid_label` não precisa de instância. Um método estático não é automaticamente puro. Ambos os caminhos de construção rejeitam um rótulo que não seja string ou esteja vazio (inclusive só espaços) com `ValueError`; `from_label` também remove espaços das extremidades. Uma subclasse que utiliza o construtor herdado pode criar sua própria instância pelo método de classe.
 
 ## Métodos especiais
 

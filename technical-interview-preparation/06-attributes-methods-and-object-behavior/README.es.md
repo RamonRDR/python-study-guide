@@ -22,7 +22,7 @@ Un atributo de instancia almacena datos por objeto; uno de clase normalmente ofr
 | Clase | cls | Constructores alternativos o comportamiento de la clase |
 | Estático | Ninguno | Utilidad relacionada sin estado implícito |
 
-Los marcadores incorporados `@classmethod` y `@staticmethod` cambian el enlace; el mecanismo general de decoradores se enseña después. En el ejemplo, `from_label` llama a cls para poder construir una subclase; `valid_label` no necesita instancia. Un método estático no es automáticamente puro.
+Los marcadores incorporados `@classmethod` y `@staticmethod` cambian el enlace; el mecanismo general de decoradores se enseña después. En el ejemplo, `from_label` llama a cls para poder construir una subclase; `valid_label` no necesita instancia. Un método estático no es automáticamente puro. Ambas vías de construcción rechazan una etiqueta que no sea una cadena o esté vacía (incluidos solo espacios) con `ValueError`; `from_label` también elimina espacios de los extremos. Una subclase que usa el constructor heredado puede crear su propia instancia mediante el método de clase.
 
 ## Métodos especiales
 

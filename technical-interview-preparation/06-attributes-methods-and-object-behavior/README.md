@@ -22,7 +22,7 @@ An instance attribute stores per-object data; a class attribute normally provide
 | Class | cls | Alternative constructors or class-specific behavior |
 | Static | Neither | Related utility without implicit state |
 
-The built-in markers `@classmethod` and `@staticmethod` change binding; the general decorator mechanism is taught later. In the example, `from_label` calls cls so a subclass can be constructed; `valid_label` needs no instance. A static method is not automatically pure.
+The built-in markers `@classmethod` and `@staticmethod` change binding; the general decorator mechanism is taught later. In the example, `from_label` calls cls so a subclass can be constructed; `valid_label` needs no instance. A static method is not automatically pure. Both construction paths reject a non-string or blank label with `ValueError`; `from_label` additionally strips surrounding whitespace. A subclass using the inherited constructor can create its own instance through the class method.
 
 ## Special methods
 
