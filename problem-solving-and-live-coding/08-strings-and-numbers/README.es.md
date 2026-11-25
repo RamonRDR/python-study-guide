@@ -3,17 +3,20 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../07-problem-solving-patterns/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../07-problem-solving-patterns/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../09-collections/README.es.md)
 <!-- /chapter-navigation:top -->
 
-Repasa iteración y pertenencia en cadenas, funciones y acumuladores, pruebas límite y complejidad antes de empezar. Usa la lista de requisitos previos enlazada en el reto; no se requieren conceptos adicionales de Python.
+Repasa pertenencia literal de caracteres, índices, división entera y resto. En el palíndromo medio, reutiliza dos punteros comparando posiciones simétricas en lugar de suma de par.
 
-Lee el contrato, predice ejemplos a mano, escribe pseudocódigo, implementa en un archivo personal y comprueba resultados. Revela pistas una a una solo si te bloqueas; compara con la solución tras un intento independiente. Registra errores y explica la complejidad. Esta lección empieza con un piloto fácil; se planifican retos adicionales, incluidos numéricos. No hay ejecutor en navegador.
+Lee contrato y lecciones de requisitos previos enlazadas, predice resultados, intenta el inicial en archivo personal y comprueba límites. Abre pistas progresivamente; compara referencia solo tras intentar. No hay ejecutor en navegador.
 
-## Reto disponible
+## Retos disponibles
 
 - [Contador de vocales](../../exercises/problem-solving/vowel-counter/README.es.md) · Fácil · 10 min
+- [Contador de dígitos ASCII](../../exercises/problem-solving/ascii-digit-counter/README.es.md) · Fácil · 10 min
+- [Suma de dígitos](../../exercises/problem-solving/sum-digits/README.es.md) · Fácil · 12 min
+- [Palíndromo literal](../../exercises/problem-solving/literal-palindrome/README.es.md) · Media · 18 min
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../07-problem-solving-patterns/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../07-problem-solving-patterns/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../09-collections/README.es.md)
 <!-- /chapter-navigation:bottom -->

@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-This phase is published incrementally. Complete the seven foundations before attempting the first challenge. Practice manually; examples and code are shared across languages. Expansion and timed practice remain planned.
+Seven foundation lessons and eight challenge chapters provide 22 exercises (11 easy, 11 medium). Difficult and timed practice remain planned.
 
 1. [Problem-Solving Fundamentals](01-problem-solving-fundamentals/README.md)
 2. [Constraints and Edge Cases](02-constraints-and-edge-cases/README.md)
@@ -12,5 +12,12 @@ This phase is published incrementally. Complete the seven foundations before att
 6. [Sorting Algorithms](06-sorting-algorithms/README.md)
 7. [Problem-Solving Patterns](07-problem-solving-patterns/README.md)
 8. [Strings and Numbers Challenges](08-strings-and-numbers/README.md)
+9. [Collections Challenges](09-collections/README.md)
+10. [Functions and Recursion Challenges](10-functions-and-recursion/README.md)
+11. [Searching and Sorting Challenges](11-searching-and-sorting/README.md)
+12. [Algorithms and Complexity Challenges](12-algorithms-and-complexity/README.md)
+13. [Debugging Challenges](13-debugging-challenges/README.md)
+14. [Refactoring Challenges](14-refactoring-challenges/README.md)
+15. [Mixed Challenges](15-mixed-challenges/README.md)
 
 [Learning path](../docs/learning-path.en.md) · [Prerequisite map](../docs/specs/learning-hub-foundation/prerequisite-map.md)

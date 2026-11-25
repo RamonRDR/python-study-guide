@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Esta fase é publicada incrementalmente. Conclua os sete fundamentos antes do primeiro desafio. Pratique manualmente; exemplos e código são compartilhados entre idiomas. Expansão e prática cronometrada permanecem planejadas.
+Sete aulas de fundamentos e oito aulas de desafios oferecem 22 exercícios (11 fáceis, 11 médios). Desafios difíceis e prática cronometrada permanecem planejados.
 
 1. [Fundamentos de resolução de problemas](01-problem-solving-fundamentals/README.pt-BR.md)
 2. [Restrições e casos de borda](02-constraints-and-edge-cases/README.pt-BR.md)
@@ -12,5 +12,12 @@ Esta fase é publicada incrementalmente. Conclua os sete fundamentos antes do pr
 6. [Algoritmos de ordenação](06-sorting-algorithms/README.pt-BR.md)
 7. [Padrões de resolução de problemas](07-problem-solving-patterns/README.pt-BR.md)
 8. [Desafios de strings e números](08-strings-and-numbers/README.pt-BR.md)
+9. [Desafios de coleções](09-collections/README.pt-BR.md)
+10. [Desafios de funções e recursividade](10-functions-and-recursion/README.pt-BR.md)
+11. [Desafios de busca e ordenação](11-searching-and-sorting/README.pt-BR.md)
+12. [Desafios de algoritmos e complexidade](12-algorithms-and-complexity/README.pt-BR.md)
+13. [Desafios de depuração](13-debugging-challenges/README.pt-BR.md)
+14. [Desafios de refatoração](14-refactoring-challenges/README.pt-BR.md)
+15. [Desafios mistos](15-mixed-challenges/README.pt-BR.md)
 
 [Trilha de aprendizagem](../docs/learning-path.pt-BR.md) · [Mapa de pré-requisitos](../docs/specs/learning-hub-foundation/prerequisite-map.pt-BR.md)

@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Status as of 2026-11-25: Sprints 00–04 and Sprint 05 foundations merged; pilot submitted for review.
+Status as of 2026-11-25: Sprints 00–04 and Sprint 05 foundations and pilot merged; easy/medium expansion submitted for review.
 
 | Task | Sprint | Dependency | Status |
 | --- | --- | --- | --- |
@@ -17,8 +17,8 @@ Status as of 2026-11-25: Sprints 00–04 and Sprint 05 foundations merged; pilot
 | T03-01 Align README, roadmap, learning path, structure and badges | 03 | T02-01 | Done ([PR #90](https://github.com/RamonRDR/python-study-guide/pull/90)) |
 | T04-01 Add manual practice and engineering guidance | 04 | T03-01 | Done ([PR #91](https://github.com/RamonRDR/python-study-guide/pull/91)) |
 | T05-00 Map all FR-05 prerequisites to existing lessons and teach missing concepts in EN/PT-BR/ES before challenge publication | 05 | T04-01 | Done ([PR #92](https://github.com/RamonRDR/python-study-guide/pull/92); [map](prerequisite-map.md)) |
-| T05-01 Pilot challenge records and grading tests | 05 | T05-00 | Pilot submitted; review pending |
-| T05-02 Expand challenges by topic/difficulty | 05 | T05-01 | Pending |
+| T05-01 Pilot challenge records and grading tests | 05 | T05-00 | Done ([PR #93](https://github.com/RamonRDR/python-study-guide/pull/93)) |
+| T05-02 Expand challenges by topic/difficulty | 05 | T05-01 | Easy/medium expansion submitted; difficult and timed practice pending |
 | T06-01 Map remaining interview-specific prerequisite gaps and teach necessary concepts not covered in Sprint 05 | 06 | T05-02 | Pending |
 | T06-02 Author question bank and timed mocks/rubrics | 06 | T06-01 | Pending |
 | T07-01 Finalize and validate quiz/exercise schemas and records | 07 | T06-02 | Pending |

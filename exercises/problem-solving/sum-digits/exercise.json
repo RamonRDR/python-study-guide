@@ -1,0 +1,213 @@
+{
+  "id": "problem-solving.sum-digits",
+  "chapter_id": "problem-solving.strings-and-numbers",
+  "difficulty": "easy",
+  "estimated_minutes": 12,
+  "title": {
+    "en": "Sum of Digits",
+    "pt-BR": "Soma dos dígitos",
+    "es": "Suma de dígitos"
+  },
+  "prompt": {
+    "en": "Given a nonnegative integer at most 10**12, return the sum of its decimal digits. Zero returns zero. Do not convert to a string.",
+    "pt-BR": "Dado inteiro não negativo de até 10**12, retorne a soma dos dígitos decimais. Zero retorna zero. Não converta em string.",
+    "es": "Dado un entero no negativo de hasta 10**12, devuelve la suma de sus dígitos decimales. Cero devuelve cero. No conviertas en cadena."
+  },
+  "concepts": [
+    "integers",
+    "numeric-operations",
+    "while-loops",
+    "functions",
+    "edge-cases"
+  ],
+  "constraints": {
+    "en": [
+      "Given a nonnegative integer at most 10**12, return the sum of its decimal digits. Zero returns zero. Do not convert to a string.",
+      "Only the stated input domain is graded; return the specified value and exact types, without printing, external dependencies or changing mutable arguments. Do not use the reference during the independent attempt."
+    ],
+    "pt-BR": [
+      "Dado inteiro não negativo de até 10**12, retorne a soma dos dígitos decimais. Zero retorna zero. Não converta em string.",
+      "Somente o domínio declarado é avaliado; retorne valor e tipos exatos, sem imprimir, dependências externas nem modificar argumentos mutáveis. Não use a referência durante a tentativa independente."
+    ],
+    "es": [
+      "Dado un entero no negativo de hasta 10**12, devuelve la suma de sus dígitos decimales. Cero devuelve cero. No conviertas en cadena.",
+      "Solo se evalúa el dominio declarado; devuelve valor y tipos exactos, sin imprimir, dependencias externas ni modificar argumentos mutables. No uses la referencia durante el intento independiente."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        0
+      ],
+      "expected": 0,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        123
+      ],
+      "expected": 6,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/sum-digits/starter.py",
+  "hints": {
+    "en": [
+      "Extract the last digit with remainder modulo 10.",
+      "Use integer division by 10 to remove that digit.",
+      "Repeat while the number is positive and add the extracted digits."
+    ],
+    "pt-BR": [
+      "Extraia o último dígito com resto módulo 10.",
+      "Use divisão inteira por 10 para remover esse dígito.",
+      "Repita enquanto o número for positivo e some os dígitos extraídos."
+    ],
+    "es": [
+      "Extrae el último dígito con resto módulo 10.",
+      "Usa división entera por 10 para eliminar ese dígito.",
+      "Repite mientras el número sea positivo y suma los dígitos extraídos."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/sum-digits/solution.py",
+  "explanation": {
+    "en": "Remainder gives the final digit; integer division reduces the remaining number, so the loop terminates. Zero needs no iteration.",
+    "pt-BR": "O resto dá o último dígito; a divisão inteira reduz o número restante e garante término. Zero não exige iteração.",
+    "es": "El resto da el último dígito; la división entera reduce el número restante y garantiza terminación. Cero no exige iteración."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(d)",
+      "pt-BR": "O(d)",
+      "es": "O(d)"
+    },
+    "space": {
+      "en": "O(1)",
+      "pt-BR": "O(1)",
+      "es": "O(1)"
+    },
+    "assumptions": {
+      "en": "Complexity uses the fixed-cost model for bounded integer operations and string labels of bounded length; n is input length, m the second input length, k distinct values, d decimal digits, e exponent, as applicable. Output storage is excluded from auxiliary space. Hash-based times are expected, not worst-case bounds.",
+      "pt-BR": "Complexidade usa modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado; n é tamanho da entrada, m tamanho da segunda, k valores distintos, d dígitos decimais, e expoente, conforme aplicável. Armazenamento da saída é excluído do espaço auxiliar. Tempos com hash são esperados, não limites de pior caso.",
+      "es": "Complejidad usa modelo de coste fijo para enteros acotados y etiquetas de longitud acotada; n es longitud de entrada, m longitud de segunda, k valores distintos, d dígitos decimales, e exponente, según corresponda. Se excluye almacenamiento de salida del espacio auxiliar. Tiempos con hash son esperados, no cotas de peor caso."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "sum_digits",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          0
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-02",
+        "args": [
+          123
+        ],
+        "expected": 6
+      },
+      {
+        "id": "case-03",
+        "args": [
+          1002
+        ],
+        "expected": 3
+      },
+      {
+        "id": "case-04",
+        "args": [
+          9
+        ],
+        "expected": 9
+      },
+      {
+        "id": "case-05",
+        "args": [
+          99999
+        ],
+        "expected": 45
+      },
+      {
+        "id": "case-06",
+        "args": [
+          1000000000000
+        ],
+        "expected": 1
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "strings-and-numbers/03-int-float-and-bool/README.md",
+      "pt-BR": "strings-and-numbers/03-int-float-and-bool/README.pt-BR.md",
+      "es": "strings-and-numbers/03-int-float-and-bool/README.es.md"
+    },
+    {
+      "en": "strings-and-numbers/04-numeric-builtins/README.md",
+      "pt-BR": "strings-and-numbers/04-numeric-builtins/README.pt-BR.md",
+      "es": "strings-and-numbers/04-numeric-builtins/README.es.md"
+    },
+    {
+      "en": "program-flow/06-while-loops-and-state-driven-repetition/README.md",
+      "pt-BR": "program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md",
+      "es": "program-flow/06-while-loops-and-state-driven-repetition/README.es.md"
+    }
+  ],
+  "practice_mode": "implement"
+}

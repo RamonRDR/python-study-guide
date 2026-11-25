@@ -1,0 +1,224 @@
+{
+  "id": "problem-solving.recursive-power",
+  "chapter_id": "problem-solving.functions-and-recursion",
+  "difficulty": "medium",
+  "estimated_minutes": 20,
+  "title": {
+    "en": "Recursive Integer Power",
+    "pt-BR": "Potência inteira recursiva",
+    "es": "Potencia entera recursiva"
+  },
+  "prompt": {
+    "en": "Given an integer base from -10 to 10 and an exponent from 0 to 10, compute base raised to exponent by recursive multiplication, without ** or pow. Define exponent zero as 1, including 0**0.",
+    "pt-BR": "Dados base inteira de -10 a 10 e expoente de 0 a 10, calcule base elevada ao expoente por multiplicação recursiva, sem ** ou pow. Defina expoente zero como 1, inclusive 0**0.",
+    "es": "Dados base entera de -10 a 10 y exponente de 0 a 10, calcula base elevada al exponente por multiplicación recursiva, sin ** ni pow. Define exponente cero como 1, incluido 0**0."
+  },
+  "concepts": [
+    "integers",
+    "recursion",
+    "parameters",
+    "functions",
+    "edge-cases"
+  ],
+  "constraints": {
+    "en": [
+      "Given an integer base from -10 to 10 and an exponent from 0 to 10, compute base raised to exponent by recursive multiplication, without ** or pow. Define exponent zero as 1, including 0**0.",
+      "Only the stated input domain is graded; return the specified value and exact types, without printing, external dependencies or changing mutable arguments. Do not use the reference during the independent attempt."
+    ],
+    "pt-BR": [
+      "Dados base inteira de -10 a 10 e expoente de 0 a 10, calcule base elevada ao expoente por multiplicação recursiva, sem ** ou pow. Defina expoente zero como 1, inclusive 0**0.",
+      "Somente o domínio declarado é avaliado; retorne valor e tipos exatos, sem imprimir, dependências externas nem modificar argumentos mutáveis. Não use a referência durante a tentativa independente."
+    ],
+    "es": [
+      "Dados base entera de -10 a 10 y exponente de 0 a 10, calcula base elevada al exponente por multiplicación recursiva, sin ** ni pow. Define exponente cero como 1, incluido 0**0.",
+      "Solo se evalúa el dominio declarado; devuelve valor y tipos exactos, sin imprimir, dependencias externas ni modificar argumentos mutables. No uses la referencia durante el intento independiente."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        2,
+        3
+      ],
+      "expected": 8,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        0,
+        0
+      ],
+      "expected": 1,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/recursive-power/starter.py",
+  "hints": {
+    "en": [
+      "Use the exponent as the decreasing argument.",
+      "When exponent equals zero, return one.",
+      "Multiply the base by the result for exponent minus one."
+    ],
+    "pt-BR": [
+      "Use o expoente como argumento decrescente.",
+      "Quando expoente for zero, retorne um.",
+      "Multiplique base pelo resultado de expoente menos um."
+    ],
+    "es": [
+      "Usa el exponente como argumento decreciente.",
+      "Cuando exponente sea cero, devuelve uno.",
+      "Multiplica base por el resultado para exponente menos uno."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/recursive-power/solution.py",
+  "explanation": {
+    "en": "The recursive step reduces the exponent, not the base; negative bases work naturally because each step multiplies by the original base.",
+    "pt-BR": "O passo recursivo reduz o expoente, não a base; bases negativas funcionam naturalmente porque cada passo multiplica pela base original.",
+    "es": "El paso recursivo reduce el exponente, no la base; bases negativas funcionan porque cada paso multiplica por la base original."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(e)",
+      "pt-BR": "O(e)",
+      "es": "O(e)"
+    },
+    "space": {
+      "en": "O(e)",
+      "pt-BR": "O(e)",
+      "es": "O(e)"
+    },
+    "assumptions": {
+      "en": "Complexity uses the fixed-cost model for bounded integer operations and string labels of bounded length; n is input length, m the second input length, k distinct values, d decimal digits, e exponent, as applicable. Output storage is excluded from auxiliary space. Hash-based times are expected, not worst-case bounds.",
+      "pt-BR": "Complexidade usa modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado; n é tamanho da entrada, m tamanho da segunda, k valores distintos, d dígitos decimais, e expoente, conforme aplicável. Armazenamento da saída é excluído do espaço auxiliar. Tempos com hash são esperados, não limites de pior caso.",
+      "es": "Complejidad usa modelo de coste fijo para enteros acotados y etiquetas de longitud acotada; n es longitud de entrada, m longitud de segunda, k valores distintos, d dígitos decimales, e exponente, según corresponda. Se excluye almacenamiento de salida del espacio auxiliar. Tiempos con hash son esperados, no cotas de peor caso."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "integer_power",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          2,
+          3
+        ],
+        "expected": 8
+      },
+      {
+        "id": "case-02",
+        "args": [
+          0,
+          0
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-03",
+        "args": [
+          0,
+          5
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-04",
+        "args": [
+          -2,
+          3
+        ],
+        "expected": -8
+      },
+      {
+        "id": "case-05",
+        "args": [
+          -2,
+          4
+        ],
+        "expected": 16
+      },
+      {
+        "id": "case-06",
+        "args": [
+          5,
+          0
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-07",
+        "args": [
+          10,
+          10
+        ],
+        "expected": 10000000000
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "strings-and-numbers/03-int-float-and-bool/README.md",
+      "pt-BR": "strings-and-numbers/03-int-float-and-bool/README.pt-BR.md",
+      "es": "strings-and-numbers/03-int-float-and-bool/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/04-recursion/README.md",
+      "pt-BR": "problem-solving-and-live-coding/04-recursion/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/04-recursion/README.es.md"
+    }
+  ],
+  "practice_mode": "implement"
+}

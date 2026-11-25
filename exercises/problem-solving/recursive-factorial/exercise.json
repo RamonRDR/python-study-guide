@@ -1,0 +1,208 @@
+{
+  "id": "problem-solving.recursive-factorial",
+  "chapter_id": "problem-solving.functions-and-recursion",
+  "difficulty": "medium",
+  "estimated_minutes": 18,
+  "title": {
+    "en": "Recursive Factorial",
+    "pt-BR": "Fatorial recursivo",
+    "es": "Factorial recursivo"
+  },
+  "prompt": {
+    "en": "For an integer from 0 to 20, return its factorial using recursion: 0! = 1; for n > 0, n! = n times (n-1)!. No loop is required. Other inputs are outside the contract.",
+    "pt-BR": "Para inteiro de 0 a 20, retorne seu fatorial usando recursividade: 0! = 1; para n > 0, n! = n vezes (n-1)!. Não é necessário loop. Outras entradas estão fora do contrato.",
+    "es": "Para entero de 0 a 20, devuelve su factorial usando recursividad: 0! = 1; para n > 0, n! = n por (n-1)!. No hace falta bucle. Otras entradas quedan fuera del contrato."
+  },
+  "concepts": [
+    "integers",
+    "recursion",
+    "return-values",
+    "functions",
+    "edge-cases"
+  ],
+  "constraints": {
+    "en": [
+      "For an integer from 0 to 20, return its factorial using recursion: 0! = 1; for n > 0, n! = n times (n-1)!. No loop is required. Other inputs are outside the contract.",
+      "Only the stated input domain is graded; return the specified value and exact types, without printing, external dependencies or changing mutable arguments. Do not use the reference during the independent attempt."
+    ],
+    "pt-BR": [
+      "Para inteiro de 0 a 20, retorne seu fatorial usando recursividade: 0! = 1; para n > 0, n! = n vezes (n-1)!. Não é necessário loop. Outras entradas estão fora do contrato.",
+      "Somente o domínio declarado é avaliado; retorne valor e tipos exatos, sem imprimir, dependências externas nem modificar argumentos mutáveis. Não use a referência durante a tentativa independente."
+    ],
+    "es": [
+      "Para entero de 0 a 20, devuelve su factorial usando recursividad: 0! = 1; para n > 0, n! = n por (n-1)!. No hace falta bucle. Otras entradas quedan fuera del contrato.",
+      "Solo se evalúa el dominio declarado; devuelve valor y tipos exactos, sin imprimir, dependencias externas ni modificar argumentos mutables. No uses la referencia durante el intento independiente."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        0
+      ],
+      "expected": 1,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        1
+      ],
+      "expected": 1,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/recursive-factorial/starter.py",
+  "hints": {
+    "en": [
+      "The base case is zero, with result one.",
+      "A positive argument needs the factorial of the preceding integer.",
+      "Multiply the current argument by the recursive result."
+    ],
+    "pt-BR": [
+      "O caso base é zero, com resultado um.",
+      "Argumento positivo precisa do fatorial do inteiro anterior.",
+      "Multiplique argumento atual pelo resultado recursivo."
+    ],
+    "es": [
+      "El caso base es cero, con resultado uno.",
+      "Un argumento positivo necesita el factorial del entero anterior.",
+      "Multiplica argumento actual por el resultado recursivo."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/recursive-factorial/solution.py",
+  "explanation": {
+    "en": "Every positive call reduces the argument by one, eventually reaching zero. The multiplication happens on return.",
+    "pt-BR": "Cada chamada positiva reduz o argumento em um até zero. A multiplicação ocorre no retorno.",
+    "es": "Cada llamada positiva reduce el argumento en uno hasta cero. La multiplicación ocurre al retornar."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n)",
+      "pt-BR": "O(n)",
+      "es": "O(n)"
+    },
+    "space": {
+      "en": "O(n)",
+      "pt-BR": "O(n)",
+      "es": "O(n)"
+    },
+    "assumptions": {
+      "en": "Complexity uses the fixed-cost model for bounded integer operations and string labels of bounded length; n is input length, m the second input length, k distinct values, d decimal digits, e exponent, as applicable. Output storage is excluded from auxiliary space. Hash-based times are expected, not worst-case bounds.",
+      "pt-BR": "Complexidade usa modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado; n é tamanho da entrada, m tamanho da segunda, k valores distintos, d dígitos decimais, e expoente, conforme aplicável. Armazenamento da saída é excluído do espaço auxiliar. Tempos com hash são esperados, não limites de pior caso.",
+      "es": "Complejidad usa modelo de coste fijo para enteros acotados y etiquetas de longitud acotada; n es longitud de entrada, m longitud de segunda, k valores distintos, d dígitos decimales, e exponente, según corresponda. Se excluye almacenamiento de salida del espacio auxiliar. Tiempos con hash son esperados, no cotas de peor caso."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "factorial",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          0
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-02",
+        "args": [
+          1
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-03",
+        "args": [
+          3
+        ],
+        "expected": 6
+      },
+      {
+        "id": "case-04",
+        "args": [
+          5
+        ],
+        "expected": 120
+      },
+      {
+        "id": "case-05",
+        "args": [
+          10
+        ],
+        "expected": 3628800
+      },
+      {
+        "id": "case-06",
+        "args": [
+          20
+        ],
+        "expected": 2432902008176640000
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "strings-and-numbers/03-int-float-and-bool/README.md",
+      "pt-BR": "strings-and-numbers/03-int-float-and-bool/README.pt-BR.md",
+      "es": "strings-and-numbers/03-int-float-and-bool/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/04-recursion/README.md",
+      "pt-BR": "problem-solving-and-live-coding/04-recursion/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/04-recursion/README.es.md"
+    }
+  ],
+  "practice_mode": "implement"
+}

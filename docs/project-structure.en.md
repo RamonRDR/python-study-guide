@@ -198,6 +198,175 @@ python-study-guide/
 │   ├── README.pt-BR.md
 │   ├── README.es.md
 │   └── problem-solving/
+│       ├── expansion-index.json
+│       ├── ascii-digit-counter/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── binary-insertion-index/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── clamp-value/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── debug-negative-window/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── debug-positive-count/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── descending-insertion-sort/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── first-repeated-label/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── has-duplicate/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── label-counts/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── linear-first-index/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── literal-palindrome/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── merge-inventory/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── most-frequent-label/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── recursive-factorial/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── recursive-power/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── refactor-score-summary/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── refactor-shipping-fee/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── sum-digits/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── total-short-lengths/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── unique-in-order/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
+│       ├── unordered-pair-count/
+│       │   ├── README.md
+│       │   ├── README.pt-BR.md
+│       │   ├── README.es.md
+│       │   ├── exercise.json
+│       │   ├── starter.py
+│       │   ├── solution.py
+│       │   └── test_solution.py
 │       └── vowel-counter/
 │           ├── README.md
 │           ├── README.pt-BR.md
@@ -549,7 +718,35 @@ python-study-guide/
 │   │   ├── README.es.md
 │   │   └── examples/
 │   │       └── patterns.py
-│   └── 08-strings-and-numbers/
+│   ├── 08-strings-and-numbers/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 09-collections/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 10-functions-and-recursion/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 11-searching-and-sorting/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 12-algorithms-and-complexity/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 13-debugging-challenges/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 14-refactoring-challenges/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   └── 15-mixed-challenges/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       └── README.es.md
@@ -752,6 +949,7 @@ python-study-guide/
     ├── test_chapter_navigation.py
     ├── test_check_internal_links.py
     ├── test_documentation_languages.py
+    ├── test_problem_solving_expansion.py
     ├── test_problem_solving_foundations.py
     ├── test_problem_solving_pilot.py
     └── test_validate_repository_structure.py
@@ -777,14 +975,14 @@ python-study-guide/
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `docs/adr/` and `docs/specs/`: trilingual architecture decisions, Phase II specifications, task register, acceptance criteria, integration contract and future related-guide references. The FR-05 prerequisite map is in the learning-hub-foundation directory.
 - `errors-files-and-modules/`: complete Phase 7 learning path. Chapters 01–05 cover runtime exception handling, deliberate raising and custom exceptions, safe text-file I/O with `open()` and `with`, TXT/CSV/JSON parsing and writing, and code organization through imports, modules, regular packages, execution context, and dependency design, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
-- `exercises/`: focused practice activities connected to chapters; the Vowel Counter pilot contains localized instructions, a preliminary JSON record, starter, solution and trusted tests.
+- `exercises/`: 22 focused exercises with localized instructions, preliminary JSON, shared starter and reference, and trusted tests. The expansion index lists the 21 new exercises; the original pilot remains separate.
 - `external-libraries/`: complete Phase 9 learning path for third-party packages. It contains reviewed multilingual chapters for pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x, and pytest 9.1.x, with twenty deterministic executable examples in total. The phase covers tabular transformations, Excel workbook automation, HTTP/API clients, and automated-testing contracts; Phase 10 practical projects are also complete.
 - `functions/`: complete Phase 5 learning path. Chapters 01–09 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, default values including definition-time evaluation and mutable-default safety, variable-length positional and keyword argument collection with `*args` and `**kwargs`, composition through helper and coordinating functions with explicit dependencies and simple call graphs, and explicit data-flow tracing across calls including parameter bindings, rebinding versus mutation, `None`, tuple results, and return-based handoffs, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `getting-started/`: introductory curriculum order 00, with Python installation, editor setup, manual first-file execution, project-local virtual environments, dependency management and Git basics in all three languages. Historical Phase 0 remains Project Foundation.
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `manual-programming-practices/`: complementary four-lesson engineering module after Phase 10, with shared reading-progress implementation and tests; no new dependencies.
 - `practical-projects/`: complete Phase 10 practical-project workspace. Projects 01–08 are complete, reviewed, and integrated. Project 07 adds immutable reconciliation models, exact integer-cent arithmetic, deterministic matching and ordering, duplicate rejection, explicit reconciliation statuses, validated report invariants, stable text rendering, and focused precision and safety regression tests. Project 08 closes the phase with immutable automation requests and results, a fixed `prepare → process → verify → finalize` execution plan, deterministic event logs, structured evidence, controlled failure injection, fail-fast propagation, post-processing verification, skipped-step semantics, stable rendering, and focused invariant regression tests without external integrations.
-- `problem-solving-and-live-coding/`: Seven foundation lessons and one challenge chapter with the Vowel Counter pilot are included; challenge expansion and timed practice remain planned.
+- `problem-solving-and-live-coding/`: Seven foundation lessons and eight challenge chapters provide 22 exercises (11 easy, 11 medium). Difficult and timed practice remain planned.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions. The repository quality tools verify approved examples, internal links, language-family parity, chapter navigation and required paths. The Windows job covers File Organizer tests; the Linux job runs the complete practical-project suite.
 - `standard-library/`: complete Phase 8 learning path. Chapters 01–09 cover `pathlib` filesystem boundaries, `datetime` date/time modeling, advanced `json` and `csv` contracts, `logging`, specialized `collections`, `itertools`, `decimal`, and `os`/`shutil` contracts for environment state, traversal, metadata, copy, move, recursive removal, platform capabilities, and archive safety, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.

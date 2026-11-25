@@ -203,7 +203,7 @@ Practice manual debugging, SDD, TDD and a Python-specific review workflow after 
 
 ## Phase 11: Problem Solving & Live Coding
 
-Seven foundation lessons and one challenge chapter with the Vowel Counter pilot are included; challenge expansion and timed practice remain planned.
+Seven foundation lessons and eight challenge chapters provide 22 exercises (11 easy, 11 medium). Difficult and timed practice remain planned.
 
 [Open module](../problem-solving-and-live-coding/README.md)
 
@@ -215,14 +215,21 @@ Seven foundation lessons and one challenge chapter with the Vowel Counter pilot 
 6. [Sorting Algorithms](../problem-solving-and-live-coding/06-sorting-algorithms/README.md)
 7. [Problem-Solving Patterns](../problem-solving-and-live-coding/07-problem-solving-patterns/README.md)
 8. [Strings and Numbers Challenges](../problem-solving-and-live-coding/08-strings-and-numbers/README.md)
+9. [Collections Challenges](../problem-solving-and-live-coding/09-collections/README.md)
+10. [Functions and Recursion Challenges](../problem-solving-and-live-coding/10-functions-and-recursion/README.md)
+11. [Searching and Sorting Challenges](../problem-solving-and-live-coding/11-searching-and-sorting/README.md)
+12. [Algorithms and Complexity Challenges](../problem-solving-and-live-coding/12-algorithms-and-complexity/README.md)
+13. [Debugging Challenges](../problem-solving-and-live-coding/13-debugging-challenges/README.md)
+14. [Refactoring Challenges](../problem-solving-and-live-coding/14-refactoring-challenges/README.md)
+15. [Mixed Challenges](../problem-solving-and-live-coding/15-mixed-challenges/README.md)
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
-This engineering phase does not renumber the original curriculum. Sprints 00–04 and Sprint 05 foundations are merged (PRs #87–#92). The first pilot is submitted for review; expansion remains planned. The repository stays independent of the future web platform.
+This engineering phase does not renumber the original curriculum. Sprints 00–04 and Sprint 05 foundations and pilot are merged (PRs #87–#93). Easy and medium expansion is submitted for review; difficult and timed practice remain planned. The repository stays independent of the future web platform.
 
 | Future curriculum | Status |
 | --- | --- |
-| 11. Problem Solving & Live Coding | Foundations merged; pilot in review |
+| 11. Problem Solving & Live Coding | Pilot merged; expansion in review |
 | 12. Technical Interview Preparation | Planned |
 
 [Implementation plan](specs/learning-hub-foundation/implementation-plan.md) · [Related-guide integration register](specs/learning-hub-foundation/related-guides.md)

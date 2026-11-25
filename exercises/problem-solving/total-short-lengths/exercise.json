@@ -1,0 +1,242 @@
+{
+  "id": "problem-solving.total-short-lengths",
+  "chapter_id": "problem-solving.mixed",
+  "difficulty": "easy",
+  "estimated_minutes": 15,
+  "title": {
+    "en": "Total Length of Short Labels",
+    "pt-BR": "Comprimento total de rótulos curtos",
+    "es": "Longitud total de etiquetas cortas"
+  },
+  "prompt": {
+    "en": "Given exact strings and a nonnegative integer limit, return the sum of lengths of labels whose Python len is <= limit. Include repeated labels; empty labels contribute zero. Preserve input.",
+    "pt-BR": "Dados strings exatas e limite inteiro não negativo, retorne soma dos comprimentos de rótulos cujo len Python é <= limite. Inclua repetidos; vazios contribuem zero. Preserve entrada.",
+    "es": "Dadas cadenas exactas y límite entero no negativo, devuelve suma de longitudes de etiquetas cuyo len Python es <= límite. Incluye repetidas; vacías aportan cero. Conserva entrada."
+  },
+  "concepts": [
+    "strings",
+    "lists",
+    "iteration",
+    "conditions",
+    "decomposition",
+    "functions",
+    "edge-cases"
+  ],
+  "constraints": {
+    "en": [
+      "Given exact strings and a nonnegative integer limit, return the sum of lengths of labels whose Python len is <= limit. Include repeated labels; empty labels contribute zero. Preserve input.",
+      "Only the stated input domain is graded; return the specified value and exact types, without printing, external dependencies or changing mutable arguments. Do not use the reference during the independent attempt."
+    ],
+    "pt-BR": [
+      "Dados strings exatas e limite inteiro não negativo, retorne soma dos comprimentos de rótulos cujo len Python é <= limite. Inclua repetidos; vazios contribuem zero. Preserve entrada.",
+      "Somente o domínio declarado é avaliado; retorne valor e tipos exatos, sem imprimir, dependências externas nem modificar argumentos mutáveis. Não use a referência durante a tentativa independente."
+    ],
+    "es": [
+      "Dadas cadenas exactas y límite entero no negativo, devuelve suma de longitudes de etiquetas cuyo len Python es <= límite. Incluye repetidas; vacías aportan cero. Conserva entrada.",
+      "Solo se evalúa el dominio declarado; devuelve valor y tipos exactos, sin imprimir, dependencias externas ni modificar argumentos mutables. No uses la referencia durante el intento independiente."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        [
+          "a",
+          "ab",
+          "abcd"
+        ],
+        2
+      ],
+      "expected": 3,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [],
+        2
+      ],
+      "expected": 0,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/total-short-lengths/starter.py",
+  "hints": {
+    "en": [
+      "Separate determining a label's length from adding it.",
+      "Only add when the length is at most the limit.",
+      "Return the sum, not the number of qualifying labels."
+    ],
+    "pt-BR": [
+      "Separe obter comprimento de acrescentá-lo.",
+      "Some apenas quando comprimento não exceder limite.",
+      "Retorne soma, não quantidade de rótulos elegíveis."
+    ],
+    "es": [
+      "Separa obtener longitud de sumarla.",
+      "Suma solo cuando longitud no supera límite.",
+      "Devuelve suma, no cantidad de etiquetas válidas."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/total-short-lengths/solution.py",
+  "explanation": {
+    "en": "Compute each length once, compare it to the inclusive bound and accumulate lengths. This combines iteration, condition and a numeric accumulator.",
+    "pt-BR": "Calcule cada comprimento uma vez, compare com limite inclusivo e acumule comprimentos. Combina iteração, condição e acumulador numérico.",
+    "es": "Calcula cada longitud una vez, compara con límite inclusivo y acumula longitudes. Combina iteración, condición y acumulador numérico."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n)",
+      "pt-BR": "O(n)",
+      "es": "O(n)"
+    },
+    "space": {
+      "en": "O(1)",
+      "pt-BR": "O(1)",
+      "es": "O(1)"
+    },
+    "assumptions": {
+      "en": "Complexity uses the fixed-cost model for bounded integer operations and string labels of bounded length; n is input length, m the second input length, k distinct values, d decimal digits, e exponent, as applicable. Output storage is excluded from auxiliary space. Hash-based times are expected, not worst-case bounds.",
+      "pt-BR": "Complexidade usa modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado; n é tamanho da entrada, m tamanho da segunda, k valores distintos, d dígitos decimais, e expoente, conforme aplicável. Armazenamento da saída é excluído do espaço auxiliar. Tempos com hash são esperados, não limites de pior caso.",
+      "es": "Complejidad usa modelo de coste fijo para enteros acotados y etiquetas de longitud acotada; n es longitud de entrada, m longitud de segunda, k valores distintos, d dígitos decimales, e exponente, según corresponda. Se excluye almacenamiento de salida del espacio auxiliar. Tiempos con hash son esperados, no cotas de peor caso."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "total_short_lengths",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          [
+            "a",
+            "ab",
+            "abcd"
+          ],
+          2
+        ],
+        "expected": 3
+      },
+      {
+        "id": "case-02",
+        "args": [
+          [],
+          2
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-03",
+        "args": [
+          [
+            "ab",
+            "ab"
+          ],
+          2
+        ],
+        "expected": 4
+      },
+      {
+        "id": "case-04",
+        "args": [
+          [
+            "",
+            "a"
+          ],
+          0
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-05",
+        "args": [
+          [
+            "🙂",
+            "abc"
+          ],
+          1
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-06",
+        "args": [
+          [
+            "abc"
+          ],
+          3
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "strings-and-numbers/01-string-creation-and-indexing/README.md",
+      "pt-BR": "strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md",
+      "es": "strings-and-numbers/01-string-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "collections/01-list-creation-and-indexing/README.md",
+      "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+      "es": "collections/01-list-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+      "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+      "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+    }
+  ],
+  "practice_mode": "implement"
+}

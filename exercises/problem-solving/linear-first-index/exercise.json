@@ -1,0 +1,231 @@
+{
+  "id": "problem-solving.linear-first-index",
+  "chapter_id": "problem-solving.searching-and-sorting",
+  "difficulty": "easy",
+  "estimated_minutes": 12,
+  "title": {
+    "en": "First Matching Index",
+    "pt-BR": "Primeiro índice correspondente",
+    "es": "Primer índice coincidente"
+  },
+  "prompt": {
+    "en": "Given an unsorted integer list and target, return the first matching index or -1 if absent. Do not mutate the input or use list.index.",
+    "pt-BR": "Dada lista desordenada de inteiros e alvo, retorne o primeiro índice correspondente ou -1 se ausente. Não altere a entrada nem use list.index.",
+    "es": "Dada lista desordenada de enteros y objetivo, devuelve el primer índice coincidente o -1 si falta. No modifiques la entrada ni uses list.index."
+  },
+  "concepts": [
+    "lists",
+    "enumerate-range",
+    "search",
+    "functions",
+    "edge-cases"
+  ],
+  "constraints": {
+    "en": [
+      "Given an unsorted integer list and target, return the first matching index or -1 if absent. Do not mutate the input or use list.index.",
+      "Only the stated input domain is graded; return the specified value and exact types, without printing, external dependencies or changing mutable arguments. Do not use the reference during the independent attempt."
+    ],
+    "pt-BR": [
+      "Dada lista desordenada de inteiros e alvo, retorne o primeiro índice correspondente ou -1 se ausente. Não altere a entrada nem use list.index.",
+      "Somente o domínio declarado é avaliado; retorne valor e tipos exatos, sem imprimir, dependências externas nem modificar argumentos mutáveis. Não use a referência durante a tentativa independente."
+    ],
+    "es": [
+      "Dada lista desordenada de enteros y objetivo, devuelve el primer índice coincidente o -1 si falta. No modifiques la entrada ni uses list.index.",
+      "Solo se evalúa el dominio declarado; devuelve valor y tipos exactos, sin imprimir, dependencias externas ni modificar argumentos mutables. No uses la referencia durante el intento independiente."
+    ]
+  },
+  "examples": [
+    {
+      "args": [
+        [],
+        3
+      ],
+      "expected": -1,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    },
+    {
+      "args": [
+        [
+          8,
+          4,
+          4,
+          9
+        ],
+        4
+      ],
+      "expected": 1,
+      "explanation": {
+        "en": "Apply the stated contract.",
+        "pt-BR": "Aplique o contrato declarado.",
+        "es": "Aplica el contrato declarado."
+      }
+    }
+  ],
+  "starter_path": "exercises/problem-solving/linear-first-index/starter.py",
+  "hints": {
+    "en": [
+      "Use enumerate to get index and value.",
+      "Check the value against the target.",
+      "Return on first match; return -1 only after the scan."
+    ],
+    "pt-BR": [
+      "Use enumerate para obter índice e valor.",
+      "Compare o valor com o alvo.",
+      "Retorne no primeiro encontro; retorne -1 só após varrer."
+    ],
+    "es": [
+      "Usa enumerate para obtener índice y valor.",
+      "Compara valor con objetivo.",
+      "Devuelve en la primera coincidencia; devuelve -1 solo tras recorrer."
+    ]
+  },
+  "solution_path": "exercises/problem-solving/linear-first-index/solution.py",
+  "explanation": {
+    "en": "Scanning in index order makes the first match definitive. The missing result is different from index zero.",
+    "pt-BR": "Varrer em ordem torna a primeira ocorrência definitiva. Ausência é diferente do índice zero.",
+    "es": "Recorrer en orden hace definitiva la primera coincidencia. Ausencia difiere del índice cero."
+  },
+  "complexity": {
+    "time": {
+      "en": "O(n)",
+      "pt-BR": "O(n)",
+      "es": "O(n)"
+    },
+    "space": {
+      "en": "O(1)",
+      "pt-BR": "O(1)",
+      "es": "O(1)"
+    },
+    "assumptions": {
+      "en": "Complexity uses the fixed-cost model for bounded integer operations and string labels of bounded length; n is input length, m the second input length, k distinct values, d decimal digits, e exponent, as applicable. Output storage is excluded from auxiliary space. Hash-based times are expected, not worst-case bounds.",
+      "pt-BR": "Complexidade usa modelo de custo fixo para inteiros limitados e rótulos de comprimento limitado; n é tamanho da entrada, m tamanho da segunda, k valores distintos, d dígitos decimais, e expoente, conforme aplicável. Armazenamento da saída é excluído do espaço auxiliar. Tempos com hash são esperados, não limites de pior caso.",
+      "es": "Complejidad usa modelo de coste fijo para enteros acotados y etiquetas de longitud acotada; n es longitud de entrada, m longitud de segunda, k valores distintos, d dígitos decimales, e exponente, según corresponda. Se excluye almacenamiento de salida del espacio auxiliar. Tiempos con hash son esperados, no cotas de peor caso."
+    }
+  },
+  "tests": {
+    "interface": "function_call",
+    "function_name": "first_index",
+    "comparison": "exact_type_and_value",
+    "timeout_ms": 2000,
+    "cases": [
+      {
+        "id": "case-01",
+        "args": [
+          [],
+          3
+        ],
+        "expected": -1
+      },
+      {
+        "id": "case-02",
+        "args": [
+          [
+            8,
+            4,
+            4,
+            9
+          ],
+          4
+        ],
+        "expected": 1
+      },
+      {
+        "id": "case-03",
+        "args": [
+          [
+            4
+          ],
+          4
+        ],
+        "expected": 0
+      },
+      {
+        "id": "case-04",
+        "args": [
+          [
+            1,
+            2
+          ],
+          3
+        ],
+        "expected": -1
+      },
+      {
+        "id": "case-05",
+        "args": [
+          [
+            -2,
+            1
+          ],
+          -2
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  "execution": "unverified",
+  "allowed_dependencies": [],
+  "local_python": "3.13",
+  "prerequisite_paths": [
+    {
+      "en": "functions/01-defining-and-calling-functions/README.md",
+      "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+      "es": "functions/01-defining-and-calling-functions/README.es.md"
+    },
+    {
+      "en": "functions/02-parameters-and-arguments/README.md",
+      "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+      "es": "functions/02-parameters-and-arguments/README.es.md"
+    },
+    {
+      "en": "functions/03-return-values/README.md",
+      "pt-BR": "functions/03-return-values/README.pt-BR.md",
+      "es": "functions/03-return-values/README.es.md"
+    },
+    {
+      "en": "functions/05-type-hints/README.md",
+      "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+      "es": "functions/05-type-hints/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+      "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+      "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+      "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+    },
+    {
+      "en": "program-flow/04-for-loops-and-iteration/README.md",
+      "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+      "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+    },
+    {
+      "en": "collections/01-list-creation-and-indexing/README.md",
+      "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+      "es": "collections/01-list-creation-and-indexing/README.es.md"
+    },
+    {
+      "en": "program-flow/05-range-enumerate-and-zip/README.md",
+      "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+      "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+    },
+    {
+      "en": "problem-solving-and-live-coding/05-searching-algorithms/README.md",
+      "pt-BR": "problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md",
+      "es": "problem-solving-and-live-coding/05-searching-algorithms/README.es.md"
+    }
+  ],
+  "practice_mode": "implement"
+}
