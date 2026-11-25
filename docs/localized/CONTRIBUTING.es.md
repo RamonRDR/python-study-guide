@@ -68,7 +68,7 @@ Los nuevos capítulos de aprendizaje deben incluir:
 
 El inglés es el idioma predeterminado del repositorio. Las traducciones al portugués de Brasil y al español deben conservar el mismo significado técnico, sin exigir una traducción literal palabra por palabra.
 
-Al modificar documentación traducida, actualiza todas las versiones de idioma afectadas siempre que sea posible. Si una traducción no puede completarse en el mismo pull request, identifica claramente qué versión falta.
+Toda documentación pública, incluida arquitectura, ingeniería y orientación para colaboradores, debe tener versiones conceptualmente alineadas en inglés, portugués brasileño y español. Actualiza todas las versiones afectadas en el mismo pull request; las traducciones ausentes bloquean la finalización. Mantén las notas realmente privadas fuera del repositorio público, preferiblemente en inglés. Conserva los identificadores técnicos.
 
 ## Contribuciones asistidas por IA
 

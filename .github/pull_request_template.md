@@ -1,5 +1,7 @@
 # Pull Request
 
+[🇺🇸 English](pull_request_template.md) · [🇧🇷 Português](pull_request_template.pt-BR.md) · [🇪🇸 Español](pull_request_template.es.md)
+
 <!--
 Thank you for contributing to Python Study Guide.
 You may write this pull request in English, Brazilian Portuguese, or Spanish.
@@ -35,7 +37,7 @@ Commands or checks performed:
 
 <!--
 Explain which English, Brazilian Portuguese, and Spanish documents were affected.
-If a required translation is missing, identify it clearly and explain why.
+All public documents must have all three versions. Missing translations block completion.
 -->
 
 ## AI assistance
@@ -58,7 +60,7 @@ Responsibility for understanding and verifying the submitted work remains human.
 - [ ] Important technical claims were checked against reliable, preferably primary sources.
 - [ ] Changed Python examples and tests were executed, or their untested status is explained above.
 - [ ] Internal links and moved paths were checked.
-- [ ] All affected language versions remain conceptually aligned, or missing translations are disclosed.
+- [ ] All affected public documents have three conceptually aligned language versions.
 - [ ] The content is original or used under a compatible license with proper attribution.
 - [ ] No confidential, proprietary, personal, credential, token, or private-project information was included.
 - [ ] AI-assisted material, when present, was meaningfully reviewed by a person.

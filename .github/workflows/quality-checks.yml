@@ -50,6 +50,9 @@ jobs:
       - name: Check internal Markdown links
         run: python scripts/check_internal_links.py
 
+      - name: Check public documentation languages
+        run: python scripts/check_documentation_languages.py
+
       - name: Validate repository structure
         run: python scripts/validate_repository_structure.py
 

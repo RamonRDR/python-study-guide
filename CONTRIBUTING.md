@@ -66,7 +66,7 @@ New learning chapters should cover:
 
 English is the repository's default language. Brazilian Portuguese and Spanish translations should preserve the same technical meaning without forcing literal word-for-word translation.
 
-When changing translated documentation, update all affected language versions whenever possible. If a translation cannot be completed in the same pull request, clearly identify the missing version.
+All public documentation, including architecture, engineering and contributor guidance, must have conceptually aligned English, Brazilian Portuguese and Spanish versions. Update every affected version in the same pull request; missing translations block completion. Keep genuinely private notes outside the public repository, preferably in English. Keep technical identifiers unchanged.
 
 ## AI-assisted contributions
 
