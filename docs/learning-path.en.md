@@ -12,6 +12,16 @@ If you are starting from zero, follow the phase order. Completed later phases ma
 - 🚧 **In progress:** the phase has started but is not complete
 - ⏳ **Planned:** not yet available as a complete learning section
 
+## Curriculum order 00 · Getting Started
+
+This onboarding module comes before Phase 1 and does not replace the historical Phase 0 (Project Foundation).
+
+[Open the Getting Started module index](../getting-started/README.md)
+
+1. [Install Python](../getting-started/01-install-python/README.md)
+2. [Configure VS Code](../getting-started/02-configure-vscode/README.md)
+3. [Run your first program](../getting-started/03-run-your-first-program/README.md)
+
 ## Phase 1 · Fundamentals ✅
 
 [Open the Fundamentals section index](../fundamentals/README.md)

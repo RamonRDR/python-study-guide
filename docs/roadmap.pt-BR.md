@@ -53,6 +53,10 @@ As Fases 0–10 estão concluídas. A Fase 10: Projetos Práticos encerra com os
 
 - Refinar e substituir os recursos visuais por exportações de alta qualidade após a conclusão do enquadramento final da logomarca.
 
+## Ordem curricular 00: Primeiros passos
+
+O módulo introdutório precede a Fase 1 e é separado da Fase 0 histórica (Fundação do projeto). Consulte [Primeiros passos](../getting-started/README.pt-BR.md) para instalação do Python, configuração do editor e primeira execução manual.
+
 ## Fase 1: Fundamentos
 
 - [x] [Como o Python executa um programa](../fundamentals/01-how-python-runs-a-program/README.pt-BR.md)

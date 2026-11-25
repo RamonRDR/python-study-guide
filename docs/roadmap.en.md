@@ -53,6 +53,10 @@ Phases 0–10 are complete. Phase 10: Practical Projects closes with all eight p
 
 - Refine and replace visual assets with high-quality exports after the final logo framing is complete.
 
+## Curriculum order 00: Getting Started
+
+The introductory module precedes Phase 1 and is separate from historical Phase 0 (Project Foundation). See [Getting Started](../getting-started/README.md) for Python installation, editor setup and first manual execution.
+
 ## Phase 1: Fundamentals
 
 - [x] [How Python runs a program](../fundamentals/01-how-python-runs-a-program/README.md)

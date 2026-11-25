@@ -7,8 +7,10 @@
 </div>
 
 <!-- chapter-navigation:top -->
-[Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-print-and-input/README.pt-BR.md)
+[← Anterior](../../getting-started/03-run-your-first-program/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-print-and-input/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
+
+**Convenção de comandos:** os exemplos usam `python` como abreviação. Quando necessário, substitua pelo comando do interpretador verificado em Primeiros passos (por exemplo, `py -3.13`, `python3.13` ou `python3`); mantenha o restante de cada comando.
 
 Um programa Python começa como um texto escrito por uma pessoa. Salvar esse texto em um arquivo `.py` não o executa. O programa só é executado quando o interpretador Python recebe a instrução de ler e executar o arquivo.
 
@@ -19,7 +21,7 @@ Este capítulo leva você de um arquivo vazio até um programa funcionando e, de
 | Item | Detalhes |
 |---|---|
 | Nível | Iniciante absoluto |
-| Pré-requisitos | Python instalado; acesso a um editor de texto e a um terminal |
+| Pré-requisitos | [Primeiros passos](../../getting-started/README.pt-BR.md) ou configuração equivalente: Python instalado; acesso a um editor de texto e a um terminal |
 | Tempo estimado de estudo | 40 a 60 minutos |
 | Conceitos principais | Programa, código-fonte, arquivo `.py`, editor, terminal, interpretador, ordem de execução, erro de sintaxe |
 
@@ -447,5 +449,5 @@ python scripts/validate_repository_structure.py
 - [Documentação do Python — Linha de comando e ambiente](https://docs.python.org/pt-br/3/using/cmdline.html)
 
 <!-- chapter-navigation:bottom -->
-[Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-print-and-input/README.pt-BR.md)
+[← Anterior](../../getting-started/03-run-your-first-program/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-print-and-input/README.pt-BR.md)
 <!-- /chapter-navigation:bottom -->

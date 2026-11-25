@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Estado al 25/11/2026: Sprint 00 fusionado; implementación de navegación del Sprint 01 en validación y revisión.
+Estado al 25/11/2026: Sprints 00–01 fusionados; incorporación del Sprint 02 enviada a validación y revisión.
 
 | Tarea | Sprint | Dependencia | Estado |
 | --- | --- | --- | --- |
@@ -12,8 +12,8 @@ Estado al 25/11/2026: Sprint 00 fusionado; implementación de navegación del Sp
 | T00-04 Preparar SDD trilingüe y contrato preliminar | 00 | T00-03 | Hecho ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T00-05 Verificar PR de especificación, CI y hallazgos Codex | 00 | T00-04 | Hecho ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T00-06 Obtener aprobación y fusión | 00 | T00-05 | Hecho ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
-| T01-01 Inventariar e implementar navegación por idioma y pruebas | 01 | T00-06 | Implementado; CI y revisión pendientes |
-| T02-01 Crear Getting Started y conectar Fundamentals | 02 | T01-01 | Pendiente |
+| T01-01 Inventariar e implementar navegación por idioma y pruebas | 01 | T00-06 | Hecho ([PR #88](https://github.com/RamonRDR/python-study-guide/pull/88)) |
+| T02-01 Crear Getting Started y conectar Fundamentals | 02 | T01-01 | Implementado; CI y revisión pendientes |
 | T03-01 Alinear README, roadmap, ruta, estructura y badges | 03 | T02-01 | Pendiente |
 | T04-01 Añadir práctica manual e ingeniería | 04 | T03-01 | Pendiente |
 | T05-00 Mapear todos los requisitos previos FR-05 a las lecciones existentes y enseñar conceptos ausentes en EN/PT-BR/ES antes de publicar retos | 05 | T04-01 | Pendiente |

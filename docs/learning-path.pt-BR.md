@@ -12,6 +12,16 @@ Se você está começando do zero, siga a ordem das fases. Algumas fases posteri
 - 🚧 **Em andamento:** a fase já começou, mas ainda não está concluída
 - ⏳ **Planejado:** ainda não disponível como seção completa de aprendizagem
 
+## Ordem curricular 00 · Primeiros passos
+
+Este módulo introdutório vem antes da Fase 1 e não substitui a Fase 0 histórica (Fundação do projeto).
+
+[Abrir o índice do módulo Primeiros passos](../getting-started/README.pt-BR.md)
+
+1. [Instalar o Python](../getting-started/01-install-python/README.pt-BR.md)
+2. [Configurar o VS Code](../getting-started/02-configure-vscode/README.pt-BR.md)
+3. [Executar seu primeiro programa](../getting-started/03-run-your-first-program/README.pt-BR.md)
+
 ## Fase 1 · Fundamentos ✅
 
 [Abrir o índice da seção Fundamentos](../fundamentals/README.pt-BR.md)

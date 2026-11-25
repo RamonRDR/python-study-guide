@@ -106,5 +106,35 @@ class ChapterNavigationTests(unittest.TestCase):
         self.assertTrue(any("duplicate chapter entries" in e for e in validate_documents(documents, tracked)))
 
 
+    def test_prepend_getting_started_preserves_cross_module_navigation(self):
+        documents, tracked = fixture()
+        for locale, (filename, previous, index, following) in LOCALES.items():
+            master = f"docs/learning-path.{locale}.md"
+            start = f"getting-started/01-install-python/{filename}"
+            first = f"fundamentals/01-first/{filename}"
+            documents[master] = f"1. [Install Python](../{start})\n" + documents[master]
+            tracked.update({start, f"getting-started/{filename}"})
+            nav = (
+                f"[{index}](../{filename}) · "
+                f"[{following}](../../fundamentals/01-first/{filename})"
+            )
+            documents[start] = "\n".join([
+                "# Install Python", "",
+                "[🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · "
+                "[🇪🇸 Español](README.es.md)", "",
+                *block("top", nav), "", "Lesson content.", "",
+                *block("bottom", nav), "",
+            ])
+            old = f"[{index}](../{filename})"
+            new = f"[{previous}](../../getting-started/01-install-python/{filename}) · {old}"
+            documents[first] = documents[first].replace(old, new)
+        self.assertEqual(validate_documents(documents, tracked), [])
+        path = "fundamentals/01-first/README.pt-BR.md"
+        documents[path] = documents[path].replace(
+            "../../getting-started/01-install-python/README.pt-BR.md",
+            "../../getting-started/01-install-python/README.md",
+        )
+        self.assertTrue(any(path in error for error in validate_documents(documents, tracked)))
+
 if __name__ == "__main__":
     unittest.main()

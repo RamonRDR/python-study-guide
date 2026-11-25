@@ -7,8 +7,10 @@
 </div>
 
 <!-- chapter-navigation:top -->
-[Module index](../README.md) · [Next →](../02-print-and-input/README.md)
+[← Previous](../../getting-started/03-run-your-first-program/README.md) · [Module index](../README.md) · [Next →](../02-print-and-input/README.md)
 <!-- /chapter-navigation:top -->
+
+**Command convention:** examples use `python` as shorthand. Use the interpreter command verified in Getting Started instead when necessary (for example, `py -3.13`, `python3.13` or `python3`); keep the rest of each command unchanged.
 
 A Python program begins as text written by a person. Saving that text in a `.py` file does not run it. The program runs only when the Python interpreter is asked to read and execute the file.
 
@@ -19,7 +21,7 @@ This chapter takes you from an empty file to a working program, then shows how t
 | Item | Details |
 |---|---|
 | Level | Absolute beginner |
-| Prerequisites | Python installed; access to a text editor and terminal |
+| Prerequisites | [Getting Started](../../getting-started/README.md) or equivalent setup: Python installed; access to a text editor and terminal |
 | Estimated study time | 40 to 60 minutes |
 | Main concepts | Program, source code, `.py` file, editor, terminal, interpreter, execution order, syntax error |
 
@@ -447,5 +449,5 @@ python scripts/validate_repository_structure.py
 - [Python documentation — Command line and environment](https://docs.python.org/3/using/cmdline.html)
 
 <!-- chapter-navigation:bottom -->
-[Module index](../README.md) · [Next →](../02-print-and-input/README.md)
+[← Previous](../../getting-started/03-run-your-first-program/README.md) · [Module index](../README.md) · [Next →](../02-print-and-input/README.md)
 <!-- /chapter-navigation:bottom -->

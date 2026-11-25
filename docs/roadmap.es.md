@@ -53,6 +53,10 @@ Las Fases 0–10 están completadas. La Fase 10: Proyectos Prácticos cierra con
 
 - Refinar y reemplazar los recursos visuales con exportaciones de alta calidad después de completar el encuadre final del logotipo.
 
+## Orden curricular 00: Primeros pasos
+
+El módulo introductorio precede a la Fase 1 y es independiente de la Fase 0 histórica (Base del proyecto). Consulta [Primeros pasos](../getting-started/README.es.md) para instalar Python, configurar el editor y realizar la primera ejecución manual.
+
 ## Fase 1: Fundamentos
 
 - [x] [Cómo Python ejecuta un programa](../fundamentals/01-how-python-runs-a-program/README.es.md)
