@@ -127,6 +127,8 @@ class ExpansionTests(unittest.TestCase):
                 directory = ROOT / slug
                 self.assertIn(record["difficulty"], {"easy", "medium"})
                 self.assertGreater(record["estimated_minutes"], 0)
+                self.assertTrue(record["concepts"])
+                self.assertEqual(len(record["concepts"]), len(set(record["concepts"])))
                 self.assertEqual(record["execution"], "unverified")
                 self.assertEqual(record["allowed_dependencies"], [])
                 self.assertEqual(record["local_python"], "3.13")
