@@ -23,6 +23,7 @@ This onboarding module comes before Phase 1 and does not replace the historical 
 3. [Run your first program](../getting-started/03-run-your-first-program/README.md)
 4. [Virtual Environments](../getting-started/04-virtual-environments/README.md)
 5. [Packages and Dependency Management](../getting-started/05-packages-and-dependencies/README.md)
+6. [Git and Version Control Basics](../getting-started/06-git-and-version-control/README.md)
 
 ## Phase 1 · Fundamentals ✅
 

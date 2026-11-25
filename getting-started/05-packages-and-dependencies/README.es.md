@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../04-virtual-environments/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../fundamentals/01-how-python-runs-a-program/README.es.md)
+[← Anterior](../04-virtual-environments/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-git-and-version-control/README.es.md)
 <!-- /chapter-navigation:top -->
 
 ## Objetivo
@@ -94,7 +94,7 @@ Las descargas de navegadores requieren red, almacenamiento y a veces dependencia
 
 Si falla la instalación, lee el error, comprueba compatibilidad Python y acceso a internet y verifica el entorno. No eludas comprobaciones de certificados o seguridad. Si falla un import, compara los intérpretes usados para instalar y ejecutar.
 
-**Referencia rápida:** instalar con python -m pip install PACKAGE, inspeccionar con show/list, comprobar con check, registrar con freeze, recrear con install -r requirements.txt. Continúa con Fundamentos para comprender el código Python.
+**Referencia rápida:** instalar con python -m pip install PACKAGE, inspeccionar con show/list, comprobar con check, registrar con freeze, recrear con install -r requirements.txt. Continúa con [Git básico](../06-git-and-version-control/README.es.md) para versionar tu proyecto con seguridad antes de Fundamentos.
 
 ## Referencias oficiales
 
@@ -104,5 +104,5 @@ Si falla la instalación, lee el error, comprueba compatibilidad Python y acceso
 - [Navegadores Playwright](https://playwright.dev/python/docs/browsers)
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../04-virtual-environments/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../fundamentals/01-how-python-runs-a-program/README.es.md)
+[← Anterior](../04-virtual-environments/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-git-and-version-control/README.es.md)
 <!-- /chapter-navigation:bottom -->

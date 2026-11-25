@@ -98,7 +98,7 @@ Abre Command Palette > **Python: Select Interpreter**. Selecciona el intérprete
 
 En un shell activado, escribe `deactivate`. Cerrar el shell también termina su activación. La carpeta y los paquetes permanecen. No copies ni muevas .venv entre máquinas; recréalo con Python base y el archivo de dependencias. Para recrearlo, cierra las terminales que lo usan, confirma la carpeta exacta y elimina solo el entorno mediante el gestor de archivos; conserva el código y requirements.
 
-Añade `.venv/` al .gitignore de la raíz del proyecto (este repositorio ya ignora .venv). Nunca versiones el entorno generado. Mantén tu código fuera de él. Variables de entorno, binarios de navegador, bibliotecas del SO y servicios pueden estar en otros lugares; venv aísla paquetes Python, no todos los recursos.
+Añade `.venv/` al .gitignore de la raíz del proyecto (este repositorio ya ignora .venv). Nunca versiones el entorno generado. El [capítulo 06](../06-git-and-version-control/README.es.md) explica cómo inicializar Git y comprobar archivos ignorados. Mantén tu código fuera de él. Variables de entorno, binarios de navegador, bibliotecas del SO y servicios pueden estar en otros lugares; venv aísla paquetes Python, no todos los recursos.
 
 ## 5. Práctica y resolución de problemas
 

@@ -55,7 +55,7 @@ Phases 0–10 are complete. Phase 10: Practical Projects closes with all eight p
 
 ## Curriculum order 00: Getting Started
 
-The introductory module precedes Phase 1 and is separate from historical Phase 0 (Project Foundation). See [Getting Started](../getting-started/README.md) for Python installation, editor setup, first manual execution, project-local virtual environments and dependency management.
+The introductory module precedes Phase 1 and is separate from historical Phase 0 (Project Foundation). See [Getting Started](../getting-started/README.md) for Python installation, editor setup, first manual execution, project-local virtual environments, dependency management and basic Git version control.
 
 ## Phase 1: Fundamentals
 

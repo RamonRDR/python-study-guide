@@ -7,7 +7,7 @@
 </div>
 
 <!-- chapter-navigation:top -->
-[← Previous](../../getting-started/05-packages-and-dependencies/README.md) · [Module index](../README.md) · [Next →](../02-print-and-input/README.md)
+[← Previous](../../getting-started/06-git-and-version-control/README.md) · [Module index](../README.md) · [Next →](../02-print-and-input/README.md)
 <!-- /chapter-navigation:top -->
 
 **Command convention:** examples use `python` as shorthand. Use the interpreter command verified in Getting Started instead when necessary (for example, `py -3.13`, `python3.13` or `python3`); keep the rest of each command unchanged. When working in the project .venv created in Getting Started, use its verified `python` command (or direct executable path) instead of the base launcher.
@@ -449,5 +449,5 @@ python scripts/validate_repository_structure.py
 - [Python documentation — Command line and environment](https://docs.python.org/3/using/cmdline.html)
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../../getting-started/05-packages-and-dependencies/README.md) · [Module index](../README.md) · [Next →](../02-print-and-input/README.md)
+[← Previous](../../getting-started/06-git-and-version-control/README.md) · [Module index](../README.md) · [Next →](../02-print-and-input/README.md)
 <!-- /chapter-navigation:bottom -->

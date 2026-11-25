@@ -146,24 +146,25 @@ class ChapterNavigationTests(unittest.TestCase):
                     "03-run-your-first-program",
                     "04-virtual-environments",
                     "05-packages-and-dependencies",
+                    "06-git-and-version-control",
                 )
             ] + [f"fundamentals/01-how-python-runs-a-program/{filename}"]
             with self.subTest(locale=locale):
                 self.assertEqual(
-                    navigation_line(order, 2, locale),
-                    f"[{previous}](../02-configure-vscode/{filename}) · "
-                    f"[{index}](../{filename}) · "
-                    f"[{following}](../04-virtual-environments/{filename})",
-                )
-                self.assertEqual(
                     navigation_line(order, 4, locale),
                     f"[{previous}](../04-virtual-environments/{filename}) · "
+                    f"[{index}](../{filename}) · "
+                    f"[{following}](../06-git-and-version-control/{filename})",
+                )
+                self.assertEqual(
+                    navigation_line(order, 5, locale),
+                    f"[{previous}](../05-packages-and-dependencies/{filename}) · "
                     f"[{index}](../{filename}) · "
                     f"[{following}](../../fundamentals/01-how-python-runs-a-program/{filename})",
                 )
                 self.assertEqual(
-                    navigation_line(order, 5, locale),
-                    f"[{previous}](../../getting-started/05-packages-and-dependencies/{filename}) · "
+                    navigation_line(order, 6, locale),
+                    f"[{previous}](../../getting-started/06-git-and-version-control/{filename}) · "
                     f"[{index}](../{filename})",
                 )
 

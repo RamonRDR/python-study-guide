@@ -10,9 +10,9 @@ Estado: propuesta para revisión. Ejecutar solo tras aprobación y fusión del P
 | --- | --- | --- |
 | 00 | docs/learning-hub-specification | Auditoría, constitución, especificación, plan, tareas, criterios, contratos preliminares y ADR. |
 | 01 | feat/chapter-navigation | Inventariar idiomas de capítulos/proyectos, definir navegación ordenada, validar enlaces recíprocos y entre módulos; currículo existente primero. |
-| 02 | feat/getting-started | Incorporación localizada y conexión con Fundamentals; ampliar pruebas de navegación e índices. Añadir lecciones de venv local al proyecto y gestión de pip/dependencias; documentar candidatos a ampliar bibliotecas por separado de la Fase 9 completada, con revisión de requisitos previos y futuros PR independientes. |
+| 02 | feat/getting-started | Incorporación localizada y conexión con Fundamentals; ampliar pruebas de navegación e índices. Añadir lecciones de venv local al proyecto y gestión de pip/dependencias; documentar candidatos a ampliar bibliotecas por separado de la Fase 9 completada, con revisión de requisitos previos y futuros PR independientes. Añadir sexta lección de Git básico y registrar enlaces recíprocos futuros entre guías en el registro de integración; mantener Git avanzado y automatización específica de plataformas en la guía separada. |
 | 03 | docs/readme-and-badges | Actualizar tres README, rutas, roadmap y estructura; badges solo con evidencias. |
-| 04 | feat/manual-programming-practices | Enseñar práctica manual y SDD/TDD; referenciar orientación existente de mantenimiento asistido por IA. |
+| 04 | feat/manual-programming-practices | Enseñar práctica manual y SDD/TDD; referenciar orientación existente de mantenimiento asistido por IA. Aplicar flujo pequeño de rama/PR/prueba/revisión específico de Python, sin duplicar el curso independiente de Git. |
 | 05 | feat/problem-solving-live-coding | Auditar requisitos previos de todos los temas FR-05; enseñar conceptos ausentes en los tres idiomas antes de la práctica correspondiente; después pilotar reto según contrato preliminar y ampliar por concepto/dificultad con pruebas. |
 | 06 | feat/technical-interview-preparation | Auditar y enseñar requisitos previos restantes específicos de entrevistas no cubiertos en Sprint 05; después preguntas y simulaciones cronometradas; rúbricas y paridad de idiomas. |
 | 07 | feat/quiz-and-exercise-bank | Materializar registros y esquemas versionados; validar IDs, traducciones, puntuación, soluciones e implementaciones incorrectas representativas. |
@@ -34,3 +34,5 @@ Usar snapshot de contenido fijado por revisión al compilar el sitio, rutas rela
 ## Control de cambios
 
 Por cada PR: consultar especificaciones, registrar alcance, revisar diffs, ejecutar controles aplicables, informar omisiones, solicitar Codex Review, resolver hallazgos, revalidar y obtener aprobación explícita. Actualizar tareas en el mismo PR cuando sea posible; historial Git evidencia fusión. Mantener roadmap educativo separado. Toda documentación pública debe tener EN, PT-BR y ES en el mismo PR; verificar estructura y revisar equivalencia humana.
+
+[Registro de integración de guías relacionadas](related-guides.es.md)

@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../04-virtual-environments/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../fundamentals/01-how-python-runs-a-program/README.pt-BR.md)
+[← Anterior](../04-virtual-environments/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-git-and-version-control/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
 ## Objetivo
@@ -94,7 +94,7 @@ Downloads dos navegadores exigem rede, armazenamento e às vezes dependências d
 
 Se a instalação falhar, leia o erro, confira compatibilidade Python e acesso à internet e verifique o ambiente. Não contorne verificações de certificados ou segurança. Se um import falhar, compare interpretadores usados para instalar e executar.
 
-**Referência rápida:** instalar com python -m pip install PACKAGE, inspecionar com show/list, verificar com check, registrar com freeze, recriar com install -r requirements.txt. Siga para Fundamentos para entender o código Python.
+**Referência rápida:** instalar com python -m pip install PACKAGE, inspecionar com show/list, verificar com check, registrar com freeze, recriar com install -r requirements.txt. Siga para [Git básico](../06-git-and-version-control/README.pt-BR.md) para versionar seu projeto com segurança antes de Fundamentos.
 
 ## Referências oficiais
 
@@ -104,5 +104,5 @@ Se a instalação falhar, leia o erro, confira compatibilidade Python e acesso �
 - [Navegadores Playwright](https://playwright.dev/python/docs/browsers)
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../04-virtual-environments/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../fundamentals/01-how-python-runs-a-program/README.pt-BR.md)
+[← Anterior](../04-virtual-environments/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-git-and-version-control/README.pt-BR.md)
 <!-- /chapter-navigation:bottom -->

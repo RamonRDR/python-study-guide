@@ -98,7 +98,7 @@ Open Command Palette > **Python: Select Interpreter**. Select the interpreter in
 
 In an activated shell, type `deactivate`. Closing the shell also ends its activation. The directory and installed packages remain. Do not copy or move .venv between machines; recreate it using the base Python and dependency file. If recreating, close terminals using it, confirm the exact directory and remove only that environment using the file manager; keep source files and requirements.
 
-Add `.venv/` to the project's root .gitignore (this repository already ignores .venv). Never commit the generated environment. Keep your code outside it. Environment variables, browser binaries, OS libraries and services may live elsewhere; venv isolates Python packages, not all resources.
+Add `.venv/` to the project's root .gitignore (this repository already ignores .venv). Never commit the generated environment. [Chapter 06](../06-git-and-version-control/README.md) explains how to initialize Git and inspect ignored files. Keep your code outside it. Environment variables, browser binaries, OS libraries and services may live elsewhere; venv isolates Python packages, not all resources.
 
 ## 5. Practice and troubleshooting
 

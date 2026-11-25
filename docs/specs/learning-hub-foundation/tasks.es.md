@@ -13,7 +13,7 @@ Estado al 25/11/2026: Sprints 00–01 fusionados; incorporación del Sprint 02 e
 | T00-05 Verificar PR de especificación, CI y hallazgos Codex | 00 | T00-04 | Hecho ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T00-06 Obtener aprobación y fusión | 00 | T00-05 | Hecho ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T01-01 Inventariar e implementar navegación por idioma y pruebas | 01 | T00-06 | Hecho ([PR #88](https://github.com/RamonRDR/python-study-guide/pull/88)) |
-| T02-01 Crear cinco lecciones Getting Started, incluidos entornos locales por proyecto y gestión de dependencias; conectar Fundamentals | 02 | T01-01 | Implementado; CI y revisión pendientes |
+| T02-01 Crear seis lecciones Getting Started, incluidos entornos por proyecto, gestión de dependencias y Git básico; conectar Fundamentals y mapear referencias futuras entre guías | 02 | T01-01 | Implementado; CI y revisión pendientes |
 | T03-01 Alinear README, roadmap, ruta, estructura y badges | 03 | T02-01 | Pendiente |
 | T04-01 Añadir práctica manual e ingeniería | 04 | T03-01 | Pendiente |
 | T05-00 Mapear todos los requisitos previos FR-05 a las lecciones existentes y enseñar conceptos ausentes en EN/PT-BR/ES antes de publicar retos | 05 | T04-01 | Pendiente |

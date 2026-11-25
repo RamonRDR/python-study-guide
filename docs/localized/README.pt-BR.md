@@ -59,7 +59,7 @@ As explicações estão disponíveis em inglês, português brasileiro e espanho
 
 ## Como estudar
 
-Nunca programou? Comece por [Primeiros passos](../../getting-started/README.pt-BR.md) para instalar Python, preparar seu editor, executar o primeiro arquivo, criar um ambiente isolado por projeto e gerenciar dependências. Depois siga a trilha completa.
+Nunca programou? Comece por [Primeiros passos](../../getting-started/README.pt-BR.md) para instalar Python, preparar seu editor, executar o primeiro arquivo, criar um ambiente isolado por projeto, gerenciar dependências e registrar alterações com Git. Depois siga a trilha completa.
 
 Cada capítulo segue uma estrutura consistente:
 

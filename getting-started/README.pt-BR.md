@@ -11,9 +11,10 @@ Este módulo introdutório (ordem curricular 00) prepara seu computador antes da
 3. [Executar seu primeiro programa](03-run-your-first-program/README.pt-BR.md): Criar, salvar e executar um arquivo Python local.
 4. [Ambientes virtuais](04-virtual-environments/README.pt-BR.md): Criar e verificar uma .venv por projeto.
 5. [Pacotes e gerenciamento de dependências](05-packages-and-dependencies/README.pt-BR.md): Instalar, inspecionar, registrar e recriar dependências do projeto.
+6. [Git e fundamentos do controle de versão](06-git-and-version-control/README.pt-BR.md): Registrar e inspecionar mudanças; entender sincronização remota.
 
 ## O que você precisa demonstrar
 
-Você consegue identificar sua versão do Python, selecionar o interpretador desejado, criar um arquivo `.py`, executá-lo no terminal e localizar sua saída. Você também consegue criar e selecionar um ambiente virtual local ao projeto, instalar um pacote e recriar o ambiente a partir de um arquivo de dependências. Depois, siga para Fundamentos para entender código-fonte, execução e erros de sintaxe.
+Você consegue identificar sua versão do Python, selecionar o interpretador desejado, criar um arquivo `.py`, executá-lo no terminal e localizar sua saída. Você também consegue criar e selecionar um ambiente virtual local ao projeto, instalar um pacote e recriar o ambiente a partir de um arquivo de dependências. Você consegue registrar um commit Git revisado e explicar a diferença entre commit local e sincronização remota. Depois, siga para Fundamentos para entender código-fonte, execução e erros de sintaxe.
 
 [Próximo módulo: Fundamentos](../fundamentals/README.pt-BR.md) · [Trilha completa](../docs/learning-path.pt-BR.md)

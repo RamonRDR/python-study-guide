@@ -55,7 +55,7 @@ Las Fases 0–10 están completadas. La Fase 10: Proyectos Prácticos cierra con
 
 ## Orden curricular 00: Primeros pasos
 
-El módulo introductorio precede a la Fase 1 y es independiente de la Fase 0 histórica (Base del proyecto). Consulta [Primeros pasos](../getting-started/README.es.md) para instalar Python, configurar el editor, realizar la primera ejecución manual y gestionar entornos virtuales y dependencias por proyecto.
+El módulo introductorio precede a la Fase 1 y es independiente de la Fase 0 histórica (Base del proyecto). Consulta [Primeros pasos](../getting-started/README.es.md) para instalar Python, configurar el editor, realizar la primera ejecución manual y gestionar entornos virtuales, dependencias por proyecto y control de versiones Git básico.
 
 ## Fase 1: Fundamentos
 

@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Previous](../04-virtual-environments/README.md) · [Module index](../README.md) · [Next →](../../fundamentals/01-how-python-runs-a-program/README.md)
+[← Previous](../04-virtual-environments/README.md) · [Module index](../README.md) · [Next →](../06-git-and-version-control/README.md)
 <!-- /chapter-navigation:top -->
 
 ## Goal
@@ -94,7 +94,7 @@ Browser downloads require network access, storage and sometimes OS dependencies.
 
 If installation fails, read the error, confirm Python compatibility and internet access, and verify the environment. Do not bypass certificate or security checks. If an import fails, compare the interpreter used for installation with the interpreter used to run the file.
 
-**Quick reference:** install with python -m pip install PACKAGE, inspect with show/list, check with check, record with freeze, recreate with install -r requirements.txt. Continue to Fundamentals to understand Python code itself.
+**Quick reference:** install with python -m pip install PACKAGE, inspect with show/list, check with check, record with freeze, recreate with install -r requirements.txt. Continue to [Git basics](../06-git-and-version-control/README.md) to record your project safely before Fundamentals.
 
 ## Official references
 
@@ -104,5 +104,5 @@ If installation fails, read the error, confirm Python compatibility and internet
 - [Playwright browsers](https://playwright.dev/python/docs/browsers)
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../04-virtual-environments/README.md) · [Module index](../README.md) · [Next →](../../fundamentals/01-how-python-runs-a-program/README.md)
+[← Previous](../04-virtual-environments/README.md) · [Module index](../README.md) · [Next →](../06-git-and-version-control/README.md)
 <!-- /chapter-navigation:bottom -->
