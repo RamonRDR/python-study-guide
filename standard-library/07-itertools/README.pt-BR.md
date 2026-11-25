@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Standard Library](../README.pt-BR.md) · [← Capítulo anterior: Collections](../06-collections/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../06-collections/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../08-decimal/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Capítulos anteriores introduziram `for`, iteráveis, a diferença básica entre iterable e iterator e helpers como `range()`, `enumerate()` e `zip()`. Este capítulo avança: estuda `itertools` como uma caixa de ferramentas para compor **pipelines lazy de iteradores** com contratos explícitos de consumo, buffering, agrupamento e combinatória.
 
@@ -1147,3 +1149,7 @@ Referências primárias usadas neste capítulo:
 Continue com o [Capítulo 08: `decimal`](../08-decimal/README.pt-BR.md).
 
 O próximo capítulo muda de contratos de iteração lazy para **contratos de precisão numérica**: representação decimal, contexts, rounding, traps, quantização e aritmética exata para valores em que o comportamento binário de ponto flutuante não é o modelo desejado.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../06-collections/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../08-decimal/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de Colecciones](../README.es.md) · [Siguiente capítulo: Modificar listas y métodos comunes de listas →](../02-modifying-lists-and-methods/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../../strings-and-numbers/04-numeric-builtins/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-modifying-lists-and-methods/README.es.md)
+<!-- /chapter-navigation:top -->
 
 La Fase 2 enseñó cómo las strings ordenadas exponen posiciones y slices. La Fase 3 comienza aplicando esa idea familiar a un nuevo tipo de valor: una **lista**, que puede mantener varios valores relacionados juntos bajo un solo nombre.
 
@@ -631,3 +633,7 @@ Asegúrate de poder responder:
 ## Siguiente paso
 
 Continúa con **Modificar Listas y Métodos Comunes de Listas** para aprender cómo funciona la mutabilidad en la práctica.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../strings-and-numbers/04-numeric-builtins/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-modifying-lists-and-methods/README.es.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Errors, Files, and Modules](../README.md) · [← Previous: Working with TXT, CSV, and JSON](../04-txt-csv-and-json/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../04-txt-csv-and-json/README.md) · [Module index](../README.md) · [Next →](../../standard-library/01-pathlib/README.md)
+<!-- /chapter-navigation:top -->
 
 As programs grow, keeping every function, constant, parser, and workflow in one file becomes harder to understand and maintain. Python's import system lets you divide code into **modules** and organize related modules into **packages**.
 
@@ -1032,3 +1034,7 @@ use Python's standard-library modules deliberately
 - Python 3.14 language reference, The import statement: <https://docs.python.org/3.14/reference/simple_stmts.html#import>
 - Python 3.14 command-line documentation, `-m`: <https://docs.python.org/3.14/using/cmdline.html#cmdoption-m>
 - Python 3.14 `__main__` documentation: <https://docs.python.org/3.14/library/__main__.html>
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../04-txt-csv-and-json/README.md) · [Module index](../README.md) · [Next →](../../standard-library/01-pathlib/README.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: `int`, `float` y `bool`](../03-int-float-and-bool/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-int-float-and-bool/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../collections/01-list-creation-and-indexing/README.es.md)
+<!-- /chapter-navigation:top -->
 
 La Fase 2 ya presentó texto, operaciones con strings, enteros, valores de punto flotante y valores booleanos. Este capítulo cierra la fase combinando ese conocimiento con cinco funciones incorporadas que resuelven tareas numéricas comunes sin requerir importaciones.
 
@@ -1142,3 +1144,7 @@ La siguiente fase curricular introduce **Colecciones**, donde múltiples valores
 ## Siguiente paso
 
 La Fase 2 está completada. Continúa con el [roadmap principal](../../docs/roadmap.es.md) para revisar la fase completada y ver la **Fase 3: Colecciones**, planificada a continuación.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-int-float-and-bool/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../collections/01-list-creation-and-indexing/README.es.md)
+<!-- /chapter-navigation:bottom -->

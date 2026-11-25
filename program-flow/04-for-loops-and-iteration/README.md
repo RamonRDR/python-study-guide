@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Program Flow](../README.md) · [← Previous: `match` and `case`](../03-match-and-case/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-match-and-case/README.md) · [Module index](../README.md) · [Next →](../05-range-enumerate-and-zip/README.md)
+<!-- /chapter-navigation:top -->
 
 The previous chapters taught Python how to **choose** what should run. A `for` loop introduces a different kind of control flow: **repeat a block once for each item provided by an iterable**.
 
@@ -1055,3 +1057,7 @@ You now know how to process items directly. Next, the guide adds tools for gener
 - [Python 3.13 glossary: iterator](https://docs.python.org/3.13/glossary.html#term-iterator)
 - [Python 3.13 tutorial: Looping Techniques](https://docs.python.org/3.13/tutorial/datastructures.html#looping-techniques)
 - [PEP 8: Indentation](https://peps.python.org/pep-0008/#indentation)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-match-and-case/README.md) · [Module index](../README.md) · [Next →](../05-range-enumerate-and-zip/README.md)
+<!-- /chapter-navigation:bottom -->

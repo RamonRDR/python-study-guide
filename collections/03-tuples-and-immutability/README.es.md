@@ -6,7 +6,9 @@
 
 </div>
 
-[← Capítulo anterior: Modificar listas y métodos comunes de listas](../02-modifying-lists-and-methods/README.es.md) · [Volver al índice de Colecciones](../README.es.md) · [Siguiente capítulo: Diccionarios: claves y valores](../04-dictionaries-keys-and-values/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-modifying-lists-and-methods/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-dictionaries-keys-and-values/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Las listas enseñaron qué significa que una colección sea mutable. Las tuplas presentan la idea opuesta: una secuencia ordenada cuyas posiciones no pueden sustituirse, añadirse ni eliminarse después de crear la tupla.
 
@@ -738,3 +740,7 @@ Referencias oficiales utilizadas para la verificación técnica:
 - [Python Built-in Types: Common Sequence Operations](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations)
 - [Python Built-in Types: Tuples](https://docs.python.org/3/library/stdtypes.html#tuples)
 - [Python Data Model: Tuples](https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-modifying-lists-and-methods/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-dictionaries-keys-and-values/README.es.md)
+<!-- /chapter-navigation:bottom -->

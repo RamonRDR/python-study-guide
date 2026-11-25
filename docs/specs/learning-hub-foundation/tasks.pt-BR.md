@@ -2,17 +2,17 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Status em 25/11/2026: direção aprovada; PR de especificação em preparação. Nenhuma sprint funcional implementada.
+Status em 25/11/2026: Sprint 00 integrada; implementação da navegação da Sprint 01 em validação e revisão.
 
 | Tarefa | Sprint | Dependência | Status |
 | --- | --- | --- | --- |
 | T00-01 Confirmar repositório, baseline, branches e CI | 00 | Nenhuma | Concluído (auditoria somente leitura) |
 | T00-02 Auditar árvore e amostras de docs/scripts | 00 | T00-01 | Concluído (amostragem) |
 | T00-03 Aprovar arquitetura e abordagem documental | 00 | T00-02 | Concluído (aprovação do mantenedor) |
-| T00-04 Preparar SDD trilíngue e contrato preliminar | 00 | T00-03 | Em preparação para revisão |
-| T00-05 Verificar PR de especificação, CI e findings Codex | 00 | T00-04 | Pendente |
-| T00-06 Obter aprovação e merge | 00 | T00-05 | Pendente |
-| T01-01 Inventariar e implementar navegação por idioma e testes | 01 | T00-06 | Pendente |
+| T00-04 Preparar SDD trilíngue e contrato preliminar | 00 | T00-03 | Concluído ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
+| T00-05 Verificar PR de especificação, CI e findings Codex | 00 | T00-04 | Concluído ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
+| T00-06 Obter aprovação e merge | 00 | T00-05 | Concluído ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
+| T01-01 Inventariar e implementar navegação por idioma e testes | 01 | T00-06 | Implementado; CI e revisão pendentes |
 | T02-01 Criar Getting Started e conectar Fundamentals | 02 | T01-01 | Pendente |
 | T03-01 Alinhar README, roadmap, trilha, estrutura e badges | 03 | T02-01 | Pendente |
 | T04-01 Adicionar prática manual e engenharia | 04 | T03-01 | Pendente |

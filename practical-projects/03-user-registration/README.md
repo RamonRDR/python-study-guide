@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Practical Projects](../README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-grade-calculator/README.md) · [Module index](../README.md) · [Next →](../04-csv-analyzer/README.md)
+<!-- /chapter-navigation:top -->
 
 This is the third project in **Phase 10: Practical Projects**. It focuses on identity-like data validation, canonical values, duplicate prevention, indexed lookup, safe updates, explicit account states, and service-layer boundaries without introducing real authentication or personal data.
 
@@ -483,3 +485,7 @@ Before considering your own implementation complete, verify:
 Project 03 adds canonical identity data, duplicate prevention, secondary indexes, safe updates, and lifecycle state transitions to the Phase 10 progression.
 
 The next planned project is **CSV Analyzer**, which will shift the focus toward tabular input, schema expectations, row-level validation, aggregation, malformed data, and deterministic analysis.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-grade-calculator/README.md) · [Module index](../README.md) · [Next →](../04-csv-analyzer/README.md)
+<!-- /chapter-navigation:bottom -->

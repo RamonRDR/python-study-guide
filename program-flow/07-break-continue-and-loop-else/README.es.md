@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Flujo del Programa](../README.es.md) · [← Anterior: Bucles `while` y Repetición Guiada por Estado](../06-while-loops-and-state-driven-repetition/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../06-while-loops-and-state-driven-repetition/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../08-choosing-and-combining-program-flow/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Los bucles normalmente siguen su regla natural de repetición: un bucle `for` consume su iterable y un bucle `while` continúa mientras su condición siga siendo verdadera. A veces, sin embargo, un programa necesita **detenerse antes del final, saltar el resto de una iteración o distinguir la finalización normal de una salida anticipada**.
 
@@ -865,3 +867,7 @@ Ahora ya conoces las principales herramientas de selección y repetición de la 
 - [Referencia del lenguaje Python 3.13: `while`](https://docs.python.org/3.13/reference/compound_stmts.html#the-while-statement)
 - [Referencia del lenguaje Python 3.13: `for`](https://docs.python.org/3.13/reference/compound_stmts.html#the-for-statement)
 - [Tutorial de Python 3.13: `break`, `continue` y `else` de bucles](https://docs.python.org/3.13/tutorial/controlflow.html#break-and-continue-statements)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../06-while-loops-and-state-driven-repetition/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../08-choosing-and-combining-program-flow/README.es.md)
+<!-- /chapter-navigation:bottom -->

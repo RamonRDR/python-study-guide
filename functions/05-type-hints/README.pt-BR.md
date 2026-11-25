@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Funções](../README.pt-BR.md) · [← Anterior: Escopo](../04-scope/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-scope/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-default-values/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 O Capítulo 01 deu nome ao comportamento. O Capítulo 02 levou dados para dentro das funções. O Capítulo 03 devolveu resultados. O Capítulo 04 explicou onde os nomes existem. Este capítulo adiciona outra camada:
 
@@ -648,7 +650,6 @@ describe the interface with type hints
 
 O próximo capítulo adiciona **Valores Padrão**, permitindo que alguns parâmetros se tornem opcionais no momento da chamada enquanto a interface continua explícita.
 
-[← Anterior: Escopo](../04-scope/README.pt-BR.md) · [Voltar para Funções](../README.pt-BR.md)
 
 ## Referências
 
@@ -657,3 +658,7 @@ Documentação primária do Python:
 - [Python 3.13 `typing` — Support for type hints](https://docs.python.org/3.13/library/typing.html)
 - [Python 3.13 Data model — anotações de função e `__annotations__`](https://docs.python.org/3.13/reference/datamodel.html)
 - [Python 3.13 Tipos embutidos — relação entre `bool` e `int`](https://docs.python.org/3.13/library/stdtypes.html)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-scope/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-default-values/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

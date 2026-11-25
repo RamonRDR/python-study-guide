@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Program Flow](../README.md) · [← Previous phase: Choosing the Right Collection](../../collections/06-choosing-the-right-collection/README.md) · [Next: `if`, `elif`, and `else` →](../02-if-elif-and-else/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../../collections/06-choosing-the-right-collection/README.md) · [Module index](../README.md) · [Next →](../02-if-elif-and-else/README.md)
+<!-- /chapter-navigation:top -->
 
 Conditions are the questions a program can evaluate before it decides what should happen next.
 
@@ -982,3 +984,7 @@ There, these conditions stop being values that you only print and start controll
 - [Python 3.13 built-in types: Truth Value Testing and Boolean Operations](https://docs.python.org/3.13/library/stdtypes.html#truth-value-testing)
 - [Python 3.13 language reference: Comparisons](https://docs.python.org/3.13/reference/expressions.html#comparisons)
 - [PEP 8: Programming Recommendations](https://peps.python.org/pep-0008/#programming-recommendations)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../../collections/06-choosing-the-right-collection/README.md) · [Module index](../README.md) · [Next →](../02-if-elif-and-else/README.md)
+<!-- /chapter-navigation:bottom -->

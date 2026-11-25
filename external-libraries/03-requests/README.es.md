@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Bibliotecas Externas](../README.es.md) · [← Anterior: `openpyxl`](../02-openpyxl/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-openpyxl/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-pytest/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Los archivos locales son solo un tipo de frontera. Los programas Python modernos también intercambian datos con servicios web, APIs internas, plataformas SaaS, servidores de autenticación, endpoints de almacenamiento y otros sistemas mediante HTTP. El paquete `requests` ofrece a Python un cliente HTTP compacto y legible, manteniendo visibles los conceptos de protocolo necesarios para integraciones confiables.
 
@@ -997,3 +999,7 @@ pytest   -> verify behavior repeatedly and automatically
 El siguiente capítulo ya está publicado: [`pytest`: Ingeniería de Pruebas Automatizadas](../04-pytest/README.es.md). Pasa del consumo de servicios externos a demostrar sistemáticamente que el comportamiento de Python continúa siendo correcto.
 
 Antes de continuar, construye al menos un cliente contra un servidor HTTP local. El código de API confiable comienza cuando el comportamiento de red se convierte en algo que puedes reproducir, inspeccionar y probar.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-openpyxl/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-pytest/README.es.md)
+<!-- /chapter-navigation:bottom -->

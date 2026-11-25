@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Errores, Archivos y Módulos](../README.es.md) · [← Fase anterior: Comentarios y Documentación](../../comments-and-documentation/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../../comments-and-documentation/06-pep8-and-readability/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-raise-and-custom-exceptions/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Los programas no siempre siguen el camino ideal. Una conversión puede recibir texto inválido, una división puede usar cero, una consulta en un diccionario puede no encontrar una clave o una futura operación con archivos puede fallar.
 
@@ -898,3 +900,7 @@ Próximo capítulo planificado: **Lanzar Excepciones y Excepciones Personalizada
 - [Python 3.13 Language Reference: The `try` statement](https://docs.python.org/3.13/reference/compound_stmts.html#the-try-statement)
 - [Python 3.13 Execution Model: Exceptions](https://docs.python.org/3.13/reference/executionmodel.html#exceptions)
 - [Python 3.13 Built-in Exceptions](https://docs.python.org/3.13/library/exceptions.html)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../comments-and-documentation/06-pep8-and-readability/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-raise-and-custom-exceptions/README.es.md)
+<!-- /chapter-navigation:bottom -->

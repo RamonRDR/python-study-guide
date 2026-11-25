@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar ao índice da seção](../README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../../functions/09-data-flow-between-functions/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-docstrings/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Comentários ajudam quem lê a compreender decisões, restrições e contextos que não são evidentes apenas pelo código. Eles são valiosos quando preservam um raciocínio. Tornam-se ruído quando apenas repetem o que o código já diz.
 
@@ -637,3 +639,7 @@ Antes de manter ou adicionar um comentário, pergunte:
 ## Princípio final
 
 Um comentário útil deixa o código mais fácil de compreender depois que a pessoa processa os dois. Se apagar o comentário não mudar nada na compreensão, provavelmente ele não era necessário.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../functions/09-data-flow-between-functions/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-docstrings/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

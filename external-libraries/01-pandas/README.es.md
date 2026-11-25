@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Bibliotecas Externas](../README.es.md) · [← Fase anterior: `os` + `shutil`](../../standard-library/09-os-shutil/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../../standard-library/09-os-shutil/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-openpyxl/README.es.md)
+<!-- /chapter-navigation:top -->
 
 La Fase 9 comienza donde termina la biblioteca estándar: incorporando paquetes de terceros con sus propios ciclos de lanzamiento, contratos de dependencias y abstracciones específicas de dominio.
 
@@ -1370,3 +1372,7 @@ La documentación oficial identifica pandas 3.0.5 como la documentación estable
 Después de `pandas`, la ruta continúa con **`openpyxl`**, pasando de la semántica de tablas a la estructura de libros de Excel.
 
 Continúa con [`openpyxl`: Automatizando Libros de Excel](../02-openpyxl/README.es.md) para estudiar operaciones con hojas/celdas, límites de fórmulas, estilos, tablas, metadatos de validación, modos optimizados y round-trips seguros.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../standard-library/09-os-shutil/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-openpyxl/README.es.md)
+<!-- /chapter-navigation:bottom -->

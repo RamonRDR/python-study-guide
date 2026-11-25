@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Docstrings](../02-docstrings/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-docstrings/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-task-markers/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Un nombre es una de las decisiones de diseño más pequeñas de un programa, pero puede leerse cientos de veces. Los buenos nombres reducen la cantidad de contexto que una persona debe reconstruir y ayudan al código a comunicar intención antes de que sea necesario un comentario o una docstring.
 
@@ -658,4 +660,6 @@ Los nombres significativos son documentación ejecutable entretejida directament
 
 Elige nombres que sigan siendo verdaderos, revelen el vocabulario del programa y reduzcan la cantidad de suposiciones que debe hacer quien lee.
 
-[← Capítulo anterior: Docstrings](../02-docstrings/README.es.md) · [Volver al índice de la sección](../README.es.md) · Próximo capítulo: Marcadores de tareas
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-docstrings/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-task-markers/README.es.md)
+<!-- /chapter-navigation:bottom -->

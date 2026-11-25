@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Funções](../README.pt-BR.md) · [← Anterior: Valores Padrão](../06-default-values/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../06-default-values/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../08-functions-working-together/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Os capítulos anteriores deram às funções parâmetros obrigatórios, valores de retorno, escopo, type hints e valores padrão seguros. Este capítulo adiciona uma nova opção de design: uma função pode coletar uma **quantidade variável de argumentos** quando a contagem exata é intencionalmente flexível.
 
@@ -692,3 +694,7 @@ Documentação primária do Python:
 - [Python 3.13 Tutorial: Arbitrary Argument Lists](https://docs.python.org/3.13/tutorial/controlflow.html#arbitrary-argument-lists)
 - [Python 3.13 Tutorial: Keyword Arguments](https://docs.python.org/3.13/tutorial/controlflow.html#keyword-arguments)
 - [Python 3.13 Language Reference: Function definitions](https://docs.python.org/3.13/reference/compound_stmts.html#function-definitions)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../06-default-values/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../08-functions-working-together/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

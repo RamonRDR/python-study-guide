@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Projetos Práticos](../README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-grade-calculator/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-csv-analyzer/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Este é o terceiro projeto da **Fase 10: Projetos Práticos**. O foco está em validação de dados semelhantes a identidade, valores canônicos, prevenção de duplicidade, busca indexada, atualizações seguras, estados explícitos de conta e limites claros de serviço, sem introduzir autenticação real ou dados pessoais.
 
@@ -483,3 +485,7 @@ Antes de considerar sua implementação concluída, confira:
 O Projeto 03 adiciona identidade canônica, prevenção de duplicidade, índices secundários, atualizações seguras e transições de ciclo de vida à progressão da Fase 10.
 
 O próximo projeto planejado é **CSV Analyzer**, que mudará o foco para entrada tabular, expectativas de schema, validação por linha, agregações, dados malformados e análise determinística.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-grade-calculator/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-csv-analyzer/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

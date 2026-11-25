@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: Comentários versus logging](../05-comments-vs-logging/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../05-comments-vs-logging/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../errors-files-and-modules/01-try-except-else-finally/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 A PEP 8 é o guia de estilo do código Python da biblioteca padrão e uma referência amplamente utilizada em projetos Python. Seu objetivo não é tornar todos os arquivos visualmente idênticos. Seu objetivo é melhorar a legibilidade e a consistência para que o leitor gaste menos esforço decifrando a apresentação e mais esforço compreendendo o comportamento.
 
@@ -348,4 +350,6 @@ Um resultado limpo de formatador ou linter é evidência útil, não substituto 
 - [PEP 8 — Guia de Estilo para Código Python](https://peps.python.org/pep-0008/)
 - [Tutorial do Python — Estilo de codificação](https://docs.python.org/pt-br/3/tutorial/controlflow.html#intermezzo-estilo-de-codificacao)
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: Comentários versus logging](../05-comments-vs-logging/README.pt-BR.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../05-comments-vs-logging/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../errors-files-and-modules/01-try-except-else-finally/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Bibliotecas Externas](../README.pt-BR.md) · [← Anterior: `pandas`](../01-pandas/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-pandas/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-requests/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 O `pandas` trata dados semelhantes aos de planilhas principalmente como tabelas. O `openpyxl` atua em outra camada: o próprio workbook do Excel. Ele permite que Python crie, inspecione, edite, formate e salve workbooks Office Open XML preservando conceitos como planilhas, células, fórmulas, estilos, tabelas, validações, gráficos e configurações de impressão.
 
@@ -1137,3 +1139,7 @@ openpyxl -> construct and maintain Excel workbooks
 Continue com **[`requests`: Consumindo APIs HTTP](../03-requests/README.pt-BR.md)**, quando a fronteira deixa arquivos locais e passa para serviços HTTP e APIs.
 
 Antes de avançar, pratique gerando workbooks que possam ser inspecionados manualmente e validados automaticamente. Automação de planilhas fica confiável quando tanto o contrato de dados quanto o contrato do workbook são explícitos.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-pandas/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-requests/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

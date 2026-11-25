@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: Como o Python executa um programa](../01-how-python-runs-a-program/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-how-python-runs-a-program/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-variables-and-naming/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Um programa se torna mais fácil de compreender quando consegue mostrar o que está fazendo e receber informações da pessoa que o utiliza. O Python fornece duas funções embutidas para essas primeiras conversas: `print()` exibe saídas, e `input()` lê uma linha de texto no terminal.
 
@@ -471,4 +473,6 @@ O executor de exemplos aprovados executa `output_basics.py`, mas não executa `i
 - [Documentação do Python — Funções embutidas: `print()` e `input()`](https://docs.python.org/3/library/functions.html)
 - [Tutorial do Python — Entrada e saída](https://docs.python.org/3/tutorial/inputoutput.html)
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: Como o Python executa um programa](../01-how-python-runs-a-program/README.pt-BR.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-how-python-runs-a-program/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-variables-and-naming/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

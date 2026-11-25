@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Fluxo do Programa](../README.pt-BR.md) · [← Anterior: `match` e `case`](../03-match-and-case/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-match-and-case/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../05-range-enumerate-and-zip/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Os capítulos anteriores ensinaram Python a **escolher** o que deve ser executado. Um loop `for` introduz um tipo diferente de controle de fluxo: **repetir um bloco uma vez para cada item fornecido por um iterável**.
 
@@ -1055,3 +1057,7 @@ Agora você sabe processar itens diretamente. Em seguida, o guia adiciona ferram
 - [Python 3.13 glossary: iterator](https://docs.python.org/3.13/glossary.html#term-iterator)
 - [Python 3.13 tutorial: Looping Techniques](https://docs.python.org/3.13/tutorial/datastructures.html#looping-techniques)
 - [PEP 8: Indentation](https://peps.python.org/pep-0008/#indentation)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-match-and-case/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../05-range-enumerate-and-zip/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

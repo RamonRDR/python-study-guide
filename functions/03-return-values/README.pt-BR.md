@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Funções](../README.pt-BR.md) · [← Anterior: Parâmetros e Argumentos](../02-parameters-and-arguments/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-parameters-and-arguments/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-scope/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 O Capítulo 01 deu nome ao comportamento. O Capítulo 02 permitiu que o chamador enviasse valores para esse comportamento. Este capítulo completa a primeira viagem de ida e volta dos dados:
 
@@ -693,3 +695,7 @@ Documentação primária do Python:
 
 - [Tutorial do Python 3.13: Definindo Funções](https://docs.python.org/pt-br/3.13/tutorial/controlflow.html#defining-functions)
 - [Referência da Linguagem Python 3.13: A instrução `return`](https://docs.python.org/pt-br/3.13/reference/simple_stmts.html#the-return-statement)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-parameters-and-arguments/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-scope/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

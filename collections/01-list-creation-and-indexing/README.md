@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the Collections index](../README.md) · [Next chapter: Modifying lists and common list methods →](../02-modifying-lists-and-methods/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../../strings-and-numbers/04-numeric-builtins/README.md) · [Module index](../README.md) · [Next →](../02-modifying-lists-and-methods/README.md)
+<!-- /chapter-navigation:top -->
 
 Phase 2 taught you how ordered strings expose positions and slices. Phase 3 begins by applying that familiar idea to a new kind of value: a **list**, which can keep several related values together under one name.
 
@@ -631,3 +633,7 @@ Make sure you can answer:
 ## Next step
 
 Continue with **Modifying Lists and Common List Methods** to learn how mutability works in practice.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../../strings-and-numbers/04-numeric-builtins/README.md) · [Module index](../README.md) · [Next →](../02-modifying-lists-and-methods/README.md)
+<!-- /chapter-navigation:bottom -->

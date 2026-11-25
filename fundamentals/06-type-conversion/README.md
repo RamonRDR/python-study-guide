@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: `type()` and `isinstance()`](../05-type-and-isinstance/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../05-type-and-isinstance/README.md) · [Module index](../README.md) · [Next →](../../strings-and-numbers/01-string-creation-and-indexing/README.md)
+<!-- /chapter-navigation:top -->
 
 Chapter 05 taught you how to inspect the type a value already has. This final Fundamentals chapter teaches the next step: deliberately creating a value of another compatible type.
 
@@ -510,4 +512,6 @@ You can now execute a Python file, display and receive information, store values
 - [Python built-in types — Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth-value-testing)
 - [Python built-in exceptions — `ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError)
 
-[← Back to the section index](../README.md) · [← Previous chapter: `type()` and `isinstance()`](../05-type-and-isinstance/README.md)
+<!-- chapter-navigation:bottom -->
+[← Previous](../05-type-and-isinstance/README.md) · [Module index](../README.md) · [Next →](../../strings-and-numbers/01-string-creation-and-indexing/README.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Erros, Arquivos e Módulos](../README.pt-BR.md) · [← Anterior: Abrindo Arquivos com Segurança com `open()` e `with`](../03-open-and-with/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-open-and-with/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../05-imports-modules-and-packages/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Abrir um arquivo com segurança é apenas metade do trabalho. Um programa também precisa entender **como os dados dentro desse arquivo estão organizados**.
 
@@ -885,3 +887,7 @@ imports / módulos / pacotes
 - Documentação `json` do Python 3.14: <https://docs.python.org/3.14/library/json.html>
 - Tutorial do Python 3.14, Reading and Writing Files: <https://docs.python.org/3.14/tutorial/inputoutput.html#reading-and-writing-files>
 - Tutorial do Python 3.14, Saving structured data with `json`: <https://docs.python.org/3.14/tutorial/inputoutput.html#saving-structured-data-with-json>
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-open-and-with/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../05-imports-modules-and-packages/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

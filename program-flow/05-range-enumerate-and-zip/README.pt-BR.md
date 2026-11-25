@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Fluxo do Programa](../README.pt-BR.md) · [← Anterior: Loops `for` e Iteração](../04-for-loops-and-iteration/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-for-loops-and-iteration/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-while-loops-and-state-driven-repetition/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Um loop `for` simples costuma ser suficiente quando você precisa apenas de cada item. Às vezes, porém, o loop também precisa de **números, posições ou itens de mais de um iterável**.
 
@@ -902,3 +904,7 @@ Agora você sabe repetir trabalho para itens e moldar a iteração quando o loop
 - [Tutorial do Python 3.13: Técnicas de iteração](https://docs.python.org/3.13/tutorial/datastructures.html#looping-techniques)
 - [Funções embutidas do Python 3.13: `enumerate()` e `zip()`](https://docs.python.org/3.13/library/functions.html)
 - [Tipos embutidos do Python 3.13: Ranges](https://docs.python.org/3.13/library/stdtypes.html#typesseq-range)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-for-loops-and-iteration/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../06-while-loops-and-state-driven-repetition/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

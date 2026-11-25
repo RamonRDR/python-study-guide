@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: `int`, `float`, and `bool`](../03-int-float-and-bool/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-int-float-and-bool/README.md) · [Module index](../README.md) · [Next →](../../collections/01-list-creation-and-indexing/README.md)
+<!-- /chapter-navigation:top -->
 
 Phase 2 has already introduced text, string operations, integers, floating-point values, and Boolean values. This chapter finishes the phase by combining that knowledge with five built-in functions that solve common numeric tasks without requiring imports.
 
@@ -1142,3 +1144,7 @@ The next curriculum phase introduces **Collections**, where multiple values beco
 ## Next step
 
 Phase 2 is complete. Continue with the [main roadmap](../../docs/roadmap.en.md) to review the completed phase and see **Phase 3: Collections**, which is planned next.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-int-float-and-bool/README.md) · [Module index](../README.md) · [Next →](../../collections/01-list-creation-and-indexing/README.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Biblioteca Estándar](../README.es.md) · [← Anterior: Controlando Contratos de Serialización y Decodificación JSON](../03-json/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-json/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../05-logging/README.es.md)
+<!-- /chapter-navigation:top -->
 
 La Fase 7 presentó CSV como formato tabular y enseñó el uso práctico de `csv.reader()`, `csv.writer()`, `csv.DictReader()` y `csv.DictWriter()`. Este capítulo avanza una capa.
 
@@ -1115,3 +1117,7 @@ Si esas respuestas son explícitas, CSV se convierte en una interfaz comprobable
 ## Próximo capítulo
 
 Continúa con el [**Capítulo 05: Diseñando Pipelines de Logging y Contratos de Contexto en Runtime**](../05-logging/README.es.md). Profundiza niveles efectivos, enrutamiento por handlers, propagación, configuración, registros contextuales, entrega mediante colas, concurrencia y seguridad operativa de logging.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-json/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../05-logging/README.es.md)
+<!-- /chapter-navigation:bottom -->

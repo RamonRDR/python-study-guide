@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: Métodos comuns de strings](../02-common-string-methods/README.pt-BR.md) · [Próximo capítulo: Funções numéricas embutidas →](../04-numeric-builtins/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-common-string-methods/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-numeric-builtins/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 O Python já apresentou esses tipos na fase de Fundamentos. Este capítulo avança um nível ao focar em como eles se comportam em expressões, como seus resultados diferem e quais detalhes importam ao escolher entre eles.
 
@@ -847,4 +849,6 @@ Esse capítulo vai se apoiar diretamente no comportamento numérico estabelecido
 - [Tipos embutidos do Python: Tipo booleano](https://docs.python.org/pt-br/3.14/library/stdtypes.html#boolean-type-bool)
 - [Tutorial do Python: Aritmética de ponto flutuante, problemas e limitações](https://docs.python.org/pt-br/3.14/tutorial/floatingpoint.html)
 
-[← Voltar ao índice da seção](../README.pt-BR.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-common-string-methods/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-numeric-builtins/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

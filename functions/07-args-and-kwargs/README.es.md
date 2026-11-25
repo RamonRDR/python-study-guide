@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Funciones](../README.es.md) · [← Anterior: Valores Predeterminados](../06-default-values/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../06-default-values/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../08-functions-working-together/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Los capítulos anteriores dieron a las funciones parámetros obligatorios, valores de retorno, alcance, type hints y valores predeterminados seguros. Este capítulo añade una nueva opción de diseño: una función puede recoger una **cantidad variable de argumentos** cuando el número exacto es intencionalmente flexible.
 
@@ -692,3 +694,7 @@ Documentación primaria de Python:
 - [Python 3.13 Tutorial: Arbitrary Argument Lists](https://docs.python.org/3.13/tutorial/controlflow.html#arbitrary-argument-lists)
 - [Python 3.13 Tutorial: Keyword Arguments](https://docs.python.org/3.13/tutorial/controlflow.html#keyword-arguments)
 - [Python 3.13 Language Reference: Function definitions](https://docs.python.org/3.13/reference/compound_stmts.html#function-definitions)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../06-default-values/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../08-functions-working-together/README.es.md)
+<!-- /chapter-navigation:bottom -->

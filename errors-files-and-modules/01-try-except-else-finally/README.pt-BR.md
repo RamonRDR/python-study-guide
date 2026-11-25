@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Erros, Arquivos e Módulos](../README.pt-BR.md) · [← Fase anterior: Comentários e Documentação](../../comments-and-documentation/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../../comments-and-documentation/06-pep8-and-readability/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-raise-and-custom-exceptions/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Programas nem sempre seguem o caminho feliz. Uma conversão pode receber texto inválido, uma divisão pode usar zero, uma busca em dicionário pode não encontrar uma chave ou uma operação futura com arquivos pode falhar.
 
@@ -898,3 +900,7 @@ Próximo capítulo planejado: **Levantando Exceções e Exceções Personalizada
 - [Python 3.13 Language Reference: The `try` statement](https://docs.python.org/3.13/reference/compound_stmts.html#the-try-statement)
 - [Python 3.13 Execution Model: Exceptions](https://docs.python.org/3.13/reference/executionmodel.html#exceptions)
 - [Python 3.13 Built-in Exceptions](https://docs.python.org/3.13/library/exceptions.html)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../comments-and-documentation/06-pep8-and-readability/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-raise-and-custom-exceptions/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

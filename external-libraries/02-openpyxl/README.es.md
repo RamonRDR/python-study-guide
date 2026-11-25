@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Bibliotecas Externas](../README.es.md) · [← Anterior: `pandas`](../01-pandas/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-pandas/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-requests/README.es.md)
+<!-- /chapter-navigation:top -->
 
 `pandas` trata los datos similares a hojas de cálculo principalmente como tablas. `openpyxl` trabaja en otra capa: el propio libro de Excel. Permite que Python cree, inspeccione, edite, formatee y guarde libros Office Open XML conservando conceptos como hojas, celdas, fórmulas, estilos, tablas, validaciones, gráficos y configuración de impresión.
 
@@ -1137,3 +1139,7 @@ openpyxl -> construct and maintain Excel workbooks
 Continúa con **[`requests`: Consumiendo APIs HTTP](../03-requests/README.es.md)**, donde la frontera pasa de archivos locales a servicios HTTP y APIs.
 
 Antes de continuar, practica generando libros que puedas inspeccionar manualmente y validar automáticamente. La automatización de hojas de cálculo se vuelve confiable cuando tanto el contrato de datos como el contrato del workbook son explícitos.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-pandas/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-requests/README.es.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Standard Library](../README.md) · [← Previous: `decimal`](../08-decimal/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../08-decimal/README.md) · [Module index](../README.md) · [Next →](../../external-libraries/01-pandas/README.md)
+<!-- /chapter-navigation:top -->
 
 The earlier `pathlib` chapter introduced path objects as the default high-level way to represent and manipulate filesystem paths. This chapter goes lower and wider.
 
@@ -1415,3 +1417,7 @@ This chapter closes **Phase 8: Standard Library**.
 The phase started with object-oriented path modeling in `pathlib` and progressed through date/time contracts, structured data formats, logging, specialized collections, lazy iteration, decimal arithmetic, and finally the operating-system boundary itself.
 
 Continue with **Phase 9: External Libraries**: [`pandas` — Working with Tabular Data](../../external-libraries/01-pandas/README.md).
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../08-decimal/README.md) · [Module index](../README.md) · [Next →](../../external-libraries/01-pandas/README.md)
+<!-- /chapter-navigation:bottom -->

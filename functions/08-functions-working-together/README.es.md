@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Funciones](../README.es.md) · [← Anterior: `*args` y `**kwargs`](../07-args-and-kwargs/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../07-args-and-kwargs/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../09-data-flow-between-functions/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Un programa útil rara vez depende de una sola función gigante. Con más frecuencia, varias funciones pequeñas **dividen el trabajo, se llaman entre sí y conectan sus resultados**.
 
@@ -887,3 +889,7 @@ Documentación primaria de Python:
 - [Python 3.13 Tutorial: Defining Functions](https://docs.python.org/3.13/tutorial/controlflow.html#defining-functions)
 - [Python 3.13 Tutorial: More on Defining Functions](https://docs.python.org/3.13/tutorial/controlflow.html#more-on-defining-functions)
 - [Python 3.13 Language Reference: The `return` statement](https://docs.python.org/3.13/reference/simple_stmts.html#the-return-statement)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../07-args-and-kwargs/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../09-data-flow-between-functions/README.es.md)
+<!-- /chapter-navigation:bottom -->

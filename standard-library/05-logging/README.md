@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Standard Library](../README.md) · [← Previous chapter: CSV](../04-csv/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../04-csv/README.md) · [Module index](../README.md) · [Next →](../06-collections/README.md)
+<!-- /chapter-navigation:top -->
 
 The earlier logging chapter in Phase 6 introduced the purpose of logging, standard levels, module loggers, application-owned configuration, handlers, formatters, propagation, exception logging, privacy, and the difference between logs and comments.
 
@@ -1476,3 +1478,7 @@ This is why advanced logging is less about printing messages and more about desi
 ## Next chapter
 
 Continue to [Chapter 06: `collections`](../06-collections/README.md). It studies specialized containers such as `Counter`, `defaultdict`, `deque`, named tuple records, layered mappings, reordering tools, wrapper bases, and collection interfaces as explicit data-structure choices rather than convenience tricks.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../04-csv/README.md) · [Module index](../README.md) · [Next →](../06-collections/README.md)
+<!-- /chapter-navigation:bottom -->

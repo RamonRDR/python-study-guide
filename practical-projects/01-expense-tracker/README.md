@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Practical Projects](../README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../../external-libraries/04-pytest/README.md) · [Module index](../README.md) · [Next →](../02-grade-calculator/README.md)
+<!-- /chapter-navigation:top -->
 
 This is the first project in **Phase 10: Practical Projects**. The goal is to stop studying concepts in isolation and combine data modeling, functions, collections, exceptions, files, JSON, CSV, `pathlib`, `Decimal`, and `pytest` into one small but complete workflow.
 
@@ -382,3 +384,7 @@ Before considering your own implementation complete, verify:
 Project 01 establishes the Phase 10 pattern: **requirements → design → implementation → tests → explanation → extensions → portfolio discussion**.
 
 The next planned project is the **Grade Calculator**, which will focus on configurable rules, aggregation, validation, and reporting without repeating the persistence design of this project.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../../external-libraries/04-pytest/README.md) · [Module index](../README.md) · [Next →](../02-grade-calculator/README.md)
+<!-- /chapter-navigation:bottom -->

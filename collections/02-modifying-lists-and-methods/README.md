@@ -6,7 +6,9 @@
 
 </div>
 
-[← Previous chapter: List creation, indexing, and slicing](../01-list-creation-and-indexing/README.md) · [Back to the Collections index](../README.md) · [Next chapter: Tuples and immutability](../03-tuples-and-immutability/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../01-list-creation-and-indexing/README.md) · [Module index](../README.md) · [Next →](../03-tuples-and-immutability/README.md)
+<!-- /chapter-navigation:top -->
 
 The previous chapter taught you to create and read lists. Now the other half of the list model becomes important: a list is **mutable**, which means its contents can be changed after the list is created.
 
@@ -840,3 +842,7 @@ Official references used for technical verification:
 - [Python Tutorial: More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
 - [Python Built-in Types: Mutable Sequence Types](https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types)
 - [Python Built-in Types: Lists](https://docs.python.org/3/library/stdtypes.html#lists)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-list-creation-and-indexing/README.md) · [Module index](../README.md) · [Next →](../03-tuples-and-immutability/README.md)
+<!-- /chapter-navigation:bottom -->

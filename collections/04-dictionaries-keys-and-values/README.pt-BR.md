@@ -6,7 +6,9 @@
 
 </div>
 
-[← Capítulo anterior: Tuplas e imutabilidade](../03-tuples-and-immutability/README.pt-BR.md) · [Voltar ao índice de Coleções](../README.pt-BR.md) · [Próximo capítulo: Conjuntos e valores únicos →](../05-sets-and-unique-values/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-tuples-and-immutability/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../05-sets-and-unique-values/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Listas e tuplas organizam valores por **posição**. Dicionários apresentam um modelo diferente: cada valor armazenado é associado a uma **chave**.
 
@@ -1089,3 +1091,7 @@ Referências oficiais usadas para verificação técnica:
 - [Tutorial do Python: Dicionários](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
 - [Tipos embutidos do Python: Tipo mapeamento — `dict`](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict)
 - [Glossário do Python: hashable](https://docs.python.org/3/glossary.html#term-hashable)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-tuples-and-immutability/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../05-sets-and-unique-values/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

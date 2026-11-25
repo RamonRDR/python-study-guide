@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: Common string methods](../02-common-string-methods/README.md) · [Next chapter: Numeric built-ins →](../04-numeric-builtins/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-common-string-methods/README.md) · [Module index](../README.md) · [Next →](../04-numeric-builtins/README.md)
+<!-- /chapter-navigation:top -->
 
 Python already introduced these types in the Fundamentals phase. This chapter goes one level deeper by focusing on how they behave in expressions, how their results differ, and which details matter when choosing between them.
 
@@ -847,4 +849,6 @@ That chapter will build directly on the numeric behavior established here instea
 - [Python Built-in Types: Boolean Type](https://docs.python.org/3.14/library/stdtypes.html#boolean-type-bool)
 - [Python Tutorial: Floating-Point Arithmetic, Issues and Limitations](https://docs.python.org/3.14/tutorial/floatingpoint.html)
 
-[← Back to the section index](../README.md)
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-common-string-methods/README.md) · [Module index](../README.md) · [Next →](../04-numeric-builtins/README.md)
+<!-- /chapter-navigation:bottom -->

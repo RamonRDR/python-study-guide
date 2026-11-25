@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Functions](../README.md) · [← Previous: Scope](../04-scope/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../04-scope/README.md) · [Module index](../README.md) · [Next →](../06-default-values/README.md)
+<!-- /chapter-navigation:top -->
 
 Chapter 01 named behavior. Chapter 02 moved data into functions. Chapter 03 returned results. Chapter 04 explained where names live. This chapter adds another layer:
 
@@ -648,7 +650,6 @@ describe the interface with type hints
 
 The next chapter adds **Default Values**, allowing some parameters to become optional at call time while keeping the interface explicit.
 
-[← Previous: Scope](../04-scope/README.md) · [Back to Functions](../README.md)
 
 ## References
 
@@ -657,3 +658,7 @@ Primary Python documentation:
 - [Python 3.13 `typing` — Support for type hints](https://docs.python.org/3.13/library/typing.html)
 - [Python 3.13 Data model — function annotations and `__annotations__`](https://docs.python.org/3.13/reference/datamodel.html)
 - [Python 3.13 Standard type hierarchy — `bool` and `int`](https://docs.python.org/3.13/library/stdtypes.html)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../04-scope/README.md) · [Module index](../README.md) · [Next →](../06-default-values/README.md)
+<!-- /chapter-navigation:bottom -->

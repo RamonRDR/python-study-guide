@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Cómo ejecuta Python un programa](../01-how-python-runs-a-program/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-how-python-runs-a-program/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-variables-and-naming/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Un programa se vuelve más fácil de comprender cuando puede mostrar lo que está haciendo y recibir información de la persona que lo utiliza. Python proporciona dos funciones incorporadas para estas primeras conversaciones: `print()` muestra salidas, e `input()` lee una línea de texto desde la terminal.
 
@@ -471,4 +473,6 @@ El ejecutor de ejemplos aprobados ejecuta `output_basics.py`, pero no ejecuta `i
 - [Documentación de Python — Funciones incorporadas: `print()` e `input()`](https://docs.python.org/3/library/functions.html)
 - [Tutorial de Python — Entrada y salida](https://docs.python.org/3/tutorial/inputoutput.html)
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Cómo ejecuta Python un programa](../01-how-python-runs-a-program/README.es.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-how-python-runs-a-program/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-variables-and-naming/README.es.md)
+<!-- /chapter-navigation:bottom -->

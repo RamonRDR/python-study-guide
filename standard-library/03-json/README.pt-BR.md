@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Biblioteca Padrão](../README.pt-BR.md) · [← Anterior: Trabalhando com Datas e Cálculos de Tempo Usando `datetime`](../02-datetime/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-datetime/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-csv/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 A Phase 7 apresentou JSON como formato de dados estruturados e ensinou a diferença prática entre `load()`, `loads()`, `dump()` e `dumps()`. Este capítulo desce uma camada a mais.
 
@@ -1097,3 +1099,7 @@ Se essas respostas forem explícitas, a fronteira JSON fica muito mais fácil de
 ## Próximo capítulo
 
 Continue com o [**Capítulo 04: Controlando Dialetos CSV e Contratos de Texto Tabular**](../04-csv/README.pt-BR.md). Ele aprofunda dialetos, quoting, escaping, validação do formato das linhas, sniffing, fronteiras de encoding e considerações para consumidores em planilhas.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-datetime/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-csv/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to External Libraries](../README.md) · [← Previous: `requests`](../03-requests/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-requests/README.md) · [Module index](../README.md) · [Next →](../../practical-projects/01-expense-tracker/README.md)
+<!-- /chapter-navigation:top -->
 
 Software becomes easier to change when expected behavior can be checked repeatedly and automatically. `pytest` provides a concise testing model built around normal Python functions, plain `assert` statements, reusable fixtures, parametrization, rich failure reports, and an extensible plugin system.
 
@@ -1277,3 +1279,7 @@ That closes **Phase 9: External Libraries**.
 The next phase moves from isolated library skills to integrated portfolio work: **Phase 10: Practical Projects**.
 
 Before moving on, practice writing tests that make failures informative. A test suite is most valuable when it gives you confidence to change the code, not when it merely produces a green number.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-requests/README.md) · [Module index](../README.md) · [Next →](../../practical-projects/01-expense-tracker/README.md)
+<!-- /chapter-navigation:bottom -->

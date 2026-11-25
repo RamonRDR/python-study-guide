@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Program Flow](../README.md) · [← Previous: `for` Loops and Iteration](../04-for-loops-and-iteration/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../04-for-loops-and-iteration/README.md) · [Module index](../README.md) · [Next →](../06-while-loops-and-state-driven-repetition/README.md)
+<!-- /chapter-navigation:top -->
 
 A plain `for` loop is often enough when you only need each item. Sometimes, however, the loop also needs **numbers, positions, or items from more than one iterable**.
 
@@ -910,3 +912,7 @@ You now know how to repeat work for items and how to shape iteration when the lo
 - [Python 3.13 tutorial: Looping Techniques](https://docs.python.org/3.13/tutorial/datastructures.html#looping-techniques)
 - [Python 3.13 built-in functions: `enumerate()` and `zip()`](https://docs.python.org/3.13/library/functions.html)
 - [Python 3.13 built-in types: Ranges](https://docs.python.org/3.13/library/stdtypes.html#typesseq-range)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../04-for-loops-and-iteration/README.md) · [Module index](../README.md) · [Next →](../06-while-loops-and-state-driven-repetition/README.md)
+<!-- /chapter-navigation:bottom -->

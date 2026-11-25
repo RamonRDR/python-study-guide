@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Functions](../README.md) · [← Previous phase: Program Flow](../../program-flow/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../../program-flow/08-choosing-and-combining-program-flow/README.md) · [Module index](../README.md) · [Next →](../02-parameters-and-arguments/README.md)
+<!-- /chapter-navigation:top -->
 
 Functions give a meaningful name to behavior that a program may need to execute more than once.
 
@@ -738,3 +740,7 @@ Primary Python documentation:
 - [Python 3.13 Tutorial: Defining Functions](https://docs.python.org/3.13/tutorial/controlflow.html#defining-functions)
 - [Python 3.13 Language Reference: Function definitions](https://docs.python.org/3.13/reference/compound_stmts.html#function-definitions)
 - [Python 3.13 Language Reference: Calls](https://docs.python.org/3.13/reference/expressions.html#calls)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../../program-flow/08-choosing-and-combining-program-flow/README.md) · [Module index](../README.md) · [Next →](../02-parameters-and-arguments/README.md)
+<!-- /chapter-navigation:bottom -->

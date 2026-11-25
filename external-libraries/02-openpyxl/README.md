@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to External Libraries](../README.md) · [← Previous: `pandas`](../01-pandas/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../01-pandas/README.md) · [Module index](../README.md) · [Next →](../03-requests/README.md)
+<!-- /chapter-navigation:top -->
 
 `pandas` treats spreadsheet-like data primarily as tables. `openpyxl` works at a different layer: the Excel workbook itself. It lets Python create, inspect, edit, format, and save Office Open XML workbooks while preserving workbook concepts such as worksheets, cells, formulas, styles, tables, validations, charts, and print settings.
 
@@ -1137,3 +1139,7 @@ openpyxl -> construct and maintain Excel workbooks
 Continue with **[`requests`: Consuming HTTP APIs](../03-requests/README.md)**, where the boundary moves from local files to HTTP services and APIs.
 
 Before moving on, practice by generating workbooks that you can inspect manually and validate automatically. Spreadsheet automation becomes reliable when both the data contract and the workbook contract are explicit.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-pandas/README.md) · [Module index](../README.md) · [Next →](../03-requests/README.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Projetos Práticos](../README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-expense-tracker/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-user-registration/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Este é o segundo projeto da **Fase 10: Projetos Práticos**. O foco está em regras configuráveis, agregação ponderada, validação, acompanhamento parcial e testes determinísticos, sem repetir as fronteiras de persistência do Projeto 01.
 
@@ -331,3 +333,7 @@ Antes de considerar sua implementação concluída, verifique:
 O Projeto 02 adiciona regras configuráveis e agregação ponderada ao padrão da Fase 10.
 
 O próximo projeto planejado é **Cadastro de Usuários**, com foco em validação de dados semelhantes a identidade, prevenção de duplicidade, busca e fronteiras mais claras de serviço, sem introduzir autenticação real nem dados pessoais.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-expense-tracker/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-user-registration/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

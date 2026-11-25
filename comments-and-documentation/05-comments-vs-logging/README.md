@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: Task markers](../04-task-markers/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../04-task-markers/README.md) · [Module index](../README.md) · [Next →](../06-pep8-and-readability/README.md)
+<!-- /chapter-navigation:top -->
 
 Comments and logs both communicate information, but they speak to different moments. A comment explains the source code to someone reading it. A log records an event that occurred while a program was running.
 
@@ -547,3 +549,7 @@ Comments preserve reasoning in the source. Logging preserves selected evidence f
 - [Python Logging HOWTO](https://docs.python.org/3/howto/logging.html)
 - [Python `logging` module reference](https://docs.python.org/3/library/logging.html)
 - [Python Logging Cookbook](https://docs.python.org/3/howto/logging-cookbook.html)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../04-task-markers/README.md) · [Module index](../README.md) · [Next →](../06-pep8-and-readability/README.md)
+<!-- /chapter-navigation:bottom -->

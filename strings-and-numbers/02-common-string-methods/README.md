@@ -2,7 +2,11 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-[← Back to the section index](../README.md) · [← Previous chapter: String creation and indexing](../01-string-creation-and-indexing/README.md) · [Next chapter: `int`, `float`, and `bool` →](../03-int-float-and-bool/README.md)
+
+
+<!-- chapter-navigation:top -->
+[← Previous](../01-string-creation-and-indexing/README.md) · [Module index](../README.md) · [Next →](../03-int-float-and-bool/README.md)
+<!-- /chapter-navigation:top -->
 
 The previous chapter taught you how to create strings and read their positions and ranges. This chapter adds a new idea: strings also provide **methods**, reusable operations that can inspect text or produce a string result without mutating the original value.
 
@@ -821,4 +825,6 @@ The next chapter changes focus from text to numeric and logical values: **`int`,
 - [Python Built-in Types — Text and Binary Sequence Type Methods Summary](https://docs.python.org/3/library/stdtypes.html#text-and-binary-sequence-type-methods-summary)
 - [What’s New In Python 3.9 — New String Methods to Remove Prefixes and Suffixes](https://docs.python.org/3/whatsnew/3.9.html#new-string-methods-to-remove-prefixes-and-suffixes)
 
-[← Back to the section index](../README.md)
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-string-creation-and-indexing/README.md) · [Module index](../README.md) · [Next →](../03-int-float-and-bool/README.md)
+<!-- /chapter-navigation:bottom -->

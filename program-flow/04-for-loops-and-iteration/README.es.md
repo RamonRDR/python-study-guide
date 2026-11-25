@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Flujo del Programa](../README.es.md) · [← Anterior: `match` y `case`](../03-match-and-case/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-match-and-case/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../05-range-enumerate-and-zip/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Los capítulos anteriores enseñaron a Python a **elegir** qué debe ejecutarse. Un bucle `for` introduce un tipo diferente de control de flujo: **repetir un bloque una vez por cada elemento proporcionado por un iterable**.
 
@@ -1055,3 +1057,7 @@ Ahora sabes procesar elementos directamente. A continuación, la guía añade he
 - [Python 3.13 glossary: iterator](https://docs.python.org/3.13/glossary.html#term-iterator)
 - [Python 3.13 tutorial: Looping Techniques](https://docs.python.org/3.13/tutorial/datastructures.html#looping-techniques)
 - [PEP 8: Indentation](https://peps.python.org/pep-0008/#indentation)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-match-and-case/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../05-range-enumerate-and-zip/README.es.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Capítulo anterior: Criação, indexação e fatiamento de listas](../01-list-creation-and-indexing/README.pt-BR.md) · [Voltar ao índice de Coleções](../README.pt-BR.md) · [Próximo capítulo: Tuplas e imutabilidade](../03-tuples-and-immutability/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-list-creation-and-indexing/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-tuples-and-immutability/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 O capítulo anterior ensinou a criar e ler listas. Agora a outra metade do modelo de listas se torna importante: uma lista é **mutável**, o que significa que seu conteúdo pode ser alterado depois que a lista é criada.
 
@@ -840,3 +842,7 @@ Referências oficiais usadas para verificação técnica:
 - [Python Tutorial: More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
 - [Python Built-in Types: Mutable Sequence Types](https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types)
 - [Python Built-in Types: Lists](https://docs.python.org/3/library/stdtypes.html#lists)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-list-creation-and-indexing/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../03-tuples-and-immutability/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

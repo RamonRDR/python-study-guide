@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: Comments](../01-comments/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../01-comments/README.md) · [Module index](../README.md) · [Next →](../03-meaningful-names/README.md)
+<!-- /chapter-navigation:top -->
 
 A docstring explains the purpose and public use of a Python module, function, class, or method. Unlike an ordinary comment, a docstring is stored as documentation on the object and can be read by people, editors, documentation generators, `help()`, and introspection tools.
 
@@ -598,3 +600,7 @@ Before approving a docstring, ask:
 ## Final principle
 
 A useful docstring describes the contract a reader needs. It should reveal purpose and important guarantees without turning the implementation into a second, fragile copy written in prose.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-comments/README.md) · [Module index](../README.md) · [Next →](../03-meaningful-names/README.md)
+<!-- /chapter-navigation:bottom -->

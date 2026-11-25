@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: `print()` e `input()`](../02-print-and-input/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-print-and-input/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-built-in-data-types/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Los programas se vuelven más útiles cuando pueden conservar información bajo nombres comprensibles y reutilizarla después. La asignación en Python conecta un nombre con un valor, permitiendo que instrucciones posteriores lean ese valor sin repetirlo.
 
@@ -546,4 +548,6 @@ El ejecutor de ejemplos aprobados ejecuta `variable_basics.py`, pero no ejecuta 
 - [Biblioteca estándar de Python — Verificación de palabras clave](https://docs.python.org/3/library/keyword.html)
 - [PEP 8 — Convenciones de nombres](https://peps.python.org/pep-0008/#naming-conventions)
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: `print()` e `input()`](../02-print-and-input/README.es.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-print-and-input/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-built-in-data-types/README.es.md)
+<!-- /chapter-navigation:bottom -->

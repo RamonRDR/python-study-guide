@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar para Projetos Práticos](../README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../../external-libraries/04-pytest/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-grade-calculator/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Este é o primeiro projeto da **Fase 10: Projetos Práticos**. O objetivo é parar de estudar conceitos isoladamente e combinar modelagem de dados, funções, coleções, exceções, arquivos, JSON, CSV, `pathlib`, `Decimal` e `pytest` em um fluxo pequeno, mas completo.
 
@@ -382,3 +384,7 @@ Antes de considerar sua própria implementação concluída, verifique:
 O Projeto 01 estabelece o padrão da Fase 10: **requisitos → design → implementação → testes → explicação → extensões → discussão de portfólio**.
 
 O próximo projeto planejado é a **Calculadora de Notas**, com foco em regras configuráveis, agregação, validação e relatórios sem repetir o design de persistência deste projeto.
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../external-libraries/04-pytest/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../02-grade-calculator/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Standard Library](../README.md) · [← Previous: Controlling JSON Serialization and Decoding Contracts](../03-json/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-json/README.md) · [Module index](../README.md) · [Next →](../05-logging/README.md)
+<!-- /chapter-navigation:top -->
 
 Phase 7 introduced CSV as a tabular file format and taught the practical use of `csv.reader()`, `csv.writer()`, `csv.DictReader()`, and `csv.DictWriter()`. This chapter goes one layer deeper.
 
@@ -1115,3 +1117,7 @@ If those answers are explicit, CSV becomes a testable interface instead of a col
 ## Next chapter
 
 Continue with [**Chapter 05: Engineering Logging Pipelines and Runtime Context Contracts**](../05-logging/README.md). It deepens effective levels, handler routing, propagation, configuration, contextual records, queue-based delivery, concurrency, and operational logging safety.
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-json/README.md) · [Module index](../README.md) · [Next →](../05-logging/README.md)
+<!-- /chapter-navigation:bottom -->

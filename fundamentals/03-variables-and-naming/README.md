@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: `print()` and `input()`](../02-print-and-input/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../02-print-and-input/README.md) · [Module index](../README.md) · [Next →](../04-built-in-data-types/README.md)
+<!-- /chapter-navigation:top -->
 
 Programs become more useful when they can keep information under understandable names and reuse it later. Python assignment connects a name to a value, allowing later instructions to read that value without repeating it.
 
@@ -546,4 +548,6 @@ The approved-example runner executes `variable_basics.py` but does not execute `
 - [Python standard library — Keyword testing](https://docs.python.org/3/library/keyword.html)
 - [PEP 8 — Naming conventions](https://peps.python.org/pep-0008/#naming-conventions)
 
-[← Back to the section index](../README.md) · [← Previous chapter: `print()` and `input()`](../02-print-and-input/README.md)
+<!-- chapter-navigation:bottom -->
+[← Previous](../02-print-and-input/README.md) · [Module index](../README.md) · [Next →](../04-built-in-data-types/README.md)
+<!-- /chapter-navigation:bottom -->

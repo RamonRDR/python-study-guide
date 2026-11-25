@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Flujo del Programa](../README.es.md) · [← Anterior: Condiciones, Comparaciones y Lógica Booleana](../01-conditions-comparisons-and-boolean-logic/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../01-conditions-comparisons-and-boolean-logic/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-match-and-case/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Las condiciones responden preguntas. Una sentencia `if` permite que el programa **haga algo debido a la respuesta**.
 
@@ -1143,3 +1145,7 @@ Ahora sabes cómo las condiciones eligen entre ramas. A continuación, aprender�
 - [Tutorial de Python: sentencias `if`](https://docs.python.org/3.13/tutorial/controlflow.html#if-statements)
 - [Referencia del lenguaje Python 3.13: indentación](https://docs.python.org/3.13/reference/lexical_analysis.html#indentation)
 - [PEP 8: indentación y sentencias compuestas](https://peps.python.org/pep-0008/#indentation)
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-conditions-comparisons-and-boolean-logic/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-match-and-case/README.es.md)
+<!-- /chapter-navigation:bottom -->

@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Errors, Files, and Modules](../README.md) · [← Previous: Opening Files Safely with `open()` and `with`](../03-open-and-with/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-open-and-with/README.md) · [Module index](../README.md) · [Next →](../05-imports-modules-and-packages/README.md)
+<!-- /chapter-navigation:top -->
 
 Opening a file safely is only half of the job. A program also needs to understand **how the data inside that file is organized**.
 
@@ -885,3 +887,7 @@ imports / modules / packages
 - Python 3.14 `json` documentation: <https://docs.python.org/3.14/library/json.html>
 - Python 3.14 tutorial, Reading and Writing Files: <https://docs.python.org/3.14/tutorial/inputoutput.html#reading-and-writing-files>
 - Python 3.14 tutorial, Saving structured data with `json`: <https://docs.python.org/3.14/tutorial/inputoutput.html#saving-structured-data-with-json>
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-open-and-with/README.md) · [Module index](../README.md) · [Next →](../05-imports-modules-and-packages/README.md)
+<!-- /chapter-navigation:bottom -->

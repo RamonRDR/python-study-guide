@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver a Standard Library](../README.es.md) · [← Anterior: `decimal`](../08-decimal/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../08-decimal/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../external-libraries/01-pandas/README.es.md)
+<!-- /chapter-navigation:top -->
 
 El capítulo anterior de `pathlib` presentó los objetos de ruta como la forma predeterminada de alto nivel para representar y manipular rutas del sistema de archivos. Este capítulo baja un nivel y amplía el alcance.
 
@@ -1415,3 +1417,7 @@ Este capítulo cierra la **Fase 8: Standard Library**.
 La fase comenzó con modelado de rutas orientado a objetos en `pathlib` y avanzó por contratos de fecha y hora, formatos estructurados de datos, logging, colecciones especializadas, iteración lazy, aritmética decimal y finalmente la propia frontera del sistema operativo.
 
 Continúa con la **Fase 9: Bibliotecas Externas**: [`pandas` — Trabajando con Datos Tabulares](../../external-libraries/01-pandas/README.es.md).
+
+<!-- chapter-navigation:bottom -->
+[← Anterior](../08-decimal/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../external-libraries/01-pandas/README.es.md)
+<!-- /chapter-navigation:bottom -->

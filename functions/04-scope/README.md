@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to Functions](../README.md) · [← Previous: Return Values](../03-return-values/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-return-values/README.md) · [Module index](../README.md) · [Next →](../05-type-hints/README.md)
+<!-- /chapter-navigation:top -->
 
 Chapter 01 named behavior. Chapter 02 moved data into a function. Chapter 03 sent results back to the caller. This chapter answers the next question:
 
@@ -795,3 +797,7 @@ Primary Python documentation:
 - [Python 3.13 Language Reference: Execution model](https://docs.python.org/3.13/reference/executionmodel.html)
 - [Python 3.13 Tutorial: Python Scopes and Namespaces](https://docs.python.org/3.13/tutorial/classes.html#python-scopes-and-namespaces)
 - [Python 3.13 Language Reference: The `global` statement](https://docs.python.org/3.13/reference/simple_stmts.html#the-global-statement)
+
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-return-values/README.md) · [Module index](../README.md) · [Next →](../05-type-hints/README.md)
+<!-- /chapter-navigation:bottom -->
