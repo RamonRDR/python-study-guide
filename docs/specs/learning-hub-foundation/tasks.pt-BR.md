@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Status em 25/11/2026: Sprint 00 integrada; implementação da navegação da Sprint 01 em validação e revisão.
+Status em 25/11/2026: Sprints 00–01 integradas; onboarding da Sprint 02 submetido à validação e revisão.
 
 | Tarefa | Sprint | Dependência | Status |
 | --- | --- | --- | --- |
@@ -12,8 +12,8 @@ Status em 25/11/2026: Sprint 00 integrada; implementação da navegação da Spr
 | T00-04 Preparar SDD trilíngue e contrato preliminar | 00 | T00-03 | Concluído ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T00-05 Verificar PR de especificação, CI e findings Codex | 00 | T00-04 | Concluído ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T00-06 Obter aprovação e merge | 00 | T00-05 | Concluído ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
-| T01-01 Inventariar e implementar navegação por idioma e testes | 01 | T00-06 | Implementado; CI e revisão pendentes |
-| T02-01 Criar Getting Started e conectar Fundamentals | 02 | T01-01 | Pendente |
+| T01-01 Inventariar e implementar navegação por idioma e testes | 01 | T00-06 | Concluído ([PR #88](https://github.com/RamonRDR/python-study-guide/pull/88)) |
+| T02-01 Criar seis aulas Getting Started, incluindo ambientes por projeto, gerenciamento de dependências e Git básico; conectar Fundamentals e mapear referências futuras entre guias | 02 | T01-01 | Implementado; CI e revisão pendentes |
 | T03-01 Alinhar README, roadmap, trilha, estrutura e badges | 03 | T02-01 | Pendente |
 | T04-01 Adicionar prática manual e engenharia | 04 | T03-01 | Pendente |
 | T05-00 Mapear todos os pré-requisitos FR-05 às aulas existentes e ensinar conceitos ausentes em EN/PT-BR/ES antes da publicação dos desafios | 05 | T04-01 | Pendente |

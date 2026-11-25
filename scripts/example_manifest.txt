@@ -178,6 +178,7 @@ external-libraries/04-pytest/examples/capture_output_and_logs.py
 external-libraries/04-pytest/examples/exceptions_and_warnings.py
 external-libraries/04-pytest/examples/fixtures_and_tmp_path.py
 external-libraries/04-pytest/examples/monkeypatch_environment.py
+getting-started/03-run-your-first-program/examples/first_program.py
 practical-projects/01-expense-tracker/demo.py
 practical-projects/02-grade-calculator/demo.py
 practical-projects/03-user-registration/demo.py

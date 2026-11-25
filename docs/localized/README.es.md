@@ -59,6 +59,8 @@ Las explicaciones están disponibles en inglés, portugués de Brasil y español
 
 ## Cómo estudiar
 
+¿Nunca has programado? Empieza con [Primeros pasos](../../getting-started/README.es.md) para instalar Python, preparar tu editor, ejecutar tu primer archivo, crear un entorno aislado por proyecto, gestionar dependencias y registrar cambios con Git. Después sigue la ruta completa.
+
 Cada capítulo sigue una estructura consistente:
 
 1. Qué es
@@ -94,6 +96,7 @@ python-study-guide/
 ├── exercises/
 ├── external-libraries/
 ├── functions/
+├── getting-started/
 ├── fundamentals/
 ├── practical-projects/
 ├── program-flow/

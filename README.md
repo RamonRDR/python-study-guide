@@ -59,6 +59,8 @@ The explanations are available in English, Brazilian Portuguese, and Spanish.
 
 ## How to study
 
+New to programming? Start with [Getting Started](getting-started/README.md) to install Python, prepare your editor, run your first file, create an isolated project environment, manage dependencies and record changes with Git. Then follow the complete learning path.
+
 Each chapter follows a consistent structure:
 
 1. What it is
@@ -94,6 +96,7 @@ python-study-guide/
 ├── exercises/
 ├── external-libraries/
 ├── functions/
+├── getting-started/
 ├── fundamentals/
 ├── practical-projects/
 ├── program-flow/

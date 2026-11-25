@@ -10,9 +10,9 @@ Status: proposed for review. Execute only after specification PR approval and me
 | --- | --- | --- |
 | 00 | docs/learning-hub-specification | Audit, constitution, specification, plan, tasks, acceptance criteria, preliminary contracts and ADRs. |
 | 01 | feat/chapter-navigation | Inventory all chapter/project language files; define ordered navigation, validate reciprocal and cross-module links; existing curriculum first. |
-| 02 | feat/getting-started | Add localized onboarding and connect to Fundamentals; extend navigation tests and existing indexes. |
+| 02 | feat/getting-started | Add localized onboarding and connect to Fundamentals; extend navigation tests and existing indexes. Add project-local venv and pip/dependency management lessons; document candidate library expansion separately from the completed Phase 9, with prerequisite review and separate future PRs. Add a sixth Git basics lesson and record future reciprocal cross-guide links in the integration register; keep advanced Git and platform-specific automation in the separate guide. |
 | 03 | docs/readme-and-badges | Update three READMEs, paths, roadmap and structure; badge evidence only. |
-| 04 | feat/manual-programming-practices | Teach manual practice and SDD/TDD; reference existing AI-assisted maintenance guidance. |
+| 04 | feat/manual-programming-practices | Teach manual practice and SDD/TDD; reference existing AI-assisted maintenance guidance. Apply a small Python-specific branch/PR/test/review workflow without duplicating the independent Git course. |
 | 05 | feat/problem-solving-live-coding | Audit prerequisites for all FR-05 topics; teach missing concepts in all three languages before the corresponding practice; then pilot one challenge against the preliminary contract and expand by concept/difficulty with tests. |
 | 06 | feat/technical-interview-preparation | Audit and teach remaining interview-specific prerequisites not covered in Sprint 05, then questions and timed mock sets; include rubrics and locale alignment. |
 | 07 | feat/quiz-and-exercise-bank | Materialize versioned records and schemas; validate IDs, translations, scoring, solutions and representative incorrect implementations. |
@@ -34,3 +34,5 @@ Use a revision-pinned content snapshot at site build time, with normalized repos
 ## Change control
 
 For every PR: consult specs, record scope, review diffs, run applicable checks, disclose omissions, request Codex review, address findings, revalidate and obtain explicit approval. Update task status in the same reviewed PR where practical; merge status is evidenced by Git history. Maintain the educational roadmap separately. All public documentation must have EN, PT-BR and ES versions in the same PR; check structural parity and perform human equivalence review.
+
+[Related guide integration register](related-guides.md)

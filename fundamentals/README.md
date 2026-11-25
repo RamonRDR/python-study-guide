@@ -6,7 +6,7 @@
 
 </div>
 
-This section begins the main Python Study Guide learning sequence. It assumes no previous programming experience and builds the mental model needed to write, save, execute, inspect, and gradually expand Python programs.
+This section begins the core Python Study Guide learning sequence, after the introductory [Getting Started](../getting-started/README.md) module. It assumes no previous programming experience and builds the mental model needed to write, save, execute, inspect, and gradually expand Python programs.
 
 ## Learning path
 

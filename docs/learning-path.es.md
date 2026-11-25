@@ -12,6 +12,19 @@ Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores p
 - 🚧 **En progreso:** la fase ya comenzó, pero todavía no está completa
 - ⏳ **Planificado:** aún no disponible como sección completa de aprendizaje
 
+## Orden curricular 00 · Primeros pasos
+
+Este módulo introductorio viene antes de la Fase 1 y no sustituye la Fase 0 histórica (Base del proyecto).
+
+[Abrir el índice del módulo Primeros pasos](../getting-started/README.es.md)
+
+1. [Instalar Python](../getting-started/01-install-python/README.es.md)
+2. [Configurar VS Code](../getting-started/02-configure-vscode/README.es.md)
+3. [Ejecutar tu primer programa](../getting-started/03-run-your-first-program/README.es.md)
+4. [Entornos virtuales](../getting-started/04-virtual-environments/README.es.md)
+5. [Paquetes y gestión de dependencias](../getting-started/05-packages-and-dependencies/README.es.md)
+6. [Git y fundamentos del control de versiones](../getting-started/06-git-and-version-control/README.es.md)
+
 ## Fase 1 · Fundamentos ✅
 
 [Abrir el índice de la sección Fundamentos](../fundamentals/README.es.md)

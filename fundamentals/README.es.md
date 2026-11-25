@@ -6,7 +6,7 @@
 
 </div>
 
-Esta sección inicia la secuencia principal de aprendizaje de Python Study Guide. No presupone experiencia previa en programación y construye el modelo mental necesario para escribir, guardar, ejecutar, analizar y ampliar gradualmente programas de Python.
+Esta sección inicia la secuencia principal de aprendizaje de Python Study Guide, después del módulo introductorio [Primeros pasos](../getting-started/README.es.md). No presupone experiencia previa en programación y construye el modelo mental necesario para escribir, guardar, ejecutar, analizar y ampliar gradualmente programas de Python.
 
 ## Ruta de aprendizaje
 

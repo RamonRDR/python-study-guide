@@ -23,6 +23,8 @@ External libraries add a new engineering responsibility: **dependency contracts*
 3. ✅ [`requests`: Consuming HTTP APIs](03-requests/README.md)
 4. ✅ [`pytest`: Engineering Automated Tests](04-pytest/README.md)
 
+For project-local environment setup and package installation, start with [Virtual Environments](../getting-started/04-virtual-environments/README.md) and [Packages and Dependency Management](../getting-started/05-packages-and-dependencies/README.md). Future candidate libraries are recorded in the [roadmap](../docs/roadmap.en.md); they are not part of the completed Phase 9 contract.
+
 ## Dependency contract
 
 Published executable examples from this phase use the dependencies declared in [`requirements-external.txt`](../requirements-external.txt). Repository CI installs that file before executing approved external-library examples.

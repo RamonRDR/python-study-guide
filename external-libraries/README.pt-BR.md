@@ -23,6 +23,8 @@ Bibliotecas externas acrescentam uma nova responsabilidade de engenharia: **cont
 3. ✅ [`requests`: Consumindo APIs HTTP](03-requests/README.pt-BR.md)
 4. ✅ [`pytest`: Engenharia de Testes Automatizados](04-pytest/README.pt-BR.md)
 
+Para configurar o ambiente local ao projeto e instalar pacotes, comece com [Ambientes virtuais](../getting-started/04-virtual-environments/README.pt-BR.md) e [Pacotes e gerenciamento de dependências](../getting-started/05-packages-and-dependencies/README.pt-BR.md). Bibliotecas candidatas futuras estão registradas no [roadmap](../docs/roadmap.pt-BR.md); não fazem parte do contrato concluído da Fase 9.
+
 ## Contrato de dependências
 
 Os exemplos executáveis publicados nesta fase usam as dependências declaradas em [`requirements-external.txt`](../requirements-external.txt). O CI do repositório instala esse arquivo antes de executar os exemplos aprovados de bibliotecas externas.

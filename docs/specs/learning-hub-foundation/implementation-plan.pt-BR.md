@@ -10,9 +10,9 @@ Status: proposta para revisão. Executar somente após aprovação e merge do PR
 | --- | --- | --- |
 | 00 | docs/learning-hub-specification | Auditoria, constituição, especificação, plano, tarefas, critérios, contratos preliminares e ADRs. |
 | 01 | feat/chapter-navigation | Inventariar idiomas de capítulos/projetos, definir navegação ordenada, validar links recíprocos e entre módulos; currículo existente primeiro. |
-| 02 | feat/getting-started | Onboarding localizado e conexão a Fundamentals; ampliar testes de navegação e índices. |
+| 02 | feat/getting-started | Onboarding localizado e conexão a Fundamentals; ampliar testes de navegação e índices. Adicionar aulas de venv local ao projeto e gerenciamento de pip/dependências; documentar candidatos à expansão de bibliotecas separadamente da Fase 9 concluída, com revisão de pré-requisitos e PRs futuros separados. Adicionar sexta aula de Git básico e registrar links recíprocos futuros entre guias no registro de integração; manter Git avançado e automação específica de plataformas no guia separado. |
 | 03 | docs/readme-and-badges | Atualizar três READMEs, trilhas, roadmap e estrutura; badges somente com evidências. |
-| 04 | feat/manual-programming-practices | Ensinar prática manual e SDD/TDD; referenciar orientação existente de manutenção por IA. |
+| 04 | feat/manual-programming-practices | Ensinar prática manual e SDD/TDD; referenciar orientação existente de manutenção por IA. Aplicar fluxo pequeno de branch/PR/teste/revisão específico de Python, sem duplicar o curso independente de Git. |
 | 05 | feat/problem-solving-live-coding | Auditar pré-requisitos de todos os tópicos FR-05; ensinar conceitos ausentes nos três idiomas antes da prática correspondente; depois pilotar desafio conforme contrato preliminar e expandir por conceito/dificuldade com testes. |
 | 06 | feat/technical-interview-preparation | Auditar e ensinar pré-requisitos restantes específicos de entrevistas não cobertos na Sprint 05; depois perguntas e simulações cronometradas; rubricas e paridade de idiomas. |
 | 07 | feat/quiz-and-exercise-bank | Materializar registros e schemas versionados; validar IDs, traduções, pontuação, soluções e implementações incorretas representativas. |
@@ -34,3 +34,5 @@ Usar snapshot de conteúdo fixado por revisão no build do site, caminhos relati
 ## Controle de mudanças
 
 Para cada PR: consultar especificações, registrar escopo, revisar diffs, executar verificações aplicáveis, informar omissões, solicitar Codex Review, corrigir findings, revalidar e obter aprovação explícita. Atualizar tarefas no mesmo PR quando possível; histórico Git evidencia merge. Manter roadmap educacional separado. Toda documentação pública deve ter EN, PT-BR e ES no mesmo PR; verificar estruturalmente e revisar equivalência humana.
+
+[Registro de integração de guias relacionados](related-guides.pt-BR.md)
