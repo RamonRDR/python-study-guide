@@ -1,5 +1,7 @@
 # ADR 0003: Browser execution and assessment
 
+[🇺🇸 English](0003-browser-execution.md) · [🇧🇷 Português](0003-browser-execution.pt-BR.md) · [🇪🇸 Español](0003-browser-execution.es.md)
+
 Status: proposed (direction approved 2026-11-25; pending PR review).
 
 ## Context

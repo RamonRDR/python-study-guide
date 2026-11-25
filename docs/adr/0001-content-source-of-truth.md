@@ -1,5 +1,7 @@
 # ADR 0001: Content source of truth
 
+[🇺🇸 English](0001-content-source-of-truth.md) · [🇧🇷 Português](0001-content-source-of-truth.pt-BR.md) · [🇪🇸 Español](0001-content-source-of-truth.es.md)
+
 Status: proposed (direction approved 2026-11-25; pending PR review).
 
 ## Context

@@ -1,0 +1,22 @@
+# Criterios de aceptación
+
+[🇺🇸 English](acceptance-criteria.md) · [🇧🇷 Português](acceptance-criteria.pt-BR.md) · [🇪🇸 Español](acceptance-criteria.es.md)
+
+Estado: propuesta para revisión. Los criterios son requisitos, no resultados.
+
+| ID | Sprint | Condición de aceptación |
+| --- | --- | --- |
+| AC-00 | 00 | Especificación, constitución, plan, tareas, criterios, contrato preliminar, ADR y estructura de handoff existen en los tres idiomas; AGENTS referencia los documentos; contenido educativo existente preservado; CI, paridad estructural y evidencias de revisión registrados; aprobación antes de fusionar. |
+| AC-01 | 01 | Cada idioma de capítulo/proyecto tiene anterior/índice/siguiente correctos, salvo vecinos ausentes en extremos; enlaces resuelven en el mismo idioma, fronteras recíprocas; pruebas rechazan destinos incorrectos y enlaces ausentes. |
+| AC-02 | 02 | Incorporación localizada cubre FR-02; descargas oficiales y comandos por SO verificados; estudiante puede instalar, seleccionar intérprete, crear y ejecutar archivo; sin renumeración; navegación incluye módulo. |
+| AC-03 | 03 | Tres README, índices y estructura afectados coinciden con rutas/estados reales; banner/licencia preservados; cada badge numérico identifica evidencia genuina, sin sumar suites solapadas. |
+| AC-04 | 04 | Orientación trilingüe de práctica manual y SDD/TDD incluye ejemplos originales, requisitos/aceptación explícitos y práctica independiente; distingue estudio de mantenimiento por IA. |
+| AC-05 | 05 | Retos cubren FR-05 con dificultad adecuada; cada uno tiene ID estable, enunciado localizado, tiempo, conceptos, restricciones, ejemplos, código inicial, pistas progresivas, referencia, explicación, complejidad, pruebas y casos límite cuando proceda; pruebas locales pasan y detectan soluciones incorrectas representativas. |
+| AC-06 | 06 | Temas FR-06 con requisitos previos documentados; preguntas incluyen respuestas esperadas, explicación, objetivo, errores comunes, adicionales y ejemplos; simulaciones 30/45/60 con rúbricas explícitas; sin entrevistador IA ni alegación de evaluación semántica automática. |
+| AC-07 | 07 | Registros válidos de tipos admitidos; esquema inválido, ID duplicado, idioma ausente, respuesta inválida o referencia huérfana fallan validación; corrección determinista y pruebas de soluciones incorrectas pasan; sin duplicación Python por idioma. |
+| AC-08 | 08 | Manifiesto ofrece orden estable, rutas, idiomas, títulos, relaciones, asociaciones y compatibilidad; validadores rechazan rutas inseguras, contenido ausente y versiones no admitidas; fixture del consumidor resuelve revisión inmutable sin scraping HTML. |
+| AC-09 | 09 | Controles aplicables aprobados en revisión aprobada; paridad revisada; limitaciones y controles no ejecutados informados; handoff incluye contrato, rutas, esquemas, ejemplos, corrección, ADR, pendientes y evidencias; Codex Review final y aprobación. |
+
+## Definition of Done global
+
+Toda documentación pública nueva o modificada debe estar disponible en los tres idiomas, con equivalencia conceptual. Enlaces y pruebas verificados; sin regresiones conocidas, hallazgos relevantes pendientes, credenciales ni datos privados; documentación y tareas actualizadas; mantenedor aprueba la fusión. Si no se puede ejecutar una validación, registrar el motivo en vez de aprobar. La revisión semántica es humana; la comprobación estructural no garantiza equivalencia.

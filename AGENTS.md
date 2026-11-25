@@ -1,5 +1,7 @@
 # Repository Instructions
 
+[🇺🇸 English](AGENTS.md) · [🇧🇷 Português](docs/localized/AGENTS.pt-BR.md) · [🇪🇸 Español](docs/localized/AGENTS.es.md)
+
 ## Project purpose
 
 Python Study Guide is an independent, public, collaborative, and multilingual educational project.
@@ -46,7 +48,7 @@ English is the default language for:
 
 Translated documents must remain conceptually aligned. A translation does not need to be literal, but it must preserve the same technical meaning, examples, warnings, prerequisites, learning objectives, and links.
 
-When a change affects multilingual documentation, update every affected language version in the same pull request whenever possible. Clearly disclose any missing translation.
+All public documentation in this public repository, including architecture, engineering, governance and contributor guidance, must be available and conceptually aligned in English, Brazilian Portuguese and Spanish. Update all affected versions in the same PR; missing translations block completion. Truly private notes must stay outside this public repository and should preferably be in English (Portuguese is acceptable). Technical identifiers, file names, code, JSON keys and enum values remain unchanged across locales.
 
 ## Educational content
 
@@ -142,7 +144,7 @@ Before completing a change, confirm that:
 - technical claims are accurate and appropriately sourced;
 - examples are original, generic, and free of confidential information;
 - executable examples work as described or their untested status is disclosed;
-- all affected language versions are conceptually aligned;
+- all public documents have all three conceptually aligned language versions;
 - terminology and links are consistent;
 - no unrelated files were modified;
 - review discussions were properly addressed;
@@ -152,6 +154,6 @@ Before completing a change, confirm that:
 
 For Learning Hub Foundation changes, consult the [constitution](docs/specs/constitution.md), [specification](docs/specs/learning-hub-foundation/specification.md), [implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md), [task register](docs/specs/learning-hub-foundation/tasks.md), [acceptance criteria](docs/specs/learning-hub-foundation/acceptance-criteria.md), [integration contract](docs/specs/learning-hub-foundation/integration-contract.md), and [ADRs](docs/adr/README.md) before implementation.
 
-Keep internal engineering specifications in English and student-facing material aligned in all three languages. Preserve existing curriculum paths and separate engineering sprint numbers from educational order. Do not implement the external Learning Hub in this repository, add paid services, or introduce AI grading. Maintain the repository as the source of truth.
+Keep all public engineering specifications and student-facing material aligned in all three languages. Preserve existing curriculum paths and separate engineering sprint numbers from educational order. Do not implement the external Learning Hub in this repository, add paid services, or introduce AI grading. Maintain the repository as the source of truth.
 
 Use focused branches and PRs, request Codex review, address relevant findings, disclose unrun checks and obtain explicit maintainer approval before merging. Update specifications and task status with evidence when scope or contracts change. Proposed specifications are not authorization to implement before approval.

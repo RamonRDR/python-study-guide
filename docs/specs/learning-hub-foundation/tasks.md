@@ -1,5 +1,7 @@
 # Phase II task register
 
+[🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
+
 Status as of 2026-11-25: direction approved; specification PR in preparation. No functional sprint has been implemented.
 
 | Task | Sprint | Dependency | Status |
@@ -7,7 +9,7 @@ Status as of 2026-11-25: direction approved; specification PR in preparation. No
 | T00-01 Confirm repo, baseline, branches and CI | 00 | None | Done (read-only audit) |
 | T00-02 Audit tree and representative docs/scripts | 00 | T00-01 | Done (sampled content) |
 | T00-03 Approve architecture and documentation approach | 00 | T00-02 | Done (maintainer approval) |
-| T00-04 Prepare SDD documents and preliminary contract | 00 | T00-03 | In review preparation |
+| T00-04 Prepare trilingual SDD documents and preliminary contract | 00 | T00-03 | In review preparation |
 | T00-05 Verify specification PR, CI and Codex findings | 00 | T00-04 | Pending |
 | T00-06 Obtain approval and merge | 00 | T00-05 | Pending |
 | T01-01 Inventory navigation and implement locale-safe links/tests | 01 | T00-06 | Pending |

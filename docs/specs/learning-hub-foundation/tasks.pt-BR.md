@@ -1,0 +1,28 @@
+# Registro de tarefas da Phase II
+
+[🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
+
+Status em 25/11/2026: direção aprovada; PR de especificação em preparação. Nenhuma sprint funcional implementada.
+
+| Tarefa | Sprint | Dependência | Status |
+| --- | --- | --- | --- |
+| T00-01 Confirmar repositório, baseline, branches e CI | 00 | Nenhuma | Concluído (auditoria somente leitura) |
+| T00-02 Auditar árvore e amostras de docs/scripts | 00 | T00-01 | Concluído (amostragem) |
+| T00-03 Aprovar arquitetura e abordagem documental | 00 | T00-02 | Concluído (aprovação do mantenedor) |
+| T00-04 Preparar SDD trilíngue e contrato preliminar | 00 | T00-03 | Em preparação para revisão |
+| T00-05 Verificar PR de especificação, CI e findings Codex | 00 | T00-04 | Pendente |
+| T00-06 Obter aprovação e merge | 00 | T00-05 | Pendente |
+| T01-01 Inventariar e implementar navegação por idioma e testes | 01 | T00-06 | Pendente |
+| T02-01 Criar Getting Started e conectar Fundamentals | 02 | T01-01 | Pendente |
+| T03-01 Alinhar README, roadmap, trilha, estrutura e badges | 03 | T02-01 | Pendente |
+| T04-01 Adicionar prática manual e engenharia | 04 | T03-01 | Pendente |
+| T05-01 Pilotar desafios e testes de correção | 05 | T04-01 | Pendente |
+| T05-02 Expandir desafios por tema/dificuldade | 05 | T05-01 | Pendente |
+| T06-01 Mapear lacunas e ensinar pré-requisitos | 06 | T05-02 | Pendente |
+| T06-02 Criar perguntas e simulações/rubricas | 06 | T06-01 | Pendente |
+| T07-01 Finalizar e validar schemas/registros de quiz/exercício | 07 | T06-02 | Pendente |
+| T08-01 Finalizar manifesto e fixtures de integração | 08 | T07-01 | Pendente |
+| T09-01 Executar QA e registrar evidências reais | 09 | T08-01 | Pendente |
+| T09-02 Obter revisão final e publicar handoff com revisão fixada | 09 | T09-01 | Pendente |
+
+Atualizar status com links de evidência em PRs focados posteriores. Concluído significa critérios satisfeitos; conclusão da sprint requer revisão e aprovação. Não inferir conclusão a partir deste plano.

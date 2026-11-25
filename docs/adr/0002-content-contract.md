@@ -1,5 +1,7 @@
 # ADR 0002: Versioned content contract
 
+[🇺🇸 English](0002-content-contract.md) · [🇧🇷 Português](0002-content-contract.pt-BR.md) · [🇪🇸 Español](0002-content-contract.es.md)
+
 Status: proposed (direction approved 2026-11-25; pending PR review).
 
 ## Context

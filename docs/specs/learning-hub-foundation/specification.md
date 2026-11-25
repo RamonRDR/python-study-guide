@@ -1,5 +1,7 @@
 # Phase II: Learning Hub Foundation — specification
 
+[🇺🇸 English](specification.md) · [🇧🇷 Português](specification.pt-BR.md) · [🇪🇸 Español](specification.es.md)
+
 Status: proposed for review. Direction approved 2026-11-25. Baseline: main at 86f1c8517ef8e0e51d97e03388075a4d3fe41386.
 
 ## Purpose
@@ -29,7 +31,7 @@ Existing assets, [learning path](../../learning-path.en.md), [roadmap](../../roa
 ## Non-functional requirements
 
 - NFR-01: no extra financial cost or new paid server/service/API; no web implementation in this repository.
-- NFR-02: no unnecessary content duplication; shared code in English; all student-facing content in three languages.
+- NFR-02: no unnecessary content duplication; shared code in English; all public documentation in three languages, including architecture and engineering. Private documentation stays outside the public repository, preferably in English.
 - NFR-03: preserve existing paths and functionality; validate links, navigation, examples and tests.
 - NFR-04: stable identifiers independent of order, relative paths confined to the repository, versioned schema and revision traceability.
 - NFR-05: no AI grading; public answers are only visually concealed; open responses use reference answers and self-assessment.

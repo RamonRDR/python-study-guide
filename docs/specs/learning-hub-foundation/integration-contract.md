@@ -1,5 +1,7 @@
 # Learning Hub integration contract
 
+[🇺🇸 English](integration-contract.md) · [🇧🇷 Português](integration-contract.pt-BR.md) · [🇪🇸 Español](integration-contract.es.md)
+
 Status: preliminary, normative direction for content pilots; exact JSON Schema and fixtures are finalized in Sprints 07–08. No runtime integration is implemented here.
 
 ## Version and transport

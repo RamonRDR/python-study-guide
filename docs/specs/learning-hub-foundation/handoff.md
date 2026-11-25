@@ -1,5 +1,7 @@
 # Learning Hub handoff
 
+[🇺🇸 English](handoff.md) · [🇧🇷 Português](handoff.pt-BR.md) · [🇪🇸 Español](handoff.es.md)
+
 Status: placeholder for Sprint 09. Not an implementation-ready handoff.
 
 The external site project must consume only an approved revision of Python Study Guide. This repository remains independent.

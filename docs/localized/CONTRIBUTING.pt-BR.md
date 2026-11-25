@@ -68,7 +68,7 @@ Novos capítulos de aprendizagem devem abordar:
 
 O inglês é o idioma padrão do repositório. As traduções para português brasileiro e espanhol devem preservar o mesmo significado técnico, sem exigir uma tradução literal palavra por palavra.
 
-Ao alterar uma documentação traduzida, atualize todas as versões de idioma afetadas sempre que possível. Caso uma tradução não possa ser concluída no mesmo pull request, identifique claramente qual versão está faltando.
+Toda documentação pública, inclusive arquitetura, engenharia e orientações para colaboradores, deve ter versões conceitualmente alinhadas em inglês, português brasileiro e espanhol. Atualize todas as versões afetadas no mesmo pull request; traduções ausentes bloqueiam a conclusão. Mantenha notas realmente privadas fora do repositório público, preferencialmente em inglês. Preserve os identificadores técnicos.
 
 ## Contribuições assistidas por IA
 

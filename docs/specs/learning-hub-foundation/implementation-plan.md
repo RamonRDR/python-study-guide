@@ -1,5 +1,7 @@
 # Implementation plan
 
+[🇺🇸 English](implementation-plan.md) · [🇧🇷 Português](implementation-plan.pt-BR.md) · [🇪🇸 Español](implementation-plan.es.md)
+
 Status: proposed for review. Execute only after specification PR approval and merge.
 
 ## Delivery sequence
@@ -31,4 +33,4 @@ Use a revision-pinned content snapshot at site build time, with normalized repos
 
 ## Change control
 
-For every PR: consult specs, record scope, review diffs, run applicable checks, disclose omissions, request Codex review, address findings, revalidate and obtain explicit approval. Update task status in the same reviewed PR where practical; merge status is evidenced by Git history. Maintain the educational roadmap separately.
+For every PR: consult specs, record scope, review diffs, run applicable checks, disclose omissions, request Codex review, address findings, revalidate and obtain explicit approval. Update task status in the same reviewed PR where practical; merge status is evidenced by Git history. Maintain the educational roadmap separately. All public documentation must have EN, PT-BR and ES versions in the same PR; check structural parity and perform human equivalence review.
