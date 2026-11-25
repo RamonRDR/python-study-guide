@@ -16,9 +16,10 @@ Estado al 25/11/2026: dirección aprobada; PR de especificación en preparación
 | T02-01 Crear Getting Started y conectar Fundamentals | 02 | T01-01 | Pendiente |
 | T03-01 Alinear README, roadmap, ruta, estructura y badges | 03 | T02-01 | Pendiente |
 | T04-01 Añadir práctica manual e ingeniería | 04 | T03-01 | Pendiente |
-| T05-01 Pilotar retos y pruebas de corrección | 05 | T04-01 | Pendiente |
+| T05-00 Mapear todos los requisitos previos FR-05 a las lecciones existentes y enseñar conceptos ausentes en EN/PT-BR/ES antes de publicar retos | 05 | T04-01 | Pendiente |
+| T05-01 Pilotar retos y pruebas de corrección | 05 | T05-00 | Pendiente |
 | T05-02 Ampliar retos por tema/dificultad | 05 | T05-01 | Pendiente |
-| T06-01 Mapear carencias y enseñar requisitos previos | 06 | T05-02 | Pendiente |
+| T06-01 Mapear carencias restantes específicas de entrevistas y enseñar conceptos necesarios no cubiertos en Sprint 05 | 06 | T05-02 | Pendiente |
 | T06-02 Crear preguntas y simulaciones/rúbricas | 06 | T06-01 | Pendiente |
 | T07-01 Finalizar y validar esquemas/registros de cuestionario/ejercicio | 07 | T06-02 | Pendiente |
 | T08-01 Finalizar manifiesto y fixtures de integración | 08 | T07-01 | Pendiente |

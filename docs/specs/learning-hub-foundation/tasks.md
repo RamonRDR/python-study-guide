@@ -16,9 +16,10 @@ Status as of 2026-11-25: direction approved; specification PR in preparation. No
 | T02-01 Author Getting Started and link to Fundamentals | 02 | T01-01 | Pending |
 | T03-01 Align README, roadmap, learning path, structure and badges | 03 | T02-01 | Pending |
 | T04-01 Add manual practice and engineering guidance | 04 | T03-01 | Pending |
-| T05-01 Pilot challenge records and grading tests | 05 | T04-01 | Pending |
+| T05-00 Map all FR-05 prerequisites to existing lessons and teach missing concepts in EN/PT-BR/ES before challenge publication | 05 | T04-01 | Pending |
+| T05-01 Pilot challenge records and grading tests | 05 | T05-00 | Pending |
 | T05-02 Expand challenges by topic/difficulty | 05 | T05-01 | Pending |
-| T06-01 Map prerequisite gaps and teach necessary concepts | 06 | T05-02 | Pending |
+| T06-01 Map remaining interview-specific prerequisite gaps and teach necessary concepts not covered in Sprint 05 | 06 | T05-02 | Pending |
 | T06-02 Author question bank and timed mocks/rubrics | 06 | T06-01 | Pending |
 | T07-01 Finalize and validate quiz/exercise schemas and records | 07 | T06-02 | Pending |
 | T08-01 Finalize curriculum manifest and integration fixtures | 08 | T07-01 | Pending |

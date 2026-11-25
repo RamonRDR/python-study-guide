@@ -13,8 +13,8 @@ Status: proposed for review. Execute only after specification PR approval and me
 | 02 | feat/getting-started | Add localized onboarding and connect to Fundamentals; extend navigation tests and existing indexes. |
 | 03 | docs/readme-and-badges | Update three READMEs, paths, roadmap and structure; badge evidence only. |
 | 04 | feat/manual-programming-practices | Teach manual practice and SDD/TDD; reference existing AI-assisted maintenance guidance. |
-| 05 | feat/problem-solving-live-coding | Pilot one challenge against preliminary contract, then expand by concept and difficulty; include tests. |
-| 06 | feat/technical-interview-preparation | Introduce prerequisites, then questions and timed mock sets; include rubrics and locale alignment. |
+| 05 | feat/problem-solving-live-coding | Audit prerequisites for all FR-05 topics; teach missing concepts in all three languages before the corresponding practice; then pilot one challenge against the preliminary contract and expand by concept/difficulty with tests. |
+| 06 | feat/technical-interview-preparation | Audit and teach remaining interview-specific prerequisites not covered in Sprint 05, then questions and timed mock sets; include rubrics and locale alignment. |
 | 07 | feat/quiz-and-exercise-bank | Materialize versioned records and schemas; validate IDs, translations, scoring, solutions and representative incorrect implementations. |
 | 08 | feat/learning-hub-content-contract | Finalize curriculum manifest, consumer validation, reference fixtures, versioning and compatibility metadata. |
 | 09 | docs/learning-hub-handoff | Full QA, final review, evidence and approved revision handoff. |

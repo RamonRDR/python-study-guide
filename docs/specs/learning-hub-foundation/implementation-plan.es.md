@@ -13,8 +13,8 @@ Estado: propuesta para revisión. Ejecutar solo tras aprobación y fusión del P
 | 02 | feat/getting-started | Incorporación localizada y conexión con Fundamentals; ampliar pruebas de navegación e índices. |
 | 03 | docs/readme-and-badges | Actualizar tres README, rutas, roadmap y estructura; badges solo con evidencias. |
 | 04 | feat/manual-programming-practices | Enseñar práctica manual y SDD/TDD; referenciar orientación existente de mantenimiento asistido por IA. |
-| 05 | feat/problem-solving-live-coding | Pilotar reto según contrato preliminar y ampliar por concepto/dificultad; pruebas. |
-| 06 | feat/technical-interview-preparation | Introducir requisitos previos, preguntas y simulaciones cronometradas; rúbricas y paridad de idiomas. |
+| 05 | feat/problem-solving-live-coding | Auditar requisitos previos de todos los temas FR-05; enseñar conceptos ausentes en los tres idiomas antes de la práctica correspondiente; después pilotar reto según contrato preliminar y ampliar por concepto/dificultad con pruebas. |
+| 06 | feat/technical-interview-preparation | Auditar y enseñar requisitos previos restantes específicos de entrevistas no cubiertos en Sprint 05; después preguntas y simulaciones cronometradas; rúbricas y paridad de idiomas. |
 | 07 | feat/quiz-and-exercise-bank | Materializar registros y esquemas versionados; validar IDs, traducciones, puntuación, soluciones e implementaciones incorrectas representativas. |
 | 08 | feat/learning-hub-content-contract | Finalizar manifiesto, validación del consumidor, fixtures, versionado y compatibilidad. |
 | 09 | docs/learning-hub-handoff | QA completo, revisión final, evidencias y handoff de revisión aprobada. |
