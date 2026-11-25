@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Variables y nombres](../03-variables-and-naming/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../03-variables-and-naming/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../05-type-and-isinstance/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Las variables proporcionan nombres útiles a los valores. La siguiente pregunta es qué tipo de valor referencia cada nombre. Los valores de Python tienen tipos, y un tipo ayuda a determinar cómo se representa un valor, qué operaciones tienen sentido y cómo puede utilizarlo el programa.
 
@@ -560,4 +562,6 @@ python scripts/validate_repository_structure.py
 - [Referencia del lenguaje Python — Literales](https://docs.python.org/3/reference/lexical_analysis.html#literals)
 - [Biblioteca estándar de Python — Constantes incorporadas](https://docs.python.org/3/library/constants.html)
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Variables y nombres](../03-variables-and-naming/README.es.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../03-variables-and-naming/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../05-type-and-isinstance/README.es.md)
+<!-- /chapter-navigation:bottom -->

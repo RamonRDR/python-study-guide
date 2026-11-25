@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: How Python runs a program](../01-how-python-runs-a-program/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../01-how-python-runs-a-program/README.md) · [Module index](../README.md) · [Next →](../03-variables-and-naming/README.md)
+<!-- /chapter-navigation:top -->
 
 A program becomes easier to understand when it can show what it is doing and receive information from the person using it. Python provides two built-in functions for these first conversations: `print()` displays output, and `input()` reads a line of text from the terminal.
 
@@ -471,4 +473,6 @@ The approved-example runner executes `output_basics.py` but does not execute `in
 - [Python documentation — Built-in functions: `print()` and `input()`](https://docs.python.org/3/library/functions.html)
 - [Python tutorial — Input and output](https://docs.python.org/3/tutorial/inputoutput.html)
 
-[← Back to the section index](../README.md) · [← Previous chapter: How Python runs a program](../01-how-python-runs-a-program/README.md)
+<!-- chapter-navigation:bottom -->
+[← Previous](../01-how-python-runs-a-program/README.md) · [Module index](../README.md) · [Next →](../03-variables-and-naming/README.md)
+<!-- /chapter-navigation:bottom -->

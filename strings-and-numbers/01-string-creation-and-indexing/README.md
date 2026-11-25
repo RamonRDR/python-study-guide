@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [Next chapter: Common string methods →](../02-common-string-methods/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../../fundamentals/06-type-conversion/README.md) · [Module index](../README.md) · [Next →](../02-common-string-methods/README.md)
+<!-- /chapter-navigation:top -->
 
 Phase 1 taught you that ordinary text values use the `str` type. This first chapter of Phase 2 goes deeper: it shows how to create strings and how to read individual positions and ranges from them.
 
@@ -671,4 +673,6 @@ The next chapter moves from positions to behavior: **common string methods** for
 - [Python Built-in Types — Common Sequence Operations](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations)
 - [Python Built-in Functions — `len()`](https://docs.python.org/3/library/functions.html#len)
 
-[← Back to the section index](../README.md)
+<!-- chapter-navigation:bottom -->
+[← Previous](../../fundamentals/06-type-conversion/README.md) · [Module index](../README.md) · [Next →](../02-common-string-methods/README.md)
+<!-- /chapter-navigation:bottom -->

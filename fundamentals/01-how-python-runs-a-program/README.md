@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md)
+<!-- chapter-navigation:top -->
+[Module index](../README.md) · [Next →](../02-print-and-input/README.md)
+<!-- /chapter-navigation:top -->
 
 A Python program begins as text written by a person. Saving that text in a `.py` file does not run it. The program runs only when the Python interpreter is asked to read and execute the file.
 
@@ -444,4 +446,6 @@ python scripts/validate_repository_structure.py
 - [Python tutorial — Syntax errors](https://docs.python.org/3/tutorial/errors.html#syntax-errors)
 - [Python documentation — Command line and environment](https://docs.python.org/3/using/cmdline.html)
 
-[← Back to the section index](../README.md)
+<!-- chapter-navigation:bottom -->
+[Module index](../README.md) · [Next →](../02-print-and-input/README.md)
+<!-- /chapter-navigation:bottom -->

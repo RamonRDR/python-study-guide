@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: `print()` e `input()`](../02-print-and-input/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../02-print-and-input/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-built-in-data-types/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 Os programas se tornam mais úteis quando conseguem manter informações sob nomes compreensíveis e reutilizá-las depois. A atribuição em Python conecta um nome a um valor, permitindo que instruções posteriores leiam esse valor sem repeti-lo.
 
@@ -546,4 +548,6 @@ O executor de exemplos aprovados executa `variable_basics.py`, mas não executa 
 - [Biblioteca padrão do Python — Verificação de palavras-chave](https://docs.python.org/3/library/keyword.html)
 - [PEP 8 — Convenções de nomenclatura](https://peps.python.org/pep-0008/#naming-conventions)
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: `print()` e `input()`](../02-print-and-input/README.pt-BR.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../02-print-and-input/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../04-built-in-data-types/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->

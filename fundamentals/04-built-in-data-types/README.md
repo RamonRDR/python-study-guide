@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: Variables and naming](../03-variables-and-naming/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../03-variables-and-naming/README.md) · [Module index](../README.md) · [Next →](../05-type-and-isinstance/README.md)
+<!-- /chapter-navigation:top -->
 
 Variables give values useful names. The next question is what kind of value each name refers to. Python values have types, and a type helps determine how a value is represented, which operations make sense, and how the program can use it.
 
@@ -560,4 +562,6 @@ python scripts/validate_repository_structure.py
 - [Python language reference — Literals](https://docs.python.org/3/reference/lexical_analysis.html#literals)
 - [Python standard library — Built-in constants](https://docs.python.org/3/library/constants.html)
 
-[← Back to the section index](../README.md) · [← Previous chapter: Variables and naming](../03-variables-and-naming/README.md)
+<!-- chapter-navigation:bottom -->
+[← Previous](../03-variables-and-naming/README.md) · [Module index](../README.md) · [Next →](../05-type-and-isinstance/README.md)
+<!-- /chapter-navigation:bottom -->

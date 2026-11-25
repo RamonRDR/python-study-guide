@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Tipos de datos incorporados](../04-built-in-data-types/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../04-built-in-data-types/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-type-conversion/README.es.md)
+<!-- /chapter-navigation:top -->
 
 El Capítulo 04 enseñó a reconocer tipos comunes de valores a partir de la notación del código fuente. Este capítulo añade la inspección directa. Python proporciona `type()` para revelar el tipo exacto de un valor e `isinstance()` para preguntar si un valor pertenece a un tipo o a una familia de tipos compatible.
 
@@ -558,4 +560,6 @@ Ambos ejemplos de este capítulo están aprobados para ejecución sin supervisi�
 - [Tipos incorporados de Python — valores booleanos](https://docs.python.org/3/library/stdtypes.html#boolean-type-bool)
 - [Modelo de datos de Python — objetos, valores y tipos](https://docs.python.org/3/reference/datamodel.html#objects-values-and-types)
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Tipos de datos incorporados](../04-built-in-data-types/README.es.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../04-built-in-data-types/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../06-type-conversion/README.es.md)
+<!-- /chapter-navigation:bottom -->

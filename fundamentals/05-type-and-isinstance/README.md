@@ -6,7 +6,9 @@
 
 </div>
 
-[← Back to the section index](../README.md) · [← Previous chapter: Built-in data types](../04-built-in-data-types/README.md)
+<!-- chapter-navigation:top -->
+[← Previous](../04-built-in-data-types/README.md) · [Module index](../README.md) · [Next →](../06-type-conversion/README.md)
+<!-- /chapter-navigation:top -->
 
 Chapter 04 taught you to recognize common value types from their source notation. This chapter adds direct inspection. Python provides `type()` to reveal a value's exact type and `isinstance()` to ask whether a value belongs to a type or compatible type family.
 
@@ -558,4 +560,6 @@ Both examples in this chapter are approved for unattended execution.
 - [Python built-in types — Boolean values](https://docs.python.org/3/library/stdtypes.html#boolean-type-bool)
 - [Python data model — Objects, values, and types](https://docs.python.org/3/reference/datamodel.html#objects-values-and-types)
 
-[← Back to the section index](../README.md) · [← Previous chapter: Built-in data types](../04-built-in-data-types/README.md)
+<!-- chapter-navigation:bottom -->
+[← Previous](../04-built-in-data-types/README.md) · [Module index](../README.md) · [Next →](../06-type-conversion/README.md)
+<!-- /chapter-navigation:bottom -->

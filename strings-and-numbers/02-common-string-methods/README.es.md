@@ -2,7 +2,11 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-[← Volver al índice de la sección](../README.es.md) · [← Capítulo anterior: Creación e indexación de strings](../01-string-creation-and-indexing/README.es.md) · [Siguiente capítulo: `int`, `float` y `bool` →](../03-int-float-and-bool/README.es.md)
+
+
+<!-- chapter-navigation:top -->
+[← Anterior](../01-string-creation-and-indexing/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-int-float-and-bool/README.es.md)
+<!-- /chapter-navigation:top -->
 
 El capítulo anterior enseñó cómo crear strings y leer sus posiciones e intervalos. Este capítulo añade una nueva idea: las strings también ofrecen **métodos**, operaciones reutilizables que pueden inspeccionar texto o producir un resultado de tipo string sin modificar el valor original.
 
@@ -821,4 +825,6 @@ El siguiente capítulo cambia el foco del texto a valores numéricos y lógicos:
 - [Tipos incorporados de Python — Resumen de métodos de secuencias de texto y binarias](https://docs.python.org/3/library/stdtypes.html#text-and-binary-sequence-type-methods-summary)
 - [What’s New In Python 3.9 — New String Methods to Remove Prefixes and Suffixes](https://docs.python.org/3/whatsnew/3.9.html#new-string-methods-to-remove-prefixes-and-suffixes)
 
-[← Volver al índice de la sección](../README.es.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../01-string-creation-and-indexing/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../03-int-float-and-bool/README.es.md)
+<!-- /chapter-navigation:bottom -->

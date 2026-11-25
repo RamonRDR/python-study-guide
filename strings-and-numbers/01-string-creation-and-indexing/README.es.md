@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md) · [Siguiente capítulo: Métodos comunes de strings →](../02-common-string-methods/README.es.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../../fundamentals/06-type-conversion/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-common-string-methods/README.es.md)
+<!-- /chapter-navigation:top -->
 
 La Fase 1 enseñó que los valores de texto comunes usan el tipo `str`. Este primer capítulo de la Fase 2 profundiza ese concepto: muestra cómo crear strings y cómo leer posiciones individuales e intervalos dentro de ellas.
 
@@ -671,4 +673,6 @@ El próximo capítulo pasa de posiciones a comportamiento: **métodos comunes de
 - [Python Built-in Types — Common Sequence Operations](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations)
 - [Python Built-in Functions — `len()`](https://docs.python.org/3/library/functions.html#len)
 
-[← Volver al índice de la sección](../README.es.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../../fundamentals/06-type-conversion/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-common-string-methods/README.es.md)
+<!-- /chapter-navigation:bottom -->

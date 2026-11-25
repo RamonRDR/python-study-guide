@@ -6,7 +6,9 @@
 
 </div>
 
-[← Volver al índice de la sección](../README.es.md)
+<!-- chapter-navigation:top -->
+[Índice del módulo](../README.es.md) · [Siguiente →](../02-print-and-input/README.es.md)
+<!-- /chapter-navigation:top -->
 
 Un programa de Python comienza como texto escrito por una persona. Guardar ese texto en un archivo `.py` no lo ejecuta. El programa solo se ejecuta cuando se le pide al intérprete de Python que lea y ejecute el archivo.
 
@@ -444,4 +446,6 @@ python scripts/validate_repository_structure.py
 - [Tutorial de Python — Errores de sintaxis](https://docs.python.org/es/3/tutorial/errors.html#errores-de-sintaxis)
 - [Documentación de Python — Línea de comandos y entorno](https://docs.python.org/es/3/using/cmdline.html)
 
-[← Volver al índice de la sección](../README.es.md)
+<!-- chapter-navigation:bottom -->
+[Índice del módulo](../README.es.md) · [Siguiente →](../02-print-and-input/README.es.md)
+<!-- /chapter-navigation:bottom -->

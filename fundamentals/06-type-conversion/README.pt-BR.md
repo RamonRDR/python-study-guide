@@ -6,7 +6,9 @@
 
 </div>
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: `type()` e `isinstance()`](../05-type-and-isinstance/README.pt-BR.md)
+<!-- chapter-navigation:top -->
+[← Anterior](../05-type-and-isinstance/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md)
+<!-- /chapter-navigation:top -->
 
 O Capítulo 05 ensinou como inspecionar o tipo que um valor já possui. Este último capítulo de Fundamentos ensina o próximo passo: criar deliberadamente um valor de outro tipo compatível.
 
@@ -510,4 +512,6 @@ Agora você consegue executar um arquivo Python, exibir e receber informações,
 - [Tipos embutidos do Python — teste de valor-verdade](https://docs.python.org/3/library/stdtypes.html#truth-value-testing)
 - [Exceções embutidas do Python — `ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError)
 
-[← Voltar ao índice da seção](../README.pt-BR.md) · [← Capítulo anterior: `type()` e `isinstance()`](../05-type-and-isinstance/README.pt-BR.md)
+<!-- chapter-navigation:bottom -->
+[← Anterior](../05-type-and-isinstance/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../../strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md)
+<!-- /chapter-navigation:bottom -->
