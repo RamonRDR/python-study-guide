@@ -25,6 +25,17 @@ REQUIRED_DIRECTORIES = (
     "getting-started", "manual-programming-practices", "practical-projects", "scripts", "standard-library", "tests",
 )
 REQUIRED_FILES = (
+    "problem-solving-and-live-coding/08-strings-and-numbers/README.md",
+    "exercises/problem-solving/vowel-counter/README.md",
+    "problem-solving-and-live-coding/08-strings-and-numbers/README.pt-BR.md",
+    "exercises/problem-solving/vowel-counter/README.pt-BR.md",
+    "problem-solving-and-live-coding/08-strings-and-numbers/README.es.md",
+    "exercises/problem-solving/vowel-counter/README.es.md",
+    "exercises/problem-solving/vowel-counter/exercise.json",
+    "exercises/problem-solving/vowel-counter/starter.py",
+    "exercises/problem-solving/vowel-counter/solution.py",
+    "exercises/problem-solving/vowel-counter/test_solution.py",
+    "tests/test_problem_solving_pilot.py",
     "problem-solving-and-live-coding/README.md",
     "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
     "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",

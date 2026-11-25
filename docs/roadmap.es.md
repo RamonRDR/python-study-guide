@@ -203,7 +203,7 @@ Practica depuración manual, SDD, TDD y revisión aplicada a Python tras la Fase
 
 ## Fase 11: Resolución de problemas y live coding
 
-Se incluyen siete lecciones de fundamentos; el banco de retos y la práctica cronometrada siguen planificados.
+Se incluyen siete lecciones de fundamentos y una lección de retos con el piloto Contador de vocales; la expansión de retos y la práctica cronometrada siguen planificadas.
 
 [Abrir módulo](../problem-solving-and-live-coding/README.es.md)
 
@@ -214,14 +214,15 @@ Se incluyen siete lecciones de fundamentos; el banco de retos y la práctica cro
 5. [Algoritmos de búsqueda](../problem-solving-and-live-coding/05-searching-algorithms/README.es.md)
 6. [Algoritmos de ordenación](../problem-solving-and-live-coding/06-sorting-algorithms/README.es.md)
 7. [Patrones de resolución de problemas](../problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md)
+8. [Retos de cadenas y números](../problem-solving-and-live-coding/08-strings-and-numbers/README.es.md)
 
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 
-Esta fase de ingeniería no renumera el currículo original. Sprints 00–04 fusionados (PRs #87–#91). Fundamentos del Sprint 05 enviados a revisión; piloto y expansión de retos siguen planificados. El repositorio permanece independiente de la futura plataforma web.
+Esta fase de ingeniería no renumera el currículo original. Sprints 00–04 y fundamentos del Sprint 05 fusionados (PRs #87–#92). El primer piloto se envía a revisión; la expansión sigue planificada. El repositorio permanece independiente de la futura plataforma web.
 
 | Currículo futuro | Estado |
 | --- | --- |
-| 11. Resolución de problemas y live coding | Fundamentos en revisión; retos planificados |
+| 11. Resolución de problemas y live coding | Fundamentos fusionados; piloto en revisión |
 | 12. Preparación para entrevistas técnicas | Planificado |
 
 [Plan de implementación](specs/learning-hub-foundation/implementation-plan.es.md) · [Registro de integración de guías relacionadas](specs/learning-hub-foundation/related-guides.es.md)

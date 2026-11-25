@@ -6,7 +6,7 @@ Use esta página como o **sumário geral do curso**. Todos os capítulos de apre
 
 Se você está começando do zero, siga a ordem das fases. Algumas fases posteriores podem já estar concluídas antes de fases anteriores planejadas, mas a numeração continua representando a sequência de aprendizagem recomendada.
 
-Currículo publicado: 74 aulas e oito projetos práticos (82 entradas). Comece por Primeiros passos se nunca programou. Capítulos futuros são registrados no roadmap, não vinculados como aulas publicadas.
+Currículo publicado: 75 aulas e oito projetos práticos (83 entradas). Comece por Primeiros passos se nunca programou. Capítulos futuros são registrados no roadmap, não vinculados como aulas publicadas.
 
 ## Legenda de status
 
@@ -169,7 +169,7 @@ Pratique depuração manual, SDD, TDD e revisão aplicada a Python após a Fase 
 
 ## Fase 11: Resolução de problemas e live coding
 
-Sete aulas de fundamentos estão incluídas; o banco de desafios e a prática cronometrada permanecem planejados.
+Sete aulas de fundamentos e uma aula de desafios com o piloto Contador de vogais estão incluídas; a expansão dos desafios e a prática cronometrada permanecem planejadas.
 
 [Abrir módulo](../problem-solving-and-live-coding/README.pt-BR.md)
 
@@ -180,6 +180,7 @@ Sete aulas de fundamentos estão incluídas; o banco de desafios e a prática cr
 5. [Algoritmos de busca](../problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md)
 6. [Algoritmos de ordenação](../problem-solving-and-live-coding/06-sorting-algorithms/README.pt-BR.md)
 7. [Padrões de resolução de problemas](../problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md)
+8. [Desafios de strings e números](../problem-solving-and-live-coding/08-strings-and-numbers/README.pt-BR.md)
 
 ## Navegação útil
 

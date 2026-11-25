@@ -203,7 +203,7 @@ Practice manual debugging, SDD, TDD and a Python-specific review workflow after 
 
 ## Phase 11: Problem Solving & Live Coding
 
-Seven foundation lessons are included; the challenge bank and timed practice remain planned.
+Seven foundation lessons and one challenge chapter with the Vowel Counter pilot are included; challenge expansion and timed practice remain planned.
 
 [Open module](../problem-solving-and-live-coding/README.md)
 
@@ -214,14 +214,15 @@ Seven foundation lessons are included; the challenge bank and timed practice rem
 5. [Searching Algorithms](../problem-solving-and-live-coding/05-searching-algorithms/README.md)
 6. [Sorting Algorithms](../problem-solving-and-live-coding/06-sorting-algorithms/README.md)
 7. [Problem-Solving Patterns](../problem-solving-and-live-coding/07-problem-solving-patterns/README.md)
+8. [Strings and Numbers Challenges](../problem-solving-and-live-coding/08-strings-and-numbers/README.md)
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
-This engineering phase does not renumber the original curriculum. Sprints 00–04 are merged (PRs #87–#91). Sprint 05 foundations are submitted for review; the pilot and challenge expansion remain planned. The repository stays independent of the future web platform.
+This engineering phase does not renumber the original curriculum. Sprints 00–04 and Sprint 05 foundations are merged (PRs #87–#92). The first pilot is submitted for review; expansion remains planned. The repository stays independent of the future web platform.
 
 | Future curriculum | Status |
 | --- | --- |
-| 11. Problem Solving & Live Coding | Foundations in review; challenges planned |
+| 11. Problem Solving & Live Coding | Foundations merged; pilot in review |
 | 12. Technical Interview Preparation | Planned |
 
 [Implementation plan](specs/learning-hub-foundation/implementation-plan.md) · [Related-guide integration register](specs/learning-hub-foundation/related-guides.md)

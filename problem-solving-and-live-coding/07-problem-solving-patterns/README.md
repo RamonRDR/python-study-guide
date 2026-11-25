@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Previous](../06-sorting-algorithms/README.md) · [Module index](../README.md)
+[← Previous](../06-sorting-algorithms/README.md) · [Module index](../README.md) · [Next →](../08-strings-and-numbers/README.md)
 <!-- /chapter-navigation:top -->
 
 **Prerequisites:** [Dictionaries](../../collections/04-dictionaries-keys-and-values/README.md) · [Sets](../../collections/05-sets-and-unique-values/README.md) · [Complexity](../../problem-solving-and-live-coding/03-algorithmic-complexity/README.md)
@@ -37,5 +37,5 @@ python examples/patterns.py
 ```
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../06-sorting-algorithms/README.md) · [Module index](../README.md)
+[← Previous](../06-sorting-algorithms/README.md) · [Module index](../README.md) · [Next →](../08-strings-and-numbers/README.md)
 <!-- /chapter-navigation:bottom -->
