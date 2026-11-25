@@ -10,7 +10,7 @@ Status: proposed for review. Execute only after specification PR approval and me
 | --- | --- | --- |
 | 00 | docs/learning-hub-specification | Audit, constitution, specification, plan, tasks, acceptance criteria, preliminary contracts and ADRs. |
 | 01 | feat/chapter-navigation | Inventory all chapter/project language files; define ordered navigation, validate reciprocal and cross-module links; existing curriculum first. |
-| 02 | feat/getting-started | Add localized onboarding and connect to Fundamentals; extend navigation tests and existing indexes. |
+| 02 | feat/getting-started | Add localized onboarding and connect to Fundamentals; extend navigation tests and existing indexes. Add project-local venv and pip/dependency management lessons; document candidate library expansion separately from the completed Phase 9, with prerequisite review and separate future PRs. |
 | 03 | docs/readme-and-badges | Update three READMEs, paths, roadmap and structure; badge evidence only. |
 | 04 | feat/manual-programming-practices | Teach manual practice and SDD/TDD; reference existing AI-assisted maintenance guidance. |
 | 05 | feat/problem-solving-live-coding | Audit prerequisites for all FR-05 topics; teach missing concepts in all three languages before the corresponding practice; then pilot one challenge against the preliminary contract and expand by concept/difficulty with tests. |

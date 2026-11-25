@@ -55,7 +55,7 @@ Phases 0–10 are complete. Phase 10: Practical Projects closes with all eight p
 
 ## Curriculum order 00: Getting Started
 
-The introductory module precedes Phase 1 and is separate from historical Phase 0 (Project Foundation). See [Getting Started](../getting-started/README.md) for Python installation, editor setup and first manual execution.
+The introductory module precedes Phase 1 and is separate from historical Phase 0 (Project Foundation). See [Getting Started](../getting-started/README.md) for Python installation, editor setup, first manual execution, project-local virtual environments and dependency management.
 
 ## Phase 1: Fundamentals
 
@@ -166,6 +166,10 @@ See the [section learning path](../external-libraries/README.md).
 - [x] [`pytest`](../external-libraries/04-pytest/README.md)
 
 Phase 9 is complete. Chapter 01 introduces pandas 3.0.x for labeled tabular data. Chapter 02 adds openpyxl 3.1.x workbook automation. Chapter 03 adds Requests 2.34.x HTTP/API contracts. Chapter 04 closes the phase with pytest 9.1.x automated-testing contracts covering discovery, assertions, fixtures, parametrization, temporary resources, monkeypatching, capture, marks, deterministic isolation, and CI. Executable external-library examples use the dependency contract declared in [`requirements-external.txt`](../requirements-external.txt).
+
+### Future library expansion (candidates, not scheduled)
+
+The four completed Phase 9 chapters and their dependency contract remain unchanged. Candidate topics: numpy (numeric arrays), playwright and selenium (browser automation), beautifulsoup4 (HTML parsing), httpx (HTTP clients), fastapi (API development), pydantic (validation), sqlalchemy (database access), matplotlib (visualization), python-dotenv (configuration). Each future chapter requires prerequisite mapping, a separate approved scope, trilingual material, supported dependency versions and deterministic tests. Browser automation needs separate runtime/browser checks. The introductory [package map](../getting-started/05-packages-and-dependencies/README.md) does not add these dependencies to CI.
 
 ## Phase 10: Practical projects
 

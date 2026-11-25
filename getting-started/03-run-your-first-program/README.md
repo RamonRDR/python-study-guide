@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Previous](../02-configure-vscode/README.md) · [Module index](../README.md) · [Next →](../../fundamentals/01-how-python-runs-a-program/README.md)
+[← Previous](../02-configure-vscode/README.md) · [Module index](../README.md) · [Next →](../04-virtual-environments/README.md)
 <!-- /chapter-navigation:top -->
 
 ## Goal and prerequisites
@@ -77,7 +77,7 @@ For comparison, the repository includes [the same original example](examples/fir
 
 ## Next step
 
-Continue to [How Python runs a program](../../fundamentals/01-how-python-runs-a-program/README.md) to study source code, interpreters, execution order, Hello World and syntax errors in depth.
+Continue to [Virtual Environments](../04-virtual-environments/README.md) to isolate project dependencies. The conceptual lesson [How Python runs a program](../../fundamentals/01-how-python-runs-a-program/README.md) follows the introductory module.
 
 ## Official references
 
@@ -85,5 +85,5 @@ Continue to [How Python runs a program](../../fundamentals/01-how-python-runs-a-
 - [Running Python in VS Code](https://code.visualstudio.com/docs/python/run)
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../02-configure-vscode/README.md) · [Module index](../README.md) · [Next →](../../fundamentals/01-how-python-runs-a-program/README.md)
+[← Previous](../02-configure-vscode/README.md) · [Module index](../README.md) · [Next →](../04-virtual-environments/README.md)
 <!-- /chapter-navigation:bottom -->

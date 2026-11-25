@@ -21,6 +21,8 @@ This onboarding module comes before Phase 1 and does not replace the historical 
 1. [Install Python](../getting-started/01-install-python/README.md)
 2. [Configure VS Code](../getting-started/02-configure-vscode/README.md)
 3. [Run your first program](../getting-started/03-run-your-first-program/README.md)
+4. [Virtual Environments](../getting-started/04-virtual-environments/README.md)
+5. [Packages and Dependency Management](../getting-started/05-packages-and-dependencies/README.md)
 
 ## Phase 1 · Fundamentals ✅
 

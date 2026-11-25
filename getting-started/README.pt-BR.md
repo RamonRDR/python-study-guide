@@ -9,9 +9,11 @@ Este módulo introdutório (ordem curricular 00) prepara seu computador antes da
 1. [Instalar o Python](01-install-python/README.pt-BR.md): Instalar e verificar o interpretador.
 2. [Configurar o VS Code](02-configure-vscode/README.pt-BR.md): Instalar um editor e selecionar o interpretador.
 3. [Executar seu primeiro programa](03-run-your-first-program/README.pt-BR.md): Criar, salvar e executar um arquivo Python local.
+4. [Ambientes virtuais](04-virtual-environments/README.pt-BR.md): Criar e verificar uma .venv por projeto.
+5. [Pacotes e gerenciamento de dependências](05-packages-and-dependencies/README.pt-BR.md): Instalar, inspecionar, registrar e recriar dependências do projeto.
 
 ## O que você precisa demonstrar
 
-Você consegue identificar sua versão do Python, selecionar o interpretador desejado, criar um arquivo `.py`, executá-lo no terminal e localizar sua saída. Depois, siga para Fundamentos para entender código-fonte, execução e erros de sintaxe.
+Você consegue identificar sua versão do Python, selecionar o interpretador desejado, criar um arquivo `.py`, executá-lo no terminal e localizar sua saída. Você também consegue criar e selecionar um ambiente virtual local ao projeto, instalar um pacote e recriar o ambiente a partir de um arquivo de dependências. Depois, siga para Fundamentos para entender código-fonte, execução e erros de sintaxe.
 
 [Próximo módulo: Fundamentos](../fundamentals/README.pt-BR.md) · [Trilha completa](../docs/learning-path.pt-BR.md)

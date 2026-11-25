@@ -55,7 +55,7 @@ As Fases 0–10 estão concluídas. A Fase 10: Projetos Práticos encerra com os
 
 ## Ordem curricular 00: Primeiros passos
 
-O módulo introdutório precede a Fase 1 e é separado da Fase 0 histórica (Fundação do projeto). Consulte [Primeiros passos](../getting-started/README.pt-BR.md) para instalação do Python, configuração do editor e primeira execução manual.
+O módulo introdutório precede a Fase 1 e é separado da Fase 0 histórica (Fundação do projeto). Consulte [Primeiros passos](../getting-started/README.pt-BR.md) para instalação do Python, configuração do editor, primeira execução manual, ambientes virtuais por projeto e gerenciamento de dependências.
 
 ## Fase 1: Fundamentos
 
@@ -166,6 +166,10 @@ Veja a [trilha de aprendizagem da seção](../external-libraries/README.pt-BR.md
 - [x] [`pytest`](../external-libraries/04-pytest/README.pt-BR.md)
 
 A Fase 9 está concluída. O Capítulo 01 introduz pandas 3.0.x para dados tabulares rotulados. O Capítulo 02 acrescenta automação de workbooks com openpyxl 3.1.x. O Capítulo 03 acrescenta contratos HTTP/API com Requests 2.34.x. O Capítulo 04 encerra a fase com contratos de testes automatizados em pytest 9.1.x, cobrindo descoberta, assertions, fixtures, parametrização, recursos temporários, monkeypatching, captura, marks, isolamento determinístico e CI. Os exemplos executáveis de bibliotecas externas usam o contrato declarado em [`requirements-external.txt`](../requirements-external.txt).
+
+### Expansão futura de bibliotecas (candidatos, sem cronograma)
+
+Os quatro capítulos concluídos da Fase 9 e seu contrato de dependências permanecem intactos. Temas candidatos: numpy (arrays numéricos), playwright e selenium (automação de navegadores), beautifulsoup4 (análise de HTML), httpx (clientes HTTP), fastapi (desenvolvimento de APIs), pydantic (validação), sqlalchemy (acesso a bancos), matplotlib (visualização), python-dotenv (configuração). Cada capítulo futuro exige mapeamento de pré-requisitos, escopo separado aprovado, material trilíngue, versões suportadas e testes determinísticos. Automação de navegadores requer verificações separadas de runtime/navegadores. O [mapa introdutório de pacotes](../getting-started/05-packages-and-dependencies/README.pt-BR.md) não adiciona essas dependências ao CI.
 
 ## Fase 10: Projetos práticos
 

@@ -7,10 +7,10 @@
 </div>
 
 <!-- chapter-navigation:top -->
-[← Anterior](../../getting-started/03-run-your-first-program/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-print-and-input/README.es.md)
+[← Anterior](../../getting-started/05-packages-and-dependencies/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-print-and-input/README.es.md)
 <!-- /chapter-navigation:top -->
 
-**Convención de comandos:** los ejemplos usan `python` como abreviatura. Cuando sea necesario, usa el comando del intérprete comprobado en Primeros pasos (por ejemplo, `py -3.13`, `python3.13` o `python3`); conserva el resto de cada comando.
+**Convención de comandos:** los ejemplos usan `python` como abreviatura. Cuando sea necesario, usa el comando del intérprete comprobado en Primeros pasos (por ejemplo, `py -3.13`, `python3.13` o `python3`); conserva el resto de cada comando. Al trabajar en la .venv del proyecto creada en Primeros pasos, usa su comando `python` comprobado (o la ruta directa del ejecutable) en lugar del launcher base.
 
 Un programa de Python comienza como texto escrito por una persona. Guardar ese texto en un archivo `.py` no lo ejecuta. El programa solo se ejecuta cuando se le pide al intérprete de Python que lea y ejecute el archivo.
 
@@ -449,5 +449,5 @@ python scripts/validate_repository_structure.py
 - [Documentación de Python — Línea de comandos y entorno](https://docs.python.org/es/3/using/cmdline.html)
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../../getting-started/03-run-your-first-program/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-print-and-input/README.es.md)
+[← Anterior](../../getting-started/05-packages-and-dependencies/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../02-print-and-input/README.es.md)
 <!-- /chapter-navigation:bottom -->

@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../02-configure-vscode/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../fundamentals/01-how-python-runs-a-program/README.es.md)
+[← Anterior](../02-configure-vscode/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-virtual-environments/README.es.md)
 <!-- /chapter-navigation:top -->
 
 ## Objetivo y requisitos previos
@@ -77,7 +77,7 @@ Para comparar, el repositorio incluye [el mismo ejemplo original](examples/first
 
 ## Siguiente paso
 
-Continúa con [Cómo Python ejecuta un programa](../../fundamentals/01-how-python-runs-a-program/README.es.md) para estudiar código fuente, intérpretes, orden de ejecución, Hello World y errores de sintaxis en profundidad.
+Continúa con [Entornos virtuales](../04-virtual-environments/README.es.md) para aislar las dependencias del proyecto. La lección conceptual [Cómo Python ejecuta un programa](../../fundamentals/01-how-python-runs-a-program/README.es.md) sigue al módulo introductorio.
 
 ## Referencias oficiales
 
@@ -85,5 +85,5 @@ Continúa con [Cómo Python ejecuta un programa](../../fundamentals/01-how-pytho
 - [Ejecución de Python en VS Code](https://code.visualstudio.com/docs/python/run)
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../02-configure-vscode/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../../fundamentals/01-how-python-runs-a-program/README.es.md)
+[← Anterior](../02-configure-vscode/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../04-virtual-environments/README.es.md)
 <!-- /chapter-navigation:bottom -->

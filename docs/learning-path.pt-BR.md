@@ -21,6 +21,8 @@ Este módulo introdutório vem antes da Fase 1 e não substitui a Fase 0 histór
 1. [Instalar o Python](../getting-started/01-install-python/README.pt-BR.md)
 2. [Configurar o VS Code](../getting-started/02-configure-vscode/README.pt-BR.md)
 3. [Executar seu primeiro programa](../getting-started/03-run-your-first-program/README.pt-BR.md)
+4. [Ambientes virtuais](../getting-started/04-virtual-environments/README.pt-BR.md)
+5. [Pacotes e gerenciamento de dependências](../getting-started/05-packages-and-dependencies/README.pt-BR.md)
 
 ## Fase 1 · Fundamentos ✅
 

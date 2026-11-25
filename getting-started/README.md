@@ -9,9 +9,11 @@ This introductory module (curriculum order 00) prepares your computer before Pha
 1. [Install Python](01-install-python/README.md): Install and verify the interpreter.
 2. [Configure VS Code](02-configure-vscode/README.md): Install an editor and select the interpreter.
 3. [Run your first program](03-run-your-first-program/README.md): Create, save and run a local Python file.
+4. [Virtual Environments](04-virtual-environments/README.md): Create and verify a project-specific .venv.
+5. [Packages and Dependency Management](05-packages-and-dependencies/README.md): Install, inspect, record and recreate project dependencies.
 
 ## What you need to demonstrate
 
-You can identify your Python version, select the intended interpreter, create a `.py` file, run it from a terminal and locate its output. Then continue with Fundamentals for the meaning of source code, execution and syntax errors.
+You can identify your Python version, select the intended interpreter, create a `.py` file, run it from a terminal and locate its output. You can also create and select a project-local virtual environment, install a package and recreate the environment from a requirements file. Then continue with Fundamentals for the meaning of source code, execution and syntax errors.
 
 [Next module: Fundamentals](../fundamentals/README.md) · [Full learning path](../docs/learning-path.en.md)

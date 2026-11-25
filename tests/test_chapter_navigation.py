@@ -136,5 +136,37 @@ class ChapterNavigationTests(unittest.TestCase):
         )
         self.assertTrue(any(path in error for error in validate_documents(documents, tracked)))
 
+    def test_extended_onboarding_has_reciprocal_fundamentals_boundary(self):
+        for locale, (filename, previous, index, following) in LOCALES.items():
+            order = [
+                f"getting-started/{slug}/{filename}"
+                for slug in (
+                    "01-install-python",
+                    "02-configure-vscode",
+                    "03-run-your-first-program",
+                    "04-virtual-environments",
+                    "05-packages-and-dependencies",
+                )
+            ] + [f"fundamentals/01-how-python-runs-a-program/{filename}"]
+            with self.subTest(locale=locale):
+                self.assertEqual(
+                    navigation_line(order, 2, locale),
+                    f"[{previous}](../02-configure-vscode/{filename}) · "
+                    f"[{index}](../{filename}) · "
+                    f"[{following}](../04-virtual-environments/{filename})",
+                )
+                self.assertEqual(
+                    navigation_line(order, 4, locale),
+                    f"[{previous}](../04-virtual-environments/{filename}) · "
+                    f"[{index}](../{filename}) · "
+                    f"[{following}](../../fundamentals/01-how-python-runs-a-program/{filename})",
+                )
+                self.assertEqual(
+                    navigation_line(order, 5, locale),
+                    f"[{previous}](../../getting-started/05-packages-and-dependencies/{filename}) · "
+                    f"[{index}](../{filename})",
+                )
+
+
 if __name__ == "__main__":
     unittest.main()

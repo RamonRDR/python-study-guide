@@ -33,7 +33,7 @@ Crie uma pasta vazia chamada `python-practice` em um local pessoal com permissã
 
 ## 4. Selecione o interpretador
 
-Abra a Command Palette com `Ctrl+Shift+P` (Windows/Linux) ou `Cmd+Shift+P` (macOS). Pesquise **Python: Select Interpreter** e selecione o interpretador instalado que você verificou antes. Se necessário, escolha Enter interpreter path e localize o executável informado na aula anterior. A versão exibida no editor deve corresponder ao Python desejado. Se já usa ambiente virtual, selecione deliberadamente seu interpretador; um novo ambiente não é necessário nesta aula.
+Abra a Command Palette com `Ctrl+Shift+P` (Windows/Linux) ou `Cmd+Shift+P` (macOS). Pesquise **Python: Select Interpreter** e selecione o interpretador instalado que você verificou antes. Se necessário, escolha Enter interpreter path e localize o executável informado na aula anterior. A versão exibida no editor deve corresponder ao Python desejado. Se já usa ambiente virtual, selecione deliberadamente seu interpretador. Por enquanto use o interpretador verificado; o [capítulo 04](../04-virtual-environments/README.pt-BR.md) ensina a criar e selecionar um ambiente local ao projeto após o primeiro programa.
 
 ## 5. Verifique no terminal integrado
 

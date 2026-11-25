@@ -13,7 +13,7 @@ Status as of 2026-11-25: Sprints 00–01 merged; Sprint 02 onboarding submitted 
 | T00-05 Verify specification PR, CI and Codex findings | 00 | T00-04 | Done ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T00-06 Obtain approval and merge | 00 | T00-05 | Done ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)) |
 | T01-01 Inventory navigation and implement locale-safe links/tests | 01 | T00-06 | Done ([PR #88](https://github.com/RamonRDR/python-study-guide/pull/88)) |
-| T02-01 Author Getting Started and link to Fundamentals | 02 | T01-01 | Implemented; CI and review pending |
+| T02-01 Author five Getting Started lessons, including project-local environments and dependency management; link to Fundamentals | 02 | T01-01 | Implemented; CI and review pending |
 | T03-01 Align README, roadmap, learning path, structure and badges | 03 | T02-01 | Pending |
 | T04-01 Add manual practice and engineering guidance | 04 | T03-01 | Pending |
 | T05-00 Map all FR-05 prerequisites to existing lessons and teach missing concepts in EN/PT-BR/ES before challenge publication | 05 | T04-01 | Pending |

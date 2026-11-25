@@ -10,7 +10,7 @@ Status: proposta para revisão. Executar somente após aprovação e merge do PR
 | --- | --- | --- |
 | 00 | docs/learning-hub-specification | Auditoria, constituição, especificação, plano, tarefas, critérios, contratos preliminares e ADRs. |
 | 01 | feat/chapter-navigation | Inventariar idiomas de capítulos/projetos, definir navegação ordenada, validar links recíprocos e entre módulos; currículo existente primeiro. |
-| 02 | feat/getting-started | Onboarding localizado e conexão a Fundamentals; ampliar testes de navegação e índices. |
+| 02 | feat/getting-started | Onboarding localizado e conexão a Fundamentals; ampliar testes de navegação e índices. Adicionar aulas de venv local ao projeto e gerenciamento de pip/dependências; documentar candidatos à expansão de bibliotecas separadamente da Fase 9 concluída, com revisão de pré-requisitos e PRs futuros separados. |
 | 03 | docs/readme-and-badges | Atualizar três READMEs, trilhas, roadmap e estrutura; badges somente com evidências. |
 | 04 | feat/manual-programming-practices | Ensinar prática manual e SDD/TDD; referenciar orientação existente de manutenção por IA. |
 | 05 | feat/problem-solving-live-coding | Auditar pré-requisitos de todos os tópicos FR-05; ensinar conceitos ausentes nos três idiomas antes da prática correspondente; depois pilotar desafio conforme contrato preliminar e expandir por conceito/dificuldade com testes. |

@@ -33,7 +33,7 @@ Crea una carpeta vacía llamada `python-practice` en una ubicación personal con
 
 ## 4. Selecciona el intérprete
 
-Abre la Command Palette con `Ctrl+Shift+P` (Windows/Linux) o `Cmd+Shift+P` (macOS). Busca **Python: Select Interpreter** y selecciona el intérprete instalado que comprobaste antes. Si es necesario, elige Enter interpreter path y localiza el ejecutable indicado en la lección anterior. La versión mostrada en el editor debe corresponder al Python deseado. Si ya usas un entorno virtual, selecciona su intérprete deliberadamente; no necesitas crear otro entorno para esta lección.
+Abre la Command Palette con `Ctrl+Shift+P` (Windows/Linux) o `Cmd+Shift+P` (macOS). Busca **Python: Select Interpreter** y selecciona el intérprete instalado que comprobaste antes. Si es necesario, elige Enter interpreter path y localiza el ejecutable indicado en la lección anterior. La versión mostrada en el editor debe corresponder al Python deseado. Si ya usas un entorno virtual, selecciona su intérprete deliberadamente. Por ahora usa el intérprete comprobado; el [capítulo 04](../04-virtual-environments/README.es.md) enseña a crear y seleccionar un entorno local al proyecto después del primer programa.
 
 ## 5. Comprueba en la terminal integrada
 

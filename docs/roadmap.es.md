@@ -55,7 +55,7 @@ Las Fases 0–10 están completadas. La Fase 10: Proyectos Prácticos cierra con
 
 ## Orden curricular 00: Primeros pasos
 
-El módulo introductorio precede a la Fase 1 y es independiente de la Fase 0 histórica (Base del proyecto). Consulta [Primeros pasos](../getting-started/README.es.md) para instalar Python, configurar el editor y realizar la primera ejecución manual.
+El módulo introductorio precede a la Fase 1 y es independiente de la Fase 0 histórica (Base del proyecto). Consulta [Primeros pasos](../getting-started/README.es.md) para instalar Python, configurar el editor, realizar la primera ejecución manual y gestionar entornos virtuales y dependencias por proyecto.
 
 ## Fase 1: Fundamentos
 
@@ -166,6 +166,10 @@ Consulta la [ruta de aprendizaje de la sección](../external-libraries/README.es
 - [x] [`pytest`](../external-libraries/04-pytest/README.es.md)
 
 La Fase 9 está completada. El Capítulo 01 introduce pandas 3.0.x para datos tabulares etiquetados. El Capítulo 02 añade automatización de libros con openpyxl 3.1.x. El Capítulo 03 añade contratos HTTP/API con Requests 2.34.x. El Capítulo 04 cierra la fase con contratos de pruebas automatizadas en pytest 9.1.x, cubriendo descubrimiento, assertions, fixtures, parametrización, recursos temporales, monkeypatching, captura, marks, aislamiento determinista y CI. Los ejemplos ejecutables de bibliotecas externas usan el contrato declarado en [`requirements-external.txt`](../requirements-external.txt).
+
+### Ampliación futura de bibliotecas (candidatos, sin calendario)
+
+Los cuatro capítulos completados de la Fase 9 y su contrato de dependencias permanecen intactos. Temas candidatos: numpy (arrays numéricos), playwright y selenium (automatización de navegadores), beautifulsoup4 (análisis HTML), httpx (clientes HTTP), fastapi (desarrollo de APIs), pydantic (validación), sqlalchemy (acceso a bases de datos), matplotlib (visualización), python-dotenv (configuración). Cada capítulo futuro requiere mapeo de requisitos previos, alcance separado aprobado, material trilingüe, versiones compatibles y pruebas deterministas. Automatización de navegadores requiere comprobaciones separadas de runtime/navegadores. El [mapa introductorio de paquetes](../getting-started/05-packages-and-dependencies/README.es.md) no añade estas dependencias a CI.
 
 ## Fase 10: Proyectos prácticos
 

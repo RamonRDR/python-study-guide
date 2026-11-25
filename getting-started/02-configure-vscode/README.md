@@ -33,7 +33,7 @@ Create an empty folder named `python-practice` in a personal, writable location 
 
 ## 4. Select the interpreter
 
-Open the Command Palette using `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS). Search for **Python: Select Interpreter** and select the installed interpreter you verified earlier. If necessary, choose Enter interpreter path and locate the executable reported by the previous lesson. The version shown in the editor should match your intended Python. If you already use a virtual environment, select its interpreter deliberately; a new environment is not necessary for this lesson.
+Open the Command Palette using `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS). Search for **Python: Select Interpreter** and select the installed interpreter you verified earlier. If necessary, choose Enter interpreter path and locate the executable reported by the previous lesson. The version shown in the editor should match your intended Python. If you already use a virtual environment, select its interpreter deliberately. For now use the verified interpreter; [Chapter 04](../04-virtual-environments/README.md) teaches how to create and select a project-local environment after the first program.
 
 ## 5. Verify in the integrated terminal
 
