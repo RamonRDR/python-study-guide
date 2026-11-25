@@ -21,6 +21,10 @@
 - [09-data-flow-between-functions](../../../functions/09-data-flow-between-functions/README.es.md)
 - [15-mixed-challenges](../../../problem-solving-and-live-coding/15-mixed-challenges/README.es.md)
 
+- [05-sets-and-unique-values](../../../collections/05-sets-and-unique-values/README.es.md)
+- [05-range-enumerate-and-zip](../../../program-flow/05-range-enumerate-and-zip/README.es.md)
+- [03-tuples-and-immutability](../../../collections/03-tuples-and-immutability/README.es.md)
+
 ## Contrato
 
 Cada entrada es lista de filas [label, quantity], con etiquetas exactas y cantidades enteras no negativas. Agrega duplicados por separado y devuelve filas [label, expected_total, actual_total, actual_total - expected_total] solo para totales distintos. Ordena por primera aparición en expected seguida de primera aparición de etiquetas exclusivas de actual. Cantidades ausentes son cero; conserva entradas.

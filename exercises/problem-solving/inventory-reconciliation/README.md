@@ -21,6 +21,10 @@
 - [09-data-flow-between-functions](../../../functions/09-data-flow-between-functions/README.md)
 - [15-mixed-challenges](../../../problem-solving-and-live-coding/15-mixed-challenges/README.md)
 
+- [05-sets-and-unique-values](../../../collections/05-sets-and-unique-values/README.md)
+- [05-range-enumerate-and-zip](../../../program-flow/05-range-enumerate-and-zip/README.md)
+- [03-tuples-and-immutability](../../../collections/03-tuples-and-immutability/README.md)
+
 ## Contract
 
 Each input is a list of [label, quantity] rows, with exact string labels and nonnegative integer quantities. Aggregate duplicates separately, then return rows [label, expected_total, actual_total, actual_total - expected_total] only for labels with unequal totals. Order rows by first appearance in expected followed by first appearance of labels exclusive to actual. Missing quantities are zero; preserve inputs.

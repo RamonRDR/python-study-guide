@@ -1,6 +1,6 @@
 {
   "id": "problem-solving.inventory-reconciliation",
-  "chapter_id": "problem-solving.mixed-challenges",
+  "chapter_id": "problem-solving.mixed",
   "difficulty": "hard",
   "estimated_minutes": 40,
   "title": {
@@ -21,7 +21,9 @@
     "dictionaries",
     "list-methods",
     "problem-solving-patterns",
-    "mutation-and-data-flow"
+    "mutation-and-data-flow",
+    "sets",
+    "unpacking"
   ],
   "constraints": {
     "en": [
@@ -427,6 +429,21 @@
       "en": "problem-solving-and-live-coding/15-mixed-challenges/README.md",
       "pt-BR": "problem-solving-and-live-coding/15-mixed-challenges/README.pt-BR.md",
       "es": "problem-solving-and-live-coding/15-mixed-challenges/README.es.md"
+    },
+    {
+      "en": "collections/05-sets-and-unique-values/README.md",
+      "pt-BR": "collections/05-sets-and-unique-values/README.pt-BR.md",
+      "es": "collections/05-sets-and-unique-values/README.es.md"
+    },
+    {
+      "en": "program-flow/05-range-enumerate-and-zip/README.md",
+      "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+      "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+    },
+    {
+      "en": "collections/03-tuples-and-immutability/README.md",
+      "pt-BR": "collections/03-tuples-and-immutability/README.pt-BR.md",
+      "es": "collections/03-tuples-and-immutability/README.es.md"
     }
   ],
   "practice_mode": "implement"

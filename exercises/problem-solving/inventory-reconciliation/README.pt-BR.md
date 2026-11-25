@@ -21,6 +21,10 @@
 - [09-data-flow-between-functions](../../../functions/09-data-flow-between-functions/README.pt-BR.md)
 - [15-mixed-challenges](../../../problem-solving-and-live-coding/15-mixed-challenges/README.pt-BR.md)
 
+- [05-sets-and-unique-values](../../../collections/05-sets-and-unique-values/README.pt-BR.md)
+- [05-range-enumerate-and-zip](../../../program-flow/05-range-enumerate-and-zip/README.pt-BR.md)
+- [03-tuples-and-immutability](../../../collections/03-tuples-and-immutability/README.pt-BR.md)
+
 ## Contrato
 
 Cada entrada é lista de linhas [label, quantity], com rótulos de string exatos e quantidades inteiras não negativas. Agregue duplicados separadamente e retorne linhas [label, expected_total, actual_total, actual_total - expected_total] somente para totais diferentes. Ordene por primeira ocorrência em expected, seguida da primeira ocorrência de rótulos exclusivos de actual. Quantidades ausentes são zero; preserve entradas.
