@@ -147,3 +147,11 @@ Before completing a change, confirm that:
 - no unrelated files were modified;
 - review discussions were properly addressed;
 - the final result teaches rather than merely supplies an answer.
+
+## Phase II specification-driven development
+
+For Learning Hub Foundation changes, consult the [constitution](docs/specs/constitution.md), [specification](docs/specs/learning-hub-foundation/specification.md), [implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md), [task register](docs/specs/learning-hub-foundation/tasks.md), [acceptance criteria](docs/specs/learning-hub-foundation/acceptance-criteria.md), [integration contract](docs/specs/learning-hub-foundation/integration-contract.md), and [ADRs](docs/adr/README.md) before implementation.
+
+Keep internal engineering specifications in English and student-facing material aligned in all three languages. Preserve existing curriculum paths and separate engineering sprint numbers from educational order. Do not implement the external Learning Hub in this repository, add paid services, or introduce AI grading. Maintain the repository as the source of truth.
+
+Use focused branches and PRs, request Codex review, address relevant findings, disclose unrun checks and obtain explicit maintainer approval before merging. Update specifications and task status with evidence when scope or contracts change. Proposed specifications are not authorization to implement before approval.
