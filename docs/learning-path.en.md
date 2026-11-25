@@ -6,13 +6,15 @@ Use this page as the **master table of contents for the course**. Every publishe
 
 If you are starting from zero, follow the phase order. Completed later phases may already be available before earlier planned phases, but the phase numbers still represent the intended learning sequence.
 
+Published curriculum: 63 lessons and eight practical projects (71 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
+
 ## Status legend
 
 - ✅ **Available:** published and reviewed
 - 🚧 **In progress:** the phase has started but is not complete
 - ⏳ **Planned:** not yet available as a complete learning section
 
-## Curriculum order 00 · Getting Started
+## Curriculum order 00 · Getting Started ✅
 
 This onboarding module comes before Phase 1 and does not replace the historical Phase 0 (Project Foundation).
 

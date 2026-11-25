@@ -12,7 +12,10 @@ python-study-guide/
 │   ├── ISSUE_TEMPLATE/
 │   ├── workflows/
 │   │   └── quality-checks.yml
-│   └── pull_request_template.md
+│   ├── pull_request_template.md
+│   ├── pull_request_template.pt-BR.md
+│   └── pull_request_template.es.md
+├── .gitignore
 ├── AGENTS.md
 ├── AUTHORS.md
 ├── CODE_OF_CONDUCT.md
@@ -127,6 +130,8 @@ python-study-guide/
 │           ├── collection_tradeoffs.py
 │           └── study_workspace.py
 ├── docs/
+│   ├── adr/
+│   ├── specs/
 │   ├── ai-assisted-development/
 │   ├── localized/
 │   ├── learning-path.en.md
@@ -310,6 +315,35 @@ python-study-guide/
 │           ├── rebinding_and_mutation.py
 │           └── trace_score_pipeline.py
 ├── getting-started/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   ├── 01-install-python/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 02-configure-vscode/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 03-run-your-first-program/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   ├── README.es.md
+│   │   └── examples/
+│   │       └── first_program.py
+│   ├── 04-virtual-environments/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 05-packages-and-dependencies/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   └── 06-git-and-version-control/
+│       ├── README.md
+│       ├── README.pt-BR.md
+│       └── README.es.md
 ├── fundamentals/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -503,6 +537,8 @@ python-study-guide/
 │           ├── select_and_classify.py
 │           └── state_driven_workflow.py
 ├── scripts/
+│   ├── check_chapter_navigation.py
+│   ├── check_documentation_languages.py
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
 │   ├── run_examples.py
@@ -625,6 +661,13 @@ python-study-guide/
 │           ├── numeric_summary.py
 │           └── rounding_behavior.py
 └── tests/
+    ├── README.md
+    ├── README.pt-BR.md
+    ├── README.es.md
+    ├── test_chapter_navigation.py
+    ├── test_check_internal_links.py
+    ├── test_documentation_languages.py
+    └── test_validate_repository_structure.py
 ```
 
 ## Root file guide
@@ -645,6 +688,7 @@ python-study-guide/
 - `comments-and-documentation/`: complete Phase 6 learning path. Reviewed chapters are available for comments, docstrings, meaningful names, task markers, comments versus logging, and PEP 8 and readability, each in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `collections/`: complete Phase 3 learning path. Its six chapters teach list creation, reading, mutation, common methods, shallow copying, tuples and immutability, dictionary key-value mappings and views, set uniqueness and relationships, and how to choose among lists, tuples, dictionaries, and sets by intent, in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
+- `docs/adr/` and `docs/specs/`: trilingual architecture decisions, Phase II specifications, task register, acceptance criteria, integration contract and future related-guide references.
 - `errors-files-and-modules/`: complete Phase 7 learning path. Chapters 01–05 cover runtime exception handling, deliberate raising and custom exceptions, safe text-file I/O with `open()` and `with`, TXT/CSV/JSON parsing and writing, and code organization through imports, modules, regular packages, execution context, and dependency design, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `exercises/`: focused practice activities connected to learning chapters.
 - `external-libraries/`: complete Phase 9 learning path for third-party packages. It contains reviewed multilingual chapters for pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x, and pytest 9.1.x, with twenty deterministic executable examples in total. The phase covers tabular transformations, Excel workbook automation, HTTP/API clients, and automated-testing contracts; Phase 10 practical projects are also complete.
@@ -653,7 +697,7 @@ python-study-guide/
 - `fundamentals/`: complete Phase 1 learning path. Its six chapters teach how Python runs a program, how to use `print()` and `input()`, how assignment and naming work, how to recognize and inspect common built-in data types, and how to convert compatible values deliberately, with aligned multilingual explanations and executable examples.
 - `practical-projects/`: complete Phase 10 practical-project workspace. Projects 01–08 are complete, reviewed, and integrated. Project 07 adds immutable reconciliation models, exact integer-cent arithmetic, deterministic matching and ordering, duplicate rejection, explicit reconciliation statuses, validated report invariants, stable text rendering, and focused precision and safety regression tests. Project 08 closes the phase with immutable automation requests and results, a fixed `prepare → process → verify → finalize` execution plan, deterministic event logs, structured evidence, controlled failure injection, fail-fast propagation, post-processing verification, skipped-step semantics, stable rendering, and focused invariant regression tests without external integrations.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
-- `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions.
+- `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions. The repository quality tools verify approved examples, internal links, language-family parity, chapter navigation and required paths. The Windows job covers File Organizer tests; the Linux job runs the complete practical-project suite.
 - `standard-library/`: complete Phase 8 learning path. Chapters 01–09 cover `pathlib` filesystem boundaries, `datetime` date/time modeling, advanced `json` and `csv` contracts, `logging`, specialized `collections`, `itertools`, `decimal`, and `os`/`shutil` contracts for environment state, traversal, metadata, copy, move, recursive removal, platform capabilities, and archive safety, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `strings-and-numbers/`: complete Phase 2 learning path. Its four reviewed chapters cover string creation and indexing, common string methods, integer, floating-point, and Boolean behavior, floating-point precision, and `round()`, `abs()`, `min()`, `max()`, and `sum()` in English, Brazilian Portuguese, and Spanish with safe executable examples.
 - `tests/`: regression tests for repository quality tools and later educational code.

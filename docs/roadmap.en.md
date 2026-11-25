@@ -15,6 +15,7 @@ This roadmap tracks both the educational curriculum and the repository foundatio
 | Phase | Status | Current result |
 |---|---|---|
 | 0. Project foundation | Complete | Foundation available, audited, and officially completed |
+| 00. Getting Started (curriculum order) | Complete | Six reviewed onboarding lessons in three languages |
 | 1. Fundamentals | Complete | Six reviewed chapters cover execution, input/output, variables and naming, built-in data types, type inspection, and type conversion |
 | 2. Strings and numbers | Complete | Four reviewed chapters cover string creation, common methods, numeric and Boolean behavior, floating-point precision, and common numeric built-ins |
 | 3. Collections | Complete | Six reviewed chapters cover lists, tuples, dictionaries, sets, and choosing a collection by intent |
@@ -195,6 +196,17 @@ Each project should include:
 - automated test coverage for important behavior;
 - extension challenges;
 - portfolio discussion.
+
+## Phase II: Learning Hub Foundation (engineering roadmap)
+
+This engineering phase does not renumber the original curriculum. Sprints 00–02 are merged (PRs #87–#89). Sprint 03 aligns public documentation and evidence; subsequent work remains planned. The repository stays independent of the future web platform.
+
+| Future curriculum | Status |
+| --- | --- |
+| 11. Problem Solving & Live Coding | Planned |
+| 12. Technical Interview Preparation | Planned |
+
+[Implementation plan](specs/learning-hub-foundation/implementation-plan.md) · [Related-guide integration register](specs/learning-hub-foundation/related-guides.md)
 
 ## Ongoing quality gates
 
