@@ -1,12 +1,17 @@
 """Dispatch messages without depending on external services."""
 
 
-class TextChannel:
+class Channel:
+    def send(self, message: str) -> str:
+        raise NotImplementedError("subclasses must implement send")
+
+
+class TextChannel(Channel):
     def send(self, message: str) -> str:
         return f"text: {message}"
 
 
-class EmailChannel(TextChannel):
+class EmailChannel(Channel):
     def send(self, message: str) -> str:
         return f"email: {message}"
 

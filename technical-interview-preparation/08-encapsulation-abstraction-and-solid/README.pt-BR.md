@@ -8,6 +8,7 @@
 
 ## Pré-requisitos
 
+- [Herança e composição](../07-inheritance-polymorphism-and-composition/README.pt-BR.md)
 - [manual-programming-practices/02-specification-driven-development](../../manual-programming-practices/02-specification-driven-development/README.pt-BR.md)
 - [manual-programming-practices/03-test-driven-development](../../manual-programming-practices/03-test-driven-development/README.pt-BR.md)
 - [practical-projects/03-user-registration](../../practical-projects/03-user-registration/README.pt-BR.md)

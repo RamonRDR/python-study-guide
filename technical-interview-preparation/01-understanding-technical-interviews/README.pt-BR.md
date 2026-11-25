@@ -21,6 +21,12 @@ Antes da entrevista, pergunte sobre duração, ferramentas, idioma, critérios e
 
 Imagine um serviço fictício que precisa contar cadastros elegíveis. Pergunte o que significa elegibilidade, se duplicados contam e o que retornar para entrada vazia. Reformule o contrato acordado; dê um exemplo concreto; escolha uma abordagem; explique hipóteses; teste o resultado; discuta limitações. Se faltar requisito, pergunte em vez de inventar. Se desconhecer um termo, diga o que sabe e como verificaria o detalhe faltante. Não alegue que código foi executado quando não foi.
 
+## Fundamentos comportamentais e internacionais
+
+STAR estrutura um exemplo verdadeiro: Situation (contexto), Task (responsabilidade), Action (o que você fez pessoalmente), Result (resultado observável e aprendizado). Em exemplo fictício de prática, uma equipe recebe arquivos malformados repetidamente (S); você é responsável pela validação (T); define o contrato, adiciona testes e rejeita linhas inválidas antes do processamento (A); os testes capturam casos antes ignorados e a equipe documenta a limitação (R). Não invente métricas nem apresente prática fictícia como experiência pessoal.
+
+Em entrevistas internacionais, confirme o idioma de trabalho e peça esclarecimentos quando necessário. Pratique frases curtas em inglês: "Could you clarify the input constraints?", "My assumption is...", "I chose this approach because...", "The trade-off is...", e "I would test the empty case first." Sotaque não é erro técnico. Separe compreensão de fluência linguística; não decore resposta que não consiga explicar. A prática posterior de entrevistas amplia esses fundamentos.
+
 ## Prática independente
 
 Explique um pequeno programa que escreveu em dois minutos: problema, entradas, decisão, resultado, um teste e uma limitação. Peça a um colega uma alteração de requisito e explique seu efeito. Verifique se a explicação distingue evidências de hipóteses.

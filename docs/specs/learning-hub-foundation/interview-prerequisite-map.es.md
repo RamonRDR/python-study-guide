@@ -38,8 +38,14 @@ Plan del Sprint 06 aprobado; auditoría en curso en la base `21c00c32b91a0116c8a
 | Modelo relacional, claves, SELECT, JOIN, agrupación | No se identificó lección específica | no se identificó lección específica relacional/SQL | Carencia | 18–19: enseñar antes de las preguntas SQL | J/M | Verificación pendiente |
 | Transacciones, índices, parametrización | No se identificó lección específica | no se identificó instrucción específica de seguridad SQL | Carencia | 20: integridad y enlace seguro | M/S | Verificación pendiente |
 | SDD, ADR y TDD | [manual-programming-practices/02-specification-driven-development](../../../manual-programming-practices/02-specification-driven-development/README.es.md) | requisitos, plan, tareas, AC y ADR | Completa | 21: reutilizar lecciones 02–04 | J/M/S | Evidencia en inglés revisada; validación por idioma y pregunta pendiente |
-| STAR y entrevistas internacionales | No se identificó lección específica | no se identificó instrucción específica | Carencia | 23: enseñar antes de preguntas conductuales y simulaciones | J/M/S | Verificación pendiente |
+| STAR y entrevistas internacionales | No se identificó lección específica | no se identificó instrucción específica | Carencia | 01: fundamentos de STAR e inglés técnico; 23: práctica ampliada antes de preguntas conductuales/simulaciones | J/M/S | Verificación pendiente |
 
 ## Expansión futura
 
 Meta inicial: 24 lecciones, 60 preguntas (24 junior, 24 mid-level, 12 senior) y tres simulaciones. Ampliar cualquier nivel o rol en cambios separados y aprobados; conservar IDs, enseñar requisitos previos y no anticipar esquemas posteriores ni el sitio.
+
+## Revisión localizada dirigida
+
+Secciones seleccionadas de requisitos previos comparadas en EN/PT-BR/ES: identidad/igualdad y None (Flujo 01), reasignación y mutación de parámetros (Funciones 09), valores predeterminados mutables (Funciones 06), elección/hashabilidad de colecciones (Colecciones 06), ventanas fijas y variables (Fase 11 lecciones 07–08). Es evidencia semántica dirigida, no auditoría exhaustiva de traducciones. El nuevo índice de Fase 12 enlaza las lecciones 01–08; los controles restantes por lección y pregunta siguen abiertos.
+
+[Índice de Fase 12](../../../technical-interview-preparation/README.es.md)

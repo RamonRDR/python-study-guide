@@ -8,6 +8,7 @@
 
 ## Requisitos previos
 
+- [Clases y objetos](../05-classes-and-objects/README.es.md)
 - [functions/06-default-values](../../functions/06-default-values/README.es.md)
 - [collections/02-modifying-lists-and-methods](../../collections/02-modifying-lists-and-methods/README.es.md)
 

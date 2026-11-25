@@ -56,7 +56,7 @@ O mapa por grupo abaixo complementa caminhos localizados exatos em cada JSON e R
 
 ## Gate de pré-requisitos avançados e cronometrados
 
-As seções abaixo ensinam adaptações antes dos links dos exercícios; cada exercício também lista caminhos exatos por idioma. Fundamentos prévios vêm da base integrada; instrução nova faz parte deste PR final. Tempo e explicações são autoavaliados, não corrigidos por máquina. CI, revisão e aprovação finais pendentes.
+As seções abaixo ensinam adaptações antes dos links dos exercícios; cada exercício lista caminhos exatos por idioma. Tempo e explicações são autoavaliados, não corrigidos por máquina. PR #95 integrado como `21c00c32b91a0116c8a50e89687b91f8efa04cb5`; [CI pós-merge](https://github.com/RamonRDR/python-study-guide/actions/runs/45720384626) aprovada.
 
 | Conceito | Exercício | Instrução antes da prática |
 | --- | --- | --- |

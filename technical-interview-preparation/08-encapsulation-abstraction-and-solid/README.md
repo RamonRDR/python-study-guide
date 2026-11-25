@@ -8,6 +8,7 @@
 
 ## Prerequisites
 
+- [Inheritance and composition](../07-inheritance-polymorphism-and-composition/README.md)
 - [manual-programming-practices/02-specification-driven-development](../../manual-programming-practices/02-specification-driven-development/README.md)
 - [manual-programming-practices/03-test-driven-development](../../manual-programming-practices/03-test-driven-development/README.md)
 - [practical-projects/03-user-registration](../../practical-projects/03-user-registration/README.md)

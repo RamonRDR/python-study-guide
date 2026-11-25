@@ -38,8 +38,14 @@ Plano da Sprint 06 aprovado; auditoria em andamento na baseline `21c00c32b91a011
 | Modelo relacional, chaves, SELECT, JOIN, agrupamento | Nenhuma aula dedicada identificada | nenhuma aula relacional/SQL dedicada identificada | Lacuna | 18–19: ensinar antes das perguntas SQL | J/M | Verificação pendente |
 | Transações, índices, parametrização | Nenhuma aula dedicada identificada | nenhuma instrução dedicada de segurança SQL identificada | Lacuna | 20: integridade e vinculação segura | M/S | Verificação pendente |
 | SDD, ADR e TDD | [manual-programming-practices/02-specification-driven-development](../../../manual-programming-practices/02-specification-driven-development/README.pt-BR.md) | requisitos, plano, tarefas, AC e ADR | Completa | 21: reutilizar aulas 02–04 | J/M/S | Evidência em inglês revisada; gate por idioma e pergunta pendente |
-| STAR e entrevistas internacionais | Nenhuma aula dedicada identificada | nenhuma instrução dedicada identificada | Lacuna | 23: ensinar antes de perguntas comportamentais e mocks | J/M/S | Verificação pendente |
+| STAR e entrevistas internacionais | Nenhuma aula dedicada identificada | nenhuma instrução dedicada identificada | Lacuna | 01: fundamentos de STAR e inglês técnico; 23: prática ampliada antes das perguntas comportamentais/mocks | J/M/S | Verificação pendente |
 
 ## Expansão futura
 
 Meta inicial: 24 aulas, 60 perguntas (24 junior, 24 mid-level, 12 senior) e três simulados. Ampliar qualquer nível ou função em mudanças separadas e aprovadas; preservar IDs, ensinar pré-requisitos e não antecipar schemas posteriores ou o site.
+
+## Revisão localizada direcionada
+
+Seções selecionadas de pré-requisitos comparadas em EN/PT-BR/ES: identidade/igualdade e None (Fluxo 01), reatribuição e mutação de parâmetros (Funções 09), padrões mutáveis (Funções 06), escolha/hashabilidade de coleções (Coleções 06), janelas fixas e variáveis (Fase 11 aulas 07–08). É evidência semântica direcionada, não auditoria exaustiva de traduções. O novo índice da Fase 12 liga as aulas 01–08; os gates restantes por aula e pergunta continuam abertos.
+
+[Índice da Fase 12](../../../technical-interview-preparation/README.pt-BR.md)

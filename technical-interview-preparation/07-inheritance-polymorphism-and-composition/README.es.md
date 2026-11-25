@@ -8,6 +8,7 @@
 
 ## Requisitos previos
 
+- [Lección anterior de OOP](../06-attributes-methods-and-object-behavior/README.es.md)
 - [errors-files-and-modules/01-try-except-else-finally](../../errors-files-and-modules/01-try-except-else-finally/README.es.md)
 
 ## Herencia y sustitución
@@ -16,7 +17,7 @@ La herencia crea una subclase, escrita `class Child(Parent):`. Puede reutilizar 
 
 ## Polimorfismo y composición
 
-El polimorfismo permite al llamador usar una operación común con implementaciones diferentes. Python suele permitir duck typing: un objeto puede cumplir un contrato de comportamiento sin compartir clase base. La composición almacena o recibe un colaborador en vez de heredar su implementación. En el ejemplo compartido, Notifier delega al método send del canal. El canal devuelve texto, no un mensaje real de red. Puede sustituirse por otro canal compatible o un doble de prueba. EmailChannel demuestra redefinición, no recomienda modelar correo real como un tipo de canal de texto; clases independientes también funcionarían.
+El polimorfismo permite al llamador usar una operación común con implementaciones diferentes. Python suele permitir duck typing: un objeto puede cumplir un contrato de comportamiento sin compartir clase base. La composición almacena o recibe un colaborador en vez de heredar su implementación. En el ejemplo compartido, Notifier delega al método send del canal. El canal devuelve texto, no un mensaje real de red. Puede sustituirse por otro canal compatible o un doble de prueba. TextChannel y EmailChannel redefinen Channel.send, mientras el contrato base indica que las subclases deben proporcionar la operación. Una clase independiente con el mismo contrato también puede funcionar.
 
 Evita jerarquías profundas elegidas solo para reutilizar código; no supongas que nombres iguales de métodos garantizan semántica igual. La composición añade una dependencia explícita, que puede ser más fácil de sustituir, pero puede añadir indirección.
 

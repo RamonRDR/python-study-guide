@@ -8,6 +8,7 @@
 
 ## Prerequisites
 
+- [Classes and objects](../05-classes-and-objects/README.md)
 - [functions/06-default-values](../../functions/06-default-values/README.md)
 - [collections/02-modifying-lists-and-methods](../../collections/02-modifying-lists-and-methods/README.md)
 

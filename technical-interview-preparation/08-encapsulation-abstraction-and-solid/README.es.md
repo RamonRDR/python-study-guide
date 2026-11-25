@@ -8,6 +8,7 @@
 
 ## Requisitos previos
 
+- [Herencia y composición](../07-inheritance-polymorphism-and-composition/README.es.md)
 - [manual-programming-practices/02-specification-driven-development](../../manual-programming-practices/02-specification-driven-development/README.es.md)
 - [manual-programming-practices/03-test-driven-development](../../manual-programming-practices/03-test-driven-development/README.es.md)
 - [practical-projects/03-user-registration](../../practical-projects/03-user-registration/README.es.md)

@@ -38,8 +38,14 @@ Approved Sprint 06 plan; audit in progress at baseline `21c00c32b91a0116c8a50e89
 | Relational model, keys, SELECT, JOIN, grouping | No dedicated lesson identified | no dedicated relational/SQL lesson identified | Gap | 18–19: teach before SQL questions | J/M | Pending verification |
 | Transactions, indexes, parameterization | No dedicated lesson identified | no dedicated SQL safety instruction identified | Gap | 20: integrity and safe parameter binding | M/S | Pending verification |
 | SDD, ADR and TDD | [manual-programming-practices/02-specification-driven-development](../../../manual-programming-practices/02-specification-driven-development/README.md) | requirements, plan, tasks, AC and ADR | Covered | 21: reuse chapters 02–04 | J/M/S | English evidence reviewed; locale and question gate pending |
-| STAR and international interviews | No dedicated lesson identified | no dedicated instruction identified | Gap | 23: teach before behavioral questions and mocks | J/M/S | Pending verification |
+| STAR and international interviews | No dedicated lesson identified | no dedicated instruction identified | Gap | 01: STAR and technical English foundations; 23: expanded practice before behavioral questions/mocks | J/M/S | Pending verification |
 
 ## Future growth
 
 The initial target is 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three mocks. Expand any level or role in separate approved changes; preserve IDs, teach prerequisites, and do not anticipate later schemas or the site.
+
+## Targeted locale review
+
+Selected prerequisite sections compared across EN/PT-BR/ES: identity/equality and None (Program Flow 01), parameter rebinding and mutation (Functions 09), mutable defaults (Functions 06), collection choice/hashability (Collections 06), fixed and variable windows (Phase 11 chapters 07–08). This is targeted semantic evidence, not an exhaustive translation audit. The new Phase 12 index links to lessons 01–08; remaining lesson and question-specific gates stay open.
+
+[Phase 12 index](../../../technical-interview-preparation/README.md)

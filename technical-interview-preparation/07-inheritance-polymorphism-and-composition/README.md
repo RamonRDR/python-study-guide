@@ -8,6 +8,7 @@
 
 ## Prerequisites
 
+- [Previous OOP instruction](../06-attributes-methods-and-object-behavior/README.md)
 - [errors-files-and-modules/01-try-except-else-finally](../../errors-files-and-modules/01-try-except-else-finally/README.md)
 
 ## Inheritance and substitution
@@ -16,7 +17,7 @@ Inheritance creates a subclass, written `class Child(Parent):`. It can reuse or 
 
 ## Polymorphism and composition
 
-Polymorphism lets the caller use a common operation with different implementations. Python often supports duck typing: an object can meet a behavioral contract without sharing a base class. Composition stores or receives a collaborator instead of inheriting its implementation. In the shared example, Notifier delegates to a channel's send method. The channel returns a text result, not an actual network message. It can be replaced by another compatible channel or a fake in a test. EmailChannel demonstrates overriding, not a recommendation to model real email as a kind of text channel; independent channel classes would also work.
+Polymorphism lets the caller use a common operation with different implementations. Python often supports duck typing: an object can meet a behavioral contract without sharing a base class. Composition stores or receives a collaborator instead of inheriting its implementation. In the shared example, Notifier delegates to a channel's send method. The channel returns a text result, not an actual network message. It can be replaced by another compatible channel or a fake in a test. TextChannel and EmailChannel both override Channel.send, while the base contract states that subclasses must provide the operation. An independent class with the same contract can also work.
 
 Avoid deep hierarchies chosen only to reuse code; avoid assuming that matching method names guarantee matching semantics. Composition adds an explicit dependency, which can be easier to replace but may add indirection.
 
