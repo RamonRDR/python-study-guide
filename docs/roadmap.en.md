@@ -226,7 +226,7 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 
 ## Phase 12: Technical Interview Preparation
 
-In progress: twenty-one lessons cover interview foundations, Python, OOP, internals, backend, SQL and engineering. Questions, extended behavioral/international practice and mocks remain planned. [Technical Interview Preparation](../technical-interview-preparation/README.md).
+In progress: twenty-two lessons include completed foundations and nine pilot questions. Further questions, behavioral/international practice and mocks remain planned. [Technical Interview Preparation](../technical-interview-preparation/README.md).
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
@@ -235,7 +235,7 @@ This engineering phase does not renumber the original curriculum. Sprints 00–0
 | Future curriculum | Status |
 | --- | --- |
 | 11. Problem Solving & Live Coding | Complete; 30 challenges |
-| 12. Technical Interview Preparation | In progress; twenty-one lessons |
+| 12. Technical Interview Preparation | In progress; twenty-two lessons |
 
 [Implementation plan](specs/learning-hub-foundation/implementation-plan.md) · [Related-guide integration register](specs/learning-hub-foundation/related-guides.md)
 

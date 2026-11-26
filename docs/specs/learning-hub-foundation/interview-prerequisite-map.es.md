@@ -72,3 +72,9 @@ A2 fusionado en [PR #97](https://github.com/RamonRDR/python-study-guide/pull/97)
 - [19-joins-aggregations-and-data-relationships](../../../technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.es.md): Relaciones: claves foráneas, cardinalidad, joins, agrupación y agregación incluidos conteos cero.
 - [20-transactions-indexes-and-sql-safety](../../../technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md): Transacciones: ACID, commit/rollback, compromisos de índices y parámetros SQL seguros.
 - [21-software-engineering-and-technical-decisions](../../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md): Ingeniería: requisitos, ADR, TDD, fronteras de dependencia, observabilidad y compromisos medidos.
+
+## Verificación de requisitos previos piloto
+
+A3 fusionado en [PR #98](https://github.com/RamonRDR/python-study-guide/pull/98), commit `a0ce57bf8d752ffdd6c950b83ee68f5326eb3677`; [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/45730226049) aprobado. Fundamentos 01–21 de T06-01 completados. Para nueve registros piloto, inspeccionadas secciones exactas de enseñanza de lecciones 01, 03, 04, 07, 09, 14, 17, 19 y 21 en tres idiomas antes de autoría. Cada registro canónico identifica rutas y títulos localizados; validador comprueba existencia y lección generada. Evidencia dirigida solo a estas preguntas, no auditoría completa de lecciones históricas ni preguntas futuras. Revisa cada requisito nuevo antes de ampliar banco.
+
+[Lección piloto](../../../technical-interview-preparation/22-technical-interview-question-bank/README.es.md) · [Registros canónicos](../../../interviews/README.es.md)
