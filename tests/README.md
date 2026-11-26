@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-This directory already contains regression tests for the dependency-free repository quality tools. GitHub Actions runs them with:
+This directory contains regression tests for repository quality tools, including the assessment contract. Install `requirements-assessment.txt` in a virtual environment before running the suite. GitHub Actions runs it with:
 
 ```bash
 python -m unittest discover -s tests -p 'test_*.py'

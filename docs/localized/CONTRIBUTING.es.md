@@ -97,7 +97,7 @@ Lee la [guía de desarrollo asistido por IA](../ai-assisted-development/README.e
 
 ## Validaciones de calidad
 
-Ejecuta desde la raíz del repositorio las mismas verificaciones sin dependencias externas utilizadas por GitHub Actions:
+Ejecuta desde la raíz del repositorio las mismas verificaciones utilizadas por GitHub Actions. En un entorno virtual, instala el validador de evaluación con `python -m pip install -r requirements-assessment.txt` antes de las pruebas unitarias. La verificación independiente del inventario es `python scripts/validate_assessments.py`.
 
 ```bash
 python -m compileall -q -x '(^|/)\.git/' .
