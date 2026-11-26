@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../20-transactions-indexes-and-sql-safety/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md)
+[← Anterior](../20-transactions-indexes-and-sql-safety/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../22-technical-interview-question-bank/README.pt-BR.md)
 <!-- /chapter-navigation:top -->
 
 ## Pré-requisitos
@@ -48,5 +48,5 @@ Escreva critérios de aceite do relatório, compare chamadas de banco dentro da 
 - [docs.python.org/3.13/library/logging.html](https://docs.python.org/3.13/library/logging.html)
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../20-transactions-indexes-and-sql-safety/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md)
+[← Anterior](../20-transactions-indexes-and-sql-safety/README.pt-BR.md) · [Índice do módulo](../README.pt-BR.md) · [Próximo →](../22-technical-interview-question-bank/README.pt-BR.md)
 <!-- /chapter-navigation:bottom -->

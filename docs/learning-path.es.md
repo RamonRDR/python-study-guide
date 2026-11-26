@@ -6,7 +6,7 @@ Usa esta página como el **índice general del curso**. Todos los capítulos de 
 
 Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores pueden estar completadas antes que fases anteriores todavía planificadas, pero la numeración sigue representando la secuencia de aprendizaje recomendada.
 
-Currículo publicado: 104 lecciones y ocho proyectos prácticos (112 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
+Currículo publicado: 105 lecciones y ocho proyectos prácticos (113 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
 
 ## Leyenda de estado
 
@@ -192,7 +192,7 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 
 ## Fase 12: Preparación para entrevistas técnicas
 
-En curso: veintiuna lecciones cubren fundamentos de entrevistas, Python, OOP, internals, backend, SQL e ingeniería. Banco de preguntas, práctica conductual/internacional ampliada y simulaciones siguen previstos; aún no se publica un banco.
+En curso: veintidós lecciones incluyen fundamentos completados y piloto de nueve preguntas técnicas (tres por nivel). Preguntas técnicas restantes, práctica conductual/internacional ampliada y simulaciones siguen previstos.
 
 1. [Entender las entrevistas técnicas](../technical-interview-preparation/01-understanding-technical-interviews/README.es.md)
 2. [Live coding y tareas take-home](../technical-interview-preparation/02-live-coding-and-take-home/README.es.md)
@@ -215,6 +215,7 @@ En curso: veintiuna lecciones cubren fundamentos de entrevistas, Python, OOP, in
 19. [Joins, agregaciones y relaciones de datos](../technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.es.md)
 20. [Transacciones, índices y seguridad en SQL](../technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md)
 21. [Ingeniería de software y decisiones técnicas](../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md)
+22. [Banco de preguntas de entrevistas técnicas](../technical-interview-preparation/22-technical-interview-question-bank/README.es.md)
 
 ## Navegación útil
 

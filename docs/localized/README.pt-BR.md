@@ -101,7 +101,7 @@ Um computador com instalação Python suportada e editor de texto basta para est
 | 10 | [Projetos práticos](../../practical-projects/README.pt-BR.md) | 8 |
 | Complemento | [Prática manual e engenharia de software](../../manual-programming-practices/README.pt-BR.md) | 4 |
 | 11 | [Resolução de problemas e live coding](../../problem-solving-and-live-coding/README.pt-BR.md) | 16 |
-| 12 | [Preparação para entrevistas técnicas](../../technical-interview-preparation/README.pt-BR.md) | 21 |
+| 12 | [Preparação para entrevistas técnicas](../../technical-interview-preparation/README.pt-BR.md) | 22 |
 
 - [Trilha completa de estudos: links diretos para todos os capítulos publicados](../learning-path.pt-BR.md)
 - [Roadmap em Português](../roadmap.pt-BR.md)
@@ -141,11 +141,11 @@ Explicações detalhadas:
 
 ## Status atual
 
-**Phase II: Learning Hub Foundation** está em andamento. PRs #87–#97 integrados; Fase 11 concluída. Fundamentos da Fase 12 em andamento; quizzes e contrato de conteúdo versionado permanecem planejados. O guia permanece independente do futuro Learning Hub web e do Git Study Guide.
+**Phase II: Learning Hub Foundation** está em andamento. PRs #87–#98 integrados; Fase 11 concluída. Fundamentos da Fase 12 em andamento; quizzes e contrato de conteúdo versionado permanecem planejados. O guia permanece independente do futuro Learning Hub web e do Git Study Guide.
 
 [Plano de implementação da Phase II](../specs/learning-hub-foundation/implementation-plan.pt-BR.md)
 
-A fundação original do projeto, **Primeiros passos (seis aulas)** e as **Fases 1–10 estão concluídas**. O currículo atual contém 104 aulas e oito projetos práticos, em 14 módulos e três idiomas. A **Fase 10: Projetos Práticos está concluída**, com os oito projetos planejados implementados, documentados, testados, revisados e integrados.
+A fundação original do projeto, **Primeiros passos (seis aulas)** e as **Fases 1–10 estão concluídas**. O currículo atual contém 105 aulas e oito projetos práticos, em 14 módulos e três idiomas. A **Fase 10: Projetos Práticos está concluída**, com os oito projetos planejados implementados, documentados, testados, revisados e integrados.
 
 A fase de projetos práticos encerra a trilha combinando modelos de dados validados, fluxos determinísticos, aritmética exata, persistência e relatórios, automação de filesystem, conciliação, orquestração, evidências estruturadas e cobertura automatizada de regressão ao longo dos oito projetos.
 

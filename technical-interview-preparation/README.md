@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-In progress: twenty-one lessons cover interview foundations, Python, OOP, internals, backend, SQL and engineering. The question bank, extended behavioral/international practice and mocks remain planned; no interview bank is published yet.
+In progress: twenty-two lessons include the completed foundations and a nine-question technical interview pilot (three per level). The remaining technical questions, extended behavioral/international practice and mocks remain planned.
 
 1. [Understanding Technical Interviews](01-understanding-technical-interviews/README.md)
 2. [Live Coding and Take-Home Assignments](02-live-coding-and-take-home/README.md)
@@ -25,5 +25,6 @@ In progress: twenty-one lessons cover interview foundations, Python, OOP, intern
 19. [Joins, Aggregations and Data Relationships](19-joins-aggregations-and-data-relationships/README.md)
 20. [Transactions, Indexes and SQL Safety](20-transactions-indexes-and-sql-safety/README.md)
 21. [Software Engineering and Technical Decisions](21-software-engineering-and-technical-decisions/README.md)
+22. [Technical Interview Question Bank](22-technical-interview-question-bank/README.md)
 
 [Learning path](../docs/learning-path.en.md) · [Prerequisite map](../docs/specs/learning-hub-foundation/interview-prerequisite-map.md)

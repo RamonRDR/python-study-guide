@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Previous](../20-transactions-indexes-and-sql-safety/README.md) · [Module index](../README.md)
+[← Previous](../20-transactions-indexes-and-sql-safety/README.md) · [Module index](../README.md) · [Next →](../22-technical-interview-question-bank/README.md)
 <!-- /chapter-navigation:top -->
 
 ## Prerequisites
@@ -48,5 +48,5 @@ Write acceptance cases for the report, compare direct database calls inside the 
 - [docs.python.org/3.13/library/logging.html](https://docs.python.org/3.13/library/logging.html)
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../20-transactions-indexes-and-sql-safety/README.md) · [Module index](../README.md)
+[← Previous](../20-transactions-indexes-and-sql-safety/README.md) · [Module index](../README.md) · [Next →](../22-technical-interview-question-bank/README.md)
 <!-- /chapter-navigation:bottom -->

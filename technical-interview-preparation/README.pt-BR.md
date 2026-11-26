@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Em andamento: vinte e uma aulas cobrem fundamentos de entrevistas, Python, OOP, internals, backend, SQL e engenharia. Banco de perguntas, prática comportamental/internacional ampliada e simulados permanecem planejados; nenhum banco publicado ainda.
+Em andamento: vinte e duas aulas incluem fundamentos concluídos e piloto de nove perguntas técnicas (três por nível). Perguntas técnicas restantes, prática comportamental/internacional ampliada e simulados permanecem planejados.
 
 1. [Entendendo entrevistas técnicas](01-understanding-technical-interviews/README.pt-BR.md)
 2. [Live coding e tarefas take-home](02-live-coding-and-take-home/README.pt-BR.md)
@@ -25,5 +25,6 @@ Em andamento: vinte e uma aulas cobrem fundamentos de entrevistas, Python, OOP, 
 19. [Joins, agregações e relacionamentos de dados](19-joins-aggregations-and-data-relationships/README.pt-BR.md)
 20. [Transações, índices e segurança em SQL](20-transactions-indexes-and-sql-safety/README.pt-BR.md)
 21. [Engenharia de software e decisões técnicas](21-software-engineering-and-technical-decisions/README.pt-BR.md)
+22. [Banco de perguntas de entrevistas técnicas](22-technical-interview-question-bank/README.pt-BR.md)
 
 [Trilha de aprendizado](../docs/learning-path.pt-BR.md) · [Mapa de pré-requisitos](../docs/specs/learning-hub-foundation/interview-prerequisite-map.pt-BR.md)
