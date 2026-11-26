@@ -115,5 +115,5 @@ Study the linked prerequisite sections first. Open a question JSON file and use 
 | `type-hints` | [quiz.type-hints-runtime](questions/quiz.type-hints-runtime.json) | Easy |
 
 - [Exercise bank](../exercises/README.md)
-- [Versioned exercise index](../exercises/exercise-index.json)
+- [Versioned exercise index](../exercises/problem-solving/exercise-index.json)
 - [Assessment contract](../docs/specs/learning-hub-foundation/assessment-contract.md)

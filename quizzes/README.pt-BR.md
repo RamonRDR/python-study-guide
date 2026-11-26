@@ -115,5 +115,5 @@ Estude primeiro as seções de pré-requisitos vinculadas. Abra o JSON da quest�
 | `type-hints` | [quiz.type-hints-runtime](questions/quiz.type-hints-runtime.json) | Fácil |
 
 - [Banco de exercícios](../exercises/README.pt-BR.md)
-- [Índice versionado de exercícios](../exercises/exercise-index.json)
+- [Índice versionado de exercícios](../exercises/problem-solving/exercise-index.json)
 - [Contrato de avaliação](../docs/specs/learning-hub-foundation/assessment-contract.pt-BR.md)

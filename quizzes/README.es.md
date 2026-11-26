@@ -115,5 +115,5 @@ Estudia primero las secciones de requisitos previos enlazadas. Abre el JSON de l
 | `type-hints` | [quiz.type-hints-runtime](questions/quiz.type-hints-runtime.json) | Fácil |
 
 - [Banco de ejercicios](../exercises/README.es.md)
-- [Índice versionado de ejercicios](../exercises/exercise-index.json)
+- [Índice versionado de ejercicios](../exercises/problem-solving/exercise-index.json)
 - [Contrato de evaluación](../docs/specs/learning-hub-foundation/assessment-contract.es.md)
