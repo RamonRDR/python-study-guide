@@ -1,0 +1,454 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Quiz",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+(?![\\s\\S])"
+    },
+    "chapter_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+(?![\\s\\S])"
+    },
+    "difficulty": {
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "prompt": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "pt-BR": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "explanation": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "pt-BR": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "hints": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        },
+        "pt-BR": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        },
+        "es": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "type": {
+      "enum": [
+        "multiple_choice",
+        "true_false",
+        "error_identification",
+        "output_prediction",
+        "objective_code_completion"
+      ]
+    },
+    "xp": {
+      "type": "integer",
+      "enum": [
+        10,
+        20,
+        30
+      ]
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "paths": {
+            "type": "object",
+            "properties": {
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "pt-BR": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "es": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "en",
+              "pt-BR",
+              "es"
+            ],
+            "additionalProperties": false
+          },
+          "sections": {
+            "type": "object",
+            "properties": {
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "pt-BR": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "es": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "en",
+              "pt-BR",
+              "es"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "paths",
+          "sections"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "choices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])"
+          },
+          "text": {
+            "type": "object",
+            "properties": {
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "pt-BR": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "es": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "en",
+              "pt-BR",
+              "es"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "text"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2
+    },
+    "answer": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "choice_id": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])"
+            }
+          },
+          "required": [
+            "choice_id"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "accepted": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "comparison": {
+              "enum": [
+                "exact",
+                "normalize_lf"
+              ]
+            }
+          },
+          "required": [
+            "accepted",
+            "comparison"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "code": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "chapter_id",
+    "difficulty",
+    "prompt",
+    "explanation",
+    "hints",
+    "type",
+    "xp",
+    "prerequisites",
+    "answer"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "enum": [
+              "multiple_choice",
+              "error_identification"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "choices"
+        ],
+        "properties": {
+          "answer": {
+            "type": "object",
+            "properties": {
+              "choice_id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])"
+              }
+            },
+            "required": [
+              "choice_id"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "else": {
+        "not": {
+          "required": [
+            "choices"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "true_false"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "answer": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "enum": [
+              "output_prediction",
+              "objective_code_completion"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "answer": {
+            "type": "object",
+            "properties": {
+              "accepted": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "comparison": {
+                "enum": [
+                  "exact",
+                  "normalize_lf"
+                ]
+              }
+            },
+            "required": [
+              "accepted",
+              "comparison"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "objective_code_completion"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "answer": {
+            "type": "object",
+            "properties": {
+              "accepted": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "comparison": {
+                "const": "exact"
+              }
+            },
+            "required": [
+              "accepted",
+              "comparison"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  ]
+}

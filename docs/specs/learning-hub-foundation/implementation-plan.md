@@ -20,7 +20,12 @@ Status: proposed for review. Execute only after specification PR approval and me
 | 06B | feat/technical-interview-pilot | Lesson 22, nine pilot questions and validation |
 | 06C | feat/technical-interview-question-bank | 48 additional technical questions |
 | 06D | feat/mock-and-international-interviews | Lessons 23–24, three behavioral/international questions and three mocks; AC-06 |
-| 07 | feat/quiz-and-exercise-bank | Materialize versioned records and schemas; validate IDs, translations, scoring, solutions and representative incorrect implementations. |
+| 07A | feat/assessment-contract | Versioned contracts, allocation matrix, validators and tests; synchronize Sprint 06 closure. |
+| 07B | feat/assessment-pilot | Ten quizzes and three existing exercises, with prerequisite evidence. |
+| 07C1 | feat/quiz-bank-foundations | Complete 78 foundation quizzes. |
+| 07C2 | feat/quiz-bank-advanced | Complete the 160-quiz bank. |
+| 07D | feat/exercise-contract-migration | Migrate remaining 27 exercises. |
+| 07E | feat/assessment-bank-acceptance | Consolidated AC-07 verification and closure. |
 | 08 | feat/learning-hub-content-contract | Finalize curriculum manifest, consumer validation, reference fixtures, versioning and compatibility metadata. |
 | 09 | docs/learning-hub-handoff | Full QA, final review, evidence and approved revision handoff. |
 
@@ -43,3 +48,5 @@ For every PR: consult specs, record scope, review diffs, run applicable checks, 
 After CI and Codex Review pass on the exact head, complete the Final Pre-Merge Audit defined in AGENTS.md and record evidence in the PR. Any change to the head invalidates those checks and audit; repeat them before maintainer approval.
 
 [Related guide integration register](related-guides.md)
+
+Assessment tooling uses the free `jsonschema==4.26.0` validator (Draft 2020-12) in `requirements-assessment.txt` to avoid implementing JSON Schema ourselves. See [assessment contract](assessment-contract.md).

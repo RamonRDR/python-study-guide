@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Este directorio ya contiene pruebas de regresión de las herramientas de calidad del repositorio sin dependencias externas. GitHub Actions las ejecuta con:
+Este directorio contiene pruebas de regresión de las herramientas de calidad del repositorio, incluido el contrato de evaluación. Instala `requirements-assessment.txt` en un entorno virtual antes de ejecutar la suite. GitHub Actions la ejecuta con:
 
 ```bash
 python -m unittest discover -s tests -p 'test_*.py'

@@ -95,7 +95,7 @@ Read the [AI-assisted development guide](docs/ai-assisted-development/README.en.
 
 ## Quality checks
 
-Run the same dependency-free checks used by GitHub Actions from the repository root:
+Run the same repository checks used by GitHub Actions from the repository root. In a virtual environment, install the assessment validator with `python -m pip install -r requirements-assessment.txt` before running the unit tests. The standalone assessment inventory check is `python scripts/validate_assessments.py`.
 
 ```bash
 python -m compileall -q -x '(^|/)\.git/' .

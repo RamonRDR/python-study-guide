@@ -20,7 +20,12 @@ Estado: propuesta para revisión. Ejecutar solo tras aprobación y fusión del P
 | 06B | feat/technical-interview-pilot | Lección 22, nueve preguntas piloto y validación |
 | 06C | feat/technical-interview-question-bank | 48 preguntas técnicas adicionales |
 | 06D | feat/mock-and-international-interviews | Lecciones 23–24, tres preguntas conductuales/internacionales y tres simulaciones; AC-06 |
-| 07 | feat/quiz-and-exercise-bank | Materializar registros y esquemas versionados; validar IDs, traducciones, puntuación, soluciones e implementaciones incorrectas representativas. |
+| 07A | feat/assessment-contract | Contratos versionados, matriz, validadores y pruebas; sincronizar cierre de Sprint 06. |
+| 07B | feat/assessment-pilot | Diez quizzes y tres ejercicios existentes, con evidencia de requisitos previos. |
+| 07C1 | feat/quiz-bank-foundations | Completar 78 quizzes de fundamentos. |
+| 07C2 | feat/quiz-bank-advanced | Completar banco de 160 quizzes. |
+| 07D | feat/exercise-contract-migration | Migrar los 27 ejercicios restantes. |
+| 07E | feat/assessment-bank-acceptance | Verificación consolidada de AC-07 y cierre. |
 | 08 | feat/learning-hub-content-contract | Finalizar manifiesto, validación del consumidor, fixtures, versionado y compatibilidad. |
 | 09 | docs/learning-hub-handoff | QA completo, revisión final, evidencias y handoff de revisión aprobada. |
 
@@ -43,3 +48,5 @@ Por cada PR: consultar especificaciones, registrar alcance, revisar diffs, ejecu
 Tras aprobar CI y Codex Review el head exacto, completa Final Pre-Merge Audit definida en AGENTS.md y registra evidencia en PR. Cualquier cambio de head invalida controles y auditoría; repite antes de aprobación del mantenedor.
 
 [Registro de integración de guías relacionadas](related-guides.es.md)
+
+Las herramientas de evaluación usan el validador gratuito `jsonschema==4.26.0` (Draft 2020-12) en `requirements-assessment.txt` para evitar implementar JSON Schema por nuestra cuenta. Ver [contrato de evaluación](assessment-contract.es.md).

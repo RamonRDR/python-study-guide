@@ -1,0 +1,2 @@
+# JSON Schema Draft 2020-12 validation for repository tooling only.
+jsonschema==4.26.0
