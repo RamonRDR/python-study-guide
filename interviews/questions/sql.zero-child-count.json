@@ -1,0 +1,98 @@
+{
+  "id": "sql.zero-child-count",
+  "topic": "databases-sql",
+  "level": "mid",
+  "prompt": {
+    "en": "Given groups(id, name) and tasks(id, group_id, done), return the count of completed tasks per group, including groups with no completed tasks. How do ON, WHERE and COUNT affect correctness? Assume both id columns are primary keys, tasks.group_id references groups.id and done is 0 or 1. Explain why grouping only by name is insufficient.",
+    "pt-BR": "Dadas groups(id, name) e tasks(id, group_id, done), retorne contagem de tarefas concluídas por grupo, incluindo grupos sem concluídas. Como ON, WHERE e COUNT afetam correção? Considere ambas as colunas id chaves primárias, tasks.group_id referenciando groups.id e done igual a 0 ou 1. Explique por que agrupar apenas por nome é insuficiente.",
+    "es": "Dadas groups(id, name) y tasks(id, group_id, done), devuelve conteo de tareas completadas por grupo, incluidos grupos sin completadas. ¿Cómo afectan ON, WHERE y COUNT a corrección? Supón que ambas columnas id son claves primarias, tasks.group_id referencia groups.id y done vale 0 o 1. Explica por qué agrupar solo por nombre es insuficiente."
+  },
+  "expected_answer": {
+    "en": "LEFT JOIN tasks on the group ID with done = 1 in ON; group by the group ID and name, count tasks.id (non-null for actual tasks). WHERE tasks.done = 1 would discard null-extended rows; COUNT(*) would count the unmatched row.",
+    "pt-BR": "Faça LEFT JOIN tasks pelo ID do grupo com done = 1 em ON; agrupe por ID e nome, conte tasks.id (não nulo para tarefas reais). WHERE tasks.done = 1 descartaria linhas estendidas com NULL; COUNT(*) contaria linha sem correspondência.",
+    "es": "Haz LEFT JOIN tasks por ID de grupo con done = 1 en ON; agrupa por ID y nombre, cuenta tasks.id (no nulo en tareas reales). WHERE tasks.done = 1 descartaría filas extendidas con NULL; COUNT(*) contaría fila sin coincidencia."
+  },
+  "explanation": {
+    "en": "Group by stable identity even if display names repeat. A filter inside ON controls matches without dropping left-side groups.",
+    "pt-BR": "Agrupe por identidade estável mesmo com nomes repetidos. Filtro em ON controla correspondências sem excluir grupos esquerdos.",
+    "es": "Agrupa por identidad estable incluso con nombres repetidos. Filtro en ON controla coincidencias sin eliminar grupos izquierdos."
+  },
+  "intent": {
+    "en": "Assess join semantics, aggregation grain and zero-case reasoning.",
+    "pt-BR": "Avaliar semântica de joins, granularidade e casos zero.",
+    "es": "Evaluar semántica de joins, granularidad y casos cero."
+  },
+  "common_errors": {
+    "en": [
+      "Use INNER JOIN or filter completed tasks in WHERE.",
+      "Group only by nonunique name or count all joined rows."
+    ],
+    "pt-BR": [
+      "Usar INNER JOIN ou filtrar concluídas em WHERE.",
+      "Agrupar apenas por nome não único ou contar todas linhas."
+    ],
+    "es": [
+      "Usar INNER JOIN o filtrar completadas en WHERE.",
+      "Agrupar solo por nombre no único o contar todas filas."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What happens if two groups have the same name?"
+    ],
+    "pt-BR": [
+      "O que acontece se dois grupos têm mesmo nome?"
+    ],
+    "es": [
+      "¿Qué ocurre si dos grupos tienen mismo nombre?"
+    ]
+  },
+  "examples": {
+    "en": "```sql\nSELECT g.id, g.name, COUNT(t.id)\nFROM groups AS g LEFT JOIN tasks AS t\nON g.id = t.group_id AND t.done = 1\nGROUP BY g.id, g.name\nORDER BY g.id;\n```",
+    "pt-BR": "```sql\nSELECT g.id, g.name, COUNT(t.id)\nFROM groups AS g LEFT JOIN tasks AS t\nON g.id = t.group_id AND t.done = 1\nGROUP BY g.id, g.name\nORDER BY g.id;\n```",
+    "es": "```sql\nSELECT g.id, g.name, COUNT(t.id)\nFROM groups AS g LEFT JOIN tasks AS t\nON g.id = t.group_id AND t.done = 1\nGROUP BY g.id, g.name\nORDER BY g.id;\n```"
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Uses LEFT JOIN on keys and places completed filter in ON.",
+        "pt-BR": "Usa LEFT JOIN por chaves e filtro de concluídas em ON.",
+        "es": "Usa LEFT JOIN por claves y filtro de completadas en ON."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Counts non-null child ID and explains zero-count behavior.",
+        "pt-BR": "Conta ID não nulo do filho e explica contagem zero.",
+        "es": "Cuenta ID no nulo del hijo y explica conteo cero."
+      }
+    },
+    {
+      "id": "criterion-3",
+      "points": 1,
+      "criterion": {
+        "en": "Groups by stable identity and explains why name-only grouping fails.",
+        "pt-BR": "Agrupa por identidade estável e explica por que só nome falha.",
+        "es": "Agrupa por identidad estable y explica por qué solo nombre falla."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.md",
+        "pt-BR": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.pt-BR.md",
+        "es": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.es.md"
+      },
+      "sections": {
+        "en": "Relationships and join cardinality",
+        "pt-BR": "Relacionamentos e cardinalidade de joins",
+        "es": "Relaciones y cardinalidad de joins"
+      }
+    }
+  ]
+}

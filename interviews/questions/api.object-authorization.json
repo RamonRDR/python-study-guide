@@ -1,0 +1,98 @@
+{
+  "id": "api.object-authorization",
+  "topic": "backend-apis",
+  "level": "senior",
+  "prompt": {
+    "en": "An authenticated learner can request a note by ID. Design access checks and response policy to prevent reading another learner's note; explain existence leakage and regression tests.",
+    "pt-BR": "Aluno autenticado pode solicitar nota por ID. Projete verificações de acesso e política de resposta para impedir leitura de nota alheia; explique vazamento de existência e testes de regressão.",
+    "es": "Alumno autenticado puede pedir nota por ID. Diseña comprobaciones de acceso y política de respuesta para impedir leer nota ajena; explica filtración de existencia y pruebas de regresión."
+  },
+  "expected_answer": {
+    "en": "Authenticate using a trusted verified identity, then authorize the action on the specific object using server-controlled ownership or policy before returning content. Missing valid credentials yield 401 with a challenge. Forbidden access can yield 403, or 404 under a consistent concealment policy. Never trust a supplied owner or unverified token. Test missing credentials, allowed owner, authenticated non-owner, nonexistent ID and denial body without protected data.",
+    "pt-BR": "Autentique por identidade confiável verificada, depois autorize ação no objeto específico por propriedade ou política controlada pelo servidor antes de retornar conteúdo. Ausência de credenciais válidas resulta 401 com desafio. Acesso proibido pode resultar 403, ou 404 sob política consistente de ocultação. Não confie em proprietário fornecido ou token não verificado. Teste ausência de credenciais, proprietário autorizado, não proprietário autenticado, ID inexistente e corpo de negação sem dados protegidos.",
+    "es": "Autentica por identidad confiable verificada, luego autoriza acción en objeto específico mediante propiedad o política controlada por servidor antes de devolver contenido. Ausencia de credenciales válidas produce 401 con desafío. Acceso prohibido puede producir 403, o 404 bajo política coherente de ocultación. No confíes en propietario suministrado o token no verificado. Prueba ausencia de credenciales, propietario autorizado, no propietario autenticado, ID inexistente y cuerpo de denegación sin datos protegidos."
+  },
+  "explanation": {
+    "en": "403 versus 404 can disclose existence. Concealment requires a consistent policy; it does not replace authorization. The local example models a post-authentication boundary, not token verification.",
+    "pt-BR": "403 versus 404 pode revelar existência. Ocultação exige política consistente; não substitui autorização. Exemplo local modela fronteira pós-autenticação, não verificação de tokens.",
+    "es": "403 frente a 404 puede revelar existencia. Ocultación exige política coherente; no sustituye autorización. Ejemplo local modela frontera posterior a autenticación, no verificación de tokens."
+  },
+  "intent": {
+    "en": "Assess object-level access control, error contract and negative security tests.",
+    "pt-BR": "Avaliar controle de acesso em nível de objeto, contrato de erro e testes negativos de segurança.",
+    "es": "Evaluar control de acceso a nivel de objeto, contrato de error y pruebas negativas de seguridad."
+  },
+  "common_errors": {
+    "en": [
+      "Check only whether the caller is logged in.",
+      "Return note content with a denial or trust the client-supplied owner."
+    ],
+    "pt-BR": [
+      "Verificar apenas se chamador está logado.",
+      "Retornar conteúdo com negação ou confiar no proprietário informado pelo cliente."
+    ],
+    "es": [
+      "Comprobar solo si llamador inició sesión.",
+      "Devolver contenido con denegación o confiar en propietario indicado por cliente."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you change tests if policy intentionally hides resource existence?"
+    ],
+    "pt-BR": [
+      "Como mudaria testes se política oculta existência intencionalmente?"
+    ],
+    "es": [
+      "¿Cómo cambiarías pruebas si política oculta existencia intencionalmente?"
+    ]
+  },
+  "examples": {
+    "en": "For note 7 owned by learner A, authenticated B gets 403 (or policy-defined 404) and no note content; A gets 200; anonymous callers get 401.",
+    "pt-BR": "Para nota 7 de aluno A, B autenticado recebe 403 (ou 404 definido pela política) sem conteúdo; A recebe 200; anônimos recebem 401.",
+    "es": "Para nota 7 de alumno A, B autenticado recibe 403 (o 404 definido por política) sin contenido; A recibe 200; anónimos reciben 401."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Requires verified server-side identity plus per-object authorization.",
+        "pt-BR": "Exige identidade verificada no servidor mais autorização por objeto.",
+        "es": "Exige identidad verificada en servidor más autorización por objeto."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains 401/403/404 and consistent existence-disclosure policy.",
+        "pt-BR": "Explica 401/403/404 e política consistente de divulgação de existência.",
+        "es": "Explica 401/403/404 y política coherente de divulgación de existencia."
+      }
+    },
+    {
+      "id": "criterion-3",
+      "points": 1,
+      "criterion": {
+        "en": "Specifies positive and negative tests including unauthorized body confidentiality.",
+        "pt-BR": "Especifica testes positivos e negativos incluindo confidencialidade do corpo negado.",
+        "es": "Especifica pruebas positivas y negativas incluida confidencialidad del cuerpo denegado."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.md",
+        "pt-BR": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.pt-BR.md",
+        "es": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.es.md"
+      },
+      "sections": {
+        "en": "Authentication versus authorization",
+        "pt-BR": "Autenticação versus autorização",
+        "es": "Autenticación frente a autorización"
+      }
+    }
+  ]
+}

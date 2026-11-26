@@ -1,0 +1,122 @@
+{
+  "id": "internals.gil-workload",
+  "topic": "python-internals",
+  "level": "senior",
+  "prompt": {
+    "en": "A CPython 3.13 service performs many blocking I/O operations, CPU-heavy pure Python transformations and increments a shared counter. Propose concurrency choices and a verification plan; account for conventional and experimental free-threaded builds.",
+    "pt-BR": "Serviço CPython 3.13 executa muitas operações I/O bloqueantes, transformações pesadas em Python puro e incrementa contador compartilhado. Proponha escolhas de concorrência e plano de verificação; considere builds convencional e experimental free-threaded.",
+    "es": "Servicio CPython 3.13 ejecuta muchas operaciones I/O bloqueantes, transformaciones pesadas en Python puro e incrementa contador compartido. Propón elecciones de concurrencia y plan de verificación; considera builds convencional y experimental free-threaded."
+  },
+  "expected_answer": {
+    "en": "Conventional GIL-enabled CPython allows one thread to execute Python bytecode at a time in an interpreter. Threads suit blocking I/O; asyncio suits cooperative I/O with compatible APIs; processes may benefit CPU-heavy Python at serialization/memory cost. The experimental free-threaded build can allow parallel Python threads; some extensions may re-enable the GIL. Synchronize the counter with a shared lock and measure throughput, resource costs and correctness on the actual build.",
+    "pt-BR": "CPython convencional com GIL permite uma thread executar bytecode Python por vez num interpretador. Threads servem a I/O bloqueante; asyncio a I/O cooperativo com APIs compatíveis; processos podem beneficiar Python CPU-bound ao custo de serialização/memória. Build experimental free-threaded pode permitir threads Python paralelas; algumas extensões podem reativar GIL. Sincronize contador com lock compartilhado e meça throughput, custos de recursos e correção no build real.",
+    "es": "CPython convencional con GIL permite un hilo ejecutar bytecode Python a la vez en un intérprete. Hilos sirven a I/O bloqueante; asyncio a I/O cooperativa con APIs compatibles; procesos pueden beneficiar Python CPU-bound al coste de serialización/memoria. Build experimental free-threaded puede permitir hilos Python paralelos; algunas extensiones pueden reactivar GIL. Sincroniza contador con lock compartido y mide throughput, costes de recursos y corrección en build real."
+  },
+  "explanation": {
+    "en": "The GIL is implementation-specific and not an application-level race-freedom guarantee. A single correct total without synchronization is weak evidence; test the lock contract and failure propagation separately from performance.",
+    "pt-BR": "GIL depende da implementação e não garante ausência de races na aplicação. Total correto isolado sem sincronização é evidência fraca; teste contrato do lock e propagação de falhas separadamente de desempenho.",
+    "es": "GIL depende de implementación y no garantiza ausencia de carreras en aplicación. Total correcto aislado sin sincronización es evidencia débil; prueba contrato del lock y propagación de fallos aparte del rendimiento."
+  },
+  "intent": {
+    "en": "Assess conditional architectural reasoning, version awareness and validation of invariants.",
+    "pt-BR": "Avaliar raciocínio arquitetural condicional, consciência de versão e validação de invariantes.",
+    "es": "Evaluar razonamiento arquitectónico condicional, conciencia de versión y validación de invariantes."
+  },
+  "common_errors": {
+    "en": [
+      "Claim threads never help in Python or that the GIL makes all updates safe.",
+      "Assume free-threading is the default or guarantees a speedup."
+    ],
+    "pt-BR": [
+      "Afirmar threads nunca ajudam ou GIL torna atualizações seguras.",
+      "Supor free-threading padrão ou ganho garantido."
+    ],
+    "es": [
+      "Afirmar hilos nunca ayudan o GIL hace seguras actualizaciones.",
+      "Suponer free-threading predeterminado o aceleración garantizada."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why is a correct counter result in one unsynchronized run not a proof of safety?"
+    ],
+    "pt-BR": [
+      "Por que total correto em uma execução sem sincronização não prova segurança?"
+    ],
+    "es": [
+      "¿Por qué total correcto en una ejecución sin sincronización no prueba seguridad?"
+    ]
+  },
+  "examples": {
+    "en": "Compare sequential baseline, bounded threads for blocking I/O and processes for CPU work; record elapsed time and memory separately from a locked-counter correctness check.",
+    "pt-BR": "Compare baseline sequencial, threads limitadas para I/O bloqueante e processos para CPU; registre tempo e memória separadamente de teste de correção do contador com lock.",
+    "es": "Compara base secuencial, hilos limitados para I/O bloqueante y procesos para CPU; registra tiempo y memoria aparte de prueba de corrección del contador con lock."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes conventional GIL from experimental free-threading with extension caveat.",
+        "pt-BR": "Distingue GIL convencional de free-threading experimental com ressalva de extensões.",
+        "es": "Distingue GIL convencional de free-threading experimental con salvedad de extensiones."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Chooses I/O/CPU strategies with at least one trade-off and proposes measurement on the actual workload.",
+        "pt-BR": "Escolhe estratégias I/O/CPU com trade-off e propõe medição na carga real.",
+        "es": "Elige estrategias I/O/CPU con compromiso y propone medición en la carga real."
+      }
+    },
+    {
+      "id": "criterion-3",
+      "points": 1,
+      "criterion": {
+        "en": "Protects shared invariant and distinguishes correctness tests from benchmarks.",
+        "pt-BR": "Protege invariante compartilhado e distingue testes de correção de benchmarks.",
+        "es": "Protege invariante compartido y distingue pruebas de corrección de benchmarks."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md",
+        "pt-BR": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.pt-BR.md",
+        "es": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md"
+      },
+      "sections": {
+        "en": "The GIL in Python 3.13",
+        "pt-BR": "GIL em Python 3.13",
+        "es": "GIL en Python 3.13"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md",
+        "pt-BR": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.pt-BR.md",
+        "es": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md"
+      },
+      "sections": {
+        "en": "Concurrency and parallelism",
+        "pt-BR": "Concorrência e paralelismo",
+        "es": "Concurrencia y paralelismo"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md",
+        "pt-BR": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.pt-BR.md",
+        "es": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md"
+      },
+      "sections": {
+        "en": "Shared-state example",
+        "pt-BR": "Exemplo de estado compartilhado",
+        "es": "Ejemplo de estado compartido"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "question_ids": [
+    "interview.clarify-contract",
+    "python.mutable-default",
+    "algorithms.duplicate-membership",
+    "oop.replaceable-collaborator",
+    "internals.nested-copy",
+    "sql.zero-child-count",
+    "internals.gil-workload",
+    "api.object-authorization",
+    "engineering.architecture-tradeoffs"
+  ],
+  "pilot_question_ids": [
+    "interview.clarify-contract",
+    "python.mutable-default",
+    "algorithms.duplicate-membership",
+    "oop.replaceable-collaborator",
+    "internals.nested-copy",
+    "sql.zero-child-count",
+    "internals.gil-workload",
+    "api.object-authorization",
+    "engineering.architecture-tradeoffs"
+  ]
+}

@@ -226,7 +226,7 @@ Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 f
 
 ## Fase 12: Preparação para entrevistas técnicas
 
-Em andamento: vinte e uma aulas cobrem fundamentos de entrevistas, Python, OOP, internals, backend, SQL e engenharia. Perguntas, prática comportamental/internacional ampliada e simulados permanecem planejados. [Preparação para entrevistas técnicas](../technical-interview-preparation/README.pt-BR.md).
+Em andamento: vinte e duas aulas incluem fundamentos concluídos e nove perguntas piloto. Demais perguntas, prática comportamental/internacional e simulados permanecem planejados. [Preparação para entrevistas técnicas](../technical-interview-preparation/README.pt-BR.md).
 
 ## Phase II: Learning Hub Foundation (roadmap de engenharia)
 
@@ -235,7 +235,7 @@ Esta fase de engenharia não renumera o currículo original. Sprints 00–05 int
 | Currículo futuro | Status |
 | --- | --- |
 | 11. Resolução de problemas e live coding | Concluída; 30 desafios |
-| 12. Preparação para entrevistas técnicas | Em andamento; vinte e uma aulas |
+| 12. Preparação para entrevistas técnicas | Em andamento; vinte e duas aulas |
 
 [Plano de implementação](specs/learning-hub-foundation/implementation-plan.pt-BR.md) · [Registro de integração de guias relacionados](specs/learning-hub-foundation/related-guides.pt-BR.md)
 

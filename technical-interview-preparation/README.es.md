@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-En curso: veintiuna lecciones cubren fundamentos de entrevistas, Python, OOP, internals, backend, SQL e ingeniería. Banco de preguntas, práctica conductual/internacional ampliada y simulaciones siguen previstos; aún no se publica un banco.
+En curso: veintidós lecciones incluyen fundamentos completados y piloto de nueve preguntas técnicas (tres por nivel). Preguntas técnicas restantes, práctica conductual/internacional ampliada y simulaciones siguen previstos.
 
 1. [Entender las entrevistas técnicas](01-understanding-technical-interviews/README.es.md)
 2. [Live coding y tareas take-home](02-live-coding-and-take-home/README.es.md)
@@ -25,5 +25,6 @@ En curso: veintiuna lecciones cubren fundamentos de entrevistas, Python, OOP, in
 19. [Joins, agregaciones y relaciones de datos](19-joins-aggregations-and-data-relationships/README.es.md)
 20. [Transacciones, índices y seguridad en SQL](20-transactions-indexes-and-sql-safety/README.es.md)
 21. [Ingeniería de software y decisiones técnicas](21-software-engineering-and-technical-decisions/README.es.md)
+22. [Banco de preguntas de entrevistas técnicas](22-technical-interview-question-bank/README.es.md)
 
 [Ruta de aprendizaje](../docs/learning-path.es.md) · [Mapa de requisitos previos](../docs/specs/learning-hub-foundation/interview-prerequisite-map.es.md)

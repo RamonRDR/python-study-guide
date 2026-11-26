@@ -6,7 +6,7 @@ Use this page as the **master table of contents for the course**. Every publishe
 
 If you are starting from zero, follow the phase order. Completed later phases may already be available before earlier planned phases, but the phase numbers still represent the intended learning sequence.
 
-Published curriculum: 104 lessons and eight practical projects (112 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
+Published curriculum: 105 lessons and eight practical projects (113 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
 
 ## Status legend
 
@@ -192,7 +192,7 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 
 ## Phase 12: Technical Interview Preparation
 
-In progress: twenty-one lessons cover interview foundations, Python, OOP, internals, backend, SQL and engineering. The question bank, extended behavioral/international practice and mocks remain planned; no interview bank is published yet.
+In progress: twenty-two lessons include the completed foundations and a nine-question technical interview pilot (three per level). The remaining technical questions, extended behavioral/international practice and mocks remain planned.
 
 1. [Understanding Technical Interviews](../technical-interview-preparation/01-understanding-technical-interviews/README.md)
 2. [Live Coding and Take-Home Assignments](../technical-interview-preparation/02-live-coding-and-take-home/README.md)
@@ -215,6 +215,7 @@ In progress: twenty-one lessons cover interview foundations, Python, OOP, intern
 19. [Joins, Aggregations and Data Relationships](../technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.md)
 20. [Transactions, Indexes and SQL Safety](../technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.md)
 21. [Software Engineering and Technical Decisions](../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md)
+22. [Technical Interview Question Bank](../technical-interview-preparation/22-technical-interview-question-bank/README.md)
 
 ## Useful navigation
 

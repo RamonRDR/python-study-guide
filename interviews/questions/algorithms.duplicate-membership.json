@@ -1,0 +1,98 @@
+{
+  "id": "algorithms.duplicate-membership",
+  "topic": "data-structures-algorithms",
+  "level": "junior",
+  "prompt": {
+    "en": "Detect whether a list of hashable IDs contains a duplicate. Which structure would you choose, and what are the time and auxiliary-space costs?",
+    "pt-BR": "Detecte se uma lista de IDs hashable contém duplicado. Qual estrutura escolheria e quais custos de tempo e espaço auxiliar?",
+    "es": "Detecta si una lista de IDs hashables contiene duplicado. ¿Qué estructura elegirías y cuáles son los costes de tiempo y espacio auxiliar?"
+  },
+  "expected_answer": {
+    "en": "Keep a set of seen IDs. For each ID, return True if already seen, otherwise insert it. Return False at the end. Under ordinary average-case hashing and constant-cost hash/equality assumptions, time is O(n), extra space O(n) in the worst input size.",
+    "pt-BR": "Mantenha conjunto de IDs vistos. Para cada ID, retorne True se já visto, senão insira. Retorne False ao final. Sob hipóteses usuais de hashing no caso médio e hash/igualdade de custo constante, tempo O(n), espaço extra O(n) no pior tamanho de entrada.",
+    "es": "Mantén conjunto de IDs vistos. Por cada ID, devuelve True si ya visto, si no insértalo. Devuelve False al final. Bajo supuestos habituales de hashing promedio y hash/igualdad de coste constante, tiempo O(n), espacio extra O(n) en el peor tamaño de entrada."
+  },
+  "explanation": {
+    "en": "A set supports membership without repeatedly scanning the prefix. Worst-case hash collisions can degrade time; hashability is a prerequisite.",
+    "pt-BR": "Conjunto permite pertinência sem varrer prefixo repetidamente. Colisões no pior caso podem degradar tempo; hashability é pré-requisito.",
+    "es": "Conjunto permite pertenencia sin recorrer prefijo repetidamente. Colisiones en peor caso pueden degradar tiempo; hashabilidad es requisito."
+  },
+  "intent": {
+    "en": "Assess representation choice, correctness and complexity assumptions.",
+    "pt-BR": "Avaliar escolha da representação, correção e hipóteses de complexidade.",
+    "es": "Evaluar elección de representación, corrección y supuestos de complejidad."
+  },
+  "common_errors": {
+    "en": [
+      "Claim guaranteed O(1) worst-case set lookup.",
+      "Forget empty input or treat equal IDs as different because of position."
+    ],
+    "pt-BR": [
+      "Alegar busca O(1) garantida no pior caso.",
+      "Esquecer entrada vazia ou tratar IDs iguais como diferentes pela posição."
+    ],
+    "es": [
+      "Afirmar búsqueda O(1) garantizada en peor caso.",
+      "Olvidar entrada vacía o tratar IDs iguales como distintos por posición."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What if IDs are not hashable?"
+    ],
+    "pt-BR": [
+      "E se IDs não forem hashable?"
+    ],
+    "es": [
+      "¿Y si IDs no son hashables?"
+    ]
+  },
+  "examples": {
+    "en": "`[3, 8, 3]` → True; `[]` → False; `[3, 8]` → False.",
+    "pt-BR": "`[3, 8, 3]` → True; `[]` → False; `[3, 8]` → False.",
+    "es": "`[3, 8, 3]` → True; `[]` → False; `[3, 8]` → False."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Describes a seen-set algorithm with correct termination.",
+        "pt-BR": "Descreve algoritmo de conjunto de vistos com término correto.",
+        "es": "Describe algoritmo de conjunto de vistos con terminación correcta."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "States average O(n) time with hashing assumptions and O(n) extra space.",
+        "pt-BR": "Declara tempo médio O(n) com hipóteses de hashing e espaço extra O(n).",
+        "es": "Declara tiempo promedio O(n) con supuestos de hashing y espacio extra O(n)."
+      }
+    },
+    {
+      "id": "criterion-3",
+      "points": 1,
+      "criterion": {
+        "en": "Checks empty and repeated input and states hashability requirement.",
+        "pt-BR": "Confere entrada vazia e repetida e declara requisito hashable.",
+        "es": "Comprueba entrada vacía y repetida y declara requisito hashable."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.md",
+        "pt-BR": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md"
+      },
+      "sections": {
+        "en": "Choose by the contract",
+        "pt-BR": "Escolha pelo contrato",
+        "es": "Elige según el contrato"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "interview.clarify-contract",
+  "topic": "interview-fundamentals",
+  "level": "junior",
+  "prompt": {
+    "en": "An interviewer asks you to count eligible registrations. Eligibility, duplicate handling and empty input are unspecified. What do you do before coding?",
+    "pt-BR": "Um entrevistador pede que você conte cadastros elegíveis. Elegibilidade, duplicados e entrada vazia não foram definidos. O que faz antes de programar?",
+    "es": "Un entrevistador pide contar registros elegibles. Elegibilidad, duplicados y entrada vacía no están definidos. ¿Qué haces antes de programar?"
+  },
+  "expected_answer": {
+    "en": "Ask what qualifies, whether duplicates count and the empty-input result. Restate the agreed contract, give a concrete example and explain how you will test it before implementing.",
+    "pt-BR": "Pergunte o que qualifica, se duplicados contam e qual resultado para entrada vazia. Reformule o contrato acordado, dê exemplo concreto e explique como testará antes de implementar.",
+    "es": "Pregunta qué califica, si cuentan duplicados y el resultado para entrada vacía. Reformula el contrato acordado, da ejemplo concreto y explica cómo lo probarás antes de implementar."
+  },
+  "explanation": {
+    "en": "Clarification prevents solving a different problem. If a rule remains unknown, label an assumption and ask for confirmation.",
+    "pt-BR": "Esclarecer evita resolver outro problema. Se uma regra continuar desconhecida, declare hipótese e peça confirmação.",
+    "es": "Aclarar evita resolver otro problema. Si sigue desconocida una regla, declara supuesto y pide confirmación."
+  },
+  "intent": {
+    "en": "Assess communication, contract reasoning and test planning, not speed alone.",
+    "pt-BR": "Avaliar comunicação, raciocínio sobre contrato e planejamento de testes, não só velocidade.",
+    "es": "Evaluar comunicación, razonamiento sobre contrato y planificación de pruebas, no solo velocidad."
+  },
+  "common_errors": {
+    "en": [
+      "Start coding without defining eligibility.",
+      "Invent a duplicate policy and present it as given."
+    ],
+    "pt-BR": [
+      "Começar a programar sem definir elegibilidade.",
+      "Inventar política de duplicados e apresentá-la como dada."
+    ],
+    "es": [
+      "Empezar a programar sin definir elegibilidad.",
+      "Inventar política de duplicados y presentarla como dada."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would a change from counting rows to counting distinct IDs affect your tests?"
+    ],
+    "pt-BR": [
+      "Como mudar de contagem de linhas para IDs distintos afetaria seus testes?"
+    ],
+    "es": [
+      "¿Cómo afectaría a tus pruebas cambiar de conteo de filas a IDs distintos?"
+    ]
+  },
+  "examples": {
+    "en": "If the agreed rule counts distinct eligible IDs, two eligible rows with ID 7 count as one and empty input returns zero if agreed.",
+    "pt-BR": "Se a regra acordada conta IDs elegíveis distintos, duas linhas elegíveis com ID 7 contam como uma e entrada vazia retorna zero se acordado.",
+    "es": "Si la regla acordada cuenta IDs elegibles distintos, dos filas elegibles con ID 7 cuentan como una y entrada vacía devuelve cero si se acordó."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Asks explicitly about eligibility, duplicates and empty input.",
+        "pt-BR": "Pergunta explicitamente sobre elegibilidade, duplicados e entrada vazia.",
+        "es": "Pregunta explícitamente sobre elegibilidad, duplicados y entrada vacía."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Restates the contract and distinguishes assumptions from facts.",
+        "pt-BR": "Reformula contrato e distingue hipóteses de fatos.",
+        "es": "Reformula contrato y distingue supuestos de hechos."
+      }
+    },
+    {
+      "id": "criterion-3",
+      "points": 1,
+      "criterion": {
+        "en": "Provides a concrete example and at least one relevant test.",
+        "pt-BR": "Fornece exemplo concreto e ao menos um teste relevante.",
+        "es": "Proporciona ejemplo concreto y al menos una prueba relevante."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/01-understanding-technical-interviews/README.md",
+        "pt-BR": "technical-interview-preparation/01-understanding-technical-interviews/README.pt-BR.md",
+        "es": "technical-interview-preparation/01-understanding-technical-interviews/README.es.md"
+      },
+      "sections": {
+        "en": "A practical conversation",
+        "pt-BR": "Uma conversa prática",
+        "es": "Una conversación práctica"
+      }
+    }
+  ]
+}
