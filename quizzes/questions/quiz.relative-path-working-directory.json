@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.relative-path-working-directory",
+  "chapter_id": "standard-library.pathlib",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "A relative path is always interpreted relative to the source .py file, regardless of the process's working directory.",
+    "pt-BR": "Um caminho relativo é sempre interpretado em relação ao arquivo fonte .py, independentemente do diretório de trabalho do processo.",
+    "es": "Una ruta relativa siempre se interpreta respecto al archivo fuente .py, independientemente del directorio de trabajo del proceso."
+  },
+  "explanation": {
+    "en": "Relative filesystem paths normally use the current working directory, which can differ from the script's directory.",
+    "pt-BR": "Caminhos relativos normalmente usam o diretório de trabalho atual, que pode diferir do diretório do script.",
+    "es": "Las rutas relativas normalmente usan el directorio de trabajo actual, que puede diferir del directorio del script."
+  },
+  "hints": {
+    "en": [
+      "Distinguish the location of a script from process state."
+    ],
+    "pt-BR": [
+      "Distinga a localização do script do estado do processo."
+    ],
+    "es": [
+      "Distingue la ubicación del script del estado del proceso."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/01-pathlib/README.md",
+        "pt-BR": "standard-library/01-pathlib/README.pt-BR.md",
+        "es": "standard-library/01-pathlib/README.es.md"
+      },
+      "sections": {
+        "en": "4. Relative and absolute paths",
+        "pt-BR": "4. Caminhos relativos e absolutos",
+        "es": "4. Rutas relativas y absolutas"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

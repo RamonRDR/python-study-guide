@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.timedelta-duration",
+  "chapter_id": "standard-library.datetime",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Which datetime type represents a duration of two days and three hours rather than a calendar date?",
+    "pt-BR": "Qual tipo de datetime representa uma duração de dois dias e três horas, e não uma data do calendário?",
+    "es": "¿Qué tipo de datetime representa una duración de dos días y tres horas, y no una fecha del calendario?"
+  },
+  "explanation": {
+    "en": "timedelta represents a duration and supports date/datetime arithmetic.",
+    "pt-BR": "timedelta representa uma duração e permite aritmética de datas/datetimes.",
+    "es": "timedelta representa una duración y permite aritmética de fechas/datetimes."
+  },
+  "hints": {
+    "en": [
+      "Choose an interval rather than a point on a calendar."
+    ],
+    "pt-BR": [
+      "Escolha um intervalo, não um ponto no calendário."
+    ],
+    "es": [
+      "Elige un intervalo, no un punto del calendario."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/02-datetime/README.md",
+        "pt-BR": "standard-library/02-datetime/README.pt-BR.md",
+        "es": "standard-library/02-datetime/README.es.md"
+      },
+      "sections": {
+        "en": "7. What is a `timedelta`?",
+        "pt-BR": "7. O que é um `timedelta`?",
+        "es": "7. ¿Qué es un `timedelta`?"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "duration"
+  },
+  "choices": [
+    {
+      "id": "date",
+      "text": {
+        "en": "date",
+        "pt-BR": "date",
+        "es": "date"
+      }
+    },
+    {
+      "id": "duration",
+      "text": {
+        "en": "timedelta",
+        "pt-BR": "timedelta",
+        "es": "timedelta"
+      }
+    },
+    {
+      "id": "datetime",
+      "text": {
+        "en": "datetime",
+        "pt-BR": "datetime",
+        "es": "datetime"
+      }
+    },
+    {
+      "id": "time",
+      "text": {
+        "en": "time",
+        "pt-BR": "time",
+        "es": "time"
+      }
+    }
+  ]
+}

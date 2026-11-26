@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.json-dumps-text-not-bytes",
+  "chapter_id": "standard-library.json",
+  "difficulty": "medium",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Fill ____ with the json function that serializes a Python dictionary to a string, without opening a file. Enter only the function name.",
+    "pt-BR": "Preencha ____ com a função de json que serializa um dicionário Python para string, sem abrir arquivo. Digite apenas o nome da função.",
+    "es": "Completa ____ con la función de json que serializa un diccionario Python a una cadena, sin abrir archivo. Introduce solo el nombre de la función."
+  },
+  "explanation": {
+    "en": "dumps returns a str; converting to bytes requires a separate encoding step.",
+    "pt-BR": "dumps retorna str; converter para bytes requer etapa separada de codificação.",
+    "es": "dumps devuelve str; convertir a bytes requiere un paso separado de codificación."
+  },
+  "hints": {
+    "en": [
+      "Distinguish serialization to a string from writing to a file."
+    ],
+    "pt-BR": [
+      "Distinga serialização para string de escrita em arquivo."
+    ],
+    "es": [
+      "Distingue serialización a cadena de escritura en archivo."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/03-json/README.md",
+        "pt-BR": "standard-library/03-json/README.pt-BR.md",
+        "es": "standard-library/03-json/README.es.md"
+      },
+      "sections": {
+        "en": "3. `dumps()` produces text, not bytes",
+        "pt-BR": "3. `dumps()` produz texto, não bytes",
+        "es": "3. `dumps()` produce texto, no bytes"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "dumps"
+    ],
+    "comparison": "exact"
+  },
+  "code": "import json\ntext = json.____({\"count\": 2})"
+}

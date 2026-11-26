@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.logging-handler-threshold",
+  "chapter_id": "standard-library.logging",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A logger accepts INFO and above; its only handler accepts WARNING and above. What happens to an INFO event when no other routing or filters apply?",
+    "pt-BR": "Um logger aceita INFO e superiores; seu único handler aceita WARNING e superiores. O que ocorre com evento INFO sem outro roteamento ou filtros?",
+    "es": "Un logger acepta INFO y superiores; su único handler acepta WARNING y superiores. ¿Qué ocurre con un evento INFO sin otro enrutamiento ni filtros?"
+  },
+  "explanation": {
+    "en": "The logger can create the INFO record, but the handler rejects it because of its threshold.",
+    "pt-BR": "O logger pode criar o registro INFO, mas o handler o rejeita por seu limite.",
+    "es": "El logger puede crear el registro INFO, pero el handler lo rechaza por su umbral."
+  },
+  "hints": {
+    "en": [
+      "There are two separate thresholds."
+    ],
+    "pt-BR": [
+      "Há dois limites separados."
+    ],
+    "es": [
+      "Hay dos umbrales separados."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/05-logging/README.md",
+        "pt-BR": "standard-library/05-logging/README.pt-BR.md",
+        "es": "standard-library/05-logging/README.es.md"
+      },
+      "sections": {
+        "en": "6. Handler levels are a second threshold",
+        "pt-BR": "6. Níveis de handler são um segundo limite",
+        "es": "6. Los niveles de handler son un segundo umbral"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "handler-rejects"
+  },
+  "choices": [
+    {
+      "id": "emitted",
+      "text": {
+        "en": "The handler emits it.",
+        "pt-BR": "O handler o emite.",
+        "es": "El handler lo emite."
+      }
+    },
+    {
+      "id": "promoted",
+      "text": {
+        "en": "It becomes WARNING.",
+        "pt-BR": "Ele vira WARNING.",
+        "es": "Se convierte en WARNING."
+      }
+    },
+    {
+      "id": "logger-rejects",
+      "text": {
+        "en": "The logger rejects it before creating a record.",
+        "pt-BR": "O logger o rejeita antes de criar registro.",
+        "es": "El logger lo rechaza antes de crear registro."
+      }
+    },
+    {
+      "id": "handler-rejects",
+      "text": {
+        "en": "The logger accepts it, but the handler rejects it.",
+        "pt-BR": "O logger o aceita, mas o handler o rejeita.",
+        "es": "El logger lo acepta, pero el handler lo rechaza."
+      }
+    }
+  ]
+}
