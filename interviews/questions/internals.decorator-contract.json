@@ -1,0 +1,86 @@
+{
+  "id": "internals.decorator-contract",
+  "topic": "python-internals",
+  "level": "mid",
+  "prompt": {
+    "en": "A logging decorator must record attempts without changing the wrapped calculation's contract. What should it preserve and how would you test return, arguments, metadata and failure?",
+    "pt-BR": "Decorator de log deve registrar tentativas sem alterar contrato do cálculo. O que preservar e como testar retorno, argumentos, metadados e falha?",
+    "es": "Decorador de registro debe registrar intentos sin cambiar contrato del cálculo. ¿Qué preservar y cómo probar retorno, argumentos, metadatos y fallo?"
+  },
+  "expected_answer": {
+    "en": "Forward *args and **kwargs, return the wrapped result, preserve metadata using functools.wraps and let unexpected exceptions propagate. Test positional and keyword calls, result, name and a deliberate exception.",
+    "pt-BR": "Encaminhe *args e **kwargs, retorne resultado, preserve metadados com functools.wraps e deixe exceções inesperadas propagar. Teste chamadas posicionais e nomeadas, resultado, nome e exceção deliberada.",
+    "es": "Reenvía *args y **kwargs, devuelve resultado, conserva metadatos con functools.wraps y deja propagar excepciones inesperadas. Prueba llamadas posicionales y nombradas, resultado, nombre y excepción deliberada."
+  },
+  "explanation": {
+    "en": "A cross-cutting wrapper should not silently alter core behavior.",
+    "pt-BR": "Wrapper transversal não deve alterar comportamento central silenciosamente.",
+    "es": "Wrapper transversal no debe alterar comportamiento central silenciosamente."
+  },
+  "intent": {
+    "en": "Assess decorators and behavior-preserving tests.",
+    "pt-BR": "Avaliar decorators e testes de preservação de comportamento.",
+    "es": "Evaluar decoradores y pruebas de conservación de comportamiento."
+  },
+  "common_errors": {
+    "en": [
+      "Forget to return the wrapped result or swallow exceptions."
+    ],
+    "pt-BR": [
+      "Esquecer retorno do resultado ou engolir exceções."
+    ],
+    "es": [
+      "Olvidar devolver resultado u ocultar excepciones."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "When are stacked decorators applied?"
+    ],
+    "pt-BR": [
+      "Quando decorators empilhados são aplicados?"
+    ],
+    "es": [
+      "¿Cuándo se aplican decoradores apilados?"
+    ]
+  },
+  "examples": {
+    "en": "A wrapped divide(8, denominator=2) still returns 4; division by zero still raises ZeroDivisionError.",
+    "pt-BR": "divide(8, denominator=2) decorada ainda retorna 4; divisão por zero ainda gera ZeroDivisionError.",
+    "es": "divide(8, denominator=2) decorada sigue devolviendo 4; división por cero sigue lanzando ZeroDivisionError."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Specifies forwarding, return, metadata and exception preservation.",
+        "pt-BR": "Especifica encaminhamento, retorno, metadados e preservação de exceção.",
+        "es": "Especifica reenvío, retorno, metadatos y conservación de excepción."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes tests for each named contract, including failure.",
+        "pt-BR": "Propõe testes para cada contrato nomeado, incluindo falha.",
+        "es": "Propone pruebas para cada contrato nombrado, incluido fallo."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/12-closures-and-decorators/README.md",
+        "pt-BR": "technical-interview-preparation/12-closures-and-decorators/README.pt-BR.md",
+        "es": "technical-interview-preparation/12-closures-and-decorators/README.es.md"
+      },
+      "sections": {
+        "en": "Decorators",
+        "pt-BR": "Decorators",
+        "es": "Decoradores"
+      }
+    }
+  ]
+}

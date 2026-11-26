@@ -1,0 +1,86 @@
+{
+  "id": "testing.exception-cause",
+  "topic": "testing-debugging",
+  "level": "mid",
+  "prompt": {
+    "en": "At a conversion boundary, translate ValueError to a domain-specific InvalidQuantity without losing the cause. Show syntax and distinguish it from bare raise.",
+    "pt-BR": "Na fronteira de conversão, traduza ValueError para InvalidQuantity sem perder causa. Mostre sintaxe e distinga de raise sem argumento.",
+    "es": "En frontera de conversión, traduce ValueError a InvalidQuantity sin perder causa. Muestra sintaxis y distingue de raise sin argumento."
+  },
+  "expected_answer": {
+    "en": "Inside except ValueError as error, use raise InvalidQuantity(\"invalid quantity\") from error. The explicit cause is retained. Bare raise inside that handler re-raises the active exception instead of translating it.",
+    "pt-BR": "Em except ValueError as error, use raise InvalidQuantity(\"invalid quantity\") from error. Causa explícita é preservada. raise sem argumento relança exceção ativa em vez de traduzir.",
+    "es": "En except ValueError as error, usa raise InvalidQuantity(\"invalid quantity\") from error. Causa explícita se conserva. raise sin argumento relanza excepción activa en vez de traducir."
+  },
+  "explanation": {
+    "en": "Translation offers a stable domain contract while keeping diagnostic evidence.",
+    "pt-BR": "Tradução oferece contrato de domínio estável mantendo evidência diagnóstica.",
+    "es": "Traducción ofrece contrato de dominio estable conservando evidencia diagnóstica."
+  },
+  "intent": {
+    "en": "Assess exception chaining and diagnostics.",
+    "pt-BR": "Avaliar encadeamento de exceções e diagnóstico.",
+    "es": "Evaluar encadenamiento de excepciones y diagnóstico."
+  },
+  "common_errors": {
+    "en": [
+      "Replace the error with a success value."
+    ],
+    "pt-BR": [
+      "Substituir erro por valor de sucesso."
+    ],
+    "es": [
+      "Sustituir error por valor de éxito."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Which assertion verifies the original cause type?"
+    ],
+    "pt-BR": [
+      "Qual assertion verifica tipo da causa original?"
+    ],
+    "es": [
+      "¿Qué aserción verifica tipo de causa original?"
+    ]
+  },
+  "examples": {
+    "en": "assert isinstance(caught.exception.__cause__, ValueError) in a unittest assertRaises context.",
+    "pt-BR": "assert isinstance(caught.exception.__cause__, ValueError) em contexto assertRaises do unittest.",
+    "es": "assert isinstance(caught.exception.__cause__, ValueError) en contexto assertRaises de unittest."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Shows explicit raise-from syntax with caught error.",
+        "pt-BR": "Mostra sintaxe raise-from explícita com erro capturado.",
+        "es": "Muestra sintaxis raise-from explícita con error capturado."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes re-raising from translating and explains cause preservation.",
+        "pt-BR": "Distingue relançar de traduzir e explica preservação de causa.",
+        "es": "Distingue relanzar de traducir y explica conservación de causa."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Exception boundaries",
+        "pt-BR": "Fronteiras de exceção",
+        "es": "Fronteras de excepción"
+      }
+    }
+  ]
+}

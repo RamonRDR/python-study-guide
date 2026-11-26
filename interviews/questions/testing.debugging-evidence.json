@@ -1,0 +1,86 @@
+{
+  "id": "testing.debugging-evidence",
+  "topic": "testing-debugging",
+  "level": "mid",
+  "prompt": {
+    "en": "A previously passing parser now fails on a particular input. Describe a debugging sequence and what evidence you record without exposing private payloads.",
+    "pt-BR": "Parser antes funcional falha numa entrada. Descreva sequência de debugging e evidências a registrar sem expor payloads privados.",
+    "es": "Parser antes funcional falla en una entrada. Describe secuencia de depuración y evidencias a registrar sin exponer payloads privados."
+  },
+  "expected_answer": {
+    "en": "Reproduce with minimal sanitized input, inspect traceback and relevant state, form a hypothesis, change one cause, rerun the reproducer and add a regression test. Record safe context and actual results, redacting secrets.",
+    "pt-BR": "Reproduza com entrada mínima sanitizada, inspecione traceback e estado relevante, formule hipótese, altere uma causa, rode reprodução e adicione teste de regressão. Registre contexto seguro e resultados reais, ocultando segredos.",
+    "es": "Reproduce con entrada mínima saneada, inspecciona traceback y estado relevante, formula hipótesis, cambia una causa, repite reproducción y añade prueba de regresión. Registra contexto seguro y resultados reales, ocultando secretos."
+  },
+  "explanation": {
+    "en": "Controlled changes make causal evidence easier to interpret.",
+    "pt-BR": "Mudanças controladas facilitam interpretar evidência causal.",
+    "es": "Cambios controlados facilitan interpretar evidencia causal."
+  },
+  "intent": {
+    "en": "Assess disciplined debugging and privacy.",
+    "pt-BR": "Avaliar debugging disciplinado e privacidade.",
+    "es": "Evaluar depuración disciplinada y privacidad."
+  },
+  "common_errors": {
+    "en": [
+      "Log every raw credential and change several conditions at once."
+    ],
+    "pt-BR": [
+      "Registrar credenciais brutas e mudar várias condições de uma vez."
+    ],
+    "es": [
+      "Registrar credenciales crudas y cambiar varias condiciones a la vez."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What if you cannot reproduce the failure?"
+    ],
+    "pt-BR": [
+      "E se não conseguir reproduzir falha?"
+    ],
+    "es": [
+      "¿Y si no logras reproducir fallo?"
+    ]
+  },
+  "examples": {
+    "en": "Replace a private input with a fictional minimal malformed string that reproduces the same exception.",
+    "pt-BR": "Substitua entrada privada por string fictícia mínima malformada que reproduza mesma exceção.",
+    "es": "Sustituye entrada privada por cadena ficticia mínima malformada que reproduzca misma excepción."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Describes reproduction, hypothesis and controlled verification sequence.",
+        "pt-BR": "Descreve sequência de reprodução, hipótese e verificação controlada.",
+        "es": "Describe secuencia de reproducción, hipótesis y verificación controlada."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes regression evidence with sanitized logs and actual outcomes.",
+        "pt-BR": "Propõe evidência de regressão com logs sanitizados e resultados reais.",
+        "es": "Propone evidencia de regresión con logs saneados y resultados reales."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Test and debug by evidence",
+        "pt-BR": "Testar e depurar por evidências",
+        "es": "Probar y depurar con evidencias"
+      }
+    }
+  ]
+}

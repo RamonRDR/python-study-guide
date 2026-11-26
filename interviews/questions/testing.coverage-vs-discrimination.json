@@ -1,0 +1,98 @@
+{
+  "id": "testing.coverage-vs-discrimination",
+  "topic": "testing-debugging",
+  "level": "senior",
+  "prompt": {
+    "en": "A parser has high line coverage but a mutated implementation returning zero for invalid text still passes. Explain what this means and propose a stronger verification strategy without claiming tests prove all correctness.",
+    "pt-BR": "Parser tem alta cobertura de linhas mas implementação mutada retornando zero para texto inválido ainda passa. Explique significado e proponha estratégia mais forte sem alegar testes provam toda correção.",
+    "es": "Parser tiene alta cobertura de líneas pero implementación mutada que devuelve cero para texto inválido sigue pasando. Explica significado y propone estrategia más fuerte sin afirmar pruebas demuestran toda corrección."
+  },
+  "expected_answer": {
+    "en": "Coverage measures execution, not correctness. A surviving plausible defect shows the oracle is insufficient for that behavior. Add precise expected-value and exception assertions, boundary cases and regression tests; rerun correct and intentionally wrong versions. Test real component boundaries separately, with deterministic setup. Passing strengthens evidence, not proof of every behavior.",
+    "pt-BR": "Cobertura mede execução, não correção. Defeito plausível sobrevivente mostra oráculo insuficiente nesse comportamento. Adicione assertions precisas de valor/exceção, bordas e regressão; execute versões correta e errada intencional. Teste fronteiras reais separadamente, com setup determinístico. Passar fortalece evidência, não prova todo comportamento.",
+    "es": "Cobertura mide ejecución, no corrección. Defecto plausible superviviente muestra oráculo insuficiente para ese comportamiento. Añade aserciones precisas de valor/excepción, límites y regresión; ejecuta versiones correcta e incorrecta intencional. Prueba fronteras reales por separado, con preparación determinista. Pasar refuerza evidencia, no prueba todo comportamiento."
+  },
+  "explanation": {
+    "en": "A useful negative test rejects a representative defect while the reference passes.",
+    "pt-BR": "Teste negativo útil rejeita defeito representativo enquanto referência passa.",
+    "es": "Prueba negativa útil rechaza defecto representativo mientras referencia pasa."
+  },
+  "intent": {
+    "en": "Assess test quality and limits of assurance.",
+    "pt-BR": "Avaliar qualidade de testes e limites de garantia.",
+    "es": "Evaluar calidad de pruebas y límites de garantía."
+  },
+  "common_errors": {
+    "en": [
+      "Treat a coverage percentage as proof of correct behavior."
+    ],
+    "pt-BR": [
+      "Tratar percentual de cobertura como prova de correção."
+    ],
+    "es": [
+      "Tratar porcentaje de cobertura como prueba de corrección."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why keep assertions about unchanged state after a rejected operation?"
+    ],
+    "pt-BR": [
+      "Por que manter assertions sobre estado intacto após operação rejeitada?"
+    ],
+    "es": [
+      "¿Por qué conservar aserciones de estado intacto tras operación rechazada?"
+    ]
+  },
+  "examples": {
+    "en": "Require correct zero output for \"0\" and specific exception for \"abc\"; the silent-zero variant must fail.",
+    "pt-BR": "Exija saída zero correta para \"0\" e exceção específica para \"abc\"; variante zero silencioso deve falhar.",
+    "es": "Exige salida cero correcta para \"0\" y excepción específica para \"abc\"; variante cero silencioso debe fallar."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Explains surviving defect and the coverage/oracle distinction.",
+        "pt-BR": "Explica defeito sobrevivente e distinção cobertura/oráculo.",
+        "es": "Explica defecto superviviente y distinción cobertura/oráculo."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes discriminating deterministic tests, boundary verification and honest limits.",
+        "pt-BR": "Propõe testes discriminantes determinísticos, verificação de fronteiras e limites honestos.",
+        "es": "Propone pruebas discriminantes deterministas, verificación de fronteras y límites honestos."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Test and debug by evidence",
+        "pt-BR": "Testar e depurar por evidências",
+        "es": "Probar y depurar con evidencias"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Practice",
+        "pt-BR": "Prática",
+        "es": "Práctica"
+      }
+    }
+  ]
+}

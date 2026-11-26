@@ -1,0 +1,86 @@
+{
+  "id": "internals.late-binding",
+  "topic": "python-internals",
+  "level": "mid",
+  "prompt": {
+    "en": "Inside a factory, create three lambdas in a loop over range(3), each returning i. If called only after the loop, what do they return? Show a fix for immutable indices.",
+    "pt-BR": "Dentro de fábrica, crie três lambdas em loop range(3), cada retornando i. Se chamadas só depois do loop, o que retornam? Mostre correção para índices imutáveis.",
+    "es": "Dentro de fábrica, crea tres lambdas en bucle range(3), cada una devolviendo i. Si se llaman solo tras bucle, ¿qué devuelven? Muestra corrección para índices inmutables."
+  },
+  "expected_answer": {
+    "en": "All return 2 because the closures share the changing enclosing binding. Use lambda i=i: i to bind the current immutable value as a default at definition, or use a separate factory call.",
+    "pt-BR": "Todas retornam 2 porque closures compartilham vinculação envolvente variável. Use lambda i=i: i para vincular valor imutável atual como padrão na definição, ou fábrica separada.",
+    "es": "Todas devuelven 2 porque cierres comparten enlace envolvente cambiante. Usa lambda i=i: i para enlazar valor inmutable actual como predeterminado al definir, o fábrica separada."
+  },
+  "explanation": {
+    "en": "Closure capture is not automatically a snapshot; default binding is evaluated at function creation.",
+    "pt-BR": "Captura de closure não é snapshot automático; padrão é avaliado na criação da função.",
+    "es": "Captura del cierre no es instantánea automática; valor predeterminado se evalúa al crear función."
+  },
+  "intent": {
+    "en": "Assess binding time and closure behavior.",
+    "pt-BR": "Avaliar momento de vinculação e comportamento de closure.",
+    "es": "Evaluar momento de enlace y comportamiento de cierre."
+  },
+  "common_errors": {
+    "en": [
+      "Expect 0, 1, 2 without binding individual values."
+    ],
+    "pt-BR": [
+      "Esperar 0, 1, 2 sem vincular valores individuais."
+    ],
+    "es": [
+      "Esperar 0, 1, 2 sin enlazar valores individuales."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Would binding a mutable list as a default deep-copy it?"
+    ],
+    "pt-BR": [
+      "Vincular lista mutável como padrão faria cópia profunda?"
+    ],
+    "es": [
+      "¿Enlazar lista mutable como predeterminada la copiaría profundamente?"
+    ]
+  },
+  "examples": {
+    "en": "[lambda i=i: i for i in range(3)] yields functions returning 0, 1, 2 respectively.",
+    "pt-BR": "[lambda i=i: i for i in range(3)] produz funções retornando 0, 1, 2 respectivamente.",
+    "es": "[lambda i=i: i for i in range(3)] produce funciones que devuelven 0, 1, 2 respectivamente."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts late-bound results and explains shared binding.",
+        "pt-BR": "Prevê resultados tardios e explica vinculação compartilhada.",
+        "es": "Predice resultados tardíos y explica enlace compartido."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Demonstrates a valid snapshot/factory correction for immutable values.",
+        "pt-BR": "Demonstra correção válida por snapshot/fábrica para imutáveis.",
+        "es": "Demuestra corrección válida por instantánea/fábrica para inmutables."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/12-closures-and-decorators/README.md",
+        "pt-BR": "technical-interview-preparation/12-closures-and-decorators/README.pt-BR.md",
+        "es": "technical-interview-preparation/12-closures-and-decorators/README.es.md"
+      },
+      "sections": {
+        "en": "Closures and scope",
+        "pt-BR": "Closures e escopo",
+        "es": "Cierres y ámbito"
+      }
+    }
+  ]
+}

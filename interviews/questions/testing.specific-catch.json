@@ -1,0 +1,86 @@
+{
+  "id": "testing.specific-catch",
+  "topic": "testing-debugging",
+  "level": "junior",
+  "prompt": {
+    "en": "When converting user text to int, why catch ValueError specifically instead of hiding every exception? What should invalid text do?",
+    "pt-BR": "Ao converter texto para int, por que capturar ValueError especificamente em vez de ocultar toda exceção? O que texto inválido deve fazer?",
+    "es": "Al convertir texto a int, ¿por qué capturar ValueError específicamente en vez de ocultar toda excepción? ¿Qué debe hacer texto inválido?"
+  },
+  "expected_answer": {
+    "en": "Catch the expected conversion failure at a boundary that can handle or translate it. Report or raise the agreed invalid-input error; let unrelated unexpected exceptions propagate.",
+    "pt-BR": "Capture falha esperada de conversão na fronteira que pode tratar ou traduzir. Informe ou levante erro acordado de entrada inválida; deixe exceções inesperadas alheias propagar.",
+    "es": "Captura fallo esperado de conversión en frontera que puede tratar o traducir. Informa o lanza error acordado de entrada inválida; deja propagar excepciones inesperadas ajenas."
+  },
+  "explanation": {
+    "en": "Returning zero for bad text confuses invalid input with a valid zero.",
+    "pt-BR": "Retornar zero para texto ruim confunde entrada inválida com zero válido.",
+    "es": "Devolver cero para texto incorrecto confunde entrada inválida con cero válido."
+  },
+  "intent": {
+    "en": "Assess exception scope and data contracts.",
+    "pt-BR": "Avaliar escopo de exceção e contratos de dados.",
+    "es": "Evaluar alcance de excepción y contratos de datos."
+  },
+  "common_errors": {
+    "en": [
+      "Catch everything and return zero unconditionally."
+    ],
+    "pt-BR": [
+      "Capturar tudo e retornar zero incondicionalmente."
+    ],
+    "es": [
+      "Capturar todo y devolver cero incondicionalmente."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What distinguishes \"0\" from \"abc\" in tests?"
+    ],
+    "pt-BR": [
+      "O que distingue \"0\" de \"abc\" em testes?"
+    ],
+    "es": [
+      "¿Qué distingue \"0\" de \"abc\" en pruebas?"
+    ]
+  },
+  "examples": {
+    "en": "int(\"0\") succeeds, int(\"abc\") raises ValueError.",
+    "pt-BR": "int(\"0\") funciona, int(\"abc\") gera ValueError.",
+    "es": "int(\"0\") funciona, int(\"abc\") lanza ValueError."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Chooses the specific expected exception and explains propagation.",
+        "pt-BR": "Escolhe exceção específica esperada e explica propagação.",
+        "es": "Elige excepción específica esperada y explica propagación."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes invalid text from valid zero in the contract.",
+        "pt-BR": "Distingue texto inválido de zero válido no contrato.",
+        "es": "Distingue texto inválido de cero válido en contrato."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Exception boundaries",
+        "pt-BR": "Fronteiras de exceção",
+        "es": "Fronteras de excepción"
+      }
+    }
+  ]
+}
