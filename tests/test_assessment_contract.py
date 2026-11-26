@@ -131,6 +131,62 @@ class AssessmentTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, diagnostic):
                     self.validate("quiz", q)
 
+    def test_identifier_boundaries(self):
+        from assessment_records import schema_validate
+
+        # Test the schema separately, not just the relationship validator.
+        for suffix in ("\n", "\r", "\r\n", "\u2028", "\u2029", " "):
+            for function_name in ("sample", "class"):
+                with self.subTest(function_name=function_name, suffix=repr(suffix)):
+                    record = copy.deepcopy(self.exercise)
+                    record["tests"]["function_name"] = function_name + suffix
+                    with self.assertRaisesRegex(ValueError, "function_name"):
+                        schema_validate("exercise", record)
+                    with self.assertRaisesRegex(ValueError, "function_name"):
+                        self.validate("exercise", record)
+
+            for kind in ("multiple_choice", "error_identification"):
+                with self.subTest(kind=kind, suffix=repr(suffix)):
+                    q = copy.deepcopy(self.quiz)
+                    q["type"] = kind
+                    # A matching invalid answer must not bypass the choice check.
+                    q["choices"][0]["id"] += suffix
+                    q["answer"]["choice_id"] += suffix
+                    with self.assertRaisesRegex(ValueError, "choices"):
+                        schema_validate("quiz", q)
+                    with self.assertRaisesRegex(ValueError, "choices"):
+                        self.validate("quiz", q)
+
+            for kind, original in (("quiz", self.quiz), ("exercise", self.exercise)):
+                for field in ("id", "chapter_id"):
+                    with self.subTest(kind=kind, field=field, suffix=repr(suffix)):
+                        record = copy.deepcopy(original)
+                        record[field] += suffix
+                        with self.assertRaisesRegex(ValueError, field):
+                            schema_validate(kind, record)
+                index = {"schema_version": "1.0.0", "records": [
+                    {"id": original["id"] + suffix, "path": "fixture.json"}]}
+                with self.assertRaisesRegex(ValueError, "id"):
+                    schema_validate(kind + "-index", index)
+
+            for field in ("concepts", "cases"):
+                record = copy.deepcopy(self.exercise)
+                if field == "concepts":
+                    record["concepts"][0] += suffix
+                else:
+                    record["tests"]["cases"][0]["id"] += suffix
+                with self.subTest(field=field, suffix=repr(suffix)):
+                    with self.assertRaisesRegex(ValueError, field):
+                        schema_validate("exercise", record)
+
+        record = copy.deepcopy(self.exercise)
+        record["tests"]["function_name"] = "class"
+        with self.assertRaisesRegex(ValueError, "function_name"):
+            self.validate("exercise", record)
+        record["tests"]["function_name"] = "_sample_2"
+        self.validate("exercise", record)
+        self.validate("quiz", self.quiz)
+
     def test_exercise_contract(self):
         self.validate("exercise", self.exercise)
         for mutation, diagnostic in (
