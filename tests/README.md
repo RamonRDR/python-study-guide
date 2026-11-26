@@ -17,3 +17,5 @@ Navigation regression tests enforce the same ordered master learning path in all
 The foundation tests require the approved chapter/difficulty allocation, exact index coverage and deterministic grading; trusted literal code fixtures are executed, never arbitrary code loaded from question records. Pilot regressions remain covered.
 
 The expansion suite verifies the complete 160-question matrix, 2,850 XP, 82 new response fixtures, trusted literal code fixtures, question-type diversity and all three catalog indexes. Foundation and pilot regressions remain active; no learner-supplied code is executed.
+
+The exercise migration suite verifies the complete 30-record index, all 192 existing cases, the explicit no-alias flags, exact large integers, practice modes, timed metadata and trusted reference/wrong implementations. The 29-entry historical expansion index and its regression suite remain intact. Browser runtime and timeout enforcement are not tested here.

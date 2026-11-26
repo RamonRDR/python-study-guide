@@ -17,3 +17,5 @@ Os testes de regressão de navegação exigem a mesma ordem da trilha principal 
 Os testes de fundamentos exigem alocação aprovada por aula/dificuldade, cobertura exata do índice e correção determinística; executam fixtures literais confiáveis, nunca código arbitrário carregado dos registros. Regressões do piloto continuam cobertas.
 
 A suíte de expansão verifica a matriz completa de 160 questões, 2.850 XP, 82 novos fixtures de respostas, fixtures literais de código confiáveis, diversidade de tipos e os três índices localizados. Regressões de fundamentos e piloto permanecem ativas; nenhum código do aluno é executado.
+
+A suíte de migração verifica o índice completo de 30 registros, os 192 casos existentes, flags explícitos de ausência de alias, inteiros grandes exatos, modalidades, metadados de tempo e referências/candidatos incorretos confiáveis. O índice histórico de 29 entradas e sua suíte de regressão permanecem intactos. Runtime de navegador e aplicação de timeout não são testados aqui.
