@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.discarded-return-does-not-rebind",
+  "chapter_id": "functions.data-flow-between-functions",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "If increase(n) only returns n + 1 and does not mutate any state, calling increase(score) without assigning its result changes the caller's integer score.",
+    "pt-BR": "Se increase(n) apenas retorna n + 1 e não altera estado, chamar increase(score) sem atribuir seu resultado altera o inteiro score do chamador.",
+    "es": "Si increase(n) solo devuelve n + 1 y no modifica estado, llamar a increase(score) sin asignar su resultado cambia el entero score de quien llama."
+  },
+  "explanation": {
+    "en": "The returned integer is discarded; assignment would be needed to rebind the caller's name.",
+    "pt-BR": "O inteiro retornado é descartado; seria necessária atribuição para religar o nome do chamador.",
+    "es": "El entero devuelto se descarta; haría falta asignación para revincular el nombre de quien llama."
+  },
+  "hints": {
+    "en": [
+      "Distinguish producing a value from storing that value."
+    ],
+    "pt-BR": [
+      "Distinga produzir um valor de armazená-lo."
+    ],
+    "es": [
+      "Distingue producir un valor de almacenarlo."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/09-data-flow-between-functions/README.md",
+        "pt-BR": "functions/09-data-flow-between-functions/README.pt-BR.md",
+        "es": "functions/09-data-flow-between-functions/README.es.md"
+      },
+      "sections": {
+        "en": "5. A returned value does not automatically replace the original value",
+        "pt-BR": "5. Um valor retornado não substitui automaticamente o valor original",
+        "es": "5. Un valor retornado no reemplaza automáticamente el valor original"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

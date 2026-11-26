@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.mutable-default-reuse",
+  "chapter_id": "functions.default-values",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The omitted argument reuses one default list. The explicit empty list is separate, so its 8 does not affect the default; the final default list is [1, 3].",
+    "pt-BR": "O argumento omitido reutiliza uma lista padrão. A lista vazia explícita é separada, então seu 8 não afeta o padrão; a lista padrão final é [1, 3].",
+    "es": "El argumento omitido reutiliza una lista predeterminada. La lista vacía explícita es separada, así que su 8 no afecta al valor predeterminado; la lista final predeterminada es [1, 3]."
+  },
+  "hints": {
+    "en": [
+      "Track which call receives the stored default object."
+    ],
+    "pt-BR": [
+      "Rastreie qual chamada recebe o objeto padrão armazenado."
+    ],
+    "es": [
+      "Rastrea qué llamada recibe el objeto predeterminado almacenado."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/06-default-values/README.md",
+        "pt-BR": "functions/06-default-values/README.pt-BR.md",
+        "es": "functions/06-default-values/README.es.md"
+      },
+      "sections": {
+        "en": "14. Mutable defaults can retain changes between calls",
+        "pt-BR": "14. Padrões mutáveis podem conservar alterações entre chamadas",
+        "es": "14. Los valores predeterminados mutables pueden conservar cambios entre llamadas"
+      }
+    },
+    {
+      "paths": {
+        "en": "functions/06-default-values/README.md",
+        "pt-BR": "functions/06-default-values/README.pt-BR.md",
+        "es": "functions/06-default-values/README.es.md"
+      },
+      "sections": {
+        "en": "4. A supplied argument overrides the default for that call",
+        "pt-BR": "4. Um argumento fornecido substitui o padrão naquela chamada",
+        "es": "4. Un argumento proporcionado reemplaza el valor predeterminado en esa llamada"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "[1]\n[8]\n[1, 3]\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "def add(value, values=[]):\n    values.append(value)\n    return values\n\nprint(add(1))\nprint(add(8, []))\nprint(add(3))"
+}

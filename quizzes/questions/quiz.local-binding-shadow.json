@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.local-binding-shadow",
+  "chapter_id": "functions.scope",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The assignment inside show() creates a local binding; the module's value remains 3.",
+    "pt-BR": "A atribuição dentro de show() cria uma ligação local; o valor do módulo permanece 3.",
+    "es": "La asignación dentro de show() crea una vinculación local; el valor del módulo sigue siendo 3."
+  },
+  "hints": {
+    "en": [
+      "Track the local and module-level names separately."
+    ],
+    "pt-BR": [
+      "Acompanhe os nomes local e do módulo separadamente."
+    ],
+    "es": [
+      "Sigue los nombres local y del módulo por separado."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/04-scope/README.md",
+        "pt-BR": "functions/04-scope/README.pt-BR.md",
+        "es": "functions/04-scope/README.es.md"
+      },
+      "sections": {
+        "en": "10. Assignment inside a function normally creates a local binding",
+        "pt-BR": "10. Atribuição dentro de uma função normalmente cria uma ligação local",
+        "es": "10. Una asignación dentro de una función normalmente crea una vinculación local"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "7\n3\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "amount = 3\ndef show():\n    amount = 7\n    print(amount)\n\nshow()\nprint(amount)"
+}

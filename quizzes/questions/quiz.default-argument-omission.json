@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.default-argument-omission",
+  "chapter_id": "functions.default-values",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Given def power(base, exponent=2): followed by a valid body, power(4) binds exponent to 2 when the second argument is omitted.",
+    "pt-BR": "Dada def power(base, exponent=2): seguida de um corpo válido, power(4) associa exponent a 2 quando o segundo argumento é omitido.",
+    "es": "Dada def power(base, exponent=2): seguida de un cuerpo válido, power(4) vincula exponent a 2 cuando se omite el segundo argumento."
+  },
+  "explanation": {
+    "en": "The stored default supplies the missing exponent; an explicit argument could override it.",
+    "pt-BR": "O padrão armazenado fornece exponent ausente; um argumento explícito poderia substituí-lo.",
+    "es": "El valor predeterminado almacenado proporciona exponent ausente; un argumento explícito podría reemplazarlo."
+  },
+  "hints": {
+    "en": [
+      "Read the required and optional parameters separately."
+    ],
+    "pt-BR": [
+      "Leia parâmetros obrigatórios e opcionais separadamente."
+    ],
+    "es": [
+      "Lee los parámetros obligatorios y opcionales por separado."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/06-default-values/README.md",
+        "pt-BR": "functions/06-default-values/README.pt-BR.md",
+        "es": "functions/06-default-values/README.es.md"
+      },
+      "sections": {
+        "en": "1. A default lets an argument be omitted",
+        "pt-BR": "1. Um padrão permite omitir um argumento",
+        "es": "1. Un valor predeterminado permite omitir un argumento"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

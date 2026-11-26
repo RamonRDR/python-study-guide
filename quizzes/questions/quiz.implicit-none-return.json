@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.implicit-none-return",
+  "chapter_id": "functions.return-values",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The function prints ready and reaches its end without a return expression. Its result is None, which the caller then prints.",
+    "pt-BR": "A função imprime ready e chega ao fim sem expressão return. Seu resultado é None, que o chamador então imprime.",
+    "es": "La función imprime ready y llega al final sin expresión return. Su resultado es None, que luego imprime quien llama."
+  },
+  "hints": {
+    "en": [
+      "Separate displayed output from the returned value."
+    ],
+    "pt-BR": [
+      "Separe saída exibida do valor retornado."
+    ],
+    "es": [
+      "Separa la salida mostrada del valor retornado."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/03-return-values/README.md",
+        "pt-BR": "functions/03-return-values/README.pt-BR.md",
+        "es": "functions/03-return-values/README.es.md"
+      },
+      "sections": {
+        "en": "12. Reaching the end returns `None`",
+        "pt-BR": "12. Chegar ao fim retorna `None`",
+        "es": "12. Llegar al final retorna `None`"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "ready\nNone\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "def announce():\n    print(\"ready\")\n\nresult = announce()\nprint(result)"
+}

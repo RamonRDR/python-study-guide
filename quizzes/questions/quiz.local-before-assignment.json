@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.local-before-assignment",
+  "chapter_id": "functions.scope",
+  "difficulty": "hard",
+  "type": "error_identification",
+  "prompt": {
+    "en": "Which most specific built-in exception is raised when show() is called?",
+    "pt-BR": "Qual exceção embutida mais específica é gerada quando show() é chamada?",
+    "es": "¿Qué excepción incorporada más específica se produce al llamar a show()?"
+  },
+  "explanation": {
+    "en": "The assignment makes amount local throughout the function. The earlier read is unbound, so Python raises UnboundLocalError, a subclass of NameError.",
+    "pt-BR": "A atribuição torna amount local em toda a função. A leitura anterior não está vinculada, então Python gera UnboundLocalError, subclasse de NameError.",
+    "es": "La asignación hace que amount sea local en toda la función. La lectura anterior no está vinculada, así que Python produce UnboundLocalError, subclase de NameError."
+  },
+  "hints": {
+    "en": [
+      "Determine the scope of amount before following execution order."
+    ],
+    "pt-BR": [
+      "Determine o escopo de amount antes de seguir a ordem de execução."
+    ],
+    "es": [
+      "Determina el ámbito de amount antes de seguir el orden de ejecución."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/04-scope/README.md",
+        "pt-BR": "functions/04-scope/README.pt-BR.md",
+        "es": "functions/04-scope/README.es.md"
+      },
+      "sections": {
+        "en": "18. Assignment anywhere in a function can make a name local",
+        "pt-BR": "18. Uma atribuição em qualquer ponto da função pode tornar o nome local",
+        "es": "18. Una asignación en cualquier punto de la función puede hacer local al nombre"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "unbound-local-error"
+  },
+  "choices": [
+    {
+      "id": "name-error",
+      "text": {
+        "en": "NameError",
+        "pt-BR": "NameError",
+        "es": "NameError"
+      }
+    },
+    {
+      "id": "type-error",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    },
+    {
+      "id": "unbound-local-error",
+      "text": {
+        "en": "UnboundLocalError",
+        "pt-BR": "UnboundLocalError",
+        "es": "UnboundLocalError"
+      }
+    },
+    {
+      "id": "value-error",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    }
+  ],
+  "code": "amount = 3\ndef show():\n    print(amount)\n    amount = 7\n\nshow()"
+}

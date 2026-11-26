@@ -42,6 +42,14 @@
       "path": "quizzes/questions/quiz.decimal-literal-type.json"
     },
     {
+      "id": "quiz.default-argument-omission",
+      "path": "quizzes/questions/quiz.default-argument-omission.json"
+    },
+    {
+      "id": "quiz.definition-body-delayed",
+      "path": "quizzes/questions/quiz.definition-body-delayed.json"
+    },
+    {
       "id": "quiz.dictionary-fallback",
       "path": "quizzes/questions/quiz.dictionary-fallback.json"
     },
@@ -52,6 +60,10 @@
     {
       "id": "quiz.dictionary-none-versus-absent",
       "path": "quizzes/questions/quiz.dictionary-none-versus-absent.json"
+    },
+    {
+      "id": "quiz.discarded-return-does-not-rebind",
+      "path": "quizzes/questions/quiz.discarded-return-does-not-rebind.json"
     },
     {
       "id": "quiz.division-zero-error",
@@ -82,8 +94,16 @@
       "path": "quizzes/questions/quiz.for-item-driven.json"
     },
     {
+      "id": "quiz.function-result-pipeline",
+      "path": "quizzes/questions/quiz.function-result-pipeline.json"
+    },
+    {
       "id": "quiz.git-inspect-staged",
       "path": "quizzes/questions/quiz.git-inspect-staged.json"
+    },
+    {
+      "id": "quiz.implicit-none-return",
+      "path": "quizzes/questions/quiz.implicit-none-return.json"
     },
     {
       "id": "quiz.input-digits-text",
@@ -122,6 +142,14 @@
       "path": "quizzes/questions/quiz.list-stored-item-type.json"
     },
     {
+      "id": "quiz.local-before-assignment",
+      "path": "quizzes/questions/quiz.local-before-assignment.json"
+    },
+    {
+      "id": "quiz.local-binding-shadow",
+      "path": "quizzes/questions/quiz.local-binding-shadow.json"
+    },
+    {
       "id": "quiz.loop-else-break-versus-continue",
       "path": "quizzes/questions/quiz.loop-else-break-versus-continue.json"
     },
@@ -142,6 +170,10 @@
       "path": "quizzes/questions/quiz.missing-required-argument.json"
     },
     {
+      "id": "quiz.mutable-default-reuse",
+      "path": "quizzes/questions/quiz.mutable-default-reuse.json"
+    },
+    {
       "id": "quiz.negative-floor-remainder",
       "path": "quizzes/questions/quiz.negative-floor-remainder.json"
     },
@@ -152,6 +184,14 @@
     {
       "id": "quiz.overlapping-threshold-order",
       "path": "quizzes/questions/quiz.overlapping-threshold-order.json"
+    },
+    {
+      "id": "quiz.parameter-rebind-versus-mutation",
+      "path": "quizzes/questions/quiz.parameter-rebind-versus-mutation.json"
+    },
+    {
+      "id": "quiz.positional-argument-binding",
+      "path": "quizzes/questions/quiz.positional-argument-binding.json"
     },
     {
       "id": "quiz.positive-remainder",
@@ -252,6 +292,10 @@
     {
       "id": "quiz.unsaved-source-edit",
       "path": "quizzes/questions/quiz.unsaved-source-edit.json"
+    },
+    {
+      "id": "quiz.variadic-collection-shapes",
+      "path": "quizzes/questions/quiz.variadic-collection-shapes.json"
     },
     {
       "id": "quiz.venv-direct-executable",
