@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.conditional-chain-one-branch",
+  "chapter_id": "program-flow.if-elif-and-else",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "In one if/elif chain, every truthy condition executes its branch.",
+    "pt-BR": "Em uma única cadeia if/elif, toda condição truthy executa seu ramo.",
+    "es": "En una sola cadena if/elif, cada condición truthy ejecuta su rama."
+  },
+  "explanation": {
+    "en": "The first truthy branch is selected and the rest of that chain is skipped.",
+    "pt-BR": "O primeiro ramo truthy é selecionado e o restante da cadeia é ignorado.",
+    "es": "Se selecciona la primera rama truthy y se omite el resto de la cadena."
+  },
+  "hints": {
+    "en": [
+      "Distinguish a chain from independent if statements."
+    ],
+    "pt-BR": [
+      "Distinga uma cadeia de instruções if independentes."
+    ],
+    "es": [
+      "Distingue una cadena de sentencias if independientes."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/02-if-elif-and-else/README.md",
+        "pt-BR": "program-flow/02-if-elif-and-else/README.pt-BR.md",
+        "es": "program-flow/02-if-elif-and-else/README.es.md"
+      },
+      "sections": {
+        "en": "14. One `if`/`elif` chain selects at most one branch",
+        "pt-BR": "14. Uma cadeia `if`/`elif` seleciona no máximo um ramo",
+        "es": "14. Una cadena `if`/`elif` selecciona como máximo una rama"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

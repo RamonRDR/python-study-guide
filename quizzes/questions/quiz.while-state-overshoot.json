@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.while-state-overshoot",
+  "chapter_id": "program-flow.while-loops-and-state-driven-repetition",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The condition is true at 1, 4 and 7. The next value is 10, which fails the condition; the final printed value is 10.",
+    "pt-BR": "A condição é verdadeira em 1, 4 e 7. O próximo valor é 10, que falha na condição; o valor final impresso é 10.",
+    "es": "La condición es verdadera en 1, 4 y 7. El siguiente valor es 10, que no cumple la condición; el valor final impreso es 10."
+  },
+  "hints": {
+    "en": [
+      "Trace the updated state before the next test."
+    ],
+    "pt-BR": [
+      "Rastreie o estado atualizado antes do próximo teste."
+    ],
+    "es": [
+      "Rastrea el estado actualizado antes de la siguiente comprobación."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/06-while-loops-and-state-driven-repetition/README.md",
+        "pt-BR": "program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md",
+        "es": "program-flow/06-while-loops-and-state-driven-repetition/README.es.md"
+      },
+      "sections": {
+        "en": "16. The state does not need to land exactly on the boundary",
+        "pt-BR": "16. O estado não precisa chegar exatamente ao limite",
+        "es": "16. El estado no tiene que llegar exactamente al límite"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "10\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "value = 1\nwhile value < 8:\n    value += 3\nprint(value)"
+}

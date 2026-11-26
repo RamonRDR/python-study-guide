@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.overlapping-threshold-order",
+  "chapter_id": "program-flow.if-elif-and-else",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The broader threshold >= 10 matches first, so the later >= 20 branch is never reached.",
+    "pt-BR": "O limite mais amplo >= 10 corresponde primeiro, então o ramo >= 20 posterior não é alcançado.",
+    "es": "El umbral más amplio >= 10 coincide primero, por lo que la rama posterior >= 20 no se alcanza."
+  },
+  "hints": {
+    "en": [
+      "Follow the written order rather than the largest matching threshold."
+    ],
+    "pt-BR": [
+      "Siga a ordem escrita, não o maior limite correspondente."
+    ],
+    "es": [
+      "Sigue el orden escrito, no el mayor umbral que coincide."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/02-if-elif-and-else/README.md",
+        "pt-BR": "program-flow/02-if-elif-and-else/README.pt-BR.md",
+        "es": "program-flow/02-if-elif-and-else/README.es.md"
+      },
+      "sections": {
+        "en": "15. Condition order can change the result",
+        "pt-BR": "15. A ordem das condições pode mudar o resultado",
+        "es": "15. El orden de las condiciones puede cambiar el resultado"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "basic\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "points = 25\nif points >= 10:\n    print(\"basic\")\nelif points >= 20:\n    print(\"advanced\")"
+}

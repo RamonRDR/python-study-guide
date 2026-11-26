@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.combined-classification-loop",
+  "chapter_id": "program-flow.choosing-and-combining-program-flow",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "Each item gets one label: -2 is low, 0 is zero, and 5 is high. The loop processes all items in order.",
+    "pt-BR": "Cada item recebe um rótulo: -2 é low, 0 é zero e 5 é high. O loop processa todos em ordem.",
+    "es": "Cada elemento recibe una etiqueta: -2 es low, 0 es zero y 5 es high. El bucle procesa todos en orden."
+  },
+  "hints": {
+    "en": [
+      "Trace the outer iteration, then the inner decision for each value."
+    ],
+    "pt-BR": [
+      "Rastreie a iteração externa, depois a decisão interna para cada valor."
+    ],
+    "es": [
+      "Rastrea la iteración exterior y después la decisión interior para cada valor."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/08-choosing-and-combining-program-flow/README.md",
+        "pt-BR": "program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md",
+        "es": "program-flow/08-choosing-and-combining-program-flow/README.es.md"
+      },
+      "sections": {
+        "en": "14. Combine a loop with a decision when each item needs classification",
+        "pt-BR": "14. Combine um loop com uma decisão quando cada item precisar de classificação",
+        "es": "14. Combina un bucle con una decisión cuando cada elemento necesite clasificación"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "low\nzero\nhigh\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "for value in [-2, 0, 5]:\n    if value < 0:\n        print(\"low\")\n    elif value == 0:\n        print(\"zero\")\n    else:\n        print(\"high\")"
+}

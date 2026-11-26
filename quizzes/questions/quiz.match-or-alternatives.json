@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.match-or-alternatives",
+  "chapter_id": "program-flow.match-and-case",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The OR pattern matches either literal. retry matches the second alternative.",
+    "pt-BR": "O padrão OR corresponde a qualquer literal. retry corresponde à segunda alternativa.",
+    "es": "El patrón OR coincide con cualquiera de los literales. retry coincide con la segunda alternativa."
+  },
+  "hints": {
+    "en": [
+      "Read | inside a case as alternatives."
+    ],
+    "pt-BR": [
+      "Leia | dentro de um case como alternativas."
+    ],
+    "es": [
+      "Lee | dentro de un case como alternativas."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/03-match-and-case/README.md",
+        "pt-BR": "program-flow/03-match-and-case/README.pt-BR.md",
+        "es": "program-flow/03-match-and-case/README.es.md"
+      },
+      "sections": {
+        "en": "6. One `case` can accept several alternatives",
+        "pt-BR": "6. Um `case` pode aceitar várias alternativas",
+        "es": "6. Un `case` puede aceptar varias alternativas"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "again\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "match \"retry\":\n    case \"repeat\" | \"retry\":\n        print(\"again\")\n    case _:\n        print(\"other\")"
+}

@@ -14,12 +14,28 @@
       "path": "quizzes/questions/quiz.bool-int-exact-versus-compatible.json"
     },
     {
+      "id": "quiz.boolean-precedence",
+      "path": "quizzes/questions/quiz.boolean-precedence.json"
+    },
+    {
+      "id": "quiz.chained-comparison-boundary",
+      "path": "quizzes/questions/quiz.chained-comparison-boundary.json"
+    },
+    {
       "id": "quiz.collection-keyed-quantities",
       "path": "quizzes/questions/quiz.collection-keyed-quantities.json"
     },
     {
       "id": "quiz.collection-membership",
       "path": "quizzes/questions/quiz.collection-membership.json"
+    },
+    {
+      "id": "quiz.combined-classification-loop",
+      "path": "quizzes/questions/quiz.combined-classification-loop.json"
+    },
+    {
+      "id": "quiz.conditional-chain-one-branch",
+      "path": "quizzes/questions/quiz.conditional-chain-one-branch.json"
     },
     {
       "id": "quiz.decimal-literal-type",
@@ -50,8 +66,20 @@
       "path": "quizzes/questions/quiz.empty-braces-not-set.json"
     },
     {
+      "id": "quiz.enumerate-default-start",
+      "path": "quizzes/questions/quiz.enumerate-default-start.json"
+    },
+    {
       "id": "quiz.exact-type-function",
       "path": "quizzes/questions/quiz.exact-type-function.json"
+    },
+    {
+      "id": "quiz.for-accumulator-initial-value",
+      "path": "quizzes/questions/quiz.for-accumulator-initial-value.json"
+    },
+    {
+      "id": "quiz.for-item-driven",
+      "path": "quizzes/questions/quiz.for-item-driven.json"
     },
     {
       "id": "quiz.git-inspect-staged",
@@ -94,6 +122,22 @@
       "path": "quizzes/questions/quiz.list-stored-item-type.json"
     },
     {
+      "id": "quiz.loop-else-break-versus-continue",
+      "path": "quizzes/questions/quiz.loop-else-break-versus-continue.json"
+    },
+    {
+      "id": "quiz.match-guard-fallthrough",
+      "path": "quizzes/questions/quiz.match-guard-fallthrough.json"
+    },
+    {
+      "id": "quiz.match-or-alternatives",
+      "path": "quizzes/questions/quiz.match-or-alternatives.json"
+    },
+    {
+      "id": "quiz.match-wildcard",
+      "path": "quizzes/questions/quiz.match-wildcard.json"
+    },
+    {
       "id": "quiz.missing-required-argument",
       "path": "quizzes/questions/quiz.missing-required-argument.json"
     },
@@ -104,6 +148,10 @@
     {
       "id": "quiz.nonempty-false-text",
       "path": "quizzes/questions/quiz.nonempty-false-text.json"
+    },
+    {
+      "id": "quiz.overlapping-threshold-order",
+      "path": "quizzes/questions/quiz.overlapping-threshold-order.json"
     },
     {
       "id": "quiz.positive-remainder",
@@ -152,6 +200,10 @@
     {
       "id": "quiz.shallow-list-copy-nested",
       "path": "quizzes/questions/quiz.shallow-list-copy-nested.json"
+    },
+    {
+      "id": "quiz.short-circuit-operand-result",
+      "path": "quizzes/questions/quiz.short-circuit-operand-result.json"
     },
     {
       "id": "quiz.singleton-tuple-comma",
@@ -208,6 +260,14 @@
     {
       "id": "quiz.venv-recreate",
       "path": "quizzes/questions/quiz.venv-recreate.json"
+    },
+    {
+      "id": "quiz.while-initial-false",
+      "path": "quizzes/questions/quiz.while-initial-false.json"
+    },
+    {
+      "id": "quiz.while-state-overshoot",
+      "path": "quizzes/questions/quiz.while-state-overshoot.json"
     }
   ]
 }

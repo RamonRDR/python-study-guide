@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.while-initial-false",
+  "chapter_id": "program-flow.while-loops-and-state-driven-repetition",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "If a while condition is initially false, its body still executes once.",
+    "pt-BR": "Se a condição de while inicialmente for falsa, seu corpo ainda executa uma vez.",
+    "es": "Si la condición de while es inicialmente falsa, su cuerpo todavía se ejecuta una vez."
+  },
+  "explanation": {
+    "en": "while tests before each execution, including the first; an initially false condition means zero body executions.",
+    "pt-BR": "while testa antes de cada execução, inclusive a primeira; condição inicialmente falsa significa zero execuções do corpo.",
+    "es": "while comprueba antes de cada ejecución, incluida la primera; una condición inicialmente falsa significa cero ejecuciones del cuerpo."
+  },
+  "hints": {
+    "en": [
+      "Identify when the condition is first checked."
+    ],
+    "pt-BR": [
+      "Identifique quando a condição é verificada pela primeira vez."
+    ],
+    "es": [
+      "Identifica cuándo se comprueba la condición por primera vez."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/06-while-loops-and-state-driven-repetition/README.md",
+        "pt-BR": "program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md",
+        "es": "program-flow/06-while-loops-and-state-driven-repetition/README.es.md"
+      },
+      "sections": {
+        "en": "3. A `while` loop tests before it runs the body",
+        "pt-BR": "3. Um loop `while` testa antes de executar o corpo",
+        "es": "3. Un bucle `while` evalúa antes de ejecutar el cuerpo"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.match-wildcard",
+  "chapter_id": "program-flow.match-and-case",
+  "difficulty": "easy",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Replace ____ with the wildcard pattern that matches any remaining subject without binding a name. Enter only the symbol.",
+    "pt-BR": "Substitua ____ pelo padrão curinga que corresponde a qualquer sujeito restante sem vincular um nome. Digite somente o símbolo.",
+    "es": "Sustituye ____ por el patrón comodín que coincide con cualquier sujeto restante sin vincular un nombre. Introduce solo el símbolo."
+  },
+  "explanation": {
+    "en": "The underscore _ is the wildcard pattern; it does not capture a name.",
+    "pt-BR": "O sublinhado _ é o padrão curinga; não captura um nome.",
+    "es": "El guion bajo _ es el patrón comodín; no captura un nombre."
+  },
+  "hints": {
+    "en": [
+      "It is a single character reserved for this pattern role."
+    ],
+    "pt-BR": [
+      "É um único caractere reservado para esse papel de padrão."
+    ],
+    "es": [
+      "Es un solo carácter reservado para este papel de patrón."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/03-match-and-case/README.md",
+        "pt-BR": "program-flow/03-match-and-case/README.pt-BR.md",
+        "es": "program-flow/03-match-and-case/README.es.md"
+      },
+      "sections": {
+        "en": "4. Add a wildcard fallback with `_`",
+        "pt-BR": "4. Adicione um fallback curinga com `_`",
+        "es": "4. Añade un respaldo comodín con `_`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "_"
+    ],
+    "comparison": "exact"
+  },
+  "code": "match \"pause\":\n    case \"start\":\n        result = \"go\"\n    case ____:\n        result = \"other\""
+}
