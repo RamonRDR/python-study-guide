@@ -287,5 +287,129 @@ class AssessmentTests(unittest.TestCase):
         self.assertEqual(case["args"], [[1]])
 
 
+    def test_ac07_rejects_invalid_records_in_both_indexes(self):
+        fixtures = (
+            ("quiz", self.quiz, "quizzes/questions/quiz.fixture.json", "prompt",
+             "quiz.absent", "quizzes/questions/quiz.absent.json"),
+            ("exercise", self.exercise,
+             "exercises/problem-solving/fixture/exercise.json", "title",
+             "problem-solving.absent", "exercises/problem-solving/absent/exercise.json"),
+        )
+        for kind, original, path, locale_field, absent_id, absent_path in fixtures:
+            with self.subTest(kind=kind):
+                entry = {"id": original["id"], "path": path}
+                index = {"schema_version": "1.0.0", "records": [entry]}
+                index_path = kind + "-index.json"
+
+                def write_index(records):
+                    self.write(index_path, json.dumps({**index, "records": records}))
+
+                self.write(path, json.dumps(original))
+                write_index([entry])
+                self.assertEqual(load_index(kind, self.root, index_path,
+                                            self.chapters), [original])
+                for records, diagnostic in (
+                    ([entry, entry], "duplicate index ID"),
+                    ([{"id": absent_id, "path": absent_path}], "path"),
+                ):
+                    write_index(records)
+                    with self.assertRaisesRegex(ValueError, diagnostic):
+                        load_index(kind, self.root, index_path, self.chapters)
+
+                write_index([entry])
+                invalid = copy.deepcopy(original)
+                invalid["schema_version"] = "2.0.0"
+                self.write(path, json.dumps(invalid))
+                with self.assertRaisesRegex(ValueError, "schema_version"):
+                    load_index(kind, self.root, index_path, self.chapters)
+
+                invalid = copy.deepcopy(original)
+                del invalid[locale_field]["es"]
+                self.write(path, json.dumps(invalid))
+                with self.assertRaisesRegex(ValueError, locale_field):
+                    load_index(kind, self.root, index_path, self.chapters)
+
+                if kind == "quiz":
+                    invalid = copy.deepcopy(original)
+                    invalid["answer"]["choice_id"] = "absent"
+                    self.write(path, json.dumps(invalid))
+                    with self.assertRaisesRegex(ValueError, "unknown choice ID"):
+                        load_index(kind, self.root, index_path, self.chapters)
+                self.write(path, json.dumps(original))
+                self.assertEqual(load_index(kind, self.root, index_path,
+                                            self.chapters), [original])
+
+
+class ConsolidatedAssessmentTests(unittest.TestCase):
+    """AC-07 checks across both canonical banks, never executing record source."""
+
+    @classmethod
+    def setUpClass(cls):
+        chapters = load_matrix(ROOT)
+        cls.quizzes = load_index("quiz", ROOT, "quizzes/quiz-index.json", chapters)
+        cls.exercises = load_index("exercise", ROOT,
+                                   "exercises/problem-solving/exercise-index.json",
+                                   chapters)
+
+    def test_ac07_canonical_inventory_and_shared_sources(self):
+        quizzes, exercises = self.quizzes, self.exercises
+        ids = [record["id"] for record in quizzes + exercises]
+        self.assertEqual((len(quizzes), len(exercises), len(set(ids))),
+                         (160, 30, 190))
+        self.assertTrue(all(r["schema_version"] == "1.0.0"
+                            for r in quizzes + exercises))
+        self.assertEqual({q["type"] for q in quizzes}, {
+            "multiple_choice", "true_false", "error_identification",
+            "output_prediction", "objective_code_completion",
+        })
+        self.assertEqual(sum(q["xp"] for q in quizzes), 2850)
+        self.assertEqual(sum(len(r["tests"]["cases"]) for r in exercises), 192)
+        self.assertEqual({r["tests"]["interface"] for r in exercises},
+                         {"function_call"})
+        quiz_dir = ROOT / "quizzes"
+        exercise_dir = ROOT / "exercises/problem-solving"
+        self.assertEqual(
+            {p.relative_to(ROOT).as_posix()
+             for p in (quiz_dir / "questions").rglob("*.json")},
+            {f"quizzes/questions/{q['id']}.json" for q in quizzes},
+        )
+        self.assertEqual(
+            {p.relative_to(ROOT).as_posix()
+             for p in exercise_dir.rglob("exercise.json")},
+            {f"exercises/problem-solving/{r['id'].split('.', 1)[1]}/exercise.json"
+             for r in exercises},
+        )
+        expected_sources = set()
+        for record in exercises:
+            directory = Path(record["solution_path"]).parent
+            expected_sources.update({
+                record["starter_path"], record["solution_path"],
+                (directory / "test_solution.py").as_posix(),
+            })
+        self.assertEqual(len(expected_sources), 90)
+        self.assertEqual(
+            {p.relative_to(ROOT).as_posix() for p in exercise_dir.rglob("*.py")},
+            expected_sources,
+        )
+        self.assertFalse(list(quiz_dir.rglob("*.py")))
+
+    def test_ac07_all_quiz_response_fixtures(self):
+        from assessment_foundation_fixtures import EXPECTED as FOUNDATION
+        from assessment_expansion_fixtures import EXPECTED as EXPANSION
+        from test_assessment_pilot import RESPONSES
+
+        banks = (RESPONSES, FOUNDATION, EXPANSION)
+        self.assertEqual(tuple(map(len, banks)), (10, 68, 82))
+        self.assertEqual(len(set().union(*(set(bank) for bank in banks))), 160)
+        responses = {identifier: pair for bank in banks
+                     for identifier, pair in bank.items()}
+        self.assertEqual(set(responses), {q["id"] for q in self.quizzes})
+        for quiz in self.quizzes:
+            with self.subTest(id=quiz["id"]):
+                right, wrong = responses[quiz["id"]]
+                self.assertTrue(grade_quiz(quiz, right))
+                self.assertFalse(grade_quiz(quiz, wrong))
+
+
 if __name__ == "__main__":
     unittest.main()
