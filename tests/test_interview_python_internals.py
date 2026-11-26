@@ -1,7 +1,9 @@
 """Behavioral tests for the Phase 12 Python internals examples."""
 import importlib.util
 from pathlib import Path
+from threading import Lock
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1] / "technical-interview-preparation"
 
@@ -92,6 +94,35 @@ class InternalsTests(unittest.TestCase):
             with self.subTest(workers=workers, updates=updates):
                 with self.assertRaises(ValueError):
                     m.count_updates(workers, updates)
+
+
+    def test_every_counter_update_enters_shared_lock(self):
+        m = load_example("14-concurrency-parallelism-and-the-gil", "safe_counter")
+
+        class RecordingLock:
+            def __init__(self):
+                self.lock = Lock()
+                self.entries = 0
+                self.exits = 0
+
+            def __enter__(self):
+                self.lock.acquire()
+                self.entries += 1
+                return self
+
+            def __exit__(self, exc_type, exc_value, traceback):
+                self.exits += 1
+                self.lock.release()
+                return False
+
+        workers, updates = 4, 25
+        recording = RecordingLock()
+        # Count actual critical-section entries, independent of scheduling.
+        with patch.object(m, "Lock", return_value=recording) as factory:
+            self.assertEqual(m.count_updates(workers, updates), workers * updates)
+        factory.assert_called_once_with()
+        self.assertEqual(recording.entries, workers * updates)
+        self.assertEqual(recording.exits, workers * updates)
 
 
 if __name__ == "__main__":
