@@ -20,7 +20,12 @@ Status: proposta para revisão. Executar somente após aprovação e merge do PR
 | 06B | feat/technical-interview-pilot | Aula 22, nove perguntas piloto e validação |
 | 06C | feat/technical-interview-question-bank | 48 perguntas técnicas adicionais |
 | 06D | feat/mock-and-international-interviews | Aulas 23–24, três perguntas comportamentais/internacionais e três simulados; AC-06 |
-| 07 | feat/quiz-and-exercise-bank | Materializar registros e schemas versionados; validar IDs, traduções, pontuação, soluções e implementações incorretas representativas. |
+| 07A | feat/assessment-contract | Contratos versionados, matriz, validadores e testes; sincronizar encerramento da Sprint 06. |
+| 07B | feat/assessment-pilot | Dez quizzes e três exercícios existentes, com evidência de pré-requisitos. |
+| 07C1 | feat/quiz-bank-foundations | Completar 78 quizzes de fundamentos. |
+| 07C2 | feat/quiz-bank-advanced | Completar banco de 160 quizzes. |
+| 07D | feat/exercise-contract-migration | Migrar os 27 exercícios restantes. |
+| 07E | feat/assessment-bank-acceptance | Verificação consolidada de AC-07 e encerramento. |
 | 08 | feat/learning-hub-content-contract | Finalizar manifesto, validação do consumidor, fixtures, versionamento e compatibilidade. |
 | 09 | docs/learning-hub-handoff | QA completo, revisão final, evidências e handoff de revisão aprovada. |
 
@@ -43,3 +48,5 @@ Para cada PR: consultar especificações, registrar escopo, revisar diffs, execu
 Após CI e Codex Review aprovarem o head exato, conclua a Final Pre-Merge Audit definida em AGENTS.md e registre evidências no PR. Qualquer alteração do head invalida verificações e auditoria; repita antes da aprovação do mantenedor.
 
 [Registro de integração de guias relacionados](related-guides.pt-BR.md)
+
+As ferramentas de avaliação usam o validador gratuito `jsonschema==4.26.0` (Draft 2020-12) em `requirements-assessment.txt` para evitar implementar JSON Schema por conta própria. Ver [contrato de avaliações](assessment-contract.pt-BR.md).
