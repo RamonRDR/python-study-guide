@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.unsaved-source-edit",
+  "chapter_id": "getting-started.run-your-first-program",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "If you edit a saved Python file but do not save the new text, running that file again with the same terminal command still runs its saved contents.",
+    "pt-BR": "Se você editar um arquivo Python salvo, mas não salvar o novo texto, executar esse arquivo novamente com o mesmo comando do terminal ainda executa o conteúdo salvo.",
+    "es": "Si editas un archivo Python guardado, pero no guardas el nuevo texto, volver a ejecutar ese archivo con el mismo comando de terminal sigue ejecutando el contenido guardado."
+  },
+  "explanation": {
+    "en": "The terminal command runs the file on disk, not the unsaved editor buffer.",
+    "pt-BR": "O comando do terminal executa o arquivo no disco, não o conteúdo não salvo do editor.",
+    "es": "El comando de terminal ejecuta el archivo en disco, no el contenido sin guardar del editor."
+  },
+  "hints": {
+    "en": [
+      "Distinguish editing, saving and running."
+    ],
+    "pt-BR": [
+      "Separe editar, salvar e executar."
+    ],
+    "es": [
+      "Distingue editar, guardar y ejecutar."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "getting-started/03-run-your-first-program/README.md",
+        "pt-BR": "getting-started/03-run-your-first-program/README.pt-BR.md",
+        "es": "getting-started/03-run-your-first-program/README.es.md"
+      },
+      "sections": {
+        "en": "3. Modify and repeat",
+        "pt-BR": "3. Modifique e repita",
+        "es": "3. Modifica y repite"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

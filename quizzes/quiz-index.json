@@ -14,6 +14,14 @@
       "path": "quizzes/questions/quiz.editor-replaces-interpreter.json"
     },
     {
+      "id": "quiz.git-inspect-staged",
+      "path": "quizzes/questions/quiz.git-inspect-staged.json"
+    },
+    {
+      "id": "quiz.install-declared-requirements",
+      "path": "quizzes/questions/quiz.install-declared-requirements.json"
+    },
+    {
       "id": "quiz.interpreter-purpose",
       "path": "quizzes/questions/quiz.interpreter-purpose.json"
     },
@@ -40,6 +48,18 @@
     {
       "id": "quiz.unclosed-print",
       "path": "quizzes/questions/quiz.unclosed-print.json"
+    },
+    {
+      "id": "quiz.unsaved-source-edit",
+      "path": "quizzes/questions/quiz.unsaved-source-edit.json"
+    },
+    {
+      "id": "quiz.venv-direct-executable",
+      "path": "quizzes/questions/quiz.venv-direct-executable.json"
+    },
+    {
+      "id": "quiz.venv-recreate",
+      "path": "quizzes/questions/quiz.venv-recreate.json"
     }
   ]
 }

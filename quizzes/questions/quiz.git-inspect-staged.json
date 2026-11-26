@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.git-inspect-staged",
+  "chapter_id": "getting-started.git-and-version-control",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "After staging intended files, which Git command shows the staged diff before committing?",
+    "pt-BR": "Depois de preparar os arquivos desejados, qual comando Git mostra o diff preparado antes do commit?",
+    "es": "Tras preparar los archivos deseados, ¿qué comando Git muestra el diff preparado antes del commit?"
+  },
+  "explanation": {
+    "en": "git diff --cached shows the staged changes. Reviewing them before committing helps avoid recording unintended content.",
+    "pt-BR": "git diff --cached mostra as alterações preparadas. Revisá-las antes do commit ajuda a evitar registrar conteúdo indesejado.",
+    "es": "git diff --cached muestra los cambios preparados. Revisarlos antes del commit ayuda a evitar registrar contenido no deseado."
+  },
+  "hints": {
+    "en": [
+      "Think of inspecting the staging area rather than changing it."
+    ],
+    "pt-BR": [
+      "Pense em inspecionar a área de staging, não alterá-la."
+    ],
+    "es": [
+      "Piensa en inspeccionar el área de preparación, no modificarla."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "getting-started/06-git-and-version-control/README.md",
+        "pt-BR": "getting-started/06-git-and-version-control/README.pt-BR.md",
+        "es": "getting-started/06-git-and-version-control/README.es.md"
+      },
+      "sections": {
+        "en": "3. Record the first commit",
+        "pt-BR": "3. Registre o primeiro commit",
+        "es": "3. Registra el primer commit"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "cached"
+  },
+  "choices": [
+    {
+      "id": "cached",
+      "text": {
+        "en": "git diff --cached",
+        "pt-BR": "git diff --cached",
+        "es": "git diff --cached"
+      }
+    },
+    {
+      "id": "add",
+      "text": {
+        "en": "git add",
+        "pt-BR": "git add",
+        "es": "git add"
+      }
+    },
+    {
+      "id": "init",
+      "text": {
+        "en": "git init",
+        "pt-BR": "git init",
+        "es": "git init"
+      }
+    },
+    {
+      "id": "version",
+      "text": {
+        "en": "git --version",
+        "pt-BR": "git --version",
+        "es": "git --version"
+      }
+    }
+  ]
+}
