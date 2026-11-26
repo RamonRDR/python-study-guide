@@ -639,7 +639,12 @@ python-study-guide/
 │   ├── README.pt-BR.md
 │   ├── README.es.md
 │   ├── interview-index.json
-│   └── questions/
+│   ├── questions/
+│   └── mocks/
+│       ├── mock-index.json
+│       ├── mock.junior-30.json
+│       ├── mock.mid-45.json
+│       └── mock.senior-60.json
 ├── manual-programming-practices/
 │   ├── README.md
 │   ├── README.pt-BR.md
@@ -897,6 +902,8 @@ python-study-guide/
 │   ├── check_documentation_languages.py
 │   ├── check_internal_links.py
 │   ├── example_manifest.txt
+│   ├── interview_records.py
+│   ├── interview_mocks.py
 │   ├── run_examples.py
 │   └── validate_repository_structure.py
 ├── standard-library/
@@ -1138,7 +1145,15 @@ python-study-guide/
 │   │   ├── README.es.md
 │   │   └── examples/
 │   │       └── progress_report.py
-│   └── 22-technical-interview-question-bank/
+│   ├── 22-technical-interview-question-bank/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   ├── 23-behavioral-and-international-interviews/
+│   │   ├── README.md
+│   │   ├── README.pt-BR.md
+│   │   └── README.es.md
+│   └── 24-mock-interviews-and-self-assessment/
 │       ├── README.md
 │       ├── README.pt-BR.md
 │       └── README.es.md
@@ -1154,6 +1169,7 @@ python-study-guide/
     ├── test_interview_backend_foundations.py
     ├── test_interview_records.py
     ├── test_interview_bank_distribution.py
+    ├── test_interview_mocks.py
     ├── test_problem_solving_expansion.py
     ├── test_problem_solving_foundations.py
     ├── test_problem_solving_pilot.py
@@ -1188,7 +1204,7 @@ python-study-guide/
 - `manual-programming-practices/`: complementary four-lesson engineering module after Phase 10, with shared reading-progress implementation and tests; no new dependencies.
 - `practical-projects/`: complete Phase 10 practical-project workspace. Projects 01–08 are complete, reviewed, and integrated. Project 07 adds immutable reconciliation models, exact integer-cent arithmetic, deterministic matching and ordering, duplicate rejection, explicit reconciliation statuses, validated report invariants, stable text rendering, and focused precision and safety regression tests. Project 08 closes the phase with immutable automation requests and results, a fixed `prepare → process → verify → finalize` execution plan, deterministic event logs, structured evidence, controlled failure injection, fail-fast propagation, post-processing verification, skipped-step semantics, stable rendering, and focused invariant regression tests without external integrations.
 - `problem-solving-and-live-coding/`: Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Sprint 05 completed ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
-- `technical-interview-preparation/`: In progress: twenty-two lessons include completed foundations and 57 technical questions (23 junior, 23 mid-level, 11 senior). Three behavioral/international questions and three timed mocks remain planned.
+- `technical-interview-preparation/`: All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Completion of Sprint 06 requires the approved integration and post-merge verification of PR D.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions. The repository quality tools verify approved examples, internal links, language-family parity, chapter navigation and required paths. The Windows job covers File Organizer tests; the Linux job runs the complete practical-project suite.
 - `standard-library/`: complete Phase 8 learning path. Chapters 01–09 cover `pathlib` filesystem boundaries, `datetime` date/time modeling, advanced `json` and `csv` contracts, `logging`, specialized `collections`, `itertools`, `decimal`, and `os`/`shutil` contracts for environment state, traversal, metadata, copy, move, recursive removal, platform capabilities, and archive safety, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.

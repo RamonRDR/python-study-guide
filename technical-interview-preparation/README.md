@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-In progress: twenty-two lessons include completed foundations and 57 technical questions (23 junior, 23 mid-level, 11 senior). Three behavioral/international questions and three timed mocks remain planned.
+All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Completion of Sprint 06 requires the approved integration and post-merge verification of PR D.
 
 1. [Understanding Technical Interviews](01-understanding-technical-interviews/README.md)
 2. [Live Coding and Take-Home Assignments](02-live-coding-and-take-home/README.md)
@@ -26,5 +26,7 @@ In progress: twenty-two lessons include completed foundations and 57 technical q
 20. [Transactions, Indexes and SQL Safety](20-transactions-indexes-and-sql-safety/README.md)
 21. [Software Engineering and Technical Decisions](21-software-engineering-and-technical-decisions/README.md)
 22. [Technical Interview Question Bank](22-technical-interview-question-bank/README.md)
+23. [Behavioral and International Interviews](23-behavioral-and-international-interviews/README.md)
+24. [Mock Interviews and Self-Assessment](24-mock-interviews-and-self-assessment/README.md)
 
 [Learning path](../docs/learning-path.en.md) · [Prerequisite map](../docs/specs/learning-hub-foundation/interview-prerequisite-map.md)
