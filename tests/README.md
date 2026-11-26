@@ -19,3 +19,5 @@ The foundation tests require the approved chapter/difficulty allocation, exact i
 The expansion suite verifies the complete 160-question matrix, 2,850 XP, 82 new response fixtures, trusted literal code fixtures, question-type diversity and all three catalog indexes. Foundation and pilot regressions remain active; no learner-supplied code is executed.
 
 The exercise migration suite verifies the complete 30-record index, all 192 existing cases, the explicit no-alias flags, exact large integers, practice modes, timed metadata and trusted reference/wrong implementations. The 29-entry historical expansion index and its regression suite remain intact. Browser runtime and timeout enforcement are not tested here.
+
+The consolidated AC-07 tests check both canonical indexes together, 190 unique record IDs, 160 independent correct/incorrect quiz response fixtures, shared Python source inventory and invalid-record rejection through both index loaders. Prior trusted exercise discrimination, fixture and regression suites remain active. See [AC-07 implementation evidence](../docs/specs/learning-hub-foundation/acceptance-criteria.md).
