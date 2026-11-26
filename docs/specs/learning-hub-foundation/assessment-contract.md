@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprint 07A: foundation only. The maintainer approved the 160-question allocation and pilot. This PR does not publish questions, migrate exercises, implement browser execution or finalize the curriculum manifest.
+Sprint 07A merged and post-merge CI passed ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45871235887)). Sprint 07B is the approved pilot: ten quizzes and three existing exercises, no additional bank expansion or browser runtime.
  
 ## Scope and acceptance
 - Inventory: 115 entries, 345 localized paths, 64 easy / 67 medium / 29 hard quizzes (2,850 XP at 10/20/30). The [allocation matrix](assessment-matrix.json) is engineering planning metadata, not a consumer manifest. Zero allocations preserve manual practice or avoid repeated assessment.
@@ -18,3 +18,10 @@ A: contract, matrix and fixture validators; B: ten quizzes (two per type) and th
  
 ## Evidence and limitations
 Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. See [Sprint 06 closure](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Existing 30 exercises have 192 cases and no declared external dependencies; all browser execution is unverified. The older vowel pilot lacks practice_mode and complexity assumptions; normalize these explicitly during migration. Preserve the legacy 29-entry expansion index until migration is approved. Review per-question teaching evidence and per-exercise solutions in the corresponding PR. All exact-head CI, Codex Review, Final Pre-Merge Audit and maintainer authorization gates remain mandatory.
+
+## Pilot acceptance (07B)
+
+- Publish exactly ten questions, two per quiz type, seven easy and three medium (130 XP), with three locale variants and exact prerequisite headings. Count them toward the approved matrix, never duplicate the Python code per locale.
+- Migrate only vowel-counter, binary-insertion-index and inventory-reconciliation to 1.0.0, preserving all 24 canonical cases and existing implementations. Keep the other 27 legacy records and expansion index unchanged. A versioned partial exercise index identifies the three migrated records.
+- Run both new indexes in CI, reject unindexed or unexpected versioned records, test allocation ceilings and verify the trusted solutions and representative wrong candidates. Reject contradictory expected results for equal typed inputs. When a new result container is required, reject aliases to nested mutable input containers as well as direct aliases. Mutation detection compares final input state, not every intermediate operation.
+- Use no learner-code execution, new paid dependency or runtime claim. The remaining 150 quizzes and 27 migrations belong to C1/C2/D; AC-07 closes only in E.
