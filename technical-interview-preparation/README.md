@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Completion of Sprint 06 requires the approved integration and post-merge verification of PR D.
+All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Sprint 06 was completed in [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101) and its post-merge CI.
 
 1. [Understanding Technical Interviews](01-understanding-technical-interviews/README.md)
 2. [Live Coding and Take-Home Assignments](02-live-coding-and-take-home/README.md)

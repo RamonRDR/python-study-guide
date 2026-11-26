@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 preguntas (24 Junior, 24 Mid-level, 12 Senior) y tres simulaciones de 30/45/60 minutos. El cierre de Sprint 06 requiere integración aprobada y verificación posterior a la fusión del PR D.
+Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 preguntas (24 Junior, 24 Mid-level, 12 Senior) y tres simulaciones de 30/45/60 minutos. Sprint 06 se completó en el [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101) y su CI posterior.
 
 1. [Entender las entrevistas técnicas](01-understanding-technical-interviews/README.es.md)
 2. [Live coding y tareas take-home](02-live-coding-and-take-home/README.es.md)

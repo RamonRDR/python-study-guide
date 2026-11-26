@@ -63,4 +63,4 @@ Comece pelas aulas de fundamentos vinculadas e pratique de forma independente. P
 - [Cronometrado: contar pelo limite](problem-solving/timed-threshold-count/README.pt-BR.md) · Fácil · 10 min
 - [Cronometrado: maior sequência elegível](problem-solving/timed-longest-streak/README.pt-BR.md) · Média · 20 min
 
-O [índice da expansão](problem-solving/expansion-index.json) é preliminar e contém 29 registros; o piloto tem seu próprio registro. Schemas finais e integração curricular permanecem planejados.
+O [índice legado da expansão](problem-solving/expansion-index.json) mantém 29 registros; o vowel-counter original fica separado. O [índice versionado de exercícios](problem-solving/exercise-index.json) lista atualmente três registros migrados (vowel-counter, binary-insertion-index e inventory-reconciliation). Os outros 27 mantêm metadados legados; todos os 30 preservam casos, starters e soluções existentes. Execução no navegador permanece não verificada. Veja o [piloto de avaliações](../quizzes/README.pt-BR.md).
