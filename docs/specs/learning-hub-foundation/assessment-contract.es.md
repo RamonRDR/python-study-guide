@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprints 07A–C1 fusionados y CI posterior aprobado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [PR #104](https://github.com/RamonRDR/python-study-guide/pull/104), [CI de C1](https://github.com/RamonRDR/python-study-guide/actions/runs/45898287287)). C2 implementa 160 cuestionarios; migración más allá del piloto y ejecución en navegador quedan fuera del alcance.
+Sprints 07A–C2 fusionados y CI posterior aprobado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [PR #104](https://github.com/RamonRDR/python-study-guide/pull/104), [PR #105](https://github.com/RamonRDR/python-study-guide/pull/105), [CI de C2](https://github.com/RamonRDR/python-study-guide/actions/runs/45901661393)). D completa el índice versionado de 30 ejercicios; el cierre AC-07 y el runtime del navegador quedan fuera de D.
 
 ## Alcance y aceptación
 - Inventario: 115 entradas, 345 rutas localizadas, 64 quizzes easy / 67 medium / 29 hard (2.850 XP a 10/20/30). La [matriz de distribución](assessment-matrix.json) es metadato de planificación de ingeniería, no manifiesto del consumidor. Las asignaciones cero preservan práctica manual o evitan evaluaciones repetidas.
