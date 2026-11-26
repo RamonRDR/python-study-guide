@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.tdd-red-first",
+  "chapter_id": "manual-programming-practices.test-driven-development",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "In Red, a test for missing behavior should be run before implementing that behavior.",
+    "pt-BR": "Na etapa Red, um teste de comportamento ausente deve ser executado antes de implementá-lo.",
+    "es": "En Red, una prueba de comportamiento ausente debe ejecutarse antes de implementarlo."
+  },
+  "explanation": {
+    "en": "Observing the intended failure establishes that the test detects missing behavior.",
+    "pt-BR": "Observar a falha pretendida demonstra que o teste detecta comportamento ausente.",
+    "es": "Observar el fallo previsto demuestra que la prueba detecta comportamiento ausente."
+  },
+  "hints": {
+    "en": [
+      "Test first means more than writing an assertion."
+    ],
+    "pt-BR": [
+      "Testar primeiro significa mais do que escrever uma assertion."
+    ],
+    "es": [
+      "Probar primero significa más que escribir una assertion."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "manual-programming-practices/03-test-driven-development/README.md",
+        "pt-BR": "manual-programming-practices/03-test-driven-development/README.pt-BR.md",
+        "es": "manual-programming-practices/03-test-driven-development/README.es.md"
+      },
+      "sections": {
+        "en": "1. Red: write a test first",
+        "pt-BR": "1. Red: escreva um teste primeiro",
+        "es": "1. Red: escribe primero una prueba"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

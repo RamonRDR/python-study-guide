@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.acceptance-observable-evidence",
+  "chapter_id": "manual-programming-practices.specification-driven-development",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Acceptance criteria connect requirements to observable expected behavior.",
+    "pt-BR": "Critérios de aceite conectam requisitos a comportamento esperado observável.",
+    "es": "Los criterios de aceptación conectan requisitos con comportamiento esperado observable."
+  },
+  "explanation": {
+    "en": "Acceptance criteria turn requirements into outcomes that can be checked.",
+    "pt-BR": "Critérios de aceite transformam requisitos em resultados verificáveis.",
+    "es": "Los criterios de aceptación convierten requisitos en resultados verificables."
+  },
+  "hints": {
+    "en": [
+      "Consider what evidence supports a requirement."
+    ],
+    "pt-BR": [
+      "Considere qual evidência sustenta um requisito."
+    ],
+    "es": [
+      "Considera qué evidencia respalda un requisito."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "manual-programming-practices/02-specification-driven-development/README.md",
+        "pt-BR": "manual-programming-practices/02-specification-driven-development/README.pt-BR.md",
+        "es": "manual-programming-practices/02-specification-driven-development/README.es.md"
+      },
+      "sections": {
+        "en": "2. Acceptance criteria",
+        "pt-BR": "2. Critérios de aceite",
+        "es": "2. Criterios de aceptación"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

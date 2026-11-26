@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.green-ci-not-complete-proof",
+  "chapter_id": "manual-programming-practices.professional-workflow",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "A passing CI run proves every requirement is correct, so code review and acceptance evidence are unnecessary.",
+    "pt-BR": "Um CI aprovado prova que todo requisito está correto, portanto code review e evidências de aceite são desnecessários.",
+    "es": "Un CI aprobado demuestra que todo requisito es correcto, por lo que code review y evidencia de aceptación son innecesarios."
+  },
+  "explanation": {
+    "en": "CI executes configured checks; review still compares the change with requirements, risks, edge cases and evidence.",
+    "pt-BR": "CI executa verificações configuradas; revisão ainda compara mudança com requisitos, riscos, limites e evidências.",
+    "es": "CI ejecuta comprobaciones configuradas; la revisión todavía compara el cambio con requisitos, riesgos, límites y evidencia."
+  },
+  "hints": {
+    "en": [
+      "Automated checks cover only what was configured and tested."
+    ],
+    "pt-BR": [
+      "Verificações automatizadas cobrem apenas o configurado e testado."
+    ],
+    "es": [
+      "Las comprobaciones automatizadas cubren solo lo configurado y probado."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "manual-programming-practices/04-professional-workflow/README.md",
+        "pt-BR": "manual-programming-practices/04-professional-workflow/README.pt-BR.md",
+        "es": "manual-programming-practices/04-professional-workflow/README.es.md"
+      },
+      "sections": {
+        "en": "2. Write a reviewable change description",
+        "pt-BR": "2. Escreva descrição revisável",
+        "es": "2. Escribe descripción revisable"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

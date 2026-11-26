@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.sdd-exact-int-contract",
+  "chapter_id": "manual-programming-practices.specification-driven-development",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "The reading-progress exercise accepts only exact built-in int values. What should remaining_pages(True, 0) do?",
+    "pt-BR": "O exercício de progresso de leitura aceita somente valores do tipo int nativo exato. O que remaining_pages(True, 0) deve fazer?",
+    "es": "El ejercicio de progreso de lectura acepta solo valores del tipo int incorporado exacto. ¿Qué debe hacer remaining_pages(True, 0)?"
+  },
+  "explanation": {
+    "en": "True is bool, not exact int. The exercise deliberately rejects it with TypeError.",
+    "pt-BR": "True é bool, não int exato. O exercício o rejeita deliberadamente com TypeError.",
+    "es": "True es bool, no int exacto. El ejercicio lo rechaza deliberadamente con TypeError."
+  },
+  "hints": {
+    "en": [
+      "Use the exercise contract, not general subclass compatibility."
+    ],
+    "pt-BR": [
+      "Use o contrato do exercício, não compatibilidade geral de subclasses."
+    ],
+    "es": [
+      "Usa el contrato del ejercicio, no compatibilidad general de subclases."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "manual-programming-practices/02-specification-driven-development/README.md",
+        "pt-BR": "manual-programming-practices/02-specification-driven-development/README.pt-BR.md",
+        "es": "manual-programming-practices/02-specification-driven-development/README.es.md"
+      },
+      "sections": {
+        "en": "1. From request to requirements",
+        "pt-BR": "1. Do pedido aos requisitos",
+        "es": "1. De solicitud a requisitos"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "type-error"
+  },
+  "choices": [
+    {
+      "id": "one",
+      "text": {
+        "en": "Return 1",
+        "pt-BR": "Retornar 1",
+        "es": "Devolver 1"
+      }
+    },
+    {
+      "id": "value-error",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    },
+    {
+      "id": "zero",
+      "text": {
+        "en": "Return 0",
+        "pt-BR": "Retornar 0",
+        "es": "Devolver 0"
+      }
+    },
+    {
+      "id": "type-error",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    }
+  ]
+}

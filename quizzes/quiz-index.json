@@ -6,6 +6,10 @@
       "path": "quizzes/questions/quiz.absolute-distance-zero.json"
     },
     {
+      "id": "quiz.acceptance-observable-evidence",
+      "path": "quizzes/questions/quiz.acceptance-observable-evidence.json"
+    },
+    {
       "id": "quiz.append-preserve-existing-file",
       "path": "quizzes/questions/quiz.append-preserve-existing-file.json"
     },
@@ -170,6 +174,10 @@
       "path": "quizzes/questions/quiz.grade-weight-atomic-rejection.json"
     },
     {
+      "id": "quiz.green-ci-not-complete-proof",
+      "path": "quizzes/questions/quiz.green-ci-not-complete-proof.json"
+    },
+    {
       "id": "quiz.hash-inside-string",
       "path": "quizzes/questions/quiz.hash-inside-string.json"
     },
@@ -330,6 +338,10 @@
       "path": "quizzes/questions/quiz.positive-remainder.json"
     },
     {
+      "id": "quiz.predict-before-execution",
+      "path": "quizzes/questions/quiz.predict-before-execution.json"
+    },
+    {
       "id": "quiz.print-custom-separator",
       "path": "quizzes/questions/quiz.print-custom-separator.json"
     },
@@ -398,6 +410,14 @@
       "path": "quizzes/questions/quiz.round-ties-to-even.json"
     },
     {
+      "id": "quiz.sdd-exact-int-contract",
+      "path": "quizzes/questions/quiz.sdd-exact-int-contract.json"
+    },
+    {
+      "id": "quiz.sdd-type-before-range",
+      "path": "quizzes/questions/quiz.sdd-type-before-range.json"
+    },
+    {
       "id": "quiz.set-directional-difference",
       "path": "quizzes/questions/quiz.set-directional-difference.json"
     },
@@ -446,8 +466,20 @@
       "path": "quizzes/questions/quiz.task-marker-no-runtime.json"
     },
     {
+      "id": "quiz.tdd-red-first",
+      "path": "quizzes/questions/quiz.tdd-red-first.json"
+    },
+    {
+      "id": "quiz.tdd-refactor-preserve-behavior",
+      "path": "quizzes/questions/quiz.tdd-refactor-preserve-behavior.json"
+    },
+    {
       "id": "quiz.timedelta-duration",
       "path": "quizzes/questions/quiz.timedelta-duration.json"
+    },
+    {
+      "id": "quiz.traceback-diagnosis-first",
+      "path": "quizzes/questions/quiz.traceback-diagnosis-first.json"
     },
     {
       "id": "quiz.true-division-integers",

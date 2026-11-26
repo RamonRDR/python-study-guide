@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.sdd-type-before-range",
+  "chapter_id": "manual-programming-practices.specification-driven-development",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Under the documented reading-progress contract, total_pages is -3 and pages_read is \"7\". Which failure takes precedence?",
+    "pt-BR": "Pelo contrato documentado de progresso de leitura, total_pages é -3 e pages_read é \"7\". Qual falha tem precedência?",
+    "es": "Según el contrato documentado de progreso de lectura, total_pages es -3 y pages_read es \"7\". ¿Qué fallo tiene precedencia?"
+  },
+  "explanation": {
+    "en": "The contract checks exact types before ranges, so the string argument causes TypeError despite the negative total.",
+    "pt-BR": "O contrato verifica tipos exatos antes de intervalos, então o argumento string causa TypeError apesar do total negativo.",
+    "es": "El contrato comprueba tipos exactos antes de rangos, por lo que el argumento cadena causa TypeError pese al total negativo."
+  },
+  "hints": {
+    "en": [
+      "Both rules are violated; inspect the explicit precedence rule."
+    ],
+    "pt-BR": [
+      "Ambas as regras são violadas; confira a precedência explícita."
+    ],
+    "es": [
+      "Ambas reglas se incumplen; comprueba la precedencia explícita."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "manual-programming-practices/02-specification-driven-development/README.md",
+        "pt-BR": "manual-programming-practices/02-specification-driven-development/README.pt-BR.md",
+        "es": "manual-programming-practices/02-specification-driven-development/README.es.md"
+      },
+      "sections": {
+        "en": "1. From request to requirements",
+        "pt-BR": "1. Do pedido aos requisitos",
+        "es": "1. De solicitud a requisitos"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "type-error"
+  },
+  "choices": [
+    {
+      "id": "type-error",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    },
+    {
+      "id": "value-error",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    },
+    {
+      "id": "index-error",
+      "text": {
+        "en": "IndexError",
+        "pt-BR": "IndexError",
+        "es": "IndexError"
+      }
+    },
+    {
+      "id": "no-error",
+      "text": {
+        "en": "No exception",
+        "pt-BR": "Nenhuma exceção",
+        "es": "Ninguna excepción"
+      }
+    }
+  ]
+}

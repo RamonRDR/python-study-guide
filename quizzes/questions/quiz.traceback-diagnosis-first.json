@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.traceback-diagnosis-first",
+  "chapter_id": "manual-programming-practices.manual-coding-and-debugging",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A function fails at runtime with a traceback. Which initial diagnostic approach matches the lesson?",
+    "pt-BR": "Uma função falha em runtime com traceback. Qual abordagem diagnóstica inicial corresponde à aula?",
+    "es": "Una función falla en runtime con traceback. ¿Qué enfoque diagnóstico inicial corresponde a la lección?"
+  },
+  "explanation": {
+    "en": "Read the exception type and message, identify the relevant frame, then inspect values and types.",
+    "pt-BR": "Leia tipo e mensagem da exceção, identifique o frame relevante e depois inspecione valores e tipos.",
+    "es": "Lee tipo y mensaje de excepción, identifica el frame pertinente y después inspecciona valores y tipos."
+  },
+  "hints": {
+    "en": [
+      "Use the error as evidence rather than hiding it."
+    ],
+    "pt-BR": [
+      "Use o erro como evidência em vez de ocultá-lo."
+    ],
+    "es": [
+      "Usa el error como evidencia en vez de ocultarlo."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "manual-programming-practices/01-manual-coding-and-debugging/README.md",
+        "pt-BR": "manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md",
+        "es": "manual-programming-practices/01-manual-coding-and-debugging/README.es.md"
+      },
+      "sections": {
+        "en": "3. Read errors from the bottom upward",
+        "pt-BR": "3. Leia erros de baixo para cima",
+        "es": "3. Lee errores de abajo hacia arriba"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "inspect"
+  },
+  "choices": [
+    {
+      "id": "suppress",
+      "text": {
+        "en": "Catch every exception and ignore it.",
+        "pt-BR": "Capturar todas as exceções e ignorá-las.",
+        "es": "Capturar todas las excepciones e ignorarlas."
+      }
+    },
+    {
+      "id": "rewrite",
+      "text": {
+        "en": "Rewrite the whole program immediately.",
+        "pt-BR": "Reescrever imediatamente todo programa.",
+        "es": "Reescribir inmediatamente todo el programa."
+      }
+    },
+    {
+      "id": "inspect",
+      "text": {
+        "en": "Read the final exception and inspect the relevant frame.",
+        "pt-BR": "Ler a exceção final e inspecionar o frame relevante.",
+        "es": "Leer la excepción final e inspeccionar el frame pertinente."
+      }
+    },
+    {
+      "id": "random",
+      "text": {
+        "en": "Change several lines at random.",
+        "pt-BR": "Alterar várias linhas aleatoriamente.",
+        "es": "Cambiar varias líneas al azar."
+      }
+    }
+  ]
+}
