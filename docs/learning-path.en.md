@@ -192,7 +192,7 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 
 ## Phase 12: Technical Interview Preparation
 
-All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Completion of Sprint 06 requires the approved integration and post-merge verification of PR D.
+All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Sprint 06 was completed in [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101) and its post-merge CI.
 
 1. [Understanding Technical Interviews](../technical-interview-preparation/01-understanding-technical-interviews/README.md)
 2. [Live Coding and Take-Home Assignments](../technical-interview-preparation/02-live-coding-and-take-home/README.md)
@@ -224,5 +224,6 @@ All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior
 - [Repository home](../README.md)
 - [Full roadmap](roadmap.en.md)
 - [Project structure](project-structure.en.md)
+- [Quiz bank pilot](../quizzes/README.md)
 
 As new chapters are published, this page should be updated in the same pull request so the course always has one reliable, one-click navigation path.

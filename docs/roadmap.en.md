@@ -226,11 +226,11 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 
 ## Phase 12: Technical Interview Preparation
 
-All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Completion of Sprint 06 requires the approved integration and post-merge verification of PR D. [Technical Interview Preparation](../technical-interview-preparation/README.md).
+All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Sprint 06 was completed in [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101) and its post-merge CI. [Technical Interview Preparation](../technical-interview-preparation/README.md).
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
-This engineering phase does not renumber the original curriculum. Sprints 00–05 are merged (PRs #87–#95). Sprint 06 is in progress. The repository stays independent of the future web platform.
+This engineering phase does not renumber the original curriculum. Sprints 00–06 and 07A are merged. Sprint 07B introduces the [ten-question pilot](../quizzes/README.md) and three versioned exercise records; the remaining bank and consumer manifest are planned. The repository stays independent of the future web platform.
 
 | Future curriculum | Status |
 | --- | --- |

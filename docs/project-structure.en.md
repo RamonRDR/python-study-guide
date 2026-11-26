@@ -22,6 +22,7 @@ python-study-guide/
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
+├── requirements-assessment.txt
 ├── requirements-external.txt
 ├── SECURITY.md
 ├── SUPPORT.md
@@ -198,6 +199,7 @@ python-study-guide/
 │   ├── README.pt-BR.md
 │   ├── README.es.md
 │   └── problem-solving/
+│       ├── exercise-index.json
 │       ├── expansion-index.json
 │       ├── ascii-digit-counter/
 │       │   ├── README.md
@@ -897,7 +899,30 @@ python-study-guide/
 │           ├── search_with_position.py
 │           ├── select_and_classify.py
 │           └── state_driven_workflow.py
+├── quizzes/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   ├── quiz-index.json
+│   └── questions/
+│       ├── quiz.collection-membership.json
+│       ├── quiz.dictionary-fallback.json
+│       ├── quiz.editor-replaces-interpreter.json
+│       ├── quiz.interpreter-purpose.json
+│       ├── quiz.missing-required-argument.json
+│       ├── quiz.print-literal.json
+│       ├── quiz.range-stop.json
+│       ├── quiz.return-keyword.json
+│       ├── quiz.type-hints-runtime.json
+│       └── quiz.unclosed-print.json
+├── schemas/
+│   ├── exercise-index.schema.json
+│   ├── exercise.schema.json
+│   ├── quiz-index.schema.json
+│   └── quiz.schema.json
 ├── scripts/
+│   ├── assessment_grading.py
+│   ├── assessment_records.py
 │   ├── check_chapter_navigation.py
 │   ├── check_documentation_languages.py
 │   ├── check_internal_links.py
@@ -905,6 +930,7 @@ python-study-guide/
 │   ├── interview_records.py
 │   ├── interview_mocks.py
 │   ├── run_examples.py
+│   ├── validate_assessments.py
 │   └── validate_repository_structure.py
 ├── standard-library/
 │   ├── README.md
@@ -1161,6 +1187,8 @@ python-study-guide/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
+    ├── test_assessment_contract.py
+    ├── test_assessment_pilot.py
     ├── test_chapter_navigation.py
     ├── test_check_internal_links.py
     ├── test_documentation_languages.py
@@ -1196,7 +1224,9 @@ python-study-guide/
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `docs/adr/` and `docs/specs/`: trilingual architecture decisions, Phase II specifications, task register, acceptance criteria, integration contract and future related-guide references. The FR-05 prerequisite map is in the learning-hub-foundation directory.
 - `errors-files-and-modules/`: complete Phase 7 learning path. Chapters 01–05 cover runtime exception handling, deliberate raising and custom exceptions, safe text-file I/O with `open()` and `with`, TXT/CSV/JSON parsing and writing, and code organization through imports, modules, regular packages, execution context, and dependency design, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
-- `exercises/`: 30 focused exercises with localized instructions, preliminary JSON, shared starter and reference, and trusted tests. The expansion index lists 29 records; the original pilot remains separate.
+- `exercises/`: 30 focused exercises with localized instructions, shared starter and reference, and trusted tests. Three records use schema 1.0.0; 27 remain legacy. The expansion index still lists 29 records; the versioned partial index lists the three migrated exercises.
+- `quizzes/`: ten localized pilot questions and the versioned quiz index. Answers are public; no runtime is implemented.
+- `schemas/`: four versioned assessment schemas (Draft 2020-12).
 - `external-libraries/`: complete Phase 9 learning path for third-party packages. It contains reviewed multilingual chapters for pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x, and pytest 9.1.x, with twenty deterministic executable examples in total. The phase covers tabular transformations, Excel workbook automation, HTTP/API clients, and automated-testing contracts; Phase 10 practical projects are also complete.
 - `functions/`: complete Phase 5 learning path. Chapters 01–09 cover defining and calling functions, required inputs, returned values, scope and name lookup, type hints for function interfaces, default values including definition-time evaluation and mutable-default safety, variable-length positional and keyword argument collection with `*args` and `**kwargs`, composition through helper and coordinating functions with explicit dependencies and simple call graphs, and explicit data-flow tracing across calls including parameter bindings, rebinding versus mutation, `None`, tuple results, and return-based handoffs, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `getting-started/`: introductory curriculum order 00, with Python installation, editor setup, manual first-file execution, project-local virtual environments, dependency management and Git basics in all three languages. Historical Phase 0 remains Project Foundation.
@@ -1204,7 +1234,7 @@ python-study-guide/
 - `manual-programming-practices/`: complementary four-lesson engineering module after Phase 10, with shared reading-progress implementation and tests; no new dependencies.
 - `practical-projects/`: complete Phase 10 practical-project workspace. Projects 01–08 are complete, reviewed, and integrated. Project 07 adds immutable reconciliation models, exact integer-cent arithmetic, deterministic matching and ordering, duplicate rejection, explicit reconciliation statuses, validated report invariants, stable text rendering, and focused precision and safety regression tests. Project 08 closes the phase with immutable automation requests and results, a fixed `prepare → process → verify → finalize` execution plan, deterministic event logs, structured evidence, controlled failure injection, fail-fast propagation, post-processing verification, skipped-step semantics, stable rendering, and focused invariant regression tests without external integrations.
 - `problem-solving-and-live-coding/`: Seven foundation lessons and nine challenge chapters provide 30 exercises (12 easy, 12 medium, six hard), including two timed attempts. Sprint 05 completed ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
-- `technical-interview-preparation/`: All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Completion of Sprint 06 requires the approved integration and post-merge verification of PR D.
+- `technical-interview-preparation/`: All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Sprint 06 was completed in [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101) and its post-merge CI.
 - `program-flow/`: complete Phase 4 learning path. Chapters 01–08 teach conditions, comparisons, truth-value testing, membership, identity, Boolean logic, conditional branching with `if`, `elif`, and `else`, structural pattern matching, iterable-driven repetition with `for`, numeric progressions with `range()`, position-aware iteration with `enumerate()`, parallel iteration with `zip()` including explicit equal-length validation with `strict=True`, state-driven repetition with `while`, deliberate loop control with `break`, `continue`, and loop `else`, and how to choose and combine program-flow tools according to intent, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
 - `scripts/`: dependency-free maintenance tools used locally and by GitHub Actions. The repository quality tools verify approved examples, internal links, language-family parity, chapter navigation and required paths. The Windows job covers File Organizer tests; the Linux job runs the complete practical-project suite.
 - `standard-library/`: complete Phase 8 learning path. Chapters 01–09 cover `pathlib` filesystem boundaries, `datetime` date/time modeling, advanced `json` and `csv` contracts, `logging`, specialized `collections`, `itertools`, `decimal`, and `os`/`shutil` contracts for environment state, traversal, metadata, copy, move, recursive removal, platform capabilities, and archive safety, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.

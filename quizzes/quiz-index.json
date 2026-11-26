@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {
+      "id": "quiz.collection-membership",
+      "path": "quizzes/questions/quiz.collection-membership.json"
+    },
+    {
+      "id": "quiz.dictionary-fallback",
+      "path": "quizzes/questions/quiz.dictionary-fallback.json"
+    },
+    {
+      "id": "quiz.editor-replaces-interpreter",
+      "path": "quizzes/questions/quiz.editor-replaces-interpreter.json"
+    },
+    {
+      "id": "quiz.interpreter-purpose",
+      "path": "quizzes/questions/quiz.interpreter-purpose.json"
+    },
+    {
+      "id": "quiz.missing-required-argument",
+      "path": "quizzes/questions/quiz.missing-required-argument.json"
+    },
+    {
+      "id": "quiz.print-literal",
+      "path": "quizzes/questions/quiz.print-literal.json"
+    },
+    {
+      "id": "quiz.range-stop",
+      "path": "quizzes/questions/quiz.range-stop.json"
+    },
+    {
+      "id": "quiz.return-keyword",
+      "path": "quizzes/questions/quiz.return-keyword.json"
+    },
+    {
+      "id": "quiz.type-hints-runtime",
+      "path": "quizzes/questions/quiz.type-hints-runtime.json"
+    },
+    {
+      "id": "quiz.unclosed-print",
+      "path": "quizzes/questions/quiz.unclosed-print.json"
+    }
+  ]
+}

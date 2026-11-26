@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.unclosed-print",
+  "chapter_id": "getting-started.run-your-first-program",
+  "difficulty": "easy",
+  "type": "error_identification",
+  "prompt": {
+    "en": "The following complete file is saved and run with Python. Which error category occurs because the closing parenthesis is missing?",
+    "pt-BR": "O arquivo completo abaixo é salvo e executado com Python. Qual categoria de erro ocorre porque falta o parêntese de fechamento?",
+    "es": "El siguiente archivo completo se guarda y ejecuta con Python. ¿Qué categoría de error ocurre porque falta el paréntesis de cierre?"
+  },
+  "explanation": {
+    "en": "SyntaxError occurs before normal execution because the function call is not syntactically complete. Add the closing parenthesis to make the statement valid.",
+    "pt-BR": "SyntaxError ocorre antes da execução normal porque a chamada não está sintaticamente completa. Adicione o parêntese de fechamento para tornar a instrução válida.",
+    "es": "SyntaxError ocurre antes de la ejecución normal porque la llamada no está sintácticamente completa. Añade el paréntesis de cierre para que la instrucción sea válida."
+  },
+  "hints": {
+    "en": [
+      "Check whether quotation marks and parentheses are balanced."
+    ],
+    "pt-BR": [
+      "Confira se aspas e parênteses estão balanceados."
+    ],
+    "es": [
+      "Comprueba si las comillas y los paréntesis están equilibrados."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "getting-started/03-run-your-first-program/README.md",
+        "pt-BR": "getting-started/03-run-your-first-program/README.pt-BR.md",
+        "es": "getting-started/03-run-your-first-program/README.es.md"
+      },
+      "sections": {
+        "en": "4. Troubleshooting",
+        "pt-BR": "4. Solução de problemas",
+        "es": "4. Resolución de problemas"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "syntax-error"
+  },
+  "choices": [
+    {
+      "id": "name-error",
+      "text": {
+        "en": "NameError",
+        "pt-BR": "NameError",
+        "es": "NameError"
+      }
+    },
+    {
+      "id": "syntax-error",
+      "text": {
+        "en": "SyntaxError",
+        "pt-BR": "SyntaxError",
+        "es": "SyntaxError"
+      }
+    },
+    {
+      "id": "type-error",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    },
+    {
+      "id": "value-error",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    }
+  ],
+  "code": "print(\"Ready\""
+}

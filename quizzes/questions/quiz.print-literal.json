@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.print-literal",
+  "chapter_id": "fundamentals.print-and-input",
+  "difficulty": "easy",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output. Enter the text without quotation marks and include the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata. Digite o texto sem aspas e inclua a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta. Introduce el texto sin comillas e incluye el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "print() displays the string content, not its source-code quotation marks. By default it appends a newline.",
+    "pt-BR": "print() exibe o conteúdo da string, não as aspas do código-fonte. Por padrão, acrescenta uma quebra de linha.",
+    "es": "print() muestra el contenido de la cadena, no las comillas del código fuente. Por defecto añade un salto de línea."
+  },
+  "hints": {
+    "en": [
+      "The quotation marks delimit the literal; they are not part of it."
+    ],
+    "pt-BR": [
+      "As aspas delimitam o literal; não fazem parte dele."
+    ],
+    "es": [
+      "Las comillas delimitan el literal; no forman parte de él."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "3. Display one value with `print()`",
+        "pt-BR": "3. Exiba um valor com `print()`",
+        "es": "3. Muestra un valor con `print()`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "Ready\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(\"Ready\")"
+}

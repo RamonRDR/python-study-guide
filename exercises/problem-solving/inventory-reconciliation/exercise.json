@@ -354,7 +354,8 @@
           ]
         ]
       }
-    ]
+    ],
+    "new_container": true
   },
   "execution": "unverified",
   "allowed_dependencies": [],
@@ -446,5 +447,6 @@
       "es": "collections/03-tuples-and-immutability/README.es.md"
     }
   ],
-  "practice_mode": "implement"
+  "practice_mode": "implement",
+  "schema_version": "1.0.0"
 }

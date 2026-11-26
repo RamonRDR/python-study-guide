@@ -63,4 +63,4 @@ Start with the linked foundation chapters and practice independently. Python 3.1
 - [Timed: Threshold Count](problem-solving/timed-threshold-count/README.md) · Easy · 10 min
 - [Timed: Longest Qualifying Streak](problem-solving/timed-longest-streak/README.md) · Medium · 20 min
 
-The [expansion index](problem-solving/expansion-index.json) is preliminary and contains 29 records; the pilot has its own record. Final schemas and curriculum integration remain planned.
+The [legacy expansion index](problem-solving/expansion-index.json) retains 29 records; the original vowel-counter is separate. The [versioned exercise index](problem-solving/exercise-index.json) currently lists three migrated records (vowel-counter, binary-insertion-index and inventory-reconciliation). The remaining 27 retain their legacy metadata; all 30 keep their existing cases, starters and solutions. Browser execution remains unverified. See the [assessment pilot](../quizzes/README.md).

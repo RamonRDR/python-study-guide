@@ -45,7 +45,10 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py'
 
       - name: Validate assessment planning inventory
-        run: python scripts/validate_assessments.py
+        run: >-
+          python scripts/validate_assessments.py
+          --quiz-index quizzes/quiz-index.json
+          --exercise-index exercises/problem-solving/exercise-index.json
 
       - name: Run engineering practice tests
         run: python -m unittest discover -s manual-programming-practices/03-test-driven-development/examples -p 'test_*.py'

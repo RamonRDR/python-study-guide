@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.type-hints-runtime",
+  "chapter_id": "functions.type-hints",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Python automatically rejects every function call in which an argument does not match its type hint, even without an explicit runtime check.",
+    "pt-BR": "O Python rejeita automaticamente toda chamada de função em que um argumento não corresponde à type hint, mesmo sem verificação explícita em runtime.",
+    "es": "Python rechaza automáticamente toda llamada a una función en la que un argumento no coincide con su type hint, incluso sin una comprobación explícita en runtime."
+  },
+  "explanation": {
+    "en": "False. Type hints describe intended types and can support static checking, but Python does not enforce them by itself. The function body may still raise an exception for another reason.",
+    "pt-BR": "Falso. Type hints descrevem tipos pretendidos e podem apoiar análise estática, mas Python não as impõe por conta própria. O corpo da função ainda pode gerar uma exceção por outro motivo.",
+    "es": "Falso. Las type hints describen los tipos previstos y pueden apoyar el análisis estático, pero Python no las impone por sí solo. El cuerpo de la función aún puede lanzar una excepción por otro motivo."
+  },
+  "hints": {
+    "en": [
+      "An annotation and a runtime check are different mechanisms."
+    ],
+    "pt-BR": [
+      "Uma anotação e uma verificação em runtime são mecanismos diferentes."
+    ],
+    "es": [
+      "Una anotación y una comprobación en runtime son mecanismos distintos."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/05-type-hints/README.md",
+        "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+        "es": "functions/05-type-hints/README.es.md"
+      },
+      "sections": {
+        "en": "4. Type hints do not enforce types at runtime by themselves",
+        "pt-BR": "4. Type hints não impõem tipos em runtime por conta própria",
+        "es": "4. Las type hints no imponen tipos en runtime por sí solas"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

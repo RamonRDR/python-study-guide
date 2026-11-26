@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.editor-replaces-interpreter",
+  "chapter_id": "getting-started.configure-vscode",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Installing the VS Code Python extension replaces the need for a Python interpreter to run Python programs.",
+    "pt-BR": "Instalar a extensão Python do VS Code substitui a necessidade de um interpretador Python para executar programas Python.",
+    "es": "Instalar la extensión Python de VS Code sustituye la necesidad de un intérprete de Python para ejecutar programas Python."
+  },
+  "explanation": {
+    "en": "False. The extension connects editor features to the interpreter; it does not replace the application that executes Python code.",
+    "pt-BR": "Falso. A extensão conecta recursos do editor ao interpretador; não substitui o aplicativo que executa código Python.",
+    "es": "Falso. La extensión conecta funciones del editor con el intérprete; no sustituye la aplicación que ejecuta código Python."
+  },
+  "hints": {
+    "en": [
+      "Distinguish writing code from executing it."
+    ],
+    "pt-BR": [
+      "Distinga escrever código de executá-lo."
+    ],
+    "es": [
+      "Distingue escribir código de ejecutarlo."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "getting-started/02-configure-vscode/README.md",
+        "pt-BR": "getting-started/02-configure-vscode/README.pt-BR.md",
+        "es": "getting-started/02-configure-vscode/README.es.md"
+      },
+      "sections": {
+        "en": "Goal and prerequisites",
+        "pt-BR": "Objetivo e pré-requisitos",
+        "es": "Objetivo y requisitos previos"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

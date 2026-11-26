@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.dictionary-fallback",
+  "chapter_id": "collections.dictionaries-keys-and-values",
+  "difficulty": "medium",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Complete only the method name ____ so a missing notebook key yields 0, an existing key yields its stored quantity, and stock is not modified. Enter the method name alone, with no spaces.",
+    "pt-BR": "Complete apenas o nome do método ____ para que a chave notebook ausente produza 0, uma chave existente produza sua quantidade armazenada e stock não seja alterado. Digite somente o nome do método, sem espaços.",
+    "es": "Completa solo el nombre del método ____ para que la clave notebook ausente produzca 0, una clave existente produzca su cantidad almacenada y stock no se modifique. Introduce únicamente el nombre del método, sin espacios."
+  },
+  "explanation": {
+    "en": "dict.get(key, fallback) returns the stored value when the key exists and the fallback when it is absent, without inserting or removing an entry.",
+    "pt-BR": "dict.get(key, fallback) retorna o valor armazenado quando a chave existe e o valor alternativo quando está ausente, sem inserir ou remover uma entrada.",
+    "es": "dict.get(key, fallback) devuelve el valor almacenado cuando la clave existe y el valor alternativo cuando está ausente, sin insertar ni eliminar una entrada."
+  },
+  "hints": {
+    "en": [
+      "Choose a read operation with an explicit default, not a mutation."
+    ],
+    "pt-BR": [
+      "Escolha uma operação de leitura com valor padrão explícito, não uma mutação."
+    ],
+    "es": [
+      "Elige una operación de lectura con valor predeterminado explícito, no una mutación."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/04-dictionaries-keys-and-values/README.md",
+        "pt-BR": "collections/04-dictionaries-keys-and-values/README.pt-BR.md",
+        "es": "collections/04-dictionaries-keys-and-values/README.es.md"
+      },
+      "sections": {
+        "en": "10. Providing a fallback to `get()`",
+        "pt-BR": "10. Fornecendo um valor alternativo para `get()`",
+        "es": "10. Proporcionar un valor alternativo a `get()`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "get"
+    ],
+    "comparison": "exact"
+  },
+  "code": "stock = {\"pen\": 3}\nquantity = stock.____(\"notebook\", 0)"
+}

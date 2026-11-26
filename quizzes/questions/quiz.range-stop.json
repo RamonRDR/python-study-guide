@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.range-stop",
+  "chapter_id": "program-flow.range-enumerate-and-zip",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output. Put each printed number on its own line, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata. Coloque cada número impresso em sua própria linha, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta. Escribe cada número impreso en su propia línea, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The progression starts at 2 and advances by 2. It prints 2 and 4. The stop boundary 6 is excluded even though it is a multiple of the step.",
+    "pt-BR": "A progressão começa em 2 e avança de 2 em 2. Imprime 2 e 4. O limite stop 6 é excluído mesmo sendo múltiplo do passo.",
+    "es": "La progresión empieza en 2 y avanza de 2 en 2. Imprime 2 y 4. El límite stop 6 queda excluido aunque sea múltiplo del paso."
+  },
+  "hints": {
+    "en": [
+      "The second argument is an excluded boundary, not the last item."
+    ],
+    "pt-BR": [
+      "O segundo argumento é um limite excluído, não o último item."
+    ],
+    "es": [
+      "El segundo argumento es un límite excluido, no el último elemento."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/05-range-enumerate-and-zip/README.md",
+        "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+        "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+      },
+      "sections": {
+        "en": "6. `range(start, stop, step)`",
+        "pt-BR": "6. `range(start, stop, step)`",
+        "es": "6. `range(start, stop, step)`"
+      }
+    },
+    {
+      "paths": {
+        "en": "program-flow/05-range-enumerate-and-zip/README.md",
+        "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+        "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+      },
+      "sections": {
+        "en": "4. The `stop` value is excluded",
+        "pt-BR": "4. O valor `stop` não é incluído",
+        "es": "4. El valor `stop` queda excluido"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "2\n4\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "for number in range(2, 6, 2):\n    print(number)"
+}

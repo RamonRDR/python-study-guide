@@ -226,11 +226,11 @@ Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 f
 
 ## Fase 12: Preparação para entrevistas técnicas
 
-Todo conteúdo planejado da Fase 12 está implementado: 24 aulas, 60 perguntas (24 Junior, 24 Mid-level, 12 Senior) e três simulados de 30/45/60 minutos. A conclusão da Sprint 06 exige integração aprovada e verificação pós-merge do PR D. [Preparação para entrevistas técnicas](../technical-interview-preparation/README.pt-BR.md).
+Todo conteúdo planejado da Fase 12 está implementado: 24 aulas, 60 perguntas (24 Junior, 24 Mid-level, 12 Senior) e três simulados de 30/45/60 minutos. A Sprint 06 foi concluída no [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101) e seu CI pós-merge. [Preparação para entrevistas técnicas](../technical-interview-preparation/README.pt-BR.md).
 
 ## Phase II: Learning Hub Foundation (roadmap de engenharia)
 
-Esta fase de engenharia não renumera o currículo original. Sprints 00–05 integradas (PRs #87–#95). Sprint 06 em andamento. O repositório segue independente da futura plataforma web.
+Esta fase de engenharia não renumera o currículo original. Sprints 00–06 e 07A integradas. Sprint 07B introduz o [piloto de dez questões](../quizzes/README.pt-BR.md) e três exercícios versionados; restante do banco e manifesto do consumidor estão planejados. O repositório segue independente da futura plataforma web.
 
 | Currículo futuro | Status |
 | --- | --- |

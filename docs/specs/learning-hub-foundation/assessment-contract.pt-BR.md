@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprint 07A: somente fundação. O mantenedor aprovou a distribuição de 160 questões e o piloto. Este PR não publica questões, migra exercícios, implementa execução no navegador nem finaliza o manifesto curricular.
+Sprint 07A integrada e CI pós-merge aprovado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45871235887)). Sprint 07B é o piloto aprovado: dez quizzes e três exercícios existentes, sem expansão adicional do banco nem runtime no navegador.
 
 ## Escopo e aceite
 - Inventário: 115 entradas, 345 caminhos localizados, 64 quizzes easy / 67 medium / 29 hard (2.850 XP a 10/20/30). A [matriz de distribuição](assessment-matrix.json) é metadado de planejamento de engenharia, não manifesto do consumidor. Alocações zero preservam prática manual ou evitam avaliação repetida.
@@ -18,3 +18,10 @@ A: contrato, matriz e validadores de fixtures; B: dez quizzes (dois por tipo) e 
 
 ## Evidências e limitações
 Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [encerramento da Sprint 06](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Os 30 exercícios existentes têm 192 casos e nenhuma dependência externa declarada; execução no navegador não verificada. Piloto de vogais antigo não possui practice_mode e assumptions de complexidade; normalizar explicitamente na migração. Preservar índice legado de 29 entradas até migração aprovada. Revisar evidência pedagógica por questão e soluções por exercício nos PRs correspondentes. CI no head exato, Codex Review, Final Pre-Merge Audit e autorização do mantenedor seguem obrigatórios.
+
+## Aceite do piloto (07B)
+
+- Publicar exatamente dez questões, duas por tipo, sete easy e três medium (130 XP), com três variantes de idioma e títulos exatos dos pré-requisitos. Contabilizá-las na matriz aprovada, sem duplicar código Python por idioma.
+- Migrar somente vowel-counter, binary-insertion-index e inventory-reconciliation para 1.0.0, preservando os 24 casos canônicos e implementações existentes. Manter os outros 27 registros legados e índice de expansão intactos. Índice parcial versionado identifica os três registros migrados.
+- Executar ambos os novos índices no CI, rejeitar registros versionados não indexados ou inesperados, testar limites de alocação e verificar soluções confiáveis e candidatos incorretos representativos. Rejeitar resultados esperados contraditórios para entradas de tipos e valores iguais. Quando novo contêiner for exigido, rejeitar aliases a contêineres mutáveis internos das entradas e aliases diretos. Detecção de mutação compara estado final, não cada operação intermediária.
+- Sem execução de código do aluno, nova dependência paga ou alegação de runtime. Os 150 quizzes e 27 migrações restantes pertencem a C1/C2/D; AC-07 encerra somente em E.

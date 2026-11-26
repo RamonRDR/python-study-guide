@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.interpreter-purpose",
+  "chapter_id": "getting-started.install-python",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Which component actually executes Python code?",
+    "pt-BR": "Qual componente efetivamente executa código Python?",
+    "es": "¿Qué componente ejecuta realmente el código Python?"
+  },
+  "explanation": {
+    "en": "The interpreter executes Python code. An editor helps write files, a terminal provides a place to run commands, and a package manager installs packages.",
+    "pt-BR": "O interpretador executa código Python. O editor ajuda a escrever arquivos, o terminal oferece um local para executar comandos e o gerenciador de pacotes instala pacotes.",
+    "es": "El intérprete ejecuta código Python. Un editor ayuda a escribir archivos, una terminal permite ejecutar comandos y un gestor de paquetes instala paquetes."
+  },
+  "hints": {
+    "en": [
+      "Think about the application that runs the language."
+    ],
+    "pt-BR": [
+      "Pense no aplicativo que executa a linguagem."
+    ],
+    "es": [
+      "Piensa en la aplicación que ejecuta el lenguaje."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "getting-started/01-install-python/README.md",
+        "pt-BR": "getting-started/01-install-python/README.pt-BR.md",
+        "es": "getting-started/01-install-python/README.es.md"
+      },
+      "sections": {
+        "en": "Goal and prerequisites",
+        "pt-BR": "Objetivo e pré-requisitos",
+        "es": "Objetivo y requisitos previos"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "interpreter"
+  },
+  "choices": [
+    {
+      "id": "editor",
+      "text": {
+        "en": "Code editor",
+        "pt-BR": "Editor de código",
+        "es": "Editor de código"
+      }
+    },
+    {
+      "id": "interpreter",
+      "text": {
+        "en": "Python interpreter",
+        "pt-BR": "Interpretador Python",
+        "es": "Intérprete de Python"
+      }
+    },
+    {
+      "id": "terminal",
+      "text": {
+        "en": "Terminal",
+        "pt-BR": "Terminal",
+        "es": "Terminal"
+      }
+    },
+    {
+      "id": "package-manager",
+      "text": {
+        "en": "Package manager",
+        "pt-BR": "Gerenciador de pacotes",
+        "es": "Gestor de paquetes"
+      }
+    }
+  ]
+}

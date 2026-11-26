@@ -119,6 +119,11 @@
       "en": "O(1) auxiliary variables in the usual fixed-cost model; the counter uses O(log n) bits if arbitrary integer bit storage is counted.",
       "pt-BR": "O(1) variáveis auxiliares no modelo usual de custo fixo; o contador usa O(log n) bits se contabilizado armazenamento de inteiros arbitrários.",
       "es": "O(1) variables auxiliares en el modelo habitual de coste fijo; el contador usa O(log n) bits si se contabiliza almacenamiento de enteros arbitrarios."
+    },
+    "assumptions": {
+      "en": "n is the number of Python string characters. Membership is tested against a fixed ten-character literal; integer increments use the usual fixed-cost model unless bit storage is counted.",
+      "pt-BR": "n é o número de caracteres da string Python. A pertinência é testada contra um literal fixo de dez caracteres; incrementos de inteiro usam o modelo usual de custo fixo, salvo quando o armazenamento em bits é contabilizado.",
+      "es": "n es el número de caracteres de la cadena Python. La pertenencia se prueba contra un literal fijo de diez caracteres; los incrementos de enteros usan el modelo habitual de coste fijo salvo cuando se contabiliza el almacenamiento en bits."
     }
   },
   "tests": {
@@ -211,7 +216,8 @@
         ],
         "expected": 2
       }
-    ]
+    ],
+    "new_container": false
   },
   "execution": "unverified",
   "allowed_dependencies": [],
@@ -272,5 +278,7 @@
       "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
       "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
     }
-  ]
+  ],
+  "schema_version": "1.0.0",
+  "practice_mode": "implement"
 }

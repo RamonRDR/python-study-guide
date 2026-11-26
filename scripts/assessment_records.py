@@ -247,6 +247,11 @@ def validate_record(kind, record, root, chapters):
         raise ValueError("invalid concept ID")
     if len({case["id"] for case in cases}) != len(cases):
         raise ValueError("duplicate case ID")
+    for index, case in enumerate(cases):
+        for previous in cases[:index]:
+            if (exact_equal(case["args"], previous["args"])
+                    and not exact_equal(case["expected"], previous["expected"])):
+                raise ValueError("contradictory expected values for identical arguments")
     for example in record["examples"]:
         if not any(exact_equal(case["args"], example["args"])
                    and exact_equal(case["expected"], example["expected"])
