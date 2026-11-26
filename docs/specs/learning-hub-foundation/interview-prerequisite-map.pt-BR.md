@@ -49,3 +49,14 @@ Meta inicial: 24 aulas, 60 perguntas (24 junior, 24 mid-level, 12 senior) e trê
 Seções selecionadas de pré-requisitos comparadas em EN/PT-BR/ES: identidade/igualdade e None (Fluxo 01), reatribuição e mutação de parâmetros (Funções 09), padrões mutáveis (Funções 06), escolha/hashabilidade de coleções (Coleções 06), janelas fixas e variáveis (Fase 11 aulas 07–08). É evidência semântica direcionada, não auditoria exaustiva de traduções. O novo índice da Fase 12 liga as aulas 01–08; os gates restantes por aula e pergunta continuam abertos.
 
 [Índice da Fase 12](../../../technical-interview-preparation/README.pt-BR.md)
+
+## Evidência instrucional A2
+
+A1 integrado no [PR #96](https://github.com/RamonRDR/python-study-guide/pull/96) em `48588d620fbdfb3d9243ba4f31321e3460c06ca5`; [CI pós-merge](https://github.com/RamonRDR/python-study-guide/actions/runs/45724935972) aprovado. A2 adiciona a instrução a seguir (aguarda validação do PR). Rechecadas seções localizadas de escopo/LEGB, mutação/reatribuição, aliases de cópia rasa, iteração, itertools e with/finally; a coluna de cobertura da baseline anterior permanece histórica. Gates por pergunta e T06-01 continuam abertos.
+
+- [09-object-identity-references-and-copying](../../../technical-interview-preparation/09-object-identity-references-and-copying/README.pt-BR.md): Identidade e cópias: aliases, cópias aninhadas, memo e contrato de hash.
+- [10-python-memory-management](../../../technical-interview-preparation/10-python-memory-management/README.pt-BR.md): Memória: alcançabilidade, contagem de referências, GC de ciclos, referências fracas, retenção limitada e medição.
+- [11-iterators-generators-and-comprehensions](../../../technical-interview-preparation/11-iterators-generators-and-comprehensions/README.pt-BR.md): Iteração: protocolo, yield, comprehensions imediatas e esgotamento.
+- [12-closures-and-decorators](../../../technical-interview-preparation/12-closures-and-decorators/README.pt-BR.md): Closures: LEGB, nonlocal, late binding, decorators, wraps e encaminhamento.
+- [13-context-managers](../../../technical-interview-preparation/13-context-managers/README.pt-BR.md): Gerenciadores de contexto: entrada/saída, supressão e limpeza.
+- [14-concurrency-parallelism-and-the-gil](../../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.pt-BR.md): Concorrência: escolha por carga, CPython 3.13 convencional/experimental, locks e futures.

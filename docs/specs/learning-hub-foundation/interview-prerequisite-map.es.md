@@ -49,3 +49,14 @@ Meta inicial: 24 lecciones, 60 preguntas (24 junior, 24 mid-level, 12 senior) y 
 Secciones seleccionadas de requisitos previos comparadas en EN/PT-BR/ES: identidad/igualdad y None (Flujo 01), reasignación y mutación de parámetros (Funciones 09), valores predeterminados mutables (Funciones 06), elección/hashabilidad de colecciones (Colecciones 06), ventanas fijas y variables (Fase 11 lecciones 07–08). Es evidencia semántica dirigida, no auditoría exhaustiva de traducciones. El nuevo índice de Fase 12 enlaza las lecciones 01–08; los controles restantes por lección y pregunta siguen abiertos.
 
 [Índice de Fase 12](../../../technical-interview-preparation/README.es.md)
+
+## Evidencia de instrucción A2
+
+A1 fusionado en [PR #96](https://github.com/RamonRDR/python-study-guide/pull/96) en `48588d620fbdfb3d9243ba4f31321e3460c06ca5`; [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/45724935972) aprobado. A2 añade la instrucción siguiente (pendiente de validación del PR). Revisadas secciones localizadas de ámbito/LEGB, mutación/reasignación, alias de copia superficial, iteración, itertools y with/finally; la columna de cobertura de la base anterior sigue siendo histórica. Los controles por pregunta y T06-01 siguen abiertos.
+
+- [09-object-identity-references-and-copying](../../../technical-interview-preparation/09-object-identity-references-and-copying/README.es.md): Identidad y copias: alias, copias anidadas, memo y contrato de hash.
+- [10-python-memory-management](../../../technical-interview-preparation/10-python-memory-management/README.es.md): Memoria: alcanzabilidad, conteo de referencias, GC de ciclos, referencias débiles, retención limitada y medición.
+- [11-iterators-generators-and-comprehensions](../../../technical-interview-preparation/11-iterators-generators-and-comprehensions/README.es.md): Iteración: protocolo, yield, comprensiones inmediatas y agotamiento.
+- [12-closures-and-decorators](../../../technical-interview-preparation/12-closures-and-decorators/README.es.md): Cierres: LEGB, nonlocal, late binding, decoradores, wraps y reenvío.
+- [13-context-managers](../../../technical-interview-preparation/13-context-managers/README.es.md): Gestores de contexto: entrada/salida, supresión y limpieza.
+- [14-concurrency-parallelism-and-the-gil](../../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md): Concurrencia: elección según carga, CPython 3.13 convencional/experimental, locks y futures.
