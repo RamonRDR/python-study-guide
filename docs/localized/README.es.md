@@ -141,7 +141,7 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-**Phase II: Learning Hub Foundation** está en curso. PRs #87–#98 fusionados; Fase 11 completada. Fundamentos de la Fase 12 en curso; cuestionarios y contrato de contenido versionado siguen previstos. La guía permanece independiente del futuro Learning Hub web y de Git Study Guide.
+**Phase II: Learning Hub Foundation** está en curso. PRs #87–#99 fusionados; Fase 11 completada. Fundamentos de la Fase 12 y banco de 57 preguntas técnicas implementados; preguntas conductuales/internacionales y simulaciones siguen previstas; cuestionarios y contrato de contenido versionado siguen previstos. La guía permanece independiente del futuro Learning Hub web y de Git Study Guide.
 
 [Plan de implementación de Phase II](../specs/learning-hub-foundation/implementation-plan.es.md)
 

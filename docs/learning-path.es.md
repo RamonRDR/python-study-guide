@@ -192,7 +192,7 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 
 ## Fase 12: Preparación para entrevistas técnicas
 
-En curso: veintidós lecciones incluyen fundamentos completados y piloto de nueve preguntas técnicas (tres por nivel). Preguntas técnicas restantes, práctica conductual/internacional ampliada y simulaciones siguen previstos.
+En curso: veintidós lecciones incluyen fundamentos completados y 57 preguntas técnicas (23 Junior, 23 Mid-level, 11 Senior). Tres preguntas conductuales/internacionales y tres simulaciones cronometradas siguen previstas.
 
 1. [Entender las entrevistas técnicas](../technical-interview-preparation/01-understanding-technical-interviews/README.es.md)
 2. [Live coding y tareas take-home](../technical-interview-preparation/02-live-coding-and-take-home/README.es.md)
