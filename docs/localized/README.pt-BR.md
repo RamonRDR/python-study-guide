@@ -118,6 +118,8 @@ python-study-guide/
 ├── docs/
 ├── errors-files-and-modules/
 ├── exercises/
+├── quizzes/
+├── schemas/
 ├── external-libraries/
 ├── functions/
 ├── getting-started/
@@ -141,7 +143,7 @@ Explicações detalhadas:
 
 ## Status atual
 
-**Phase II: Learning Hub Foundation** está em andamento. PRs #87–#100 integrados; Fase 11 concluída. As 24 aulas da Fase 12, 60 perguntas e três simulados estão implementados; encerramento da Sprint 06 exige integração aprovada e verificação pós-merge do PR D. Quizzes e contrato de conteúdo versionado permanecem planejados. O guia permanece independente do futuro Learning Hub web e do Git Study Guide.
+**Phase II: Learning Hub Foundation** está em andamento. Sprints 00–06 e 07A integradas; Fases 11 e 12 concluídas (24 aulas da Fase 12, 60 perguntas e três simulados). Sprint 07B introduz o [piloto de dez questões](../../quizzes/README.pt-BR.md) e três exercícios versionados; banco completo e manifesto do consumidor seguem em andamento. O guia permanece independente do futuro Learning Hub web e do Git Study Guide.
 
 [Plano de implementação da Phase II](../specs/learning-hub-foundation/implementation-plan.pt-BR.md)
 
