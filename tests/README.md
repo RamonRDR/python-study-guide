@@ -15,3 +15,5 @@ Historical documentation planned educational testing content, beginning with sim
 Navigation regression tests enforce the same ordered master learning path in all three languages, exact previous/index/next links at the top and bottom, cross-module boundaries, and coverage of tracked chapter/project READMEs. Run `python scripts/check_chapter_navigation.py` from the repository root to check the complete curriculum.
 
 The foundation tests require the approved chapter/difficulty allocation, exact index coverage and deterministic grading; trusted literal code fixtures are executed, never arbitrary code loaded from question records. Pilot regressions remain covered.
+
+The expansion suite verifies the complete 160-question matrix, 2,850 XP, 82 new response fixtures, trusted literal code fixtures, question-type diversity and all three catalog indexes. Foundation and pilot regressions remain active; no learner-supplied code is executed.

@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprints 07A e 07B integradas e CI pós-merge aprovado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [CI de B](https://github.com/RamonRDR/python-study-guide/actions/runs/45872609920)). C1 implementa 78 quizzes de fundamentos; migração além do piloto e runtime no navegador estão fora do escopo.
+Sprints 07A–C1 integradas e CI pós-merge aprovado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [PR #104](https://github.com/RamonRDR/python-study-guide/pull/104), [CI de C1](https://github.com/RamonRDR/python-study-guide/actions/runs/45898287287)). C2 implementa 160 quizzes; migração além do piloto e runtime no navegador estão fora do escopo.
 
 ## Escopo e aceite
 - Inventário: 115 entradas, 345 caminhos localizados, 64 quizzes easy / 67 medium / 29 hard (2.850 XP a 10/20/30). A [matriz de distribuição](assessment-matrix.json) é metadado de planejamento de engenharia, não manifesto do consumidor. Alocações zero preservam prática manual ou evitam avaliação repetida.
