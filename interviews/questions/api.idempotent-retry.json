@@ -1,0 +1,86 @@
+{
+  "id": "api.idempotent-retry",
+  "topic": "backend-apis",
+  "level": "mid",
+  "prompt": {
+    "en": "A POST creation times out after possibly succeeding. Compare retrying POST with PUT and DELETE semantics; propose a safe retry contract and explain why response equality is not required.",
+    "pt-BR": "POST de criação dá timeout após possível sucesso. Compare retry de POST com semântica PUT e DELETE; proponha contrato seguro e explique por que respostas iguais não são necessárias.",
+    "es": "POST de creación agota tiempo tras posible éxito. Compara reintentar POST con semántica PUT y DELETE; propone contrato seguro y explica por qué respuestas iguales no son necesarias."
+  },
+  "expected_answer": {
+    "en": "POST is not guaranteed idempotent, so a blind retry may duplicate creation. PUT and DELETE have idempotent intended effects under HTTP semantics, not necessarily identical responses. For retryable creation use an explicit persisted idempotency-key contract, bounded attempts, timeouts and respect Retry-After where applicable.",
+    "pt-BR": "POST não tem idempotência garantida, logo retry cego pode duplicar criação. PUT e DELETE têm efeitos pretendidos idempotentes pela semântica HTTP, não respostas necessariamente idênticas. Para criação repetível use contrato explícito com chave de idempotência persistida, tentativas limitadas, timeouts e respeito a Retry-After quando aplicável.",
+    "es": "POST no garantiza idempotencia, así que reintento ciego puede duplicar creación. PUT y DELETE tienen efectos previstos idempotentes según HTTP, no respuestas necesariamente idénticas. Para creación reintentable usa contrato explícito de clave de idempotencia persistida, intentos limitados, timeouts y respeto a Retry-After cuando corresponda."
+  },
+  "explanation": {
+    "en": "A timeout does not establish whether the server committed a side effect.",
+    "pt-BR": "Timeout não determina se servidor confirmou efeito colateral.",
+    "es": "Timeout no determina si servidor confirmó efecto secundario."
+  },
+  "intent": {
+    "en": "Assess distributed request uncertainty and contract design.",
+    "pt-BR": "Avaliar incerteza de requisição distribuída e design de contrato.",
+    "es": "Evaluar incertidumbre de solicitud distribuida y diseño de contrato."
+  },
+  "common_errors": {
+    "en": [
+      "Retry every POST without deduplication semantics."
+    ],
+    "pt-BR": [
+      "Repetir todo POST sem semântica de deduplicação."
+    ],
+    "es": [
+      "Reintentar todo POST sin semántica de deduplicación."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why can repeated DELETE return 204 and then 404?"
+    ],
+    "pt-BR": [
+      "Por que DELETE repetido pode retornar 204 e depois 404?"
+    ],
+    "es": [
+      "¿Por qué DELETE repetido puede devolver 204 y luego 404?"
+    ]
+  },
+  "examples": {
+    "en": "The same creation request with a persisted key should not create a second resource under its explicit retry contract.",
+    "pt-BR": "Mesma requisição de criação com chave persistida não deve criar segundo recurso sob contrato explícito.",
+    "es": "Misma solicitud de creación con clave persistida no debe crear segundo recurso bajo contrato explícito."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes POST retry risk from PUT/DELETE intended-effect idempotence.",
+        "pt-BR": "Distingue risco de retry POST de idempotência de efeito PUT/DELETE.",
+        "es": "Distingue riesgo de reintento POST de idempotencia de efecto PUT/DELETE."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes explicit retry contract and bounded network behavior.",
+        "pt-BR": "Propõe contrato explícito de retry e comportamento de rede limitado.",
+        "es": "Propone contrato explícito de reintento y comportamiento de red limitado."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.md",
+        "pt-BR": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.pt-BR.md",
+        "es": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.es.md"
+      },
+      "sections": {
+        "en": "Client, server and resource contracts",
+        "pt-BR": "Contratos cliente, servidor e recurso",
+        "es": "Contratos cliente, servidor y recurso"
+      }
+    }
+  ]
+}

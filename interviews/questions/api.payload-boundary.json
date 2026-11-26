@@ -1,0 +1,86 @@
+{
+  "id": "api.payload-boundary",
+  "topic": "backend-apis",
+  "level": "mid",
+  "prompt": {
+    "en": "An API accepts exactly one title field, a string with 1–80 characters after trimming. Explain parsing versus validation; propose accepted and rejected inputs plus transport-level limits.",
+    "pt-BR": "API aceita exatamente campo title, string de 1–80 caracteres após trim. Explique parsing versus validação; proponha entradas aceitas/rejeitadas e limites de transporte.",
+    "es": "API acepta exactamente campo title, cadena de 1–80 caracteres tras trim. Explica parsing frente a validación; propone entradas aceptadas/rechazadas y límites de transporte."
+  },
+  "expected_answer": {
+    "en": "Parsing decodes JSON; validation checks object shape, allowed field, string type and trimmed length. Accept {\"title\":\" SQL \"} as SQL; reject missing/extra fields, booleans, blank and overlong titles. Enforce body-size limits before parsing when possible and define duplicate-key handling separately.",
+    "pt-BR": "Parsing decodifica JSON; validação confere formato objeto, campo permitido, tipo string e tamanho após trim. Aceite {\"title\":\" SQL \"} como SQL; rejeite campos ausentes/extras, booleanos, branco e título longo. Limite corpo antes de parsing quando possível e defina tratamento de chaves duplicadas separadamente.",
+    "es": "Parsing decodifica JSON; validación comprueba forma objeto, campo permitido, tipo cadena y longitud tras trim. Acepta {\"title\":\" SQL \"} como SQL; rechaza campos ausentes/extras, booleanos, blancos y título largo. Limita cuerpo antes de parsing cuando sea posible y define tratamiento de claves duplicadas aparte."
+  },
+  "explanation": {
+    "en": "Syntactically valid JSON can violate domain rules. An already decoded dict cannot reliably reveal duplicate keys in raw input.",
+    "pt-BR": "JSON sintaticamente válido pode violar regras de domínio. Dict decodificado não revela confiavelmente chaves duplicadas na entrada bruta.",
+    "es": "JSON sintácticamente válido puede violar reglas de dominio. Dict decodificado no revela de forma fiable claves duplicadas en entrada cruda."
+  },
+  "intent": {
+    "en": "Assess layered validation and boundary tests.",
+    "pt-BR": "Avaliar validação em camadas e testes de fronteira.",
+    "es": "Evaluar validación por capas y pruebas de frontera."
+  },
+  "common_errors": {
+    "en": [
+      "Treat successful JSON parsing as proof of valid business input."
+    ],
+    "pt-BR": [
+      "Tratar parsing JSON bem-sucedido como prova de entrada de negócio válida."
+    ],
+    "es": [
+      "Tratar parsing JSON exitoso como prueba de entrada de negocio válida."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why reject extra owner fields in this contract?"
+    ],
+    "pt-BR": [
+      "Por que rejeitar campo owner extra neste contrato?"
+    ],
+    "es": [
+      "¿Por qué rechazar campo owner adicional en este contrato?"
+    ]
+  },
+  "examples": {
+    "en": "A title of exactly 80 characters after trimming is accepted; 81 is rejected.",
+    "pt-BR": "Título de exatamente 80 caracteres após trim é aceito; 81 rejeitado.",
+    "es": "Título de exactamente 80 caracteres tras trim se acepta; 81 se rechaza."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Separates parsing and shape/type/length validation with positive and negative examples.",
+        "pt-BR": "Separa parsing de validação de formato/tipo/tamanho com exemplos positivos e negativos.",
+        "es": "Separa parsing de validación de forma/tipo/longitud con ejemplos positivos y negativos."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Identifies transport limits and raw duplicate-key handling as separate concerns.",
+        "pt-BR": "Identifica limites de transporte e chaves duplicadas brutas como preocupações distintas.",
+        "es": "Identifica límites de transporte y claves duplicadas crudas como asuntos separados."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.md",
+        "pt-BR": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.pt-BR.md",
+        "es": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.es.md"
+      },
+      "sections": {
+        "en": "Validate the boundary",
+        "pt-BR": "Validar a fronteira",
+        "es": "Validar la frontera"
+      }
+    }
+  ]
+}

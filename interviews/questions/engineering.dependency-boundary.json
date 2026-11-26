@@ -1,0 +1,98 @@
+{
+  "id": "engineering.dependency-boundary",
+  "topic": "software-engineering",
+  "level": "mid",
+  "prompt": {
+    "en": "A progress-report rule currently opens a database directly. Redesign the boundary to support unit tests without storage; explain integration tests and how to record the decision in an ADR.",
+    "pt-BR": "Regra de relatório de progresso abre banco diretamente. Redesenhe fronteira para testes unitários sem armazenamento; explique integração e como registrar decisão em ADR.",
+    "es": "Regla de informe de progreso abre base directamente. Rediseña frontera para pruebas unitarias sin almacenamiento; explica integración y cómo registrar decisión en ADR."
+  },
+  "expected_answer": {
+    "en": "Inject a loader callable returning completion IDs for the learner; keep unique-ID counting and validation in the domain rule. Use a fake to test duplicates, empty input, invalid IDs and propagated dependency failure. Integration tests verify actual query/mapping separately. Record context, alternatives (direct query vs injected loader), decision, consequences and acceptance criteria.",
+    "pt-BR": "Injete callable loader retornando IDs concluídos para aluno; mantenha contagem de IDs únicos e validação na regra. Use fake para duplicados, vazio, IDs inválidos e falha de dependência propagada. Integração verifica consulta/mapeamento real separadamente. Registre contexto, alternativas (consulta direta vs loader injetado), decisão, consequências e critérios de aceite.",
+    "es": "Inyecta callable loader que devuelve IDs completados para alumno; conserva conteo de IDs únicos y validación en regla. Usa doble para duplicados, vacío, IDs inválidos y fallo de dependencia propagado. Integración verifica consulta/mapeo real aparte. Registra contexto, alternativas (consulta directa vs loader inyectado), decisión, consecuencias y criterios de aceptación."
+  },
+  "explanation": {
+    "en": "Dependency injection isolates policy tests but does not verify the real storage boundary; abstraction adds indirection.",
+    "pt-BR": "Injeção isola testes de política mas não verifica fronteira real; abstração adiciona indireção.",
+    "es": "Inyección aísla pruebas de política pero no verifica frontera real; abstracción añade indirección."
+  },
+  "intent": {
+    "en": "Assess maintainability, test seams and documented decisions.",
+    "pt-BR": "Avaliar manutenibilidade, fronteiras de teste e decisões documentadas.",
+    "es": "Evaluar mantenibilidad, fronteras de prueba y decisiones documentadas."
+  },
+  "common_errors": {
+    "en": [
+      "Replace every integration test with fake-loader tests."
+    ],
+    "pt-BR": [
+      "Substituir todo teste de integração por testes de loader fake."
+    ],
+    "es": [
+      "Sustituir toda prueba de integración por pruebas de loader doble."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "When would direct code be simpler than introducing a new abstraction?"
+    ],
+    "pt-BR": [
+      "Quando código direto seria mais simples que nova abstração?"
+    ],
+    "es": [
+      "¿Cuándo código directo sería más simple que nueva abstracción?"
+    ]
+  },
+  "examples": {
+    "en": "progress_report(\"learner-a\", lambda _: [1,2,2]) should return {\"completed\":2}.",
+    "pt-BR": "progress_report(\"learner-a\", lambda _: [1,2,2]) deve retornar {\"completed\":2}.",
+    "es": "progress_report(\"learner-a\", lambda _: [1,2,2]) debe devolver {\"completed\":2}."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes a replaceable loader and distinguishes unit and integration responsibilities.",
+        "pt-BR": "Propõe loader substituível e distingue responsabilidades unitária/integração.",
+        "es": "Propone loader sustituible y distingue responsabilidades unitaria/integración."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Records context, alternatives, decision and consequences including test evidence.",
+        "pt-BR": "Registra contexto, alternativas, decisão e consequências incluindo evidência de teste.",
+        "es": "Registra contexto, alternativas, decisión y consecuencias incluida evidencia de prueba."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md",
+        "pt-BR": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.pt-BR.md",
+        "es": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md"
+      },
+      "sections": {
+        "en": "Decisions start with a requirement",
+        "pt-BR": "Decisões começam no requisito",
+        "es": "Decisiones empiezan en el requisito"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md",
+        "pt-BR": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.pt-BR.md",
+        "es": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md"
+      },
+      "sections": {
+        "en": "Trade-offs and operation",
+        "pt-BR": "Trade-offs e operação",
+        "es": "Compromisos y operación"
+      }
+    }
+  ]
+}

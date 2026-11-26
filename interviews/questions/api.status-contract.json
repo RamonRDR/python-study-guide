@@ -1,0 +1,86 @@
+{
+  "id": "api.status-contract",
+  "topic": "backend-apis",
+  "level": "junior",
+  "prompt": {
+    "en": "A GET-only /lessons endpoint receives GET /missing and POST /lessons. Which statuses are appropriate and which header must accompany the unsupported method?",
+    "pt-BR": "Endpoint /lessons só GET recebe GET /missing e POST /lessons. Quais status adequados e qual header acompanha método não suportado?",
+    "es": "Endpoint /lessons solo GET recibe GET /missing y POST /lessons. ¿Qué estados adecuados y qué header acompaña método no admitido?"
+  },
+  "expected_answer": {
+    "en": "Return 404 for the missing resource and 405 for a known target with an unsupported method. Include Allow: GET under the stated GET-only contract. A successful GET can return 200.",
+    "pt-BR": "Retorne 404 para recurso ausente e 405 para alvo conhecido com método não suportado. Inclua Allow: GET sob contrato somente GET. GET bem-sucedido pode retornar 200.",
+    "es": "Devuelve 404 para recurso ausente y 405 para destino conocido con método no admitido. Incluye Allow: GET bajo contrato solo GET. GET exitoso puede devolver 200."
+  },
+  "explanation": {
+    "en": "Missing targets and unsupported methods are distinct failure cases.",
+    "pt-BR": "Alvos ausentes e métodos não suportados são falhas distintas.",
+    "es": "Destinos ausentes y métodos no admitidos son fallos distintos."
+  },
+  "intent": {
+    "en": "Assess status-code semantics and contracts.",
+    "pt-BR": "Avaliar semântica de status e contratos.",
+    "es": "Evaluar semántica de estados y contratos."
+  },
+  "common_errors": {
+    "en": [
+      "Return 200 for all outcomes or confuse 404 with 405."
+    ],
+    "pt-BR": [
+      "Retornar 200 para todo resultado ou confundir 404 com 405."
+    ],
+    "es": [
+      "Devolver 200 para todo resultado o confundir 404 con 405."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What would a stable error body avoid revealing?"
+    ],
+    "pt-BR": [
+      "O que corpo de erro estável evitaria revelar?"
+    ],
+    "es": [
+      "¿Qué evitaría revelar un cuerpo de error estable?"
+    ]
+  },
+  "examples": {
+    "en": "GET /missing → 404; POST /lessons → 405 and Allow: GET.",
+    "pt-BR": "GET /missing → 404; POST /lessons → 405 e Allow: GET.",
+    "es": "GET /missing → 404; POST /lessons → 405 y Allow: GET."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Chooses both correct statuses for the distinct cases.",
+        "pt-BR": "Escolhe ambos status corretos para casos distintos.",
+        "es": "Elige ambos estados correctos para casos distintos."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Includes Allow and explains its relation to the known target.",
+        "pt-BR": "Inclui Allow e explica relação com alvo conhecido.",
+        "es": "Incluye Allow y explica relación con destino conocido."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.md",
+        "pt-BR": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.pt-BR.md",
+        "es": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.es.md"
+      },
+      "sections": {
+        "en": "Response design",
+        "pt-BR": "Design de resposta",
+        "es": "Diseño de respuesta"
+      }
+    }
+  ]
+}
