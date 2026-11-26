@@ -45,8 +45,13 @@ def valid_path(value, locale, root):
     if (path.is_absolute() or path.as_posix() != value
             or ".." in path.parts or path.name != SUFFIXES[locale]
             or len(path.parts) != 3
-            or path.parts[0] != "technical-interview-preparation"
-            or not re.fullmatch(r"(?:0[1-9]|1[0-9]|2[013])-[a-z0-9-]+", path.parts[1])):
+            or path.parts[0] not in {"technical-interview-preparation", "problem-solving-and-live-coding"}):
+        return False
+    chapter_patterns = {
+        "technical-interview-preparation": r"(?:0[1-9]|1[0-9]|2[013])-[a-z0-9-]+",
+        "problem-solving-and-live-coding": r"(?:0[1-9]|1[0-6])-[a-z0-9-]+",
+    }
+    if not re.fullmatch(chapter_patterns[path.parts[0]], path.parts[1]):
         return False
     actual = root / value
     return actual.resolve().is_relative_to(root.resolve()) and actual.is_file()
