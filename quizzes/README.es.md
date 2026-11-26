@@ -2,7 +2,7 @@
 
 [English](README.md) | [Português (Brasil)](README.pt-BR.md) | [Español](README.es.md)
 
-El banco de fundamentos contiene 78 cuestionarios en los módulos 00–05: 37 fáciles, 30 medios y 11 difíciles, con 1.300 XP. Incluye las diez preguntas originales del piloto. Los 82 cuestionarios restantes están previstos para C2.
+El banco completo contiene 160 cuestionarios: 64 fáciles, 67 medios y 29 difíciles, con 2.850 XP. Conserva las 78 preguntas de fundamentos (incluidas las diez originales del piloto) y añade 82 preguntas de expansión.
 
 Estudia primero las secciones de requisitos previos enlazadas. Abre el JSON de la pregunta y usa el enunciado, la explicación y las pistas en español. Las respuestas son públicas: intenta resolver cada pregunta antes de revelar la respuesta. Para predicción de salida, reproduce la salida exacta (incluido el salto de línea final cuando se indique); solo se admite la normalización LF permitida por el registro. Para completar código, introduce únicamente el texto, símbolo, nombre de función o palabra clave solicitado. No hay ejecución en el navegador.
 
@@ -113,6 +113,128 @@ Estudia primero las secciones de requisitos previos enlazadas. Abre el JSON de l
 | `scope` | [quiz.local-before-assignment](questions/quiz.local-before-assignment.json) | Difícil |
 | `scope` | [quiz.local-binding-shadow](questions/quiz.local-binding-shadow.json) | Medio |
 | `type-hints` | [quiz.type-hints-runtime](questions/quiz.type-hints-runtime.json) | Fácil |
+
+## 06 · Comentarios y documentación (8)
+
+| Capítulo | ID del cuestionario | Dificultad |
+|---|---|---|
+| `comments` | [quiz.hash-inside-string](questions/quiz.hash-inside-string.json) | Fácil |
+| `comments-vs-logging` | [quiz.log-fallback-level](questions/quiz.log-fallback-level.json) | Medio |
+| `docstrings` | [quiz.docstring-first-statement](questions/quiz.docstring-first-statement.json) | Fácil |
+| `docstrings` | [quiz.docstring-runtime-attribute](questions/quiz.docstring-runtime-attribute.json) | Medio |
+| `meaningful-names` | [quiz.name-with-explicit-unit](questions/quiz.name-with-explicit-unit.json) | Fácil |
+| `pep8-and-readability` | [quiz.none-check-preserve-zero](questions/quiz.none-check-preserve-zero.json) | Difícil |
+| `pep8-and-readability` | [quiz.pep8-guidance-not-syntax](questions/quiz.pep8-guidance-not-syntax.json) | Medio |
+| `task-markers` | [quiz.task-marker-no-runtime](questions/quiz.task-marker-no-runtime.json) | Fácil |
+
+## 07 · Errores, archivos y módulos (12)
+
+| Capítulo | ID del cuestionario | Dificultad |
+|---|---|---|
+| `imports-modules-and-packages` | [quiz.import-alias-keyword](questions/quiz.import-alias-keyword.json) | Medio |
+| `imports-modules-and-packages` | [quiz.import-initialization-side-effect](questions/quiz.import-initialization-side-effect.json) | Difícil |
+| `imports-modules-and-packages` | [quiz.python-source-module](questions/quiz.python-source-module.json) | Fácil |
+| `open-and-with` | [quiz.append-preserve-existing-file](questions/quiz.append-preserve-existing-file.json) | Medio |
+| `open-and-with` | [quiz.open-returns-file](questions/quiz.open-returns-file.json) | Fácil |
+| `raise-and-custom-exceptions` | [quiz.raise-keyword](questions/quiz.raise-keyword.json) | Fácil |
+| `raise-and-custom-exceptions` | [quiz.value-error-contract](questions/quiz.value-error-contract.json) | Medio |
+| `try-except-else-finally` | [quiz.catch-invalid-integer](questions/quiz.catch-invalid-integer.json) | Fácil |
+| `try-except-else-finally` | [quiz.finally-propagates-unhandled](questions/quiz.finally-propagates-unhandled.json) | Difícil |
+| `try-except-else-finally` | [quiz.try-else-success-only](questions/quiz.try-else-success-only.json) | Medio |
+| `txt-csv-and-json` | [quiz.csv-quoted-comma](questions/quiz.csv-quoted-comma.json) | Medio |
+| `txt-csv-and-json` | [quiz.extension-does-not-parse](questions/quiz.extension-does-not-parse.json) | Fácil |
+
+## 08 · Biblioteca estándar (10)
+
+| Capítulo | ID del cuestionario | Dificultad |
+|---|---|---|
+| `collections` | [quiz.counter-tally-purpose](questions/quiz.counter-tally-purpose.json) | Fácil |
+| `csv` | [quiz.csv-convert-before-validation](questions/quiz.csv-convert-before-validation.json) | Medio |
+| `datetime` | [quiz.timedelta-duration](questions/quiz.timedelta-duration.json) | Fácil |
+| `decimal` | [quiz.decimal-exact-input-boundary](questions/quiz.decimal-exact-input-boundary.json) | Difícil |
+| `decimal` | [quiz.decimal-float-arithmetic-error](questions/quiz.decimal-float-arithmetic-error.json) | Medio |
+| `itertools` | [quiz.chain-one-level](questions/quiz.chain-one-level.json) | Medio |
+| `json` | [quiz.json-dumps-text-not-bytes](questions/quiz.json-dumps-text-not-bytes.json) | Medio |
+| `logging` | [quiz.logging-handler-threshold](questions/quiz.logging-handler-threshold.json) | Medio |
+| `os-shutil` | [quiz.os-getcwd-process-state](questions/quiz.os-getcwd-process-state.json) | Fácil |
+| `pathlib` | [quiz.relative-path-working-directory](questions/quiz.relative-path-working-directory.json) | Fácil |
+
+## 09 · Bibliotecas externas (8)
+
+| Capítulo | ID del cuestionario | Dificultad |
+|---|---|---|
+| `openpyxl` | [quiz.openpyxl-formula-not-engine](questions/quiz.openpyxl-formula-not-engine.json) | Medio |
+| `openpyxl` | [quiz.openpyxl-xlsx-format](questions/quiz.openpyxl-xlsx-format.json) | Fácil |
+| `pandas` | [quiz.dataframe-labeled-table](questions/quiz.dataframe-labeled-table.json) | Fácil |
+| `pandas` | [quiz.pandas-label-selection](questions/quiz.pandas-label-selection.json) | Medio |
+| `pandas` | [quiz.pandas-merge-cardinality](questions/quiz.pandas-merge-cardinality.json) | Difícil |
+| `pytest` | [quiz.pytest-collect-only](questions/quiz.pytest-collect-only.json) | Medio |
+| `requests` | [quiz.requests-explicit-timeout](questions/quiz.requests-explicit-timeout.json) | Fácil |
+| `requests` | [quiz.requests-json-not-success](questions/quiz.requests-json-not-success.json) | Medio |
+
+## 10 · Proyectos prácticos (8)
+
+| Capítulo | ID del cuestionario | Dificultad |
+|---|---|---|
+| `csv-analyzer` | [quiz.csv-row-rejection-isolated](questions/quiz.csv-row-rejection-isolated.json) | Medio |
+| `expense-tracker` | [quiz.expense-reject-zero](questions/quiz.expense-reject-zero.json) | Fácil |
+| `fictional-reconciliation-workflow` | [quiz.reconciliation-duplicate-source](questions/quiz.reconciliation-duplicate-source.json) | Medio |
+| `file-organizer` | [quiz.organizer-exact-name-atomic-boundary](questions/quiz.organizer-exact-name-atomic-boundary.json) | Difícil |
+| `grade-calculator` | [quiz.grade-weight-atomic-rejection](questions/quiz.grade-weight-atomic-rejection.json) | Medio |
+| `report-generator` | [quiz.report-inclusive-boundaries](questions/quiz.report-inclusive-boundaries.json) | Fácil |
+| `simulated-automation-flow` | [quiz.automation-failure-publication](questions/quiz.automation-failure-publication.json) | Difícil |
+| `user-registration` | [quiz.registration-canonical-uniqueness](questions/quiz.registration-canonical-uniqueness.json) | Medio |
+
+## Prácticas manuales de programación (8)
+
+| Capítulo | ID del cuestionario | Dificultad |
+|---|---|---|
+| `manual-coding-and-debugging` | [quiz.predict-before-execution](questions/quiz.predict-before-execution.json) | Fácil |
+| `manual-coding-and-debugging` | [quiz.traceback-diagnosis-first](questions/quiz.traceback-diagnosis-first.json) | Medio |
+| `professional-workflow` | [quiz.green-ci-not-complete-proof](questions/quiz.green-ci-not-complete-proof.json) | Medio |
+| `specification-driven-development` | [quiz.acceptance-observable-evidence](questions/quiz.acceptance-observable-evidence.json) | Fácil |
+| `specification-driven-development` | [quiz.sdd-exact-int-contract](questions/quiz.sdd-exact-int-contract.json) | Medio |
+| `specification-driven-development` | [quiz.sdd-type-before-range](questions/quiz.sdd-type-before-range.json) | Difícil |
+| `test-driven-development` | [quiz.tdd-red-first](questions/quiz.tdd-red-first.json) | Fácil |
+| `test-driven-development` | [quiz.tdd-refactor-preserve-behavior](questions/quiz.tdd-refactor-preserve-behavior.json) | Medio |
+
+## 11 · Resolución de problemas y live coding (14)
+
+| Capítulo | ID del cuestionario | Dificultad |
+|---|---|---|
+| `algorithmic-complexity` | [quiz.big-o-not-seconds](questions/quiz.big-o-not-seconds.json) | Fácil |
+| `algorithmic-complexity` | [quiz.repeated-lookup-tradeoff](questions/quiz.repeated-lookup-tradeoff.json) | Medio |
+| `algorithms-and-complexity` | [quiz.pair-duplicate-multiplicity](questions/quiz.pair-duplicate-multiplicity.json) | Difícil |
+| `constraints-and-edge-cases` | [quiz.capacity-inclusive-boundary](questions/quiz.capacity-inclusive-boundary.json) | Fácil |
+| `debugging` | [quiz.negative-window-initialization](questions/quiz.negative-window-initialization.json) | Medio |
+| `functions-and-recursion` | [quiz.flatten-shared-accumulator](questions/quiz.flatten-shared-accumulator.json) | Difícil |
+| `mixed` | [quiz.inventory-order-and-delta](questions/quiz.inventory-order-and-delta.json) | Difícil |
+| `problem-solving-fundamentals` | [quiz.qualifying-minute-sum](questions/quiz.qualifying-minute-sum.json) | Fácil |
+| `problem-solving-patterns` | [quiz.rolling-window-update](questions/quiz.rolling-window-update.json) | Medio |
+| `recursion` | [quiz.recursive-sum-trace](questions/quiz.recursive-sum-trace.json) | Medio |
+| `searching-algorithms` | [quiz.binary-first-match-boundary](questions/quiz.binary-first-match-boundary.json) | Medio |
+| `searching-and-sorting` | [quiz.binary-target-exclusive-end](questions/quiz.binary-target-exclusive-end.json) | Difícil |
+| `sorting-algorithms` | [quiz.insertion-stable-shift](questions/quiz.insertion-stable-shift.json) | Medio |
+| `strings-and-numbers` | [quiz.distinct-window-monotonic](questions/quiz.distinct-window-monotonic.json) | Difícil |
+
+## 12 · Preparación para entrevistas técnicas (14)
+
+| Capítulo | ID del cuestionario | Dificultad |
+|---|---|---|
+| `api-contracts-authentication-and-authorization` | [quiz.authentication-not-object-authorization](questions/quiz.authentication-not-object-authorization.json) | Fácil |
+| `attributes-methods-and-object-behavior` | [quiz.classmethod-subclass-factory](questions/quiz.classmethod-subclass-factory.json) | Medio |
+| `classes-and-objects` | [quiz.instance-initialization-role](questions/quiz.instance-initialization-role.json) | Fácil |
+| `closures-and-decorators` | [quiz.closure-late-binding-snapshot](questions/quiz.closure-late-binding-snapshot.json) | Difícil |
+| `concurrency-parallelism-and-the-gil` | [quiz.gil-compound-invariant](questions/quiz.gil-compound-invariant.json) | Difícil |
+| `context-managers` | [quiz.context-exit-false-propagation](questions/quiz.context-exit-false-propagation.json) | Medio |
+| `http-rest-and-backend-fundamentals` | [quiz.http-get-retrieval](questions/quiz.http-get-retrieval.json) | Fácil |
+| `inheritance-polymorphism-and-composition` | [quiz.composition-replaceable-collaborator](questions/quiz.composition-replaceable-collaborator.json) | Medio |
+| `iterators-generators-and-comprehensions` | [quiz.exhausted-generator-next](questions/quiz.exhausted-generator-next.json) | Medio |
+| `joins-aggregations-and-data-relationships` | [quiz.left-join-zero-child-count](questions/quiz.left-join-zero-child-count.json) | Difícil |
+| `object-identity-references-and-copying` | [quiz.deepcopy-preserves-internal-alias](questions/quiz.deepcopy-preserves-internal-alias.json) | Medio |
+| `python-memory-management` | [quiz.reachable-cache-retention](questions/quiz.reachable-cache-retention.json) | Difícil |
+| `relational-databases-and-sql` | [quiz.sql-check-null-constraint](questions/quiz.sql-check-null-constraint.json) | Medio |
+| `transactions-indexes-and-sql-safety` | [quiz.transaction-failed-credit-rollback](questions/quiz.transaction-failed-credit-rollback.json) | Difícil |
 
 - [Banco de ejercicios](../exercises/README.es.md)
 - [Índice versionado de ejercicios](../exercises/problem-solving/exercise-index.json)
