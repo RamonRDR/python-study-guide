@@ -3,9 +3,9 @@
   "topic": "python-fundamentals",
   "level": "junior",
   "prompt": {
-    "en": "Given `def add(x, items=[]): items.append(x); return items`, what do `print(add(1)); print(add(2))` display on consecutive calls? Fix the omitted-list behavior.",
-    "pt-BR": "Dado `def add(x, items=[]): items.append(x); return items`, o que `print(add(1)); print(add(2))` exibem em chamadas consecutivas? Corrija o comportamento quando a lista é omitida.",
-    "es": "Dado `def add(x, items=[]): items.append(x); return items`, ¿qué muestran `print(add(1)); print(add(2))` en llamadas consecutivas? Corrige el comportamiento cuando se omite la lista."
+    "en": "Given `def add(x, items=[]): items.append(x); return items`, what do `print(add(1)); print(add(2))` display on consecutive calls? Fix the omitted-list behavior. Preserve mutation of explicitly supplied lists, including an empty list.",
+    "pt-BR": "Dado `def add(x, items=[]): items.append(x); return items`, o que `print(add(1)); print(add(2))` exibem em chamadas consecutivas? Corrija o comportamento quando a lista é omitida. Preserve a mutação das listas fornecidas explicitamente, inclusive uma lista vazia.",
+    "es": "Dado `def add(x, items=[]): items.append(x); return items`, ¿qué muestran `print(add(1)); print(add(2))` en llamadas consecutivas? Corrige el comportamiento cuando se omite la lista. Conserva la mutación de listas suministradas explícitamente, incluida una lista vacía."
   },
   "expected_answer": {
     "en": "The prints are `[1]` and `[1, 2]`. The default list is created when the function is defined and reused. Default to None, then create a new list only when items is None.",

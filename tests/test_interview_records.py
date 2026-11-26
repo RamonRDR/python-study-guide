@@ -27,6 +27,8 @@ class InterviewRecordsTests(unittest.TestCase):
             self.assertEqual(validate_question(q, ROOT), [], q["id"])
         for locale, suffix in (("en", ""), ("pt-BR", ".pt-BR"), ("es", ".es")):
             text = (CHAPTER / f"README{suffix}.md").read_text(encoding="utf-8")
+            self.assertEqual(text.count("<!-- interview-questions:start -->\n"), 1)
+            self.assertEqual(text.count("<!-- interview-questions:end -->"), 1)
             block = text.split("<!-- interview-questions:start -->\n")[1]
             block = block.split("<!-- interview-questions:end -->")[0]
             self.assertEqual(block, render_questions(self.records, locale))

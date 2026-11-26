@@ -3,9 +3,9 @@
   "topic": "databases-sql",
   "level": "mid",
   "prompt": {
-    "en": "Given groups(id, name) and tasks(id, group_id, done), return the count of completed tasks per group, including groups with no completed tasks. How do ON, WHERE and COUNT affect correctness?",
-    "pt-BR": "Dadas groups(id, name) e tasks(id, group_id, done), retorne contagem de tarefas concluídas por grupo, incluindo grupos sem concluídas. Como ON, WHERE e COUNT afetam correção?",
-    "es": "Dadas groups(id, name) y tasks(id, group_id, done), devuelve conteo de tareas completadas por grupo, incluidos grupos sin completadas. ¿Cómo afectan ON, WHERE y COUNT a corrección?"
+    "en": "Given groups(id, name) and tasks(id, group_id, done), return the count of completed tasks per group, including groups with no completed tasks. How do ON, WHERE and COUNT affect correctness? Assume both id columns are primary keys, tasks.group_id references groups.id and done is 0 or 1. Explain why grouping only by name is insufficient.",
+    "pt-BR": "Dadas groups(id, name) e tasks(id, group_id, done), retorne contagem de tarefas concluídas por grupo, incluindo grupos sem concluídas. Como ON, WHERE e COUNT afetam correção? Considere ambas as colunas id chaves primárias, tasks.group_id referenciando groups.id e done igual a 0 ou 1. Explique por que agrupar apenas por nome é insuficiente.",
+    "es": "Dadas groups(id, name) y tasks(id, group_id, done), devuelve conteo de tareas completadas por grupo, incluidos grupos sin completadas. ¿Cómo afectan ON, WHERE y COUNT a corrección? Supón que ambas columnas id son claves primarias, tasks.group_id referencia groups.id y done vale 0 o 1. Explica por qué agrupar solo por nombre es insuficiente."
   },
   "expected_answer": {
     "en": "LEFT JOIN tasks on the group ID with done = 1 in ON; group by the group ID and name, count tasks.id (non-null for actual tasks). WHERE tasks.done = 1 would discard null-extended rows; COUNT(*) would count the unmatched row.",

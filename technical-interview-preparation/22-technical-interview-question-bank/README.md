@@ -57,7 +57,7 @@ Maximum: 3
 
 `junior` · `python-fundamentals`
 
-Given `def add(x, items=[]): items.append(x); return items`, what do `print(add(1)); print(add(2))` display on consecutive calls? Fix the omitted-list behavior.
+Given `def add(x, items=[]): items.append(x); return items`, what do `print(add(1)); print(add(2))` display on consecutive calls? Fix the omitted-list behavior. Preserve mutation of explicitly supplied lists, including an empty list.
 
 <details>
 <summary>Expected answer</summary>
@@ -147,7 +147,7 @@ Maximum: 3
 
 `mid` · `oop`
 
-A report notifier must support text and email channels, then a fake channel in tests. Compare inheritance and composition; propose a design without changing the notifier for each channel.
+A report notifier must support text and email channels, then a fake channel in tests. Compare inheritance and composition; propose a design without changing the notifier for each channel. Explain a trade-off and how a fake would test the contract.
 
 <details>
 <summary>Expected answer</summary>
@@ -169,7 +169,7 @@ Inject a collaborator with a defined send contract; the notifier delegates to it
 
 **Example**
 
-`Notifier(channel)` delegates `send('Ready')` to a fake returning `test: Ready`, without contacting a network.
+`Notifier(channel).notify('Ready')` delegates to the fake channel's `send('Ready')`, returning `test: Ready` without contacting a network.
 
 **Self-assessment rubric**
 
@@ -189,7 +189,7 @@ Maximum: 3
 
 `mid` · `python-internals`
 
-A dictionary contains two keys referencing the same mutable list. You need an independent graph while preserving the alias relationship inside the copy. Compare assignment, shallow copy and deep copy.
+A dictionary contains two keys referencing the same mutable list. You need an independent graph while preserving the alias relationship inside the copy. Compare assignment, shallow copy and deep copy. Explain copying limitations and how you would test isolation and preserved aliasing.
 
 <details>
 <summary>Expected answer</summary>
@@ -238,7 +238,7 @@ Maximum: 3
 
 `mid` · `databases-sql`
 
-Given groups(id, name) and tasks(id, group_id, done), return the count of completed tasks per group, including groups with no completed tasks. How do ON, WHERE and COUNT affect correctness?
+Given groups(id, name) and tasks(id, group_id, done), return the count of completed tasks per group, including groups with no completed tasks. How do ON, WHERE and COUNT affect correctness? Assume both id columns are primary keys, tasks.group_id references groups.id and done is 0 or 1. Explain why grouping only by name is insufficient.
 
 <details>
 <summary>Expected answer</summary>
@@ -313,7 +313,7 @@ Compare sequential baseline, bounded threads for blocking I/O and processes for 
 **Self-assessment rubric**
 
 - 1 — Distinguishes conventional GIL from experimental free-threading with extension caveat.
-- 1 — Chooses I/O/CPU strategies with at least one trade-off and actual workload measurement.
+- 1 — Chooses I/O/CPU strategies with at least one trade-off and proposes measurement on the actual workload.
 - 1 — Protects shared invariant and distinguishes correctness tests from benchmarks.
 
 Maximum: 3
@@ -323,6 +323,8 @@ Maximum: 3
 **Prerequisites**
 
 - [The GIL in Python 3.13](../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md)
+- [Concurrency and parallelism](../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md)
+- [Shared-state example](../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md)
 
 ### api.object-authorization
 
@@ -407,6 +409,7 @@ Maximum: 3
 **Prerequisites**
 
 - [Trade-offs and operation](../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md)
+- [Decisions start with a requirement](../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md)
 
 <!-- interview-questions:end -->
 

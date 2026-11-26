@@ -57,7 +57,7 @@ Máximo: 3
 
 `junior` · `python-fundamentals`
 
-Dado `def add(x, items=[]): items.append(x); return items`, ¿qué muestran `print(add(1)); print(add(2))` en llamadas consecutivas? Corrige el comportamiento cuando se omite la lista.
+Dado `def add(x, items=[]): items.append(x); return items`, ¿qué muestran `print(add(1)); print(add(2))` en llamadas consecutivas? Corrige el comportamiento cuando se omite la lista. Conserva la mutación de listas suministradas explícitamente, incluida una lista vacía.
 
 <details>
 <summary>Respuesta esperada</summary>
@@ -147,7 +147,7 @@ Máximo: 3
 
 `mid` · `oop`
 
-Un notificador de informes debe admitir canales de texto y email, luego canal falso en pruebas. Compara herencia y composición; propone diseño sin cambiar notificador por canal.
+Un notificador de informes debe admitir canales de texto y email, luego canal falso en pruebas. Compara herencia y composición; propone diseño sin cambiar notificador por canal. Explica un compromiso y cómo un doble probaría el contrato.
 
 <details>
 <summary>Respuesta esperada</summary>
@@ -169,7 +169,7 @@ Inyecta colaborador con contrato send definido; notificador delega. Canales comp
 
 **Ejemplo**
 
-`Notifier(channel)` delega `send('Ready')` a doble que devuelve `test: Ready`, sin acceder a red.
+`Notifier(channel).notify('Ready')` delega al `send('Ready')` del doble, devolviendo `test: Ready` sin acceder a red.
 
 **Rúbrica de autoevaluación**
 
@@ -189,7 +189,7 @@ Máximo: 3
 
 `mid` · `python-internals`
 
-Diccionario contiene dos claves referenciando misma lista mutable. Necesitas grafo independiente conservando relación de alias dentro de copia. Compara asignación, copia superficial y profunda.
+Diccionario contiene dos claves referenciando misma lista mutable. Necesitas grafo independiente conservando relación de alias dentro de copia. Compara asignación, copia superficial y profunda. Explica límites de copia y cómo probarías aislamiento y conservación del alias.
 
 <details>
 <summary>Respuesta esperada</summary>
@@ -238,7 +238,7 @@ Máximo: 3
 
 `mid` · `databases-sql`
 
-Dadas groups(id, name) y tasks(id, group_id, done), devuelve conteo de tareas completadas por grupo, incluidos grupos sin completadas. ¿Cómo afectan ON, WHERE y COUNT a corrección?
+Dadas groups(id, name) y tasks(id, group_id, done), devuelve conteo de tareas completadas por grupo, incluidos grupos sin completadas. ¿Cómo afectan ON, WHERE y COUNT a corrección? Supón que ambas columnas id son claves primarias, tasks.group_id referencia groups.id y done vale 0 o 1. Explica por qué agrupar solo por nombre es insuficiente.
 
 <details>
 <summary>Respuesta esperada</summary>
@@ -313,7 +313,7 @@ Compara base secuencial, hilos limitados para I/O bloqueante y procesos para CPU
 **Rúbrica de autoevaluación**
 
 - 1 — Distingue GIL convencional de free-threading experimental con salvedad de extensiones.
-- 1 — Elige estrategias I/O/CPU con compromiso y medición de carga real.
+- 1 — Elige estrategias I/O/CPU con compromiso y propone medición en la carga real.
 - 1 — Protege invariante compartido y distingue pruebas de corrección de benchmarks.
 
 Máximo: 3
@@ -323,6 +323,8 @@ Máximo: 3
 **Requisitos previos**
 
 - [GIL en Python 3.13](../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md)
+- [Concurrencia y paralelismo](../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md)
+- [Ejemplo de estado compartido](../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md)
 
 ### api.object-authorization
 
@@ -407,6 +409,7 @@ Máximo: 3
 **Requisitos previos**
 
 - [Compromisos y operación](../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md)
+- [Decisiones empiezan en el requisito](../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md)
 
 <!-- interview-questions:end -->
 

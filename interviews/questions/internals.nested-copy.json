@@ -3,9 +3,9 @@
   "topic": "python-internals",
   "level": "mid",
   "prompt": {
-    "en": "A dictionary contains two keys referencing the same mutable list. You need an independent graph while preserving the alias relationship inside the copy. Compare assignment, shallow copy and deep copy.",
-    "pt-BR": "Dicionário contém duas chaves referenciando mesma lista mutável. Você precisa de grafo independente preservando relação de alias dentro da cópia. Compare atribuição, cópia rasa e profunda.",
-    "es": "Diccionario contiene dos claves referenciando misma lista mutable. Necesitas grafo independiente conservando relación de alias dentro de copia. Compara asignación, copia superficial y profunda."
+    "en": "A dictionary contains two keys referencing the same mutable list. You need an independent graph while preserving the alias relationship inside the copy. Compare assignment, shallow copy and deep copy. Explain copying limitations and how you would test isolation and preserved aliasing.",
+    "pt-BR": "Dicionário contém duas chaves referenciando mesma lista mutável. Você precisa de grafo independente preservando relação de alias dentro da cópia. Compare atribuição, cópia rasa e profunda. Explique limites da cópia e como testaria isolamento e preservação do alias.",
+    "es": "Diccionario contiene dos claves referenciando misma lista mutable. Necesitas grafo independiente conservando relación de alias dentro de copia. Compara asignación, copia superficial y profunda. Explica límites de copia y cómo probarías aislamiento y conservación del alias."
   },
   "expected_answer": {
     "en": "Assignment shares the original dictionary; shallow copy creates a new outer dictionary but shares the list. For these built-in containers, deepcopy copies the nested list once and reuses that copy for both keys via its memo.",

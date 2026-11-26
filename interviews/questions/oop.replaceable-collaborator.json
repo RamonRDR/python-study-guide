@@ -3,9 +3,9 @@
   "topic": "oop",
   "level": "mid",
   "prompt": {
-    "en": "A report notifier must support text and email channels, then a fake channel in tests. Compare inheritance and composition; propose a design without changing the notifier for each channel.",
-    "pt-BR": "Um notificador de relatórios deve suportar canais de texto e email, depois canal fake em testes. Compare herança e composição; proponha design sem alterar notificador a cada canal.",
-    "es": "Un notificador de informes debe admitir canales de texto y email, luego canal falso en pruebas. Compara herencia y composición; propone diseño sin cambiar notificador por canal."
+    "en": "A report notifier must support text and email channels, then a fake channel in tests. Compare inheritance and composition; propose a design without changing the notifier for each channel. Explain a trade-off and how a fake would test the contract.",
+    "pt-BR": "Um notificador de relatórios deve suportar canais de texto e email, depois canal fake em testes. Compare herança e composição; proponha design sem alterar notificador a cada canal. Explique um trade-off e como um fake testaria o contrato.",
+    "es": "Un notificador de informes debe admitir canales de texto y email, luego canal falso en pruebas. Compara herencia y composición; propone diseño sin cambiar notificador por canal. Explica un compromiso y cómo un doble probaría el contrato."
   },
   "expected_answer": {
     "en": "Inject a collaborator with a defined send contract; the notifier delegates to it. Compatible channels may subclass a base or satisfy the behavior through duck typing. Inheritance is useful for genuine subtypes that honor the base contract, not merely reuse.",
@@ -48,9 +48,9 @@
     ]
   },
   "examples": {
-    "en": "`Notifier(channel)` delegates `send('Ready')` to a fake returning `test: Ready`, without contacting a network.",
-    "pt-BR": "`Notifier(channel)` delega `send('Ready')` a fake que retorna `test: Ready`, sem acessar rede.",
-    "es": "`Notifier(channel)` delega `send('Ready')` a doble que devuelve `test: Ready`, sin acceder a red."
+    "en": "`Notifier(channel).notify('Ready')` delegates to the fake channel's `send('Ready')`, returning `test: Ready` without contacting a network.",
+    "pt-BR": "`Notifier(channel).notify('Ready')` delega ao `send('Ready')` do canal fake, retornando `test: Ready` sem acessar rede.",
+    "es": "`Notifier(channel).notify('Ready')` delega al `send('Ready')` del doble, devolviendo `test: Ready` sin acceder a red."
   },
   "rubric": [
     {

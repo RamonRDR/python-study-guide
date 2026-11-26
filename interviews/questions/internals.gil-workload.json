@@ -66,9 +66,9 @@
       "id": "criterion-2",
       "points": 1,
       "criterion": {
-        "en": "Chooses I/O/CPU strategies with at least one trade-off and actual workload measurement.",
-        "pt-BR": "Escolhe estratégias I/O/CPU com trade-off e medição da carga real.",
-        "es": "Elige estrategias I/O/CPU con compromiso y medición de carga real."
+        "en": "Chooses I/O/CPU strategies with at least one trade-off and proposes measurement on the actual workload.",
+        "pt-BR": "Escolhe estratégias I/O/CPU com trade-off e propõe medição na carga real.",
+        "es": "Elige estrategias I/O/CPU con compromiso y propone medición en la carga real."
       }
     },
     {
@@ -92,6 +92,30 @@
         "en": "The GIL in Python 3.13",
         "pt-BR": "GIL em Python 3.13",
         "es": "GIL en Python 3.13"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md",
+        "pt-BR": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.pt-BR.md",
+        "es": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md"
+      },
+      "sections": {
+        "en": "Concurrency and parallelism",
+        "pt-BR": "Concorrência e paralelismo",
+        "es": "Concurrencia y paralelismo"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md",
+        "pt-BR": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.pt-BR.md",
+        "es": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md"
+      },
+      "sections": {
+        "en": "Shared-state example",
+        "pt-BR": "Exemplo de estado compartilhado",
+        "es": "Ejemplo de estado compartido"
       }
     }
   ]
