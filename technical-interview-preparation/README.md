@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-In progress: twenty-two lessons include the completed foundations and a nine-question technical interview pilot (three per level). The remaining technical questions, extended behavioral/international practice and mocks remain planned.
+In progress: twenty-two lessons include completed foundations and 57 technical questions (23 junior, 23 mid-level, 11 senior). Three behavioral/international questions and three timed mocks remain planned.
 
 1. [Understanding Technical Interviews](01-understanding-technical-interviews/README.md)
 2. [Live Coding and Take-Home Assignments](02-live-coding-and-take-home/README.md)

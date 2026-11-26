@@ -20,7 +20,7 @@ Status em 25/11/2026: Sprints 00–05 integradas; plano da Sprint 06 aprovado, a
 | T05-01 Pilotar desafios e testes de correção | 05 | T05-00 | Concluído ([PR #93](https://github.com/RamonRDR/python-study-guide/pull/93)) |
 | T05-02 Expandir desafios por tema/dificuldade | 05 | T05-01 | Concluído ([PR #94](https://github.com/RamonRDR/python-study-guide/pull/94), [PR #95](https://github.com/RamonRDR/python-study-guide/pull/95), `21c00c32b91a0116c8a50e89687b91f8efa04cb5`, [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45720384626)) |
 | T06-01 Mapear lacunas restantes específicas de entrevistas e ensinar conceitos necessários não cobertos na Sprint 05 | 06 | T05-02 | Concluído: aulas 01–21 integradas no #98; CI pós-merge aprovado ([#98](https://github.com/RamonRDR/python-study-guide/pull/98), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45730226049)) |
-| T06-02 Criar perguntas e simulações/rubricas | 06 | T06-01 | Em andamento: nove perguntas piloto; expansão e simulados pendentes |
+| T06-02 Criar perguntas e simulações/rubricas | 06 | T06-01 | Em andamento: 57 perguntas técnicas implementadas; perguntas comportamentais e simulados pendentes |
 | T07-01 Finalizar e validar schemas/registros de quiz/exercício | 07 | T06-02 | Pendente |
 | T08-01 Finalizar manifesto e fixtures de integração | 08 | T07-01 | Pendente |
 | T09-01 Executar QA e registrar evidências reais | 09 | T08-01 | Pendente |

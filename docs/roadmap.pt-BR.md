@@ -226,7 +226,7 @@ Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 f
 
 ## Fase 12: Preparação para entrevistas técnicas
 
-Em andamento: vinte e duas aulas incluem fundamentos concluídos e nove perguntas piloto. Demais perguntas, prática comportamental/internacional e simulados permanecem planejados. [Preparação para entrevistas técnicas](../technical-interview-preparation/README.pt-BR.md).
+Em andamento: vinte e duas aulas incluem fundamentos concluídos e 57 perguntas técnicas (23 Junior, 23 Mid-level, 11 Senior). Três perguntas comportamentais/internacionais e três simulados cronometrados permanecem planejados. [Preparação para entrevistas técnicas](../technical-interview-preparation/README.pt-BR.md).
 
 ## Phase II: Learning Hub Foundation (roadmap de engenharia)
 
