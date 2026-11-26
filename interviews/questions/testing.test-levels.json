@@ -81,6 +81,18 @@
         "pt-BR": "Testar e depurar por evidências",
         "es": "Probar y depurar con evidencias"
       }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md",
+        "pt-BR": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.pt-BR.md",
+        "es": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md"
+      },
+      "sections": {
+        "en": "Decisions start with a requirement",
+        "pt-BR": "Decisões começam no requisito",
+        "es": "Decisiones empiezan en el requisito"
+      }
     }
   ]
 }

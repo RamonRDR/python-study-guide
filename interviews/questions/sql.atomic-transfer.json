@@ -63,9 +63,9 @@
       "id": "criterion-2",
       "points": 1,
       "criterion": {
-        "en": "Explains four ACID properties and measures index benefit against cost.",
-        "pt-BR": "Explica quatro propriedades ACID e mede benefício de índice contra custo.",
-        "es": "Explica cuatro propiedades ACID y mide beneficio de índice frente a coste."
+        "en": "Explains four ACID properties and proposes measuring index benefit against cost.",
+        "pt-BR": "Explica quatro propriedades ACID e propõe medir benefício do índice contra custo.",
+        "es": "Explica cuatro propiedades ACID y propone medir beneficio del índice frente a coste."
       }
     }
   ],

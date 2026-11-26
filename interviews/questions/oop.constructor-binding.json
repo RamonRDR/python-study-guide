@@ -3,9 +3,9 @@
   "topic": "oop",
   "level": "mid",
   "prompt": {
-    "en": "Compare instance, class and static methods. Why should an inherited alternative constructor use cls(...) instead of the base class name?",
-    "pt-BR": "Compare métodos de instância, classe e estático. Por que construtor alternativo herdado deve usar cls(...) em vez de nome da classe base?",
-    "es": "Compara métodos de instancia, clase y estático. ¿Por qué constructor alternativo heredado debe usar cls(...) en vez de nombre de clase base?"
+    "en": "Compare instance, class and static methods. Why should an inherited alternative constructor use cls(...) instead of the base class name? State the subclass constructor compatibility assumption.",
+    "pt-BR": "Compare métodos de instância, classe e estático. Por que construtor alternativo herdado deve usar cls(...) em vez de nome da classe base? Declare hipótese de compatibilidade do construtor da subclasse.",
+    "es": "Compara métodos de instancia, clase y estático. ¿Por qué constructor alternativo heredado debe usar cls(...) en vez de nombre de clase base? Declara supuesto de compatibilidad del constructor de subclase."
   },
   "expected_answer": {
     "en": "Instance methods receive self; class methods receive cls; static methods receive neither implicitly. Using cls(...) lets a compatible subclass construct its own instance rather than forcing the base type.",

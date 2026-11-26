@@ -3,9 +3,9 @@
   "topic": "databases-sql",
   "level": "junior",
   "prompt": {
-    "en": "A lessons table requires unique non-null titles and positive non-null minutes. Which constraints express these rules, and what is the primary key for?",
-    "pt-BR": "Tabela lessons exige títulos únicos não nulos e minutos positivos não nulos. Quais restrições expressam regras e para que chave primária?",
-    "es": "Tabla lessons exige títulos únicos no nulos y minutos positivos no nulos. ¿Qué restricciones expresan reglas y para qué clave primaria?"
+    "en": "A lessons table requires unique non-null titles and positive non-null minutes. Which constraints express these rules, and what is the primary key for? Explain the SQLite INTEGER typing caveat if minutes must be an integer.",
+    "pt-BR": "Tabela lessons exige títulos únicos não nulos e minutos positivos não nulos. Quais restrições expressam regras e para que chave primária? Explique a ressalva da tipagem INTEGER no SQLite se minutes precisar ser inteiro.",
+    "es": "Tabla lessons exige títulos únicos no nulos y minutos positivos no nulos. ¿Qué restricciones expresan reglas y para qué clave primaria? Explica la salvedad del tipado INTEGER en SQLite si minutes debe ser entero."
   },
   "expected_answer": {
     "en": "Use title TEXT NOT NULL UNIQUE and minutes INTEGER NOT NULL CHECK(minutes > 0); a primary key identifies each row. In SQLite, declared INTEGER alone is not strict type enforcement; use an appropriate type/storage check and application validation for a true integer domain.",
