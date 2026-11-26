@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.reconciliation-duplicate-source",
+  "chapter_id": "practical-projects.fictional-reconciliation-workflow",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Two records in the same source have the same normalized reference. Which behavior does the reconciliation contract require?",
+    "pt-BR": "Dois registros na mesma fonte possuem a mesma referência normalizada. Qual comportamento o contrato de reconciliação exige?",
+    "es": "Dos registros de la misma fuente tienen la misma referencia normalizada. ¿Qué comportamiento exige el contrato de conciliación?"
+  },
+  "explanation": {
+    "en": "Duplicate references make the input ambiguous; reject with ValueError instead of silently choosing a record.",
+    "pt-BR": "Referências duplicadas tornam entrada ambígua; rejeite com ValueError em vez de escolher registro silenciosamente.",
+    "es": "Las referencias duplicadas hacen ambigua la entrada; rechaza con ValueError en vez de elegir un registro silenciosamente."
+  },
+  "hints": {
+    "en": [
+      "Do not invent a first-wins or last-wins policy."
+    ],
+    "pt-BR": [
+      "Não invente política de primeiro ou último registro prevalecer."
+    ],
+    "es": [
+      "No inventes una política donde prevalece el primero o el último."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "practical-projects/07-fictional-reconciliation-workflow/README.md",
+        "pt-BR": "practical-projects/07-fictional-reconciliation-workflow/README.pt-BR.md",
+        "es": "practical-projects/07-fictional-reconciliation-workflow/README.es.md"
+      },
+      "sections": {
+        "en": "Failure paths",
+        "pt-BR": "Caminhos de falha",
+        "es": "Caminos de fallo"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "reject"
+  },
+  "choices": [
+    {
+      "id": "first",
+      "text": {
+        "en": "Keep the first.",
+        "pt-BR": "Manter o primeiro.",
+        "es": "Conservar el primero."
+      }
+    },
+    {
+      "id": "last",
+      "text": {
+        "en": "Keep the last.",
+        "pt-BR": "Manter o último.",
+        "es": "Conservar el último."
+      }
+    },
+    {
+      "id": "sum",
+      "text": {
+        "en": "Sum both amounts.",
+        "pt-BR": "Somar ambos os valores.",
+        "es": "Sumar ambos importes."
+      }
+    },
+    {
+      "id": "reject",
+      "text": {
+        "en": "Raise ValueError.",
+        "pt-BR": "Levantar ValueError.",
+        "es": "Lanzar ValueError."
+      }
+    }
+  ]
+}

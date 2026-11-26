@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.grade-weight-atomic-rejection",
+  "chapter_id": "practical-projects.grade-calculator",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Assessments already total 80% weight. A valid individual assessment with 30% weight is submitted. What should happen?",
+    "pt-BR": "Avaliações já somam 80% de peso. Uma avaliação individual válida com peso de 30% é enviada. O que deve acontecer?",
+    "es": "Las evaluaciones ya suman un 80% de peso. Se envía una evaluación individual válida con peso del 30%. ¿Qué debe ocurrir?"
+  },
+  "explanation": {
+    "en": "The future sum exceeds 100%; reject before appending, leaving the previous collection intact.",
+    "pt-BR": "A soma futura ultrapassa 100%; rejeite antes de adicionar, mantendo a coleção anterior intacta.",
+    "es": "La suma futura supera el 100%; rechaza antes de añadir, conservando intacta la colección anterior."
+  },
+  "hints": {
+    "en": [
+      "Individual validity does not imply aggregate validity."
+    ],
+    "pt-BR": [
+      "Validade individual não implica validade agregada."
+    ],
+    "es": [
+      "La validez individual no implica validez agregada."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "practical-projects/02-grade-calculator/README.md",
+        "pt-BR": "practical-projects/02-grade-calculator/README.pt-BR.md",
+        "es": "practical-projects/02-grade-calculator/README.es.md"
+      },
+      "sections": {
+        "en": "19. Design note: validate before mutation",
+        "pt-BR": "19. Nota de design: validar antes de alterar",
+        "es": "19. Nota de diseño: validar antes de modificar"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "reject-unchanged"
+  },
+  "choices": [
+    {
+      "id": "append",
+      "text": {
+        "en": "Append and report 110%.",
+        "pt-BR": "Adicionar e informar 110%.",
+        "es": "Añadir e informar 110%."
+      }
+    },
+    {
+      "id": "truncate",
+      "text": {
+        "en": "Silently reduce the new weight to 20%.",
+        "pt-BR": "Reduzir silenciosamente o novo peso para 20%.",
+        "es": "Reducir silenciosamente el nuevo peso al 20%."
+      }
+    },
+    {
+      "id": "reject-unchanged",
+      "text": {
+        "en": "Reject and keep the collection unchanged.",
+        "pt-BR": "Rejeitar e manter a coleção intacta.",
+        "es": "Rechazar y mantener la colección intacta."
+      }
+    },
+    {
+      "id": "clear",
+      "text": {
+        "en": "Clear all previous assessments.",
+        "pt-BR": "Apagar todas as avaliações anteriores.",
+        "es": "Borrar todas las evaluaciones anteriores."
+      }
+    }
+  ]
+}

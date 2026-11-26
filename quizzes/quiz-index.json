@@ -14,6 +14,10 @@
       "path": "quizzes/questions/quiz.assignment-symbol.json"
     },
     {
+      "id": "quiz.automation-failure-publication",
+      "path": "quizzes/questions/quiz.automation-failure-publication.json"
+    },
+    {
       "id": "quiz.bool-int-exact-versus-compatible",
       "path": "quizzes/questions/quiz.bool-int-exact-versus-compatible.json"
     },
@@ -60,6 +64,10 @@
     {
       "id": "quiz.csv-quoted-comma",
       "path": "quizzes/questions/quiz.csv-quoted-comma.json"
+    },
+    {
+      "id": "quiz.csv-row-rejection-isolated",
+      "path": "quizzes/questions/quiz.csv-row-rejection-isolated.json"
     },
     {
       "id": "quiz.dataframe-labeled-table",
@@ -130,6 +138,10 @@
       "path": "quizzes/questions/quiz.exact-type-function.json"
     },
     {
+      "id": "quiz.expense-reject-zero",
+      "path": "quizzes/questions/quiz.expense-reject-zero.json"
+    },
+    {
       "id": "quiz.extension-does-not-parse",
       "path": "quizzes/questions/quiz.extension-does-not-parse.json"
     },
@@ -152,6 +164,10 @@
     {
       "id": "quiz.git-inspect-staged",
       "path": "quizzes/questions/quiz.git-inspect-staged.json"
+    },
+    {
+      "id": "quiz.grade-weight-atomic-rejection",
+      "path": "quizzes/questions/quiz.grade-weight-atomic-rejection.json"
     },
     {
       "id": "quiz.hash-inside-string",
@@ -278,6 +294,10 @@
       "path": "quizzes/questions/quiz.openpyxl-xlsx-format.json"
     },
     {
+      "id": "quiz.organizer-exact-name-atomic-boundary",
+      "path": "quizzes/questions/quiz.organizer-exact-name-atomic-boundary.json"
+    },
+    {
       "id": "quiz.os-getcwd-process-state",
       "path": "quizzes/questions/quiz.os-getcwd-process-state.json"
     },
@@ -342,12 +362,24 @@
       "path": "quizzes/questions/quiz.reassignment-order.json"
     },
     {
+      "id": "quiz.reconciliation-duplicate-source",
+      "path": "quizzes/questions/quiz.reconciliation-duplicate-source.json"
+    },
+    {
+      "id": "quiz.registration-canonical-uniqueness",
+      "path": "quizzes/questions/quiz.registration-canonical-uniqueness.json"
+    },
+    {
       "id": "quiz.relative-path-working-directory",
       "path": "quizzes/questions/quiz.relative-path-working-directory.json"
     },
     {
       "id": "quiz.replace-does-not-mutate",
       "path": "quizzes/questions/quiz.replace-does-not-mutate.json"
+    },
+    {
+      "id": "quiz.report-inclusive-boundaries",
+      "path": "quizzes/questions/quiz.report-inclusive-boundaries.json"
     },
     {
       "id": "quiz.requests-explicit-timeout",

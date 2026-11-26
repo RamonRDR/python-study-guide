@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.organizer-exact-name-atomic-boundary",
+  "chapter_id": "practical-projects.file-organizer",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "On a case-sensitive Linux filesystem, the organizer performs its final casefold collision scan. A non-cooperating process creates a differently cased equivalent name just before the atomic commit. Which guarantee is documented?",
+    "pt-BR": "Em filesystem Linux case-sensitive, o organizador faz a última varredura de colisão casefold. Um processo externo não cooperativo cria um nome equivalente com caixa diferente pouco antes do commit atômico. Qual garantia é documentada?",
+    "es": "En un filesystem Linux case-sensitive, el organizador realiza el último escaneo de colisiones casefold. Un proceso externo no cooperativo crea un nombre equivalente con distinta caja justo antes del commit atómico. ¿Qué garantía se documenta?"
+  },
+  "explanation": {
+    "en": "RENAME_NOREPLACE protects the exact destination name atomically, not all casefold-equivalent names on a case-sensitive filesystem.",
+    "pt-BR": "RENAME_NOREPLACE protege atomicamente o nome exato de destino, não todos os nomes equivalentes por casefold em filesystem case-sensitive.",
+    "es": "RENAME_NOREPLACE protege atómicamente el nombre exacto de destino, no todos los nombres equivalentes por casefold en un filesystem case-sensitive."
+  },
+  "hints": {
+    "en": [
+      "Separate a user-space comparison from the kernel's exact-name check."
+    ],
+    "pt-BR": [
+      "Separe comparação em espaço de usuário da checagem de nome exato pelo kernel."
+    ],
+    "es": [
+      "Separa la comparación en espacio de usuario de la comprobación de nombre exacto del kernel."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "practical-projects/06-file-organizer/README.md",
+        "pt-BR": "practical-projects/06-file-organizer/README.pt-BR.md",
+        "es": "practical-projects/06-file-organizer/README.es.md"
+      },
+      "sections": {
+        "en": "Case-insensitive collision checks",
+        "pt-BR": "Colisões sem diferenciação de caixa",
+        "es": "Colisiones sin distinción de mayúsculas/minúsculas"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "exact"
+  },
+  "choices": [
+    {
+      "id": "all-cases",
+      "text": {
+        "en": "Atomic case-insensitive uniqueness is guaranteed.",
+        "pt-BR": "Unicidade case-insensitive atômica é garantida.",
+        "es": "Se garantiza unicidad case-insensitive atómica."
+      }
+    },
+    {
+      "id": "exact",
+      "text": {
+        "en": "Only exact-name no-replace is atomic; logical casefold uniqueness is not guaranteed against that race.",
+        "pt-BR": "Somente no-replace de nome exato é atômico; unicidade lógica casefold não é garantida contra essa corrida.",
+        "es": "Solo no-replace del nombre exacto es atómico; la unicidad lógica casefold no se garantiza ante esa carrera."
+      }
+    },
+    {
+      "id": "overwrite",
+      "text": {
+        "en": "The atomic operation always overwrites the existing exact name.",
+        "pt-BR": "A operação atômica sempre sobrescreve o nome exato existente.",
+        "es": "La operación atómica siempre sobrescribe el nombre exacto existente."
+      }
+    },
+    {
+      "id": "identical",
+      "text": {
+        "en": "Windows and Linux provide identical descriptor-pinned guarantees.",
+        "pt-BR": "Windows e Linux oferecem garantias idênticas com descriptors pinados.",
+        "es": "Windows y Linux ofrecen garantías idénticas con descriptores fijados."
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.csv-row-rejection-isolated",
+  "chapter_id": "practical-projects.csv-analyzer",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A CSV document has the correct header and valid quoting, but one data row has negative duration. How does this analyzer handle it?",
+    "pt-BR": "Um CSV possui cabeçalho correto e aspas válidas, mas uma linha tem duração negativa. Como o analisador trata isso?",
+    "es": "Un CSV tiene encabezado correcto y comillas válidas, pero una fila tiene duración negativa. ¿Cómo lo maneja el analizador?"
+  },
+  "explanation": {
+    "en": "A negative duration is a row-level violation: record RejectedRow and retain the other valid rows.",
+    "pt-BR": "Duração negativa viola a regra da linha: registre RejectedRow e preserve as demais linhas válidas.",
+    "es": "Una duración negativa viola la regla de fila: registra RejectedRow y conserva las demás filas válidas."
+  },
+  "hints": {
+    "en": [
+      "The structure is trustworthy; only a record violates its contract."
+    ],
+    "pt-BR": [
+      "A estrutura é confiável; só um registro viola o contrato."
+    ],
+    "es": [
+      "La estructura es confiable; solo un registro viola su contrato."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "practical-projects/04-csv-analyzer/README.md",
+        "pt-BR": "practical-projects/04-csv-analyzer/README.pt-BR.md",
+        "es": "practical-projects/04-csv-analyzer/README.es.md"
+      },
+      "sections": {
+        "en": "4. Structural errors versus row errors",
+        "pt-BR": "4. Erros estruturais versus erros de linha",
+        "es": "4. Errores estructurales frente a errores de fila"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "row"
+  },
+  "choices": [
+    {
+      "id": "whole",
+      "text": {
+        "en": "Reject the entire document as a schema error.",
+        "pt-BR": "Rejeitar todo documento como erro de schema.",
+        "es": "Rechazar todo el documento como error de schema."
+      }
+    },
+    {
+      "id": "zero",
+      "text": {
+        "en": "Silently set duration to zero.",
+        "pt-BR": "Definir duração zero silenciosamente.",
+        "es": "Establecer duración cero silenciosamente."
+      }
+    },
+    {
+      "id": "accept",
+      "text": {
+        "en": "Accept the negative duration.",
+        "pt-BR": "Aceitar a duração negativa.",
+        "es": "Aceptar la duración negativa."
+      }
+    },
+    {
+      "id": "row",
+      "text": {
+        "en": "Reject that row and keep valid rows.",
+        "pt-BR": "Rejeitar essa linha e manter as válidas.",
+        "es": "Rechazar esa fila y conservar las válidas."
+      }
+    }
+  ]
+}
