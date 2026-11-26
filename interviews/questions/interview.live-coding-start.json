@@ -1,0 +1,86 @@
+{
+  "id": "interview.live-coding-start",
+  "topic": "interview-fundamentals",
+  "level": "junior",
+  "prompt": {
+    "en": "How do you start a timed coding task before typing the solution? Describe a small trace and how you communicate.",
+    "pt-BR": "Como iniciar tarefa cronometrada antes de digitar solução? Descreva uma simulação pequena e como se comunica.",
+    "es": "¿Cómo empiezas una tarea cronometrada antes de escribir solución? Describe una traza pequeña y cómo te comunicas."
+  },
+  "expected_answer": {
+    "en": "Read and restate the contract, trace a small example, choose a straightforward approach, then implement and test while explaining decisions.",
+    "pt-BR": "Leia e reformule o contrato, simule um exemplo pequeno, escolha abordagem direta, implemente e teste explicando decisões.",
+    "es": "Lee y reformula el contrato, traza un ejemplo pequeño, elige enfoque directo, implementa y prueba explicando decisiones."
+  },
+  "explanation": {
+    "en": "A trace exposes assumptions before implementation; narrate decisions, not keystrokes.",
+    "pt-BR": "Uma simulação expõe hipóteses antes da implementação; narre decisões, não teclas.",
+    "es": "Una traza revela supuestos antes de implementar; explica decisiones, no teclas."
+  },
+  "intent": {
+    "en": "Assess process under time pressure.",
+    "pt-BR": "Avaliar processo sob pressão de tempo.",
+    "es": "Evaluar proceso bajo presión de tiempo."
+  },
+  "common_errors": {
+    "en": [
+      "Type an optimized solution before checking the contract."
+    ],
+    "pt-BR": [
+      "Digitar solução otimizada antes de conferir contrato."
+    ],
+    "es": [
+      "Escribir solución optimizada antes de comprobar contrato."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What if the trace contradicts the stated contract?"
+    ],
+    "pt-BR": [
+      "E se a simulação contrariar o contrato declarado?"
+    ],
+    "es": [
+      "¿Y si la traza contradice el contrato declarado?"
+    ]
+  },
+  "examples": {
+    "en": "For a sum of nonnegative quantities, trace [2, 0, 3] to 5 after confirming zero is allowed.",
+    "pt-BR": "Para soma de quantidades não negativas, simule [2, 0, 3] até 5 após confirmar que zero é permitido.",
+    "es": "Para suma de cantidades no negativas, traza [2, 0, 3] hasta 5 tras confirmar que cero está permitido."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Restates contract and traces a concrete example.",
+        "pt-BR": "Reformula contrato e simula exemplo concreto.",
+        "es": "Reformula contrato y traza ejemplo concreto."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Chooses a simple approach and describes implementation/test decisions aloud.",
+        "pt-BR": "Escolhe abordagem simples e explica decisões de implementação/teste em voz alta.",
+        "es": "Elige enfoque sencillo y explica decisiones de implementación/prueba en voz alta."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/02-live-coding-and-take-home/README.md",
+        "pt-BR": "technical-interview-preparation/02-live-coding-and-take-home/README.pt-BR.md",
+        "es": "technical-interview-preparation/02-live-coding-and-take-home/README.es.md"
+      },
+      "sections": {
+        "en": "Live coding",
+        "pt-BR": "Live coding",
+        "es": "Live coding"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "interview.scope-prioritization",
+  "topic": "interview-fundamentals",
+  "level": "senior",
+  "prompt": {
+    "en": "A take-home requests a small working service in two hours; optional features are ambiguous. How would you agree priorities, choose a deliverable and communicate risk?",
+    "pt-BR": "Take-home pede serviço pequeno funcional em duas horas; opcionais são ambíguos. Como acordar prioridades, escolher entrega e comunicar risco?",
+    "es": "Take-home pide servicio pequeño funcional en dos horas; opcionales son ambiguos. ¿Cómo acuerdas prioridades, eliges entrega y comunicas riesgo?"
+  },
+  "expected_answer": {
+    "en": "Confirm acceptance criteria, deadline and permitted tools; separate required behavior from optional work. Deliver a small tested implementation with documented assumptions, evidence and explicit deferred risks rather than expanding scope.",
+    "pt-BR": "Confirme critérios de aceite, prazo e ferramentas; separe obrigatório de opcional. Entregue implementação pequena testada com hipóteses, evidências e riscos adiados explícitos em vez de ampliar escopo.",
+    "es": "Confirma criterios de aceptación, plazo y herramientas; separa obligatorio de opcional. Entrega implementación pequeña probada con supuestos, evidencias y riesgos aplazados explícitos en vez de ampliar alcance."
+  },
+  "explanation": {
+    "en": "A constrained delivery trades breadth for verified behavior; the interviewer must know what was not implemented.",
+    "pt-BR": "Entrega restrita troca abrangência por comportamento verificado; entrevistador deve saber o que não foi implementado.",
+    "es": "Entrega restringida intercambia amplitud por comportamiento verificado; entrevistador debe saber qué no se implementó."
+  },
+  "intent": {
+    "en": "Assess judgment about scope and evidence.",
+    "pt-BR": "Avaliar julgamento sobre escopo e evidências.",
+    "es": "Evaluar criterio sobre alcance y evidencias."
+  },
+  "common_errors": {
+    "en": [
+      "Promise a complete architecture without validating the core behavior."
+    ],
+    "pt-BR": [
+      "Prometer arquitetura completa sem validar comportamento central."
+    ],
+    "es": [
+      "Prometer arquitectura completa sin validar comportamiento central."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you respond to a new requirement halfway through?"
+    ],
+    "pt-BR": [
+      "Como responderia a requisito novo no meio do tempo?"
+    ],
+    "es": [
+      "¿Cómo responderías a un requisito nuevo a mitad del tiempo?"
+    ]
+  },
+  "examples": {
+    "en": "Prioritize validated calculation and run instructions over an unrequested UI; explicitly defer the UI.",
+    "pt-BR": "Priorize cálculo validado e instruções de execução em vez de UI não solicitada; adie UI explicitamente.",
+    "es": "Prioriza cálculo validado e instrucciones de ejecución sobre UI no solicitada; aplaza UI explícitamente."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Prioritizes explicit acceptance criteria and agrees assumptions with the evaluator.",
+        "pt-BR": "Prioriza critérios de aceite explícitos e acorda hipóteses com avaliador.",
+        "es": "Prioriza criterios de aceptación explícitos y acuerda supuestos con evaluador."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Justifies scope trade-off and communicates tested outcomes and deferred risk.",
+        "pt-BR": "Justifica trade-off de escopo e comunica resultados testados e riscos adiados.",
+        "es": "Justifica compromiso de alcance y comunica resultados probados y riesgos aplazados."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/01-understanding-technical-interviews/README.md",
+        "pt-BR": "technical-interview-preparation/01-understanding-technical-interviews/README.pt-BR.md",
+        "es": "technical-interview-preparation/01-understanding-technical-interviews/README.es.md"
+      },
+      "sections": {
+        "en": "Purpose and process",
+        "pt-BR": "Finalidade e processo",
+        "es": "Propósito y proceso"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/02-live-coding-and-take-home/README.md",
+        "pt-BR": "technical-interview-preparation/02-live-coding-and-take-home/README.pt-BR.md",
+        "es": "technical-interview-preparation/02-live-coding-and-take-home/README.es.md"
+      },
+      "sections": {
+        "en": "Take-home assignments",
+        "pt-BR": "Tarefas take-home",
+        "es": "Tareas take-home"
+      }
+    }
+  ]
+}

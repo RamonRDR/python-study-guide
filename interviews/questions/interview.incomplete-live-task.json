@@ -1,0 +1,86 @@
+{
+  "id": "interview.incomplete-live-task",
+  "topic": "interview-fundamentals",
+  "level": "mid",
+  "prompt": {
+    "en": "Time is almost over; your solution handles typical inputs but an edge case fails. How do you report status and prioritize the remaining work?",
+    "pt-BR": "O tempo está acabando; solução atende entradas típicas mas falha num caso de borda. Como informar status e priorizar trabalho restante?",
+    "es": "Se acaba el tiempo; solución cubre entradas típicas pero falla un caso límite. ¿Cómo informas estado y priorizas trabajo restante?"
+  },
+  "expected_answer": {
+    "en": "State which behavior was verified and which fails; isolate a minimal failing case, attempt a small verifiable correction if time permits, and explain the next test and limitation.",
+    "pt-BR": "Informe qual comportamento foi verificado e qual falha; isole caso mínimo, tente correção pequena verificável se houver tempo e explique próximo teste e limitação.",
+    "es": "Indica qué comportamiento se verificó y cuál falla; aísla caso mínimo, intenta corrección pequeña verificable si hay tiempo y explica próxima prueba y limitación."
+  },
+  "explanation": {
+    "en": "A precise partial result is stronger evidence than an unsupported completion claim.",
+    "pt-BR": "Resultado parcial preciso é evidência melhor que alegação de conclusão sem suporte.",
+    "es": "Resultado parcial preciso aporta más evidencia que afirmar finalización sin respaldo."
+  },
+  "intent": {
+    "en": "Assess prioritization and honest evidence.",
+    "pt-BR": "Avaliar priorização e evidência honesta.",
+    "es": "Evaluar priorización y evidencia honesta."
+  },
+  "common_errors": {
+    "en": [
+      "Say all tests pass because the happy path works."
+    ],
+    "pt-BR": [
+      "Dizer que todos os testes passam porque fluxo principal funciona."
+    ],
+    "es": [
+      "Decir que todas las pruebas pasan porque funciona flujo principal."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you communicate a failed correction?"
+    ],
+    "pt-BR": [
+      "Como comunicaria uma correção que falhou?"
+    ],
+    "es": [
+      "¿Cómo comunicarías una corrección fallida?"
+    ]
+  },
+  "examples": {
+    "en": "A function passes [2,3] but fails []; report the failure and test the agreed empty-input result next.",
+    "pt-BR": "Função passa [2,3] mas falha em []; informe a falha e teste o resultado acordado para vazio.",
+    "es": "Función pasa [2,3] pero falla en []; informa el fallo y prueba el resultado acordado para vacío."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes verified behavior, failure and unverified work.",
+        "pt-BR": "Distingue comportamento verificado, falha e trabalho não verificado.",
+        "es": "Distingue comportamiento verificado, fallo y trabajo no verificado."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes a minimal reproducible case and next verification step.",
+        "pt-BR": "Propõe caso mínimo reproduzível e próximo passo de verificação.",
+        "es": "Propone caso mínimo reproducible y próximo paso de verificación."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/02-live-coding-and-take-home/README.md",
+        "pt-BR": "technical-interview-preparation/02-live-coding-and-take-home/README.pt-BR.md",
+        "es": "technical-interview-preparation/02-live-coding-and-take-home/README.es.md"
+      },
+      "sections": {
+        "en": "Live coding",
+        "pt-BR": "Live coding",
+        "es": "Live coding"
+      }
+    }
+  ]
+}

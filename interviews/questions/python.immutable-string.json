@@ -1,0 +1,86 @@
+{
+  "id": "python.immutable-string",
+  "topic": "python-fundamentals",
+  "level": "junior",
+  "prompt": {
+    "en": "Given s = \"python\"; s.upper(); print(s), what is printed? How do you retain the uppercase value?",
+    "pt-BR": "Dado s = \"python\"; s.upper(); print(s), o que é exibido? Como guardar o valor em maiúsculas?",
+    "es": "Dado s = \"python\"; s.upper(); print(s), ¿qué se imprime? ¿Cómo conservas el valor en mayúsculas?"
+  },
+  "expected_answer": {
+    "en": "It prints python. Strings are immutable; upper returns a string result. Assign s = s.upper() to bind s to the uppercase result.",
+    "pt-BR": "Exibe python. Strings são imutáveis; upper retorna string resultante. Use s = s.upper() para vincular s ao resultado maiúsculo.",
+    "es": "Imprime python. Las cadenas son inmutables; upper devuelve una cadena resultante. Usa s = s.upper() para enlazar s al resultado en mayúsculas."
+  },
+  "explanation": {
+    "en": "Calling a method does not imply mutation; inspect the contract.",
+    "pt-BR": "Chamar método não implica mutação; confira contrato.",
+    "es": "Llamar un método no implica mutación; comprueba contrato."
+  },
+  "intent": {
+    "en": "Assess return values and immutability.",
+    "pt-BR": "Avaliar valores de retorno e imutabilidade.",
+    "es": "Evaluar valores de retorno e inmutabilidad."
+  },
+  "common_errors": {
+    "en": [
+      "Expect upper to modify the original string in place."
+    ],
+    "pt-BR": [
+      "Esperar que upper modifique string original no lugar."
+    ],
+    "es": [
+      "Esperar que upper modifique cadena original en el lugar."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What remains bound to an alias of the original string?"
+    ],
+    "pt-BR": [
+      "O que permanece vinculado a um alias da string original?"
+    ],
+    "es": [
+      "¿Qué sigue enlazado a un alias de la cadena original?"
+    ]
+  },
+  "examples": {
+    "en": "s = \"hi\"; t = s.upper() leaves s equal to \"hi\" and t equal to \"HI\".",
+    "pt-BR": "s = \"hi\"; t = s.upper() deixa s igual a \"hi\" e t igual a \"HI\".",
+    "es": "s = \"hi\"; t = s.upper() deja s igual a \"hi\" y t igual a \"HI\"."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts the original output and explains immutability.",
+        "pt-BR": "Prevê saída original e explica imutabilidade.",
+        "es": "Predice salida original y explica inmutabilidad."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Shows assignment of the returned result.",
+        "pt-BR": "Mostra atribuição do resultado retornado.",
+        "es": "Muestra asignación del resultado devuelto."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/03-python-fundamentals-review/README.md",
+        "pt-BR": "technical-interview-preparation/03-python-fundamentals-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/03-python-fundamentals-review/README.es.md"
+      },
+      "sections": {
+        "en": "Review by reasoning",
+        "pt-BR": "Revisão pelo raciocínio",
+        "es": "Repaso mediante razonamiento"
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "interview.take-home-evidence",
+  "topic": "interview-fundamentals",
+  "level": "mid",
+  "prompt": {
+    "en": "For a small take-home, what should the submission README and tests demonstrate? Explain how you avoid unsupported claims.",
+    "pt-BR": "Para take-home pequeno, o que README de entrega e testes devem demonstrar? Explique como evitar alegações sem suporte.",
+    "es": "Para take-home pequeño, ¿qué deben demostrar README de entrega y pruebas? Explica cómo evitar afirmaciones sin respaldo."
+  },
+  "expected_answer": {
+    "en": "Document requirements, assumptions, setup/run commands, tests actually executed and known limitations. Include normal, empty and invalid inputs against the agreed contract and explain complexity.",
+    "pt-BR": "Documente requisitos, hipóteses, comandos de setup/execução, testes realmente executados e limitações. Inclua entradas normal, vazia e inválida segundo contrato e explique complexidade.",
+    "es": "Documenta requisitos, supuestos, comandos de instalación/ejecución, pruebas realmente ejecutadas y limitaciones. Incluye entradas normal, vacía e inválida según contrato y explica complejidad."
+  },
+  "explanation": {
+    "en": "A reviewer should be able to reproduce evidence without secrets or proprietary code.",
+    "pt-BR": "Revisor deve conseguir reproduzir evidências sem segredos ou código proprietário.",
+    "es": "Revisor debe poder reproducir evidencias sin secretos ni código propietario."
+  },
+  "intent": {
+    "en": "Assess reproducibility and delivery discipline.",
+    "pt-BR": "Avaliar reprodutibilidade e disciplina de entrega.",
+    "es": "Evaluar reproducibilidad y disciplina de entrega."
+  },
+  "common_errors": {
+    "en": [
+      "Add speculative features while leaving setup undocumented."
+    ],
+    "pt-BR": [
+      "Adicionar funcionalidades especulativas e deixar setup sem documentação."
+    ],
+    "es": [
+      "Añadir funciones especulativas y dejar instalación sin documentar."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What would you record if an integration test cannot run locally?"
+    ],
+    "pt-BR": [
+      "O que registraria se teste de integração não puder rodar localmente?"
+    ],
+    "es": [
+      "¿Qué registrarías si una prueba de integración no puede ejecutarse localmente?"
+    ]
+  },
+  "examples": {
+    "en": "For sum of nonnegative integers, record the zero policy, one invalid-input test and the actual test command.",
+    "pt-BR": "Para soma de inteiros não negativos, registre política do zero, teste de entrada inválida e comando real de teste.",
+    "es": "Para suma de enteros no negativos, registra política del cero, prueba de entrada inválida y comando real de prueba."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Includes reproducible instructions, explicit assumptions and actual test evidence.",
+        "pt-BR": "Inclui instruções reproduzíveis, hipóteses explícitas e evidência real de teste.",
+        "es": "Incluye instrucciones reproducibles, supuestos explícitos y evidencia real de pruebas."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Describes boundary cases, complexity and limitations without false claims.",
+        "pt-BR": "Descreve bordas, complexidade e limitações sem alegações falsas.",
+        "es": "Describe casos límite, complejidad y limitaciones sin afirmaciones falsas."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/02-live-coding-and-take-home/README.md",
+        "pt-BR": "technical-interview-preparation/02-live-coding-and-take-home/README.pt-BR.md",
+        "es": "technical-interview-preparation/02-live-coding-and-take-home/README.es.md"
+      },
+      "sections": {
+        "en": "Take-home assignments",
+        "pt-BR": "Tarefas take-home",
+        "es": "Tareas take-home"
+      }
+    }
+  ]
+}

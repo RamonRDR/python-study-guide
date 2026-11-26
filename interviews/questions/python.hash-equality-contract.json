@@ -1,0 +1,86 @@
+{
+  "id": "python.hash-equality-contract",
+  "topic": "python-fundamentals",
+  "level": "senior",
+  "prompt": {
+    "en": "You design a value-equality class for dictionary keys. What hash/equality contract must hold, what risk arises if equality-relevant state changes, and how would you test it?",
+    "pt-BR": "Você projeta classe de igualdade por valor para chaves de dicionário. Qual contrato hash/igualdade deve valer, qual risco se estado relevante mudar e como testaria?",
+    "es": "Diseñas clase de igualdad por valor para claves de diccionario. ¿Qué contrato hash/igualdad debe cumplirse, qué riesgo si cambia estado relevante y cómo lo probarías?"
+  },
+  "expected_answer": {
+    "en": "Equal objects must have equal hashes and hashes must remain stable over their lifetime as hashable objects; unequal objects may collide. Prefer stable immutable equality state for keys or make mutable value-equality objects unhashable. Test equal distinct instances, lookup through an equal key and the supported mutation policy.",
+    "pt-BR": "Objetos iguais devem ter hashes iguais e hashes devem permanecer estáveis durante vida como objetos hashable; diferentes podem colidir. Prefira estado de igualdade imutável estável para chaves ou torne objetos mutáveis de igualdade por valor não hashable. Teste instâncias distintas iguais, busca por chave igual e política de mutação suportada.",
+    "es": "Objetos iguales deben tener hashes iguales y hashes deben permanecer estables durante vida como objetos hashables; distintos pueden colisionar. Prefiere estado de igualdad inmutable estable para claves o haz no hashables objetos mutables de igualdad por valor. Prueba instancias distintas iguales, búsqueda con clave igual y política de mutación soportada."
+  },
+  "explanation": {
+    "en": "Changing a key hash can invalidate dictionary lookup; defining __eq__ without __hash__ normally makes a Python class unhashable.",
+    "pt-BR": "Mudar hash de chave pode invalidar busca; definir __eq__ sem __hash__ normalmente torna classe Python não hashable.",
+    "es": "Cambiar hash de clave puede invalidar búsqueda; definir __eq__ sin __hash__ normalmente vuelve clase Python no hashable."
+  },
+  "intent": {
+    "en": "Assess invariant design and tests, not hash uniqueness.",
+    "pt-BR": "Avaliar design de invariantes e testes, não unicidade de hash.",
+    "es": "Evaluar diseño de invariantes y pruebas, no unicidad de hash."
+  },
+  "common_errors": {
+    "en": [
+      "Demand different hashes for every unequal pair."
+    ],
+    "pt-BR": [
+      "Exigir hashes diferentes para todo par desigual."
+    ],
+    "es": [
+      "Exigir hashes distintos para cada par desigual."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why is a tuple containing a list not a usable dictionary key?"
+    ],
+    "pt-BR": [
+      "Por que tupla contendo lista não é chave utilizável?"
+    ],
+    "es": [
+      "¿Por qué una tupla con una lista no es clave utilizable?"
+    ]
+  },
+  "examples": {
+    "en": "Two distinct equal immutable key objects must retrieve the same associated value; test without assuming distinct unequal hashes.",
+    "pt-BR": "Dois objetos-chave imutáveis distintos e iguais devem recuperar mesmo valor associado; teste sem supor hashes distintos para desiguais.",
+    "es": "Dos objetos clave inmutables distintos e iguales deben recuperar mismo valor asociado; prueba sin suponer hashes distintos para desiguales."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "States equal-hash and lifetime stability rules and allows collisions.",
+        "pt-BR": "Declara regras de hash igual e estabilidade durante vida, permitindo colisões.",
+        "es": "Declara reglas de hash igual y estabilidad durante vida, permitiendo colisiones."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains mutable-key risk and proposes equality, lookup and mutation-policy tests.",
+        "pt-BR": "Explica risco de chave mutável e propõe testes de igualdade, busca e política de mutação.",
+        "es": "Explica riesgo de clave mutable y propone pruebas de igualdad, búsqueda y política de mutación."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/09-object-identity-references-and-copying/README.md",
+        "pt-BR": "technical-interview-preparation/09-object-identity-references-and-copying/README.pt-BR.md",
+        "es": "technical-interview-preparation/09-object-identity-references-and-copying/README.es.md"
+      },
+      "sections": {
+        "en": "Equality and hashing",
+        "pt-BR": "Igualdade e hashing",
+        "es": "Igualdad y hashing"
+      }
+    }
+  ]
+}

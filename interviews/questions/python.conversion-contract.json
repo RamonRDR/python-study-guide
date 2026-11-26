@@ -1,0 +1,86 @@
+{
+  "id": "python.conversion-contract",
+  "topic": "python-fundamentals",
+  "level": "junior",
+  "prompt": {
+    "en": "What happens with int(\"12\") and int(\"twelve\")? Explain why the type and input content matter.",
+    "pt-BR": "O que acontece com int(\"12\") e int(\"twelve\")? Explique por que tipo e conteúdo importam.",
+    "es": "¿Qué ocurre con int(\"12\") e int(\"twelve\")? Explica por qué importan tipo y contenido."
+  },
+  "expected_answer": {
+    "en": "The first returns integer 12; the second raises ValueError because the text does not represent an integer accepted by int.",
+    "pt-BR": "O primeiro retorna inteiro 12; o segundo gera ValueError porque texto não representa inteiro aceito por int.",
+    "es": "El primero devuelve entero 12; el segundo lanza ValueError porque texto no representa entero aceptado por int."
+  },
+  "explanation": {
+    "en": "Conversion is an operation with an input contract, not a guarantee that all strings succeed.",
+    "pt-BR": "Conversão tem contrato de entrada, não garantia de sucesso para toda string.",
+    "es": "Conversión tiene contrato de entrada, no garantía de éxito para toda cadena."
+  },
+  "intent": {
+    "en": "Assess type conversion and failure reasoning.",
+    "pt-BR": "Avaliar conversão de tipos e raciocínio sobre falha.",
+    "es": "Evaluar conversión de tipos y razonamiento sobre fallo."
+  },
+  "common_errors": {
+    "en": [
+      "Assume failed conversion returns zero or None."
+    ],
+    "pt-BR": [
+      "Supor que conversão inválida retorna zero ou None."
+    ],
+    "es": [
+      "Suponer que conversión inválida devuelve cero o None."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What would you test for an empty string?"
+    ],
+    "pt-BR": [
+      "O que testaria para string vazia?"
+    ],
+    "es": [
+      "¿Qué probarías para cadena vacía?"
+    ]
+  },
+  "examples": {
+    "en": "int(\"0\") returns 0; int(\"\") raises ValueError.",
+    "pt-BR": "int(\"0\") retorna 0; int(\"\") gera ValueError.",
+    "es": "int(\"0\") devuelve 0; int(\"\") lanza ValueError."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts the value and type of the successful conversion.",
+        "pt-BR": "Prevê valor e tipo da conversão bem-sucedida.",
+        "es": "Predice valor y tipo de conversión exitosa."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Identifies ValueError and explains the input constraint.",
+        "pt-BR": "Identifica ValueError e explica restrição de entrada.",
+        "es": "Identifica ValueError y explica restricción de entrada."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/03-python-fundamentals-review/README.md",
+        "pt-BR": "technical-interview-preparation/03-python-fundamentals-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/03-python-fundamentals-review/README.es.md"
+      },
+      "sections": {
+        "en": "Review by reasoning",
+        "pt-BR": "Revisão pelo raciocínio",
+        "es": "Repaso mediante razonamiento"
+      }
+    }
+  ]
+}
