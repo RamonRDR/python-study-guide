@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.extension-does-not-parse",
+  "chapter_id": "errors-files-and-modules.txt-csv-and-json",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Opening a file named profile.json automatically returns a parsed Python dictionary.",
+    "pt-BR": "Abrir um arquivo chamado profile.json retorna automaticamente um dicionário Python interpretado.",
+    "es": "Abrir un archivo llamado profile.json devuelve automáticamente un diccionario Python analizado."
+  },
+  "explanation": {
+    "en": "The extension communicates intent; a JSON parser must interpret its contents.",
+    "pt-BR": "A extensão comunica intenção; um parser JSON deve interpretar o conteúdo.",
+    "es": "La extensión comunica intención; un analizador JSON debe interpretar su contenido."
+  },
+  "hints": {
+    "en": [
+      "Opening and parsing are different operations."
+    ],
+    "pt-BR": [
+      "Abrir e interpretar são operações distintas."
+    ],
+    "es": [
+      "Abrir y analizar son operaciones distintas."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/04-txt-csv-and-json/README.md",
+        "pt-BR": "errors-files-and-modules/04-txt-csv-and-json/README.pt-BR.md",
+        "es": "errors-files-and-modules/04-txt-csv-and-json/README.es.md"
+      },
+      "sections": {
+        "en": "2. The extension does not magically parse the contents",
+        "pt-BR": "2. A extensão não interpreta magicamente o conteúdo",
+        "es": "2. La extensión no interpreta mágicamente el contenido"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

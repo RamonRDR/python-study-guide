@@ -6,8 +6,36 @@
       "path": "quizzes/questions/quiz.absolute-distance-zero.json"
     },
     {
+      "id": "quiz.acceptance-observable-evidence",
+      "path": "quizzes/questions/quiz.acceptance-observable-evidence.json"
+    },
+    {
+      "id": "quiz.append-preserve-existing-file",
+      "path": "quizzes/questions/quiz.append-preserve-existing-file.json"
+    },
+    {
       "id": "quiz.assignment-symbol",
       "path": "quizzes/questions/quiz.assignment-symbol.json"
+    },
+    {
+      "id": "quiz.authentication-not-object-authorization",
+      "path": "quizzes/questions/quiz.authentication-not-object-authorization.json"
+    },
+    {
+      "id": "quiz.automation-failure-publication",
+      "path": "quizzes/questions/quiz.automation-failure-publication.json"
+    },
+    {
+      "id": "quiz.big-o-not-seconds",
+      "path": "quizzes/questions/quiz.big-o-not-seconds.json"
+    },
+    {
+      "id": "quiz.binary-first-match-boundary",
+      "path": "quizzes/questions/quiz.binary-first-match-boundary.json"
+    },
+    {
+      "id": "quiz.binary-target-exclusive-end",
+      "path": "quizzes/questions/quiz.binary-target-exclusive-end.json"
     },
     {
       "id": "quiz.bool-int-exact-versus-compatible",
@@ -18,8 +46,28 @@
       "path": "quizzes/questions/quiz.boolean-precedence.json"
     },
     {
+      "id": "quiz.capacity-inclusive-boundary",
+      "path": "quizzes/questions/quiz.capacity-inclusive-boundary.json"
+    },
+    {
+      "id": "quiz.catch-invalid-integer",
+      "path": "quizzes/questions/quiz.catch-invalid-integer.json"
+    },
+    {
+      "id": "quiz.chain-one-level",
+      "path": "quizzes/questions/quiz.chain-one-level.json"
+    },
+    {
       "id": "quiz.chained-comparison-boundary",
       "path": "quizzes/questions/quiz.chained-comparison-boundary.json"
+    },
+    {
+      "id": "quiz.classmethod-subclass-factory",
+      "path": "quizzes/questions/quiz.classmethod-subclass-factory.json"
+    },
+    {
+      "id": "quiz.closure-late-binding-snapshot",
+      "path": "quizzes/questions/quiz.closure-late-binding-snapshot.json"
     },
     {
       "id": "quiz.collection-keyed-quantities",
@@ -34,12 +82,52 @@
       "path": "quizzes/questions/quiz.combined-classification-loop.json"
     },
     {
+      "id": "quiz.composition-replaceable-collaborator",
+      "path": "quizzes/questions/quiz.composition-replaceable-collaborator.json"
+    },
+    {
       "id": "quiz.conditional-chain-one-branch",
       "path": "quizzes/questions/quiz.conditional-chain-one-branch.json"
     },
     {
+      "id": "quiz.context-exit-false-propagation",
+      "path": "quizzes/questions/quiz.context-exit-false-propagation.json"
+    },
+    {
+      "id": "quiz.counter-tally-purpose",
+      "path": "quizzes/questions/quiz.counter-tally-purpose.json"
+    },
+    {
+      "id": "quiz.csv-convert-before-validation",
+      "path": "quizzes/questions/quiz.csv-convert-before-validation.json"
+    },
+    {
+      "id": "quiz.csv-quoted-comma",
+      "path": "quizzes/questions/quiz.csv-quoted-comma.json"
+    },
+    {
+      "id": "quiz.csv-row-rejection-isolated",
+      "path": "quizzes/questions/quiz.csv-row-rejection-isolated.json"
+    },
+    {
+      "id": "quiz.dataframe-labeled-table",
+      "path": "quizzes/questions/quiz.dataframe-labeled-table.json"
+    },
+    {
+      "id": "quiz.decimal-exact-input-boundary",
+      "path": "quizzes/questions/quiz.decimal-exact-input-boundary.json"
+    },
+    {
+      "id": "quiz.decimal-float-arithmetic-error",
+      "path": "quizzes/questions/quiz.decimal-float-arithmetic-error.json"
+    },
+    {
       "id": "quiz.decimal-literal-type",
       "path": "quizzes/questions/quiz.decimal-literal-type.json"
+    },
+    {
+      "id": "quiz.deepcopy-preserves-internal-alias",
+      "path": "quizzes/questions/quiz.deepcopy-preserves-internal-alias.json"
     },
     {
       "id": "quiz.default-argument-omission",
@@ -66,8 +154,20 @@
       "path": "quizzes/questions/quiz.discarded-return-does-not-rebind.json"
     },
     {
+      "id": "quiz.distinct-window-monotonic",
+      "path": "quizzes/questions/quiz.distinct-window-monotonic.json"
+    },
+    {
       "id": "quiz.division-zero-error",
       "path": "quizzes/questions/quiz.division-zero-error.json"
+    },
+    {
+      "id": "quiz.docstring-first-statement",
+      "path": "quizzes/questions/quiz.docstring-first-statement.json"
+    },
+    {
+      "id": "quiz.docstring-runtime-attribute",
+      "path": "quizzes/questions/quiz.docstring-runtime-attribute.json"
     },
     {
       "id": "quiz.editor-replaces-interpreter",
@@ -86,6 +186,26 @@
       "path": "quizzes/questions/quiz.exact-type-function.json"
     },
     {
+      "id": "quiz.exhausted-generator-next",
+      "path": "quizzes/questions/quiz.exhausted-generator-next.json"
+    },
+    {
+      "id": "quiz.expense-reject-zero",
+      "path": "quizzes/questions/quiz.expense-reject-zero.json"
+    },
+    {
+      "id": "quiz.extension-does-not-parse",
+      "path": "quizzes/questions/quiz.extension-does-not-parse.json"
+    },
+    {
+      "id": "quiz.finally-propagates-unhandled",
+      "path": "quizzes/questions/quiz.finally-propagates-unhandled.json"
+    },
+    {
+      "id": "quiz.flatten-shared-accumulator",
+      "path": "quizzes/questions/quiz.flatten-shared-accumulator.json"
+    },
+    {
       "id": "quiz.for-accumulator-initial-value",
       "path": "quizzes/questions/quiz.for-accumulator-initial-value.json"
     },
@@ -98,20 +218,56 @@
       "path": "quizzes/questions/quiz.function-result-pipeline.json"
     },
     {
+      "id": "quiz.gil-compound-invariant",
+      "path": "quizzes/questions/quiz.gil-compound-invariant.json"
+    },
+    {
       "id": "quiz.git-inspect-staged",
       "path": "quizzes/questions/quiz.git-inspect-staged.json"
+    },
+    {
+      "id": "quiz.grade-weight-atomic-rejection",
+      "path": "quizzes/questions/quiz.grade-weight-atomic-rejection.json"
+    },
+    {
+      "id": "quiz.green-ci-not-complete-proof",
+      "path": "quizzes/questions/quiz.green-ci-not-complete-proof.json"
+    },
+    {
+      "id": "quiz.hash-inside-string",
+      "path": "quizzes/questions/quiz.hash-inside-string.json"
+    },
+    {
+      "id": "quiz.http-get-retrieval",
+      "path": "quizzes/questions/quiz.http-get-retrieval.json"
     },
     {
       "id": "quiz.implicit-none-return",
       "path": "quizzes/questions/quiz.implicit-none-return.json"
     },
     {
+      "id": "quiz.import-alias-keyword",
+      "path": "quizzes/questions/quiz.import-alias-keyword.json"
+    },
+    {
+      "id": "quiz.import-initialization-side-effect",
+      "path": "quizzes/questions/quiz.import-initialization-side-effect.json"
+    },
+    {
       "id": "quiz.input-digits-text",
       "path": "quizzes/questions/quiz.input-digits-text.json"
     },
     {
+      "id": "quiz.insertion-stable-shift",
+      "path": "quizzes/questions/quiz.insertion-stable-shift.json"
+    },
+    {
       "id": "quiz.install-declared-requirements",
       "path": "quizzes/questions/quiz.install-declared-requirements.json"
+    },
+    {
+      "id": "quiz.instance-initialization-role",
+      "path": "quizzes/questions/quiz.instance-initialization-role.json"
     },
     {
       "id": "quiz.integer-text-conversion",
@@ -120,6 +276,18 @@
     {
       "id": "quiz.interpreter-purpose",
       "path": "quizzes/questions/quiz.interpreter-purpose.json"
+    },
+    {
+      "id": "quiz.inventory-order-and-delta",
+      "path": "quizzes/questions/quiz.inventory-order-and-delta.json"
+    },
+    {
+      "id": "quiz.json-dumps-text-not-bytes",
+      "path": "quizzes/questions/quiz.json-dumps-text-not-bytes.json"
+    },
+    {
+      "id": "quiz.left-join-zero-child-count",
+      "path": "quizzes/questions/quiz.left-join-zero-child-count.json"
     },
     {
       "id": "quiz.list-add-one",
@@ -150,6 +318,14 @@
       "path": "quizzes/questions/quiz.local-binding-shadow.json"
     },
     {
+      "id": "quiz.log-fallback-level",
+      "path": "quizzes/questions/quiz.log-fallback-level.json"
+    },
+    {
+      "id": "quiz.logging-handler-threshold",
+      "path": "quizzes/questions/quiz.logging-handler-threshold.json"
+    },
+    {
       "id": "quiz.loop-else-break-versus-continue",
       "path": "quizzes/questions/quiz.loop-else-break-versus-continue.json"
     },
@@ -174,20 +350,68 @@
       "path": "quizzes/questions/quiz.mutable-default-reuse.json"
     },
     {
+      "id": "quiz.name-with-explicit-unit",
+      "path": "quizzes/questions/quiz.name-with-explicit-unit.json"
+    },
+    {
       "id": "quiz.negative-floor-remainder",
       "path": "quizzes/questions/quiz.negative-floor-remainder.json"
+    },
+    {
+      "id": "quiz.negative-window-initialization",
+      "path": "quizzes/questions/quiz.negative-window-initialization.json"
+    },
+    {
+      "id": "quiz.none-check-preserve-zero",
+      "path": "quizzes/questions/quiz.none-check-preserve-zero.json"
     },
     {
       "id": "quiz.nonempty-false-text",
       "path": "quizzes/questions/quiz.nonempty-false-text.json"
     },
     {
+      "id": "quiz.open-returns-file",
+      "path": "quizzes/questions/quiz.open-returns-file.json"
+    },
+    {
+      "id": "quiz.openpyxl-formula-not-engine",
+      "path": "quizzes/questions/quiz.openpyxl-formula-not-engine.json"
+    },
+    {
+      "id": "quiz.openpyxl-xlsx-format",
+      "path": "quizzes/questions/quiz.openpyxl-xlsx-format.json"
+    },
+    {
+      "id": "quiz.organizer-exact-name-atomic-boundary",
+      "path": "quizzes/questions/quiz.organizer-exact-name-atomic-boundary.json"
+    },
+    {
+      "id": "quiz.os-getcwd-process-state",
+      "path": "quizzes/questions/quiz.os-getcwd-process-state.json"
+    },
+    {
       "id": "quiz.overlapping-threshold-order",
       "path": "quizzes/questions/quiz.overlapping-threshold-order.json"
     },
     {
+      "id": "quiz.pair-duplicate-multiplicity",
+      "path": "quizzes/questions/quiz.pair-duplicate-multiplicity.json"
+    },
+    {
+      "id": "quiz.pandas-label-selection",
+      "path": "quizzes/questions/quiz.pandas-label-selection.json"
+    },
+    {
+      "id": "quiz.pandas-merge-cardinality",
+      "path": "quizzes/questions/quiz.pandas-merge-cardinality.json"
+    },
+    {
       "id": "quiz.parameter-rebind-versus-mutation",
       "path": "quizzes/questions/quiz.parameter-rebind-versus-mutation.json"
+    },
+    {
+      "id": "quiz.pep8-guidance-not-syntax",
+      "path": "quizzes/questions/quiz.pep8-guidance-not-syntax.json"
     },
     {
       "id": "quiz.positional-argument-binding",
@@ -198,6 +422,10 @@
       "path": "quizzes/questions/quiz.positive-remainder.json"
     },
     {
+      "id": "quiz.predict-before-execution",
+      "path": "quizzes/questions/quiz.predict-before-execution.json"
+    },
+    {
       "id": "quiz.print-custom-separator",
       "path": "quizzes/questions/quiz.print-custom-separator.json"
     },
@@ -206,28 +434,92 @@
       "path": "quizzes/questions/quiz.print-literal.json"
     },
     {
+      "id": "quiz.pytest-collect-only",
+      "path": "quizzes/questions/quiz.pytest-collect-only.json"
+    },
+    {
+      "id": "quiz.python-source-module",
+      "path": "quizzes/questions/quiz.python-source-module.json"
+    },
+    {
+      "id": "quiz.qualifying-minute-sum",
+      "path": "quizzes/questions/quiz.qualifying-minute-sum.json"
+    },
+    {
       "id": "quiz.quoted-digits-type",
       "path": "quizzes/questions/quiz.quoted-digits-type.json"
+    },
+    {
+      "id": "quiz.raise-keyword",
+      "path": "quizzes/questions/quiz.raise-keyword.json"
     },
     {
       "id": "quiz.range-stop",
       "path": "quizzes/questions/quiz.range-stop.json"
     },
     {
+      "id": "quiz.reachable-cache-retention",
+      "path": "quizzes/questions/quiz.reachable-cache-retention.json"
+    },
+    {
       "id": "quiz.reassignment-order",
       "path": "quizzes/questions/quiz.reassignment-order.json"
+    },
+    {
+      "id": "quiz.reconciliation-duplicate-source",
+      "path": "quizzes/questions/quiz.reconciliation-duplicate-source.json"
+    },
+    {
+      "id": "quiz.recursive-sum-trace",
+      "path": "quizzes/questions/quiz.recursive-sum-trace.json"
+    },
+    {
+      "id": "quiz.registration-canonical-uniqueness",
+      "path": "quizzes/questions/quiz.registration-canonical-uniqueness.json"
+    },
+    {
+      "id": "quiz.relative-path-working-directory",
+      "path": "quizzes/questions/quiz.relative-path-working-directory.json"
+    },
+    {
+      "id": "quiz.repeated-lookup-tradeoff",
+      "path": "quizzes/questions/quiz.repeated-lookup-tradeoff.json"
     },
     {
       "id": "quiz.replace-does-not-mutate",
       "path": "quizzes/questions/quiz.replace-does-not-mutate.json"
     },
     {
+      "id": "quiz.report-inclusive-boundaries",
+      "path": "quizzes/questions/quiz.report-inclusive-boundaries.json"
+    },
+    {
+      "id": "quiz.requests-explicit-timeout",
+      "path": "quizzes/questions/quiz.requests-explicit-timeout.json"
+    },
+    {
+      "id": "quiz.requests-json-not-success",
+      "path": "quizzes/questions/quiz.requests-json-not-success.json"
+    },
+    {
       "id": "quiz.return-keyword",
       "path": "quizzes/questions/quiz.return-keyword.json"
     },
     {
+      "id": "quiz.rolling-window-update",
+      "path": "quizzes/questions/quiz.rolling-window-update.json"
+    },
+    {
       "id": "quiz.round-ties-to-even",
       "path": "quizzes/questions/quiz.round-ties-to-even.json"
+    },
+    {
+      "id": "quiz.sdd-exact-int-contract",
+      "path": "quizzes/questions/quiz.sdd-exact-int-contract.json"
+    },
+    {
+      "id": "quiz.sdd-type-before-range",
+      "path": "quizzes/questions/quiz.sdd-type-before-range.json"
     },
     {
       "id": "quiz.set-directional-difference",
@@ -258,6 +550,10 @@
       "path": "quizzes/questions/quiz.split-preserves-empty-fields.json"
     },
     {
+      "id": "quiz.sql-check-null-constraint",
+      "path": "quizzes/questions/quiz.sql-check-null-constraint.json"
+    },
+    {
       "id": "quiz.string-negative-index",
       "path": "quizzes/questions/quiz.string-negative-index.json"
     },
@@ -274,8 +570,36 @@
       "path": "quizzes/questions/quiz.strip-surrounding-whitespace.json"
     },
     {
+      "id": "quiz.task-marker-no-runtime",
+      "path": "quizzes/questions/quiz.task-marker-no-runtime.json"
+    },
+    {
+      "id": "quiz.tdd-red-first",
+      "path": "quizzes/questions/quiz.tdd-red-first.json"
+    },
+    {
+      "id": "quiz.tdd-refactor-preserve-behavior",
+      "path": "quizzes/questions/quiz.tdd-refactor-preserve-behavior.json"
+    },
+    {
+      "id": "quiz.timedelta-duration",
+      "path": "quizzes/questions/quiz.timedelta-duration.json"
+    },
+    {
+      "id": "quiz.traceback-diagnosis-first",
+      "path": "quizzes/questions/quiz.traceback-diagnosis-first.json"
+    },
+    {
+      "id": "quiz.transaction-failed-credit-rollback",
+      "path": "quizzes/questions/quiz.transaction-failed-credit-rollback.json"
+    },
+    {
       "id": "quiz.true-division-integers",
       "path": "quizzes/questions/quiz.true-division-integers.json"
+    },
+    {
+      "id": "quiz.try-else-success-only",
+      "path": "quizzes/questions/quiz.try-else-success-only.json"
     },
     {
       "id": "quiz.tuple-nested-mutability",
@@ -292,6 +616,10 @@
     {
       "id": "quiz.unsaved-source-edit",
       "path": "quizzes/questions/quiz.unsaved-source-edit.json"
+    },
+    {
+      "id": "quiz.value-error-contract",
+      "path": "quizzes/questions/quiz.value-error-contract.json"
     },
     {
       "id": "quiz.variadic-collection-shapes",

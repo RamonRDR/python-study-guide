@@ -23,7 +23,8 @@ class FoundationsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.chapters = load_matrix(ROOT)
-        cls.quizzes = load_index("quiz", ROOT, "quizzes/quiz-index.json", cls.chapters)
+        all_quizzes = load_index("quiz", ROOT, "quizzes/quiz-index.json", cls.chapters)
+        cls.quizzes = [q for q in all_quizzes if q["chapter_id"].split(".")[0] in MODULES]
         cls.by_id = {q["id"]: q for q in cls.quizzes}
 
     def test_exact_foundations_allocation_and_index(self):
@@ -39,10 +40,6 @@ class FoundationsTests(unittest.TestCase):
         self.assertEqual(Counter(q["difficulty"] for q in self.quizzes),
                          {"easy": 37, "medium": 30, "hard": 11})
         self.assertEqual(sum(q["xp"] for q in self.quizzes), 1300)
-        self.assertEqual(
-            {p.relative_to(ROOT).as_posix() for p in (ROOT / "quizzes/questions").rglob("*.json")},
-            {f"quizzes/questions/{q['id']}.json" for q in self.quizzes},
-        )
 
     def test_new_record_grading(self):
         self.assertEqual(len(EXPECTED), 68)

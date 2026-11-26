@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.transaction-failed-credit-rollback",
+  "chapter_id": "technical-interview-preparation.transactions-indexes-and-sql-safety",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "In the teaching transfer, the conditional debit succeeded but the target account does not exist. With the documented dedicated transaction, what must happen?",
+    "pt-BR": "Na transferência didática, o débito condicional teve sucesso mas a conta destino não existe. Com a transação dedicada documentada, o que deve ocorrer?",
+    "es": "En la transferencia didáctica, el débito condicional tuvo éxito pero la cuenta destino no existe. Con la transacción dedicada documentada, ¿qué debe ocurrir?"
+  },
+  "explanation": {
+    "en": "Raise a failure and roll back the uncommitted debit; the transfer is atomic under its transaction contract.",
+    "pt-BR": "Levante falha e reverta o débito não confirmado; a transferência é atômica sob seu contrato de transação.",
+    "es": "Lanza fallo y revierte el débito no confirmado; la transferencia es atómica bajo su contrato de transacción."
+  },
+  "hints": {
+    "en": [
+      "Both debit and credit must succeed as one unit."
+    ],
+    "pt-BR": [
+      "Débito e crédito devem ter sucesso como unidade."
+    ],
+    "es": [
+      "Débito y crédito deben tener éxito como unidad."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.md",
+        "pt-BR": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.pt-BR.md",
+        "es": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md"
+      },
+      "sections": {
+        "en": "Transactions and integrity",
+        "pt-BR": "Transações e integridade",
+        "es": "Transacciones e integridad"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "rollback"
+  },
+  "choices": [
+    {
+      "id": "commit",
+      "text": {
+        "en": "Commit the debit alone.",
+        "pt-BR": "Confirme somente o débito.",
+        "es": "Confirma solo el débito."
+      }
+    },
+    {
+      "id": "rollback",
+      "text": {
+        "en": "Roll back the debit and report failure.",
+        "pt-BR": "Reverta o débito e informe falha.",
+        "es": "Revierte el débito e informa fallo."
+      }
+    },
+    {
+      "id": "ignore",
+      "text": {
+        "en": "Ignore the missing account and report success.",
+        "pt-BR": "Ignore conta ausente e informe sucesso.",
+        "es": "Ignora cuenta ausente e informa éxito."
+      }
+    }
+  ]
+}

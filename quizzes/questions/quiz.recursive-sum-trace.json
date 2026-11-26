@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.recursive-sum-trace",
+  "chapter_id": "problem-solving.recursion",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact printed output, including the final newline.",
+    "pt-BR": "Preveja a saída impressa exata, incluindo a quebra de linha final.",
+    "es": "Predice la salida impresa exacta, incluido el salto de línea final."
+  },
+  "explanation": {
+    "en": "The base case returns zero; unwinding adds 1, 2, 3 and 4, giving 10.",
+    "pt-BR": "O caso base retorna zero; o retorno das chamadas soma 1, 2, 3 e 4, dando 10.",
+    "es": "El caso base devuelve cero; al retornar las llamadas se suman 1, 2, 3 y 4, dando 10."
+  },
+  "hints": {
+    "en": [
+      "Trace until n is zero, then unwind."
+    ],
+    "pt-BR": [
+      "Rastreie até n ser zero e retorne pelas chamadas."
+    ],
+    "es": [
+      "Sigue hasta n igual a cero y retorna por las llamadas."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/04-recursion/README.md",
+        "pt-BR": "problem-solving-and-live-coding/04-recursion/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/04-recursion/README.es.md"
+      },
+      "sections": {
+        "en": "1. A smaller instance of the same problem",
+        "pt-BR": "1. Uma instância menor do mesmo problema",
+        "es": "1. Una instancia menor del mismo problema"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "10\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "def total(n):\n    if n == 0:\n        return 0\n    return n + total(n - 1)\n\nprint(total(4))"
+}

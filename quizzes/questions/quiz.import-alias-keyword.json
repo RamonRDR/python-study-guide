@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.import-alias-keyword",
+  "chapter_id": "errors-files-and-modules.imports-modules-and-packages",
+  "difficulty": "medium",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Replace ____ with the keyword that binds the imported module to the alias stats. Enter just the keyword.",
+    "pt-BR": "Substitua ____ pela palavra-chave que associa o módulo importado ao alias stats. Digite só a palavra-chave.",
+    "es": "Sustituye ____ por la palabra clave que vincula el módulo importado al alias stats. Introduce solo la palabra clave."
+  },
+  "explanation": {
+    "en": "as binds the imported module under an explicit local name.",
+    "pt-BR": "as associa o módulo importado a um nome local explícito.",
+    "es": "as vincula el módulo importado bajo un nombre local explícito."
+  },
+  "hints": {
+    "en": [
+      "It introduces the alternative local name."
+    ],
+    "pt-BR": [
+      "Ela introduz o nome local alternativo."
+    ],
+    "es": [
+      "Introduce el nombre local alternativo."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/05-imports-modules-and-packages/README.md",
+        "pt-BR": "errors-files-and-modules/05-imports-modules-and-packages/README.pt-BR.md",
+        "es": "errors-files-and-modules/05-imports-modules-and-packages/README.es.md"
+      },
+      "sections": {
+        "en": "6. `as` creates a deliberate local alias",
+        "pt-BR": "6. `as` cria um alias local deliberado",
+        "es": "6. `as` crea un alias local deliberado"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "as"
+    ],
+    "comparison": "exact"
+  },
+  "code": "import statistics ____ stats\nresult = stats.mean([2, 4])"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.chain-one-level",
+  "chapter_id": "standard-library.itertools",
+  "difficulty": "medium",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Fill ____ with the chain method that lazily flattens one level of the iterable of lists. Enter only its method name.",
+    "pt-BR": "Preencha ____ com o método de chain que achata um nível do iterável de listas de forma lazy. Digite só o nome do método.",
+    "es": "Completa ____ con el método de chain que aplana un nivel del iterable de listas de forma lazy. Introduce solo su nombre."
+  },
+  "explanation": {
+    "en": "chain.from_iterable requests each inner iterable and yields its items; it does not recursively flatten arbitrary depth.",
+    "pt-BR": "chain.from_iterable solicita cada iterável interno e produz seus itens; não achata recursivamente profundidade arbitrária.",
+    "es": "chain.from_iterable solicita cada iterable interno y produce sus elementos; no aplana recursivamente profundidad arbitraria."
+  },
+  "hints": {
+    "en": [
+      "The method receives one iterable containing the inner iterables."
+    ],
+    "pt-BR": [
+      "O método recebe um iterável contendo os iteráveis internos."
+    ],
+    "es": [
+      "El método recibe un iterable que contiene los iterables internos."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/07-itertools/README.md",
+        "pt-BR": "standard-library/07-itertools/README.pt-BR.md",
+        "es": "standard-library/07-itertools/README.es.md"
+      },
+      "sections": {
+        "en": "9. `chain.from_iterable()` flattens one level",
+        "pt-BR": "9. `chain.from_iterable()` achata um nível",
+        "es": "9. `chain.from_iterable()` aplana un nivel"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "from_iterable"
+    ],
+    "comparison": "exact"
+  },
+  "code": "from itertools import chain\npages = [[2, 3], [], [4]]\nitems = list(chain.____(pages))"
+}

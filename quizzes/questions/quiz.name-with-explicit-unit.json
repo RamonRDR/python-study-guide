@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.name-with-explicit-unit",
+  "chapter_id": "comments-and-documentation.meaningful-names",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A timeout value is stored in milliseconds. Which name best makes the unit explicit?",
+    "pt-BR": "Um valor de timeout é armazenado em milissegundos. Qual nome explicita melhor a unidade?",
+    "es": "Un valor de tiempo de espera se almacena en milisegundos. ¿Qué nombre explicita mejor la unidad?"
+  },
+  "explanation": {
+    "en": "timeout_ms records both the meaning and the representation, reducing unit confusion.",
+    "pt-BR": "timeout_ms registra significado e representação, reduzindo confusão de unidades.",
+    "es": "timeout_ms registra significado y representación, reduciendo confusión de unidades."
+  },
+  "hints": {
+    "en": [
+      "The unit must be visible at the point of use."
+    ],
+    "pt-BR": [
+      "A unidade deve aparecer no ponto de uso."
+    ],
+    "es": [
+      "La unidad debe verse en el punto de uso."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "comments-and-documentation/03-meaningful-names/README.md",
+        "pt-BR": "comments-and-documentation/03-meaningful-names/README.pt-BR.md",
+        "es": "comments-and-documentation/03-meaningful-names/README.es.md"
+      },
+      "sections": {
+        "en": "4. Include units and representation when they matter",
+        "pt-BR": "4. Inclua unidades e representação quando forem importantes",
+        "es": "4. Incluye unidades y representación cuando importen"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "milliseconds"
+  },
+  "choices": [
+    {
+      "id": "generic",
+      "text": {
+        "en": "timeout",
+        "pt-BR": "timeout",
+        "es": "timeout"
+      }
+    },
+    {
+      "id": "milliseconds",
+      "text": {
+        "en": "timeout_ms",
+        "pt-BR": "timeout_ms",
+        "es": "timeout_ms"
+      }
+    },
+    {
+      "id": "seconds",
+      "text": {
+        "en": "timeout_seconds",
+        "pt-BR": "timeout_seconds",
+        "es": "timeout_seconds"
+      }
+    },
+    {
+      "id": "number",
+      "text": {
+        "en": "number",
+        "pt-BR": "number",
+        "es": "number"
+      }
+    }
+  ]
+}

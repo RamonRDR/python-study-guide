@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.decimal-float-arithmetic-error",
+  "chapter_id": "standard-library.decimal",
+  "difficulty": "medium",
+  "type": "error_identification",
+  "prompt": {
+    "en": "Which exception is raised by this mixed numeric addition?",
+    "pt-BR": "Qual exceção esta soma numérica mista gera?",
+    "es": "¿Qué excepción produce esta suma numérica mixta?"
+  },
+  "explanation": {
+    "en": "Decimal does not generally support ordinary arithmetic with float; this addition raises TypeError.",
+    "pt-BR": "Decimal normalmente não suporta aritmética comum com float; esta soma gera TypeError.",
+    "es": "Decimal generalmente no admite aritmética ordinaria con float; esta suma lanza TypeError."
+  },
+  "hints": {
+    "en": [
+      "The issue is incompatible numeric types, not invalid text."
+    ],
+    "pt-BR": [
+      "O problema é incompatibilidade de tipos numéricos, não texto inválido."
+    ],
+    "es": [
+      "El problema son tipos numéricos incompatibles, no texto inválido."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/08-decimal/README.md",
+        "pt-BR": "standard-library/08-decimal/README.pt-BR.md",
+        "es": "standard-library/08-decimal/README.es.md"
+      },
+      "sections": {
+        "en": "11. `Decimal` and `float` do not generally mix in arithmetic",
+        "pt-BR": "11. `Decimal` e `float` normalmente não se misturam em aritmética",
+        "es": "11. `Decimal` y `float` generalmente no se mezclan en aritmética"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "type-error"
+  },
+  "choices": [
+    {
+      "id": "value-error",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    },
+    {
+      "id": "type-error",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    },
+    {
+      "id": "zero-division-error",
+      "text": {
+        "en": "ZeroDivisionError",
+        "pt-BR": "ZeroDivisionError",
+        "es": "ZeroDivisionError"
+      }
+    },
+    {
+      "id": "overflow-error",
+      "text": {
+        "en": "OverflowError",
+        "pt-BR": "OverflowError",
+        "es": "OverflowError"
+      }
+    }
+  ],
+  "code": "from decimal import Decimal\namount = Decimal(\"2.10\") + 0.5"
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.value-error-contract",
+  "chapter_id": "errors-files-and-modules.raise-and-custom-exceptions",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A percentage accepts integers from 0 to 100; the caller supplies integer 140. Which built-in exception best expresses the violated value contract?",
+    "pt-BR": "Um percentual aceita inteiros de 0 a 100; o chamador fornece o inteiro 140. Qual exceção embutida melhor expressa a violação do contrato de valor?",
+    "es": "Un porcentaje acepta enteros de 0 a 100; quien llama proporciona el entero 140. ¿Qué excepción incorporada expresa mejor la violación del contrato de valor?"
+  },
+  "explanation": {
+    "en": "The type is acceptable, but the specific value is invalid for the contract: ValueError.",
+    "pt-BR": "O tipo é aceitável, mas o valor específico é inválido para o contrato: ValueError.",
+    "es": "El tipo es aceptable, pero el valor concreto es inválido para el contrato: ValueError."
+  },
+  "hints": {
+    "en": [
+      "The problem is the permitted range, not the object type."
+    ],
+    "pt-BR": [
+      "O problema é o intervalo permitido, não o tipo do objeto."
+    ],
+    "es": [
+      "El problema es el intervalo permitido, no el tipo del objeto."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/02-raise-and-custom-exceptions/README.md",
+        "pt-BR": "errors-files-and-modules/02-raise-and-custom-exceptions/README.pt-BR.md",
+        "es": "errors-files-and-modules/02-raise-and-custom-exceptions/README.es.md"
+      },
+      "sections": {
+        "en": "6. `ValueError` is appropriate for many invalid values",
+        "pt-BR": "6. `ValueError` é apropriado para muitos valores inválidos",
+        "es": "6. `ValueError` es apropiado para muchos valores inválidos"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "value-error"
+  },
+  "choices": [
+    {
+      "id": "value-error",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    },
+    {
+      "id": "type-error",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    },
+    {
+      "id": "key-error",
+      "text": {
+        "en": "KeyError",
+        "pt-BR": "KeyError",
+        "es": "KeyError"
+      }
+    },
+    {
+      "id": "import-error",
+      "text": {
+        "en": "ImportError",
+        "pt-BR": "ImportError",
+        "es": "ImportError"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.pair-duplicate-multiplicity",
+  "chapter_id": "problem-solving.algorithms-and-complexity",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "In Sorted Pair Multiplicity, how many index pairs i < j in [1, 1, 1, 4, 4] sum to 5?",
+    "pt-BR": "Em Multiplicidade de Pares Ordenados, quantos pares de índices i < j em [1, 1, 1, 4, 4] somam 5?",
+    "es": "En Multiplicidad de Pares Ordenados, ¿cuántos pares de índices i < j en [1, 1, 1, 4, 4] suman 5?"
+  },
+  "explanation": {
+    "en": "There are three positions containing 1 and two containing 4; 3 * 2 = 6 distinct index pairs.",
+    "pt-BR": "Há três posições com 1 e duas com 4; 3 * 2 = 6 pares de índices distintos.",
+    "es": "Hay tres posiciones con 1 y dos con 4; 3 * 2 = 6 pares de índices distintos."
+  },
+  "hints": {
+    "en": [
+      "Count occurrences, not distinct value pairs."
+    ],
+    "pt-BR": [
+      "Conte ocorrências, não pares de valores distintos."
+    ],
+    "es": [
+      "Cuenta apariciones, no pares de valores distintos."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/12-algorithms-and-complexity/README.md",
+        "pt-BR": "problem-solving-and-live-coding/12-algorithms-and-complexity/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/12-algorithms-and-complexity/README.es.md"
+      },
+      "sections": {
+        "en": "Available challenges",
+        "pt-BR": "Desafios disponíveis",
+        "es": "Retos disponibles"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "six"
+  },
+  "choices": [
+    {
+      "id": "one",
+      "text": {
+        "en": "1",
+        "pt-BR": "1",
+        "es": "1"
+      }
+    },
+    {
+      "id": "two",
+      "text": {
+        "en": "2",
+        "pt-BR": "2",
+        "es": "2"
+      }
+    },
+    {
+      "id": "five",
+      "text": {
+        "en": "5",
+        "pt-BR": "5",
+        "es": "5"
+      }
+    },
+    {
+      "id": "six",
+      "text": {
+        "en": "6",
+        "pt-BR": "6",
+        "es": "6"
+      }
+    }
+  ]
+}

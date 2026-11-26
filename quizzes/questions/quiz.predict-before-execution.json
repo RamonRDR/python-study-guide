@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.predict-before-execution",
+  "chapter_id": "manual-programming-practices.manual-coding-and-debugging",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Writing a small input and expected output by hand before executing helps reveal misunderstandings.",
+    "pt-BR": "Anotar uma entrada pequena e saída esperada à mão antes de executar ajuda a revelar mal-entendidos.",
+    "es": "Anotar una entrada pequeña y salida esperada a mano antes de ejecutar ayuda a revelar malentendidos."
+  },
+  "explanation": {
+    "en": "An explicit prediction gives you evidence to compare with the actual result.",
+    "pt-BR": "Uma previsão explícita fornece evidência para comparar com o resultado obtido.",
+    "es": "Una predicción explícita aporta evidencia para comparar con el resultado obtenido."
+  },
+  "hints": {
+    "en": [
+      "Think of the expected behavior as a comparison target."
+    ],
+    "pt-BR": [
+      "Pense no comportamento esperado como alvo de comparação."
+    ],
+    "es": [
+      "Piensa en el comportamiento esperado como objetivo de comparación."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "manual-programming-practices/01-manual-coding-and-debugging/README.md",
+        "pt-BR": "manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md",
+        "es": "manual-programming-practices/01-manual-coding-and-debugging/README.es.md"
+      },
+      "sections": {
+        "en": "1. Think before typing",
+        "pt-BR": "1. Pense antes de digitar",
+        "es": "1. Piensa antes de escribir"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

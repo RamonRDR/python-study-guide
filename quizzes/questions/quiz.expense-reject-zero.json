@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.expense-reject-zero",
+  "chapter_id": "practical-projects.expense-tracker",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Under the expense tracker's contract, an amount of zero is valid.",
+    "pt-BR": "Pelo contrato do expense tracker, um valor zero é válido.",
+    "es": "Según el contrato del expense tracker, un importe de cero es válido."
+  },
+  "explanation": {
+    "en": "Amounts must be positive; zero is rejected without appending a partial record.",
+    "pt-BR": "Valores devem ser positivos; zero é rejeitado sem adicionar registro parcial.",
+    "es": "Los importes deben ser positivos; cero se rechaza sin añadir un registro parcial."
+  },
+  "hints": {
+    "en": [
+      "Check the allowed amount boundary."
+    ],
+    "pt-BR": [
+      "Confira o limite de valor permitido."
+    ],
+    "es": [
+      "Comprueba el límite de importe permitido."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "practical-projects/01-expense-tracker/README.md",
+        "pt-BR": "practical-projects/01-expense-tracker/README.pt-BR.md",
+        "es": "practical-projects/01-expense-tracker/README.es.md"
+      },
+      "sections": {
+        "en": "3. Validation requirements",
+        "pt-BR": "3. Requisitos de validação",
+        "es": "3. Requisitos de validación"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

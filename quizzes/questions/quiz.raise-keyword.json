@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.raise-keyword",
+  "chapter_id": "errors-files-and-modules.raise-and-custom-exceptions",
+  "difficulty": "easy",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Fill ____ with the keyword that explicitly throws the exception. Enter only the keyword.",
+    "pt-BR": "Preencha ____ com a palavra-chave que levanta explicitamente a exceção. Digite apenas a palavra-chave.",
+    "es": "Completa ____ con la palabra clave que lanza explícitamente la excepción. Introduce solo la palabra clave."
+  },
+  "explanation": {
+    "en": "raise transfers control by raising the specified exception instance.",
+    "pt-BR": "raise transfere controle ao levantar a instância de exceção especificada.",
+    "es": "raise transfiere control al lanzar la instancia de excepción especificada."
+  },
+  "hints": {
+    "en": [
+      "The function must fail, not return an exception object."
+    ],
+    "pt-BR": [
+      "A função deve falhar, não retornar objeto de exceção."
+    ],
+    "es": [
+      "La función debe fallar, no devolver un objeto de excepción."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/02-raise-and-custom-exceptions/README.md",
+        "pt-BR": "errors-files-and-modules/02-raise-and-custom-exceptions/README.pt-BR.md",
+        "es": "errors-files-and-modules/02-raise-and-custom-exceptions/README.es.md"
+      },
+      "sections": {
+        "en": "2. The basic `raise` syntax",
+        "pt-BR": "2. A sintaxe básica de `raise`",
+        "es": "2. La sintaxis básica de `raise`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "raise"
+    ],
+    "comparison": "exact"
+  },
+  "code": "____ ValueError(\"invalid quantity\")"
+}

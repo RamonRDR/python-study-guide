@@ -906,35 +906,77 @@ python-study-guide/
 │   ├── quiz-index.json
 │   └── questions/
 │       ├── quiz.absolute-distance-zero.json
+│       ├── quiz.acceptance-observable-evidence.json
+│       ├── quiz.append-preserve-existing-file.json
 │       ├── quiz.assignment-symbol.json
+│       ├── quiz.authentication-not-object-authorization.json
+│       ├── quiz.automation-failure-publication.json
+│       ├── quiz.big-o-not-seconds.json
+│       ├── quiz.binary-first-match-boundary.json
+│       ├── quiz.binary-target-exclusive-end.json
 │       ├── quiz.bool-int-exact-versus-compatible.json
 │       ├── quiz.boolean-precedence.json
+│       ├── quiz.capacity-inclusive-boundary.json
+│       ├── quiz.catch-invalid-integer.json
+│       ├── quiz.chain-one-level.json
 │       ├── quiz.chained-comparison-boundary.json
+│       ├── quiz.classmethod-subclass-factory.json
+│       ├── quiz.closure-late-binding-snapshot.json
 │       ├── quiz.collection-keyed-quantities.json
 │       ├── quiz.collection-membership.json
 │       ├── quiz.combined-classification-loop.json
+│       ├── quiz.composition-replaceable-collaborator.json
 │       ├── quiz.conditional-chain-one-branch.json
+│       ├── quiz.context-exit-false-propagation.json
+│       ├── quiz.counter-tally-purpose.json
+│       ├── quiz.csv-convert-before-validation.json
+│       ├── quiz.csv-quoted-comma.json
+│       ├── quiz.csv-row-rejection-isolated.json
+│       ├── quiz.dataframe-labeled-table.json
+│       ├── quiz.decimal-exact-input-boundary.json
+│       ├── quiz.decimal-float-arithmetic-error.json
 │       ├── quiz.decimal-literal-type.json
+│       ├── quiz.deepcopy-preserves-internal-alias.json
 │       ├── quiz.default-argument-omission.json
 │       ├── quiz.definition-body-delayed.json
 │       ├── quiz.dictionary-fallback.json
 │       ├── quiz.dictionary-membership-keys.json
 │       ├── quiz.dictionary-none-versus-absent.json
 │       ├── quiz.discarded-return-does-not-rebind.json
+│       ├── quiz.distinct-window-monotonic.json
 │       ├── quiz.division-zero-error.json
+│       ├── quiz.docstring-first-statement.json
+│       ├── quiz.docstring-runtime-attribute.json
 │       ├── quiz.editor-replaces-interpreter.json
 │       ├── quiz.empty-braces-not-set.json
 │       ├── quiz.enumerate-default-start.json
 │       ├── quiz.exact-type-function.json
+│       ├── quiz.exhausted-generator-next.json
+│       ├── quiz.expense-reject-zero.json
+│       ├── quiz.extension-does-not-parse.json
+│       ├── quiz.finally-propagates-unhandled.json
+│       ├── quiz.flatten-shared-accumulator.json
 │       ├── quiz.for-accumulator-initial-value.json
 │       ├── quiz.for-item-driven.json
 │       ├── quiz.function-result-pipeline.json
+│       ├── quiz.gil-compound-invariant.json
 │       ├── quiz.git-inspect-staged.json
+│       ├── quiz.grade-weight-atomic-rejection.json
+│       ├── quiz.green-ci-not-complete-proof.json
+│       ├── quiz.hash-inside-string.json
+│       ├── quiz.http-get-retrieval.json
 │       ├── quiz.implicit-none-return.json
+│       ├── quiz.import-alias-keyword.json
+│       ├── quiz.import-initialization-side-effect.json
 │       ├── quiz.input-digits-text.json
+│       ├── quiz.insertion-stable-shift.json
 │       ├── quiz.install-declared-requirements.json
+│       ├── quiz.instance-initialization-role.json
 │       ├── quiz.integer-text-conversion.json
 │       ├── quiz.interpreter-purpose.json
+│       ├── quiz.inventory-order-and-delta.json
+│       ├── quiz.json-dumps-text-not-bytes.json
+│       ├── quiz.left-join-zero-child-count.json
 │       ├── quiz.list-add-one.json
 │       ├── quiz.list-extend-not-nest.json
 │       ├── quiz.list-pop-result.json
@@ -942,26 +984,57 @@ python-study-guide/
 │       ├── quiz.list-stored-item-type.json
 │       ├── quiz.local-before-assignment.json
 │       ├── quiz.local-binding-shadow.json
+│       ├── quiz.log-fallback-level.json
+│       ├── quiz.logging-handler-threshold.json
 │       ├── quiz.loop-else-break-versus-continue.json
 │       ├── quiz.match-guard-fallthrough.json
 │       ├── quiz.match-or-alternatives.json
 │       ├── quiz.match-wildcard.json
 │       ├── quiz.missing-required-argument.json
 │       ├── quiz.mutable-default-reuse.json
+│       ├── quiz.name-with-explicit-unit.json
 │       ├── quiz.negative-floor-remainder.json
+│       ├── quiz.negative-window-initialization.json
+│       ├── quiz.none-check-preserve-zero.json
 │       ├── quiz.nonempty-false-text.json
+│       ├── quiz.open-returns-file.json
+│       ├── quiz.openpyxl-formula-not-engine.json
+│       ├── quiz.openpyxl-xlsx-format.json
+│       ├── quiz.organizer-exact-name-atomic-boundary.json
+│       ├── quiz.os-getcwd-process-state.json
 │       ├── quiz.overlapping-threshold-order.json
+│       ├── quiz.pair-duplicate-multiplicity.json
+│       ├── quiz.pandas-label-selection.json
+│       ├── quiz.pandas-merge-cardinality.json
 │       ├── quiz.parameter-rebind-versus-mutation.json
+│       ├── quiz.pep8-guidance-not-syntax.json
 │       ├── quiz.positional-argument-binding.json
 │       ├── quiz.positive-remainder.json
+│       ├── quiz.predict-before-execution.json
 │       ├── quiz.print-custom-separator.json
 │       ├── quiz.print-literal.json
+│       ├── quiz.pytest-collect-only.json
+│       ├── quiz.python-source-module.json
+│       ├── quiz.qualifying-minute-sum.json
 │       ├── quiz.quoted-digits-type.json
+│       ├── quiz.raise-keyword.json
 │       ├── quiz.range-stop.json
+│       ├── quiz.reachable-cache-retention.json
 │       ├── quiz.reassignment-order.json
+│       ├── quiz.reconciliation-duplicate-source.json
+│       ├── quiz.recursive-sum-trace.json
+│       ├── quiz.registration-canonical-uniqueness.json
+│       ├── quiz.relative-path-working-directory.json
+│       ├── quiz.repeated-lookup-tradeoff.json
 │       ├── quiz.replace-does-not-mutate.json
+│       ├── quiz.report-inclusive-boundaries.json
+│       ├── quiz.requests-explicit-timeout.json
+│       ├── quiz.requests-json-not-success.json
 │       ├── quiz.return-keyword.json
+│       ├── quiz.rolling-window-update.json
 │       ├── quiz.round-ties-to-even.json
+│       ├── quiz.sdd-exact-int-contract.json
+│       ├── quiz.sdd-type-before-range.json
 │       ├── quiz.set-directional-difference.json
 │       ├── quiz.set-shared-members.json
 │       ├── quiz.shallow-list-copy-nested.json
@@ -969,15 +1042,24 @@ python-study-guide/
 │       ├── quiz.singleton-tuple-comma.json
 │       ├── quiz.source-file-extension.json
 │       ├── quiz.split-preserves-empty-fields.json
+│       ├── quiz.sql-check-null-constraint.json
 │       ├── quiz.string-negative-index.json
 │       ├── quiz.string-slice-exclusive-stop.json
 │       ├── quiz.string-zero-index.json
 │       ├── quiz.strip-surrounding-whitespace.json
+│       ├── quiz.task-marker-no-runtime.json
+│       ├── quiz.tdd-red-first.json
+│       ├── quiz.tdd-refactor-preserve-behavior.json
+│       ├── quiz.timedelta-duration.json
+│       ├── quiz.traceback-diagnosis-first.json
+│       ├── quiz.transaction-failed-credit-rollback.json
 │       ├── quiz.true-division-integers.json
+│       ├── quiz.try-else-success-only.json
 │       ├── quiz.tuple-nested-mutability.json
 │       ├── quiz.type-hints-runtime.json
 │       ├── quiz.unclosed-print.json
 │       ├── quiz.unsaved-source-edit.json
+│       ├── quiz.value-error-contract.json
 │       ├── quiz.variadic-collection-shapes.json
 │       ├── quiz.venv-direct-executable.json
 │       ├── quiz.venv-recreate.json
@@ -1255,8 +1337,10 @@ python-study-guide/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
+    ├── assessment_expansion_fixtures.py
     ├── assessment_foundation_fixtures.py
     ├── test_assessment_contract.py
+    ├── test_assessment_expansion.py
     ├── test_assessment_foundations.py
     ├── test_assessment_pilot.py
     ├── test_chapter_navigation.py
@@ -1295,7 +1379,7 @@ python-study-guide/
 - `docs/adr/` y `docs/specs/`: decisiones de arquitectura trilingües, especificaciones de Phase II, registro de tareas, criterios de aceptación, contrato de integración y futuras referencias entre guías. El mapa de requisitos previos FR-05 está en el directorio learning-hub-foundation.
 - `errors-files-and-modules/`: ruta completa de la Fase 7. Los Capítulos 01–05 cubren manejo de excepciones en runtime, lanzamiento deliberado y excepciones personalizadas, I/O seguro de archivos de texto con `open()` y `with`, parsing y escritura de TXT/CSV/JSON y organización del código mediante imports, módulos, paquetes regulares, contexto de ejecución y diseño de dependencias, en inglés, portugués de Brasil y español con ejemplos ejecutables deterministas.
 - `exercises/`: 30 ejercicios con instrucciones localizadas, inicial y referencia compartidos y pruebas de confianza. Tres registros usan schema 1.0.0; 27 siguen legados. El índice de expansión mantiene 29 registros; el índice parcial versionado lista los tres ejercicios migrados.
-- `quizzes/`: 78 preguntas de fundamentos localizadas e índice versionado. Las respuestas son públicas; ningún runtime implementado.
+- `quizzes/`: 160 preguntas localizadas e índice versionado. Las respuestas son públicas; ningún runtime implementado.
 - `schemas/`: cuatro esquemas versionados de evaluación (Draft 2020-12).
 - `external-libraries/`: ruta completa de la Fase 9 para paquetes de terceros. Contiene capítulos multilingües revisados de pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x y pytest 9.1.x, con veinte ejemplos ejecutables deterministas en total. La fase cubre transformaciones tabulares, automatización de libros de Excel, clientes HTTP/API y contratos de pruebas automatizadas; la Fase 10 de proyectos prácticos también está completada.
 - `functions/`: ruta completa de la Fase 5. Los Capítulos 01–09 cubren definición y llamada de funciones, entradas obligatorias, valores retornados, alcance y búsqueda de nombres, type hints para interfaces de funciones, valores predeterminados incluida la evaluación al definir la función y la seguridad con valores mutables, recolección de argumentos posicionales y por palabra clave de cantidad variable con `*args` y `**kwargs`, composición mediante funciones auxiliares y coordinadoras con dependencias explícitas y grafos simples de llamadas, y seguimiento explícito del flujo de datos entre llamadas, incluidos vínculos de parámetros, reasignación frente a mutación, `None`, resultados en tupla y traspasos mediante `return`, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.

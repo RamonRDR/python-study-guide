@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.automation-failure-publication",
+  "chapter_id": "practical-projects.simulated-automation-flow",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A valid automation request succeeds at prepare and process, then fails at verify. What must its result retain and publish?",
+    "pt-BR": "Uma requisição válida tem sucesso em prepare e process, depois falha em verify. O que seu resultado deve preservar e publicar?",
+    "es": "Una solicitud válida tiene éxito en prepare y process, luego falla en verify. ¿Qué debe conservar y publicar su resultado?"
+  },
+  "explanation": {
+    "en": "The run fails; finalize is skipped, prior successful evidence is preserved, and output is not published because full success is required.",
+    "pt-BR": "A execução falha; finalize é ignorada, evidências bem-sucedidas anteriores são preservadas e saída não é publicada, pois sucesso integral é exigido.",
+    "es": "La ejecución falla; finalize se omite, la evidencia exitosa previa se conserva y no se publica salida, porque se exige éxito completo."
+  },
+  "hints": {
+    "en": [
+      "Distinguish step evidence from final output publication."
+    ],
+    "pt-BR": [
+      "Distinga evidência de etapa da publicação de saída final."
+    ],
+    "es": [
+      "Distingue evidencia de paso de publicación de salida final."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "practical-projects/08-simulated-automation-flow/README.md",
+        "pt-BR": "practical-projects/08-simulated-automation-flow/README.pt-BR.md",
+        "es": "practical-projects/08-simulated-automation-flow/README.es.md"
+      },
+      "sections": {
+        "en": "Requirements",
+        "pt-BR": "Requisitos",
+        "es": "Requisitos"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "preserve-no-output"
+  },
+  "choices": [
+    {
+      "id": "publish",
+      "text": {
+        "en": "Publish the partial output and mark success.",
+        "pt-BR": "Publicar saída parcial e marcar sucesso.",
+        "es": "Publicar salida parcial y marcar éxito."
+      }
+    },
+    {
+      "id": "erase",
+      "text": {
+        "en": "Discard all previous evidence.",
+        "pt-BR": "Descartar todas as evidências anteriores.",
+        "es": "Descartar toda la evidencia previa."
+      }
+    },
+    {
+      "id": "preserve-no-output",
+      "text": {
+        "en": "Preserve earlier evidence, skip finalize, mark failed, publish no output.",
+        "pt-BR": "Preservar evidências anteriores, ignorar finalize, marcar falha, não publicar saída.",
+        "es": "Conservar evidencia previa, omitir finalize, marcar fallo y no publicar salida."
+      }
+    },
+    {
+      "id": "continue",
+      "text": {
+        "en": "Execute finalize as if verification succeeded.",
+        "pt-BR": "Executar finalize como se verify tivesse sucesso.",
+        "es": "Ejecutar finalize como si verify hubiera tenido éxito."
+      }
+    }
+  ]
+}

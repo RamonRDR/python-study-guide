@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.registration-canonical-uniqueness",
+  "chapter_id": "practical-projects.user-registration",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A normalized username is structurally valid but already owned by another registered user. What should the registry do?",
+    "pt-BR": "Um username normalizado tem estrutura válida, mas já pertence a outro usuário cadastrado. O que o registro deve fazer?",
+    "es": "Un username normalizado es estructuralmente válido, pero ya pertenece a otro usuario registrado. ¿Qué debe hacer el registro?"
+  },
+  "explanation": {
+    "en": "Structural validity is distinct from availability. Reject the duplicate canonical username.",
+    "pt-BR": "Validade estrutural é distinta da disponibilidade. Rejeite o username canônico duplicado.",
+    "es": "La validez estructural es distinta de la disponibilidad. Rechaza el username canónico duplicado."
+  },
+  "hints": {
+    "en": [
+      "Check both validation and uniqueness."
+    ],
+    "pt-BR": [
+      "Confira validação e unicidade."
+    ],
+    "es": [
+      "Comprueba validación y unicidad."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "practical-projects/03-user-registration/README.md",
+        "pt-BR": "practical-projects/03-user-registration/README.pt-BR.md",
+        "es": "practical-projects/03-user-registration/README.es.md"
+      },
+      "sections": {
+        "en": "21. Design note: validation and uniqueness are different jobs",
+        "pt-BR": "21. Nota de design: validação e unicidade são problemas diferentes",
+        "es": "21. Nota de diseño: validación y unicidad son problemas diferentes"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "duplicate"
+  },
+  "choices": [
+    {
+      "id": "duplicate",
+      "text": {
+        "en": "Reject the duplicate.",
+        "pt-BR": "Rejeitar o duplicado.",
+        "es": "Rechazar el duplicado."
+      }
+    },
+    {
+      "id": "accept",
+      "text": {
+        "en": "Accept because syntax is valid.",
+        "pt-BR": "Aceitar porque a sintaxe é válida.",
+        "es": "Aceptar porque la sintaxis es válida."
+      }
+    },
+    {
+      "id": "replace",
+      "text": {
+        "en": "Replace the original account.",
+        "pt-BR": "Substituir a conta original.",
+        "es": "Reemplazar la cuenta original."
+      }
+    },
+    {
+      "id": "random",
+      "text": {
+        "en": "Append a random suffix without asking.",
+        "pt-BR": "Adicionar sufixo aleatório sem perguntar.",
+        "es": "Añadir un sufijo aleatorio sin preguntar."
+      }
+    }
+  ]
+}

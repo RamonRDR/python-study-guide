@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.csv-convert-before-validation",
+  "chapter_id": "standard-library.csv",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "An ordinary csv.reader yields the field \"007\". The field is a product identifier whose leading zeroes matter. What should the application do?",
+    "pt-BR": "Um csv.reader comum fornece o campo \"007\". Ele é um identificador de produto cujos zeros à esquerda importam. O que a aplicação deve fazer?",
+    "es": "Un csv.reader ordinario proporciona el campo \"007\". Es un identificador de producto cuyos ceros iniciales importan. ¿Qué debe hacer la aplicación?"
+  },
+  "explanation": {
+    "en": "The reader yields text by default; preserve it as a string and validate the identifier contract.",
+    "pt-BR": "O reader fornece texto por padrão; preserve como string e valide o contrato do identificador.",
+    "es": "El reader proporciona texto por defecto; consérvalo como cadena y valida el contrato del identificador."
+  },
+  "hints": {
+    "en": [
+      "Numeric-looking text need not represent a quantity."
+    ],
+    "pt-BR": [
+      "Texto com aparência numérica não precisa representar quantidade."
+    ],
+    "es": [
+      "Un texto de apariencia numérica no tiene por qué representar cantidad."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/04-csv/README.md",
+        "pt-BR": "standard-library/04-csv/README.pt-BR.md",
+        "es": "standard-library/04-csv/README.es.md"
+      },
+      "sections": {
+        "en": "20. CSV fields are strings by default, not inferred application values",
+        "pt-BR": "20. Campos CSV são strings por padrão, não valores inferidos da aplicação",
+        "es": "20. Los campos CSV son strings por defecto, no valores inferidos de la aplicación"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "keep-text"
+  },
+  "choices": [
+    {
+      "id": "integer",
+      "text": {
+        "en": "Convert it to int.",
+        "pt-BR": "Converter para int.",
+        "es": "Convertirlo a int."
+      }
+    },
+    {
+      "id": "float",
+      "text": {
+        "en": "Convert it to float.",
+        "pt-BR": "Converter para float.",
+        "es": "Convertirlo a float."
+      }
+    },
+    {
+      "id": "keep-text",
+      "text": {
+        "en": "Keep the string and validate it.",
+        "pt-BR": "Manter a string e validá-la.",
+        "es": "Conservar la cadena y validarla."
+      }
+    },
+    {
+      "id": "boolean",
+      "text": {
+        "en": "Convert it to bool.",
+        "pt-BR": "Converter para bool.",
+        "es": "Convertirlo a bool."
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprint 07A and 07B merged and post-merge CI passed ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [B CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45872609920)). C1 implements 78 foundation quizzes; exercise migration beyond the pilot and browser runtime are out of scope.
+Sprints 07A–C1 merged and post-merge CI passed ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [PR #104](https://github.com/RamonRDR/python-study-guide/pull/104), [C1 CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45898287287)). C2 implements 160 quizzes; exercise migration beyond the pilot and browser runtime are out of scope.
  
 ## Scope and acceptance
 - Inventory: 115 entries, 345 localized paths, 64 easy / 67 medium / 29 hard quizzes (2,850 XP at 10/20/30). The [allocation matrix](assessment-matrix.json) is engineering planning metadata, not a consumer manifest. Zero allocations preserve manual practice or avoid repeated assessment.
@@ -32,3 +32,10 @@ Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. See [Sprint 06 closure](ht
 - Read the teaching sections in EN/PT-BR/ES before drafting; retain exact localized heading references, stable IDs, original examples, single shared code and explicit accepted answers. Refine the two pilot output questions with precise newline prerequisites; retain their answers. Balance true/false answers across the expanded bank and vary choice positions.
 - Preserve pilot regression checks while enforcing exact per-chapter difficulty allocation, index coverage, locale parity and deterministic grading. Test trusted literal examples, not arbitrary source read from question records. Review ambiguity, edge cases, difficulty, navigation and privacy before asking for merge approval.
 - No runtime, paid dependency, exercise migration or AC-07 closure in C1. All exact-head gates remain mandatory.
+
+## Expansion acceptance (07C2)
+
+- Complete the remaining 82 quizzes per the approved chapter/difficulty matrix: 27 easy, 37 medium, 18 hard (1,550 XP). Preserve the 78 foundation records and their regressions. Final inventory: 160 quizzes, 64 easy/67 medium/29 hard, 2,850 XP. Zero allocations remain empty.
+- Read the relevant teaching sections in all three locales before drafting; retain exact headings, original examples, stable IDs, localized prompts, explanations, hints and choices. Diversify formats, emphasizing scenario-based choices, error identification and constrained completion over excessive output prediction; balance true/false and vary choice positions. Avoid questions that claim to measure seniority.
+- Require exact full-matrix and index coverage, correct/incorrect response fixtures for each new record, and trusted literal execution for executable shared code (no learner code, network or unsafe file operations). Preserve foundation and pilot regression tests. Maintain locale navigation and verify every link. Keep exercises, their indexes, interview bank, dependencies and runtime unchanged.
+- C2 is not AC-07 closure; D migrates the remaining 27 exercises and E closes. Exact-head CI, Codex Review, Final Pre-Merge Audit, explicit approval and post-merge CI remain mandatory.

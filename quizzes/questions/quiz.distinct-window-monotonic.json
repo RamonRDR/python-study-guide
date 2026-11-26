@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.distinct-window-monotonic",
+  "chapter_id": "problem-solving.strings-and-numbers",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "In Longest Distinct Substring, left is 2 and the current character last appeared at index 0. Which new left boundary maintains the invariant?",
+    "pt-BR": "Em Maior Substring sem Repetição, left é 2 e o caractere atual apareceu pela última vez no índice 0. Qual novo limite mantém o invariante?",
+    "es": "En Mayor Subcadena sin Repetición, left es 2 y el carácter actual apareció por última vez en índice 0. ¿Qué nuevo límite mantiene el invariante?"
+  },
+  "explanation": {
+    "en": "Use max(left, previous + 1), yielding 2. An occurrence outside the window must not move left backwards.",
+    "pt-BR": "Use max(left, previous + 1), obtendo 2. Uma ocorrência fora da janela não deve mover left para trás.",
+    "es": "Usa max(left, previous + 1), obteniendo 2. Una aparición fuera de la ventana no debe mover left hacia atrás."
+  },
+  "hints": {
+    "en": [
+      "The window begins after the prior occurrence already."
+    ],
+    "pt-BR": [
+      "A janela já começa após a ocorrência anterior."
+    ],
+    "es": [
+      "La ventana ya comienza después de la aparición anterior."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/08-strings-and-numbers/README.md",
+        "pt-BR": "problem-solving-and-live-coding/08-strings-and-numbers/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/08-strings-and-numbers/README.es.md"
+      },
+      "sections": {
+        "en": "Available challenges",
+        "pt-BR": "Desafios disponíveis",
+        "es": "Retos disponibles"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "keep"
+  },
+  "choices": [
+    {
+      "id": "back",
+      "text": {
+        "en": "1",
+        "pt-BR": "1",
+        "es": "1"
+      }
+    },
+    {
+      "id": "reset",
+      "text": {
+        "en": "0",
+        "pt-BR": "0",
+        "es": "0"
+      }
+    },
+    {
+      "id": "keep",
+      "text": {
+        "en": "2",
+        "pt-BR": "2",
+        "es": "2"
+      }
+    },
+    {
+      "id": "advance",
+      "text": {
+        "en": "3",
+        "pt-BR": "3",
+        "es": "3"
+      }
+    }
+  ]
+}

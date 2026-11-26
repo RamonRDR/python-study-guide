@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.os-getcwd-process-state",
+  "chapter_id": "standard-library.os-shutil",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "os.getcwd() reports the current working directory of the process.",
+    "pt-BR": "os.getcwd() informa o diretório de trabalho atual do processo.",
+    "es": "os.getcwd() informa del directorio de trabajo actual del proceso."
+  },
+  "explanation": {
+    "en": "The working directory is process state and provides the usual context for relative filesystem paths.",
+    "pt-BR": "O diretório de trabalho é estado do processo e fornece o contexto usual para caminhos relativos.",
+    "es": "El directorio de trabajo es estado del proceso y proporciona el contexto habitual para rutas relativas."
+  },
+  "hints": {
+    "en": [
+      "It describes current process state, not necessarily the source directory."
+    ],
+    "pt-BR": [
+      "Descreve estado atual do processo, não necessariamente diretório fonte."
+    ],
+    "es": [
+      "Describe el estado actual del proceso, no necesariamente el directorio fuente."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/09-os-shutil/README.md",
+        "pt-BR": "standard-library/09-os-shutil/README.pt-BR.md",
+        "es": "standard-library/09-os-shutil/README.es.md"
+      },
+      "sections": {
+        "en": "10. The current working directory is process state",
+        "pt-BR": "10. O diretório de trabalho atual é estado do processo",
+        "es": "10. El directorio de trabajo actual es estado del proceso"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

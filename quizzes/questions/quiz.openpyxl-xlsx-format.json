@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.openpyxl-xlsx-format",
+  "chapter_id": "external-libraries.openpyxl",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Which workbook extension is within openpyxl's supported Office Open XML formats?",
+    "pt-BR": "Qual extensão de workbook está entre os formatos Office Open XML suportados por openpyxl?",
+    "es": "¿Qué extensión de libro está entre los formatos Office Open XML admitidos por openpyxl?"
+  },
+  "explanation": {
+    "en": "xlsx is an Office Open XML workbook format; legacy xls and xlsb require different tools.",
+    "pt-BR": "xlsx é formato Office Open XML; xls legado e xlsb exigem outras ferramentas.",
+    "es": "xlsx es un formato Office Open XML; xls heredado y xlsb requieren otras herramientas."
+  },
+  "hints": {
+    "en": [
+      "Identify the modern XML workbook format."
+    ],
+    "pt-BR": [
+      "Identifique o formato moderno XML de workbook."
+    ],
+    "es": [
+      "Identifica el formato moderno XML de libro."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "external-libraries/02-openpyxl/README.md",
+        "pt-BR": "external-libraries/02-openpyxl/README.pt-BR.md",
+        "es": "external-libraries/02-openpyxl/README.es.md"
+      },
+      "sections": {
+        "en": "5. Know the workbook formats in scope",
+        "pt-BR": "5. Conheça os formatos de workbook no escopo",
+        "es": "5. Conoce los formatos de libro dentro del alcance"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "xlsx"
+  },
+  "choices": [
+    {
+      "id": "xls",
+      "text": {
+        "en": "xls",
+        "pt-BR": "xls",
+        "es": "xls"
+      }
+    },
+    {
+      "id": "xlsx",
+      "text": {
+        "en": "xlsx",
+        "pt-BR": "xlsx",
+        "es": "xlsx"
+      }
+    },
+    {
+      "id": "xlsb",
+      "text": {
+        "en": "xlsb",
+        "pt-BR": "xlsb",
+        "es": "xlsb"
+      }
+    },
+    {
+      "id": "csv",
+      "text": {
+        "en": "csv",
+        "pt-BR": "csv",
+        "es": "csv"
+      }
+    }
+  ]
+}

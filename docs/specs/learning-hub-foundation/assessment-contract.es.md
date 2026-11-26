@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprints 07A y 07B fusionados y CI posterior aprobado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [CI de B](https://github.com/RamonRDR/python-study-guide/actions/runs/45872609920)). C1 implementa 78 cuestionarios de fundamentos; migración más allá del piloto y ejecución en navegador quedan fuera del alcance.
+Sprints 07A–C1 fusionados y CI posterior aprobado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [PR #104](https://github.com/RamonRDR/python-study-guide/pull/104), [CI de C1](https://github.com/RamonRDR/python-study-guide/actions/runs/45898287287)). C2 implementa 160 cuestionarios; migración más allá del piloto y ejecución en navegador quedan fuera del alcance.
 
 ## Alcance y aceptación
 - Inventario: 115 entradas, 345 rutas localizadas, 64 quizzes easy / 67 medium / 29 hard (2.850 XP a 10/20/30). La [matriz de distribución](assessment-matrix.json) es metadato de planificación de ingeniería, no manifiesto del consumidor. Las asignaciones cero preservan práctica manual o evitan evaluaciones repetidas.
@@ -32,3 +32,10 @@ Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [cierre de Sprint 06](
 - Leer las secciones didácticas en EN/PT-BR/ES antes de redactar; mantener títulos localizados exactos, IDs estables, ejemplos originales, código único compartido y respuestas aceptadas explícitas. Refinar requisitos previos de salto de línea en las dos preguntas piloto de salida; conservar respuestas. Equilibrar verdadero/falso en el banco ampliado y variar posiciones de opciones.
 - Conservar regresiones del piloto y exigir asignación exacta por lección/dificultad, cobertura del índice, paridad de idiomas y calificación determinista. Probar ejemplos literales confiables, no código arbitrario leído de registros. Revisar ambigüedad, casos límite, dificultad, navegación y privacidad antes de solicitar aprobación de fusión.
 - Sin runtime, dependencia de pago, migración de ejercicios ni cierre AC-07 en C1. Todos los gates en el head exacto siguen siendo obligatorios.
+
+## Aceptación de la expansión (07C2)
+
+- Completar los 82 cuestionarios restantes según la matriz aprobada por lección/dificultad: 27 easy, 37 medium, 18 hard (1.550 XP). Conservar los 78 registros de fundamentos y sus regresiones. Inventario final: 160 cuestionarios, 64 easy/67 medium/29 hard, 2.850 XP. Las asignaciones cero permanecen vacías.
+- Leer las secciones pertinentes en los tres idiomas antes de redactar; mantener títulos exactos, ejemplos originales, IDs estables, enunciados, explicaciones, pistas y opciones localizados. Diversificar formatos, priorizando elecciones situacionales, identificación de errores y completado restringido frente al exceso de predicción de salida; equilibrar verdadero/falso y variar posiciones. No afirmar que se mide la seniority.
+- Exigir cobertura exacta de matriz e índice completos, fixtures de respuestas correctas/incorrectas por registro nuevo y ejecución literal confiable de código compartido ejecutable (sin código del alumno, red ni operaciones inseguras con archivos). Conservar regresiones del piloto y fundamentos. Mantener navegación localizada y verificar todos los enlaces. Conservar ejercicios, índices, banco de entrevistas, dependencias y runtime.
+- C2 no cierra AC-07; D migra los 27 ejercicios restantes y E cierra. CI del head exacto, Codex Review, Final Pre-Merge Audit, autorización expresa y CI posterior siguen siendo obligatorios.

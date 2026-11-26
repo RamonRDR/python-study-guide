@@ -23,7 +23,7 @@ Status: proposed for review. Execute only after specification PR approval and me
 | 07A | feat/assessment-contract | Versioned contracts, allocation matrix, validators and tests; synchronize Sprint 06 closure. |
 | 07B | feat/assessment-pilot | Ten quizzes and three existing exercises, with prerequisite evidence. |
 | 07C1 | feat/quiz-bank-foundations | Complete 78 foundation quizzes. |
-| 07C2 | feat/quiz-bank-advanced | Complete the 160-quiz bank. |
+| 07C2 | feat/quiz-bank-expansion | Complete the 160-quiz bank. |
 | 07D | feat/exercise-contract-migration | Migrate remaining 27 exercises. |
 | 07E | feat/assessment-bank-acceptance | Consolidated AC-07 verification and closure. |
 | 08 | feat/learning-hub-content-contract | Finalize curriculum manifest, consumer validation, reference fixtures, versioning and compatibility metadata. |

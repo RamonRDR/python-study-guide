@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.counter-tally-purpose",
+  "chapter_id": "standard-library.collections",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Counter is designed to associate hashable elements with their occurrence counts.",
+    "pt-BR": "Counter foi projetado para associar elementos hasheáveis às suas contagens de ocorrências.",
+    "es": "Counter está diseñado para asociar elementos hashables a sus conteos de ocurrencias."
+  },
+  "explanation": {
+    "en": "Counter is a dictionary subclass specialized for tallies.",
+    "pt-BR": "Counter é uma subclasse de dicionário especializada em contagens.",
+    "es": "Counter es una subclase de diccionario especializada en conteos."
+  },
+  "hints": {
+    "en": [
+      "Think of the elements as keys and counts as values."
+    ],
+    "pt-BR": [
+      "Pense nos elementos como chaves e contagens como valores."
+    ],
+    "es": [
+      "Piensa en elementos como claves y conteos como valores."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/06-collections/README.md",
+        "pt-BR": "standard-library/06-collections/README.pt-BR.md",
+        "es": "standard-library/06-collections/README.es.md"
+      },
+      "sections": {
+        "en": "4. `Counter` models tallies",
+        "pt-BR": "4. `Counter` modela contagens",
+        "es": "4. `Counter` modela conteos"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.negative-window-initialization",
+  "chapter_id": "problem-solving.debugging",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "In Debug Negative Window, best starts at max(0, total). Which change fixes all-negative windows without changing the rolling update?",
+    "pt-BR": "Em Depurar Janela Negativa, best começa em max(0, total). Qual mudança corrige janelas só negativas sem alterar a atualização móvel?",
+    "es": "En Depurar Ventana Negativa, best comienza en max(0, total). ¿Qué cambio corrige ventanas solo negativas sin alterar la actualización móvil?"
+  },
+  "explanation": {
+    "en": "Initialize best = total after computing the first actual window, since zero may not be a valid sum.",
+    "pt-BR": "Inicialize best = total após calcular a primeira janela real, pois zero pode não ser soma válida.",
+    "es": "Inicializa best = total tras calcular la primera ventana real, pues cero puede no ser suma válida."
+  },
+  "hints": {
+    "en": [
+      "The initial candidate must represent an actual window."
+    ],
+    "pt-BR": [
+      "O candidato inicial precisa representar uma janela real."
+    ],
+    "es": [
+      "El candidato inicial debe representar una ventana real."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/13-debugging-challenges/README.md",
+        "pt-BR": "problem-solving-and-live-coding/13-debugging-challenges/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/13-debugging-challenges/README.es.md"
+      },
+      "sections": {
+        "en": "Available challenges",
+        "pt-BR": "Desafios disponíveis",
+        "es": "Retos disponibles"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "actual"
+  },
+  "choices": [
+    {
+      "id": "zero",
+      "text": {
+        "en": "best = 0",
+        "pt-BR": "best = 0",
+        "es": "best = 0"
+      }
+    },
+    {
+      "id": "actual",
+      "text": {
+        "en": "best = total",
+        "pt-BR": "best = total",
+        "es": "best = total"
+      }
+    },
+    {
+      "id": "absolute",
+      "text": {
+        "en": "best = abs(total)",
+        "pt-BR": "best = abs(total)",
+        "es": "best = abs(total)"
+      }
+    }
+  ]
+}

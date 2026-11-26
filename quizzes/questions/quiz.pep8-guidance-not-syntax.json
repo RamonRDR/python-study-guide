@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.pep8-guidance-not-syntax",
+  "chapter_id": "comments-and-documentation.pep8-and-readability",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "Missing the two recommended blank lines between otherwise valid top-level functions is by itself a Python syntax error.",
+    "pt-BR": "Omitir as duas linhas em branco recomendadas entre funções válidas no nível do módulo é, por si só, erro de sintaxe Python.",
+    "es": "Omitir las dos líneas en blanco recomendadas entre funciones válidas a nivel de módulo es por sí solo un error de sintaxis Python."
+  },
+  "explanation": {
+    "en": "PEP 8 offers style guidance; the interpreter does not reject that layout by itself.",
+    "pt-BR": "A PEP 8 orienta estilo; o interpretador não rejeita esse layout por si só.",
+    "es": "PEP 8 orienta el estilo; el intérprete no rechaza por sí solo esa disposición."
+  },
+  "hints": {
+    "en": [
+      "Separate grammar from style enforcement."
+    ],
+    "pt-BR": [
+      "Separe gramática de aplicação de estilo."
+    ],
+    "es": [
+      "Separa gramática de aplicación de estilo."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "comments-and-documentation/06-pep8-and-readability/README.md",
+        "pt-BR": "comments-and-documentation/06-pep8-and-readability/README.pt-BR.md",
+        "es": "comments-and-documentation/06-pep8-and-readability/README.es.md"
+      },
+      "sections": {
+        "en": "1. PEP 8 is guidance, not Python syntax",
+        "pt-BR": "1. PEP 8 é orientação, não sintaxe do Python",
+        "es": "1. PEP 8 es orientación, no sintaxis de Python"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

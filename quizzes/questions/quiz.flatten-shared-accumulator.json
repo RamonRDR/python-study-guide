@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.flatten-shared-accumulator",
+  "chapter_id": "problem-solving.functions-and-recursion",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "For Flatten Nested Lists, which recursive design avoids repeated copying while preserving duplicates and depth-first order?",
+    "pt-BR": "Para Achatar Listas Aninhadas, qual desenho recursivo evita cópias repetidas preservando duplicatas e ordem em profundidade?",
+    "es": "Para Aplanar Listas Anidadas, ¿qué diseño recursivo evita copias repetidas conservando duplicados y orden en profundidad?"
+  },
+  "explanation": {
+    "en": "Use one new result list; visit nested lists immediately and append each leaf once.",
+    "pt-BR": "Use uma nova lista de resultado; visite listas internas imediatamente e acrescente cada folha uma vez.",
+    "es": "Usa una lista nueva de resultado; visita listas internas inmediatamente y añade cada hoja una vez."
+  },
+  "hints": {
+    "en": [
+      "A shared output accumulator need not modify the input."
+    ],
+    "pt-BR": [
+      "Um acumulador de saída compartilhado não precisa alterar a entrada."
+    ],
+    "es": [
+      "Un acumulador de salida compartido no necesita modificar la entrada."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/10-functions-and-recursion/README.md",
+        "pt-BR": "problem-solving-and-live-coding/10-functions-and-recursion/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/10-functions-and-recursion/README.es.md"
+      },
+      "sections": {
+        "en": "Available challenges",
+        "pt-BR": "Desafios disponíveis",
+        "es": "Retos disponibles"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "shared"
+  },
+  "choices": [
+    {
+      "id": "set",
+      "text": {
+        "en": "Collect leaves in a set.",
+        "pt-BR": "Colete folhas em um set.",
+        "es": "Recoge hojas en un set."
+      }
+    },
+    {
+      "id": "shared",
+      "text": {
+        "en": "Pass one output list through recursive calls.",
+        "pt-BR": "Passe uma lista de saída pelas chamadas recursivas.",
+        "es": "Pasa una lista de salida por las llamadas recursivas."
+      }
+    },
+    {
+      "id": "sort",
+      "text": {
+        "en": "Sort all leaves after traversal.",
+        "pt-BR": "Ordene todas as folhas após a travessia.",
+        "es": "Ordena todas las hojas tras recorrer."
+      }
+    }
+  ]
+}

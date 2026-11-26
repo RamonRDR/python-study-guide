@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.csv-quoted-comma",
+  "chapter_id": "errors-files-and-modules.txt-csv-and-json",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A CSV row is 17,\"North, East\". The quoted text is one field. Which approach preserves the two fields?",
+    "pt-BR": "Uma linha CSV é 17,\"North, East\". O texto entre aspas é um campo. Qual abordagem preserva os dois campos?",
+    "es": "Una fila CSV es 17,\"North, East\". El texto entre comillas es un campo. ¿Qué enfoque conserva los dos campos?"
+  },
+  "explanation": {
+    "en": "A CSV parser understands quoted fields; split on commas does not.",
+    "pt-BR": "Um parser CSV entende campos entre aspas; split por vírgula não.",
+    "es": "Un analizador CSV entiende campos entre comillas; split por comas no."
+  },
+  "hints": {
+    "en": [
+      "The delimiter inside quotes is data."
+    ],
+    "pt-BR": [
+      "O delimitador dentro das aspas é dado."
+    ],
+    "es": [
+      "El delimitador dentro de comillas es dato."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/04-txt-csv-and-json/README.md",
+        "pt-BR": "errors-files-and-modules/04-txt-csv-and-json/README.pt-BR.md",
+        "es": "errors-files-and-modules/04-txt-csv-and-json/README.es.md"
+      },
+      "sections": {
+        "en": "8. Do not parse CSV with `split(\",\")`",
+        "pt-BR": "8. Não interprete CSV com `split(\",\")`",
+        "es": "8. No analices CSV con `split(\",\")`"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "csv-parser"
+  },
+  "choices": [
+    {
+      "id": "split",
+      "text": {
+        "en": "line.split(',')",
+        "pt-BR": "line.split(',')",
+        "es": "line.split(',')"
+      }
+    },
+    {
+      "id": "strip",
+      "text": {
+        "en": "Remove all quotation marks first.",
+        "pt-BR": "Remover todas as aspas primeiro.",
+        "es": "Quitar primero todas las comillas."
+      }
+    },
+    {
+      "id": "whitespace",
+      "text": {
+        "en": "Split on whitespace.",
+        "pt-BR": "Separar por espaços em branco.",
+        "es": "Separar por espacios en blanco."
+      }
+    },
+    {
+      "id": "csv-parser",
+      "text": {
+        "en": "Use csv.reader.",
+        "pt-BR": "Usar csv.reader.",
+        "es": "Usar csv.reader."
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.rolling-window-update",
+  "chapter_id": "problem-solving.problem-solving-patterns",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A fixed window moves one position to the right. Which update avoids summing the whole window again?",
+    "pt-BR": "Uma janela fixa avança uma posição à direita. Qual atualização evita somar a janela inteira novamente?",
+    "es": "Una ventana fija avanza una posición a la derecha. ¿Qué actualización evita sumar toda la ventana otra vez?"
+  },
+  "explanation": {
+    "en": "Subtract the outgoing value and add the incoming value; the window retains its size.",
+    "pt-BR": "Subtraia o valor que sai e some o que entra; a janela mantém seu tamanho.",
+    "es": "Resta el valor saliente y suma el entrante; la ventana conserva su tamaño."
+  },
+  "hints": {
+    "en": [
+      "Only two values change membership in the window."
+    ],
+    "pt-BR": [
+      "Apenas dois valores mudam de pertencimento à janela."
+    ],
+    "es": [
+      "Solo dos valores cambian de pertenencia a la ventana."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/07-problem-solving-patterns/README.md",
+        "pt-BR": "problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md"
+      },
+      "sections": {
+        "en": "3. Fixed sliding window",
+        "pt-BR": "3. Janela deslizante fixa",
+        "es": "3. Ventana deslizante fija"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "rolling"
+  },
+  "choices": [
+    {
+      "id": "add-both",
+      "text": {
+        "en": "total + outgoing + incoming",
+        "pt-BR": "total + outgoing + incoming",
+        "es": "total + outgoing + incoming"
+      }
+    },
+    {
+      "id": "subtract-both",
+      "text": {
+        "en": "total - outgoing - incoming",
+        "pt-BR": "total - outgoing - incoming",
+        "es": "total - outgoing - incoming"
+      }
+    },
+    {
+      "id": "rolling",
+      "text": {
+        "en": "total - outgoing + incoming",
+        "pt-BR": "total - outgoing + incoming",
+        "es": "total - outgoing + incoming"
+      }
+    }
+  ]
+}

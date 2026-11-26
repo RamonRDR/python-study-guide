@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.dataframe-labeled-table",
+  "chapter_id": "external-libraries.pandas",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "A pandas DataFrame is a two-dimensional table with labeled rows and columns.",
+    "pt-BR": "Um DataFrame do pandas é uma tabela bidimensional com linhas e colunas rotuladas.",
+    "es": "Un DataFrame de pandas es una tabla bidimensional con filas y columnas etiquetadas."
+  },
+  "explanation": {
+    "en": "Different columns may hold different dtypes; both axes have labels.",
+    "pt-BR": "Colunas diferentes podem ter dtypes diferentes; ambos os eixos têm rótulos.",
+    "es": "Columnas diferentes pueden tener dtypes diferentes; ambos ejes tienen etiquetas."
+  },
+  "hints": {
+    "en": [
+      "Think of the table axes."
+    ],
+    "pt-BR": [
+      "Pense nos eixos da tabela."
+    ],
+    "es": [
+      "Piensa en los ejes de la tabla."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "external-libraries/01-pandas/README.md",
+        "pt-BR": "external-libraries/01-pandas/README.pt-BR.md",
+        "es": "external-libraries/01-pandas/README.es.md"
+      },
+      "sections": {
+        "en": "6. `DataFrame` models a labeled table",
+        "pt-BR": "6. `DataFrame` modela uma tabela rotulada",
+        "es": "6. `DataFrame` modela una tabla etiquetada"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

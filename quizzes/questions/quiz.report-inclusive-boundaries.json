@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.report-inclusive-boundaries",
+  "chapter_id": "practical-projects.report-generator",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Records on both the start date and end date are included in this project's reporting window.",
+    "pt-BR": "Registros nas datas inicial e final são incluídos na janela deste projeto.",
+    "es": "Los registros en las fechas inicial y final se incluyen en la ventana de este proyecto."
+  },
+  "explanation": {
+    "en": "The reporting window includes both boundaries; equal dates are a valid one-day window.",
+    "pt-BR": "A janela inclui ambos os limites; datas iguais formam janela válida de um dia.",
+    "es": "La ventana incluye ambos límites; fechas iguales forman una ventana válida de un día."
+  },
+  "hints": {
+    "en": [
+      "Check whether the bounds are inclusive or exclusive."
+    ],
+    "pt-BR": [
+      "Confira se os limites são inclusivos ou exclusivos."
+    ],
+    "es": [
+      "Comprueba si los límites son inclusivos o exclusivos."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "practical-projects/05-report-generator/README.md",
+        "pt-BR": "practical-projects/05-report-generator/README.pt-BR.md",
+        "es": "practical-projects/05-report-generator/README.es.md"
+      },
+      "sections": {
+        "en": "6. Reporting window",
+        "pt-BR": "6. Janela do relatório",
+        "es": "6. Ventana del informe"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

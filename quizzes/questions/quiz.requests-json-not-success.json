@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.requests-json-not-success",
+  "chapter_id": "external-libraries.requests",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A server responds HTTP 404 with a valid JSON error body. response.json() succeeds. What follows?",
+    "pt-BR": "Um servidor responde HTTP 404 com corpo de erro JSON válido. response.json() funciona. O que se conclui?",
+    "es": "Un servidor responde HTTP 404 con cuerpo de error JSON válido. response.json() funciona. ¿Qué se concluye?"
+  },
+  "explanation": {
+    "en": "JSON parsing and HTTP success are separate checks. The 404 is still an HTTP failure for a request requiring success.",
+    "pt-BR": "Parse JSON e sucesso HTTP são verificações separadas. O 404 continua falha HTTP para uma requisição que exige sucesso.",
+    "es": "El análisis JSON y el éxito HTTP son comprobaciones separadas. El 404 sigue siendo un fallo HTTP para una solicitud que exige éxito."
+  },
+  "hints": {
+    "en": [
+      "A valid representation may describe a failure."
+    ],
+    "pt-BR": [
+      "Uma representação válida pode descrever falha."
+    ],
+    "es": [
+      "Una representación válida puede describir un fallo."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "external-libraries/03-requests/README.md",
+        "pt-BR": "external-libraries/03-requests/README.pt-BR.md",
+        "es": "external-libraries/03-requests/README.es.md"
+      },
+      "sections": {
+        "en": "13. Decode JSON with `response.json()`",
+        "pt-BR": "13. Decodifique JSON com `response.json()`",
+        "es": "13. Decodifica JSON con `response.json()`"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "separate"
+  },
+  "choices": [
+    {
+      "id": "success",
+      "text": {
+        "en": "The request succeeded because JSON parsed.",
+        "pt-BR": "A requisição teve sucesso porque JSON foi interpretado.",
+        "es": "La solicitud tuvo éxito porque se analizó JSON."
+      }
+    },
+    {
+      "id": "separate",
+      "text": {
+        "en": "Check the HTTP status separately.",
+        "pt-BR": "Verificar status HTTP separadamente.",
+        "es": "Comprobar el status HTTP por separado."
+      }
+    },
+    {
+      "id": "no-body",
+      "text": {
+        "en": "A 404 cannot have JSON.",
+        "pt-BR": "Um 404 não pode conter JSON.",
+        "es": "Un 404 no puede contener JSON."
+      }
+    },
+    {
+      "id": "retry",
+      "text": {
+        "en": "JSON parsing retries the request.",
+        "pt-BR": "Parse JSON repete a requisição.",
+        "es": "El análisis JSON repite la solicitud."
+      }
+    }
+  ]
+}

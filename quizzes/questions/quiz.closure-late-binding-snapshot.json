@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.closure-late-binding-snapshot",
+  "chapter_id": "technical-interview-preparation.closures-and-decorators",
+  "difficulty": "hard",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Complete the lambda parameter list so every function captures its own immutable integer at creation time. Enter only the missing text, using no spaces.",
+    "pt-BR": "Complete a lista de parâmetros da lambda para cada função capturar seu inteiro imutável no momento da criação. Digite apenas o trecho faltante, sem espaços.",
+    "es": "Completa la lista de parámetros de la lambda para que cada función capture su entero inmutable al crearse. Introduce solo el texto faltante, sin espacios."
+  },
+  "explanation": {
+    "en": "A default argument i=i evaluates the current integer when the lambda is created, rather than looking up the final binding later.",
+    "pt-BR": "Um argumento padrão i=i avalia o inteiro atual ao criar a lambda, em vez de buscar a vinculação final depois.",
+    "es": "Un argumento predeterminado i=i evalúa el entero actual al crear la lambda, en lugar de buscar luego el enlace final."
+  },
+  "hints": {
+    "en": [
+      "Bind the current value as a default parameter."
+    ],
+    "pt-BR": [
+      "Vincule o valor atual como parâmetro padrão."
+    ],
+    "es": [
+      "Enlaza el valor actual como parámetro predeterminado."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/12-closures-and-decorators/README.md",
+        "pt-BR": "technical-interview-preparation/12-closures-and-decorators/README.pt-BR.md",
+        "es": "technical-interview-preparation/12-closures-and-decorators/README.es.md"
+      },
+      "sections": {
+        "en": "Closures and scope",
+        "pt-BR": "Closures e escopo",
+        "es": "Cierres y ámbito"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "i=i"
+    ],
+    "comparison": "exact"
+  },
+  "code": "functions = []\nfor i in range(3):\n    functions.append(lambda ____: i)\nassert [f() for f in functions] == [0, 1, 2]"
+}

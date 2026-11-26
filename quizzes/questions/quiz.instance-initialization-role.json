@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.instance-initialization-role",
+  "chapter_id": "technical-interview-preparation.classes-and-objects",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "__init__ initializes an already created instance.",
+    "pt-BR": "__init__ inicializa uma instância já criada.",
+    "es": "__init__ inicializa una instancia ya creada."
+  },
+  "explanation": {
+    "en": "__init__ initializes instance state; __new__ is the creation hook.",
+    "pt-BR": "__init__ inicializa o estado; __new__ é o mecanismo de criação.",
+    "es": "__init__ inicializa el estado; __new__ es el mecanismo de creación."
+  },
+  "hints": {
+    "en": [
+      "Distinguish allocation from initialization."
+    ],
+    "pt-BR": [
+      "Diferencie criação de inicialização."
+    ],
+    "es": [
+      "Distingue creación de inicialización."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/05-classes-and-objects/README.md",
+        "pt-BR": "technical-interview-preparation/05-classes-and-objects/README.pt-BR.md",
+        "es": "technical-interview-preparation/05-classes-and-objects/README.es.md"
+      },
+      "sections": {
+        "en": "What and why",
+        "pt-BR": "O que é e por quê",
+        "es": "Qué es y por qué"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

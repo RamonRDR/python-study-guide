@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.finally-propagates-unhandled",
+  "chapter_id": "errors-files-and-modules.try-except-else-finally",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A try block raises ZeroDivisionError. No handler matches it, and finally completes normally. What happens?",
+    "pt-BR": "Um bloco try gera ZeroDivisionError. Nenhum handler corresponde, e finally termina normalmente. O que acontece?",
+    "es": "Un bloque try lanza ZeroDivisionError. Ningún handler coincide y finally termina normalmente. ¿Qué ocurre?"
+  },
+  "explanation": {
+    "en": "Cleanup runs, then the unhandled exception propagates. finally is not itself an exception handler.",
+    "pt-BR": "A limpeza executa, depois a exceção não tratada se propaga. finally não é por si só um handler.",
+    "es": "La limpieza se ejecuta y después la excepción no manejada se propaga. finally no es por sí mismo un handler."
+  },
+  "hints": {
+    "en": [
+      "Distinguish cleanup from recovery."
+    ],
+    "pt-BR": [
+      "Distinga limpeza de recuperação."
+    ],
+    "es": [
+      "Distingue limpieza de recuperación."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/01-try-except-else-finally/README.md",
+        "pt-BR": "errors-files-and-modules/01-try-except-else-finally/README.pt-BR.md",
+        "es": "errors-files-and-modules/01-try-except-else-finally/README.es.md"
+      },
+      "sections": {
+        "en": "19. `finally` also runs when an exception remains unhandled",
+        "pt-BR": "19. `finally` também executa quando uma exceção permanece sem tratamento",
+        "es": "19. `finally` también se ejecuta cuando una excepción permanece sin manejar"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "cleanup-propagate"
+  },
+  "choices": [
+    {
+      "id": "swallow",
+      "text": {
+        "en": "The exception is silently swallowed.",
+        "pt-BR": "A exceção é suprimida silenciosamente.",
+        "es": "La excepción se suprime silenciosamente."
+      }
+    },
+    {
+      "id": "skip",
+      "text": {
+        "en": "Cleanup is skipped.",
+        "pt-BR": "A limpeza é ignorada.",
+        "es": "Se omite la limpieza."
+      }
+    },
+    {
+      "id": "cleanup-propagate",
+      "text": {
+        "en": "Cleanup runs, then the exception propagates.",
+        "pt-BR": "A limpeza executa, depois a exceção se propaga.",
+        "es": "La limpieza se ejecuta y luego la excepción se propaga."
+      }
+    },
+    {
+      "id": "restart",
+      "text": {
+        "en": "The try block restarts.",
+        "pt-BR": "O bloco try reinicia.",
+        "es": "El bloque try se reinicia."
+      }
+    }
+  ]
+}

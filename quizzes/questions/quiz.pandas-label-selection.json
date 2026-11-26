@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.pandas-label-selection",
+  "chapter_id": "external-libraries.pandas",
+  "difficulty": "medium",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Fill ____ with the pandas accessor for label-based row and column selection. Enter its name alone.",
+    "pt-BR": "Preencha ____ com o acessor do pandas para seleção de linhas e colunas por rótulos. Digite só seu nome.",
+    "es": "Completa ____ con el accesor de pandas para seleccionar filas y columnas por etiquetas. Introduce solo su nombre."
+  },
+  "explanation": {
+    "en": "loc uses row and column labels, while iloc uses positions.",
+    "pt-BR": "loc usa rótulos de linhas e colunas, enquanto iloc usa posições.",
+    "es": "loc usa etiquetas de filas y columnas, mientras iloc usa posiciones."
+  },
+  "hints": {
+    "en": [
+      "The row label is a string, not an integer position."
+    ],
+    "pt-BR": [
+      "O rótulo da linha é string, não posição inteira."
+    ],
+    "es": [
+      "La etiqueta de la fila es una cadena, no una posición entera."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "external-libraries/01-pandas/README.md",
+        "pt-BR": "external-libraries/01-pandas/README.pt-BR.md",
+        "es": "external-libraries/01-pandas/README.es.md"
+      },
+      "sections": {
+        "en": "15. Use `.loc` for label-based selection",
+        "pt-BR": "15. Use `.loc` para seleção baseada em rótulos",
+        "es": "15. Usa `.loc` para selección basada en etiquetas"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "loc"
+    ],
+    "comparison": "exact"
+  },
+  "code": "import pandas as pd\ntable = pd.DataFrame({\"amount\": [10, 20]}, index=[\"x\", \"y\"])\nvalue = table.____[\"y\", \"amount\"]"
+}

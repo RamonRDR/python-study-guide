@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.decimal-exact-input-boundary",
+  "chapter_id": "standard-library.decimal",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "An accounting amount arrives as the exact text \"0.1\". Which conversion preserves the intended decimal value without first introducing binary float representation?",
+    "pt-BR": "Um valor contábil chega como texto exato \"0.1\". Qual conversão preserva o valor decimal pretendido sem introduzir antes a representação binária float?",
+    "es": "Un importe contable llega como texto exacto \"0.1\". ¿Qué conversión conserva el valor decimal previsto sin introducir antes representación binaria float?"
+  },
+  "explanation": {
+    "en": "Decimal from the original text represents one tenth directly; Decimal(float(text)) and from_float preserve the already rounded binary float value.",
+    "pt-BR": "Decimal a partir do texto original representa um décimo diretamente; Decimal(float(text)) e from_float preservam o valor float binário já arredondado.",
+    "es": "Decimal a partir del texto original representa un décimo directamente; Decimal(float(text)) y from_float conservan el valor float binario ya redondeado."
+  },
+  "hints": {
+    "en": [
+      "Preserve the original representation at the data boundary."
+    ],
+    "pt-BR": [
+      "Preserve a representação original na fronteira de dados."
+    ],
+    "es": [
+      "Conserva la representación original en el límite de datos."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "standard-library/08-decimal/README.md",
+        "pt-BR": "standard-library/08-decimal/README.pt-BR.md",
+        "es": "standard-library/08-decimal/README.es.md"
+      },
+      "sections": {
+        "en": "7. Passing a `float` preserves the exact binary float value",
+        "pt-BR": "7. Passar um `float` preserva exatamente o valor binário do float",
+        "es": "7. Pasar un `float` conserva exactamente el valor binario del float"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "text"
+  },
+  "choices": [
+    {
+      "id": "via-float",
+      "text": {
+        "en": "Decimal(float(text))",
+        "pt-BR": "Decimal(float(text))",
+        "es": "Decimal(float(text))"
+      }
+    },
+    {
+      "id": "from-float",
+      "text": {
+        "en": "Decimal.from_float(float(text))",
+        "pt-BR": "Decimal.from_float(float(text))",
+        "es": "Decimal.from_float(float(text))"
+      }
+    },
+    {
+      "id": "text",
+      "text": {
+        "en": "Decimal(text)",
+        "pt-BR": "Decimal(text)",
+        "es": "Decimal(text)"
+      }
+    },
+    {
+      "id": "float",
+      "text": {
+        "en": "float(text)",
+        "pt-BR": "float(text)",
+        "es": "float(text)"
+      }
+    }
+  ]
+}

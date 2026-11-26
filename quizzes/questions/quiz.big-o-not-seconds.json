@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.big-o-not-seconds",
+  "chapter_id": "problem-solving.algorithmic-complexity",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "An O(n) bound specifies the exact number of seconds for each input length.",
+    "pt-BR": "Um limite O(n) especifica o número exato de segundos para cada tamanho de entrada.",
+    "es": "Una cota O(n) especifica los segundos exactos para cada tamaño de entrada."
+  },
+  "explanation": {
+    "en": "Big O describes asymptotic growth, not elapsed seconds.",
+    "pt-BR": "Big O descreve crescimento assintótico, não segundos decorridos.",
+    "es": "Big O describe crecimiento asintótico, no segundos transcurridos."
+  },
+  "hints": {
+    "en": [
+      "Distinguish work growth from measured runtime."
+    ],
+    "pt-BR": [
+      "Diferencie crescimento de trabalho de tempo medido."
+    ],
+    "es": [
+      "Distingue crecimiento de trabajo de tiempo medido."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+        "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+      },
+      "sections": {
+        "en": "1. Count work rather than seconds",
+        "pt-BR": "1. Contar trabalho, não segundos",
+        "es": "1. Contar trabajo, no segundos"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

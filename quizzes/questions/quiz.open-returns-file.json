@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.open-returns-file",
+  "chapter_id": "errors-files-and-modules.open-and-with",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "open(path, \"r\") returns a file object rather than immediately returning the whole text.",
+    "pt-BR": "open(path, \"r\") retorna um objeto arquivo em vez de retornar imediatamente todo o texto.",
+    "es": "open(path, \"r\") devuelve un objeto archivo en lugar de devolver inmediatamente todo el texto."
+  },
+  "explanation": {
+    "en": "Read from the returned file object to obtain the text.",
+    "pt-BR": "Leia o objeto arquivo retornado para obter o texto.",
+    "es": "Lee el objeto archivo devuelto para obtener el texto."
+  },
+  "hints": {
+    "en": [
+      "Separate opening from reading."
+    ],
+    "pt-BR": [
+      "Separe abrir de ler."
+    ],
+    "es": [
+      "Separa abrir de leer."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/03-open-and-with/README.md",
+        "pt-BR": "errors-files-and-modules/03-open-and-with/README.pt-BR.md",
+        "es": "errors-files-and-modules/03-open-and-with/README.es.md"
+      },
+      "sections": {
+        "en": "2. `open()` returns a file object",
+        "pt-BR": "2. `open()` retorna um objeto arquivo",
+        "es": "2. `open()` devuelve un objeto archivo"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

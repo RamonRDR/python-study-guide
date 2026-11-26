@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.gil-compound-invariant",
+  "chapter_id": "technical-interview-preparation.concurrency-parallelism-and-the-gil",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "In conventional CPython 3.13, several threads update a shared read-modify-write counter. Which approach preserves the chosen invariant?",
+    "pt-BR": "No CPython 3.13 convencional, várias threads atualizam contador compartilhado por leitura-modificação-escrita. Qual abordagem preserva o invariante escolhido?",
+    "es": "En CPython 3.13 convencional, varios hilos actualizan contador compartido mediante lectura-modificación-escritura. ¿Qué enfoque conserva el invariante elegido?"
+  },
+  "explanation": {
+    "en": "All cooperating updates must hold the same lock across the compound operation. The GIL is not an application-level atomicity guarantee.",
+    "pt-BR": "Todas as atualizações cooperantes devem manter o mesmo lock durante a operação composta. GIL não garante atomicidade da aplicação.",
+    "es": "Todas las actualizaciones cooperantes deben mantener el mismo lock durante la operación compuesta. GIL no garantiza atomicidad de aplicación."
+  },
+  "hints": {
+    "en": [
+      "Protect the entire read-modify-write sequence, not just one line."
+    ],
+    "pt-BR": [
+      "Proteja toda sequência leitura-modificação-escrita, não só uma linha."
+    ],
+    "es": [
+      "Protege toda secuencia lectura-modificación-escritura, no solo una línea."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md",
+        "pt-BR": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.pt-BR.md",
+        "es": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md"
+      },
+      "sections": {
+        "en": "The GIL in Python 3.13",
+        "pt-BR": "GIL em Python 3.13",
+        "es": "GIL en Python 3.13"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "lock"
+  },
+  "choices": [
+    {
+      "id": "gil",
+      "text": {
+        "en": "Rely only on the GIL.",
+        "pt-BR": "Confie apenas no GIL.",
+        "es": "Confía solo en GIL."
+      }
+    },
+    {
+      "id": "read",
+      "text": {
+        "en": "Lock only the read.",
+        "pt-BR": "Proteja apenas a leitura.",
+        "es": "Protege solo la lectura."
+      }
+    },
+    {
+      "id": "lock",
+      "text": {
+        "en": "Hold a shared lock across the complete update.",
+        "pt-BR": "Mantenha lock compartilhado durante a atualização inteira.",
+        "es": "Mantén lock compartido durante la actualización completa."
+      }
+    }
+  ]
+}

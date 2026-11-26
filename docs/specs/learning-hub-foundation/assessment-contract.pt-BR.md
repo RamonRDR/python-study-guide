@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprints 07A e 07B integradas e CI pós-merge aprovado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [CI de B](https://github.com/RamonRDR/python-study-guide/actions/runs/45872609920)). C1 implementa 78 quizzes de fundamentos; migração além do piloto e runtime no navegador estão fora do escopo.
+Sprints 07A–C1 integradas e CI pós-merge aprovado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [PR #104](https://github.com/RamonRDR/python-study-guide/pull/104), [CI de C1](https://github.com/RamonRDR/python-study-guide/actions/runs/45898287287)). C2 implementa 160 quizzes; migração além do piloto e runtime no navegador estão fora do escopo.
 
 ## Escopo e aceite
 - Inventário: 115 entradas, 345 caminhos localizados, 64 quizzes easy / 67 medium / 29 hard (2.850 XP a 10/20/30). A [matriz de distribuição](assessment-matrix.json) é metadado de planejamento de engenharia, não manifesto do consumidor. Alocações zero preservam prática manual ou evitam avaliação repetida.
@@ -32,3 +32,10 @@ Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [encerramento da Sprin
 - Ler as seções de ensino em EN/PT-BR/ES antes de redigir; manter títulos localizados exatos, IDs estáveis, exemplos originais, código único compartilhado e respostas aceitas explícitas. Refinar os pré-requisitos de quebra de linha nas duas questões piloto de saída; preservar respostas. Equilibrar verdadeiro/falso no banco ampliado e variar posições das alternativas.
 - Preservar regressões do piloto e exigir alocação exata por aula/dificuldade, cobertura do índice, paridade de idiomas e correção determinística. Testar exemplos literais confiáveis, não código arbitrário lido dos registros. Revisar ambiguidades, casos-limite, dificuldade, navegação e privacidade antes de solicitar aprovação do merge.
 - Sem runtime, dependência paga, migração de exercícios ou encerramento AC-07 em C1. Todos os gates no head exato permanecem obrigatórios.
+
+## Aceite da expansão (07C2)
+
+- Completar os 82 quizzes restantes conforme a matriz aprovada por aula/dificuldade: 27 easy, 37 medium, 18 hard (1.550 XP). Preservar os 78 registros de fundamentos e suas regressões. Inventário final: 160 quizzes, 64 easy/67 medium/29 hard, 2.850 XP. Alocações zero permanecem vazias.
+- Ler as seções relevantes nos três idiomas antes da redação; manter títulos exatos, exemplos originais, IDs estáveis, enunciados, explicações, dicas e alternativas localizados. Diversificar modalidades, privilegiando escolhas situacionais, identificação de erros e preenchimento restrito em vez de excesso de previsão de saída; equilibrar verdadeiro/falso e variar posições. Não alegar medir senioridade.
+- Exigir cobertura exata da matriz e índice completos, fixtures de respostas corretas/incorretas por novo registro e execução literal confiável de código compartilhado executável (sem código do aluno, rede ou operações inseguras com arquivos). Preservar regressões do piloto e fundamentos. Manter navegação localizada e verificar todos os links. Preservar exercícios, índices, banco de entrevistas, dependências e runtime.
+- C2 não encerra AC-07; D migra os 27 exercícios restantes e E encerra. CI no head exato, Codex Review, Final Pre-Merge Audit, autorização expressa e CI pós-merge seguem obrigatórios.

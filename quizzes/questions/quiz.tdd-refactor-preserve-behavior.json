@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.tdd-refactor-preserve-behavior",
+  "chapter_id": "manual-programming-practices.test-driven-development",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "All specified tests pass. You want to remove duplicated code without changing behavior. What should you do?",
+    "pt-BR": "Todos os testes especificados passam. Você quer remover código duplicado sem mudar comportamento. O que fazer?",
+    "es": "Todas las pruebas especificadas pasan. Quieres eliminar código duplicado sin cambiar comportamiento. ¿Qué debes hacer?"
+  },
+  "explanation": {
+    "en": "Refactor structure and rerun the suite to check that specified behavior remains unchanged.",
+    "pt-BR": "Refatore a estrutura e execute novamente a suíte para conferir que o comportamento especificado permanece igual.",
+    "es": "Refactoriza la estructura y vuelve a ejecutar la suite para comprobar que el comportamiento especificado permanece igual."
+  },
+  "hints": {
+    "en": [
+      "The purpose is structural improvement, not a new contract."
+    ],
+    "pt-BR": [
+      "O propósito é melhoria estrutural, não novo contrato."
+    ],
+    "es": [
+      "El propósito es mejora estructural, no nuevo contrato."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "manual-programming-practices/03-test-driven-development/README.md",
+        "pt-BR": "manual-programming-practices/03-test-driven-development/README.pt-BR.md",
+        "es": "manual-programming-practices/03-test-driven-development/README.es.md"
+      },
+      "sections": {
+        "en": "3. Refactor and verify",
+        "pt-BR": "3. Refactor: melhore e verifique",
+        "es": "3. Refactor: mejora y comprueba"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "refactor"
+  },
+  "choices": [
+    {
+      "id": "skip",
+      "text": {
+        "en": "Refactor and skip tests.",
+        "pt-BR": "Refatorar e pular testes.",
+        "es": "Refactorizar y omitir pruebas."
+      }
+    },
+    {
+      "id": "refactor",
+      "text": {
+        "en": "Refactor in small steps and rerun the suite.",
+        "pt-BR": "Refatorar em passos pequenos e executar a suíte novamente.",
+        "es": "Refactorizar en pasos pequeños y volver a ejecutar la suite."
+      }
+    },
+    {
+      "id": "weaken",
+      "text": {
+        "en": "Delete tests that fail after the change.",
+        "pt-BR": "Excluir testes que falharem após a alteração.",
+        "es": "Eliminar pruebas que fallen tras el cambio."
+      }
+    },
+    {
+      "id": "change",
+      "text": {
+        "en": "Change the specified outputs without approval.",
+        "pt-BR": "Alterar saídas especificadas sem aprovação.",
+        "es": "Cambiar salidas especificadas sin aprobación."
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Sprints 00–06 e 07A–B integradas. C1 implementa 78 quizzes de fundamentos; encerramento exige CI no head exato, Codex Review, Final Pre-Merge Audit, aprovação do mantenedor e CI pós-merge.
+Sprints 00–06 e 07A–C1 integradas. C2 implementa os 160 quizzes; encerramento exige CI no head exato, Codex Review, Final Pre-Merge Audit, aprovação do mantenedor e CI pós-merge.
 
 | Tarefa | Sprint | Dependência | Status |
 | --- | --- | --- | --- |
@@ -21,7 +21,7 @@ Sprints 00–06 e 07A–B integradas. C1 implementa 78 quizzes de fundamentos; e
 | T05-02 Expandir desafios por tema/dificuldade | 05 | T05-01 | Concluído ([PR #94](https://github.com/RamonRDR/python-study-guide/pull/94), [PR #95](https://github.com/RamonRDR/python-study-guide/pull/95), `21c00c32b91a0116c8a50e89687b91f8efa04cb5`, [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45720384626)) |
 | T06-01 Mapear lacunas restantes específicas de entrevistas e ensinar conceitos necessários não cobertos na Sprint 05 | 06 | T05-02 | Concluído: aulas 01–21 integradas no #98; CI pós-merge aprovado ([#98](https://github.com/RamonRDR/python-study-guide/pull/98), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45730226049)) |
 | T06-02 Criar perguntas e simulações/rubricas | 06 | T06-01 | Concluído: 60 perguntas e três simulados; [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101), [CI pós-merge](https://github.com/RamonRDR/python-study-guide/actions/runs/45829816717) |
-| T07-01 Finalizar e validar schemas/registros de quiz/exercício | 07 | T06-02 | Em andamento: A e B integradas ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103)); C1 implementa 78 quizzes; C2–E pendentes |
+| T07-01 Finalizar e validar schemas/registros de quiz/exercício | 07 | T06-02 | Em andamento: A e B integradas ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103)); C1 integrada ([PR #104](https://github.com/RamonRDR/python-study-guide/pull/104)); C2 implementa 160 quizzes; D–E pendentes |
 | T08-01 Finalizar manifesto e fixtures de integração | 08 | T07-01 | Pendente |
 | T09-01 Executar QA e registrar evidências reais | 09 | T08-01 | Pendente |
 | T09-02 Obter revisão final e publicar handoff com revisão fixada | 09 | T09-01 | Pendente |

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.append-preserve-existing-file",
+  "chapter_id": "errors-files-and-modules.open-and-with",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "You must add a line to an existing text file without replacing its contents. Which open mode fits?",
+    "pt-BR": "Você precisa acrescentar uma linha a um arquivo texto existente sem substituir seu conteúdo. Qual modo de open se encaixa?",
+    "es": "Debes añadir una línea a un archivo de texto existente sin sustituir su contenido. ¿Qué modo de open encaja?"
+  },
+  "explanation": {
+    "en": "Mode a appends new writes at the end, unlike w which truncates an existing file.",
+    "pt-BR": "O modo a acrescenta novas escritas ao final, ao contrário de w que trunca arquivo existente.",
+    "es": "El modo a añade nuevas escrituras al final, a diferencia de w que trunca un archivo existente."
+  },
+  "hints": {
+    "en": [
+      "Choose by preservation of existing contents."
+    ],
+    "pt-BR": [
+      "Escolha pela preservação do conteúdo existente."
+    ],
+    "es": [
+      "Elige según la conservación del contenido existente."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/03-open-and-with/README.md",
+        "pt-BR": "errors-files-and-modules/03-open-and-with/README.pt-BR.md",
+        "es": "errors-files-and-modules/03-open-and-with/README.es.md"
+      },
+      "sections": {
+        "en": "6. Mode `a`: append to the end",
+        "pt-BR": "6. Modo `a`: acrescentar ao final",
+        "es": "6. Modo `a`: añadir al final"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "append"
+  },
+  "choices": [
+    {
+      "id": "read",
+      "text": {
+        "en": "r",
+        "pt-BR": "r",
+        "es": "r"
+      }
+    },
+    {
+      "id": "write",
+      "text": {
+        "en": "w",
+        "pt-BR": "w",
+        "es": "w"
+      }
+    },
+    {
+      "id": "append",
+      "text": {
+        "en": "a",
+        "pt-BR": "a",
+        "es": "a"
+      }
+    },
+    {
+      "id": "exclusive",
+      "text": {
+        "en": "x",
+        "pt-BR": "x",
+        "es": "x"
+      }
+    }
+  ]
+}

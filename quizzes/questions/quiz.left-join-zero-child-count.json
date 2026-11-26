@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.left-join-zero-child-count",
+  "chapter_id": "technical-interview-preparation.joins-aggregations-and-data-relationships",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Count completed tasks per group, including groups with zero completed tasks. Which query design preserves those groups?",
+    "pt-BR": "Conte tarefas concluídas por grupo, incluindo grupos sem tarefas concluídas. Qual desenho de consulta preserva esses grupos?",
+    "es": "Cuenta tareas completadas por grupo, incluidos grupos sin tareas completadas. ¿Qué diseño de consulta conserva esos grupos?"
+  },
+  "explanation": {
+    "en": "LEFT JOIN with tasks.done = 1 in ON preserves unmatched groups; COUNT(tasks.id) ignores null-extended rows and GROUP BY group identity separates names.",
+    "pt-BR": "LEFT JOIN com tasks.done = 1 em ON preserva grupos sem correspondência; COUNT(tasks.id) ignora linhas estendidas com NULL e GROUP BY pela identidade separa nomes.",
+    "es": "LEFT JOIN con tasks.done = 1 en ON conserva grupos sin coincidencia; COUNT(tasks.id) ignora filas extendidas con NULL y GROUP BY por identidad separa nombres."
+  },
+  "hints": {
+    "en": [
+      "Consider ON versus WHERE and COUNT of a non-null child identifier."
+    ],
+    "pt-BR": [
+      "Considere ON versus WHERE e COUNT do identificador não nulo do filho."
+    ],
+    "es": [
+      "Considera ON frente a WHERE y COUNT del identificador no nulo del hijo."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.md",
+        "pt-BR": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.pt-BR.md",
+        "es": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.es.md"
+      },
+      "sections": {
+        "en": "Relationships and join cardinality",
+        "pt-BR": "Relacionamentos e cardinalidade de joins",
+        "es": "Relaciones y cardinalidad de joins"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "on-count"
+  },
+  "choices": [
+    {
+      "id": "where-count",
+      "text": {
+        "en": "LEFT JOIN, filter in WHERE, COUNT(tasks.id).",
+        "pt-BR": "LEFT JOIN, filtro em WHERE, COUNT(tasks.id).",
+        "es": "LEFT JOIN, filtro en WHERE, COUNT(tasks.id)."
+      }
+    },
+    {
+      "id": "on-star",
+      "text": {
+        "en": "LEFT JOIN, filter in ON, COUNT(*).",
+        "pt-BR": "LEFT JOIN, filtro em ON, COUNT(*).",
+        "es": "LEFT JOIN, filtro en ON, COUNT(*)."
+      }
+    },
+    {
+      "id": "inner",
+      "text": {
+        "en": "INNER JOIN, filter in ON, COUNT(tasks.id).",
+        "pt-BR": "INNER JOIN, filtro em ON, COUNT(tasks.id).",
+        "es": "INNER JOIN, filtro en ON, COUNT(tasks.id)."
+      }
+    },
+    {
+      "id": "on-count",
+      "text": {
+        "en": "LEFT JOIN, filter in ON, COUNT(tasks.id).",
+        "pt-BR": "LEFT JOIN, filtro em ON, COUNT(tasks.id).",
+        "es": "LEFT JOIN, filtro en ON, COUNT(tasks.id)."
+      }
+    }
+  ]
+}

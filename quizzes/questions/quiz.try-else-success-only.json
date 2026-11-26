@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.try-else-success-only",
+  "chapter_id": "errors-files-and-modules.try-except-else-finally",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "The else clause of a try statement runs when its try block finishes normally, without an exception or early control-flow exit.",
+    "pt-BR": "A cláusula else de try executa quando seu bloco try termina normalmente, sem exceção ou saída antecipada do fluxo.",
+    "es": "La cláusula else de try se ejecuta cuando su bloque try termina normalmente, sin excepción ni salida anticipada del flujo."
+  },
+  "explanation": {
+    "en": "else represents normal completion of the protected block, not successful handling of an exception.",
+    "pt-BR": "else representa conclusão normal do bloco protegido, não tratamento bem-sucedido de exceção.",
+    "es": "else representa finalización normal del bloque protegido, no manejo exitoso de una excepción."
+  },
+  "hints": {
+    "en": [
+      "Separate normal completion from a handler that recovers."
+    ],
+    "pt-BR": [
+      "Separe conclusão normal de um handler que recupera."
+    ],
+    "es": [
+      "Separa la finalización normal de un handler que recupera."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/01-try-except-else-finally/README.md",
+        "pt-BR": "errors-files-and-modules/01-try-except-else-finally/README.pt-BR.md",
+        "es": "errors-files-and-modules/01-try-except-else-finally/README.es.md"
+      },
+      "sections": {
+        "en": "14. `else` describes the success-only path",
+        "pt-BR": "14. `else` descreve o caminho exclusivo de sucesso",
+        "es": "14. `else` describe la ruta exclusiva de éxito"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}
