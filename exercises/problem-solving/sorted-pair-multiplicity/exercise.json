@@ -1,4 +1,5 @@
 {
+  "schema_version": "1.0.0",
   "id": "problem-solving.sorted-pair-multiplicity",
   "chapter_id": "problem-solving.algorithms-and-complexity",
   "difficulty": "hard",
@@ -131,6 +132,7 @@
     "function_name": "count_target_pairs",
     "comparison": "exact_type_and_value",
     "timeout_ms": 2000,
+    "new_container": false,
     "cases": [
       {
         "id": "case-01",
