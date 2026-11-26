@@ -1,0 +1,165 @@
+{
+  "id": "mock.senior-60",
+  "level": "senior",
+  "duration_minutes": 60,
+  "title": {
+    "en": "Senior mock",
+    "pt-BR": "Simulado Senior",
+    "es": "Simulación Senior"
+  },
+  "question_ids": [
+    "behavioral.evidence-disagreement",
+    "internals.gil-workload",
+    "api.object-authorization",
+    "sql.atomic-transfer"
+  ],
+  "exercise_id": "problem-solving.sorted-pair-multiplicity",
+  "exercise_path": "exercises/problem-solving/sorted-pair-multiplicity/exercise.json",
+  "time_allocation": {
+    "introduction": 5,
+    "questions": 15,
+    "coding": 25,
+    "tests": 5,
+    "discussion": 10
+  },
+  "instructions": {
+    "en": "Use question 1 as a fictional introduction to collaborative decision-making; answer questions 2–4 in the technical slot. Implement the linked grouped-two-pointer exercise in a fresh practice directory, preserving its original contract. Its 40-minute standalone estimate is deliberately compressed into 25 minutes of coding; a correct partial solution and precise limitations are useful evidence, not a reason to hide incomplete work. Run your own assertions for empty, no-match, distinct duplicate groups, all-equal groups and input preservation in the testing slot. In discussion, justify grouped counting, complexity, transaction/authorization verification choices and one measurable risk. Stop at 60 minutes; no hints, solutions or reference answers until the timer ends.",
+    "pt-BR": "Use pergunta 1 como apresentação fictícia de decisão colaborativa; responda 2–4 no tempo técnico. Implemente exercício de dois ponteiros agrupados em diretório pessoal novo, preservando contrato original. Estimativa individual de 40 minutos é deliberadamente comprimida em 25 de código; solução parcial correta e limitações precisas são evidência útil, não motivo para ocultar incompletude. Execute assertions próprias para vazio, sem par, grupos duplicados distintos, grupo todo igual e preservação de entrada no tempo de testes. Na discussão, justifique contagem agrupada, complexidade, escolhas de verificação de transação/autorização e risco mensurável. Pare aos 60 minutos; sem dicas, soluções ou respostas até terminar.",
+    "es": "Usa pregunta 1 como presentación ficticia de decisión colaborativa; responde 2–4 en tiempo técnico. Implementa ejercicio de dos punteros agrupados en directorio personal nuevo, conservando contrato original. Estimación individual de 40 minutos se comprime deliberadamente a 25 de código; solución parcial correcta y limitaciones precisas son evidencia útil, no razón para ocultar incompletitud. Ejecuta aserciones propias para vacío, sin pareja, grupos duplicados distintos, grupo todo igual y conservación de entrada en tiempo de pruebas. En discusión, justifica conteo agrupado, complejidad, decisiones de verificación de transacción/autorización y riesgo medible. Detente a los 60 minutos; sin pistas, soluciones ni respuestas hasta terminar."
+  },
+  "rubric": [
+    {
+      "id": "technical-knowledge",
+      "points": 25,
+      "partial_points": 12,
+      "label": {
+        "en": "Technical knowledge",
+        "pt-BR": "Conhecimento técnico",
+        "es": "Conocimiento técnico"
+      },
+      "indicators": {
+        "en": [
+          "Distinguishes GIL-enabled and experimental free-threaded CPython 3.13 and proposes workload-appropriate concurrency with synchronization.",
+          "Requires per-object authorization using verified identity and a consistent denial policy with no protected data.",
+          "Explains ACID and a transaction with conditional debit, rollback and cross-connection commit evidence."
+        ],
+        "pt-BR": [
+          "Distingue CPython 3.13 com GIL de free-threaded experimental e propõe concorrência adequada com sincronização.",
+          "Exige autorização por objeto com identidade verificada e política de negação consistente sem dados protegidos.",
+          "Explica ACID e transação com débito condicional, rollback e evidência de commit entre conexões."
+        ],
+        "es": [
+          "Distingue CPython 3.13 con GIL de free-threaded experimental y propone concurrencia adecuada con sincronización.",
+          "Exige autorización por objeto con identidad verificada y política de denegación coherente sin datos protegidos.",
+          "Explica ACID y transacción con débito condicional, rollback y evidencia de commit entre conexiones."
+        ]
+      }
+    },
+    {
+      "id": "problem-solving",
+      "points": 25,
+      "partial_points": 12,
+      "label": {
+        "en": "Problem solving",
+        "pt-BR": "Resolução de problemas",
+        "es": "Resolución de problemas"
+      },
+      "indicators": {
+        "en": [
+          "Restates distinct-index pair counting and explains the grouped two-pointer invariant and elimination rule.",
+          "Implements distinct-group multiplication and the all-equal combination count without double counting, mutation or extra storage proportional to n."
+        ],
+        "pt-BR": [
+          "Reformula contagem de pares de índices distintos e explica invariante de dois ponteiros agrupados e regra de eliminação.",
+          "Implementa multiplicação de grupos distintos e contagem combinatória dos iguais sem dupla contagem, mutação ou armazenamento extra proporcional a n."
+        ],
+        "es": [
+          "Reformula conteo de pares de índices distintos y explica invariante de dos punteros agrupados y regla de eliminación.",
+          "Implementa multiplicación de grupos distintos y conteo combinatorio de iguales sin doble conteo, mutación ni almacenamiento extra proporcional a n."
+        ]
+      }
+    },
+    {
+      "id": "communication",
+      "points": 20,
+      "partial_points": 10,
+      "label": {
+        "en": "Communication",
+        "pt-BR": "Comunicação",
+        "es": "Comunicación"
+      },
+      "indicators": {
+        "en": [
+          "Explains a fictional disagreement through shared goals, alternatives and evidence without invented outcomes.",
+          "Communicates invariants, risks, verified results and any partial solution honestly."
+        ],
+        "pt-BR": [
+          "Explica divergência fictícia por objetivos comuns, alternativas e evidências sem resultados inventados.",
+          "Comunica invariantes, riscos, resultados verificados e solução parcial honestamente."
+        ],
+        "es": [
+          "Explica desacuerdo ficticio mediante objetivos comunes, alternativas y evidencias sin resultados inventados.",
+          "Comunica invariantes, riesgos, resultados verificados y solución parcial con honestidad."
+        ]
+      }
+    },
+    {
+      "id": "tests-and-edge-cases",
+      "points": 15,
+      "partial_points": 7,
+      "label": {
+        "en": "Tests and edge cases",
+        "pt-BR": "Testes e casos de borda",
+        "es": "Pruebas y casos límite"
+      },
+      "indicators": {
+        "en": [
+          "Runs exact-count tests for distinct duplicate groups and all-equal groups.",
+          "Runs empty/no-match tests and verifies unchanged input; proposes independent oracle comparison for further validation."
+        ],
+        "pt-BR": [
+          "Executa testes de contagem exata para grupos duplicados distintos e todos iguais.",
+          "Executa testes vazio/sem par e verifica entrada intacta; propõe comparação com oráculo independente para validar mais."
+        ],
+        "es": [
+          "Ejecuta pruebas de conteo exacto para grupos duplicados distintos y todos iguales.",
+          "Ejecuta pruebas vacío/sin pareja y verifica entrada intacta; propone comparación con oráculo independiente para validar más."
+        ]
+      }
+    },
+    {
+      "id": "engineering-judgment",
+      "points": 15,
+      "partial_points": 7,
+      "label": {
+        "en": "Engineering judgment",
+        "pt-BR": "Julgamento de engenharia",
+        "es": "Criterio de ingeniería"
+      },
+      "indicators": {
+        "en": [
+          "Justifies linear time and constant auxiliary space under bounded arithmetic, without claiming tests prove complexity.",
+          "Proposes measurable validation and rollback or mitigation for an engineering risk, with limitations of the verification."
+        ],
+        "pt-BR": [
+          "Justifica tempo linear e espaço extra constante sob aritmética limitada, sem alegar testes provam complexidade.",
+          "Propõe validação mensurável e rollback ou mitigação para risco de engenharia, com limites da verificação."
+        ],
+        "es": [
+          "Justifica tiempo lineal y espacio extra constante bajo aritmética acotada, sin afirmar pruebas demuestran complejidad.",
+          "Propone validación medible y rollback o mitigación para riesgo de ingeniería, con límites de verificación."
+        ]
+      }
+    }
+  ],
+  "self_evaluation": {
+    "en": "After the timer, mark every demonstrated indicator with evidence (spoken explanation, code, or actual test output). Assign one band per dimension using the rule above; sum out of 100. Keep incomplete work visible. Record any hints separately. Question-bank points are diagnostic only and are not added to the mock score.",
+    "pt-BR": "Após cronômetro, marque cada indicador demonstrado com evidência (explicação falada, código ou saída real de teste). Atribua uma faixa por dimensão pela regra acima; some de 100. Mantenha trabalho incompleto visível. Registre dicas separadamente. Pontos do banco são apenas diagnósticos e não somam à nota do simulado.",
+    "es": "Tras cronómetro, marca cada indicador demostrado con evidencia (explicación oral, código o salida real de prueba). Asigna una banda por dimensión según regla anterior; suma sobre 100. Mantén visible trabajo incompleto. Registra pistas aparte. Puntos del banco son solo diagnósticos y no se suman a nota de simulación."
+  },
+  "improvement": {
+    "en": "Choose the weakest dimension; compare your grouped two-pointer solution with a small brute-force oracle on duplicates and all-equal input. Revisit GIL, authorization or decision-making prerequisites as indicated by the evidence. Repeat with another hard problem and document one risk you would validate.",
+    "pt-BR": "Escolha dimensão mais fraca; compare solução de dois ponteiros agrupados com oráculo de força bruta pequeno em duplicados e entradas todas iguais. Revise GIL, autorização ou decisões conforme evidências. Repita com outro problema difícil e documente risco que verificaria.",
+    "es": "Elige dimensión más débil; compara solución de dos punteros agrupados con oráculo de fuerza bruta pequeño en duplicados y entradas todas iguales. Repasa GIL, autorización o decisiones según evidencias. Repite con otro problema difícil y documenta riesgo que validarías."
+  }
+}

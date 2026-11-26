@@ -1,0 +1,162 @@
+{
+  "id": "mock.junior-30",
+  "level": "junior",
+  "duration_minutes": 30,
+  "title": {
+    "en": "Junior mock",
+    "pt-BR": "Simulado Junior",
+    "es": "Simulación Junior"
+  },
+  "question_ids": [
+    "behavioral.star-evidence",
+    "python.mutable-default",
+    "algorithms.frequency-map",
+    "testing.specific-catch"
+  ],
+  "exercise_id": "problem-solving.label-counts",
+  "exercise_path": "exercises/problem-solving/label-counts/exercise.json",
+  "time_allocation": {
+    "introduction": 3,
+    "questions": 7,
+    "coding": 13,
+    "tests": 4,
+    "discussion": 3
+  },
+  "instructions": {
+    "en": "Use question 1 for the introduction (brief STAR); answer questions 2–4 aloud without opening answers. In a fresh practice directory, implement the linked exercise using its starter and original contract. Spend the coding and testing slots separately; run your own assertions for normal, empty and repeated/case-sensitive labels and check input preservation. In discussion, explain complexity, one alternative and any unfinished behavior. Stop at 30 minutes; do not open hints, solutions or reference answers until the timer ends.",
+    "pt-BR": "Use pergunta 1 na apresentação (STAR breve); responda 2–4 em voz alta sem abrir respostas. Em diretório pessoal novo, implemente exercício vinculado com starter e contrato original. Separe tempos de código e testes; execute assertions próprias para rótulos normais, vazios e repetidos/sensíveis a maiúsculas e confira preservação da entrada. Na discussão, explique complexidade, alternativa e comportamento incompleto. Pare aos 30 minutos; não abra dicas, soluções ou respostas até terminar.",
+    "es": "Usa pregunta 1 en presentación (STAR breve); responde 2–4 en voz alta sin abrir respuestas. En directorio personal nuevo, implementa ejercicio enlazado con starter y contrato original. Separa tiempos de código y pruebas; ejecuta aserciones propias para etiquetas normales, vacías y repetidas/sensibles a mayúsculas y comprueba conservación de entrada. En discusión, explica complejidad, alternativa y comportamiento incompleto. Detente a los 30 minutos; no abras pistas, soluciones ni respuestas hasta terminar."
+  },
+  "rubric": [
+    {
+      "id": "technical-knowledge",
+      "points": 25,
+      "partial_points": 12,
+      "label": {
+        "en": "Technical knowledge",
+        "pt-BR": "Conhecimento técnico",
+        "es": "Conocimiento técnico"
+      },
+      "indicators": {
+        "en": [
+          "Predicts both mutable-default outputs and gives a None-based correction.",
+          "Explains why a dictionary preserves counts and why ValueError is handled specifically."
+        ],
+        "pt-BR": [
+          "Prevê ambas saídas do padrão mutável e dá correção com None.",
+          "Explica por que dicionário preserva contagens e ValueError é tratado especificamente."
+        ],
+        "es": [
+          "Predice ambas salidas de valor predeterminado mutable y da corrección con None.",
+          "Explica por qué diccionario conserva conteos y ValueError se trata específicamente."
+        ]
+      }
+    },
+    {
+      "id": "problem-solving",
+      "points": 25,
+      "partial_points": 12,
+      "label": {
+        "en": "Problem solving",
+        "pt-BR": "Resolução de problemas",
+        "es": "Resolución de problemas"
+      },
+      "indicators": {
+        "en": [
+          "Restates exact-label counting and traces a small duplicate example.",
+          "Implements correct frequency accumulation and returns a dictionary without mutating input or printing."
+        ],
+        "pt-BR": [
+          "Reformula contagem de rótulo exato e simula exemplo duplicado.",
+          "Implementa acumulação correta e retorna dicionário sem mutar entrada ou imprimir."
+        ],
+        "es": [
+          "Reformula conteo de etiqueta exacta y traza ejemplo duplicado.",
+          "Implementa acumulación correcta y devuelve diccionario sin mutar entrada ni imprimir."
+        ]
+      }
+    },
+    {
+      "id": "communication",
+      "points": 20,
+      "partial_points": 10,
+      "label": {
+        "en": "Communication",
+        "pt-BR": "Comunicação",
+        "es": "Comunicación"
+      },
+      "indicators": {
+        "en": [
+          "Gives a concise truthful or explicitly fictional STAR with personal action and result.",
+          "Explains the approach aloud and distinguishes completed, failed and untested behavior."
+        ],
+        "pt-BR": [
+          "Dá STAR conciso verdadeiro ou explicitamente fictício com ação e resultado pessoal.",
+          "Explica abordagem em voz alta e distingue concluído, falho e não testado."
+        ],
+        "es": [
+          "Da STAR breve veraz o explícitamente ficticio con acción y resultado personal.",
+          "Explica enfoque en voz alta y distingue completado, fallido y no probado."
+        ]
+      }
+    },
+    {
+      "id": "tests-and-edge-cases",
+      "points": 15,
+      "partial_points": 7,
+      "label": {
+        "en": "Tests and edge cases",
+        "pt-BR": "Testes e casos de borda",
+        "es": "Pruebas y casos límite"
+      },
+      "indicators": {
+        "en": [
+          "Runs assertions for a normal duplicate case and empty input with exact expected values.",
+          "Checks case-sensitive labels and confirms mutable input is unchanged; reports actual outcomes."
+        ],
+        "pt-BR": [
+          "Executa assertions de caso duplicado normal e entrada vazia com valores exatos.",
+          "Confere rótulos sensíveis a maiúsculas e confirma entrada mutável intacta; informa resultados reais."
+        ],
+        "es": [
+          "Ejecuta aserciones de caso duplicado normal y entrada vacía con valores exactos.",
+          "Comprueba etiquetas sensibles a mayúsculas y confirma entrada mutable intacta; informa resultados reales."
+        ]
+      }
+    },
+    {
+      "id": "engineering-judgment",
+      "points": 15,
+      "partial_points": 7,
+      "label": {
+        "en": "Engineering judgment",
+        "pt-BR": "Julgamento de engenharia",
+        "es": "Criterio de ingeniería"
+      },
+      "indicators": {
+        "en": [
+          "Explains expected O(n) time under bounded-label/hash assumptions and distinguishes required output space.",
+          "Compares a set or repeated scans with a frequency map and states a limitation/next step."
+        ],
+        "pt-BR": [
+          "Explica tempo esperado O(n) sob hipóteses de rótulos limitados/hash e distingue espaço de saída exigida.",
+          "Compara conjunto ou varreduras repetidas com mapa de frequências e declara limitação/próximo passo."
+        ],
+        "es": [
+          "Explica tiempo esperado O(n) bajo supuestos de etiquetas acotadas/hash y distingue espacio de salida requerida.",
+          "Compara conjunto o recorridos repetidos con mapa de frecuencias y declara limitación/siguiente paso."
+        ]
+      }
+    }
+  ],
+  "self_evaluation": {
+    "en": "After the timer, mark every demonstrated indicator with evidence (spoken explanation, code, or actual test output). Assign one band per dimension using the rule above; sum out of 100. Keep incomplete work visible. Record any hints separately. Question-bank points are diagnostic only and are not added to the mock score.",
+    "pt-BR": "Após cronômetro, marque cada indicador demonstrado com evidência (explicação falada, código ou saída real de teste). Atribua uma faixa por dimensão pela regra acima; some de 100. Mantenha trabalho incompleto visível. Registre dicas separadamente. Pontos do banco são apenas diagnósticos e não somam à nota do simulado.",
+    "es": "Tras cronómetro, marca cada indicador demostrado con evidencia (explicación oral, código o salida real de prueba). Asigna una banda por dimensión según regla anterior; suma sobre 100. Mantén visible trabajo incompleto. Registra pistas aparte. Puntos del banco son solo diagnósticos y no se suman a nota de simulación."
+  },
+  "improvement": {
+    "en": "Choose the lowest-scoring dimension; revisit its prerequisite, reimplement label counting with fresh examples and rerun empty, repeated and case-sensitive inputs. Repeat the mock later with a different comparable exercise; compare actual evidence, not just points.",
+    "pt-BR": "Escolha dimensão de menor pontuação; revise pré-requisito, reimplemente contagem de rótulos com exemplos novos e reexecute entradas vazia, repetida e sensível a maiúsculas. Repita depois com exercício comparável diferente; compare evidência real, não só pontos.",
+    "es": "Elige dimensión de menor puntuación; repasa requisito previo, reimplementa conteo de etiquetas con ejemplos nuevos y repite entradas vacía, repetida y sensible a mayúsculas. Repite después con ejercicio comparable distinto; compara evidencia real, no solo puntos."
+  }
+}

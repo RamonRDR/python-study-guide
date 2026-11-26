@@ -1,0 +1,8 @@
+{
+  "schema_version": "0.1.0",
+  "mock_ids": [
+    "mock.junior-30",
+    "mock.mid-45",
+    "mock.senior-60"
+  ]
+}

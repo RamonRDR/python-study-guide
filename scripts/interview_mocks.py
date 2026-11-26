@@ -161,7 +161,9 @@ def render_mocks(records, locale):
                      for i, phase in enumerate(PHASES))
         lines.extend(["", f"**{lab[8]}**", ""])
         for i, question_id in enumerate(m["question_ids"]):
-            lines.append(f"{i+1}. [`{question_id}`](../22-technical-interview-question-bank/{filename}#{question_id})")
+            # GitHub heading slugs remove punctuation such as dots from these ASCII IDs.
+            anchor = question_id.replace(".", "")
+            lines.append(f"{i+1}. [`{question_id}`](../22-technical-interview-question-bank/{filename}#{anchor})")
         exercise = Path(m["exercise_path"]).parent.as_posix()
         lines.extend(["", f"**{lab[9]}:** [`{m['exercise_id']}`](../../{exercise}/{filename})",
                       "", f"### {lab[10]}", ""])
