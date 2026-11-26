@@ -23,6 +23,8 @@ MODULES = {
     "technical-interview-preparation": (24, 14),
 }
 ID = re.compile(r"[a-z0-9]+(?:[.-][a-z0-9]+)+")
+SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
+FUNCTION_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_]*")
 STRICT = validators.extend(
     Draft202012Validator,
     type_checker=Draft202012Validator.TYPE_CHECKER.redefine_many({
@@ -182,7 +184,7 @@ def canonical_record_path(kind, identifier):
         return f"quizzes/questions/{identifier}.json"
     if kind == "exercise" and identifier.startswith("problem-solving."):
         slug = identifier.removeprefix("problem-solving.")
-        if re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
+        if SLUG.fullmatch(slug):
             return f"exercises/problem-solving/{slug}/exercise.json"
     raise ValueError("invalid record ID namespace")
 
@@ -209,6 +211,10 @@ def validate_record(kind, record, root, chapters):
         answer = record["answer"]
         if "choices" in record:
             ids = [c["id"] for c in record["choices"]]
+            if any(SLUG.fullmatch(identifier) is None for identifier in ids):
+                raise ValueError("invalid choice ID")
+            if SLUG.fullmatch(answer["choice_id"]) is None:
+                raise ValueError("invalid answer choice ID")
             if len(set(ids)) != len(ids):
                 raise ValueError("duplicate choice ID")
             if answer["choice_id"] not in ids:
@@ -231,9 +237,14 @@ def validate_record(kind, record, root, chapters):
     for paths in record["prerequisite_paths"]:
         validate_prerequisite(paths, root, chapters)
     tests = record["tests"]
-    if keyword.iskeyword(tests["function_name"]):
+    name = tests["function_name"]
+    if FUNCTION_NAME.fullmatch(name) is None or keyword.iskeyword(name):
         raise ValueError("invalid function_name")
     cases = tests["cases"]
+    if any(SLUG.fullmatch(case["id"]) is None for case in cases):
+        raise ValueError("invalid case ID")
+    if any(SLUG.fullmatch(concept) is None for concept in record["concepts"]):
+        raise ValueError("invalid concept ID")
     if len({case["id"] for case in cases}) != len(cases):
         raise ValueError("duplicate case ID")
     for example in record["examples"]:

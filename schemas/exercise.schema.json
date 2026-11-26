@@ -8,11 +8,11 @@
     },
     "id": {
       "type": "string",
-      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+$"
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+(?![\\s\\S])"
     },
     "chapter_id": {
       "type": "string",
-      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+$"
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+(?![\\s\\S])"
     },
     "difficulty": {
       "enum": [
@@ -145,7 +145,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])"
       },
       "minItems": 1,
       "uniqueItems": true
@@ -346,7 +346,7 @@
         },
         "function_name": {
           "type": "string",
-          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*(?![\\s\\S])"
         },
         "comparison": {
           "const": "exact_type_and_value"
@@ -365,7 +365,7 @@
             "properties": {
               "id": {
                 "type": "string",
-                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])"
               },
               "args": {
                 "type": "array",

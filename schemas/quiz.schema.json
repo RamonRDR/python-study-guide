@@ -8,11 +8,11 @@
     },
     "id": {
       "type": "string",
-      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+$"
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+(?![\\s\\S])"
     },
     "chapter_id": {
       "type": "string",
-      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+$"
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+(?![\\s\\S])"
     },
     "difficulty": {
       "enum": [
@@ -201,7 +201,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])"
           },
           "text": {
             "type": "object",
@@ -245,7 +245,7 @@
           "properties": {
             "choice_id": {
               "type": "string",
-              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])"
             }
           },
           "required": [
@@ -333,7 +333,7 @@
             "properties": {
               "choice_id": {
                 "type": "string",
-                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])"
               }
             },
             "required": [
