@@ -1345,12 +1345,12 @@ Máximo: 2
 
 `mid` · `python-internals`
 
-Decorador de registro debe registrar intentos sin cambiar contrato del cálculo. ¿Qué preservar y cómo probar retorno, argumentos, metadatos y fallo?
+Decorador de registro debe registrar cada intento, incluidas llamadas que lanzan excepción, sin cambiar contrato del cálculo. ¿Cómo implementarías y probarías registro de intentos, retorno, argumentos, metadatos y propagación de fallo?
 
 <details>
 <summary>Respuesta esperada</summary>
 
-Reenvía *args y **kwargs, devuelve resultado, conserva metadatos con functools.wraps y deja propagar excepciones inesperadas. Prueba llamadas posicionales y nombradas, resultado, nombre y excepción deliberada.
+Suponiendo que el registro funcione, registra cada intento antes de invocar la función decorada. Reenvía `*args` y `**kwargs`, devuelve resultado, conserva metadatos con `functools.wraps` y deja propagar excepciones. Prueba llamadas posicionales y nombradas, resultado, nombre y excepción deliberada; comprueba exactamente un registro por intento, incluido fallo.
 
 **Explicación:** Wrapper transversal no debe alterar comportamiento central silenciosamente.
 
@@ -1359,6 +1359,7 @@ Reenvía *args y **kwargs, devuelve resultado, conserva metadatos con functools.
 **Errores comunes**
 
 - Olvidar devolver resultado u ocultar excepciones.
+- Registrar solo retornos exitosos, omitiendo intentos fallidos.
 
 **Preguntas de seguimiento**
 
@@ -1366,12 +1367,12 @@ Reenvía *args y **kwargs, devuelve resultado, conserva metadatos con functools.
 
 **Ejemplo**
 
-divide(8, denominator=2) decorada sigue devolviendo 4; división por cero sigue lanzando ZeroDivisionError.
+Usando `record_calls(records)` con lista inicialmente vacía, `divide(8, denominator=2)` decorada devuelve `4`; `divide(8, denominator=0)` lanza `ZeroDivisionError`. Después, `records` es igual a `['divide', 'divide']`.
 
 **Rúbrica de autoevaluación**
 
-- 1 — Especifica reenvío, retorno, metadatos y conservación de excepción.
-- 1 — Propone pruebas para cada contrato nombrado, incluido fallo.
+- 1 — Especifica un registro por intento antes de llamada, reenvío, retorno, metadatos y conservación de excepción.
+- 1 — Propone pruebas para cada contrato nombrado, comprobando registro de intentos en éxito y fallo.
 
 Máximo: 2
 

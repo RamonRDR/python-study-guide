@@ -1345,12 +1345,12 @@ Máximo: 2
 
 `mid` · `python-internals`
 
-Decorator de log deve registrar tentativas sem alterar contrato do cálculo. O que preservar e como testar retorno, argumentos, metadados e falha?
+Decorator de log deve registrar cada tentativa, inclusive chamadas que geram exceção, sem alterar contrato do cálculo. Como implementaria e testaria registro de tentativas, retorno, argumentos, metadados e propagação de falha?
 
 <details>
 <summary>Resposta esperada</summary>
 
-Encaminhe *args e **kwargs, retorne resultado, preserve metadados com functools.wraps e deixe exceções inesperadas propagar. Teste chamadas posicionais e nomeadas, resultado, nome e exceção deliberada.
+Supondo que o registro funcione, registre cada tentativa antes de invocar a função decorada. Encaminhe `*args` e `**kwargs`, retorne resultado, preserve metadados com `functools.wraps` e deixe exceções propagar. Teste chamadas posicionais e nomeadas, resultado, nome e exceção deliberada; confira exatamente um registro por tentativa, inclusive falha.
 
 **Explicação:** Wrapper transversal não deve alterar comportamento central silenciosamente.
 
@@ -1359,6 +1359,7 @@ Encaminhe *args e **kwargs, retorne resultado, preserve metadados com functools.
 **Erros comuns**
 
 - Esquecer retorno do resultado ou engolir exceções.
+- Registrar apenas retornos bem-sucedidos, omitindo tentativas com falha.
 
 **Perguntas complementares**
 
@@ -1366,12 +1367,12 @@ Encaminhe *args e **kwargs, retorne resultado, preserve metadados com functools.
 
 **Exemplo**
 
-divide(8, denominator=2) decorada ainda retorna 4; divisão por zero ainda gera ZeroDivisionError.
+Usando `record_calls(records)` com lista inicialmente vazia, `divide(8, denominator=2)` decorada retorna `4`; `divide(8, denominator=0)` gera `ZeroDivisionError`. Depois, `records` é igual a `['divide', 'divide']`.
 
 **Rubrica de autoavaliação**
 
-- 1 — Especifica encaminhamento, retorno, metadados e preservação de exceção.
-- 1 — Propõe testes para cada contrato nomeado, incluindo falha.
+- 1 — Especifica um registro por tentativa antes da chamada, encaminhamento, retorno, metadados e preservação de exceção.
+- 1 — Propõe testes para cada contrato nomeado, conferindo registro das tentativas em sucesso e falha.
 
 Máximo: 2
 

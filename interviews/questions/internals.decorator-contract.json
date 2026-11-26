@@ -3,14 +3,14 @@
   "topic": "python-internals",
   "level": "mid",
   "prompt": {
-    "en": "A logging decorator must record attempts without changing the wrapped calculation's contract. What should it preserve and how would you test return, arguments, metadata and failure?",
-    "pt-BR": "Decorator de log deve registrar tentativas sem alterar contrato do cálculo. O que preservar e como testar retorno, argumentos, metadados e falha?",
-    "es": "Decorador de registro debe registrar intentos sin cambiar contrato del cálculo. ¿Qué preservar y cómo probar retorno, argumentos, metadatos y fallo?"
+    "en": "A logging decorator must record every attempt, including calls that raise, without changing the wrapped calculation's contract. How would you implement and test attempt recording, return values, arguments, metadata and failure propagation?",
+    "pt-BR": "Decorator de log deve registrar cada tentativa, inclusive chamadas que geram exceção, sem alterar contrato do cálculo. Como implementaria e testaria registro de tentativas, retorno, argumentos, metadados e propagação de falha?",
+    "es": "Decorador de registro debe registrar cada intento, incluidas llamadas que lanzan excepción, sin cambiar contrato del cálculo. ¿Cómo implementarías y probarías registro de intentos, retorno, argumentos, metadatos y propagación de fallo?"
   },
   "expected_answer": {
-    "en": "Forward *args and **kwargs, return the wrapped result, preserve metadata using functools.wraps and let unexpected exceptions propagate. Test positional and keyword calls, result, name and a deliberate exception.",
-    "pt-BR": "Encaminhe *args e **kwargs, retorne resultado, preserve metadados com functools.wraps e deixe exceções inesperadas propagar. Teste chamadas posicionais e nomeadas, resultado, nome e exceção deliberada.",
-    "es": "Reenvía *args y **kwargs, devuelve resultado, conserva metadatos con functools.wraps y deja propagar excepciones inesperadas. Prueba llamadas posicionales y nombradas, resultado, nombre y excepción deliberada."
+    "en": "Assuming the recording operation succeeds, record each attempt before invoking the wrapped function. Forward `*args` and `**kwargs`, return the wrapped result, preserve metadata with `functools.wraps` and let exceptions propagate. Test positional and keyword calls, result, name and a deliberate exception; check exactly one record per attempt, including failure.",
+    "pt-BR": "Supondo que o registro funcione, registre cada tentativa antes de invocar a função decorada. Encaminhe `*args` e `**kwargs`, retorne resultado, preserve metadados com `functools.wraps` e deixe exceções propagar. Teste chamadas posicionais e nomeadas, resultado, nome e exceção deliberada; confira exatamente um registro por tentativa, inclusive falha.",
+    "es": "Suponiendo que el registro funcione, registra cada intento antes de invocar la función decorada. Reenvía `*args` y `**kwargs`, devuelve resultado, conserva metadatos con `functools.wraps` y deja propagar excepciones. Prueba llamadas posicionales y nombradas, resultado, nombre y excepción deliberada; comprueba exactamente un registro por intento, incluido fallo."
   },
   "explanation": {
     "en": "A cross-cutting wrapper should not silently alter core behavior.",
@@ -24,13 +24,16 @@
   },
   "common_errors": {
     "en": [
-      "Forget to return the wrapped result or swallow exceptions."
+      "Forget to return the wrapped result or swallow exceptions.",
+      "Record only successful returns, omitting failed attempts."
     ],
     "pt-BR": [
-      "Esquecer retorno do resultado ou engolir exceções."
+      "Esquecer retorno do resultado ou engolir exceções.",
+      "Registrar apenas retornos bem-sucedidos, omitindo tentativas com falha."
     ],
     "es": [
-      "Olvidar devolver resultado u ocultar excepciones."
+      "Olvidar devolver resultado u ocultar excepciones.",
+      "Registrar solo retornos exitosos, omitiendo intentos fallidos."
     ]
   },
   "follow_ups": {
@@ -45,27 +48,27 @@
     ]
   },
   "examples": {
-    "en": "A wrapped divide(8, denominator=2) still returns 4; division by zero still raises ZeroDivisionError.",
-    "pt-BR": "divide(8, denominator=2) decorada ainda retorna 4; divisão por zero ainda gera ZeroDivisionError.",
-    "es": "divide(8, denominator=2) decorada sigue devolviendo 4; división por cero sigue lanzando ZeroDivisionError."
+    "en": "Using `record_calls(records)` with an initially empty list, a wrapped `divide(8, denominator=2)` returns `4`; `divide(8, denominator=0)` raises `ZeroDivisionError`. Afterwards, `records` equals `['divide', 'divide']`.",
+    "pt-BR": "Usando `record_calls(records)` com lista inicialmente vazia, `divide(8, denominator=2)` decorada retorna `4`; `divide(8, denominator=0)` gera `ZeroDivisionError`. Depois, `records` é igual a `['divide', 'divide']`.",
+    "es": "Usando `record_calls(records)` con lista inicialmente vacía, `divide(8, denominator=2)` decorada devuelve `4`; `divide(8, denominator=0)` lanza `ZeroDivisionError`. Después, `records` es igual a `['divide', 'divide']`."
   },
   "rubric": [
     {
       "id": "criterion-1",
       "points": 1,
       "criterion": {
-        "en": "Specifies forwarding, return, metadata and exception preservation.",
-        "pt-BR": "Especifica encaminhamento, retorno, metadados e preservação de exceção.",
-        "es": "Especifica reenvío, retorno, metadatos y conservación de excepción."
+        "en": "Specifies one record per attempt before invocation, forwarding, return, metadata and exception preservation.",
+        "pt-BR": "Especifica um registro por tentativa antes da chamada, encaminhamento, retorno, metadados e preservação de exceção.",
+        "es": "Especifica un registro por intento antes de llamada, reenvío, retorno, metadatos y conservación de excepción."
       }
     },
     {
       "id": "criterion-2",
       "points": 1,
       "criterion": {
-        "en": "Proposes tests for each named contract, including failure.",
-        "pt-BR": "Propõe testes para cada contrato nomeado, incluindo falha.",
-        "es": "Propone pruebas para cada contrato nombrado, incluido fallo."
+        "en": "Proposes tests for each named contract, asserting recorded attempts on both success and failure.",
+        "pt-BR": "Propõe testes para cada contrato nomeado, conferindo registro das tentativas em sucesso e falha.",
+        "es": "Propone pruebas para cada contrato nombrado, comprobando registro de intentos en éxito y fallo."
       }
     }
   ],

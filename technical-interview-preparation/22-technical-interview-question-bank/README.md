@@ -1345,12 +1345,12 @@ Maximum: 2
 
 `mid` · `python-internals`
 
-A logging decorator must record attempts without changing the wrapped calculation's contract. What should it preserve and how would you test return, arguments, metadata and failure?
+A logging decorator must record every attempt, including calls that raise, without changing the wrapped calculation's contract. How would you implement and test attempt recording, return values, arguments, metadata and failure propagation?
 
 <details>
 <summary>Expected answer</summary>
 
-Forward *args and **kwargs, return the wrapped result, preserve metadata using functools.wraps and let unexpected exceptions propagate. Test positional and keyword calls, result, name and a deliberate exception.
+Assuming the recording operation succeeds, record each attempt before invoking the wrapped function. Forward `*args` and `**kwargs`, return the wrapped result, preserve metadata with `functools.wraps` and let exceptions propagate. Test positional and keyword calls, result, name and a deliberate exception; check exactly one record per attempt, including failure.
 
 **Explanation:** A cross-cutting wrapper should not silently alter core behavior.
 
@@ -1359,6 +1359,7 @@ Forward *args and **kwargs, return the wrapped result, preserve metadata using f
 **Common errors**
 
 - Forget to return the wrapped result or swallow exceptions.
+- Record only successful returns, omitting failed attempts.
 
 **Follow-ups**
 
@@ -1366,12 +1367,12 @@ Forward *args and **kwargs, return the wrapped result, preserve metadata using f
 
 **Example**
 
-A wrapped divide(8, denominator=2) still returns 4; division by zero still raises ZeroDivisionError.
+Using `record_calls(records)` with an initially empty list, a wrapped `divide(8, denominator=2)` returns `4`; `divide(8, denominator=0)` raises `ZeroDivisionError`. Afterwards, `records` equals `['divide', 'divide']`.
 
 **Self-assessment rubric**
 
-- 1 — Specifies forwarding, return, metadata and exception preservation.
-- 1 — Proposes tests for each named contract, including failure.
+- 1 — Specifies one record per attempt before invocation, forwarding, return, metadata and exception preservation.
+- 1 — Proposes tests for each named contract, asserting recorded attempts on both success and failure.
 
 Maximum: 2
 
