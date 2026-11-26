@@ -70,6 +70,14 @@
       "path": "quizzes/questions/quiz.division-zero-error.json"
     },
     {
+      "id": "quiz.docstring-first-statement",
+      "path": "quizzes/questions/quiz.docstring-first-statement.json"
+    },
+    {
+      "id": "quiz.docstring-runtime-attribute",
+      "path": "quizzes/questions/quiz.docstring-runtime-attribute.json"
+    },
+    {
       "id": "quiz.editor-replaces-interpreter",
       "path": "quizzes/questions/quiz.editor-replaces-interpreter.json"
     },
@@ -100,6 +108,10 @@
     {
       "id": "quiz.git-inspect-staged",
       "path": "quizzes/questions/quiz.git-inspect-staged.json"
+    },
+    {
+      "id": "quiz.hash-inside-string",
+      "path": "quizzes/questions/quiz.hash-inside-string.json"
     },
     {
       "id": "quiz.implicit-none-return",
@@ -150,6 +162,10 @@
       "path": "quizzes/questions/quiz.local-binding-shadow.json"
     },
     {
+      "id": "quiz.log-fallback-level",
+      "path": "quizzes/questions/quiz.log-fallback-level.json"
+    },
+    {
       "id": "quiz.loop-else-break-versus-continue",
       "path": "quizzes/questions/quiz.loop-else-break-versus-continue.json"
     },
@@ -174,8 +190,16 @@
       "path": "quizzes/questions/quiz.mutable-default-reuse.json"
     },
     {
+      "id": "quiz.name-with-explicit-unit",
+      "path": "quizzes/questions/quiz.name-with-explicit-unit.json"
+    },
+    {
       "id": "quiz.negative-floor-remainder",
       "path": "quizzes/questions/quiz.negative-floor-remainder.json"
+    },
+    {
+      "id": "quiz.none-check-preserve-zero",
+      "path": "quizzes/questions/quiz.none-check-preserve-zero.json"
     },
     {
       "id": "quiz.nonempty-false-text",
@@ -188,6 +212,10 @@
     {
       "id": "quiz.parameter-rebind-versus-mutation",
       "path": "quizzes/questions/quiz.parameter-rebind-versus-mutation.json"
+    },
+    {
+      "id": "quiz.pep8-guidance-not-syntax",
+      "path": "quizzes/questions/quiz.pep8-guidance-not-syntax.json"
     },
     {
       "id": "quiz.positional-argument-binding",
@@ -272,6 +300,10 @@
     {
       "id": "quiz.strip-surrounding-whitespace",
       "path": "quizzes/questions/quiz.strip-surrounding-whitespace.json"
+    },
+    {
+      "id": "quiz.task-marker-no-runtime",
+      "path": "quizzes/questions/quiz.task-marker-no-runtime.json"
     },
     {
       "id": "quiz.true-division-integers",

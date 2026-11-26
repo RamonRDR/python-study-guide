@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.task-marker-no-runtime",
+  "chapter_id": "comments-and-documentation.task-markers",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "A TODO comment automatically schedules a Python task during execution.",
+    "pt-BR": "Um comentário TODO agenda automaticamente uma tarefa Python durante a execução.",
+    "es": "Un comentario TODO programa automáticamente una tarea Python durante la ejecución."
+  },
+  "explanation": {
+    "en": "TODO is a human/tooling convention, not interpreter behavior.",
+    "pt-BR": "TODO é convenção humana/de ferramentas, não comportamento do interpretador.",
+    "es": "TODO es una convención humana/de herramientas, no comportamiento del intérprete."
+  },
+  "hints": {
+    "en": [
+      "Consider whether a comment is executable."
+    ],
+    "pt-BR": [
+      "Considere se um comentário é executável."
+    ],
+    "es": [
+      "Considera si un comentario es ejecutable."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "comments-and-documentation/04-task-markers/README.md",
+        "pt-BR": "comments-and-documentation/04-task-markers/README.pt-BR.md",
+        "es": "comments-and-documentation/04-task-markers/README.es.md"
+      },
+      "sections": {
+        "en": "1. What task markers are",
+        "pt-BR": "1. O que são marcadores de tarefas",
+        "es": "1. Qué son los marcadores de tareas"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

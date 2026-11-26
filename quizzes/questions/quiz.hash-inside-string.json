@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.hash-inside-string",
+  "chapter_id": "comments-and-documentation.comments",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "A # inside a quoted Python string begins a comment.",
+    "pt-BR": "Um # dentro de uma string Python entre aspas inicia um comentário.",
+    "es": "Un # dentro de una cadena Python entre comillas inicia un comentario."
+  },
+  "explanation": {
+    "en": "A hash inside a string is part of the string; outside a string it can start a comment.",
+    "pt-BR": "Uma cerquilha dentro de uma string faz parte dela; fora de uma string pode iniciar comentário.",
+    "es": "Una almohadilla dentro de una cadena forma parte de ella; fuera puede iniciar un comentario."
+  },
+  "hints": {
+    "en": [
+      "Distinguish a string character from source syntax."
+    ],
+    "pt-BR": [
+      "Distinga um caractere da string da sintaxe."
+    ],
+    "es": [
+      "Distingue un carácter de cadena de la sintaxis."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "comments-and-documentation/01-comments/README.md",
+        "pt-BR": "comments-and-documentation/01-comments/README.pt-BR.md",
+        "es": "comments-and-documentation/01-comments/README.es.md"
+      },
+      "sections": {
+        "en": "1. What a comment is",
+        "pt-BR": "1. O que é um comentário",
+        "es": "1. Qué es un comentario"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.docstring-runtime-attribute",
+  "chapter_id": "comments-and-documentation.docstrings",
+  "difficulty": "medium",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Fill ____ with the exact attribute name that exposes the function's docstring. Enter just the attribute name.",
+    "pt-BR": "Preencha ____ com o nome exato do atributo que expõe a docstring da função. Digite apenas o nome do atributo.",
+    "es": "Completa ____ con el nombre exacto del atributo que expone la docstring de la función. Introduce solo el nombre del atributo."
+  },
+  "explanation": {
+    "en": "__doc__ exposes the docstring as a string when present.",
+    "pt-BR": "__doc__ expõe a docstring como string quando presente.",
+    "es": "__doc__ expone la docstring como cadena cuando existe."
+  },
+  "hints": {
+    "en": [
+      "It is a special attribute with double underscores on both sides."
+    ],
+    "pt-BR": [
+      "É um atributo especial com dois underscores de cada lado."
+    ],
+    "es": [
+      "Es un atributo especial con dos guiones bajos a cada lado."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "comments-and-documentation/02-docstrings/README.md",
+        "pt-BR": "comments-and-documentation/02-docstrings/README.pt-BR.md",
+        "es": "comments-and-documentation/02-docstrings/README.es.md"
+      },
+      "sections": {
+        "en": "9. Accessing docstrings at runtime",
+        "pt-BR": "9. Acessando docstrings durante a execução",
+        "es": "9. Acceso a docstrings durante la ejecución"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "__doc__"
+    ],
+    "comparison": "exact"
+  },
+  "code": "def ping():\n    \"\"\"Check availability.\"\"\"\n    return True\n\ndescription = ping.____"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.docstring-first-statement",
+  "chapter_id": "comments-and-documentation.docstrings",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "A string literal used as the first statement in a function definition becomes its docstring.",
+    "pt-BR": "Um literal de string usado como primeira instrução de uma função torna-se sua docstring.",
+    "es": "Un literal de cadena usado como primera sentencia de una función se convierte en su docstring."
+  },
+  "explanation": {
+    "en": "Python recognizes a docstring by its placement, not merely by triple quotes.",
+    "pt-BR": "Python reconhece uma docstring por sua posição, não apenas pelas aspas triplas.",
+    "es": "Python reconoce una docstring por su posición, no solo por las comillas triples."
+  },
+  "hints": {
+    "en": [
+      "Think about where the literal appears."
+    ],
+    "pt-BR": [
+      "Pense em onde o literal aparece."
+    ],
+    "es": [
+      "Piensa en dónde aparece el literal."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "comments-and-documentation/02-docstrings/README.md",
+        "pt-BR": "comments-and-documentation/02-docstrings/README.pt-BR.md",
+        "es": "comments-and-documentation/02-docstrings/README.es.md"
+      },
+      "sections": {
+        "en": "1. What a docstring is",
+        "pt-BR": "1. O que é uma docstring",
+        "es": "1. Qué es una docstring"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

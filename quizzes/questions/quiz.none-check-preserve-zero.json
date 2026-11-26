@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.none-check-preserve-zero",
+  "chapter_id": "comments-and-documentation.pep8-and-readability",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "An optional count may be None or a nonnegative integer. Zero is valid. Which test detects absence without confusing it with zero?",
+    "pt-BR": "Uma contagem opcional pode ser None ou inteiro não negativo. Zero é válido. Qual teste detecta ausência sem confundi-la com zero?",
+    "es": "Un conteo opcional puede ser None o un entero no negativo. Cero es válido. ¿Qué prueba detecta ausencia sin confundirla con cero?"
+  },
+  "explanation": {
+    "en": "Identity with None tests the sentinel specifically. A truthiness check also treats zero as falsy.",
+    "pt-BR": "Identidade com None testa especificamente a sentinela. Teste de valor-verdade também trata zero como falsy.",
+    "es": "La identidad con None prueba específicamente el centinela. La prueba de valor de verdad también trata cero como falsy."
+  },
+  "hints": {
+    "en": [
+      "Both None and zero are falsy, but only one is absent."
+    ],
+    "pt-BR": [
+      "None e zero são falsy, mas somente um está ausente."
+    ],
+    "es": [
+      "None y cero son falsy, pero solo uno está ausente."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "comments-and-documentation/06-pep8-and-readability/README.md",
+        "pt-BR": "comments-and-documentation/06-pep8-and-readability/README.pt-BR.md",
+        "es": "comments-and-documentation/06-pep8-and-readability/README.es.md"
+      },
+      "sections": {
+        "en": "11. Write comparisons in idiomatic, explicit forms",
+        "pt-BR": "11. Escreva comparações de forma idiomática e explícita",
+        "es": "11. Escribe comparaciones idiomáticas y explícitas"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "identity"
+  },
+  "choices": [
+    {
+      "id": "not-count",
+      "text": {
+        "en": "if not count:",
+        "pt-BR": "if not count:",
+        "es": "if not count:"
+      }
+    },
+    {
+      "id": "zero",
+      "text": {
+        "en": "if count == 0:",
+        "pt-BR": "if count == 0:",
+        "es": "if count == 0:"
+      }
+    },
+    {
+      "id": "identity",
+      "text": {
+        "en": "if count is None:",
+        "pt-BR": "if count is None:",
+        "es": "if count is None:"
+      }
+    },
+    {
+      "id": "present",
+      "text": {
+        "en": "if count is not None:",
+        "pt-BR": "if count is not None:",
+        "es": "if count is not None:"
+      }
+    }
+  ]
+}

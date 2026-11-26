@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.log-fallback-level",
+  "chapter_id": "comments-and-documentation.comments-vs-logging",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A service falls back to cached data after a recoverable failure and continues in reduced capability. Which logging level best fits the guide?",
+    "pt-BR": "Um serviço usa dados em cache após falha recuperável e continua com capacidade reduzida. Qual nível de logging melhor se encaixa no guia?",
+    "es": "Un servicio usa datos en caché tras un fallo recuperable y continúa con capacidad reducida. ¿Qué nivel de logging encaja mejor en la guía?"
+  },
+  "explanation": {
+    "en": "WARNING signals an event worth attention when execution can continue, such as a fallback.",
+    "pt-BR": "WARNING sinaliza evento que merece atenção quando a execução pode continuar, como fallback.",
+    "es": "WARNING señala un evento que merece atención cuando la ejecución puede continuar, como un fallback."
+  },
+  "hints": {
+    "en": [
+      "Distinguish a degraded but continuing operation from normal routine."
+    ],
+    "pt-BR": [
+      "Distinga operação degradada que continua de rotina normal."
+    ],
+    "es": [
+      "Distingue una operación degradada que continúa de la rutina normal."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "comments-and-documentation/05-comments-vs-logging/README.md",
+        "pt-BR": "comments-and-documentation/05-comments-vs-logging/README.pt-BR.md",
+        "es": "comments-and-documentation/05-comments-vs-logging/README.es.md"
+      },
+      "sections": {
+        "en": "10. `WARNING`, `ERROR`, and `CRITICAL` require judgment",
+        "pt-BR": "10. `WARNING`, `ERROR` e `CRITICAL` exigem julgamento",
+        "es": "10. `WARNING`, `ERROR` y `CRITICAL` requieren criterio"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "warning"
+  },
+  "choices": [
+    {
+      "id": "debug",
+      "text": {
+        "en": "DEBUG",
+        "pt-BR": "DEBUG",
+        "es": "DEBUG"
+      }
+    },
+    {
+      "id": "info",
+      "text": {
+        "en": "INFO",
+        "pt-BR": "INFO",
+        "es": "INFO"
+      }
+    },
+    {
+      "id": "critical",
+      "text": {
+        "en": "CRITICAL",
+        "pt-BR": "CRITICAL",
+        "es": "CRITICAL"
+      }
+    },
+    {
+      "id": "warning",
+      "text": {
+        "en": "WARNING",
+        "pt-BR": "WARNING",
+        "es": "WARNING"
+      }
+    }
+  ]
+}
