@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-In progress: fourteen lessons cover interview foundations, review, OOP and Python internals. Backend, SQL, question bank and mocks remain planned; no interview bank is published yet.
+In progress: twenty-one lessons cover interview foundations, Python, OOP, internals, backend, SQL and engineering. The question bank, extended behavioral/international practice and mocks remain planned; no interview bank is published yet.
 
 1. [Understanding Technical Interviews](01-understanding-technical-interviews/README.md)
 2. [Live Coding and Take-Home Assignments](02-live-coding-and-take-home/README.md)
@@ -18,5 +18,12 @@ In progress: fourteen lessons cover interview foundations, review, OOP and Pytho
 12. [Closures and Decorators](12-closures-and-decorators/README.md)
 13. [Context Managers](13-context-managers/README.md)
 14. [Concurrency, Parallelism and the GIL](14-concurrency-parallelism-and-the-gil/README.md)
+15. [Exceptions, Testing and Debugging Review](15-exceptions-testing-and-debugging-review/README.md)
+16. [HTTP, REST and Backend Fundamentals](16-http-rest-and-backend-fundamentals/README.md)
+17. [API Contracts, Authentication and Authorization](17-api-contracts-authentication-and-authorization/README.md)
+18. [Relational Databases and SQL](18-relational-databases-and-sql/README.md)
+19. [Joins, Aggregations and Data Relationships](19-joins-aggregations-and-data-relationships/README.md)
+20. [Transactions, Indexes and SQL Safety](20-transactions-indexes-and-sql-safety/README.md)
+21. [Software Engineering and Technical Decisions](21-software-engineering-and-technical-decisions/README.md)
 
 [Learning path](../docs/learning-path.en.md) · [Prerequisite map](../docs/specs/learning-hub-foundation/interview-prerequisite-map.md)

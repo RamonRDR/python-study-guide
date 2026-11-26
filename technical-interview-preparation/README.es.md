@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-En curso: catorce lecciones cubren fundamentos de entrevistas, repaso, OOP e internals de Python. Backend, SQL, banco de preguntas y simulaciones siguen previstos; aún no se publica un banco de entrevistas.
+En curso: veintiuna lecciones cubren fundamentos de entrevistas, Python, OOP, internals, backend, SQL e ingeniería. Banco de preguntas, práctica conductual/internacional ampliada y simulaciones siguen previstos; aún no se publica un banco.
 
 1. [Entender las entrevistas técnicas](01-understanding-technical-interviews/README.es.md)
 2. [Live coding y tareas take-home](02-live-coding-and-take-home/README.es.md)
@@ -18,5 +18,12 @@ En curso: catorce lecciones cubren fundamentos de entrevistas, repaso, OOP e int
 12. [Cierres y decoradores](12-closures-and-decorators/README.es.md)
 13. [Gestores de contexto](13-context-managers/README.es.md)
 14. [Concurrencia, paralelismo y GIL](14-concurrency-parallelism-and-the-gil/README.es.md)
+15. [Repaso de excepciones, pruebas y depuración](15-exceptions-testing-and-debugging-review/README.es.md)
+16. [HTTP, REST y fundamentos de backend](16-http-rest-and-backend-fundamentals/README.es.md)
+17. [Contratos de API, autenticación y autorización](17-api-contracts-authentication-and-authorization/README.es.md)
+18. [Bases de datos relacionales y SQL](18-relational-databases-and-sql/README.es.md)
+19. [Joins, agregaciones y relaciones de datos](19-joins-aggregations-and-data-relationships/README.es.md)
+20. [Transacciones, índices y seguridad en SQL](20-transactions-indexes-and-sql-safety/README.es.md)
+21. [Ingeniería de software y decisiones técnicas](21-software-engineering-and-technical-decisions/README.es.md)
 
 [Ruta de aprendizaje](../docs/learning-path.es.md) · [Mapa de requisitos previos](../docs/specs/learning-hub-foundation/interview-prerequisite-map.es.md)

@@ -207,3 +207,10 @@ technical-interview-preparation/11-iterators-generators-and-comprehensions/examp
 technical-interview-preparation/12-closures-and-decorators/examples/call_counter.py
 technical-interview-preparation/13-context-managers/examples/managed_session.py
 technical-interview-preparation/14-concurrency-parallelism-and-the-gil/examples/safe_counter.py
+technical-interview-preparation/15-exceptions-testing-and-debugging-review/examples/parse_quantity.py
+technical-interview-preparation/16-http-rest-and-backend-fundamentals/examples/route_catalog.py
+technical-interview-preparation/17-api-contracts-authentication-and-authorization/examples/note_access.py
+technical-interview-preparation/18-relational-databases-and-sql/examples/lesson_catalog.py
+technical-interview-preparation/19-joins-aggregations-and-data-relationships/examples/group_progress.py
+technical-interview-preparation/20-transactions-indexes-and-sql-safety/examples/credit_transfer.py
+technical-interview-preparation/21-software-engineering-and-technical-decisions/examples/progress_report.py

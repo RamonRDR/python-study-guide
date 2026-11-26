@@ -60,3 +60,15 @@ A1 merged in [PR #96](https://github.com/RamonRDR/python-study-guide/pull/96) at
 - [12-closures-and-decorators](../../../technical-interview-preparation/12-closures-and-decorators/README.md): Closures: LEGB, nonlocal, late binding, decorators, wraps and forwarding.
 - [13-context-managers](../../../technical-interview-preparation/13-context-managers/README.md): Context managers: entry/exit, suppression and cleanup.
 - [14-concurrency-parallelism-and-the-gil](../../../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md): Concurrency: workload choice, conventional/experimental CPython 3.13, locks and futures.
+
+## A3 instructional evidence and foundation gate
+
+A2 merged in [PR #97](https://github.com/RamonRDR/python-study-guide/pull/97) at `fd30054f25f3737213900706a73bfcac02e08326`; [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45727632409) succeeded. A3 implements the remaining planned foundation lessons below. Targeted sections of prior exception, pytest, HTTP Requests, JSON, SDD and TDD lessons were inspected in all three languages. Historical baseline coverage is not rewritten as if these lessons already existed. T06-01 foundation implementation is ready for PR validation, not yet closed; confirm exact-head CI, review and merge evidence before authoring question records. Each question must still have a verified prerequisite and teach any further gap before publication.
+
+- [15-exceptions-testing-and-debugging-review](../../../technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md): Exceptions and tests: explicit causes, negative cases, unit/integration/end-to-end boundaries and debugging.
+- [16-http-rest-and-backend-fundamentals](../../../technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.md): HTTP: request/response, methods, idempotence, status codes and REST constraints.
+- [17-api-contracts-authentication-and-authorization](../../../technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.md): API: validation, authentication vs authorization, object ownership and explicit error policy.
+- [18-relational-databases-and-sql](../../../technical-interview-preparation/18-relational-databases-and-sql/README.md): Relational model: primary key, constraints, NULL, CRUD, ordering and bound queries.
+- [19-joins-aggregations-and-data-relationships](../../../technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.md): Relationships: foreign keys, cardinality, joins, grouping and aggregation including zero counts.
+- [20-transactions-indexes-and-sql-safety](../../../technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.md): Transactions: ACID, commit/rollback, index trade-offs and safe SQL parameters.
+- [21-software-engineering-and-technical-decisions](../../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md): Engineering: requirements, ADR, TDD, dependency boundaries, observability and measured trade-offs.

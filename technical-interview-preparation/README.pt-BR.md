@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Em andamento: quatorze aulas cobrem fundamentos de entrevistas, revisão, OOP e internals de Python. Backend, SQL, banco de perguntas e simulados permanecem planejados; nenhum banco de entrevistas publicado ainda.
+Em andamento: vinte e uma aulas cobrem fundamentos de entrevistas, Python, OOP, internals, backend, SQL e engenharia. Banco de perguntas, prática comportamental/internacional ampliada e simulados permanecem planejados; nenhum banco publicado ainda.
 
 1. [Entendendo entrevistas técnicas](01-understanding-technical-interviews/README.pt-BR.md)
 2. [Live coding e tarefas take-home](02-live-coding-and-take-home/README.pt-BR.md)
@@ -18,5 +18,12 @@ Em andamento: quatorze aulas cobrem fundamentos de entrevistas, revisão, OOP e 
 12. [Closures e decorators](12-closures-and-decorators/README.pt-BR.md)
 13. [Gerenciadores de contexto](13-context-managers/README.pt-BR.md)
 14. [Concorrência, paralelismo e GIL](14-concurrency-parallelism-and-the-gil/README.pt-BR.md)
+15. [Revisão de exceções, testes e debugging](15-exceptions-testing-and-debugging-review/README.pt-BR.md)
+16. [HTTP, REST e fundamentos de backend](16-http-rest-and-backend-fundamentals/README.pt-BR.md)
+17. [Contratos de API, autenticação e autorização](17-api-contracts-authentication-and-authorization/README.pt-BR.md)
+18. [Bancos de dados relacionais e SQL](18-relational-databases-and-sql/README.pt-BR.md)
+19. [Joins, agregações e relacionamentos de dados](19-joins-aggregations-and-data-relationships/README.pt-BR.md)
+20. [Transações, índices e segurança em SQL](20-transactions-indexes-and-sql-safety/README.pt-BR.md)
+21. [Engenharia de software e decisões técnicas](21-software-engineering-and-technical-decisions/README.pt-BR.md)
 
 [Trilha de aprendizado](../docs/learning-path.pt-BR.md) · [Mapa de pré-requisitos](../docs/specs/learning-hub-foundation/interview-prerequisite-map.pt-BR.md)

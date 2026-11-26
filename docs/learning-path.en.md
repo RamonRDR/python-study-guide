@@ -6,7 +6,7 @@ Use this page as the **master table of contents for the course**. Every publishe
 
 If you are starting from zero, follow the phase order. Completed later phases may already be available before earlier planned phases, but the phase numbers still represent the intended learning sequence.
 
-Published curriculum: 97 lessons and eight practical projects (105 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
+Published curriculum: 104 lessons and eight practical projects (112 entries). Start at Getting Started if you are new to programming. Future chapters are tracked in the roadmap, not linked as published lessons.
 
 ## Status legend
 
@@ -192,7 +192,7 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 
 ## Phase 12: Technical Interview Preparation
 
-In progress: fourteen lessons cover interview foundations, review, OOP and Python internals. Backend, SQL, question bank and mocks remain planned; no interview bank is published yet.
+In progress: twenty-one lessons cover interview foundations, Python, OOP, internals, backend, SQL and engineering. The question bank, extended behavioral/international practice and mocks remain planned; no interview bank is published yet.
 
 1. [Understanding Technical Interviews](../technical-interview-preparation/01-understanding-technical-interviews/README.md)
 2. [Live Coding and Take-Home Assignments](../technical-interview-preparation/02-live-coding-and-take-home/README.md)
@@ -208,6 +208,13 @@ In progress: fourteen lessons cover interview foundations, review, OOP and Pytho
 12. [Closures and Decorators](../technical-interview-preparation/12-closures-and-decorators/README.md)
 13. [Context Managers](../technical-interview-preparation/13-context-managers/README.md)
 14. [Concurrency, Parallelism and the GIL](../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md)
+15. [Exceptions, Testing and Debugging Review](../technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md)
+16. [HTTP, REST and Backend Fundamentals](../technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.md)
+17. [API Contracts, Authentication and Authorization](../technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.md)
+18. [Relational Databases and SQL](../technical-interview-preparation/18-relational-databases-and-sql/README.md)
+19. [Joins, Aggregations and Data Relationships](../technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.md)
+20. [Transactions, Indexes and SQL Safety](../technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.md)
+21. [Software Engineering and Technical Decisions](../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md)
 
 ## Useful navigation
 

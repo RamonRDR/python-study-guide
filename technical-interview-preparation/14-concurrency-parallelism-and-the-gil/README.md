@@ -3,7 +3,7 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Previous](../13-context-managers/README.md) · [Module index](../README.md)
+[← Previous](../13-context-managers/README.md) · [Module index](../README.md) · [Next →](../15-exceptions-testing-and-debugging-review/README.md)
 <!-- /chapter-navigation:top -->
 
 ## Prerequisites
@@ -51,5 +51,5 @@ Run four workers with 250 updates each; expected total is 1000. Test zero update
 - [Python 3.13: library/asyncio-task.html](https://docs.python.org/3.13/library/asyncio-task.html)
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../13-context-managers/README.md) · [Module index](../README.md)
+[← Previous](../13-context-managers/README.md) · [Module index](../README.md) · [Next →](../15-exceptions-testing-and-debugging-review/README.md)
 <!-- /chapter-navigation:bottom -->
