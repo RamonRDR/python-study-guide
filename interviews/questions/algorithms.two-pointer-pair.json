@@ -1,0 +1,98 @@
+{
+  "id": "algorithms.two-pointer-pair",
+  "topic": "data-structures-algorithms",
+  "level": "mid",
+  "prompt": {
+    "en": "For sorted ascending integers, decide if two different indices sum to target. Explain pointer moves, termination and costs.",
+    "pt-BR": "Para inteiros ordenados crescentes, decida se dois índices distintos somam alvo. Explique movimentos, término e custos.",
+    "es": "Para enteros ordenados ascendentes, decide si dos índices distintos suman objetivo. Explica movimientos, terminación y costes."
+  },
+  "expected_answer": {
+    "en": "Start left=0, right=n-1. While left < right, compare their sum: equal succeeds, too small increments left, too large decrements right. If pointers meet, fail. Sortedness justifies discarded pairs. O(n) time, O(1) extra space under fixed-cost arithmetic.",
+    "pt-BR": "Comece left=0, right=n-1. Enquanto left < right compare soma: igual tem sucesso, menor incrementa left, maior decrementa right. Se se encontrarem, falha. Ordenação justifica pares descartados. O(n) tempo, O(1) extra sob aritmética de custo fixo.",
+    "es": "Empieza left=0, right=n-1. Mientras left < right compara suma: igual éxito, menor incrementa left, mayor decrementa right. Si se encuentran, falla. Orden justifica pares descartados. O(n) tiempo, O(1) extra bajo aritmética de coste fijo."
+  },
+  "explanation": {
+    "en": "Each move shrinks the remaining interval and never uses the same index twice.",
+    "pt-BR": "Cada movimento reduz intervalo e nunca usa mesmo índice duas vezes.",
+    "es": "Cada movimiento reduce intervalo y nunca usa mismo índice dos veces."
+  },
+  "intent": {
+    "en": "Assess invariant, correctness and complexity.",
+    "pt-BR": "Avaliar invariante, correção e complexidade.",
+    "es": "Evaluar invariante, corrección y complejidad."
+  },
+  "common_errors": {
+    "en": [
+      "Use left <= right, allowing a single element to count twice."
+    ],
+    "pt-BR": [
+      "Usar left <= right permitindo contar elemento único duas vezes."
+    ],
+    "es": [
+      "Usar left <= right permitiendo contar elemento único dos veces."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why does [3,3] work for target 6 but [3] does not?"
+    ],
+    "pt-BR": [
+      "Por que [3,3] funciona para alvo 6 mas [3] não?"
+    ],
+    "es": [
+      "¿Por qué [3,3] funciona para objetivo 6 pero [3] no?"
+    ]
+  },
+  "examples": {
+    "en": "[1,3,4,7] with target 7 succeeds via indices 1 and 2.",
+    "pt-BR": "[1,3,4,7] com alvo 7 tem sucesso pelos índices 1 e 2.",
+    "es": "[1,3,4,7] con objetivo 7 tiene éxito por índices 1 y 2."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Describes moves, sortedness rationale and strict index separation.",
+        "pt-BR": "Descreve movimentos, justificativa da ordem e separação estrita de índices.",
+        "es": "Describe movimientos, justificación del orden y separación estricta de índices."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "States linear time and constant extra space with termination.",
+        "pt-BR": "Declara tempo linear e espaço extra constante com término.",
+        "es": "Declara tiempo lineal y espacio extra constante con terminación."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.md",
+        "pt-BR": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md"
+      },
+      "sections": {
+        "en": "Choose by the contract",
+        "pt-BR": "Escolha pelo contrato",
+        "es": "Elige según el contrato"
+      }
+    },
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/07-problem-solving-patterns/README.md",
+        "pt-BR": "problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md"
+      },
+      "sections": {
+        "en": "2. Two pointers",
+        "pt-BR": "2. Dois ponteiros",
+        "es": "2. Dos punteros"
+      }
+    }
+  ]
+}

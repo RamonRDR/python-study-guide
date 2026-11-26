@@ -1,0 +1,86 @@
+{
+  "id": "engineering.sdd-tdd",
+  "topic": "software-engineering",
+  "level": "junior",
+  "prompt": {
+    "en": "Distinguish SDD from TDD for a function counting unique completed lessons. What evidence is needed before claiming Red and Green?",
+    "pt-BR": "Diferencie SDD de TDD para função contando aulas concluídas únicas. Que evidência é necessária antes de alegar Red e Green?",
+    "es": "Distingue SDD de TDD para función que cuenta lecciones completadas únicas. ¿Qué evidencia se necesita antes de afirmar Red y Green?"
+  },
+  "expected_answer": {
+    "en": "SDD defines the requirement, plan, tasks and observable acceptance criteria. TDD writes a behavior test, observes its failure for the intended reason, implements and observes passing tests before refactoring. Record actual execution results; writing a test alone does not establish Red.",
+    "pt-BR": "SDD define requisito, plano, tarefas e critérios de aceite observáveis. TDD escreve teste de comportamento, observa falha pela razão pretendida, implementa e observa testes passando antes de refatorar. Registre resultados reais; só escrever teste não estabelece Red.",
+    "es": "SDD define requisito, plan, tareas y criterios de aceptación observables. TDD escribe prueba de comportamiento, observa fallo por razón prevista, implementa y observa pruebas pasando antes de refactorizar. Registra resultados reales; solo escribir prueba no establece Red."
+  },
+  "explanation": {
+    "en": "Specifications define what to deliver; tests provide execution evidence for behavior.",
+    "pt-BR": "Especificações definem o que entregar; testes fornecem evidência de execução de comportamento.",
+    "es": "Especificaciones definen qué entregar; pruebas aportan evidencia de ejecución de comportamiento."
+  },
+  "intent": {
+    "en": "Assess development discipline and honesty of evidence.",
+    "pt-BR": "Avaliar disciplina de desenvolvimento e honestidade de evidência.",
+    "es": "Evaluar disciplina de desarrollo y honestidad de evidencia."
+  },
+  "common_errors": {
+    "en": [
+      "Claim Red occurred just because a test file was committed first."
+    ],
+    "pt-BR": [
+      "Alegar Red porque arquivo de teste foi commitado primeiro."
+    ],
+    "es": [
+      "Afirmar Red porque archivo de prueba se confirmó primero."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What acceptance case would reject duplicate counting?"
+    ],
+    "pt-BR": [
+      "Que caso de aceite rejeitaria contagem duplicada?"
+    ],
+    "es": [
+      "¿Qué caso de aceptación rechazaría conteo duplicado?"
+    ]
+  },
+  "examples": {
+    "en": "Input [1,2,2] has expected count 2; run the test before and after implementation.",
+    "pt-BR": "Entrada [1,2,2] tem contagem esperada 2; execute teste antes e após implementação.",
+    "es": "Entrada [1,2,2] tiene conteo esperado 2; ejecuta prueba antes y después de implementar."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes specification artifacts from the TDD feedback cycle.",
+        "pt-BR": "Distingue artefatos de especificação do ciclo TDD.",
+        "es": "Distingue artefactos de especificación del ciclo TDD."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Requires observed failure/pass evidence before claiming Red/Green.",
+        "pt-BR": "Exige evidência observada de falha/sucesso antes de alegar Red/Green.",
+        "es": "Exige evidencia observada de fallo/éxito antes de afirmar Red/Green."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md",
+        "pt-BR": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.pt-BR.md",
+        "es": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md"
+      },
+      "sections": {
+        "en": "Decisions start with a requirement",
+        "pt-BR": "Decisões começam no requisito",
+        "es": "Decisiones empiezan en el requisito"
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "oop.independent-state",
+  "topic": "oop",
+  "level": "junior",
+  "prompt": {
+    "en": "Two Counter instances initialize self.value=0. Only first.increment() runs. What are their values, and why?",
+    "pt-BR": "Duas instâncias Counter inicializam self.value=0. Só first.increment() executa. Quais valores e por quê?",
+    "es": "Dos instancias Counter inicializan self.value=0. Solo first.increment() se ejecuta. ¿Qué valores y por qué?"
+  },
+  "expected_answer": {
+    "en": "First is 1 and second is 0; each instance owns its attribute and the bound method receives the instance as self.",
+    "pt-BR": "Primeira 1 e segunda 0; cada instância possui seu atributo e método vinculado recebe instância em self.",
+    "es": "Primera 1 y segunda 0; cada instancia posee su atributo y método enlazado recibe instancia como self."
+  },
+  "explanation": {
+    "en": "A class defines behavior; objects can hold independent state.",
+    "pt-BR": "Classe define comportamento; objetos podem manter estado independente.",
+    "es": "Clase define comportamiento; objetos pueden mantener estado independiente."
+  },
+  "intent": {
+    "en": "Assess instance state and method binding.",
+    "pt-BR": "Avaliar estado de instância e vinculação de método.",
+    "es": "Evaluar estado de instancia y enlace de método."
+  },
+  "common_errors": {
+    "en": [
+      "Treat all instances as sharing self.value."
+    ],
+    "pt-BR": [
+      "Tratar todas instâncias como compartilhando self.value."
+    ],
+    "es": [
+      "Tratar todas instancias como compartiendo self.value."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you test independent instances?"
+    ],
+    "pt-BR": [
+      "Como testaria instâncias independentes?"
+    ],
+    "es": [
+      "¿Cómo probarías instancias independientes?"
+    ]
+  },
+  "examples": {
+    "en": "first.increment(); assert second.value == 0.",
+    "pt-BR": "first.increment(); assert second.value == 0.",
+    "es": "first.increment(); assert second.value == 0."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts both values.",
+        "pt-BR": "Prevê ambos valores.",
+        "es": "Predice ambos valores."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains per-instance state and self binding.",
+        "pt-BR": "Explica estado por instância e vinculação de self.",
+        "es": "Explica estado por instancia y enlace de self."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/05-classes-and-objects/README.md",
+        "pt-BR": "technical-interview-preparation/05-classes-and-objects/README.pt-BR.md",
+        "es": "technical-interview-preparation/05-classes-and-objects/README.es.md"
+      },
+      "sections": {
+        "en": "What and why",
+        "pt-BR": "O que é e por quê",
+        "es": "Qué es y por qué"
+      }
+    }
+  ]
+}

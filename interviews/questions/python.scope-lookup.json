@@ -1,0 +1,98 @@
+{
+  "id": "python.scope-lookup",
+  "topic": "python-fundamentals",
+  "level": "mid",
+  "prompt": {
+    "en": "Explain LEGB lookup and what nonlocal changes when an inner function updates an enclosing counter. Contrast with rebinding an unrelated local variable.",
+    "pt-BR": "Explique busca LEGB e o que nonlocal muda quando função interna atualiza contador envolvente. Compare com reatribuir variável local independente.",
+    "es": "Explica búsqueda LEGB y qué cambia nonlocal cuando función interna actualiza contador envolvente. Compara con reasignar variable local independiente."
+  },
+  "expected_answer": {
+    "en": "LEGB searches local, enclosing function scopes, global module and builtins for an ordinary unqualified name. nonlocal permits rebinding an existing enclosing function binding; normal local assignment does not update that binding.",
+    "pt-BR": "LEGB busca local, funções envolventes, global do módulo e builtins para nome não qualificado comum. nonlocal permite reatribuir vinculação existente em função envolvente; atribuição local comum não atualiza essa vinculação.",
+    "es": "LEGB busca local, funciones envolventes, global del módulo y builtins para nombre no cualificado ordinario. nonlocal permite reasignar enlace existente en función envolvente; asignación local normal no actualiza ese enlace."
+  },
+  "explanation": {
+    "en": "A closure can retain enclosing state between calls. nonlocal is not the global declaration.",
+    "pt-BR": "Closure pode manter estado envolvente entre chamadas. nonlocal não é declaração global.",
+    "es": "Un cierre puede conservar estado envolvente entre llamadas. nonlocal no es declaración global."
+  },
+  "intent": {
+    "en": "Assess scope and binding semantics.",
+    "pt-BR": "Avaliar escopo e semântica de vinculação.",
+    "es": "Evaluar ámbito y semántica de enlace."
+  },
+  "common_errors": {
+    "en": [
+      "Use global when the counter belongs to an enclosing function."
+    ],
+    "pt-BR": [
+      "Usar global quando contador pertence à função envolvente."
+    ],
+    "es": [
+      "Usar global cuando contador pertenece a función envolvente."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why can two factory calls have separate counters?"
+    ],
+    "pt-BR": [
+      "Por que duas chamadas de fábrica podem ter contadores separados?"
+    ],
+    "es": [
+      "¿Por qué dos llamadas de fábrica pueden tener contadores separados?"
+    ]
+  },
+  "examples": {
+    "en": "An inner increment with nonlocal count updates the count retained by its own outer call.",
+    "pt-BR": "Incremento interno com nonlocal count atualiza count mantido por sua própria chamada externa.",
+    "es": "Incremento interno con nonlocal count actualiza count conservado por su propia llamada externa."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Names the four LEGB scopes in order.",
+        "pt-BR": "Nomeia quatro escopos LEGB em ordem.",
+        "es": "Nombra los cuatro ámbitos LEGB en orden."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains existing enclosing binding and contrasts with local rebinding.",
+        "pt-BR": "Explica vinculação envolvente existente e contrasta reatribuição local.",
+        "es": "Explica enlace envolvente existente y contrasta reasignación local."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/03-python-fundamentals-review/README.md",
+        "pt-BR": "technical-interview-preparation/03-python-fundamentals-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/03-python-fundamentals-review/README.es.md"
+      },
+      "sections": {
+        "en": "Review by reasoning",
+        "pt-BR": "Revisão pelo raciocínio",
+        "es": "Repaso mediante razonamiento"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/12-closures-and-decorators/README.md",
+        "pt-BR": "technical-interview-preparation/12-closures-and-decorators/README.pt-BR.md",
+        "es": "technical-interview-preparation/12-closures-and-decorators/README.es.md"
+      },
+      "sections": {
+        "en": "Closures and scope",
+        "pt-BR": "Closures e escopo",
+        "es": "Cierres y ámbito"
+      }
+    }
+  ]
+}

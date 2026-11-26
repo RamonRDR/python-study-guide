@@ -1,0 +1,86 @@
+{
+  "id": "oop.constructor-binding",
+  "topic": "oop",
+  "level": "mid",
+  "prompt": {
+    "en": "Compare instance, class and static methods. Why should an inherited alternative constructor use cls(...) instead of the base class name? State the subclass constructor compatibility assumption.",
+    "pt-BR": "Compare métodos de instância, classe e estático. Por que construtor alternativo herdado deve usar cls(...) em vez de nome da classe base? Declare hipótese de compatibilidade do construtor da subclasse.",
+    "es": "Compara métodos de instancia, clase y estático. ¿Por qué constructor alternativo heredado debe usar cls(...) en vez de nombre de clase base? Declara supuesto de compatibilidad del constructor de subclase."
+  },
+  "expected_answer": {
+    "en": "Instance methods receive self; class methods receive cls; static methods receive neither implicitly. Using cls(...) lets a compatible subclass construct its own instance rather than forcing the base type.",
+    "pt-BR": "Métodos de instância recebem self; de classe recebem cls; estáticos não recebem nenhum implicitamente. Usar cls(...) permite subclasse compatível construir instância própria em vez de forçar tipo base.",
+    "es": "Métodos de instancia reciben self; de clase reciben cls; estáticos no reciben ninguno implícitamente. Usar cls(...) permite subclase compatible construir instancia propia en vez de forzar tipo base."
+  },
+  "explanation": {
+    "en": "Binding determines the implicit argument, not whether the operation has side effects.",
+    "pt-BR": "Vinculação determina argumento implícito, não ausência de efeitos colaterais.",
+    "es": "Enlace determina argumento implícito, no ausencia de efectos secundarios."
+  },
+  "intent": {
+    "en": "Assess method selection and subclass extensibility.",
+    "pt-BR": "Avaliar escolha de método e extensibilidade de subclasse.",
+    "es": "Evaluar elección de método y extensibilidad de subclase."
+  },
+  "common_errors": {
+    "en": [
+      "Assume a static method is automatically pure."
+    ],
+    "pt-BR": [
+      "Supor método estático automaticamente puro."
+    ],
+    "es": [
+      "Suponer método estático automáticamente puro."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What if a subclass requires extra constructor arguments?"
+    ],
+    "pt-BR": [
+      "E se subclasse exigir argumentos adicionais?"
+    ],
+    "es": [
+      "¿Y si subclase exige argumentos adicionales?"
+    ]
+  },
+  "examples": {
+    "en": "A compatible SubGroup.from_label(\"A\") should return a SubGroup when the factory uses cls.",
+    "pt-BR": "SubGroup.from_label(\"A\") compatível deve retornar SubGroup se fábrica usa cls.",
+    "es": "SubGroup.from_label(\"A\") compatible debe devolver SubGroup si fábrica usa cls."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Identifies implicit binding for all three method kinds.",
+        "pt-BR": "Identifica vinculação implícita nos três tipos.",
+        "es": "Identifica enlace implícito en los tres tipos."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains cls-based construction and compatibility constraint.",
+        "pt-BR": "Explica construção com cls e restrição de compatibilidade.",
+        "es": "Explica construcción con cls y restricción de compatibilidad."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.md",
+        "pt-BR": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.pt-BR.md",
+        "es": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.es.md"
+      },
+      "sections": {
+        "en": "Attributes and binding",
+        "pt-BR": "Atributos e vinculação",
+        "es": "Atributos y enlace"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "algorithms.window-tradeoff",
+  "topic": "data-structures-algorithms",
+  "level": "senior",
+  "prompt": {
+    "en": "Find the maximum sum of k consecutive integers, including all-negative input. Compare recomputing every window with a rolling sum, state assumptions and propose boundary tests.",
+    "pt-BR": "Encontre soma máxima de k inteiros consecutivos, inclusive entrada toda negativa. Compare recalcular cada janela com soma móvel, declare hipóteses e proponha testes de borda.",
+    "es": "Halla suma máxima de k enteros consecutivos, incluida entrada toda negativa. Compara recalcular cada ventana con suma móvil, declara supuestos y propone pruebas límite."
+  },
+  "expected_answer": {
+    "en": "Require 1 <= k <= n. Sum the first k elements, initialize best to that sum, then subtract each outgoing and add incoming value. Recomputing costs O((n-k+1)k); rolling costs O(n) time and O(1) auxiliary space for random-access input under fixed-cost arithmetic. Test k=1, k=n, all-negative values and invalid k.",
+    "pt-BR": "Exija 1 <= k <= n. Some primeiros k, inicialize best com essa soma, depois subtraia saída e adicione entrada. Recalcular custa O((n-k+1)k); móvel custa O(n) tempo e O(1) extra para acesso aleatório sob aritmética de custo fixo. Teste k=1, k=n, negativos e k inválido.",
+    "es": "Exige 1 <= k <= n. Suma primeros k, inicializa best con esa suma, luego resta saliente y añade entrante. Recalcular cuesta O((n-k+1)k); móvil cuesta O(n) tiempo y O(1) extra para acceso aleatorio bajo aritmética de coste fijo. Prueba k=1, k=n, negativos y k inválido."
+  },
+  "explanation": {
+    "en": "A rolling update reuses work; initializing best to zero incorrectly admits a nonexistent window for all-negative input.",
+    "pt-BR": "Atualização móvel reaproveita trabalho; iniciar best em zero admite janela inexistente para negativos.",
+    "es": "Actualización móvil reutiliza trabajo; iniciar best en cero admite ventana inexistente para negativos."
+  },
+  "intent": {
+    "en": "Assess optimization tied to a precise contract and test oracle.",
+    "pt-BR": "Avaliar otimização ligada a contrato preciso e oráculo de teste.",
+    "es": "Evaluar optimización ligada a contrato preciso y oráculo de prueba."
+  },
+  "common_errors": {
+    "en": [
+      "Claim O(nk) work is unavoidable or initialize best to zero."
+    ],
+    "pt-BR": [
+      "Alegar O(nk) inevitável ou iniciar best em zero."
+    ],
+    "es": [
+      "Afirmar O(nk) inevitable o iniciar best en cero."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What result should [-4,-2,-5] with k=2 produce?"
+    ],
+    "pt-BR": [
+      "Que resultado [-4,-2,-5] com k=2 deve produzir?"
+    ],
+    "es": [
+      "¿Qué resultado debe producir [-4,-2,-5] con k=2?"
+    ]
+  },
+  "examples": {
+    "en": "[-4,-2,-5], k=2 gives max(-6,-7) = -6.",
+    "pt-BR": "[-4,-2,-5], k=2 dá max(-6,-7) = -6.",
+    "es": "[-4,-2,-5], k=2 da max(-6,-7) = -6."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Defines valid k, rolling invariant and correct initialization.",
+        "pt-BR": "Define k válido, invariante móvel e inicialização correta.",
+        "es": "Define k válido, invariante móvil e inicialización correcta."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Compares costs with assumptions and proposes boundary/negative tests.",
+        "pt-BR": "Compara custos com hipóteses e propõe testes de borda/negativos.",
+        "es": "Compara costes con supuestos y propone pruebas límite/negativas."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.md",
+        "pt-BR": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md"
+      },
+      "sections": {
+        "en": "Choose by the contract",
+        "pt-BR": "Escolha pelo contrato",
+        "es": "Elige según el contrato"
+      }
+    },
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/07-problem-solving-patterns/README.md",
+        "pt-BR": "problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md"
+      },
+      "sections": {
+        "en": "3. Fixed sliding window",
+        "pt-BR": "3. Janela deslizante fixa",
+        "es": "3. Ventana deslizante fija"
+      }
+    }
+  ]
+}

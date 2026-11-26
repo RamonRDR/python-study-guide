@@ -1,0 +1,98 @@
+{
+  "id": "python.parameter-rebinding",
+  "topic": "python-fundamentals",
+  "level": "mid",
+  "prompt": {
+    "en": "A function receives items=[1] from a caller, then assigns items = [9] locally. Contrast this with items.append(9). What does the caller see?",
+    "pt-BR": "Função recebe items=[1] de chamador, depois atribui items = [9] localmente. Compare com items.append(9). O que chamador vê?",
+    "es": "Función recibe items=[1] del llamador, luego asigna items = [9] localmente. Compara con items.append(9). ¿Qué ve el llamador?"
+  },
+  "expected_answer": {
+    "en": "Rebinding the local parameter does not change the caller's list or binding; the caller still sees [1]. Appending to the shared list instead changes it to [1, 9].",
+    "pt-BR": "Reatribuir parâmetro local não muda lista nem vinculação do chamador; ele ainda vê [1]. Fazer append na lista compartilhada muda para [1, 9].",
+    "es": "Reasignar parámetro local no cambia lista ni enlace del llamador; sigue viendo [1]. Hacer append en lista compartida cambia a [1, 9]."
+  },
+  "explanation": {
+    "en": "Parameters are local names bound to supplied objects; distinguish a binding change from an object change.",
+    "pt-BR": "Parâmetros são nomes locais vinculados aos objetos fornecidos; distinga vinculação de mudança do objeto.",
+    "es": "Parámetros son nombres locales enlazados a objetos suministrados; distingue enlace de cambio del objeto."
+  },
+  "intent": {
+    "en": "Assess function boundary and ownership reasoning.",
+    "pt-BR": "Avaliar fronteira de função e ownership.",
+    "es": "Evaluar frontera de función y propiedad."
+  },
+  "common_errors": {
+    "en": [
+      "Describe Python arguments simply as copied values or caller-variable references."
+    ],
+    "pt-BR": [
+      "Descrever argumentos Python simplesmente como valores copiados ou referências à variável do chamador."
+    ],
+    "es": [
+      "Describir argumentos Python simplemente como valores copiados o referencias a variable del llamador."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you return a new list while preserving the original?"
+    ],
+    "pt-BR": [
+      "Como retornaria lista nova preservando original?"
+    ],
+    "es": [
+      "¿Cómo devolverías lista nueva conservando original?"
+    ]
+  },
+  "examples": {
+    "en": "def f(items): items = [9] leaves the original list unchanged.",
+    "pt-BR": "def f(items): items = [9] deixa lista original inalterada.",
+    "es": "def f(items): items = [9] deja lista original sin cambio."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts the result of local rebinding.",
+        "pt-BR": "Prevê resultado de reatribuição local.",
+        "es": "Predice resultado de reasignación local."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts shared mutation and explains why it differs.",
+        "pt-BR": "Prevê mutação compartilhada e explica diferença.",
+        "es": "Predice mutación compartida y explica diferencia."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/03-python-fundamentals-review/README.md",
+        "pt-BR": "technical-interview-preparation/03-python-fundamentals-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/03-python-fundamentals-review/README.es.md"
+      },
+      "sections": {
+        "en": "Review by reasoning",
+        "pt-BR": "Revisão pelo raciocínio",
+        "es": "Repaso mediante razonamiento"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/09-object-identity-references-and-copying/README.md",
+        "pt-BR": "technical-interview-preparation/09-object-identity-references-and-copying/README.pt-BR.md",
+        "es": "technical-interview-preparation/09-object-identity-references-and-copying/README.es.md"
+      },
+      "sections": {
+        "en": "Identity, equality and binding",
+        "pt-BR": "Identidade, igualdade e vinculação",
+        "es": "Identidad, igualdad y enlace"
+      }
+    }
+  ]
+}

@@ -226,7 +226,7 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 
 ## Phase 12: Technical Interview Preparation
 
-In progress: twenty-two lessons include completed foundations and nine pilot questions. Further questions, behavioral/international practice and mocks remain planned. [Technical Interview Preparation](../technical-interview-preparation/README.md).
+In progress: twenty-two lessons include completed foundations and 57 technical questions (23 junior, 23 mid-level, 11 senior). Three behavioral/international questions and three timed mocks remain planned. [Technical Interview Preparation](../technical-interview-preparation/README.md).
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 

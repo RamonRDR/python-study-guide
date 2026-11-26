@@ -1,0 +1,86 @@
+{
+  "id": "internals.iterator-exhaustion",
+  "topic": "python-internals",
+  "level": "junior",
+  "prompt": {
+    "en": "Given it=iter([1,2,3]); next(it); print(list(it)); print(list(it)), what is printed and why?",
+    "pt-BR": "Dado it=iter([1,2,3]); next(it); print(list(it)); print(list(it)), o que exibe e por quê?",
+    "es": "Dado it=iter([1,2,3]); next(it); print(list(it)); print(list(it)), ¿qué imprime y por qué?"
+  },
+  "expected_answer": {
+    "en": "It prints [2,3] then []. next consumed 1; the first list call consumed the remainder, so the iterator is exhausted. iter(it) returns that iterator, not a fresh traversal.",
+    "pt-BR": "Exibe [2,3] depois []. next consumiu 1; primeira chamada list consumiu restante, logo iterador esgotou. iter(it) retorna esse iterador, não nova travessia.",
+    "es": "Imprime [2,3] luego []. next consumió 1; primera llamada list consumió resto, así que iterador se agotó. iter(it) devuelve ese iterador, no nuevo recorrido."
+  },
+  "explanation": {
+    "en": "A list is iterable and can supply fresh iterators; an iterator keeps traversal state.",
+    "pt-BR": "Lista é iterável e fornece novos iteradores; iterador guarda estado da travessia.",
+    "es": "Lista es iterable y suministra nuevos iteradores; iterador conserva estado del recorrido."
+  },
+  "intent": {
+    "en": "Assess one-shot consumption.",
+    "pt-BR": "Avaliar consumo único.",
+    "es": "Evaluar consumo único."
+  },
+  "common_errors": {
+    "en": [
+      "Assume list(it) resets the iterator."
+    ],
+    "pt-BR": [
+      "Supor list(it) reinicia iterador."
+    ],
+    "es": [
+      "Suponer list(it) reinicia iterador."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What exception does next(it) raise once exhausted?"
+    ],
+    "pt-BR": [
+      "Que exceção next(it) gera quando esgotado?"
+    ],
+    "es": [
+      "¿Qué excepción lanza next(it) una vez agotado?"
+    ]
+  },
+  "examples": {
+    "en": "iter([1,2]) and another iter([1,2]) are separate traversals.",
+    "pt-BR": "iter([1,2]) e outro iter([1,2]) são travessias separadas.",
+    "es": "iter([1,2]) y otro iter([1,2]) son recorridos separados."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts both printed lists.",
+        "pt-BR": "Prevê ambas listas impressas.",
+        "es": "Predice ambas listas impresas."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains iterator state, exhaustion and difference from iterable.",
+        "pt-BR": "Explica estado, esgotamento e diferença de iterável.",
+        "es": "Explica estado, agotamiento y diferencia de iterable."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.md",
+        "pt-BR": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.pt-BR.md",
+        "es": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.es.md"
+      },
+      "sections": {
+        "en": "Iteration protocol",
+        "pt-BR": "Protocolo de iteração",
+        "es": "Protocolo de iteración"
+      }
+    }
+  ]
+}

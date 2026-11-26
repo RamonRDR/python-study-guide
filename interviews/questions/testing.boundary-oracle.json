@@ -1,0 +1,110 @@
+{
+  "id": "testing.boundary-oracle",
+  "topic": "testing-debugging",
+  "level": "mid",
+  "prompt": {
+    "en": "parse_quantity must accept nonnegative integer text, including whitespace supported by int, and reject invalid or negative inputs. Give tests with expected outputs/errors that would catch a version returning zero on bad input.",
+    "pt-BR": "parse_quantity aceita texto inteiro não negativo, inclusive espaços suportados por int, e rejeita inválidos ou negativos. Dê testes com saídas/erros esperados que detectem versão retornando zero em entrada ruim.",
+    "es": "parse_quantity acepta texto entero no negativo, incluso espacios admitidos por int, y rechaza inválidos o negativos. Da pruebas con salidas/errores esperados que detecten versión devolviendo cero en entrada incorrecta."
+  },
+  "expected_answer": {
+    "en": "Assert \"0\" returns 0 and \" 12 \" returns 12; assert the documented InvalidQuantity for \"abc\", \"-1\" and \"\". Checking the specific exception rather than mere execution detects silent-zero behavior.",
+    "pt-BR": "Afirme \"0\" retorna 0 e \" 12 \" retorna 12; exija InvalidQuantity documentada para \"abc\", \"-1\" e \"\". Conferir exceção específica em vez de só execução detecta zero silencioso.",
+    "es": "Afirma \"0\" devuelve 0 y \" 12 \" devuelve 12; exige InvalidQuantity documentada para \"abc\", \"-1\" y \"\". Comprobar excepción específica en vez de mera ejecución detecta cero silencioso."
+  },
+  "explanation": {
+    "en": "Positive and negative assertions must distinguish the intended contract from plausible wrong implementations.",
+    "pt-BR": "Assertions positivas e negativas precisam distinguir contrato pretendido de implementações erradas plausíveis.",
+    "es": "Aserciones positivas y negativas deben distinguir contrato previsto de implementaciones incorrectas plausibles."
+  },
+  "intent": {
+    "en": "Assess test oracle precision and boundary coverage.",
+    "pt-BR": "Avaliar precisão do oráculo e cobertura de bordas.",
+    "es": "Evaluar precisión del oráculo y cobertura de límites."
+  },
+  "common_errors": {
+    "en": [
+      "Assert only that a function was called or returned an int."
+    ],
+    "pt-BR": [
+      "Afirmar só que função foi chamada ou retornou int."
+    ],
+    "es": [
+      "Afirmar solo que función fue llamada o devolvió int."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Which case detects rejection of valid zero?"
+    ],
+    "pt-BR": [
+      "Qual caso detecta rejeição do zero válido?"
+    ],
+    "es": [
+      "¿Qué caso detecta rechazo de cero válido?"
+    ]
+  },
+  "examples": {
+    "en": "A test requiring InvalidQuantity for \"abc\" fails when the implementation silently returns 0.",
+    "pt-BR": "Teste exigindo InvalidQuantity para \"abc\" falha quando implementação retorna 0 silenciosamente.",
+    "es": "Prueba exigiendo InvalidQuantity para \"abc\" falla cuando implementación devuelve 0 silenciosamente."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Specifies exact results for normal and zero-boundary inputs.",
+        "pt-BR": "Especifica resultados exatos para normal e borda zero.",
+        "es": "Especifica resultados exactos para normal y límite cero."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Specifies exact error behavior for invalid and negative inputs.",
+        "pt-BR": "Especifica comportamento de erro exato para inválidos e negativos.",
+        "es": "Especifica comportamiento de error exacto para inválidos y negativos."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Exception boundaries",
+        "pt-BR": "Fronteiras de exceção",
+        "es": "Fronteras de excepción"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Test and debug by evidence",
+        "pt-BR": "Testar e depurar por evidências",
+        "es": "Probar y depurar con evidencias"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Practice",
+        "pt-BR": "Prática",
+        "es": "Práctica"
+      }
+    }
+  ]
+}

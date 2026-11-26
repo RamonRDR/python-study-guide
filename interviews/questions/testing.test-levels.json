@@ -1,0 +1,98 @@
+{
+  "id": "testing.test-levels",
+  "topic": "testing-debugging",
+  "level": "junior",
+  "prompt": {
+    "en": "Distinguish unit, integration and end-to-end tests for a reporting service. Give one example of each.",
+    "pt-BR": "Diferencie testes unitários, integração e ponta a ponta para serviço de relatório. Dê exemplo de cada.",
+    "es": "Distingue pruebas unitarias, integración y extremo a extremo para servicio de informes. Da ejemplo de cada."
+  },
+  "expected_answer": {
+    "en": "Unit: count unique IDs using a controlled fake loader. Integration: exercise the real database loader against a test database. End-to-end: request a report through the supported interface and verify the resulting response across the full workflow.",
+    "pt-BR": "Unitário: conte IDs únicos usando loader fake controlado. Integração: exercite loader real contra banco de teste. Ponta a ponta: solicite relatório pela interface suportada e confira resposta no fluxo completo.",
+    "es": "Unitario: cuenta IDs únicos con loader doble controlado. Integración: ejercita loader real contra base de pruebas. Extremo a extremo: solicita informe por interfaz admitida y verifica respuesta en flujo completo."
+  },
+  "explanation": {
+    "en": "The levels differ by boundaries exercised, not simply by number of assertions.",
+    "pt-BR": "Níveis diferem pelas fronteiras exercitadas, não só quantidade de assertions.",
+    "es": "Niveles difieren por fronteras ejercitadas, no solo número de aserciones."
+  },
+  "intent": {
+    "en": "Assess testing scope and dependency boundaries.",
+    "pt-BR": "Avaliar escopo de testes e fronteiras de dependência.",
+    "es": "Evaluar alcance de pruebas y fronteras de dependencia."
+  },
+  "common_errors": {
+    "en": [
+      "Call a test with all dependencies mocked an end-to-end test."
+    ],
+    "pt-BR": [
+      "Chamar teste com todas dependências mockadas de ponta a ponta."
+    ],
+    "es": [
+      "Llamar prueba con todas dependencias simuladas de extremo a extremo."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why keep a real-boundary integration test if units pass?"
+    ],
+    "pt-BR": [
+      "Por que manter teste de integração real se unitários passam?"
+    ],
+    "es": [
+      "¿Por qué conservar prueba de integración real si unitarias pasan?"
+    ]
+  },
+  "examples": {
+    "en": "A fake loader returning [1,1,2] supports a unit assertion of two unique completions.",
+    "pt-BR": "Loader fake retornando [1,1,2] apoia assertion unitária de duas conclusões únicas.",
+    "es": "Loader doble que devuelve [1,1,2] permite aserción unitaria de dos finalizaciones únicas."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Identifies unit and integration boundaries with distinct examples.",
+        "pt-BR": "Identifica fronteiras unitária e integração com exemplos distintos.",
+        "es": "Identifica fronteras unitaria e integración con ejemplos distintos."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Describes a full supported workflow example for end-to-end.",
+        "pt-BR": "Descreve fluxo completo suportado para ponta a ponta.",
+        "es": "Describe flujo completo admitido para extremo a extremo."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Test and debug by evidence",
+        "pt-BR": "Testar e depurar por evidências",
+        "es": "Probar y depurar con evidencias"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md",
+        "pt-BR": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.pt-BR.md",
+        "es": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md"
+      },
+      "sections": {
+        "en": "Decisions start with a requirement",
+        "pt-BR": "Decisões começam no requisito",
+        "es": "Decisiones empiezan en el requisito"
+      }
+    }
+  ]
+}

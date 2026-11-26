@@ -226,7 +226,7 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 
 ## Fase 12: Preparación para entrevistas técnicas
 
-En curso: veintidós lecciones incluyen fundamentos completados y nueve preguntas piloto. Demás preguntas, práctica conductual/internacional y simulaciones siguen previstos. [Preparación para entrevistas técnicas](../technical-interview-preparation/README.es.md).
+En curso: veintidós lecciones incluyen fundamentos completados y 57 preguntas técnicas (23 Junior, 23 Mid-level, 11 Senior). Tres preguntas conductuales/internacionales y tres simulaciones cronometradas siguen previstas. [Preparación para entrevistas técnicas](../technical-interview-preparation/README.es.md).
 
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 

@@ -1,0 +1,86 @@
+{
+  "id": "oop.invariant-boundary",
+  "topic": "oop",
+  "level": "senior",
+  "prompt": {
+    "en": "Design stock removal so quantity never becomes negative through the public contract. Explain validation order, read access and tests; is underscore naming a security boundary?",
+    "pt-BR": "Projete retirada de estoque para quantidade nunca ficar negativa pelo contrato público. Explique ordem de validação, leitura e testes; underscore é fronteira de segurança?",
+    "es": "Diseña retirada de inventario para que cantidad nunca sea negativa por contrato público. Explica orden de validación, lectura y pruebas; ¿guion bajo es frontera de seguridad?"
+  },
+  "expected_answer": {
+    "en": "Expose remove with validation before mutation; reject an amount outside the documented domain or beyond stock without changing quantity. Expose read-only property if useful. Test valid removal, insufficient stock and unchanged state on failure. Underscore is convention; name mangling/property is not security.",
+    "pt-BR": "Exponha remove com validação antes de mutação; rejeite quantidade fora do domínio documentado ou acima do estoque sem alterar saldo. Exponha property de leitura se útil. Teste retirada válida, estoque insuficiente e estado intacto na falha. Underscore é convenção; name mangling/property não é segurança.",
+    "es": "Expón remove con validación antes de mutación; rechaza cantidad fuera del dominio documentado o superior a inventario sin cambiar saldo. Expón property de lectura si útil. Prueba retirada válida, insuficiente y estado intacto al fallar. Guion bajo es convención; name mangling/property no es seguridad."
+  },
+  "explanation": {
+    "en": "Encapsulation protects invariants for supported operations; it does not enforce access control against arbitrary callers.",
+    "pt-BR": "Encapsulamento protege invariantes nas operações suportadas; não impõe controle de acesso contra chamadores arbitrários.",
+    "es": "Encapsulación protege invariantes para operaciones admitidas; no impone control de acceso contra llamadores arbitrarios."
+  },
+  "intent": {
+    "en": "Assess domain invariant design and negative tests.",
+    "pt-BR": "Avaliar design de invariante de domínio e testes negativos.",
+    "es": "Evaluar diseño de invariante de dominio y pruebas negativas."
+  },
+  "common_errors": {
+    "en": [
+      "Subtract first then raise, leaving corrupted state."
+    ],
+    "pt-BR": [
+      "Subtrair primeiro e levantar exceção deixando estado corrompido."
+    ],
+    "es": [
+      "Restar primero y lanzar excepción dejando estado corrupto."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you show that failed validation has no side effects?"
+    ],
+    "pt-BR": [
+      "Como demonstraria que validação falha não tem efeitos?"
+    ],
+    "es": [
+      "¿Cómo demostrarías que validación fallida no tiene efectos?"
+    ]
+  },
+  "examples": {
+    "en": "With quantity 5, rejecting removal of 6 must leave quantity 5.",
+    "pt-BR": "Com quantidade 5, rejeitar retirada de 6 deve manter quantidade 5.",
+    "es": "Con cantidad 5, rechazar retirada de 6 debe dejar cantidad 5."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Designs validation-before-mutation and explicit read contract.",
+        "pt-BR": "Projeta validação antes da mutação e contrato de leitura explícito.",
+        "es": "Diseña validación antes de mutación y contrato de lectura explícito."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes unchanged-state tests and distinguishes convention from security.",
+        "pt-BR": "Propõe testes de estado intacto e distingue convenção de segurança.",
+        "es": "Propone pruebas de estado intacto y distingue convención de seguridad."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.md",
+        "pt-BR": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.pt-BR.md",
+        "es": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.es.md"
+      },
+      "sections": {
+        "en": "Encapsulation and abstraction",
+        "pt-BR": "Encapsulamento e abstração",
+        "es": "Encapsulación y abstracción"
+      }
+    }
+  ]
+}

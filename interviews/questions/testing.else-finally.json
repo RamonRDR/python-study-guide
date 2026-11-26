@@ -1,0 +1,86 @@
+{
+  "id": "testing.else-finally",
+  "topic": "testing-debugging",
+  "level": "junior",
+  "prompt": {
+    "en": "What are the roles of else and finally in a try statement? Explain behavior when the protected operation raises an unexpected exception.",
+    "pt-BR": "Quais papéis de else e finally em try? Explique comportamento quando operação protegida gera exceção inesperada.",
+    "es": "¿Qué roles tienen else y finally en try? Explica comportamiento cuando operación protegida lanza excepción inesperada."
+  },
+  "expected_answer": {
+    "en": "else runs when the try suite finishes normally without an exception; finally runs on exit to perform cleanup. An unmatched exception propagates after finally unless cleanup itself changes that outcome.",
+    "pt-BR": "else executa quando bloco try termina normalmente sem exceção; finally executa na saída para limpeza. Exceção não capturada propaga após finally salvo se limpeza alterar resultado.",
+    "es": "else se ejecuta cuando bloque try termina normalmente sin excepción; finally ejecuta al salir para limpieza. Excepción no capturada se propaga tras finally salvo si limpieza altera resultado."
+  },
+  "explanation": {
+    "en": "Do not return from finally to hide a failure.",
+    "pt-BR": "Não retorne de finally para esconder falha.",
+    "es": "No retornes desde finally para ocultar fallo."
+  },
+  "intent": {
+    "en": "Assess structured exception flow.",
+    "pt-BR": "Avaliar fluxo estruturado de exceções.",
+    "es": "Evaluar flujo estructurado de excepciones."
+  },
+  "common_errors": {
+    "en": [
+      "Treat finally as success-only code."
+    ],
+    "pt-BR": [
+      "Tratar finally como código só de sucesso."
+    ],
+    "es": [
+      "Tratar finally como código solo de éxito."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "When might with be clearer?"
+    ],
+    "pt-BR": [
+      "Quando with pode ser mais claro?"
+    ],
+    "es": [
+      "¿Cuándo with puede ser más claro?"
+    ]
+  },
+  "examples": {
+    "en": "After an unmatched RuntimeError, cleanup in finally still runs before propagation.",
+    "pt-BR": "Após RuntimeError não capturado, limpeza em finally ainda roda antes de propagar.",
+    "es": "Tras RuntimeError no capturado, limpieza en finally aún se ejecuta antes de propagar."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes normal completion else from exit cleanup finally.",
+        "pt-BR": "Distingue else de conclusão normal de finally de limpeza.",
+        "es": "Distingue else de finalización normal de finally de limpieza."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains unexpected exception propagation and cleanup caveat.",
+        "pt-BR": "Explica propagação de exceção inesperada e ressalva de limpeza.",
+        "es": "Explica propagación de excepción inesperada y salvedad de limpieza."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+        "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+      },
+      "sections": {
+        "en": "Exception boundaries",
+        "pt-BR": "Fronteiras de exceção",
+        "es": "Fronteras de excepción"
+      }
+    }
+  ]
+}

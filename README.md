@@ -141,7 +141,7 @@ Detailed explanations:
 
 ## Current status
 
-**Phase II: Learning Hub Foundation** is in progress. PRs #87–#98 are merged; Phase 11 is complete. Phase 12 foundations are in progress; quizzes and a versioned content contract remain planned. The guide remains independent of the future web Learning Hub and Git Study Guide.
+**Phase II: Learning Hub Foundation** is in progress. PRs #87–#99 are merged; Phase 11 is complete. Phase 12 foundations and the 57-question technical bank are implemented; behavioral/international questions and mocks remain planned; quizzes and a versioned content contract remain planned. The guide remains independent of the future web Learning Hub and Git Study Guide.
 
 [Phase II implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md)
 

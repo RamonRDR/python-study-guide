@@ -1,0 +1,86 @@
+{
+  "id": "sql.null-and-order",
+  "topic": "databases-sql",
+  "level": "junior",
+  "prompt": {
+    "en": "Given lessons(id, title, minutes) with nullable minutes, write a query for rows with missing minutes ordered by id. Explain why = NULL and omitting ORDER BY are unsuitable.",
+    "pt-BR": "Dada lessons(id, title, minutes) com minutes anulável, escreva consulta para linhas sem minutes ordenadas por id. Explique por que = NULL e omitir ORDER BY são inadequados.",
+    "es": "Dada lessons(id, title, minutes) con minutes anulable, escribe consulta para filas sin minutes ordenadas por id. Explica por qué = NULL y omitir ORDER BY son inadecuados."
+  },
+  "expected_answer": {
+    "en": "SELECT id, title FROM lessons WHERE minutes IS NULL ORDER BY id; comparison with NULL normally yields unknown, not true, and WHERE keeps true rows. Without ORDER BY, result ordering is not guaranteed.",
+    "pt-BR": "SELECT id, title FROM lessons WHERE minutes IS NULL ORDER BY id; comparação com NULL normalmente resulta desconhecido, não verdadeiro, e WHERE mantém verdadeiros. Sem ORDER BY, ordem não é garantida.",
+    "es": "SELECT id, title FROM lessons WHERE minutes IS NULL ORDER BY id; comparación con NULL normalmente resulta desconocido, no verdadero, y WHERE conserva verdaderos. Sin ORDER BY, orden no garantizado."
+  },
+  "explanation": {
+    "en": "NULL represents missing/unknown information, not zero.",
+    "pt-BR": "NULL representa informação ausente/desconhecida, não zero.",
+    "es": "NULL representa información ausente/desconocida, no cero."
+  },
+  "intent": {
+    "en": "Assess SQL three-valued filtering and explicit order.",
+    "pt-BR": "Avaliar filtro SQL com valor desconhecido e ordem explícita.",
+    "es": "Evaluar filtro SQL con valor desconocido y orden explícito."
+  },
+  "common_errors": {
+    "en": [
+      "Use minutes = NULL or assume insertion order."
+    ],
+    "pt-BR": [
+      "Usar minutes = NULL ou supor ordem de inserção."
+    ],
+    "es": [
+      "Usar minutes = NULL o suponer orden de inserción."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Would minutes=0 match the query?"
+    ],
+    "pt-BR": [
+      "minutes=0 corresponderia à consulta?"
+    ],
+    "es": [
+      "¿minutes=0 coincidiría con consulta?"
+    ]
+  },
+  "examples": {
+    "en": "With minutes values NULL, 0, 20, only the NULL row matches.",
+    "pt-BR": "Com minutes NULL, 0, 20, só linha NULL corresponde.",
+    "es": "Con minutes NULL, 0, 20, solo fila NULL coincide."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Uses IS NULL and explicit ORDER BY id.",
+        "pt-BR": "Usa IS NULL e ORDER BY id explícito.",
+        "es": "Usa IS NULL y ORDER BY id explícito."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains unknown comparison result and lack of default order.",
+        "pt-BR": "Explica comparação desconhecida e ausência de ordem padrão.",
+        "es": "Explica comparación desconocida y ausencia de orden predeterminado."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/18-relational-databases-and-sql/README.md",
+        "pt-BR": "technical-interview-preparation/18-relational-databases-and-sql/README.pt-BR.md",
+        "es": "technical-interview-preparation/18-relational-databases-and-sql/README.es.md"
+      },
+      "sections": {
+        "en": "Relational model and constraints",
+        "pt-BR": "Modelo relacional e restrições",
+        "es": "Modelo relacional y restricciones"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "oop.solid-contracts",
+  "topic": "oop",
+  "level": "senior",
+  "prompt": {
+    "en": "A high-level remaining-stock policy depends on a concrete database reader exposing unrelated write methods. Redesign the dependency using DIP and ISP, with a fake test and a trade-off.",
+    "pt-BR": "Política de saldo depende de leitor de banco concreto com métodos de escrita alheios. Redesenhe dependência usando DIP e ISP, com teste fake e trade-off.",
+    "es": "Política de saldo depende de lector de base concreto con métodos de escritura ajenos. Rediseña dependencia usando DIP e ISP, con prueba doble y compromiso."
+  },
+  "expected_answer": {
+    "en": "Depend on a small available contract, optionally an ABC with an abstract method, and inject a reader implementing it. DIP separates policy from infrastructure; ISP avoids requiring unused operations. Test with a fake returning a fixed balance. Add abstraction only when replaceability justifies indirection.",
+    "pt-BR": "Dependa de contrato pequeno available, opcionalmente ABC com método abstrato, e injete leitor que o implemente. DIP separa política de infraestrutura; ISP evita exigir operações não usadas. Teste fake que retorna saldo fixo. Adicione abstração só se substituição justificar indireção.",
+    "es": "Depende de contrato pequeño available, opcionalmente ABC con método abstracto, e inyecta lector que lo implemente. DIP separa política de infraestructura; ISP evita exigir operaciones no usadas. Prueba doble que devuelve saldo fijo. Añade abstracción solo si sustitución justifica indirección."
+  },
+  "explanation": {
+    "en": "The caller needs behavior, not storage details; type hints alone do not enforce runtime semantics.",
+    "pt-BR": "Chamador precisa de comportamento, não detalhes de armazenamento; type hints sozinhos não impõem semântica em runtime.",
+    "es": "Llamador necesita comportamiento, no detalles de almacenamiento; anotaciones solas no imponen semántica en ejecución."
+  },
+  "intent": {
+    "en": "Assess SOLID as design trade-offs.",
+    "pt-BR": "Avaliar SOLID como trade-offs de design.",
+    "es": "Evaluar SOLID como compromisos de diseño."
+  },
+  "common_errors": {
+    "en": [
+      "Create five classes merely to match five principles."
+    ],
+    "pt-BR": [
+      "Criar cinco classes apenas para corresponder a cinco princípios."
+    ],
+    "es": [
+      "Crear cinco clases solo para corresponder a cinco principios."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "When would a plain function be simpler?"
+    ],
+    "pt-BR": [
+      "Quando função simples seria mais adequada?"
+    ],
+    "es": [
+      "¿Cuándo una función simple sería más adecuada?"
+    ]
+  },
+  "examples": {
+    "en": "Inject an available-only fake returning 7 and check the policy without a database.",
+    "pt-BR": "Injete fake apenas available retornando 7 e confira política sem banco.",
+    "es": "Inyecta doble solo available que devuelve 7 y comprueba política sin base."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Explains DIP and ISP through a small replaceable contract.",
+        "pt-BR": "Explica DIP e ISP por contrato pequeno substituível.",
+        "es": "Explica DIP e ISP mediante contrato pequeño sustituible."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes fake-based test and weighs added indirection.",
+        "pt-BR": "Propõe teste com fake e pondera indireção adicional.",
+        "es": "Propone prueba con doble y sopesa indirección adicional."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.md",
+        "pt-BR": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.pt-BR.md",
+        "es": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.es.md"
+      },
+      "sections": {
+        "en": "Encapsulation and abstraction",
+        "pt-BR": "Encapsulamento e abstração",
+        "es": "Encapsulación y abstracción"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.md",
+        "pt-BR": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.pt-BR.md",
+        "es": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.es.md"
+      },
+      "sections": {
+        "en": "SOLID as design questions",
+        "pt-BR": "SOLID como perguntas de design",
+        "es": "SOLID como preguntas de diseño"
+      }
+    }
+  ]
+}

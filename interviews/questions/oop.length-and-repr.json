@@ -1,0 +1,86 @@
+{
+  "id": "oop.length-and-repr",
+  "topic": "oop",
+  "level": "mid",
+  "prompt": {
+    "en": "A StudyGroup needs len(group), a user-friendly str(group) and debugging repr(group). Which methods implement these and what must length return?",
+    "pt-BR": "StudyGroup precisa de len(group), str(group) amigável e repr(group) para debugging. Quais métodos implementam e o que comprimento deve retornar?",
+    "es": "StudyGroup necesita len(group), str(group) amigable y repr(group) para depuración. ¿Qué métodos implementan y qué debe devolver longitud?"
+  },
+  "expected_answer": {
+    "en": "Implement __len__, __str__, __repr__. __len__ returns a nonnegative integer representing length; __str__ is user-oriented, __repr__ supports debugging and need not be executable Python.",
+    "pt-BR": "Implemente __len__, __str__, __repr__. __len__ retorna inteiro não negativo representando tamanho; __str__ é para usuário, __repr__ ajuda debugging e não precisa ser Python executável.",
+    "es": "Implementa __len__, __str__, __repr__. __len__ devuelve entero no negativo representando longitud; __str__ se orienta al usuario, __repr__ ayuda depuración y no necesita ser Python ejecutable."
+  },
+  "explanation": {
+    "en": "Use documented language protocols rather than invented dunder names.",
+    "pt-BR": "Use protocolos documentados em vez de inventar nomes dunder.",
+    "es": "Usa protocolos documentados en vez de inventar nombres dunder."
+  },
+  "intent": {
+    "en": "Assess integration with Python protocols.",
+    "pt-BR": "Avaliar integração com protocolos Python.",
+    "es": "Evaluar integración con protocolos Python."
+  },
+  "common_errors": {
+    "en": [
+      "Return a negative count or assume repr must reconstruct the object."
+    ],
+    "pt-BR": [
+      "Retornar contagem negativa ou supor que repr precisa reconstruir objeto."
+    ],
+    "es": [
+      "Devolver conteo negativo o suponer que repr debe reconstruir objeto."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What would len return for an empty group?"
+    ],
+    "pt-BR": [
+      "O que len retornaria para grupo vazio?"
+    ],
+    "es": [
+      "¿Qué devolvería len para grupo vacío?"
+    ]
+  },
+  "examples": {
+    "en": "__len__ can return len(self.members); an empty group has length zero.",
+    "pt-BR": "__len__ pode retornar len(self.members); grupo vazio tem comprimento zero.",
+    "es": "__len__ puede devolver len(self.members); grupo vacío tiene longitud cero."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Maps all three operations to the correct methods.",
+        "pt-BR": "Mapeia três operações aos métodos corretos.",
+        "es": "Mapea tres operaciones a métodos correctos."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains nonnegative integer length and distinct string purposes.",
+        "pt-BR": "Explica comprimento inteiro não negativo e finalidades das strings.",
+        "es": "Explica longitud entera no negativa y finalidades distintas de cadenas."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.md",
+        "pt-BR": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.pt-BR.md",
+        "es": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.es.md"
+      },
+      "sections": {
+        "en": "Special methods",
+        "pt-BR": "Métodos especiais",
+        "es": "Métodos especiales"
+      }
+    }
+  ]
+}

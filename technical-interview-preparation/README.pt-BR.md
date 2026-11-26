@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Em andamento: vinte e duas aulas incluem fundamentos concluídos e piloto de nove perguntas técnicas (três por nível). Perguntas técnicas restantes, prática comportamental/internacional ampliada e simulados permanecem planejados.
+Em andamento: vinte e duas aulas incluem fundamentos concluídos e 57 perguntas técnicas (23 Junior, 23 Mid-level, 11 Senior). Três perguntas comportamentais/internacionais e três simulados cronometrados permanecem planejados.
 
 1. [Entendendo entrevistas técnicas](01-understanding-technical-interviews/README.pt-BR.md)
 2. [Live coding e tarefas take-home](02-live-coding-and-take-home/README.pt-BR.md)

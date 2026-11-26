@@ -1,0 +1,98 @@
+{
+  "id": "internals.context-exit",
+  "topic": "python-internals",
+  "level": "mid",
+  "prompt": {
+    "en": "A context manager opens a resource and its body raises RuntimeError. Explain __enter__, __exit__, suppression and what changes if entry itself fails.",
+    "pt-BR": "Gerenciador abre recurso e corpo gera RuntimeError. Explique __enter__, __exit__, supressão e o que muda se própria entrada falhar.",
+    "es": "Gestor abre recurso y cuerpo lanza RuntimeError. Explica __enter__, __exit__, supresión y qué cambia si falla propia entrada."
+  },
+  "expected_answer": {
+    "en": "__enter__ returns the as value. After successful entry, __exit__ receives exception details and releases the resource; false/None propagates the body exception, truthy suppresses it. If entry fails, that manager's exit is not called automatically; entry must handle partial acquisition.",
+    "pt-BR": "__enter__ retorna valor de as. Após entrada bem-sucedida, __exit__ recebe detalhes de exceção e libera recurso; false/None propaga exceção do corpo, truthy suprime. Se entrada falhar, exit daquele gerenciador não é chamado automaticamente; entrada trata aquisição parcial.",
+    "es": "__enter__ devuelve valor de as. Tras entrada exitosa, __exit__ recibe detalles de excepción y libera recurso; false/None propaga excepción del cuerpo, truthy suprime. Si entrada falla, exit de ese gestor no se llama automáticamente; entrada gestiona adquisición parcial."
+  },
+  "explanation": {
+    "en": "Cleanup and suppression are separate decisions; returning truthy accidentally hides errors.",
+    "pt-BR": "Limpeza e supressão são decisões separadas; retorno truthy acidental oculta erros.",
+    "es": "Limpieza y supresión son decisiones separadas; retorno truthy accidental oculta errores."
+  },
+  "intent": {
+    "en": "Assess resource management and failure semantics.",
+    "pt-BR": "Avaliar gerenciamento de recursos e semântica de falha.",
+    "es": "Evaluar gestión de recursos y semántica de fallo."
+  },
+  "common_errors": {
+    "en": [
+      "Assume exit runs even if enter raises."
+    ],
+    "pt-BR": [
+      "Supor exit executa mesmo se enter gerar exceção."
+    ],
+    "es": [
+      "Suponer exit se ejecuta aunque enter lance excepción."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you test cleanup exactly once?"
+    ],
+    "pt-BR": [
+      "Como testaria limpeza exatamente uma vez?"
+    ],
+    "es": [
+      "¿Cómo probarías limpieza exactamente una vez?"
+    ]
+  },
+  "examples": {
+    "en": "A successful enter followed by a body failure records open and close once, with RuntimeError propagated if exit returns False.",
+    "pt-BR": "Entrada bem-sucedida seguida de falha do corpo registra open e close uma vez, com RuntimeError propagado se exit retorna False.",
+    "es": "Entrada exitosa seguida de fallo del cuerpo registra open y close una vez, con RuntimeError propagado si exit devuelve False."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Describes entry, exit details and truthy suppression contract.",
+        "pt-BR": "Descreve entrada, detalhes de saída e contrato de supressão truthy.",
+        "es": "Describe entrada, detalles de salida y contrato de supresión truthy."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes body failure from entry failure and partial acquisition.",
+        "pt-BR": "Distingue falha do corpo de entrada e aquisição parcial.",
+        "es": "Distingue fallo de cuerpo de entrada y adquisición parcial."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/13-context-managers/README.md",
+        "pt-BR": "technical-interview-preparation/13-context-managers/README.pt-BR.md",
+        "es": "technical-interview-preparation/13-context-managers/README.es.md"
+      },
+      "sections": {
+        "en": "The with protocol",
+        "pt-BR": "Protocolo with",
+        "es": "Protocolo with"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/13-context-managers/README.md",
+        "pt-BR": "technical-interview-preparation/13-context-managers/README.pt-BR.md",
+        "es": "technical-interview-preparation/13-context-managers/README.es.md"
+      },
+      "sections": {
+        "en": "Practical decisions",
+        "pt-BR": "Decisões práticas",
+        "es": "Decisiones prácticas"
+      }
+    }
+  ]
+}

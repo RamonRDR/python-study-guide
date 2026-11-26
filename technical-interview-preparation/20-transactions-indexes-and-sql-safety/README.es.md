@@ -17,6 +17,8 @@ Transacción agrupa operaciones en unidad: commit acepta cambios; rollback aband
 
 Ejemplo transfiere créditos enteros entre dos cuentas distintas. Verifica origen y saldo disponible en UPDATE condicional, comprueba filas afectadas, acredita destino y hace rollback si destino no existe. Saldo entero no negativo se restringe en base. Llamador suministra conexión dedicada con autocommit=False, sin escrituras pendientes ajenas, y confirma setup antes de llamar. Gestor de contexto de conexión Python 3.13 hace commit al salir con éxito y rollback ante excepción (o fallo de commit); no cierra conexión. Con autocommit=True no suministra esa frontera. No reutilices ejemplo como API de transacciones anidadas ni sistema financiero de producción.
 
+Para verificar commit y no solo saldo cambiado en escritor, usa base SQLite temporal en archivo. Abre conexión lectora separada en modo autocommit tras confirmar preparación; comprueba saldos nuevos después de transferencia. En fallo, verifica saldos intactos en ambas conexiones; reabre base para confirmar que cambio confirmado sobrevive al cierre de conexión. Es prueba de persistencia/transacción, no prueba de durabilidad bajo todo fallo. Conexiones independientes en memoria normalmente no comparten base.
+
 ## Índices y plan de consulta
 
 Índice es estructura auxiliar que puede acelerar búsquedas, joins u ordenación cuando planificador lo elige. Cuesta almacenamiento y mantenimiento de escrituras; no toda columna merece índice. Orden de columnas de índice compuesto importa para consultas. Índice no garantiza ejecución más rápida. Inspecciona plan representativo (SQLite EXPLAIN QUERY PLAN) y mide; tablas pequeñas pueden recorrerse legítimamente.

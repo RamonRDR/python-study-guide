@@ -1,0 +1,98 @@
+{
+  "id": "algorithms.binary-precondition",
+  "topic": "data-structures-algorithms",
+  "level": "junior",
+  "prompt": {
+    "en": "Why is binary search inappropriate for an arbitrary unsorted list? Compare with linear search and state the sorted random-access cost.",
+    "pt-BR": "Por que busca binária é inadequada para lista desordenada arbitrária? Compare com linear e declare custo em acesso aleatório ordenado.",
+    "es": "¿Por qué búsqueda binaria no sirve para lista arbitraria desordenada? Compara con lineal y declara coste en acceso aleatorio ordenado."
+  },
+  "expected_answer": {
+    "en": "Binary search discards half of the remaining positions using ascending order. Without that order, the target may be discarded. Linear search works on unsorted input in O(n) worst-case time; binary search on sorted random-access input needs O(log n) comparisons.",
+    "pt-BR": "Busca binária elimina metade das posições usando ordem crescente. Sem ordem, pode descartar alvo. Busca linear funciona sem ordenação em O(n) no pior caso; binária em entrada ordenada com acesso aleatório usa O(log n) comparações.",
+    "es": "Búsqueda binaria descarta mitad de posiciones usando orden ascendente. Sin orden puede descartar objetivo. Lineal funciona sin ordenar en O(n) peor caso; binaria en entrada ordenada de acceso aleatorio usa O(log n) comparaciones."
+  },
+  "explanation": {
+    "en": "The ordered-data invariant justifies elimination.",
+    "pt-BR": "Invariante de dados ordenados justifica eliminação.",
+    "es": "Invariante de datos ordenados justifica eliminación."
+  },
+  "intent": {
+    "en": "Assess algorithm preconditions.",
+    "pt-BR": "Avaliar pré-condições de algoritmos.",
+    "es": "Evaluar precondiciones de algoritmos."
+  },
+  "common_errors": {
+    "en": [
+      "Assume binary search is valid on any list."
+    ],
+    "pt-BR": [
+      "Supor busca binária válida em qualquer lista."
+    ],
+    "es": [
+      "Suponer búsqueda binaria válida en cualquier lista."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Would validating sortedness for each lookup preserve logarithmic total cost?"
+    ],
+    "pt-BR": [
+      "Validar ordenação a cada busca preservaria custo total logarítmico?"
+    ],
+    "es": [
+      "¿Validar orden en cada búsqueda conservaría coste total logarítmico?"
+    ]
+  },
+  "examples": {
+    "en": "In [9,1,3], comparison with the middle value cannot safely eliminate the left side when searching for 9.",
+    "pt-BR": "Em [9,1,3], comparar com valor central não permite eliminar lado esquerdo com segurança ao buscar 9.",
+    "es": "En [9,1,3], comparar valor central no permite eliminar izquierda de forma segura al buscar 9."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "States sortedness and explains safe elimination.",
+        "pt-BR": "Declara ordenação e explica eliminação segura.",
+        "es": "Declara orden y explica eliminación segura."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Compares worst-case linear and binary search costs under the stated assumptions.",
+        "pt-BR": "Compara custos no pior caso linear e binário sob hipóteses declaradas.",
+        "es": "Compara costes de peor caso lineal y binario bajo supuestos indicados."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.md",
+        "pt-BR": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md"
+      },
+      "sections": {
+        "en": "Choose by the contract",
+        "pt-BR": "Escolha pelo contrato",
+        "es": "Elige según el contrato"
+      }
+    },
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/05-searching-algorithms/README.md",
+        "pt-BR": "problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/05-searching-algorithms/README.es.md"
+      },
+      "sections": {
+        "en": "2. Binary search",
+        "pt-BR": "2. Busca binária",
+        "es": "2. Búsqueda binaria"
+      }
+    }
+  ]
+}

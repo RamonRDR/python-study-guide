@@ -1,0 +1,98 @@
+{
+  "id": "interview.allowed-tools",
+  "topic": "interview-fundamentals",
+  "level": "junior",
+  "prompt": {
+    "en": "Before a take-home, what must you confirm about scope, delivery and AI tools? What if AI is forbidden?",
+    "pt-BR": "Antes de um take-home, o que confirmar sobre escopo, entrega e ferramentas de IA? E se IA for proibida?",
+    "es": "Antes de un take-home, ¿qué confirmar sobre alcance, entrega y herramientas de IA? ¿Y si se prohíbe la IA?"
+  },
+  "expected_answer": {
+    "en": "Confirm deadline, scope, format, criteria and permitted tools. If AI is forbidden, do not use it; if permitted, disclose as required.",
+    "pt-BR": "Confirme prazo, escopo, formato, critérios e ferramentas permitidas. Se IA for proibida, não use; se permitida, declare conforme exigido.",
+    "es": "Confirma plazo, alcance, formato, criterios y herramientas permitidas. Si se prohíbe la IA, no la uses; si se permite, declara su uso según las reglas."
+  },
+  "explanation": {
+    "en": "Rules differ between employers; ask rather than infer.",
+    "pt-BR": "Regras variam entre empresas; pergunte em vez de inferir.",
+    "es": "Las reglas varían entre empresas; pregunta en vez de inferir."
+  },
+  "intent": {
+    "en": "Assess respect for assessment constraints.",
+    "pt-BR": "Avaliar respeito às regras da avaliação.",
+    "es": "Evaluar respeto por las reglas de evaluación."
+  },
+  "common_errors": {
+    "en": [
+      "Assume the previous employer's tool policy still applies."
+    ],
+    "pt-BR": [
+      "Supor que vale a política de ferramentas da empresa anterior."
+    ],
+    "es": [
+      "Suponer que sigue vigente la política de la empresa anterior."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What would you ask if the allowed documentation is unclear?"
+    ],
+    "pt-BR": [
+      "O que perguntaria se a documentação permitida não estiver clara?"
+    ],
+    "es": [
+      "¿Qué preguntarías si la documentación permitida no está clara?"
+    ]
+  },
+  "examples": {
+    "en": "If instructions permit the standard library documentation but forbid AI, consult the documentation only.",
+    "pt-BR": "Se as instruções permitem documentação da biblioteca padrão mas proíbem IA, consulte apenas a documentação.",
+    "es": "Si las instrucciones permiten documentación de la biblioteca estándar pero prohíben IA, consulta solo la documentación."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Identifies deadline, scope, format, criteria and tool policy.",
+        "pt-BR": "Identifica prazo, escopo, formato, critérios e política de ferramentas.",
+        "es": "Identifica plazo, alcance, formato, criterios y política de herramientas."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Respects the prohibition or disclosure requirement.",
+        "pt-BR": "Respeita proibição ou obrigação de declarar uso.",
+        "es": "Respeta prohibición u obligación de declarar uso."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/01-understanding-technical-interviews/README.md",
+        "pt-BR": "technical-interview-preparation/01-understanding-technical-interviews/README.pt-BR.md",
+        "es": "technical-interview-preparation/01-understanding-technical-interviews/README.es.md"
+      },
+      "sections": {
+        "en": "Purpose and process",
+        "pt-BR": "Finalidade e processo",
+        "es": "Propósito y proceso"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/02-live-coding-and-take-home/README.md",
+        "pt-BR": "technical-interview-preparation/02-live-coding-and-take-home/README.pt-BR.md",
+        "es": "technical-interview-preparation/02-live-coding-and-take-home/README.es.md"
+      },
+      "sections": {
+        "en": "Take-home assignments",
+        "pt-BR": "Tarefas take-home",
+        "es": "Tareas take-home"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "internals.cache-retention",
+  "topic": "python-internals",
+  "level": "senior",
+  "prompt": {
+    "en": "A long-running CPython service grows memory while retaining a global cache. Explain reachable retention versus unreachable cycles, what gc.collect can do, and how you would measure and bound the problem.",
+    "pt-BR": "Serviço CPython cresce memória retendo cache global. Explique retenção alcançável versus ciclos inalcançáveis, o que gc.collect pode fazer e como mediria e limitaria problema.",
+    "es": "Servicio CPython crece memoria reteniendo caché global. Explica retención alcanzable frente a ciclos inalcanzables, qué puede hacer gc.collect y cómo medirías y limitarías problema."
+  },
+  "expected_answer": {
+    "en": "Reachable cache values remain alive; conventional reference counting plus cyclic GC can reclaim many unreachable objects and cycles, but gc.collect cannot free reachable values or guarantee lower RSS. Inspect ownership and compare tracemalloc snapshots alongside process memory metrics; bound retention by suitable count/byte budget, evict references and check external aliases.",
+    "pt-BR": "Valores alcançáveis de cache permanecem vivos; contagem de referências convencional mais GC de ciclos recupera muitos objetos/ciclos inalcançáveis, mas gc.collect não libera alcançáveis nem garante RSS menor. Inspecione ownership e compare snapshots tracemalloc junto com métricas de memória do processo; limite por orçamento de quantidade/bytes, expulse referências e confira aliases externos.",
+    "es": "Valores alcanzables de caché siguen vivos; conteo convencional de referencias más GC de ciclos recupera muchos objetos/ciclos inalcanzables, pero gc.collect no libera alcanzables ni garantiza RSS menor. Inspecciona propiedad y compara instantáneas tracemalloc junto con métricas de memoria del proceso; limita por presupuesto de cantidad/bytes, expulsa referencias y comprueba alias externos."
+  },
+  "explanation": {
+    "en": "Python allocation snapshots are not a full measure of native allocations or RSS. Count bounds are not byte bounds.",
+    "pt-BR": "Snapshots de alocação Python não medem toda alocação nativa ou RSS. Limite de quantidade não limita bytes.",
+    "es": "Instantáneas de asignación Python no miden toda asignación nativa o RSS. Límite de cantidad no limita bytes."
+  },
+  "intent": {
+    "en": "Assess memory diagnosis before optimization.",
+    "pt-BR": "Avaliar diagnóstico de memória antes da otimização.",
+    "es": "Evaluar diagnóstico de memoria antes de optimización."
+  },
+  "common_errors": {
+    "en": [
+      "Force GC periodically while keeping the same unbounded reachable cache."
+    ],
+    "pt-BR": [
+      "Forçar GC periodicamente mantendo mesmo cache alcançável ilimitado."
+    ],
+    "es": [
+      "Forzar GC periódicamente manteniendo misma caché alcanzable ilimitada."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why could clearing the cache leave values alive?"
+    ],
+    "pt-BR": [
+      "Por que limpar cache pode deixar valores vivos?"
+    ],
+    "es": [
+      "¿Por qué vaciar caché puede dejar valores vivos?"
+    ]
+  },
+  "examples": {
+    "en": "An entry-count limit of 100 does not imply 100 bytes; compare allocations before and after evictions with a representative load.",
+    "pt-BR": "Limite de 100 entradas não implica 100 bytes; compare alocações antes/depois de expulsões com carga representativa.",
+    "es": "Límite de 100 entradas no implica 100 bytes; compara asignaciones antes/después de expulsiones con carga representativa."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Explains reachability, cyclic GC and collection limitations.",
+        "pt-BR": "Explica alcançabilidade, GC de ciclos e limites de coleta.",
+        "es": "Explica alcanzabilidad, GC de ciclos y límites de recolección."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes bounded retention and measurement while distinguishing tracemalloc from process memory.",
+        "pt-BR": "Propõe retenção limitada e medição distinguindo tracemalloc de memória do processo.",
+        "es": "Propone retención limitada y medición distinguiendo tracemalloc de memoria del proceso."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/10-python-memory-management/README.md",
+        "pt-BR": "technical-interview-preparation/10-python-memory-management/README.pt-BR.md",
+        "es": "technical-interview-preparation/10-python-memory-management/README.es.md"
+      },
+      "sections": {
+        "en": "Object lifetime and reachability",
+        "pt-BR": "Vida e alcançabilidade de objetos",
+        "es": "Vida y alcanzabilidad de objetos"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/10-python-memory-management/README.md",
+        "pt-BR": "technical-interview-preparation/10-python-memory-management/README.pt-BR.md",
+        "es": "technical-interview-preparation/10-python-memory-management/README.es.md"
+      },
+      "sections": {
+        "en": "Retention and measurement",
+        "pt-BR": "Retenção e medição",
+        "es": "Retención y medición"
+      }
+    }
+  ]
+}

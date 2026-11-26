@@ -68,6 +68,15 @@ class InterviewRecordsTests(unittest.TestCase):
                     with self.assertRaises(ValueError):
                         load_bank(root)
 
+    def test_phase_eleven_prerequisite_contract(self):
+        from scripts.interview_records import valid_path
+        prefix = "problem-solving-and-live-coding/05-searching-algorithms/"
+        for locale, name in (("en", "README.md"), ("pt-BR", "README.pt-BR.md"), ("es", "README.es.md")):
+            self.assertTrue(valid_path(prefix + name, locale, ROOT))
+            self.assertFalse(valid_path("problem-solving-and-live-coding/../README.md", locale, ROOT))
+            self.assertFalse(valid_path("exercises/problem-solving/" + name, locale, ROOT))
+            self.assertFalse(valid_path(prefix + "not-a-lesson.md", locale, ROOT))
+
     def test_invalid_records_are_rejected(self):
         mutations = [
             lambda q: q.pop("expected_answer"),

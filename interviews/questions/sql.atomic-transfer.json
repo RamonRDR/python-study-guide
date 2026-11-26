@@ -1,0 +1,98 @@
+{
+  "id": "sql.atomic-transfer",
+  "topic": "databases-sql",
+  "level": "senior",
+  "prompt": {
+    "en": "A credit transfer debits one account and credits another. Design transaction ownership, conditional balance checks and failure verification. Explain ACID and whether a new index alone guarantees better performance.",
+    "pt-BR": "Transferência de créditos debita conta e credita outra. Projete ownership da transação, checagem condicional de saldo e verificação de falha. Explique ACID e se índice novo sozinho garante desempenho melhor.",
+    "es": "Transferencia de créditos debita cuenta y acredita otra. Diseña propiedad de transacción, comprobación condicional de saldo y verificación de fallo. Explica ACID y si índice nuevo solo garantiza mejor rendimiento."
+  },
+  "expected_answer": {
+    "en": "Use a dedicated transaction with no unrelated pending writes; validate distinct accounts and positive integer amount, debit only if sufficient balance, verify affected rows, credit target and commit only after both succeed; rollback on missing target or any failure. ACID means atomicity, consistency of invariants, isolation visibility rules and durability under storage guarantees. Check balances after success/failure and from a separate connection after commit. Indexes cost storage/writes; inspect query plans and measure before claiming improvement.",
+    "pt-BR": "Use transação dedicada sem escritas alheias pendentes; valide contas distintas e quantia inteira positiva, debite apenas se saldo suficiente, confira linhas afetadas, credite destino e confirme só após ambas; rollback se destino ausente ou qualquer falha. ACID significa atomicidade, consistência de invariantes, regras de visibilidade do isolamento e durabilidade conforme garantias de armazenamento. Confira saldos após sucesso/falha e em conexão separada após commit. Índices custam armazenamento/escritas; inspecione planos e meça antes de alegar melhoria.",
+    "es": "Usa transacción dedicada sin escrituras ajenas pendientes; valida cuentas distintas y cantidad entera positiva, debita solo si saldo suficiente, comprueba filas afectadas, acredita destino y confirma solo tras ambas; rollback si destino ausente o cualquier fallo. ACID significa atomicidad, consistencia de invariantes, reglas de visibilidad de aislamiento y durabilidad según garantías de almacenamiento. Comprueba saldos tras éxito/fallo y desde conexión separada tras commit. Índices cuestan almacenamiento/escrituras; inspecciona planes y mide antes de afirmar mejora."
+  },
+  "explanation": {
+    "en": "Atomicity prevents partial debit; an in-memory database is not durable across process exit. Isolation behavior depends on the engine.",
+    "pt-BR": "Atomicidade impede débito parcial; banco em memória não é durável após saída do processo. Isolamento depende do motor.",
+    "es": "Atomicidad evita débito parcial; base en memoria no es durable tras salida del proceso. Aislamiento depende del motor."
+  },
+  "intent": {
+    "en": "Assess integrity guarantees, failure testing and measured optimization.",
+    "pt-BR": "Avaliar garantias de integridade, testes de falha e otimização medida.",
+    "es": "Evaluar garantías de integridad, pruebas de fallo y optimización medida."
+  },
+  "common_errors": {
+    "en": [
+      "Commit the debit before credit or assume every index helps."
+    ],
+    "pt-BR": [
+      "Confirmar débito antes de crédito ou supor todo índice ajuda."
+    ],
+    "es": [
+      "Confirmar débito antes de crédito o suponer que todo índice ayuda."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why is observing the new balance on the writing connection insufficient to prove a commit?"
+    ],
+    "pt-BR": [
+      "Por que observar saldo novo na conexão de escrita não basta para provar commit?"
+    ],
+    "es": [
+      "¿Por qué observar saldo nuevo en conexión escritora no basta para probar commit?"
+    ]
+  },
+  "examples": {
+    "en": "Balances 10 and 2 become 7 and 5 after transfer of 3; a failed subsequent transfer to a missing target leaves both unchanged.",
+    "pt-BR": "Saldos 10 e 2 viram 7 e 5 após transferir 3; transferência posterior falha para destino inexistente deixa ambos intactos.",
+    "es": "Saldos 10 y 2 pasan a 7 y 5 tras transferir 3; transferencia posterior fallida a destino inexistente deja ambos intactos."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Designs atomic ownership, conditional updates and cross-connection/failure checks.",
+        "pt-BR": "Projeta ownership atômico, updates condicionais e verificações entre conexões/de falha.",
+        "es": "Diseña propiedad atómica, updates condicionales y comprobaciones entre conexiones/de fallo."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains four ACID properties and proposes measuring index benefit against cost.",
+        "pt-BR": "Explica quatro propriedades ACID e propõe medir benefício do índice contra custo.",
+        "es": "Explica cuatro propiedades ACID y propone medir beneficio del índice frente a coste."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.md",
+        "pt-BR": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.pt-BR.md",
+        "es": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md"
+      },
+      "sections": {
+        "en": "Transactions and integrity",
+        "pt-BR": "Transações e integridade",
+        "es": "Transacciones e integridad"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.md",
+        "pt-BR": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.pt-BR.md",
+        "es": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md"
+      },
+      "sections": {
+        "en": "Indexes and query planning",
+        "pt-BR": "Índices e plano de consulta",
+        "es": "Índices y plan de consulta"
+      }
+    }
+  ]
+}

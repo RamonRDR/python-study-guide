@@ -1,0 +1,86 @@
+{
+  "id": "sql.keys-and-constraints",
+  "topic": "databases-sql",
+  "level": "junior",
+  "prompt": {
+    "en": "A lessons table requires unique non-null titles and positive non-null minutes. Which constraints express these rules, and what is the primary key for? Explain the SQLite INTEGER typing caveat if minutes must be an integer.",
+    "pt-BR": "Tabela lessons exige títulos únicos não nulos e minutos positivos não nulos. Quais restrições expressam regras e para que chave primária? Explique a ressalva da tipagem INTEGER no SQLite se minutes precisar ser inteiro.",
+    "es": "Tabla lessons exige títulos únicos no nulos y minutos positivos no nulos. ¿Qué restricciones expresan reglas y para qué clave primaria? Explica la salvedad del tipado INTEGER en SQLite si minutes debe ser entero."
+  },
+  "expected_answer": {
+    "en": "Use title TEXT NOT NULL UNIQUE and minutes INTEGER NOT NULL CHECK(minutes > 0); a primary key identifies each row. In SQLite, declared INTEGER alone is not strict type enforcement; use an appropriate type/storage check and application validation for a true integer domain.",
+    "pt-BR": "Use title TEXT NOT NULL UNIQUE e minutes INTEGER NOT NULL CHECK(minutes > 0); chave primária identifica linha. Em SQLite, INTEGER declarado sozinho não impõe tipo estrito; use verificação adequada de tipo armazenado e validação de aplicação para domínio inteiro.",
+    "es": "Usa title TEXT NOT NULL UNIQUE y minutes INTEGER NOT NULL CHECK(minutes > 0); clave primaria identifica fila. En SQLite, INTEGER declarado solo no impone tipo estricto; usa comprobación adecuada de tipo almacenado y validación de aplicación para dominio entero."
+  },
+  "explanation": {
+    "en": "CHECK alone does not reject NULL; combine it with NOT NULL.",
+    "pt-BR": "CHECK sozinho não rejeita NULL; combine com NOT NULL.",
+    "es": "CHECK solo no rechaza NULL; combina con NOT NULL."
+  },
+  "intent": {
+    "en": "Assess relational integrity constraints.",
+    "pt-BR": "Avaliar restrições de integridade relacional.",
+    "es": "Evaluar restricciones de integridad relacional."
+  },
+  "common_errors": {
+    "en": [
+      "Assume CHECK(minutes > 0) alone forbids NULL or fractional values."
+    ],
+    "pt-BR": [
+      "Supor CHECK(minutes > 0) sozinho proíbe NULL ou fracionários."
+    ],
+    "es": [
+      "Suponer CHECK(minutes > 0) solo prohíbe NULL o fraccionarios."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What should inserting a duplicate title do?"
+    ],
+    "pt-BR": [
+      "O que inserir título duplicado deve fazer?"
+    ],
+    "es": [
+      "¿Qué debe hacer insertar título duplicado?"
+    ]
+  },
+  "examples": {
+    "en": "SQLite can use CHECK(typeof(minutes) = 'integer' AND minutes > 0) together with NOT NULL.",
+    "pt-BR": "SQLite pode usar CHECK(typeof(minutes) = 'integer' AND minutes > 0) junto com NOT NULL.",
+    "es": "SQLite puede usar CHECK(typeof(minutes) = 'integer' AND minutes > 0) junto con NOT NULL."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Selects correct UNIQUE, NOT NULL and positive CHECK constraints.",
+        "pt-BR": "Seleciona restrições corretas UNIQUE, NOT NULL e CHECK positivo.",
+        "es": "Selecciona restricciones correctas UNIQUE, NOT NULL y CHECK positivo."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains primary key and why SQLite integer typing needs care.",
+        "pt-BR": "Explica chave primária e por que tipagem inteira SQLite exige cuidado.",
+        "es": "Explica clave primaria y por qué tipado entero SQLite requiere cuidado."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/18-relational-databases-and-sql/README.md",
+        "pt-BR": "technical-interview-preparation/18-relational-databases-and-sql/README.pt-BR.md",
+        "es": "technical-interview-preparation/18-relational-databases-and-sql/README.es.md"
+      },
+      "sections": {
+        "en": "Relational model and constraints",
+        "pt-BR": "Modelo relacional e restrições",
+        "es": "Modelo relacional y restricciones"
+      }
+    }
+  ]
+}

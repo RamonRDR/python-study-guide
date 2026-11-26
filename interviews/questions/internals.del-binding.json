@@ -1,0 +1,86 @@
+{
+  "id": "internals.del-binding",
+  "topic": "python-internals",
+  "level": "junior",
+  "prompt": {
+    "en": "Given first=[]; second=first; del first; second.append(3), what is second? Does del guarantee destruction?",
+    "pt-BR": "Dado first=[]; second=first; del first; second.append(3), qual second? del garante destruição?",
+    "es": "Dado first=[]; second=first; del first; second.append(3), ¿cuál es second? ¿del garantiza destrucción?"
+  },
+  "expected_answer": {
+    "en": "second is [3]. del removes the first binding, not the object while second still strongly references it. Python does not guarantee immediate destruction.",
+    "pt-BR": "second é [3]. del remove vinculação first, não objeto enquanto second ainda o referencia fortemente. Python não garante destruição imediata.",
+    "es": "second es [3]. del elimina enlace first, no objeto mientras second aún lo referencia fuertemente. Python no garantiza destrucción inmediata."
+  },
+  "explanation": {
+    "en": "Reachability and ownership, not a particular variable name, determine whether a reference still keeps an object alive.",
+    "pt-BR": "Alcançabilidade e ownership, não nome específico, determinam se referência ainda mantém objeto vivo.",
+    "es": "Alcanzabilidad y propiedad, no nombre particular, determinan si referencia aún mantiene objeto vivo."
+  },
+  "intent": {
+    "en": "Assess object lifetime reasoning.",
+    "pt-BR": "Avaliar raciocínio sobre vida do objeto.",
+    "es": "Evaluar razonamiento sobre vida del objeto."
+  },
+  "common_errors": {
+    "en": [
+      "Assume del first empties the list."
+    ],
+    "pt-BR": [
+      "Supor que del first esvazia lista."
+    ],
+    "es": [
+      "Suponer que del first vacía lista."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What if a global container still holds the list?"
+    ],
+    "pt-BR": [
+      "E se contêiner global ainda guarda lista?"
+    ],
+    "es": [
+      "¿Y si contenedor global aún guarda lista?"
+    ]
+  },
+  "examples": {
+    "en": "A list stored in two names remains usable through the surviving name.",
+    "pt-BR": "Lista armazenada em dois nomes permanece utilizável pelo nome restante.",
+    "es": "Lista almacenada en dos nombres sigue utilizable mediante nombre restante."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts second correctly and distinguishes binding deletion from object destruction.",
+        "pt-BR": "Prevê second e distingue remoção da vinculação de destruição.",
+        "es": "Predice second y distingue eliminación de enlace de destrucción."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains strong reference and absence of guaranteed immediate finalization.",
+        "pt-BR": "Explica referência forte e ausência de garantia de finalização imediata.",
+        "es": "Explica referencia fuerte y ausencia de garantía de finalización inmediata."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/10-python-memory-management/README.md",
+        "pt-BR": "technical-interview-preparation/10-python-memory-management/README.pt-BR.md",
+        "es": "technical-interview-preparation/10-python-memory-management/README.es.md"
+      },
+      "sections": {
+        "en": "Object lifetime and reachability",
+        "pt-BR": "Vida e alcançabilidade de objetos",
+        "es": "Vida y alcanzabilidad de objetos"
+      }
+    }
+  ]
+}

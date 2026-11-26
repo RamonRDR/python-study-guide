@@ -1,0 +1,98 @@
+{
+  "id": "sql.bound-values",
+  "topic": "databases-sql",
+  "level": "mid",
+  "prompt": {
+    "en": "In Python sqlite3, a search accepts a title and a user-selected sort column. How do you bind the title safely and constrain the column? Explain why placeholders cannot bind identifiers.",
+    "pt-BR": "Em sqlite3 Python, busca aceita título e coluna de ordenação selecionada. Como vincular título com segurança e restringir coluna? Explique por que placeholders não vinculam identificadores.",
+    "es": "En sqlite3 Python, búsqueda acepta título y columna de orden elegida. ¿Cómo enlazar título de forma segura y restringir columna? Explica por qué placeholders no enlazan identificadores."
+  },
+  "expected_answer": {
+    "en": "Pass title as a value parameter, e.g. db.execute(\"SELECT id FROM lessons WHERE title = ?\", (title,)). Use a fixed query or allowlist mapping of sort options to trusted SQL identifiers; never interpolate arbitrary input. Placeholders represent values, not SQL syntax such as column identifiers.",
+    "pt-BR": "Passe title como parâmetro de valor, ex. db.execute(\"SELECT id FROM lessons WHERE title = ?\", (title,)). Use consulta fixa ou mapeamento allowlist de opções para identificadores SQL confiáveis; não interpole entrada arbitrária. Placeholders representam valores, não sintaxe SQL como identificadores de colunas.",
+    "es": "Pasa title como parámetro de valor, p. ej. db.execute(\"SELECT id FROM lessons WHERE title = ?\", (title,)). Usa consulta fija o mapa allowlist de opciones a identificadores SQL confiables; nunca interpoles entrada arbitraria. Placeholders representan valores, no sintaxis SQL como identificadores de columnas."
+  },
+  "explanation": {
+    "en": "Bound input remains data even when it contains quotes. The comma forms a one-element tuple.",
+    "pt-BR": "Entrada vinculada permanece dado mesmo com aspas. Vírgula forma tupla de um elemento.",
+    "es": "Entrada enlazada sigue siendo dato incluso con comillas. Coma forma tupla de un elemento."
+  },
+  "intent": {
+    "en": "Assess safe SQL construction and identifier boundaries.",
+    "pt-BR": "Avaliar construção SQL segura e fronteira de identificadores.",
+    "es": "Evaluar construcción SQL segura y frontera de identificadores."
+  },
+  "common_errors": {
+    "en": [
+      "Concatenate raw title or raw column names into SQL."
+    ],
+    "pt-BR": [
+      "Concatenar título ou nome de coluna bruto no SQL."
+    ],
+    "es": [
+      "Concatenar título o nombre de columna crudo en SQL."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you test quote-containing titles and unsupported sort choices?"
+    ],
+    "pt-BR": [
+      "Como testaria títulos com aspas e opções de ordenação não suportadas?"
+    ],
+    "es": [
+      "¿Cómo probarías títulos con comillas y opciones de orden no admitidas?"
+    ]
+  },
+  "examples": {
+    "en": "Map \"duration\" to the fixed identifier minutes; reject unknown sort options. Bind \"O'Reilly\" as title data.",
+    "pt-BR": "Mapeie \"duration\" ao identificador fixo minutes; rejeite opções desconhecidas. Vincule \"O'Reilly\" como dado title.",
+    "es": "Mapea \"duration\" a identificador fijo minutes; rechaza opciones desconocidas. Enlaza \"O'Reilly\" como dato title."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Shows bound title value with correct parameter tuple.",
+        "pt-BR": "Mostra valor title vinculado com tupla correta.",
+        "es": "Muestra valor title enlazado con tupla correcta."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains identifier limitation and fixed-query/allowlist approach.",
+        "pt-BR": "Explica limite de identificadores e abordagem consulta fixa/allowlist.",
+        "es": "Explica límite de identificadores y enfoque consulta fija/allowlist."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/18-relational-databases-and-sql/README.md",
+        "pt-BR": "technical-interview-preparation/18-relational-databases-and-sql/README.pt-BR.md",
+        "es": "technical-interview-preparation/18-relational-databases-and-sql/README.es.md"
+      },
+      "sections": {
+        "en": "Connect from Python",
+        "pt-BR": "Conectar com Python",
+        "es": "Conectar con Python"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.md",
+        "pt-BR": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.pt-BR.md",
+        "es": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md"
+      },
+      "sections": {
+        "en": "SQL safety",
+        "pt-BR": "Segurança SQL",
+        "es": "Seguridad SQL"
+      }
+    }
+  ]
+}

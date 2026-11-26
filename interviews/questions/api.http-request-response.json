@@ -1,0 +1,86 @@
+{
+  "id": "api.http-request-response",
+  "topic": "backend-apis",
+  "level": "junior",
+  "prompt": {
+    "en": "Describe the main elements of an HTTP request and response. Give a GET example and explain which side chooses the response status.",
+    "pt-BR": "Descreva elementos principais de requisição e resposta HTTP. Dê exemplo GET e explique qual lado escolhe status.",
+    "es": "Describe elementos principales de solicitud y respuesta HTTP. Da ejemplo GET y explica qué lado elige estado."
+  },
+  "expected_answer": {
+    "en": "A request has method, target, headers and optional content. The server responds with status, headers and optional content. The client sends GET /lessons; the server determines a status and representation according to the contract.",
+    "pt-BR": "Requisição tem método, alvo, headers e conteúdo opcional. Servidor responde status, headers e conteúdo opcional. Cliente envia GET /lessons; servidor determina status e representação segundo contrato.",
+    "es": "Solicitud tiene método, destino, headers y contenido opcional. Servidor responde estado, headers y contenido opcional. Cliente envía GET /lessons; servidor determina estado y representación según contrato."
+  },
+  "explanation": {
+    "en": "HTTP status describes the outcome, not the client-selected action.",
+    "pt-BR": "Status HTTP descreve resultado, não ação escolhida pelo cliente.",
+    "es": "Estado HTTP describe resultado, no acción elegida por cliente."
+  },
+  "intent": {
+    "en": "Assess HTTP request/response basics.",
+    "pt-BR": "Avaliar fundamentos de requisição/resposta HTTP.",
+    "es": "Evaluar fundamentos de solicitud/respuesta HTTP."
+  },
+  "common_errors": {
+    "en": [
+      "Assume every HTTP request or response must contain JSON."
+    ],
+    "pt-BR": [
+      "Supor que toda requisição ou resposta HTTP precisa conter JSON."
+    ],
+    "es": [
+      "Suponer que toda solicitud o respuesta HTTP debe contener JSON."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Which response header can describe content format?"
+    ],
+    "pt-BR": [
+      "Qual header de resposta pode descrever formato do conteúdo?"
+    ],
+    "es": [
+      "¿Qué header de respuesta puede describir formato del contenido?"
+    ]
+  },
+  "examples": {
+    "en": "GET /lessons → 200 with Content-Type: application/json and a lesson representation.",
+    "pt-BR": "GET /lessons → 200 com Content-Type: application/json e representação de aulas.",
+    "es": "GET /lessons → 200 con Content-Type: application/json y representación de lecciones."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Identifies method/target versus response status and both sets of headers.",
+        "pt-BR": "Identifica método/alvo versus status e ambos conjuntos de headers.",
+        "es": "Identifica método/destino frente a estado y ambos conjuntos de headers."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Gives a coherent GET example and distinguishes optional content.",
+        "pt-BR": "Dá exemplo GET coerente e distingue conteúdo opcional.",
+        "es": "Da ejemplo GET coherente y distingue contenido opcional."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.md",
+        "pt-BR": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.pt-BR.md",
+        "es": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.es.md"
+      },
+      "sections": {
+        "en": "Client, server and resource contracts",
+        "pt-BR": "Contratos cliente, servidor e recurso",
+        "es": "Contratos cliente, servidor y recurso"
+      }
+    }
+  ]
+}

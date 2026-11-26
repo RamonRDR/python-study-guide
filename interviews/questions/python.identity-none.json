@@ -1,0 +1,98 @@
+{
+  "id": "python.identity-none",
+  "topic": "python-fundamentals",
+  "level": "mid",
+  "prompt": {
+    "en": "Compare x == y and x is y for two independently created lists [1]. Why is is None appropriate but is unreliable for value comparison of strings?",
+    "pt-BR": "Compare x == y e x is y para duas listas [1] criadas independentemente. Por que is None é adequado mas is não é confiável para comparar valor de strings?",
+    "es": "Compara x == y y x is y para dos listas [1] creadas independientemente. ¿Por qué is None es apropiado pero is no es fiable para comparar valor de cadenas?"
+  },
+  "expected_answer": {
+    "en": "Equality is True and identity is False. == compares equality semantics; is compares object identity. None is a singleton, so identity is the intended test; string caching is not a value-equality contract.",
+    "pt-BR": "Igualdade é True e identidade False. == compara semântica de igualdade; is compara identidade. None é singleton, então identidade é teste pretendido; cache de strings não é contrato de igualdade por valor.",
+    "es": "Igualdad es True e identidad False. == compara semántica de igualdad; is compara identidad. None es singleton, así que identidad es prueba prevista; caché de cadenas no es contrato de igualdad por valor."
+  },
+  "explanation": {
+    "en": "Two distinct objects can compare equal. Identity behavior for cached values is implementation-dependent.",
+    "pt-BR": "Dois objetos distintos podem ser iguais. Identidade de valores em cache depende da implementação.",
+    "es": "Dos objetos distintos pueden ser iguales. Identidad de valores en caché depende de implementación."
+  },
+  "intent": {
+    "en": "Assess identity versus equality.",
+    "pt-BR": "Avaliar identidade versus igualdade.",
+    "es": "Evaluar identidad frente a igualdad."
+  },
+  "common_errors": {
+    "en": [
+      "Use is to compare integer or string values."
+    ],
+    "pt-BR": [
+      "Usar is para comparar valores inteiros ou strings."
+    ],
+    "es": [
+      "Usar is para comparar valores enteros o cadenas."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What happens when y is assigned x?"
+    ],
+    "pt-BR": [
+      "O que ocorre quando y recebe x?"
+    ],
+    "es": [
+      "¿Qué ocurre cuando y recibe x?"
+    ]
+  },
+  "examples": {
+    "en": "Given `x = [1]; y = [1]`, the expression `x == y` evaluates to `True`, while `x is y` evaluates to `False`.",
+    "pt-BR": "Dado `x = [1]; y = [1]`, a expressão `x == y` resulta em `True`, enquanto `x is y` resulta em `False`.",
+    "es": "Dado `x = [1]; y = [1]`, la expresión `x == y` da `True`, mientras que `x is y` da `False`."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts identity and equality for separate lists.",
+        "pt-BR": "Prevê identidade e igualdade para listas separadas.",
+        "es": "Predice identidad e igualdad para listas separadas."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains None singleton and value comparison rule.",
+        "pt-BR": "Explica singleton None e regra de comparação de valor.",
+        "es": "Explica singleton None y regla de comparación de valor."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/03-python-fundamentals-review/README.md",
+        "pt-BR": "technical-interview-preparation/03-python-fundamentals-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/03-python-fundamentals-review/README.es.md"
+      },
+      "sections": {
+        "en": "Independent practice",
+        "pt-BR": "Prática independente",
+        "es": "Práctica independiente"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/09-object-identity-references-and-copying/README.md",
+        "pt-BR": "technical-interview-preparation/09-object-identity-references-and-copying/README.pt-BR.md",
+        "es": "technical-interview-preparation/09-object-identity-references-and-copying/README.es.md"
+      },
+      "sections": {
+        "en": "Identity, equality and binding",
+        "pt-BR": "Identidade, igualdade e vinculação",
+        "es": "Identidad, igualdad y enlace"
+      }
+    }
+  ]
+}

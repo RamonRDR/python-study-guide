@@ -1,0 +1,98 @@
+{
+  "id": "python.binding-vs-copy",
+  "topic": "python-fundamentals",
+  "level": "junior",
+  "prompt": {
+    "en": "Given a = [1]; b = a; b.append(2), what are a and b? Explain whether assignment copies the list.",
+    "pt-BR": "Dado a = [1]; b = a; b.append(2), quais são a e b? Explique se atribuição copia lista.",
+    "es": "Dado a = [1]; b = a; b.append(2), ¿cuáles son a y b? Explica si asignación copia lista."
+  },
+  "expected_answer": {
+    "en": "Both are [1, 2]; a and b name the same mutable list. Assignment binds a name and does not copy the object.",
+    "pt-BR": "Ambos são [1, 2]; a e b nomeiam a mesma lista mutável. Atribuição vincula nome e não copia objeto.",
+    "es": "Ambos son [1, 2]; a y b nombran la misma lista mutable. Asignación enlaza nombre y no copia objeto."
+  },
+  "explanation": {
+    "en": "Mutating through one reference is visible through the other.",
+    "pt-BR": "Mutar por uma referência é visível pela outra.",
+    "es": "Mutar mediante una referencia es visible mediante la otra."
+  },
+  "intent": {
+    "en": "Assess aliasing and list mutation.",
+    "pt-BR": "Avaliar aliases e mutação de listas.",
+    "es": "Evaluar alias y mutación de listas."
+  },
+  "common_errors": {
+    "en": [
+      "Treat b = a as an independent list."
+    ],
+    "pt-BR": [
+      "Tratar b = a como lista independente."
+    ],
+    "es": [
+      "Tratar b = a como lista independiente."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What changes if b is then rebound to []?"
+    ],
+    "pt-BR": [
+      "O que muda se depois b for vinculado a []?"
+    ],
+    "es": [
+      "¿Qué cambia si luego b se enlaza a []?"
+    ]
+  },
+  "examples": {
+    "en": "After `a = [1]; b = a`, the expression `a is b` evaluates to `True` before rebinding `b`.",
+    "pt-BR": "Após `a = [1]; b = a`, a expressão `a is b` resulta em `True` antes de reatribuir `b`.",
+    "es": "Tras `a = [1]; b = a`, la expresión `a is b` da `True` antes de reasignar `b`."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts both list values.",
+        "pt-BR": "Prevê valores das duas listas.",
+        "es": "Predice valores de ambas listas."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains shared identity and mutation rather than copying.",
+        "pt-BR": "Explica identidade compartilhada e mutação, não cópia.",
+        "es": "Explica identidad compartida y mutación, no copia."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/03-python-fundamentals-review/README.md",
+        "pt-BR": "technical-interview-preparation/03-python-fundamentals-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/03-python-fundamentals-review/README.es.md"
+      },
+      "sections": {
+        "en": "Review by reasoning",
+        "pt-BR": "Revisão pelo raciocínio",
+        "es": "Repaso mediante razonamiento"
+      }
+    },
+    {
+      "paths": {
+        "en": "technical-interview-preparation/09-object-identity-references-and-copying/README.md",
+        "pt-BR": "technical-interview-preparation/09-object-identity-references-and-copying/README.pt-BR.md",
+        "es": "technical-interview-preparation/09-object-identity-references-and-copying/README.es.md"
+      },
+      "sections": {
+        "en": "Identity, equality and binding",
+        "pt-BR": "Identidade, igualdade e vinculação",
+        "es": "Identidad, igualdad y enlace"
+      }
+    }
+  ]
+}
