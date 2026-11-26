@@ -1,4 +1,5 @@
 {
+  "schema_version": "1.0.0",
   "id": "problem-solving.binary-target-range",
   "chapter_id": "problem-solving.searching-and-sorting",
   "difficulty": "hard",
@@ -138,6 +139,7 @@
     "function_name": "target_range",
     "comparison": "exact_type_and_value",
     "timeout_ms": 2000,
+    "new_container": true,
     "cases": [
       {
         "id": "case-01",

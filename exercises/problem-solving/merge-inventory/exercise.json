@@ -1,4 +1,5 @@
 {
+  "schema_version": "1.0.0",
   "id": "problem-solving.merge-inventory",
   "chapter_id": "problem-solving.collections",
   "difficulty": "medium",
@@ -115,6 +116,7 @@
     "function_name": "merge_inventory",
     "comparison": "exact_type_and_value",
     "timeout_ms": 2000,
+    "new_container": true,
     "cases": [
       {
         "id": "case-01",
