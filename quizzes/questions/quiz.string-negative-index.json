@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.string-negative-index",
+  "chapter_id": "strings-and-numbers.string-creation-and-indexing",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "The index -1 of a nonempty string reads its first character.",
+    "pt-BR": "O índice -1 de uma string não vazia lê seu primeiro caractere.",
+    "es": "El índice -1 de una cadena no vacía lee su primer carácter."
+  },
+  "explanation": {
+    "en": "Negative indexes count from the end; -1 selects the last character.",
+    "pt-BR": "Índices negativos contam a partir do final; -1 seleciona o último caractere.",
+    "es": "Los índices negativos cuentan desde el final; -1 selecciona el último carácter."
+  },
+  "hints": {
+    "en": [
+      "Consider which end negative indexes start from."
+    ],
+    "pt-BR": [
+      "Considere de qual extremidade começam os índices negativos."
+    ],
+    "es": [
+      "Considera desde qué extremo empiezan los índices negativos."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/01-string-creation-and-indexing/README.md",
+        "pt-BR": "strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md",
+        "es": "strings-and-numbers/01-string-creation-and-indexing/README.es.md"
+      },
+      "sections": {
+        "en": "9. Negative indexes count from the end",
+        "pt-BR": "9. Índices negativos contam a partir do final",
+        "es": "9. Los índices negativos cuentan desde el final"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

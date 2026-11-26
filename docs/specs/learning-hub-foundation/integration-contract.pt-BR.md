@@ -2,7 +2,7 @@
 
 [🇺🇸 English](integration-contract.md) · [🇧🇷 Português](integration-contract.pt-BR.md) · [🇪🇸 Español](integration-contract.es.md)
 
-Status: preliminar, direção normativa para pilotos; JSON Schema exato e fixtures finalizados nas Sprints 07–08. Não há integração de runtime implementada aqui.
+Status: preliminar para manifesto do consumidor e fixtures de integração na Sprint 08. Os schemas e registros versionados de avaliação seguem o [contrato de avaliações](assessment-contract.pt-BR.md). Não há integração de runtime implementada aqui.
 
 ## Versão e transporte
 

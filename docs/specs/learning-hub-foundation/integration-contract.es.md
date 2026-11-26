@@ -2,7 +2,7 @@
 
 [🇺🇸 English](integration-contract.md) · [🇧🇷 Português](integration-contract.pt-BR.md) · [🇪🇸 Español](integration-contract.es.md)
 
-Estado: preliminar, dirección normativa para pilotos; JSON Schema exacto y fixtures se finalizan en los Sprints 07–08. Aquí no se implementa integración de ejecución.
+Estado: preliminar para el manifiesto del consumidor y fixtures de integración en Sprint 08. Los esquemas y registros versionados de evaluación siguen el [contrato de evaluación](assessment-contract.es.md). Aquí no se implementa integración de ejecución.
 
 ## Versión y transporte
 

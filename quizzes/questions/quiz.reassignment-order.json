@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.reassignment-order",
+  "chapter_id": "fundamentals.variables-and-naming",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The right side uses the old score 4; its result 7 is assigned back to score before printing.",
+    "pt-BR": "O lado direito usa o score anterior 4; seu resultado 7 é atribuído novamente a score antes da impressão.",
+    "es": "El lado derecho usa el score anterior 4; su resultado 7 se asigna de nuevo a score antes de imprimir."
+  },
+  "hints": {
+    "en": [
+      "Evaluate the right-hand side before updating the name."
+    ],
+    "pt-BR": [
+      "Avalie o lado direito antes de atualizar o nome."
+    ],
+    "es": [
+      "Evalúa el lado derecho antes de actualizar el nombre."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/03-variables-and-naming/README.md",
+        "pt-BR": "fundamentals/03-variables-and-naming/README.pt-BR.md",
+        "es": "fundamentals/03-variables-and-naming/README.es.md"
+      },
+      "sections": {
+        "en": "5. Reassignment updates what a name refers to",
+        "pt-BR": "5. A reatribuição atualiza o que um nome referencia",
+        "es": "5. La reasignación actualiza lo que referencia un nombre"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/03-variables-and-naming/README.md",
+        "pt-BR": "fundamentals/03-variables-and-naming/README.pt-BR.md",
+        "es": "fundamentals/03-variables-and-naming/README.es.md"
+      },
+      "sections": {
+        "en": "4. The right-hand side is evaluated first",
+        "pt-BR": "4. O lado direito é avaliado primeiro",
+        "es": "4. El lado derecho se evalúa primero"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "7\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "score = 4\nscore = score + 3\nprint(score)"
+}

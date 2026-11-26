@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.function-result-pipeline",
+  "chapter_id": "functions.functions-working-together",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "double(3) yields 6; add_one receives 6 and returns 7. The intermediate value remains 6.",
+    "pt-BR": "double(3) produz 6; add_one recebe 6 e retorna 7. O valor intermediário permanece 6.",
+    "es": "double(3) produce 6; add_one recibe 6 y devuelve 7. El valor intermedio sigue siendo 6."
+  },
+  "hints": {
+    "en": [
+      "Resolve each call before following its result into the next."
+    ],
+    "pt-BR": [
+      "Resolva cada chamada antes de acompanhar o resultado na próxima."
+    ],
+    "es": [
+      "Resuelve cada llamada antes de seguir su resultado a la siguiente."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/08-functions-working-together/README.md",
+        "pt-BR": "functions/08-functions-working-together/README.pt-BR.md",
+        "es": "functions/08-functions-working-together/README.es.md"
+      },
+      "sections": {
+        "en": "14. Build simple pipelines one step at a time",
+        "pt-BR": "14. Construa pipelines simples uma etapa por vez",
+        "es": "14. Construye pipelines simples paso a paso"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "6 7\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "def double(value):\n    return value * 2\n\ndef add_one(value):\n    return value + 1\n\nmiddle = double(3)\nfinal = add_one(middle)\nprint(middle, final)"
+}

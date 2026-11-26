@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.round-ties-to-even",
+  "chapter_id": "strings-and-numbers.numeric-builtins",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "For exact half-way cases, round chooses the nearest even integer: 6 and 8.",
+    "pt-BR": "Para empates exatos, round escolhe o inteiro par mais próximo: 6 e 8.",
+    "es": "En empates exactos, round elige el entero par más cercano: 6 y 8."
+  },
+  "hints": {
+    "en": [
+      "Check both equally close integers for each number."
+    ],
+    "pt-BR": [
+      "Confira os dois inteiros equidistantes de cada número."
+    ],
+    "es": [
+      "Comprueba los dos enteros equidistantes de cada número."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/04-numeric-builtins/README.md",
+        "pt-BR": "strings-and-numbers/04-numeric-builtins/README.pt-BR.md",
+        "es": "strings-and-numbers/04-numeric-builtins/README.es.md"
+      },
+      "sections": {
+        "en": "14. Python does not use \"5 always rounds up\"",
+        "pt-BR": "14. Python não usa a regra \"5 sempre arredonda para cima\"",
+        "es": "14. Python no usa la regla \"5 siempre redondea hacia arriba\""
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "6\n8\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(round(6.5))\nprint(round(7.5))"
+}

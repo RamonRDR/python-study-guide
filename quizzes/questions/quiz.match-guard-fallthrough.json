@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.match-guard-fallthrough",
+  "chapter_id": "program-flow.match-and-case",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The tuple matches the first pattern but 3 fails the guard >= 5. The second tuple pattern succeeds, producing small 3.",
+    "pt-BR": "A tupla corresponde ao primeiro padrão, mas 3 falha no guard >= 5. O segundo padrão de tupla corresponde, produzindo small 3.",
+    "es": "La tupla coincide con el primer patrón, pero 3 no cumple el guard >= 5. El segundo patrón de tupla coincide y produce small 3."
+  },
+  "hints": {
+    "en": [
+      "Check structure and guard separately, then consider the next case."
+    ],
+    "pt-BR": [
+      "Confira estrutura e guard separadamente, depois considere o próximo case."
+    ],
+    "es": [
+      "Comprueba estructura y guard por separado, después considera el siguiente case."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/03-match-and-case/README.md",
+        "pt-BR": "program-flow/03-match-and-case/README.pt-BR.md",
+        "es": "program-flow/03-match-and-case/README.es.md"
+      },
+      "sections": {
+        "en": "21. Guards add a condition after a pattern succeeds",
+        "pt-BR": "21. Guards adicionam uma condição depois que um padrão é bem-sucedido",
+        "es": "21. Los guards añaden una condición después de que un patrón tiene éxito"
+      }
+    },
+    {
+      "paths": {
+        "en": "program-flow/03-match-and-case/README.md",
+        "pt-BR": "program-flow/03-match-and-case/README.pt-BR.md",
+        "es": "program-flow/03-match-and-case/README.es.md"
+      },
+      "sections": {
+        "en": "22. A guard is not part of the structural pattern",
+        "pt-BR": "22. Um guard não faz parte do padrão estrutural",
+        "es": "22. Un guard no forma parte del patrón estructural"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "small 3\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "event = (\"size\", 3)\nmatch event:\n    case (\"size\", amount) if amount >= 5:\n        print(\"large\", amount)\n    case (\"size\", amount):\n        print(\"small\", amount)\n    case _:\n        print(\"unknown\")"
+}

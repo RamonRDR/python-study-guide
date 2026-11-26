@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.parameter-rebind-versus-mutation",
+  "chapter_id": "functions.data-flow-between-functions",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The first call mutates the shared list by appending 2. Rebinding the local parameter to [9] does not change the caller's binding. The returned list is separate.",
+    "pt-BR": "A primeira chamada altera a lista compartilhada ao adicionar 2. Reatribuir o parâmetro local a [9] não muda a ligação do chamador. A lista retornada é separada.",
+    "es": "La primera llamada modifica la lista compartida al añadir 2. Reasignar el parámetro local a [9] no cambia la vinculación de quien llama. La lista devuelta es separada."
+  },
+  "hints": {
+    "en": [
+      "Trace object mutation before the local name is rebound."
+    ],
+    "pt-BR": [
+      "Rastreie a mutação do objeto antes da reatribuição do nome local."
+    ],
+    "es": [
+      "Rastrea la mutación del objeto antes de reasignar el nombre local."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/09-data-flow-between-functions/README.md",
+        "pt-BR": "functions/09-data-flow-between-functions/README.pt-BR.md",
+        "es": "functions/09-data-flow-between-functions/README.es.md"
+      },
+      "sections": {
+        "en": "8. Rebinding a list parameter is different from mutating the list",
+        "pt-BR": "8. Reatribuir um parâmetro lista é diferente de mutar a lista",
+        "es": "8. Reasignar un parámetro lista es distinto de mutar la lista"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "[1, 2]\n[9]\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "def change(items):\n    items.append(2)\n    items = [9]\n    return items\n\noriginal = [1]\nresult = change(original)\nprint(original)\nprint(result)"
+}

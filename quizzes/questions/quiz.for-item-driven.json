@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.for-item-driven",
+  "chapter_id": "program-flow.for-loops-and-iteration",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "A Python for loop can process each item of a list directly, without a manually maintained numeric index.",
+    "pt-BR": "Um loop for do Python pode processar cada item de uma lista diretamente, sem manter manualmente um índice numérico.",
+    "es": "Un bucle for de Python puede procesar directamente cada elemento de una lista, sin mantener manualmente un índice numérico."
+  },
+  "explanation": {
+    "en": "for gets the next item from the iterable and binds it to the target.",
+    "pt-BR": "for obtém o próximo item do iterável e o associa ao alvo.",
+    "es": "for obtiene el siguiente elemento del iterable y lo vincula al objetivo."
+  },
+  "hints": {
+    "en": [
+      "Think about what supplies the next value."
+    ],
+    "pt-BR": [
+      "Pense no que fornece o próximo valor."
+    ],
+    "es": [
+      "Piensa en qué proporciona el siguiente valor."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/04-for-loops-and-iteration/README.md",
+        "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+        "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+      },
+      "sections": {
+        "en": "4. Python's `for` is item-driven",
+        "pt-BR": "4. O `for` do Python é orientado por itens",
+        "es": "4. El `for` de Python está orientado por elementos"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

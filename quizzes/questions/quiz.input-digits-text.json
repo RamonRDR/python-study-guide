@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.input-digits-text",
+  "chapter_id": "fundamentals.print-and-input",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "When input() reads the characters 42 typed by a user, it returns the string \"42\" without converting it to an integer.",
+    "pt-BR": "Quando input() lê os caracteres 42 digitados pelo usuário, retorna a string \"42\" sem convertê-la em inteiro.",
+    "es": "Cuando input() lee los caracteres 42 escritos por el usuario, devuelve la cadena \"42\" sin convertirla en entero."
+  },
+  "explanation": {
+    "en": "input() returns text; numeric conversion requires a separate operation.",
+    "pt-BR": "input() retorna texto; conversão numérica exige operação separada.",
+    "es": "input() devuelve texto; la conversión numérica requiere otra operación."
+  },
+  "hints": {
+    "en": [
+      "Distinguish reading from conversion."
+    ],
+    "pt-BR": [
+      "Distinga leitura de conversão."
+    ],
+    "es": [
+      "Distingue lectura de conversión."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "12. `input()` returns text",
+        "pt-BR": "12. `input()` retorna texto",
+        "es": "12. `input()` retorna texto"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

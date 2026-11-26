@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.for-accumulator-initial-value",
+  "chapter_id": "program-flow.for-loops-and-iteration",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The accumulator begins at 10, then adds 2, 3 and 4, reaching 19.",
+    "pt-BR": "O acumulador começa em 10, depois soma 2, 3 e 4, chegando a 19.",
+    "es": "El acumulador empieza en 10, luego suma 2, 3 y 4, llegando a 19."
+  },
+  "hints": {
+    "en": [
+      "Include the initial value in your trace."
+    ],
+    "pt-BR": [
+      "Inclua o valor inicial no rastreamento."
+    ],
+    "es": [
+      "Incluye el valor inicial en tu rastreo."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/04-for-loops-and-iteration/README.md",
+        "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+        "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+      },
+      "sections": {
+        "en": "22. Accumulating a result",
+        "pt-BR": "22. Acumulando um resultado",
+        "es": "22. Acumular un resultado"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "19\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "total = 10\nfor value in [2, 3, 4]:\n    total += value\nprint(total)"
+}

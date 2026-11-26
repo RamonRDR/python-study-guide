@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.print-custom-separator",
+  "chapter_id": "fundamentals.print-and-input",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "sep inserts / between the two values; the default ending remains a newline.",
+    "pt-BR": "sep insere / entre os dois valores; o final padrão continua sendo uma quebra de linha.",
+    "es": "sep inserta / entre los dos valores; el final predeterminado sigue siendo un salto de línea."
+  },
+  "hints": {
+    "en": [
+      "Track the separator and the line ending independently."
+    ],
+    "pt-BR": [
+      "Acompanhe separador e final de linha separadamente."
+    ],
+    "es": [
+      "Sigue el separador y el final de línea por separado."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "5. Change the separator with `sep`",
+        "pt-BR": "5. Altere o separador com `sep`",
+        "es": "5. Cambia el separador con `sep`"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "A/B\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(\"A\", \"B\", sep=\"/\")"
+}

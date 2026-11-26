@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.list-stored-item-type",
+  "chapter_id": "collections.list-creation-and-indexing",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "In [\"tea\", 7, False], index 1 returns an integer, not a string.",
+    "pt-BR": "Em [\"tea\", 7, False], o índice 1 retorna um inteiro, não uma string.",
+    "es": "En [\"tea\", 7, False], el índice 1 devuelve un entero, no una cadena."
+  },
+  "explanation": {
+    "en": "A list returns the stored item with its own type; position 1 holds 7.",
+    "pt-BR": "Uma lista retorna o item armazenado com seu próprio tipo; a posição 1 contém 7.",
+    "es": "Una lista devuelve el elemento almacenado con su propio tipo; la posición 1 contiene 7."
+  },
+  "hints": {
+    "en": [
+      "Count from zero and inspect the literal."
+    ],
+    "pt-BR": [
+      "Conte a partir de zero e examine o literal."
+    ],
+    "es": [
+      "Cuenta desde cero e inspecciona el literal."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/01-list-creation-and-indexing/README.md",
+        "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+        "es": "collections/01-list-creation-and-indexing/README.es.md"
+      },
+      "sections": {
+        "en": "9. Indexing returns the stored item",
+        "pt-BR": "9. A indexação retorna o item armazenado",
+        "es": "9. La indexación devuelve el elemento almacenado"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

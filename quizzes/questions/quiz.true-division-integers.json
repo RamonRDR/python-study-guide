@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.true-division-integers",
+  "chapter_id": "strings-and-numbers.int-float-and-bool",
+  "difficulty": "easy",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "True division of 8 by 4 produces the float 2.0, even though the quotient is whole.",
+    "pt-BR": "A divisão verdadeira de 8 por 4 produz o float 2.0, embora o quociente seja inteiro.",
+    "es": "La división verdadera de 8 por 4 produce el float 2.0 aunque el cociente sea entero."
+  },
+  "hints": {
+    "en": [
+      "Look at the operator, not only the mathematical quotient."
+    ],
+    "pt-BR": [
+      "Observe o operador, não apenas o quociente matemático."
+    ],
+    "es": [
+      "Observa el operador, no solo el cociente matemático."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/03-int-float-and-bool/README.md",
+        "pt-BR": "strings-and-numbers/03-int-float-and-bool/README.pt-BR.md",
+        "es": "strings-and-numbers/03-int-float-and-bool/README.es.md"
+      },
+      "sections": {
+        "en": "7. `/` is true division",
+        "es": "7. `/` es división verdadera",
+        "pt-BR": "7. `/` é divisão verdadeira"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "2.0\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(8 / 4)"
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.install-declared-requirements",
+  "chapter_id": "getting-started.packages-and-dependencies",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "With the correct virtual-environment interpreter selected, which command installs packages declared in requirements.txt?",
+    "pt-BR": "Com o interpretador correto do ambiente virtual selecionado, qual comando instala os pacotes declarados em requirements.txt?",
+    "es": "Con el intérprete correcto del entorno virtual seleccionado, ¿qué comando instala los paquetes declarados en requirements.txt?"
+  },
+  "explanation": {
+    "en": "The -r option tells pip install to read the requirements file. freeze lists installed versions; show and check inspect the environment.",
+    "pt-BR": "A opção -r informa a pip install que deve ler o arquivo de requisitos. freeze lista versões instaladas; show e check inspecionam o ambiente.",
+    "es": "La opción -r indica a pip install que lea el archivo de requisitos. freeze lista versiones instaladas; show y check inspeccionan el entorno."
+  },
+  "hints": {
+    "en": [
+      "Look for the command that consumes a dependency file."
+    ],
+    "pt-BR": [
+      "Procure o comando que consome um arquivo de dependências."
+    ],
+    "es": [
+      "Busca el comando que consume un archivo de dependencias."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "getting-started/05-packages-and-dependencies/README.md",
+        "pt-BR": "getting-started/05-packages-and-dependencies/README.pt-BR.md",
+        "es": "getting-started/05-packages-and-dependencies/README.es.md"
+      },
+      "sections": {
+        "en": "3. Recreate and compare",
+        "pt-BR": "3. Recrie e compare",
+        "es": "3. Recrea y compara"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "install"
+  },
+  "choices": [
+    {
+      "id": "freeze",
+      "text": {
+        "en": "python -m pip freeze",
+        "pt-BR": "python -m pip freeze",
+        "es": "python -m pip freeze"
+      }
+    },
+    {
+      "id": "install",
+      "text": {
+        "en": "python -m pip install -r requirements.txt",
+        "pt-BR": "python -m pip install -r requirements.txt",
+        "es": "python -m pip install -r requirements.txt"
+      }
+    },
+    {
+      "id": "show",
+      "text": {
+        "en": "python -m pip show requests",
+        "pt-BR": "python -m pip show requests",
+        "es": "python -m pip show requests"
+      }
+    },
+    {
+      "id": "check",
+      "text": {
+        "en": "python -m pip check",
+        "pt-BR": "python -m pip check",
+        "es": "python -m pip check"
+      }
+    }
+  ]
+}

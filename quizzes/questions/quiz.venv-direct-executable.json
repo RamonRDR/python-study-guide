@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.venv-direct-executable",
+  "chapter_id": "getting-started.virtual-environments",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "You can run a project's virtual-environment Python directly by its executable path without activating the environment first.",
+    "pt-BR": "Você pode executar diretamente o Python do ambiente virtual de um projeto pelo caminho de seu executável sem ativar o ambiente antes.",
+    "es": "Puedes ejecutar directamente el Python del entorno virtual de un proyecto por la ruta de su ejecutable sin activar primero el entorno."
+  },
+  "explanation": {
+    "en": "Activation changes shell command lookup; the explicit executable path already selects the environment.",
+    "pt-BR": "A ativação muda a busca de comandos no shell; o caminho explícito do executável já seleciona o ambiente.",
+    "es": "La activación cambia la búsqueda de comandos del shell; la ruta explícita del ejecutable ya selecciona el entorno."
+  },
+  "hints": {
+    "en": [
+      "Consider how the shell chooses an executable."
+    ],
+    "pt-BR": [
+      "Considere como o shell escolhe um executável."
+    ],
+    "es": [
+      "Considera cómo el shell elige un ejecutable."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "getting-started/04-virtual-environments/README.md",
+        "pt-BR": "getting-started/04-virtual-environments/README.pt-BR.md",
+        "es": "getting-started/04-virtual-environments/README.es.md"
+      },
+      "sections": {
+        "en": "2. Activate and verify",
+        "pt-BR": "2. Ative e verifique",
+        "es": "2. Activa y comprueba"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.division-zero-error",
+  "chapter_id": "strings-and-numbers.int-float-and-bool",
+  "difficulty": "easy",
+  "type": "error_identification",
+  "prompt": {
+    "en": "Which exception does this expression raise?",
+    "pt-BR": "Qual exceção esta expressão gera?",
+    "es": "¿Qué excepción produce esta expresión?"
+  },
+  "explanation": {
+    "en": "Division by zero raises ZeroDivisionError.",
+    "pt-BR": "Divisão por zero gera ZeroDivisionError.",
+    "es": "La división por cero produce ZeroDivisionError."
+  },
+  "hints": {
+    "en": [
+      "The operands are valid numbers; inspect the denominator."
+    ],
+    "pt-BR": [
+      "Os operandos são números válidos; examine o denominador."
+    ],
+    "es": [
+      "Los operandos son números válidos; examina el denominador."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/03-int-float-and-bool/README.md",
+        "pt-BR": "strings-and-numbers/03-int-float-and-bool/README.pt-BR.md",
+        "es": "strings-and-numbers/03-int-float-and-bool/README.es.md"
+      },
+      "sections": {
+        "en": "12. Division by zero is an error",
+        "es": "12. Dividir entre cero es un error",
+        "pt-BR": "12. Divisão por zero é um erro"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "zero-division-error"
+  },
+  "choices": [
+    {
+      "id": "type-error",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    },
+    {
+      "id": "zero-division-error",
+      "text": {
+        "en": "ZeroDivisionError",
+        "pt-BR": "ZeroDivisionError",
+        "es": "ZeroDivisionError"
+      }
+    },
+    {
+      "id": "value-error",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    },
+    {
+      "id": "name-error",
+      "text": {
+        "en": "NameError",
+        "pt-BR": "NameError",
+        "es": "NameError"
+      }
+    }
+  ],
+  "code": "print(5 / 0)"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.boolean-precedence",
+  "chapter_id": "program-flow.conditions-comparisons-and-boolean-logic",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "not False is True, then True and False is False; the final or True makes the result True.",
+    "pt-BR": "not False é True, depois True and False é False; o or True final torna o resultado True.",
+    "es": "not False es True, luego True and False es False; el or True final hace que el resultado sea True."
+  },
+  "hints": {
+    "en": [
+      "Apply not before and, and and before or."
+    ],
+    "pt-BR": [
+      "Aplique not antes de and, e and antes de or."
+    ],
+    "es": [
+      "Aplica not antes de and, y and antes de or."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+        "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+        "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+      },
+      "sections": {
+        "en": "21. Precedence affects how Boolean expressions are grouped",
+        "pt-BR": "21. Precedência afeta como expressões booleanas são agrupadas",
+        "es": "21. La precedencia afecta cómo se agrupan las expresiones booleanas"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "True\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(not False and False or True)"
+}

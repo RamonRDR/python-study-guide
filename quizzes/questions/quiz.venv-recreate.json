@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.venv-recreate",
+  "chapter_id": "getting-started.virtual-environments",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "You move a project to another machine. Which approach follows the guide's virtual-environment practice?",
+    "pt-BR": "Você move um projeto para outra máquina. Qual abordagem segue a prática de ambientes virtuais do guia?",
+    "es": "Trasladas un proyecto a otra máquina. ¿Qué enfoque sigue la práctica de entornos virtuales de la guía?"
+  },
+  "explanation": {
+    "en": "Recreate the environment from the appropriate base Python and dependency declaration; generated environments are not portable project source.",
+    "pt-BR": "Recrie o ambiente com o Python base apropriado e a declaração de dependências; ambientes gerados não são código-fonte portátil do projeto.",
+    "es": "Recrea el entorno con el Python base adecuado y la declaración de dependencias; los entornos generados no son código fuente portátil del proyecto."
+  },
+  "hints": {
+    "en": [
+      "Separate generated files from project source."
+    ],
+    "pt-BR": [
+      "Separe arquivos gerados do código-fonte."
+    ],
+    "es": [
+      "Separa los archivos generados del código fuente."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "getting-started/04-virtual-environments/README.md",
+        "pt-BR": "getting-started/04-virtual-environments/README.pt-BR.md",
+        "es": "getting-started/04-virtual-environments/README.es.md"
+      },
+      "sections": {
+        "en": "4. Leave and recreate",
+        "pt-BR": "4. Saia e recrie",
+        "es": "4. Sal y recrea"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "recreate"
+  },
+  "choices": [
+    {
+      "id": "copy-venv",
+      "text": {
+        "en": "Copy .venv alone",
+        "pt-BR": "Copiar somente .venv",
+        "es": "Copiar solo .venv"
+      }
+    },
+    {
+      "id": "global",
+      "text": {
+        "en": "Install into system Python",
+        "pt-BR": "Instalar no Python do sistema",
+        "es": "Instalar en el Python del sistema"
+      }
+    },
+    {
+      "id": "recreate",
+      "text": {
+        "en": "Copy source and requirements; recreate .venv",
+        "pt-BR": "Copiar código e requirements; recriar .venv",
+        "es": "Copiar código y requirements; recrear .venv"
+      }
+    },
+    {
+      "id": "commit-env",
+      "text": {
+        "en": "Commit the generated .venv",
+        "pt-BR": "Versionar a .venv gerada",
+        "es": "Versionar la .venv generada"
+      }
+    }
+  ]
+}

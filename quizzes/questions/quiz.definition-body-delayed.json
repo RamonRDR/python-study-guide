@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.definition-body-delayed",
+  "chapter_id": "functions.defining-and-calling-functions",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Executing a def statement for an ordinary function with a simple body does not execute that body; a subsequent call can execute it.",
+    "pt-BR": "Executar uma instrução def para uma função comum com corpo simples não executa esse corpo; uma chamada posterior pode executá-lo.",
+    "es": "Ejecutar una sentencia def para una función ordinaria con cuerpo simple no ejecuta ese cuerpo; una llamada posterior puede ejecutarlo."
+  },
+  "explanation": {
+    "en": "def creates and binds the function; the body runs when it is called.",
+    "pt-BR": "def cria e associa a função; o corpo executa quando ela é chamada.",
+    "es": "def crea y vincula la función; el cuerpo se ejecuta al llamarla."
+  },
+  "hints": {
+    "en": [
+      "Distinguish definition from invocation."
+    ],
+    "pt-BR": [
+      "Distinga definição de chamada."
+    ],
+    "es": [
+      "Distingue definición de llamada."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/01-defining-and-calling-functions/README.md",
+        "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+        "es": "functions/01-defining-and-calling-functions/README.es.md"
+      },
+      "sections": {
+        "en": "4. A definition does not run the body",
+        "pt-BR": "4. Uma definição não executa o corpo",
+        "es": "4. Una definición no ejecuta el cuerpo"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

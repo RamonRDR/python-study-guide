@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.positional-argument-binding",
+  "chapter_id": "functions.parameters-and-arguments",
+  "difficulty": "easy",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The first argument binds to left and the second to right. 8 - 3 is 5.",
+    "pt-BR": "O primeiro argumento se associa a left e o segundo a right. 8 - 3 é 5.",
+    "es": "El primer argumento se vincula a left y el segundo a right. 8 - 3 es 5."
+  },
+  "hints": {
+    "en": [
+      "Match arguments to parameters by position."
+    ],
+    "pt-BR": [
+      "Associe argumentos aos parâmetros pela posição."
+    ],
+    "es": [
+      "Vincula argumentos a parámetros por posición."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/02-parameters-and-arguments/README.md",
+        "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+        "es": "functions/02-parameters-and-arguments/README.es.md"
+      },
+      "sections": {
+        "en": "10. Positional arguments bind by position",
+        "pt-BR": "10. Argumentos posicionais se associam pela posição",
+        "es": "10. Los argumentos posicionales se vinculan por posición"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "5\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "def show_difference(left, right):\n    print(left - right)\n\nshow_difference(8, 3)"
+}

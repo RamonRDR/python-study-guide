@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.assignment-symbol",
+  "chapter_id": "fundamentals.variables-and-naming",
+  "difficulty": "easy",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Replace only ____ with the assignment operator. Enter only the symbol, without spaces.",
+    "pt-BR": "Substitua apenas ____ pelo operador de atribuição. Digite somente o símbolo, sem espaços.",
+    "es": "Sustituye solo ____ por el operador de asignación. Introduce únicamente el símbolo, sin espacios."
+  },
+  "explanation": {
+    "en": "= binds the evaluated value on the right to the name on the left.",
+    "pt-BR": "= associa o valor avaliado à direita ao nome à esquerda.",
+    "es": "= vincula el valor evaluado a la derecha con el nombre de la izquierda."
+  },
+  "hints": {
+    "en": [
+      "This statement stores a value; it does not compare two values."
+    ],
+    "pt-BR": [
+      "Esta instrução armazena um valor; não compara dois valores."
+    ],
+    "es": [
+      "Esta instrucción almacena un valor; no compara dos valores."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/03-variables-and-naming/README.md",
+        "pt-BR": "fundamentals/03-variables-and-naming/README.pt-BR.md",
+        "es": "fundamentals/03-variables-and-naming/README.es.md"
+      },
+      "sections": {
+        "en": "2. Assignment uses `=`",
+        "pt-BR": "2. A atribuição usa `=`",
+        "es": "2. La asignación usa `=`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "="
+    ],
+    "comparison": "exact"
+  },
+  "code": "score ____ 8"
+}

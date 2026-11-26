@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.chained-comparison-boundary",
+  "chapter_id": "program-flow.conditions-comparisons-and-boolean-logic",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "The expression 2 <= 2 < 5 is True.",
+    "pt-BR": "A expressão 2 <= 2 < 5 é True.",
+    "es": "La expresión 2 <= 2 < 5 es True."
+  },
+  "explanation": {
+    "en": "The first comparison includes equality; the second is strict. Both hold.",
+    "pt-BR": "A primeira comparação inclui igualdade; a segunda é estrita. Ambas valem.",
+    "es": "La primera comparación incluye igualdad; la segunda es estricta. Ambas se cumplen."
+  },
+  "hints": {
+    "en": [
+      "Check each comparison separately."
+    ],
+    "pt-BR": [
+      "Confira cada comparação separadamente."
+    ],
+    "es": [
+      "Comprueba cada comparación por separado."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+        "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+        "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+      },
+      "sections": {
+        "en": "5. Chained comparisons express intervals clearly",
+        "pt-BR": "5. Comparações encadeadas expressam intervalos com clareza",
+        "es": "5. Las comparaciones encadenadas expresan intervalos con claridad"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

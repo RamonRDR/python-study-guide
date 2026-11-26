@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.list-add-one",
+  "chapter_id": "collections.modifying-lists-and-methods",
+  "difficulty": "easy",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Complete ____ with the list method that adds one value to its end. Enter only the method name.",
+    "pt-BR": "Complete ____ com o método de lista que adiciona um valor ao final. Digite somente o nome do método.",
+    "es": "Completa ____ con el método de lista que añade un valor al final. Introduce solo el nombre del método."
+  },
+  "explanation": {
+    "en": "append adds one item to the existing list.",
+    "pt-BR": "append adiciona um item à lista existente.",
+    "es": "append añade un elemento a la lista existente."
+  },
+  "hints": {
+    "en": [
+      "The argument must become one new item."
+    ],
+    "pt-BR": [
+      "O argumento deve virar um novo item."
+    ],
+    "es": [
+      "El argumento debe convertirse en un elemento nuevo."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/02-modifying-lists-and-methods/README.md",
+        "pt-BR": "collections/02-modifying-lists-and-methods/README.pt-BR.md",
+        "es": "collections/02-modifying-lists-and-methods/README.es.md"
+      },
+      "sections": {
+        "en": "5. Adding one item with `append()`",
+        "pt-BR": "5. Adicionando um item com `append()`",
+        "es": "5. Añadir un elemento con `append()`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "append"
+    ],
+    "comparison": "exact"
+  },
+  "code": "tasks = [\"read\"]\ntasks.____(\"review\")"
+}

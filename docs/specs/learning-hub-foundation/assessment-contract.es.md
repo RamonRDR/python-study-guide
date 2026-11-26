@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprint 07A fusionado y CI posterior aprobado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45871235887)). Sprint 07B es el piloto aprobado: diez quizzes y tres ejercicios existentes, sin ampliar más el banco ni ejecutar en navegador.
+Sprints 07A y 07B fusionados y CI posterior aprobado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [CI de B](https://github.com/RamonRDR/python-study-guide/actions/runs/45872609920)). C1 implementa 78 cuestionarios de fundamentos; migración más allá del piloto y ejecución en navegador quedan fuera del alcance.
 
 ## Alcance y aceptación
 - Inventario: 115 entradas, 345 rutas localizadas, 64 quizzes easy / 67 medium / 29 hard (2.850 XP a 10/20/30). La [matriz de distribución](assessment-matrix.json) es metadato de planificación de ingeniería, no manifiesto del consumidor. Las asignaciones cero preservan práctica manual o evitan evaluaciones repetidas.
@@ -17,7 +17,7 @@ Sprint 07A fusionado y CI posterior aprobado ([PR #102](https://github.com/Ramon
 A: contrato, matriz y validadores de fixtures; B: diez quizzes (dos por tipo) y tres ejercicios existentes (vowel-counter, binary-insertion-index, inventory-reconciliation); C1: completar 78 quizzes de fundamentos; C2: completar 160; D: otros 27 ejercicios; E: cierre AC-07. Los diez pilotos cuentan dentro de 160. Ningún PR posterior antes de fusión y CI aprobado del anterior.
 
 ## Evidencias y limitaciones
-Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [cierre de Sprint 06](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Los 30 ejercicios existentes tienen 192 casos y ninguna dependencia externa declarada; ejecución en navegador no verificada. El piloto antiguo de vocales carece de practice_mode y assumptions de complejidad; normalizarlos explícitamente durante la migración. Preservar índice legado de 29 entradas hasta migración aprobada. Revisar evidencia didáctica por pregunta y soluciones por ejercicio en PR correspondientes. CI en head exacto, Codex Review, Final Pre-Merge Audit y autorización del mantenedor siguen obligatorios.
+Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [cierre de Sprint 06](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Los 30 ejercicios existentes tienen 192 casos y ninguna dependencia externa declarada; ejecución en navegador no verificada. El piloto antiguo de vocales carecía de practice_mode y assumptions de complejidad; se normalizaron en B. Preservar índice legado de 29 entradas hasta migración aprobada. Revisar evidencia didáctica por pregunta y soluciones por ejercicio en PR correspondientes. CI en head exacto, Codex Review, Final Pre-Merge Audit y autorización del mantenedor siguen obligatorios.
 
 ## Aceptación del piloto (07B)
 
@@ -25,3 +25,10 @@ Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [cierre de Sprint 06](
 - Migrar solo vowel-counter, binary-insertion-index e inventory-reconciliation a 1.0.0, preservando los 24 casos canónicos e implementaciones existentes. Mantener intactos los otros 27 registros legados y el índice de expansión. Índice parcial versionado identifica los tres registros migrados.
 - Ejecutar ambos índices nuevos en CI, rechazar registros versionados no indexados o inesperados, probar límites de asignación y verificar soluciones confiables y candidatos incorrectos representativos. Rechazar resultados esperados contradictorios para entradas con tipos y valores iguales. Cuando se exija un contenedor nuevo, rechazar alias a contenedores mutables internos de las entradas y alias directos. Detección de mutación compara estado final, no cada operación intermedia.
 - Sin ejecución de código del alumno, nueva dependencia de pago ni afirmación de runtime. Los 150 quizzes y 27 migraciones restantes pertenecen a C1/C2/D; AC-07 se cierra solo en E.
+
+## Aceptación de fundamentos (07C1)
+
+- Completar todas las asignaciones aprobadas de módulos 00–05, incluidas las diez preguntas piloto: 78 en total (37 easy, 30 medium, 11 hard; 1.300 XP). Añadir solo 68 registros. Conservar los tres ejercicios versionados y banco legado. C2 cubre las otras 82 preguntas.
+- Leer las secciones didácticas en EN/PT-BR/ES antes de redactar; mantener títulos localizados exactos, IDs estables, ejemplos originales, código único compartido y respuestas aceptadas explícitas. Refinar requisitos previos de salto de línea en las dos preguntas piloto de salida; conservar respuestas. Equilibrar verdadero/falso en el banco ampliado y variar posiciones de opciones.
+- Conservar regresiones del piloto y exigir asignación exacta por lección/dificultad, cobertura del índice, paridad de idiomas y calificación determinista. Probar ejemplos literales confiables, no código arbitrario leído de registros. Revisar ambigüedad, casos límite, dificultad, navegación y privacidad antes de solicitar aprobación de fusión.
+- Sin runtime, dependencia de pago, migración de ejercicios ni cierre AC-07 en C1. Todos los gates en el head exacto siguen siendo obligatorios.

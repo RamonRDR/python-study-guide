@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.split-preserves-empty-fields",
+  "chapter_id": "strings-and-numbers.common-string-methods",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "An explicit separator preserves the empty field between adjacent delimiters; join inserts / between all three fields.",
+    "pt-BR": "Um separador explícito preserva o campo vazio entre delimitadores adjacentes; join insere / entre os três campos.",
+    "es": "Un separador explícito conserva el campo vacío entre delimitadores adyacentes; join inserta / entre los tres campos."
+  },
+  "hints": {
+    "en": [
+      "Count fields between each pair of delimiters."
+    ],
+    "pt-BR": [
+      "Conte os campos entre os delimitadores."
+    ],
+    "es": [
+      "Cuenta los campos entre los delimitadores."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/02-common-string-methods/README.md",
+        "pt-BR": "strings-and-numbers/02-common-string-methods/README.pt-BR.md",
+        "es": "strings-and-numbers/02-common-string-methods/README.es.md"
+      },
+      "sections": {
+        "en": "16. `split(separator)` uses an explicit delimiter",
+        "es": "16. `split(separator)` usa un delimitador explícito",
+        "pt-BR": "16. `split(separator)` usa um delimitador explícito"
+      }
+    },
+    {
+      "paths": {
+        "en": "strings-and-numbers/02-common-string-methods/README.md",
+        "pt-BR": "strings-and-numbers/02-common-string-methods/README.pt-BR.md",
+        "es": "strings-and-numbers/02-common-string-methods/README.es.md"
+      },
+      "sections": {
+        "en": "18. `join()` combines strings with a separator",
+        "es": "18. `join()` combina strings usando un separador",
+        "pt-BR": "18. `join()` combina strings usando um separador"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "red//blue\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "parts = \"red||blue\".split(\"|\")\nprint(\"/\".join(parts))"
+}

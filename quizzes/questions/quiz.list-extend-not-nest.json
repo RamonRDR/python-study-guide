@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.list-extend-not-nest",
+  "chapter_id": "collections.modifying-lists-and-methods",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "extend adds each item from the second list, not the whole list as one item.",
+    "pt-BR": "extend adiciona cada item da segunda lista, não a lista inteira como um item.",
+    "es": "extend añade cada elemento de la segunda lista, no la lista completa como un elemento."
+  },
+  "hints": {
+    "en": [
+      "Compare extend with append."
+    ],
+    "pt-BR": [
+      "Compare extend com append."
+    ],
+    "es": [
+      "Compara extend con append."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/02-modifying-lists-and-methods/README.md",
+        "pt-BR": "collections/02-modifying-lists-and-methods/README.pt-BR.md",
+        "es": "collections/02-modifying-lists-and-methods/README.es.md"
+      },
+      "sections": {
+        "en": "7. Adding several items with `extend()`",
+        "pt-BR": "7. Adicionando vários itens com `extend()`",
+        "es": "7. Añadir varios elementos con `extend()`"
+      }
+    },
+    {
+      "paths": {
+        "en": "collections/02-modifying-lists-and-methods/README.md",
+        "pt-BR": "collections/02-modifying-lists-and-methods/README.pt-BR.md",
+        "es": "collections/02-modifying-lists-and-methods/README.es.md"
+      },
+      "sections": {
+        "en": "6. `append()` adds exactly one item",
+        "pt-BR": "6. `append()` adiciona exatamente um item",
+        "es": "6. `append()` añade exactamente un elemento"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "[1, 2, 3]\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "values = [1]\nvalues.extend([2, 3])\nprint(values)"
+}

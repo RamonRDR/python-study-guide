@@ -2,7 +2,7 @@
 
 [🇺🇸 English](integration-contract.md) · [🇧🇷 Português](integration-contract.pt-BR.md) · [🇪🇸 Español](integration-contract.es.md)
 
-Status: preliminary, normative direction for content pilots; exact JSON Schema and fixtures are finalized in Sprints 07–08. No runtime integration is implemented here.
+Status: preliminary for the consumer manifest and integration fixtures in Sprint 08. The versioned assessment schemas and records follow the [assessment contract](assessment-contract.md). No runtime integration is implemented here.
 
 ## Version and transport
 

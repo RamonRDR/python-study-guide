@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.shallow-list-copy-nested",
+  "chapter_id": "collections.modifying-lists-and-methods",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "copy creates a separate outer list but shares the inner list. The inner append affects both; the outer append affects only copied.",
+    "pt-BR": "copy cria uma lista externa separada, mas compartilha a interna. O append interno afeta ambas; o externo afeta apenas copied.",
+    "es": "copy crea una lista externa separada, pero comparte la interna. El append interno afecta a ambas; el externo solo a copied."
+  },
+  "hints": {
+    "en": [
+      "Draw the two outer lists and their inner references."
+    ],
+    "pt-BR": [
+      "Desenhe as duas listas externas e suas referências internas."
+    ],
+    "es": [
+      "Dibuja las dos listas externas y sus referencias internas."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/02-modifying-lists-and-methods/README.md",
+        "pt-BR": "collections/02-modifying-lists-and-methods/README.pt-BR.md",
+        "es": "collections/02-modifying-lists-and-methods/README.es.md"
+      },
+      "sections": {
+        "en": "23. Creating a separate list with `copy()`",
+        "pt-BR": "23. Criando uma lista separada com `copy()`",
+        "es": "23. Crear una lista separada con `copy()`"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "[[1, 2]]\n[[1, 2], [3]]\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "original = [[1]]\ncopied = original.copy()\ncopied[0].append(2)\ncopied.append([3])\nprint(original)\nprint(copied)"
+}

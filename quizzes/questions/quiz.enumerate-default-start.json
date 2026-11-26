@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.enumerate-default-start",
+  "chapter_id": "program-flow.range-enumerate-and-zip",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "enumerate(items) starts its count at 1 when no start is supplied.",
+    "pt-BR": "enumerate(items) começa sua contagem em 1 quando start não é informado.",
+    "es": "enumerate(items) comienza su cuenta en 1 cuando no se proporciona start."
+  },
+  "explanation": {
+    "en": "The default start is 0; start=1 is an explicit alternative.",
+    "pt-BR": "O início padrão é 0; start=1 é uma alternativa explícita.",
+    "es": "El inicio predeterminado es 0; start=1 es una alternativa explícita."
+  },
+  "hints": {
+    "en": [
+      "Recall the usual Python positional convention."
+    ],
+    "pt-BR": [
+      "Lembre a convenção posicional habitual do Python."
+    ],
+    "es": [
+      "Recuerda la convención posicional habitual de Python."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/05-range-enumerate-and-zip/README.md",
+        "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+        "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+      },
+      "sections": {
+        "en": "18. `enumerate()` starts at zero by default",
+        "pt-BR": "18. `enumerate()` começa em zero por padrão",
+        "es": "18. `enumerate()` empieza en cero de forma predeterminada"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

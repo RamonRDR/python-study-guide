@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.loop-else-break-versus-continue",
+  "chapter_id": "program-flow.break-continue-and-loop-else",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The first loop skips 2 and exhausts normally, so prints done. The second stops at 2 with break, skipping its else.",
+    "pt-BR": "O primeiro loop pula 2 e se esgota normalmente, então imprime done. O segundo para em 2 com break, pulando seu else.",
+    "es": "El primer bucle omite 2 y se agota normalmente, por lo que imprime done. El segundo termina en 2 con break, omitiendo su else."
+  },
+  "hints": {
+    "en": [
+      "Trace both loops and determine whether each exhausts normally."
+    ],
+    "pt-BR": [
+      "Rastreie os dois loops e determine se cada um se esgota normalmente."
+    ],
+    "es": [
+      "Rastrea ambos bucles y determina si cada uno se agota normalmente."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/07-break-continue-and-loop-else/README.md",
+        "pt-BR": "program-flow/07-break-continue-and-loop-else/README.pt-BR.md",
+        "es": "program-flow/07-break-continue-and-loop-else/README.es.md"
+      },
+      "sections": {
+        "en": "21. `break` suppresses the loop `else`",
+        "pt-BR": "21. `break` impede o `else` do loop",
+        "es": "21. `break` impide el `else` del bucle"
+      }
+    },
+    {
+      "paths": {
+        "en": "program-flow/07-break-continue-and-loop-else/README.md",
+        "pt-BR": "program-flow/07-break-continue-and-loop-else/README.pt-BR.md",
+        "es": "program-flow/07-break-continue-and-loop-else/README.es.md"
+      },
+      "sections": {
+        "en": "22. `continue` does not suppress loop `else`",
+        "pt-BR": "22. `continue` não impede o `else` do loop",
+        "es": "22. `continue` no impide el `else` del bucle"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "1\n3\ndone\n1\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "for n in [1, 2, 3]:\n    if n == 2:\n        continue\n    print(n)\nelse:\n    print(\"done\")\nfor n in [1, 2, 3]:\n    if n == 2:\n        break\n    print(n)\nelse:\n    print(\"done\")"
+}

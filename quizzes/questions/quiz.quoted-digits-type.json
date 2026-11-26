@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.quoted-digits-type",
+  "chapter_id": "fundamentals.built-in-data-types",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "What is the built-in type of the literal \"12\"?",
+    "pt-BR": "Qual é o tipo embutido do literal \"12\"?",
+    "es": "¿Cuál es el tipo incorporado del literal \"12\"?"
+  },
+  "explanation": {
+    "en": "Quotation marks create a string even when its characters are digits.",
+    "pt-BR": "Aspas criam uma string mesmo quando seus caracteres são algarismos.",
+    "es": "Las comillas crean una cadena aunque sus caracteres sean dígitos."
+  },
+  "hints": {
+    "en": [
+      "Pay attention to source notation."
+    ],
+    "pt-BR": [
+      "Observe a notação no código-fonte."
+    ],
+    "es": [
+      "Observa la notación del código fuente."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/04-built-in-data-types/README.md",
+        "pt-BR": "fundamentals/04-built-in-data-types/README.pt-BR.md",
+        "es": "fundamentals/04-built-in-data-types/README.es.md"
+      },
+      "sections": {
+        "en": "5. Quotation marks are not decoration",
+        "pt-BR": "5. Aspas não são decoração",
+        "es": "5. Las comillas no son decoración"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "str"
+  },
+  "choices": [
+    {
+      "id": "int",
+      "text": {
+        "en": "int",
+        "pt-BR": "int",
+        "es": "int"
+      }
+    },
+    {
+      "id": "float",
+      "text": {
+        "en": "float",
+        "pt-BR": "float",
+        "es": "float"
+      }
+    },
+    {
+      "id": "str",
+      "text": {
+        "en": "str",
+        "pt-BR": "str",
+        "es": "str"
+      }
+    },
+    {
+      "id": "bool",
+      "text": {
+        "en": "bool",
+        "pt-BR": "bool",
+        "es": "bool"
+      }
+    }
+  ]
+}

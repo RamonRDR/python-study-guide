@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.dictionary-membership-keys",
+  "chapter_id": "collections.dictionaries-keys-and-values",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "For a dictionary, value in data checks stored values by default.",
+    "pt-BR": "Em um dicionário, value in data verifica valores armazenados por padrão.",
+    "es": "En un diccionario, value in data comprueba valores almacenados por defecto."
+  },
+  "explanation": {
+    "en": "Dictionary membership checks keys by default, not values.",
+    "pt-BR": "Pertencimento em dicionário verifica chaves por padrão, não valores.",
+    "es": "La pertenencia en un diccionario comprueba claves por defecto, no valores."
+  },
+  "hints": {
+    "en": [
+      "Consider how direct lookup identifies an entry."
+    ],
+    "pt-BR": [
+      "Considere como a busca direta identifica uma entrada."
+    ],
+    "es": [
+      "Considera cómo la búsqueda directa identifica una entrada."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/04-dictionaries-keys-and-values/README.md",
+        "pt-BR": "collections/04-dictionaries-keys-and-values/README.pt-BR.md",
+        "es": "collections/04-dictionaries-keys-and-values/README.es.md"
+      },
+      "sections": {
+        "en": "13. Membership checks keys by default",
+        "pt-BR": "13. Pertencimento verifica chaves por padrão",
+        "es": "13. La pertenencia comprueba claves de forma predeterminada"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

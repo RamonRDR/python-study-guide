@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.set-directional-difference",
+  "chapter_id": "collections.sets-and-unique-values",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "A - B keeps 1 and 4; B - A keeps 5. Their lengths are 2 and 1; the symmetric difference contains three members.",
+    "pt-BR": "A - B mantém 1 e 4; B - A mantém 5. Seus tamanhos são 2 e 1; a diferença simétrica contém três membros.",
+    "es": "A - B conserva 1 y 4; B - A conserva 5. Sus longitudes son 2 y 1; la diferencia simétrica contiene tres miembros."
+  },
+  "hints": {
+    "en": [
+      "Trace the two directional differences separately."
+    ],
+    "pt-BR": [
+      "Acompanhe as duas diferenças direcionais separadamente."
+    ],
+    "es": [
+      "Sigue las dos diferencias direccionales por separado."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/05-sets-and-unique-values/README.md",
+        "pt-BR": "collections/05-sets-and-unique-values/README.pt-BR.md",
+        "es": "collections/05-sets-and-unique-values/README.es.md"
+      },
+      "sections": {
+        "en": "26. Difference keeps members from one side only",
+        "pt-BR": "26. Diferença mantém membros de apenas um lado",
+        "es": "26. La diferencia conserva miembros de un solo lado"
+      }
+    },
+    {
+      "paths": {
+        "en": "collections/05-sets-and-unique-values/README.md",
+        "pt-BR": "collections/05-sets-and-unique-values/README.pt-BR.md",
+        "es": "collections/05-sets-and-unique-values/README.es.md"
+      },
+      "sections": {
+        "en": "27. Symmetric difference keeps non-shared members",
+        "pt-BR": "27. Diferença simétrica mantém membros não compartilhados",
+        "es": "27. La diferencia simétrica conserva miembros no compartidos"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "2 1 3\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "a = {1, 2, 4}\nb = {2, 5}\nprint(len(a - b), len(b - a), len(a ^ b))"
+}

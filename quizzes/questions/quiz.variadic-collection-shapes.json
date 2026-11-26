@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.variadic-collection-shapes",
+  "chapter_id": "functions.args-and-kwargs",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The required first parameter receives 5. The extra positional arguments form the tuple (6, 7); the extra named argument forms a dictionary containing mode.",
+    "pt-BR": "O primeiro parâmetro obrigatório recebe 5. Os argumentos posicionais extras formam a tupla (6, 7); o argumento nomeado extra forma um dicionário contendo mode.",
+    "es": "El primer parámetro obligatorio recibe 5. Los argumentos posicionales extra forman la tupla (6, 7); el argumento nombrado extra forma un diccionario que contiene mode."
+  },
+  "hints": {
+    "en": [
+      "Separate the required value, extra positional values and named values."
+    ],
+    "pt-BR": [
+      "Separe o valor obrigatório, posicionais extras e nomeados."
+    ],
+    "es": [
+      "Separa el valor obligatorio, los posicionales extra y los nombrados."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/07-args-and-kwargs/README.md",
+        "pt-BR": "functions/07-args-and-kwargs/README.pt-BR.md",
+        "es": "functions/07-args-and-kwargs/README.es.md"
+      },
+      "sections": {
+        "en": "12. Use `*args` and `**kwargs` together",
+        "pt-BR": "12. Use `*args` e `**kwargs` juntos",
+        "es": "12. Usa `*args` y `**kwargs` juntos"
+      }
+    },
+    {
+      "paths": {
+        "en": "functions/07-args-and-kwargs/README.md",
+        "pt-BR": "functions/07-args-and-kwargs/README.pt-BR.md",
+        "es": "functions/07-args-and-kwargs/README.es.md"
+      },
+      "sections": {
+        "en": "15. `*args` is a tuple, not a list",
+        "pt-BR": "15. `*args` é uma tupla, não uma lista",
+        "es": "15. `*args` es una tupla, no una lista"
+      }
+    },
+    {
+      "paths": {
+        "en": "functions/07-args-and-kwargs/README.md",
+        "pt-BR": "functions/07-args-and-kwargs/README.pt-BR.md",
+        "es": "functions/07-args-and-kwargs/README.es.md"
+      },
+      "sections": {
+        "en": "16. `**kwargs` is an ordinary dictionary inside the function",
+        "pt-BR": "16. `**kwargs` é um dicionário normal dentro da função",
+        "es": "16. `**kwargs` es un diccionario normal dentro de la función"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "5\n(6, 7)\nfast\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "def inspect(first, *extras, **options):\n    print(first)\n    print(extras)\n    print(options[\"mode\"])\n\ninspect(5, 6, 7, mode=\"fast\")"
+}

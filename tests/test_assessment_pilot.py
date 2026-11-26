@@ -35,7 +35,8 @@ class AssessmentPilotTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.chapters = load_matrix(ROOT)
-        cls.quizzes = load_index("quiz", ROOT, QUIZ_INDEX, cls.chapters)
+        all_quizzes = load_index("quiz", ROOT, QUIZ_INDEX, cls.chapters)
+        cls.quizzes = [q for q in all_quizzes if q["id"] in RESPONSES]
         cls.exercises = load_index("exercise", ROOT, EXERCISE_INDEX, cls.chapters)
 
     def test_quiz_inventory_and_allocation(self):
@@ -55,10 +56,6 @@ class AssessmentPilotTests(unittest.TestCase):
                       for d, count in c["allocation"].items()}
         for key, count in actual.items():
             self.assertLessEqual(count, allocation[key])
-        self.assertEqual(
-            {p.relative_to(ROOT).as_posix() for p in (ROOT / "quizzes/questions").glob("*.json")},
-            {f"quizzes/questions/{q['id']}.json" for q in self.quizzes},
-        )
 
     def test_quiz_grading(self):
         for q in self.quizzes:

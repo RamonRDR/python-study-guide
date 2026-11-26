@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.short-circuit-operand-result",
+  "chapter_id": "program-flow.conditions-comparisons-and-boolean-logic",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "0 is falsy, so and returns 0 without dividing. The empty string is falsy, so or returns the fallback string.",
+    "pt-BR": "0 é falsy, então and retorna 0 sem dividir. A string vazia é falsy, então or retorna a string alternativa.",
+    "es": "0 es falsy, así que and devuelve 0 sin dividir. La cadena vacía es falsy, así que or devuelve la cadena alternativa."
+  },
+  "hints": {
+    "en": [
+      "Identify the operand returned and which expression is skipped."
+    ],
+    "pt-BR": [
+      "Identifique o operando retornado e qual expressão é pulada."
+    ],
+    "es": [
+      "Identifica el operando devuelto y la expresión omitida."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+        "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+        "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+      },
+      "sections": {
+        "en": "19. Boolean operators short-circuit",
+        "pt-BR": "19. Operadores booleanos usam curto-circuito",
+        "es": "19. Los operadores booleanos usan cortocircuito"
+      }
+    },
+    {
+      "paths": {
+        "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+        "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+        "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+      },
+      "sections": {
+        "en": "18. `and` and `or` do not always return `bool`",
+        "pt-BR": "18. `and` e `or` nem sempre retornam `bool`",
+        "es": "18. `and` y `or` no siempre devuelven `bool`"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "0\nready\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(0 and 9 / 0)\nprint(\"\" or \"ready\")"
+}

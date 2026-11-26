@@ -905,16 +905,84 @@ python-study-guide/
 │   ├── README.es.md
 │   ├── quiz-index.json
 │   └── questions/
+│       ├── quiz.absolute-distance-zero.json
+│       ├── quiz.assignment-symbol.json
+│       ├── quiz.bool-int-exact-versus-compatible.json
+│       ├── quiz.boolean-precedence.json
+│       ├── quiz.chained-comparison-boundary.json
+│       ├── quiz.collection-keyed-quantities.json
 │       ├── quiz.collection-membership.json
+│       ├── quiz.combined-classification-loop.json
+│       ├── quiz.conditional-chain-one-branch.json
+│       ├── quiz.decimal-literal-type.json
+│       ├── quiz.default-argument-omission.json
+│       ├── quiz.definition-body-delayed.json
 │       ├── quiz.dictionary-fallback.json
+│       ├── quiz.dictionary-membership-keys.json
+│       ├── quiz.dictionary-none-versus-absent.json
+│       ├── quiz.discarded-return-does-not-rebind.json
+│       ├── quiz.division-zero-error.json
 │       ├── quiz.editor-replaces-interpreter.json
+│       ├── quiz.empty-braces-not-set.json
+│       ├── quiz.enumerate-default-start.json
+│       ├── quiz.exact-type-function.json
+│       ├── quiz.for-accumulator-initial-value.json
+│       ├── quiz.for-item-driven.json
+│       ├── quiz.function-result-pipeline.json
+│       ├── quiz.git-inspect-staged.json
+│       ├── quiz.implicit-none-return.json
+│       ├── quiz.input-digits-text.json
+│       ├── quiz.install-declared-requirements.json
+│       ├── quiz.integer-text-conversion.json
 │       ├── quiz.interpreter-purpose.json
+│       ├── quiz.list-add-one.json
+│       ├── quiz.list-extend-not-nest.json
+│       ├── quiz.list-pop-result.json
+│       ├── quiz.list-slice-last-two.json
+│       ├── quiz.list-stored-item-type.json
+│       ├── quiz.local-before-assignment.json
+│       ├── quiz.local-binding-shadow.json
+│       ├── quiz.loop-else-break-versus-continue.json
+│       ├── quiz.match-guard-fallthrough.json
+│       ├── quiz.match-or-alternatives.json
+│       ├── quiz.match-wildcard.json
 │       ├── quiz.missing-required-argument.json
+│       ├── quiz.mutable-default-reuse.json
+│       ├── quiz.negative-floor-remainder.json
+│       ├── quiz.nonempty-false-text.json
+│       ├── quiz.overlapping-threshold-order.json
+│       ├── quiz.parameter-rebind-versus-mutation.json
+│       ├── quiz.positional-argument-binding.json
+│       ├── quiz.positive-remainder.json
+│       ├── quiz.print-custom-separator.json
 │       ├── quiz.print-literal.json
+│       ├── quiz.quoted-digits-type.json
 │       ├── quiz.range-stop.json
+│       ├── quiz.reassignment-order.json
+│       ├── quiz.replace-does-not-mutate.json
 │       ├── quiz.return-keyword.json
+│       ├── quiz.round-ties-to-even.json
+│       ├── quiz.set-directional-difference.json
+│       ├── quiz.set-shared-members.json
+│       ├── quiz.shallow-list-copy-nested.json
+│       ├── quiz.short-circuit-operand-result.json
+│       ├── quiz.singleton-tuple-comma.json
+│       ├── quiz.source-file-extension.json
+│       ├── quiz.split-preserves-empty-fields.json
+│       ├── quiz.string-negative-index.json
+│       ├── quiz.string-slice-exclusive-stop.json
+│       ├── quiz.string-zero-index.json
+│       ├── quiz.strip-surrounding-whitespace.json
+│       ├── quiz.true-division-integers.json
+│       ├── quiz.tuple-nested-mutability.json
 │       ├── quiz.type-hints-runtime.json
-│       └── quiz.unclosed-print.json
+│       ├── quiz.unclosed-print.json
+│       ├── quiz.unsaved-source-edit.json
+│       ├── quiz.variadic-collection-shapes.json
+│       ├── quiz.venv-direct-executable.json
+│       ├── quiz.venv-recreate.json
+│       ├── quiz.while-initial-false.json
+│       └── quiz.while-state-overshoot.json
 ├── schemas/
 │   ├── exercise-index.schema.json
 │   ├── exercise.schema.json
@@ -1187,7 +1255,9 @@ python-study-guide/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
+    ├── assessment_foundation_fixtures.py
     ├── test_assessment_contract.py
+    ├── test_assessment_foundations.py
     ├── test_assessment_pilot.py
     ├── test_chapter_navigation.py
     ├── test_check_internal_links.py
@@ -1225,7 +1295,7 @@ python-study-guide/
 - `docs/adr/` y `docs/specs/`: decisiones de arquitectura trilingües, especificaciones de Phase II, registro de tareas, criterios de aceptación, contrato de integración y futuras referencias entre guías. El mapa de requisitos previos FR-05 está en el directorio learning-hub-foundation.
 - `errors-files-and-modules/`: ruta completa de la Fase 7. Los Capítulos 01–05 cubren manejo de excepciones en runtime, lanzamiento deliberado y excepciones personalizadas, I/O seguro de archivos de texto con `open()` y `with`, parsing y escritura de TXT/CSV/JSON y organización del código mediante imports, módulos, paquetes regulares, contexto de ejecución y diseño de dependencias, en inglés, portugués de Brasil y español con ejemplos ejecutables deterministas.
 - `exercises/`: 30 ejercicios con instrucciones localizadas, inicial y referencia compartidos y pruebas de confianza. Tres registros usan schema 1.0.0; 27 siguen legados. El índice de expansión mantiene 29 registros; el índice parcial versionado lista los tres ejercicios migrados.
-- `quizzes/`: diez preguntas piloto localizadas e índice versionado. Las respuestas son públicas; ningún runtime implementado.
+- `quizzes/`: 78 preguntas de fundamentos localizadas e índice versionado. Las respuestas son públicas; ningún runtime implementado.
 - `schemas/`: cuatro esquemas versionados de evaluación (Draft 2020-12).
 - `external-libraries/`: ruta completa de la Fase 9 para paquetes de terceros. Contiene capítulos multilingües revisados de pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x y pytest 9.1.x, con veinte ejemplos ejecutables deterministas en total. La fase cubre transformaciones tabulares, automatización de libros de Excel, clientes HTTP/API y contratos de pruebas automatizadas; la Fase 10 de proyectos prácticos también está completada.
 - `functions/`: ruta completa de la Fase 5. Los Capítulos 01–09 cubren definición y llamada de funciones, entradas obligatorias, valores retornados, alcance y búsqueda de nombres, type hints para interfaces de funciones, valores predeterminados incluida la evaluación al definir la función y la seguridad con valores mutables, recolección de argumentos posicionales y por palabra clave de cantidad variable con `*args` y `**kwargs`, composición mediante funciones auxiliares y coordinadoras con dependencias explícitas y grafos simples de llamadas, y seguimiento explícito del flujo de datos entre llamadas, incluidos vínculos de parámetros, reasignación frente a mutación, `None`, resultados en tupla y traspasos mediante `return`, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.

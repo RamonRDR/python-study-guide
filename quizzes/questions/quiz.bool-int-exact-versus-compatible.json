@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.bool-int-exact-versus-compatible",
+  "chapter_id": "fundamentals.type-and-isinstance",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "bool is a subclass of int, so isinstance(True, int) succeeds, but type(True) is int is false. The exact type is bool.",
+    "pt-BR": "bool é subclasse de int, então isinstance(True, int) é verdadeiro, mas type(True) is int é falso. O tipo exato é bool.",
+    "es": "bool es subclase de int, por lo que isinstance(True, int) es verdadero, pero type(True) is int es falso. El tipo exacto es bool."
+  },
+  "hints": {
+    "en": [
+      "Separate an exact-type test from a compatibility test."
+    ],
+    "pt-BR": [
+      "Separe teste de tipo exato de teste de compatibilidade."
+    ],
+    "es": [
+      "Separa la prueba de tipo exacto de la prueba de compatibilidad."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/05-type-and-isinstance/README.md",
+        "pt-BR": "fundamentals/05-type-and-isinstance/README.pt-BR.md",
+        "es": "fundamentals/05-type-and-isinstance/README.es.md"
+      },
+      "sections": {
+        "en": "11. The `bool` and `int` relationship",
+        "pt-BR": "11. A relação entre `bool` e `int`",
+        "es": "11. La relación entre `bool` e `int`"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "True\nFalse\nTrue\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(isinstance(True, int))\nprint(type(True) is int)\nprint(type(True) is bool)"
+}
