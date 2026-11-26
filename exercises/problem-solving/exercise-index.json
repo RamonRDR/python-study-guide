@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {
+      "id": "problem-solving.binary-insertion-index",
+      "path": "exercises/problem-solving/binary-insertion-index/exercise.json"
+    },
+    {
+      "id": "problem-solving.inventory-reconciliation",
+      "path": "exercises/problem-solving/inventory-reconciliation/exercise.json"
+    },
+    {
+      "id": "problem-solving.vowel-counter",
+      "path": "exercises/problem-solving/vowel-counter/exercise.json"
+    }
+  ]
+}

@@ -51,10 +51,27 @@ def grade_quiz(record, response):
     raise ValueError("unsupported quiz type")
 
 
+def mutable_containers(value):
+    """Retain mutable JSON containers by identity, including nested children."""
+    found = {}
+
+    def visit(item):
+        if type(item) not in (list, dict) or id(item) in found:
+            return
+        found[id(item)] = item
+        children = item if type(item) is list else item.values()
+        for child in children:
+            visit(child)
+
+    visit(value)
+    return found
+
+
 def case_passes(candidate, case, *, new_container=False):
     """Call only trusted finite fixtures/references. Not a sandbox or timeout."""
     args = deepcopy(case["args"])
     before = deepcopy(args)
+    input_containers = mutable_containers(args) if new_container else {}
     stdout, stderr = StringIO(), StringIO()
     try:
         with redirect_stdout(stdout), redirect_stderr(stderr):
@@ -67,7 +84,7 @@ def case_passes(candidate, case, *, new_container=False):
         and not stdout.getvalue()
         and not stderr.getvalue()
         and not (
-            new_container and type(actual) in (list, dict)
-            and any(actual is arg for arg in args)
+            new_container
+            and input_containers.keys() & mutable_containers(actual).keys()
         )
     )

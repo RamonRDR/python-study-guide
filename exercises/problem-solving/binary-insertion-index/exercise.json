@@ -179,7 +179,8 @@
         ],
         "expected": 0
       }
-    ]
+    ],
+    "new_container": false
   },
   "execution": "unverified",
   "allowed_dependencies": [],
@@ -241,5 +242,6 @@
       "es": "problem-solving-and-live-coding/05-searching-algorithms/README.es.md"
     }
   ],
-  "practice_mode": "implement"
+  "practice_mode": "implement",
+  "schema_version": "1.0.0"
 }
