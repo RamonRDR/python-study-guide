@@ -1,0 +1,570 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Exercise",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+$"
+    },
+    "chapter_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+$"
+    },
+    "difficulty": {
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "prompt": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "pt-BR": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "explanation": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "pt-BR": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "hints": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        },
+        "pt-BR": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        },
+        "es": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "title": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "pt-BR": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "estimated_minutes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        },
+        "pt-BR": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        },
+        "es": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "args": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/jsonValue"
+            },
+            "minItems": 0
+          },
+          "expected": {
+            "$ref": "#/$defs/jsonValue"
+          },
+          "explanation": {
+            "type": "object",
+            "properties": {
+              "en": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "pt-BR": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "es": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "en",
+              "pt-BR",
+              "es"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "args",
+          "expected",
+          "explanation"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "starter_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "solution_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "complexity": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "pt-BR": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "es": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "en",
+            "pt-BR",
+            "es"
+          ],
+          "additionalProperties": false
+        },
+        "space": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "pt-BR": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "es": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "en",
+            "pt-BR",
+            "es"
+          ],
+          "additionalProperties": false
+        },
+        "assumptions": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "pt-BR": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "es": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "en",
+            "pt-BR",
+            "es"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "time",
+        "space",
+        "assumptions"
+      ],
+      "additionalProperties": false
+    },
+    "tests": {
+      "type": "object",
+      "properties": {
+        "interface": {
+          "const": "function_call"
+        },
+        "function_name": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "comparison": {
+          "const": "exact_type_and_value"
+        },
+        "timeout_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "new_container": {
+          "type": "boolean"
+        },
+        "cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "args": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/jsonValue"
+                },
+                "minItems": 0
+              },
+              "expected": {
+                "$ref": "#/$defs/jsonValue"
+              }
+            },
+            "required": [
+              "id",
+              "args",
+              "expected"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "interface",
+        "function_name",
+        "comparison",
+        "timeout_ms",
+        "new_container",
+        "cases"
+      ],
+      "additionalProperties": false
+    },
+    "execution": {
+      "enum": [
+        "unverified",
+        "local_only"
+      ]
+    },
+    "execution_reason": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "pt-BR": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "allowed_dependencies": {
+      "type": "array",
+      "maxItems": 0
+    },
+    "local_python": {
+      "const": "3.13"
+    },
+    "prerequisite_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "en": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "pt-BR": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "es": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "en",
+          "pt-BR",
+          "es"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "practice_mode": {
+      "enum": [
+        "implement",
+        "debug",
+        "refactor"
+      ]
+    },
+    "timed_practice": {
+      "type": "object",
+      "properties": {
+        "duration_minutes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "independent_first_attempt": {
+          "const": true
+        },
+        "grading": {
+          "const": "self_assessment"
+        }
+      },
+      "required": [
+        "duration_minutes",
+        "independent_first_attempt",
+        "grading"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "chapter_id",
+    "difficulty",
+    "prompt",
+    "explanation",
+    "hints",
+    "title",
+    "estimated_minutes",
+    "concepts",
+    "constraints",
+    "examples",
+    "starter_path",
+    "solution_path",
+    "complexity",
+    "tests",
+    "execution",
+    "allowed_dependencies",
+    "local_python",
+    "prerequisite_paths",
+    "practice_mode"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "jsonValue": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/jsonValue"
+          },
+          "minItems": 0
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "execution": {
+            "const": "local_only"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "execution_reason"
+        ]
+      }
+    }
+  ]
+}
