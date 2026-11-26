@@ -1,0 +1,98 @@
+{
+  "id": "algorithms.recursion-stack",
+  "topic": "data-structures-algorithms",
+  "level": "mid",
+  "prompt": {
+    "en": "For summing integers from 0 to n with n nonnegative, give a base case and recurrence. Compare recursive and iterative time/auxiliary space under fixed-cost arithmetic.",
+    "pt-BR": "Para somar inteiros de 0 a n com n não negativo, dê caso base e recorrência. Compare tempo/espaço auxiliar recursivo e iterativo sob aritmética de custo fixo.",
+    "es": "Para sumar enteros de 0 a n con n no negativo, da caso base y recurrencia. Compara tiempo/espacio auxiliar recursivo e iterativo bajo aritmética de coste fijo."
+  },
+  "expected_answer": {
+    "en": "S(0)=0; S(n)=n+S(n-1). Both iterative and recursive scans take O(n) time; the recursive version uses O(n) call-stack space while the accumulator uses O(1) extra space.",
+    "pt-BR": "S(0)=0; S(n)=n+S(n-1). Ambas varreduras usam O(n) tempo; recursiva usa O(n) pilha e acumulador O(1) espaço extra.",
+    "es": "S(0)=0; S(n)=n+S(n-1). Ambos recorridos usan O(n) tiempo; recursivo usa O(n) pila y acumulador O(1) espacio extra."
+  },
+  "explanation": {
+    "en": "Progress toward the base case matters; Python's recursion limit constrains practical depth.",
+    "pt-BR": "Progresso ao caso base importa; limite de recursão Python restringe profundidade prática.",
+    "es": "Progreso al caso base importa; límite de recursión Python restringe profundidad práctica."
+  },
+  "intent": {
+    "en": "Assess termination and resource analysis.",
+    "pt-BR": "Avaliar término e análise de recursos.",
+    "es": "Evaluar terminación y análisis de recursos."
+  },
+  "common_errors": {
+    "en": [
+      "Ignore stack frames when reporting auxiliary space."
+    ],
+    "pt-BR": [
+      "Ignorar frames da pilha ao informar espaço auxiliar."
+    ],
+    "es": [
+      "Ignorar marcos de pila al informar espacio auxiliar."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Why reject negative inputs before recursion?"
+    ],
+    "pt-BR": [
+      "Por que rejeitar negativos antes de recursar?"
+    ],
+    "es": [
+      "¿Por qué rechazar negativos antes de recurrir?"
+    ]
+  },
+  "examples": {
+    "en": "S(3) = 3 + 2 + 1 + 0 = 6.",
+    "pt-BR": "S(3) = 3 + 2 + 1 + 0 = 6.",
+    "es": "S(3) = 3 + 2 + 1 + 0 = 6."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Gives base case, recurrence and progress toward zero.",
+        "pt-BR": "Fornece base, recorrência e progresso ao zero.",
+        "es": "Da base, recurrencia y progreso hacia cero."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Reports time and stack/accumulator space correctly.",
+        "pt-BR": "Informa tempo e espaço de pilha/acumulador corretamente.",
+        "es": "Informa tiempo y espacio de pila/acumulador correctamente."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.md",
+        "pt-BR": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md"
+      },
+      "sections": {
+        "en": "Choose by the contract",
+        "pt-BR": "Escolha pelo contrato",
+        "es": "Elige según el contrato"
+      }
+    },
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/04-recursion/README.md",
+        "pt-BR": "problem-solving-and-live-coding/04-recursion/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/04-recursion/README.es.md"
+      },
+      "sections": {
+        "en": "2. Python implementation",
+        "pt-BR": "2. Implementação Python",
+        "es": "2. Implementación en Python"
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "oop.class-list-sharing",
+  "topic": "oop",
+  "level": "junior",
+  "prompt": {
+    "en": "A class defines members=[] at class level. Why can two instances unexpectedly share additions? Show how to make lists independent.",
+    "pt-BR": "Classe define members=[] no nível de classe. Por que instâncias podem compartilhar adições inesperadamente? Mostre como tornar listas independentes.",
+    "es": "Clase define members=[] a nivel de clase. ¿Por qué instancias pueden compartir adiciones inesperadamente? Muestra cómo hacer listas independientes."
+  },
+  "expected_answer": {
+    "en": "The mutable class attribute is shared unless shadowed by an instance attribute. Initialize self.members=[] inside __init__ to create a distinct list for each instance.",
+    "pt-BR": "Atributo mutável de classe é compartilhado salvo se sombreado por atributo de instância. Inicialize self.members=[] em __init__ para criar lista distinta por instância.",
+    "es": "Atributo mutable de clase se comparte salvo si se oculta por atributo de instancia. Inicializa self.members=[] en __init__ para crear lista distinta por instancia."
+  },
+  "explanation": {
+    "en": "Appending mutates the shared object, whereas assigning an instance attribute changes lookup for that instance.",
+    "pt-BR": "Append muta objeto compartilhado, enquanto atribuir atributo de instância muda busca dessa instância.",
+    "es": "Append muta objeto compartido, mientras asignar atributo de instancia cambia búsqueda de esa instancia."
+  },
+  "intent": {
+    "en": "Assess mutable class attributes.",
+    "pt-BR": "Avaliar atributos mutáveis de classe.",
+    "es": "Evaluar atributos mutables de clase."
+  },
+  "common_errors": {
+    "en": [
+      "Keep one list on the class and assume self creates a copy."
+    ],
+    "pt-BR": [
+      "Manter lista na classe e supor self cria cópia."
+    ],
+    "es": [
+      "Mantener lista en clase y suponer self crea copia."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What class attribute would reasonably be shared?"
+    ],
+    "pt-BR": [
+      "Que atributo de classe poderia ser compartilhado?"
+    ],
+    "es": [
+      "¿Qué atributo de clase podría compartirse razonablemente?"
+    ]
+  },
+  "examples": {
+    "en": "Two new groups should have separate empty lists; adding a member to one leaves the other empty.",
+    "pt-BR": "Dois grupos novos devem ter listas vazias separadas; adicionar membro a um deixa outro vazio.",
+    "es": "Dos grupos nuevos deben tener listas vacías separadas; añadir miembro a uno deja otro vacío."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Explains shared mutable class attribute and mutation.",
+        "pt-BR": "Explica atributo mutável compartilhado e mutação.",
+        "es": "Explica atributo mutable compartido y mutación."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Initializes independent instance list and predicts isolation.",
+        "pt-BR": "Inicializa lista independente e prevê isolamento.",
+        "es": "Inicializa lista independiente y predice aislamiento."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.md",
+        "pt-BR": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.pt-BR.md",
+        "es": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.es.md"
+      },
+      "sections": {
+        "en": "Attributes and binding",
+        "pt-BR": "Atributos e vinculação",
+        "es": "Atributos y enlace"
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "oop.initialization",
+  "topic": "oop",
+  "level": "junior",
+  "prompt": {
+    "en": "What is __init__ for, and how does it differ from __new__? What may __init__ return?",
+    "pt-BR": "Para que serve __init__ e como difere de __new__? O que __init__ pode retornar?",
+    "es": "¿Para qué sirve __init__ y cómo difiere de __new__? ¿Qué puede devolver __init__?"
+  },
+  "expected_answer": {
+    "en": "__new__ is the creation hook; __init__ initializes an already created instance. __init__ must return None, usually implicitly.",
+    "pt-BR": "__new__ é hook de criação; __init__ inicializa instância já criada. __init__ deve retornar None, normalmente implicitamente.",
+    "es": "__new__ es mecanismo de creación; __init__ inicializa instancia ya creada. __init__ debe devolver None, normalmente implícitamente."
+  },
+  "explanation": {
+    "en": "The normal class call coordinates creation and initialization.",
+    "pt-BR": "Chamada normal da classe coordena criação e inicialização.",
+    "es": "Llamada normal de clase coordina creación e inicialización."
+  },
+  "intent": {
+    "en": "Assess object lifecycle basics.",
+    "pt-BR": "Avaliar fundamentos do ciclo de vida de objetos.",
+    "es": "Evaluar fundamentos del ciclo de vida de objetos."
+  },
+  "common_errors": {
+    "en": [
+      "Return self from __init__ or call it the allocation hook."
+    ],
+    "pt-BR": [
+      "Retornar self de __init__ ou chamá-lo de hook de alocação."
+    ],
+    "es": [
+      "Devolver self desde __init__ o llamarlo mecanismo de asignación."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "Where would you initialize a per-instance list?"
+    ],
+    "pt-BR": [
+      "Onde inicializaria lista por instância?"
+    ],
+    "es": [
+      "¿Dónde inicializarías lista por instancia?"
+    ]
+  },
+  "examples": {
+    "en": "def __init__(self): self.value = 0 initializes state without returning a value.",
+    "pt-BR": "def __init__(self): self.value = 0 inicializa estado sem retornar valor.",
+    "es": "def __init__(self): self.value = 0 inicializa estado sin devolver valor."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes creation from initialization.",
+        "pt-BR": "Distingue criação de inicialização.",
+        "es": "Distingue creación de inicialización."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "States None return contract.",
+        "pt-BR": "Declara contrato de retorno None.",
+        "es": "Declara contrato de retorno None."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/05-classes-and-objects/README.md",
+        "pt-BR": "technical-interview-preparation/05-classes-and-objects/README.pt-BR.md",
+        "es": "technical-interview-preparation/05-classes-and-objects/README.es.md"
+      },
+      "sections": {
+        "en": "What and why",
+        "pt-BR": "O que é e por quê",
+        "es": "Qué es y por qué"
+      }
+    }
+  ]
+}

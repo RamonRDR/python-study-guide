@@ -1,0 +1,98 @@
+{
+  "id": "algorithms.stable-insertion",
+  "topic": "data-structures-algorithms",
+  "level": "mid",
+  "prompt": {
+    "en": "Define stability in sorting records by score. How does insertion sort preserve it, and what is its worst-case time?",
+    "pt-BR": "Defina estabilidade ao ordenar registros por nota. Como insertion sort a preserva e qual tempo no pior caso?",
+    "es": "Define estabilidad al ordenar registros por nota. ¿Cómo la conserva insertion sort y cuál es su tiempo de peor caso?"
+  },
+  "expected_answer": {
+    "en": "Equal-key records retain their original relative order. In insertion sort, shift only strictly greater keys and insert after equal keys in the sorted prefix. Worst-case time is O(n²).",
+    "pt-BR": "Registros de chaves iguais mantêm ordem relativa original. No insertion sort desloque só chaves estritamente maiores e insira após iguais no prefixo ordenado. Pior tempo O(n²).",
+    "es": "Registros de claves iguales conservan orden relativo original. En insertion sort desplaza solo claves estrictamente mayores e inserta tras iguales en prefijo ordenado. Peor tiempo O(n²)."
+  },
+  "explanation": {
+    "en": "Shifting equal keys can reverse their order even when scores are sorted correctly.",
+    "pt-BR": "Deslocar iguais pode inverter ordem mesmo com notas ordenadas corretamente.",
+    "es": "Desplazar iguales puede invertir orden aunque notas queden ordenadas correctamente."
+  },
+  "intent": {
+    "en": "Assess stability beyond sorted output.",
+    "pt-BR": "Avaliar estabilidade além de saída ordenada.",
+    "es": "Evaluar estabilidad más allá de salida ordenada."
+  },
+  "common_errors": {
+    "en": [
+      "Verify only numeric scores and ignore record identity."
+    ],
+    "pt-BR": [
+      "Verificar só notas numéricas e ignorar identidade do registro."
+    ],
+    "es": [
+      "Verificar solo notas numéricas e ignorar identidad del registro."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What input would reveal an unstable implementation?"
+    ],
+    "pt-BR": [
+      "Que entrada revelaria implementação instável?"
+    ],
+    "es": [
+      "¿Qué entrada revelaría implementación inestable?"
+    ]
+  },
+  "examples": {
+    "en": "[(A,2),(B,1),(C,2)] becomes [(B,1),(A,2),(C,2)] when sorted stably by score.",
+    "pt-BR": "[(A,2),(B,1),(C,2)] vira [(B,1),(A,2),(C,2)] com ordenação estável por nota.",
+    "es": "[(A,2),(B,1),(C,2)] se vuelve [(B,1),(A,2),(C,2)] al ordenar establemente por nota."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Defines stability and the strict-greater shift rule.",
+        "pt-BR": "Define estabilidade e regra de deslocamento estritamente maior.",
+        "es": "Define estabilidad y regla de desplazar estrictamente mayor."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "States O(n²) worst-case time and illustrates equal-key order.",
+        "pt-BR": "Declara O(n²) no pior caso e ilustra ordem de chaves iguais.",
+        "es": "Declara O(n²) en peor caso e ilustra orden de claves iguales."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.md",
+        "pt-BR": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md"
+      },
+      "sections": {
+        "en": "Choose by the contract",
+        "pt-BR": "Escolha pelo contrato",
+        "es": "Elige según el contrato"
+      }
+    },
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/06-sorting-algorithms/README.md",
+        "pt-BR": "problem-solving-and-live-coding/06-sorting-algorithms/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/06-sorting-algorithms/README.es.md"
+      },
+      "sections": {
+        "en": "4. Insertion sort",
+        "pt-BR": "4. Insertion sort",
+        "es": "4. Insertion sort"
+      }
+    }
+  ]
+}

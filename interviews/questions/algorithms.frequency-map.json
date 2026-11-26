@@ -1,0 +1,98 @@
+{
+  "id": "algorithms.frequency-map",
+  "topic": "data-structures-algorithms",
+  "level": "junior",
+  "prompt": {
+    "en": "How would you count occurrences of each hashable label in a list? Show the result for [a,a,b] and explain the choice of structure.",
+    "pt-BR": "Como contaria ocorrências de cada rótulo hashable numa lista? Mostre resultado para [a,a,b] e explique escolha da estrutura.",
+    "es": "¿Cómo contarías ocurrencias de cada etiqueta hashable en una lista? Muestra resultado para [a,a,b] y explica elección de estructura."
+  },
+  "expected_answer": {
+    "en": "Use a dictionary from label to count, updating count with get(label, 0) + 1. The result is {\"a\": 2, \"b\": 1}.",
+    "pt-BR": "Use dicionário de rótulo para contagem, atualizando com get(label, 0) + 1. Resultado {\"a\": 2, \"b\": 1}.",
+    "es": "Usa diccionario de etiqueta a conteo, actualizando con get(label, 0) + 1. Resultado {\"a\": 2, \"b\": 1}."
+  },
+  "explanation": {
+    "en": "A set loses multiplicity; a mapping preserves one counter per key.",
+    "pt-BR": "Conjunto perde multiplicidade; mapeamento preserva contador por chave.",
+    "es": "Conjunto pierde multiplicidad; mapeo conserva contador por clave."
+  },
+  "intent": {
+    "en": "Assess collection choice and accumulation.",
+    "pt-BR": "Avaliar escolha de coleção e acumulação.",
+    "es": "Evaluar elección de colección y acumulación."
+  },
+  "common_errors": {
+    "en": [
+      "Use a set and expect counts to remain."
+    ],
+    "pt-BR": [
+      "Usar conjunto esperando manter contagens."
+    ],
+    "es": [
+      "Usar conjunto esperando conservar conteos."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What should empty input return?"
+    ],
+    "pt-BR": [
+      "O que entrada vazia deve retornar?"
+    ],
+    "es": [
+      "¿Qué debe devolver entrada vacía?"
+    ]
+  },
+  "examples": {
+    "en": "For [\"b\",\"b\",\"b\"], the mapping is {\"b\":3}.",
+    "pt-BR": "Para [\"b\",\"b\",\"b\"], mapeamento é {\"b\":3}.",
+    "es": "Para [\"b\",\"b\",\"b\"], mapeo es {\"b\":3}."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Chooses dictionary and describes increment per key.",
+        "pt-BR": "Escolhe dicionário e descreve incremento por chave.",
+        "es": "Elige diccionario y describe incremento por clave."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts both counts and explains why a set is insufficient.",
+        "pt-BR": "Prevê ambas contagens e explica insuficiência do conjunto.",
+        "es": "Predice ambos conteos y explica insuficiencia del conjunto."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.md",
+        "pt-BR": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md"
+      },
+      "sections": {
+        "en": "Choose by the contract",
+        "pt-BR": "Escolha pelo contrato",
+        "es": "Elige según el contrato"
+      }
+    },
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/07-problem-solving-patterns/README.md",
+        "pt-BR": "problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md"
+      },
+      "sections": {
+        "en": "1. Accumulator and frequency map",
+        "pt-BR": "1. Acumulador e mapa de frequências",
+        "es": "1. Acumulador y mapa de frecuencias"
+      }
+    }
+  ]
+}
