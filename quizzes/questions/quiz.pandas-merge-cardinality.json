@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.pandas-merge-cardinality",
+  "chapter_id": "external-libraries.pandas",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Orders may repeat customer_id, but customers must contain exactly one row per key. Which merge validation detects duplicate right-side keys while allowing repeated orders?",
+    "pt-BR": "Pedidos podem repetir customer_id, mas clientes devem conter exatamente uma linha por chave. Qual validação de merge detecta chaves duplicadas à direita permitindo pedidos repetidos?",
+    "es": "Los pedidos pueden repetir customer_id, pero clientes debe contener exactamente una fila por clave. ¿Qué validación de merge detecta claves duplicadas a la derecha permitiendo pedidos repetidos?"
+  },
+  "explanation": {
+    "en": "many_to_one allows repeated left keys and checks right-key uniqueness. It does not guarantee every left key matches.",
+    "pt-BR": "many_to_one permite chaves repetidas à esquerda e verifica unicidade à direita. Não garante correspondência para toda chave à esquerda.",
+    "es": "many_to_one permite claves repetidas a la izquierda y comprueba unicidad a la derecha. No garantiza coincidencia para cada clave izquierda."
+  },
+  "hints": {
+    "en": [
+      "Identify which input must be unique."
+    ],
+    "pt-BR": [
+      "Identifique qual entrada deve ser única."
+    ],
+    "es": [
+      "Identifica qué entrada debe ser única."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "external-libraries/01-pandas/README.md",
+        "pt-BR": "external-libraries/01-pandas/README.pt-BR.md",
+        "es": "external-libraries/01-pandas/README.es.md"
+      },
+      "sections": {
+        "en": "39. Validate merge cardinality",
+        "pt-BR": "39. Valide a cardinalidade do merge",
+        "es": "39. Valida la cardinalidad del merge"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "many-to-one"
+  },
+  "choices": [
+    {
+      "id": "one-to-one",
+      "text": {
+        "en": "validate=\"one_to_one\"",
+        "pt-BR": "validate=\"one_to_one\"",
+        "es": "validate=\"one_to_one\""
+      }
+    },
+    {
+      "id": "one-to-many",
+      "text": {
+        "en": "validate=\"one_to_many\"",
+        "pt-BR": "validate=\"one_to_many\"",
+        "es": "validate=\"one_to_many\""
+      }
+    },
+    {
+      "id": "many-to-many",
+      "text": {
+        "en": "validate=\"many_to_many\"",
+        "pt-BR": "validate=\"many_to_many\"",
+        "es": "validate=\"many_to_many\""
+      }
+    },
+    {
+      "id": "many-to-one",
+      "text": {
+        "en": "validate=\"many_to_one\"",
+        "pt-BR": "validate=\"many_to_one\"",
+        "es": "validate=\"many_to_one\""
+      }
+    }
+  ]
+}

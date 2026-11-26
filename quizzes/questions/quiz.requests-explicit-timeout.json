@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.requests-explicit-timeout",
+  "chapter_id": "external-libraries.requests",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "Requests has no timeout by default when one is not explicitly supplied.",
+    "pt-BR": "Requests não aplica timeout por padrão quando ele não é fornecido explicitamente.",
+    "es": "Requests no aplica timeout por defecto cuando no se proporciona explícitamente."
+  },
+  "explanation": {
+    "en": "Supply a timeout appropriate for the operation to avoid indefinite waits for network activity.",
+    "pt-BR": "Forneça timeout adequado à operação para evitar esperas indefinidas por atividade de rede.",
+    "es": "Proporciona un timeout apropiado para evitar esperas indefinidas de actividad de red."
+  },
+  "hints": {
+    "en": [
+      "Consider the behavior of the library without an explicit argument."
+    ],
+    "pt-BR": [
+      "Considere o comportamento da biblioteca sem argumento explícito."
+    ],
+    "es": [
+      "Considera el comportamiento de la biblioteca sin argumento explícito."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "external-libraries/03-requests/README.md",
+        "pt-BR": "external-libraries/03-requests/README.pt-BR.md",
+        "es": "external-libraries/03-requests/README.es.md"
+      },
+      "sections": {
+        "en": "27. Nearly all production requests need a timeout",
+        "pt-BR": "27. Quase toda requisição de produção precisa de timeout",
+        "es": "27. Casi toda solicitud de producción necesita timeout"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

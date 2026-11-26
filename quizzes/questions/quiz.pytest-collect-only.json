@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.pytest-collect-only",
+  "chapter_id": "external-libraries.pytest",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A CI job is green but an expected test appears missing. Which command lists collected tests without executing them?",
+    "pt-BR": "Um job de CI está verde, mas um teste esperado parece ausente. Qual comando lista testes coletados sem executá-los?",
+    "es": "Un job de CI está verde, pero parece faltar una prueba esperada. ¿Qué comando lista las pruebas recopiladas sin ejecutarlas?"
+  },
+  "explanation": {
+    "en": "The --collect-only option exposes collection without running the tests.",
+    "pt-BR": "A opção --collect-only expõe a coleta sem executar os testes.",
+    "es": "La opción --collect-only muestra la colección sin ejecutar las pruebas."
+  },
+  "hints": {
+    "en": [
+      "Investigate discovery before interpreting the green result."
+    ],
+    "pt-BR": [
+      "Investigue a descoberta antes de interpretar o resultado verde."
+    ],
+    "es": [
+      "Investiga el descubrimiento antes de interpretar el resultado verde."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "external-libraries/04-pytest/README.md",
+        "pt-BR": "external-libraries/04-pytest/README.pt-BR.md",
+        "es": "external-libraries/04-pytest/README.es.md"
+      },
+      "sections": {
+        "en": "8. Collection is a phase of the test run",
+        "pt-BR": "8. Coleta é uma fase da execução",
+        "es": "8. La colección es una fase de la ejecución"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "collect"
+  },
+  "choices": [
+    {
+      "id": "quiet",
+      "text": {
+        "en": "python -m pytest -q",
+        "pt-BR": "python -m pytest -q",
+        "es": "python -m pytest -q"
+      }
+    },
+    {
+      "id": "normal",
+      "text": {
+        "en": "python -m pytest",
+        "pt-BR": "python -m pytest",
+        "es": "python -m pytest"
+      }
+    },
+    {
+      "id": "collect",
+      "text": {
+        "en": "python -m pytest --collect-only",
+        "pt-BR": "python -m pytest --collect-only",
+        "es": "python -m pytest --collect-only"
+      }
+    },
+    {
+      "id": "stop",
+      "text": {
+        "en": "python -m pytest -x",
+        "pt-BR": "python -m pytest -x",
+        "es": "python -m pytest -x"
+      }
+    }
+  ]
+}

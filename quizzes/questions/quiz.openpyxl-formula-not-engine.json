@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.openpyxl-formula-not-engine",
+  "chapter_id": "external-libraries.openpyxl",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "Writing an Excel SUM formula through openpyxl automatically calculates its current result in Python.",
+    "pt-BR": "Gravar fórmula SUM do Excel por openpyxl calcula automaticamente seu resultado atual em Python.",
+    "es": "Escribir una fórmula SUM de Excel mediante openpyxl calcula automáticamente su resultado actual en Python."
+  },
+  "explanation": {
+    "en": "openpyxl reads and writes formulas but is not an Excel calculation engine.",
+    "pt-BR": "openpyxl lê e grava fórmulas, mas não é motor de cálculo do Excel.",
+    "es": "openpyxl lee y escribe fórmulas, pero no es un motor de cálculo de Excel."
+  },
+  "hints": {
+    "en": [
+      "Storing an expression and evaluating it are different operations."
+    ],
+    "pt-BR": [
+      "Armazenar uma expressão e avaliá-la são operações distintas."
+    ],
+    "es": [
+      "Almacenar una expresión y evaluarla son operaciones distintas."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "external-libraries/02-openpyxl/README.md",
+        "pt-BR": "external-libraries/02-openpyxl/README.pt-BR.md",
+        "es": "external-libraries/02-openpyxl/README.es.md"
+      },
+      "sections": {
+        "en": "30. `openpyxl` does not calculate formulas",
+        "pt-BR": "30. `openpyxl` não calcula fórmulas",
+        "es": "30. `openpyxl` no calcula fórmulas"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

@@ -62,6 +62,10 @@
       "path": "quizzes/questions/quiz.csv-quoted-comma.json"
     },
     {
+      "id": "quiz.dataframe-labeled-table",
+      "path": "quizzes/questions/quiz.dataframe-labeled-table.json"
+    },
+    {
       "id": "quiz.decimal-exact-input-boundary",
       "path": "quizzes/questions/quiz.decimal-exact-input-boundary.json"
     },
@@ -266,12 +270,28 @@
       "path": "quizzes/questions/quiz.open-returns-file.json"
     },
     {
+      "id": "quiz.openpyxl-formula-not-engine",
+      "path": "quizzes/questions/quiz.openpyxl-formula-not-engine.json"
+    },
+    {
+      "id": "quiz.openpyxl-xlsx-format",
+      "path": "quizzes/questions/quiz.openpyxl-xlsx-format.json"
+    },
+    {
       "id": "quiz.os-getcwd-process-state",
       "path": "quizzes/questions/quiz.os-getcwd-process-state.json"
     },
     {
       "id": "quiz.overlapping-threshold-order",
       "path": "quizzes/questions/quiz.overlapping-threshold-order.json"
+    },
+    {
+      "id": "quiz.pandas-label-selection",
+      "path": "quizzes/questions/quiz.pandas-label-selection.json"
+    },
+    {
+      "id": "quiz.pandas-merge-cardinality",
+      "path": "quizzes/questions/quiz.pandas-merge-cardinality.json"
     },
     {
       "id": "quiz.parameter-rebind-versus-mutation",
@@ -296,6 +316,10 @@
     {
       "id": "quiz.print-literal",
       "path": "quizzes/questions/quiz.print-literal.json"
+    },
+    {
+      "id": "quiz.pytest-collect-only",
+      "path": "quizzes/questions/quiz.pytest-collect-only.json"
     },
     {
       "id": "quiz.python-source-module",
@@ -324,6 +348,14 @@
     {
       "id": "quiz.replace-does-not-mutate",
       "path": "quizzes/questions/quiz.replace-does-not-mutate.json"
+    },
+    {
+      "id": "quiz.requests-explicit-timeout",
+      "path": "quizzes/questions/quiz.requests-explicit-timeout.json"
+    },
+    {
+      "id": "quiz.requests-json-not-success",
+      "path": "quizzes/questions/quiz.requests-json-not-success.json"
     },
     {
       "id": "quiz.return-keyword",
