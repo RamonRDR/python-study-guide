@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.collection-membership",
+  "chapter_id": "collections.choosing-the-right-collection",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "You need to represent distinct study-topic labels. Duplicates and positional order do not matter; membership is the central operation. Which collection most directly expresses this?",
+    "pt-BR": "Você precisa representar rótulos distintos de temas de estudo. Duplicatas e ordem posicional não importam; pertinência é a operação central. Qual coleção expressa isso mais diretamente?",
+    "es": "Necesitas representar etiquetas distintas de temas de estudio. Los duplicados y el orden posicional no importan; la pertenencia es la operación central. ¿Qué colección expresa esto más directamente?"
+  },
+  "explanation": {
+    "en": "A set represents distinct members without positional indexing. Lists and tuples model positional sequences, while dictionaries model key-value mappings.",
+    "pt-BR": "Um set representa membros distintos sem indexação posicional. Listas e tuplas modelam sequências posicionais, enquanto dicionários modelam relações chave-valor.",
+    "es": "Un set representa miembros distintos sin indexación posicional. Las listas y tuplas modelan secuencias posicionales, mientras los diccionarios modelan relaciones clave-valor."
+  },
+  "hints": {
+    "en": [
+      "Choose by the meaning of the data, not its brackets."
+    ],
+    "pt-BR": [
+      "Escolha pelo significado dos dados, não pelos delimitadores."
+    ],
+    "es": [
+      "Elige por el significado de los datos, no por los delimitadores."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/06-choosing-the-right-collection/README.md",
+        "pt-BR": "collections/06-choosing-the-right-collection/README.pt-BR.md",
+        "es": "collections/06-choosing-the-right-collection/README.es.md"
+      },
+      "sections": {
+        "en": "2. The four collection models",
+        "pt-BR": "2. Os quatro modelos de coleção",
+        "es": "2. Los cuatro modelos de colección"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "set"
+  },
+  "choices": [
+    {
+      "id": "list",
+      "text": {
+        "en": "list",
+        "pt-BR": "list",
+        "es": "list"
+      }
+    },
+    {
+      "id": "tuple",
+      "text": {
+        "en": "tuple",
+        "pt-BR": "tuple",
+        "es": "tuple"
+      }
+    },
+    {
+      "id": "dictionary",
+      "text": {
+        "en": "dict",
+        "pt-BR": "dict",
+        "es": "dict"
+      }
+    },
+    {
+      "id": "set",
+      "text": {
+        "en": "set",
+        "pt-BR": "set",
+        "es": "set"
+      }
+    }
+  ]
+}

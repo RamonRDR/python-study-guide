@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.missing-required-argument",
+  "chapter_id": "functions.parameters-and-arguments",
+  "difficulty": "medium",
+  "type": "error_identification",
+  "prompt": {
+    "en": "Which error category occurs when this code reaches show_city()?",
+    "pt-BR": "Qual categoria de erro ocorre quando este código chega a show_city()?",
+    "es": "¿Qué categoría de error ocurre cuando este código llega a show_city()?"
+  },
+  "explanation": {
+    "en": "TypeError occurs because the required city parameter has no supplied argument. The function body does not run; a call such as show_city(\"Lima\") supplies the missing argument.",
+    "pt-BR": "TypeError ocorre porque o parâmetro obrigatório city não recebe um argumento. O corpo da função não é executado; uma chamada como show_city(\"Lima\") fornece o argumento ausente.",
+    "es": "TypeError ocurre porque el parámetro obligatorio city no recibe un argumento. El cuerpo de la función no se ejecuta; una llamada como show_city(\"Lima\") proporciona el argumento ausente."
+  },
+  "hints": {
+    "en": [
+      "Compare the required parameters in the definition with the arguments in the call."
+    ],
+    "pt-BR": [
+      "Compare os parâmetros obrigatórios na definição com os argumentos da chamada."
+    ],
+    "es": [
+      "Compara los parámetros obligatorios de la definición con los argumentos de la llamada."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/02-parameters-and-arguments/README.md",
+        "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+        "es": "functions/02-parameters-and-arguments/README.es.md"
+      },
+      "sections": {
+        "en": "3. A required parameter needs an argument",
+        "pt-BR": "3. Um parâmetro obrigatório precisa de um argumento",
+        "es": "3. Un parámetro obligatorio necesita un argumento"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "type-error"
+  },
+  "choices": [
+    {
+      "id": "syntax-error",
+      "text": {
+        "en": "SyntaxError",
+        "pt-BR": "SyntaxError",
+        "es": "SyntaxError"
+      }
+    },
+    {
+      "id": "value-error",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    },
+    {
+      "id": "name-error",
+      "text": {
+        "en": "NameError",
+        "pt-BR": "NameError",
+        "es": "NameError"
+      }
+    },
+    {
+      "id": "type-error",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    }
+  ],
+  "code": "def show_city(city):\n    print(city)\n\nshow_city()"
+}

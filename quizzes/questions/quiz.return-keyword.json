@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.return-keyword",
+  "chapter_id": "functions.return-values",
+  "difficulty": "easy",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Replace only ____ with the Python keyword that sends the computed value back to the caller. Enter the keyword alone, with no spaces.",
+    "pt-BR": "Substitua apenas ____ pela palavra-chave Python que envia o valor calculado de volta ao chamador. Digite somente a palavra-chave, sem espaços.",
+    "es": "Sustituye solo ____ por la palabra clave de Python que devuelve el valor calculado a quien llama. Introduce únicamente la palabra clave, sin espacios."
+  },
+  "explanation": {
+    "en": "return sends the evaluated expression to the caller and ends the current call. print would display a value instead.",
+    "pt-BR": "return envia a expressão avaliada ao chamador e encerra a chamada atual. print exibiria um valor em vez disso.",
+    "es": "return envía la expresión evaluada a quien llama y termina la llamada actual. print mostraría un valor en su lugar."
+  },
+  "hints": {
+    "en": [
+      "The caller needs a reusable value, not a displayed message."
+    ],
+    "pt-BR": [
+      "O chamador precisa de um valor reutilizável, não de uma mensagem exibida."
+    ],
+    "es": [
+      "Quien llama necesita un valor reutilizable, no un mensaje mostrado."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "functions/03-return-values/README.md",
+        "pt-BR": "functions/03-return-values/README.pt-BR.md",
+        "es": "functions/03-return-values/README.es.md"
+      },
+      "sections": {
+        "en": "1. Send a value back with `return`",
+        "pt-BR": "1. Envie um valor de volta com `return`",
+        "es": "1. Envía un valor de vuelta con `return`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "return"
+    ],
+    "comparison": "exact"
+  },
+  "code": "def double(number):\n    ____ number * 2"
+}
