@@ -1,4 +1,5 @@
 {
+  "schema_version": "1.0.0",
   "id": "problem-solving.literal-palindrome",
   "chapter_id": "problem-solving.strings-and-numbers",
   "difficulty": "medium",
@@ -105,6 +106,7 @@
     "function_name": "is_palindrome",
     "comparison": "exact_type_and_value",
     "timeout_ms": 2000,
+    "new_container": false,
     "cases": [
       {
         "id": "case-01",

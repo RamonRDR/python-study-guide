@@ -37,7 +37,8 @@ class AssessmentPilotTests(unittest.TestCase):
         cls.chapters = load_matrix(ROOT)
         all_quizzes = load_index("quiz", ROOT, QUIZ_INDEX, cls.chapters)
         cls.quizzes = [q for q in all_quizzes if q["id"] in RESPONSES]
-        cls.exercises = load_index("exercise", ROOT, EXERCISE_INDEX, cls.chapters)
+        all_exercises = load_index("exercise", ROOT, EXERCISE_INDEX, cls.chapters)
+        cls.exercises = [r for r in all_exercises if r["id"] in PILOT_EXERCISES]
 
     def test_quiz_inventory_and_allocation(self):
         self.assertEqual({q["id"] for q in self.quizzes}, set(RESPONSES))
@@ -111,8 +112,9 @@ class AssessmentPilotTests(unittest.TestCase):
         all_records = [read_json(path) for path in
                        (ROOT / "exercises/problem-solving").glob("*/exercise.json")]
         self.assertEqual(len(all_records), 30)
-        self.assertEqual({r["id"] for r in all_records if "schema_version" in r},
-                         PILOT_EXERCISES)
+        self.assertTrue(PILOT_EXERCISES <= {
+            r["id"] for r in all_records if r.get("schema_version") == "1.0.0"
+        })
         self.assertEqual(sum(len(r["tests"]["cases"]) for r in all_records), 192)
 
     def test_trusted_references_and_wrong_candidates(self):

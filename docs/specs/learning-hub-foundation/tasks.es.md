@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Sprints 00–06 y 07A–C1 fusionados. C2 implementa los 160 cuestionarios; el cierre requiere CI del head exacto, Codex Review, Final Pre-Merge Audit, aprobación del mantenedor y CI posterior.
+Sprints 00–06 y 07A–C2 fusionados. D versiona los 30 ejercicios; el cierre requiere CI del head exacto, Codex Review, Final Pre-Merge Audit, aprobación del mantenedor y CI posterior.
 
 | Tarea | Sprint | Dependencia | Estado |
 | --- | --- | --- | --- |
@@ -21,7 +21,7 @@ Sprints 00–06 y 07A–C1 fusionados. C2 implementa los 160 cuestionarios; el c
 | T05-02 Ampliar retos por tema/dificultad | 05 | T05-01 | Hecho ([PR #94](https://github.com/RamonRDR/python-study-guide/pull/94), [PR #95](https://github.com/RamonRDR/python-study-guide/pull/95), `21c00c32b91a0116c8a50e89687b91f8efa04cb5`, [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45720384626)) |
 | T06-01 Mapear carencias restantes específicas de entrevistas y enseñar conceptos necesarios no cubiertos en Sprint 05 | 06 | T05-02 | Completado: lecciones 01–21 fusionadas en #98; CI posterior aprobado ([#98](https://github.com/RamonRDR/python-study-guide/pull/98), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45730226049)) |
 | T06-02 Crear preguntas y simulaciones/rúbricas | 06 | T06-01 | Completado: 60 preguntas y tres simulaciones; [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101), [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/45829816717) |
-| T07-01 Finalizar y validar esquemas/registros de cuestionario/ejercicio | 07 | T06-02 | En curso: A y B fusionados ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103)); C1 fusionado ([PR #104](https://github.com/RamonRDR/python-study-guide/pull/104)); C2 implementa 160 cuestionarios; D–E pendientes |
+| T07-01 Finalizar y validar esquemas/registros de cuestionario/ejercicio | 07 | T06-02 | En curso: A y B fusionados ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103)); C1 fusionado ([PR #104](https://github.com/RamonRDR/python-study-guide/pull/104)); C2 fusionado ([PR #105](https://github.com/RamonRDR/python-study-guide/pull/105)); D migra los 30 ejercicios; E pendiente |
 | T08-01 Finalizar manifiesto y fixtures de integración | 08 | T07-01 | Pendiente |
 | T09-01 Ejecutar QA y registrar evidencias reales | 09 | T08-01 | Pendiente |
 | T09-02 Obtener revisión final y publicar handoff con revisión fijada | 09 | T09-01 | Pendiente |

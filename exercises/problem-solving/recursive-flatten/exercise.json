@@ -1,4 +1,5 @@
 {
+  "schema_version": "1.0.0",
   "id": "problem-solving.recursive-flatten",
   "chapter_id": "problem-solving.functions-and-recursion",
   "difficulty": "hard",
@@ -144,6 +145,7 @@
     "function_name": "flatten",
     "comparison": "exact_type_and_value",
     "timeout_ms": 2000,
+    "new_container": true,
     "cases": [
       {
         "id": "case-01",

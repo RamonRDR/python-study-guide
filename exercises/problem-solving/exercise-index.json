@@ -2,12 +2,120 @@
   "schema_version": "1.0.0",
   "records": [
     {
+      "id": "problem-solving.ascii-digit-counter",
+      "path": "exercises/problem-solving/ascii-digit-counter/exercise.json"
+    },
+    {
       "id": "problem-solving.binary-insertion-index",
       "path": "exercises/problem-solving/binary-insertion-index/exercise.json"
     },
     {
+      "id": "problem-solving.binary-target-range",
+      "path": "exercises/problem-solving/binary-target-range/exercise.json"
+    },
+    {
+      "id": "problem-solving.clamp-value",
+      "path": "exercises/problem-solving/clamp-value/exercise.json"
+    },
+    {
+      "id": "problem-solving.debug-negative-window",
+      "path": "exercises/problem-solving/debug-negative-window/exercise.json"
+    },
+    {
+      "id": "problem-solving.debug-positive-count",
+      "path": "exercises/problem-solving/debug-positive-count/exercise.json"
+    },
+    {
+      "id": "problem-solving.descending-insertion-sort",
+      "path": "exercises/problem-solving/descending-insertion-sort/exercise.json"
+    },
+    {
+      "id": "problem-solving.first-repeated-label",
+      "path": "exercises/problem-solving/first-repeated-label/exercise.json"
+    },
+    {
+      "id": "problem-solving.has-duplicate",
+      "path": "exercises/problem-solving/has-duplicate/exercise.json"
+    },
+    {
       "id": "problem-solving.inventory-reconciliation",
       "path": "exercises/problem-solving/inventory-reconciliation/exercise.json"
+    },
+    {
+      "id": "problem-solving.label-counts",
+      "path": "exercises/problem-solving/label-counts/exercise.json"
+    },
+    {
+      "id": "problem-solving.linear-first-index",
+      "path": "exercises/problem-solving/linear-first-index/exercise.json"
+    },
+    {
+      "id": "problem-solving.literal-palindrome",
+      "path": "exercises/problem-solving/literal-palindrome/exercise.json"
+    },
+    {
+      "id": "problem-solving.longest-distinct-substring",
+      "path": "exercises/problem-solving/longest-distinct-substring/exercise.json"
+    },
+    {
+      "id": "problem-solving.merge-inventory",
+      "path": "exercises/problem-solving/merge-inventory/exercise.json"
+    },
+    {
+      "id": "problem-solving.merge-sorted-lists",
+      "path": "exercises/problem-solving/merge-sorted-lists/exercise.json"
+    },
+    {
+      "id": "problem-solving.most-frequent-label",
+      "path": "exercises/problem-solving/most-frequent-label/exercise.json"
+    },
+    {
+      "id": "problem-solving.recursive-factorial",
+      "path": "exercises/problem-solving/recursive-factorial/exercise.json"
+    },
+    {
+      "id": "problem-solving.recursive-flatten",
+      "path": "exercises/problem-solving/recursive-flatten/exercise.json"
+    },
+    {
+      "id": "problem-solving.recursive-power",
+      "path": "exercises/problem-solving/recursive-power/exercise.json"
+    },
+    {
+      "id": "problem-solving.refactor-score-summary",
+      "path": "exercises/problem-solving/refactor-score-summary/exercise.json"
+    },
+    {
+      "id": "problem-solving.refactor-shipping-fee",
+      "path": "exercises/problem-solving/refactor-shipping-fee/exercise.json"
+    },
+    {
+      "id": "problem-solving.sorted-pair-multiplicity",
+      "path": "exercises/problem-solving/sorted-pair-multiplicity/exercise.json"
+    },
+    {
+      "id": "problem-solving.sum-digits",
+      "path": "exercises/problem-solving/sum-digits/exercise.json"
+    },
+    {
+      "id": "problem-solving.timed-longest-streak",
+      "path": "exercises/problem-solving/timed-longest-streak/exercise.json"
+    },
+    {
+      "id": "problem-solving.timed-threshold-count",
+      "path": "exercises/problem-solving/timed-threshold-count/exercise.json"
+    },
+    {
+      "id": "problem-solving.total-short-lengths",
+      "path": "exercises/problem-solving/total-short-lengths/exercise.json"
+    },
+    {
+      "id": "problem-solving.unique-in-order",
+      "path": "exercises/problem-solving/unique-in-order/exercise.json"
+    },
+    {
+      "id": "problem-solving.unordered-pair-count",
+      "path": "exercises/problem-solving/unordered-pair-count/exercise.json"
     },
     {
       "id": "problem-solving.vowel-counter",

@@ -17,3 +17,5 @@ Las pruebas de regresión de navegación exigen el mismo orden de la ruta princi
 Las pruebas de fundamentos exigen asignación aprobada por lección/dificultad, cobertura exacta del índice y calificación determinista; ejecutan fixtures literales confiables, nunca código arbitrario cargado de los registros. Las regresiones del piloto siguen cubiertas.
 
 La suite de expansión comprueba la matriz completa de 160 preguntas, 2.850 XP, 82 nuevos fixtures de respuestas, fixtures literales de código confiables, diversidad de tipos y los tres índices localizados. Las regresiones de fundamentos y piloto siguen activas; no se ejecuta código del alumno.
+
+La suite de migración comprueba el índice completo de 30 registros, los 192 casos existentes, flags explícitos sin alias, enteros grandes exactos, modalidades, metadatos de tiempo y referencias/candidatos incorrectos confiables. El índice histórico de 29 entradas y su suite de regresión siguen intactos. El runtime del navegador y la aplicación de timeout no se prueban aquí.

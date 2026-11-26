@@ -1,4 +1,5 @@
 {
+  "schema_version": "1.0.0",
   "id": "problem-solving.descending-insertion-sort",
   "chapter_id": "problem-solving.searching-and-sorting",
   "difficulty": "medium",
@@ -113,6 +114,7 @@
     "function_name": "descending_sort",
     "comparison": "exact_type_and_value",
     "timeout_ms": 2000,
+    "new_container": true,
     "cases": [
       {
         "id": "case-01",

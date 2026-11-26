@@ -1340,6 +1340,7 @@ python-study-guide/
     ├── assessment_expansion_fixtures.py
     ├── assessment_foundation_fixtures.py
     ├── test_assessment_contract.py
+    ├── test_assessment_exercise_migration.py
     ├── test_assessment_expansion.py
     ├── test_assessment_foundations.py
     ├── test_assessment_pilot.py
@@ -1378,7 +1379,7 @@ python-study-guide/
 - `docs/`: trilhas completas de estudos, roadmaps, arquitetura do projeto, documentos localizados, políticas e guia de desenvolvimento responsável assistido por IA.
 - `docs/adr/` e `docs/specs/`: decisões de arquitetura trilíngues, especificações da Phase II, registro de tarefas, critérios de aceite, contrato de integração e referências futuras entre guias. O mapa de pré-requisitos FR-05 está no diretório learning-hub-foundation.
 - `errors-files-and-modules/`: trilha completa da Fase 7. Os Capítulos 01–05 cobrem tratamento de exceções em runtime, levantamento deliberado e exceções personalizadas, I/O seguro de arquivos de texto com `open()` e `with`, parsing e escrita de TXT/CSV/JSON e organização do código por imports, módulos, pacotes regulares, contexto de execução e design de dependências, em inglês, português brasileiro e espanhol com exemplos executáveis determinísticos.
-- `exercises/`: 30 exercícios com instruções localizadas, inicial e referência compartilhados e testes confiáveis. Três registros usam schema 1.0.0; 27 permanecem legados. O índice de expansão mantém 29 registros; o índice parcial versionado lista os três exercícios migrados.
+- `exercises/`: 30 exercícios localizados com starters e referências compartilhados e 192 casos confiáveis. Todos usam schema 1.0.0; o índice canônico lista os 30. O índice histórico de expansão mantém 29 entradas para compatibilidade.
 - `quizzes/`: 160 questões localizadas e índice versionado. Respostas são públicas; nenhum runtime implementado.
 - `schemas/`: quatro schemas versionados de avaliações (Draft 2020-12).
 - `external-libraries/`: trilha completa da Fase 9 para pacotes de terceiros. Contém capítulos multilíngues revisados de pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x e pytest 9.1.x, com vinte exemplos executáveis determinísticos no total. A fase cobre transformações tabulares, automação de workbooks do Excel, clientes HTTP/API e contratos de testes automatizados; a Fase 10 de projetos práticos também está concluída.
