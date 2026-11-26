@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.qualifying-minute-sum",
+  "chapter_id": "problem-solving.problem-solving-fundamentals",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "For study times [19, 20, 21, 2], sum the minutes of days reaching the 20-minute goal.",
+    "pt-BR": "Para tempos [19, 20, 21, 2], some os minutos dos dias que atingem a meta de 20 minutos.",
+    "es": "Para tiempos [19, 20, 21, 2], suma los minutos de los días que alcanzan la meta de 20 minutos."
+  },
+  "explanation": {
+    "en": "20 and 21 qualify; their sum is 41.",
+    "pt-BR": "20 e 21 se qualificam; a soma é 41.",
+    "es": "20 y 21 cumplen; su suma es 41."
+  },
+  "hints": {
+    "en": [
+      "The goal is inclusive; sum minutes, not days."
+    ],
+    "pt-BR": [
+      "A meta é inclusiva; some minutos, não dias."
+    ],
+    "es": [
+      "La meta es inclusiva; suma minutos, no días."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+        "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+      },
+      "sections": {
+        "en": "1. Read, restate and model",
+        "pt-BR": "1. Ler, reformular e modelar",
+        "es": "1. Leer, reformular y modelar"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "sum"
+  },
+  "choices": [
+    {
+      "id": "count",
+      "text": {
+        "en": "2",
+        "pt-BR": "2",
+        "es": "2"
+      }
+    },
+    {
+      "id": "sum",
+      "text": {
+        "en": "41",
+        "pt-BR": "41",
+        "es": "41"
+      }
+    },
+    {
+      "id": "all",
+      "text": {
+        "en": "62",
+        "pt-BR": "62",
+        "es": "62"
+      }
+    },
+    {
+      "id": "threshold",
+      "text": {
+        "en": "20",
+        "pt-BR": "20",
+        "es": "20"
+      }
+    }
+  ]
+}

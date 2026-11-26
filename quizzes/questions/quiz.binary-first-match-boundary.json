@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.binary-first-match-boundary",
+  "chapter_id": "problem-solving.searching-algorithms",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "In a half-open binary search for the first index with value at least target, values[mid] == target. How should the interval change?",
+    "pt-BR": "Em busca binária semiaberta do primeiro índice com valor pelo menos alvo, values[mid] == target. Como mudar o intervalo?",
+    "es": "En búsqueda binaria semiabierta del primer índice con valor al menos objetivo, values[mid] == target. ¿Cómo cambiar el intervalo?"
+  },
+  "explanation": {
+    "en": "Set right = mid; an earlier equal value may exist, so preserve the lower-bound invariant.",
+    "pt-BR": "Defina right = mid; pode haver valor igual anterior, preservando o invariante de limite inferior.",
+    "es": "Define right = mid; puede existir un valor igual anterior, conservando el invariante de límite inferior."
+  },
+  "hints": {
+    "en": [
+      "Equality does not establish the first occurrence."
+    ],
+    "pt-BR": [
+      "Igualdade não estabelece a primeira ocorrência."
+    ],
+    "es": [
+      "La igualdad no establece la primera aparición."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/05-searching-algorithms/README.md",
+        "pt-BR": "problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/05-searching-algorithms/README.es.md"
+      },
+      "sections": {
+        "en": "2. Binary search",
+        "pt-BR": "2. Busca binária",
+        "es": "2. Búsqueda binaria"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "lower"
+  },
+  "choices": [
+    {
+      "id": "skip",
+      "text": {
+        "en": "left = mid + 1",
+        "pt-BR": "left = mid + 1",
+        "es": "left = mid + 1"
+      }
+    },
+    {
+      "id": "lower",
+      "text": {
+        "en": "right = mid",
+        "pt-BR": "right = mid",
+        "es": "right = mid"
+      }
+    },
+    {
+      "id": "return",
+      "text": {
+        "en": "return mid",
+        "pt-BR": "return mid",
+        "es": "return mid"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.binary-target-exclusive-end",
+  "chapter_id": "problem-solving.searching-and-sorting",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "In Binary Target Range, the first value >= target is at index 2 and equals target. The first value > target is at index 6. What inclusive pair is returned?",
+    "pt-BR": "Em Intervalo Binário do Alvo, o primeiro valor >= alvo está no índice 2 e é igual ao alvo. O primeiro valor > alvo está no índice 6. Qual par inclusivo é retornado?",
+    "es": "En Rango Binario del Objetivo, el primer valor >= objetivo está en índice 2 y es igual al objetivo. El primero > objetivo está en índice 6. ¿Qué par inclusivo se devuelve?"
+  },
+  "explanation": {
+    "en": "The upper boundary is exclusive; subtract one, giving [2, 5].",
+    "pt-BR": "O limite superior é exclusivo; subtraia um, obtendo [2, 5].",
+    "es": "El límite superior es exclusivo; resta uno, obteniendo [2, 5]."
+  },
+  "hints": {
+    "en": [
+      "The first greater value is not a match."
+    ],
+    "pt-BR": [
+      "O primeiro valor maior não corresponde ao alvo."
+    ],
+    "es": [
+      "El primer valor mayor no coincide con el objetivo."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/11-searching-and-sorting/README.md",
+        "pt-BR": "problem-solving-and-live-coding/11-searching-and-sorting/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/11-searching-and-sorting/README.es.md"
+      },
+      "sections": {
+        "en": "Available challenges",
+        "pt-BR": "Desafios disponíveis",
+        "es": "Retos disponibles"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "inclusive"
+  },
+  "choices": [
+    {
+      "id": "exclusive",
+      "text": {
+        "en": "[2, 6]",
+        "pt-BR": "[2, 6]",
+        "es": "[2, 6]"
+      }
+    },
+    {
+      "id": "inclusive",
+      "text": {
+        "en": "[2, 5]",
+        "pt-BR": "[2, 5]",
+        "es": "[2, 5]"
+      }
+    },
+    {
+      "id": "missing",
+      "text": {
+        "en": "[-1, -1]",
+        "pt-BR": "[-1, -1]",
+        "es": "[-1, -1]"
+      }
+    },
+    {
+      "id": "shifted",
+      "text": {
+        "en": "[3, 5]",
+        "pt-BR": "[3, 5]",
+        "es": "[3, 5]"
+      }
+    }
+  ]
+}

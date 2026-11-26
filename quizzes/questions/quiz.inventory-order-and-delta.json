@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.inventory-order-and-delta",
+  "chapter_id": "problem-solving.mixed",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Inventory Reconciliation receives expected [[\"b\",2],[\"a\",1],[\"b\",3]] and actual [[\"a\",1],[\"c\",2],[\"b\",4]]. Which output follows the contract?",
+    "pt-BR": "Reconciliação de Estoque recebe expected [[\"b\",2],[\"a\",1],[\"b\",3]] e actual [[\"a\",1],[\"c\",2],[\"b\",4]]. Qual saída segue o contrato?",
+    "es": "Conciliación de Inventario recibe expected [[\"b\",2],[\"a\",1],[\"b\",3]] y actual [[\"a\",1],[\"c\",2],[\"b\",4]]. ¿Qué salida sigue el contrato?"
+  },
+  "explanation": {
+    "en": "Aggregate b to expected 5 and actual 4, so delta -1; a is equal and omitted; c is actual-only with delta 2. Preserve expected-first order.",
+    "pt-BR": "Agregue b para esperado 5 e real 4, delta -1; a é igual e omitido; c é exclusivo de actual com delta 2. Preserve a ordem de expected primeiro.",
+    "es": "Agrega b a esperado 5 y real 4, delta -1; a es igual y se omite; c solo está en actual con delta 2. Conserva el orden de expected primero."
+  },
+  "hints": {
+    "en": [
+      "Aggregate before comparing; delta is actual minus expected."
+    ],
+    "pt-BR": [
+      "Agregue antes de comparar; delta é real menos esperado."
+    ],
+    "es": [
+      "Agrega antes de comparar; delta es real menos esperado."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/15-mixed-challenges/README.md",
+        "pt-BR": "problem-solving-and-live-coding/15-mixed-challenges/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/15-mixed-challenges/README.es.md"
+      },
+      "sections": {
+        "en": "Available challenges",
+        "pt-BR": "Desafios disponíveis",
+        "es": "Retos disponibles"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "correct"
+  },
+  "choices": [
+    {
+      "id": "reverse",
+      "text": {
+        "en": "[[\"b\",5,4,1],[\"c\",0,2,-2]]",
+        "pt-BR": "[[\"b\",5,4,1],[\"c\",0,2,-2]]",
+        "es": "[[\"b\",5,4,1],[\"c\",0,2,-2]]"
+      }
+    },
+    {
+      "id": "wrong-order",
+      "text": {
+        "en": "[[\"c\",0,2,2],[\"b\",5,4,-1]]",
+        "pt-BR": "[[\"c\",0,2,2],[\"b\",5,4,-1]]",
+        "es": "[[\"c\",0,2,2],[\"b\",5,4,-1]]"
+      }
+    },
+    {
+      "id": "correct",
+      "text": {
+        "en": "[[\"b\",5,4,-1],[\"c\",0,2,2]]",
+        "pt-BR": "[[\"b\",5,4,-1],[\"c\",0,2,2]]",
+        "es": "[[\"b\",5,4,-1],[\"c\",0,2,2]]"
+      }
+    }
+  ]
+}

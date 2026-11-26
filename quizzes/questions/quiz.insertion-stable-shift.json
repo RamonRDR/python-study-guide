@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.insertion-stable-shift",
+  "chapter_id": "problem-solving.sorting-algorithms",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "To keep insertion sort stable for records with equal keys, which earlier records should be shifted?",
+    "pt-BR": "Para manter insertion sort estável para registros de chaves iguais, quais registros anteriores devem ser deslocados?",
+    "es": "Para mantener insertion sort estable con registros de claves iguales, ¿qué registros anteriores deben desplazarse?"
+  },
+  "explanation": {
+    "en": "Shift strictly greater keys, not equal keys, so original relative order is preserved.",
+    "pt-BR": "Desloque chaves estritamente maiores, não iguais, preservando ordem relativa original.",
+    "es": "Desplaza claves estrictamente mayores, no iguales, conservando orden relativo original."
+  },
+  "hints": {
+    "en": [
+      "Stable sorting preserves the relative order of ties."
+    ],
+    "pt-BR": [
+      "Ordenação estável preserva a ordem relativa dos empates."
+    ],
+    "es": [
+      "La ordenación estable conserva el orden relativo de empates."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/06-sorting-algorithms/README.md",
+        "pt-BR": "problem-solving-and-live-coding/06-sorting-algorithms/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/06-sorting-algorithms/README.es.md"
+      },
+      "sections": {
+        "en": "4. Insertion sort",
+        "pt-BR": "4. Insertion sort",
+        "es": "4. Insertion sort"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "greater"
+  },
+  "choices": [
+    {
+      "id": "greater-equal",
+      "text": {
+        "en": ">=",
+        "pt-BR": ">=",
+        "es": ">="
+      }
+    },
+    {
+      "id": "less",
+      "text": {
+        "en": "<",
+        "pt-BR": "<",
+        "es": "<"
+      }
+    },
+    {
+      "id": "greater",
+      "text": {
+        "en": ">",
+        "pt-BR": ">",
+        "es": ">"
+      }
+    },
+    {
+      "id": "equal",
+      "text": {
+        "en": "==",
+        "pt-BR": "==",
+        "es": "=="
+      }
+    }
+  ]
+}

@@ -22,12 +22,28 @@
       "path": "quizzes/questions/quiz.automation-failure-publication.json"
     },
     {
+      "id": "quiz.big-o-not-seconds",
+      "path": "quizzes/questions/quiz.big-o-not-seconds.json"
+    },
+    {
+      "id": "quiz.binary-first-match-boundary",
+      "path": "quizzes/questions/quiz.binary-first-match-boundary.json"
+    },
+    {
+      "id": "quiz.binary-target-exclusive-end",
+      "path": "quizzes/questions/quiz.binary-target-exclusive-end.json"
+    },
+    {
       "id": "quiz.bool-int-exact-versus-compatible",
       "path": "quizzes/questions/quiz.bool-int-exact-versus-compatible.json"
     },
     {
       "id": "quiz.boolean-precedence",
       "path": "quizzes/questions/quiz.boolean-precedence.json"
+    },
+    {
+      "id": "quiz.capacity-inclusive-boundary",
+      "path": "quizzes/questions/quiz.capacity-inclusive-boundary.json"
     },
     {
       "id": "quiz.catch-invalid-integer",
@@ -114,6 +130,10 @@
       "path": "quizzes/questions/quiz.discarded-return-does-not-rebind.json"
     },
     {
+      "id": "quiz.distinct-window-monotonic",
+      "path": "quizzes/questions/quiz.distinct-window-monotonic.json"
+    },
+    {
       "id": "quiz.division-zero-error",
       "path": "quizzes/questions/quiz.division-zero-error.json"
     },
@@ -152,6 +172,10 @@
     {
       "id": "quiz.finally-propagates-unhandled",
       "path": "quizzes/questions/quiz.finally-propagates-unhandled.json"
+    },
+    {
+      "id": "quiz.flatten-shared-accumulator",
+      "path": "quizzes/questions/quiz.flatten-shared-accumulator.json"
     },
     {
       "id": "quiz.for-accumulator-initial-value",
@@ -198,6 +222,10 @@
       "path": "quizzes/questions/quiz.input-digits-text.json"
     },
     {
+      "id": "quiz.insertion-stable-shift",
+      "path": "quizzes/questions/quiz.insertion-stable-shift.json"
+    },
+    {
       "id": "quiz.install-declared-requirements",
       "path": "quizzes/questions/quiz.install-declared-requirements.json"
     },
@@ -208,6 +236,10 @@
     {
       "id": "quiz.interpreter-purpose",
       "path": "quizzes/questions/quiz.interpreter-purpose.json"
+    },
+    {
+      "id": "quiz.inventory-order-and-delta",
+      "path": "quizzes/questions/quiz.inventory-order-and-delta.json"
     },
     {
       "id": "quiz.json-dumps-text-not-bytes",
@@ -282,6 +314,10 @@
       "path": "quizzes/questions/quiz.negative-floor-remainder.json"
     },
     {
+      "id": "quiz.negative-window-initialization",
+      "path": "quizzes/questions/quiz.negative-window-initialization.json"
+    },
+    {
       "id": "quiz.none-check-preserve-zero",
       "path": "quizzes/questions/quiz.none-check-preserve-zero.json"
     },
@@ -312,6 +348,10 @@
     {
       "id": "quiz.overlapping-threshold-order",
       "path": "quizzes/questions/quiz.overlapping-threshold-order.json"
+    },
+    {
+      "id": "quiz.pair-duplicate-multiplicity",
+      "path": "quizzes/questions/quiz.pair-duplicate-multiplicity.json"
     },
     {
       "id": "quiz.pandas-label-selection",
@@ -358,6 +398,10 @@
       "path": "quizzes/questions/quiz.python-source-module.json"
     },
     {
+      "id": "quiz.qualifying-minute-sum",
+      "path": "quizzes/questions/quiz.qualifying-minute-sum.json"
+    },
+    {
       "id": "quiz.quoted-digits-type",
       "path": "quizzes/questions/quiz.quoted-digits-type.json"
     },
@@ -378,12 +422,20 @@
       "path": "quizzes/questions/quiz.reconciliation-duplicate-source.json"
     },
     {
+      "id": "quiz.recursive-sum-trace",
+      "path": "quizzes/questions/quiz.recursive-sum-trace.json"
+    },
+    {
       "id": "quiz.registration-canonical-uniqueness",
       "path": "quizzes/questions/quiz.registration-canonical-uniqueness.json"
     },
     {
       "id": "quiz.relative-path-working-directory",
       "path": "quizzes/questions/quiz.relative-path-working-directory.json"
+    },
+    {
+      "id": "quiz.repeated-lookup-tradeoff",
+      "path": "quizzes/questions/quiz.repeated-lookup-tradeoff.json"
     },
     {
       "id": "quiz.replace-does-not-mutate",
@@ -404,6 +456,10 @@
     {
       "id": "quiz.return-keyword",
       "path": "quizzes/questions/quiz.return-keyword.json"
+    },
+    {
+      "id": "quiz.rolling-window-update",
+      "path": "quizzes/questions/quiz.rolling-window-update.json"
     },
     {
       "id": "quiz.round-ties-to-even",

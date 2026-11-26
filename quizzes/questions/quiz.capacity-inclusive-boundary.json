@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.capacity-inclusive-boundary",
+  "chapter_id": "problem-solving.constraints-and-edge-cases",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "With valid integers, a group exactly equal to capacity must be rejected.",
+    "pt-BR": "Com inteiros válidos, um grupo exatamente igual à capacidade deve ser rejeitado.",
+    "es": "Con enteros válidos, un grupo igual a la capacidad debe rechazarse."
+  },
+  "explanation": {
+    "en": "Capacity is inclusive; an exactly full group is accepted.",
+    "pt-BR": "A capacidade é inclusiva; um grupo que a preenche é aceito.",
+    "es": "La capacidad es inclusiva; se acepta un grupo que la llena."
+  },
+  "hints": {
+    "en": [
+      "Consider the upper boundary."
+    ],
+    "pt-BR": [
+      "Considere o limite superior."
+    ],
+    "es": [
+      "Considera el límite superior."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+        "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+      },
+      "sections": {
+        "en": "1. Domain and boundaries",
+        "pt-BR": "1. Domínio e limites",
+        "es": "1. Dominio y límites"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

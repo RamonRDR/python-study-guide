@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.repeated-lookup-tradeoff",
+  "chapter_id": "problem-solving.algorithmic-complexity",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Many membership queries reuse a collection of n distinct bounded-size hashable items. Which trade-off is appropriate?",
+    "pt-BR": "Muitas consultas de pertencimento reutilizam uma coleção de n itens hashable distintos de tamanho limitado. Qual trade-off é adequado?",
+    "es": "Muchas consultas de pertenencia reutilizan una colección de n elementos hashables distintos de tamaño acotado. ¿Qué compromiso es adecuado?"
+  },
+  "explanation": {
+    "en": "A hash set uses O(n) auxiliary storage and expected O(1) lookup under ordinary hashing assumptions; building it takes work.",
+    "pt-BR": "Um set hash usa O(n) de espaço auxiliar e consulta O(1) esperada sob hipóteses usuais de hashing; construí-lo tem custo.",
+    "es": "Un set hash usa O(n) de espacio auxiliar y consulta O(1) esperada bajo supuestos normales de hashing; construirlo tiene coste."
+  },
+  "hints": {
+    "en": [
+      "Compare repeated linear scans with an index built once."
+    ],
+    "pt-BR": [
+      "Compare varreduras repetidas com um índice construído uma vez."
+    ],
+    "es": [
+      "Compara recorridos repetidos con un índice construido una vez."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+        "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+      },
+      "sections": {
+        "en": "2. Space and trade-offs",
+        "pt-BR": "2. Espaço e trade-offs",
+        "es": "2. Espacio y compromisos"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "hash-set"
+  },
+  "choices": [
+    {
+      "id": "constant-space",
+      "text": {
+        "en": "A set requires no extra storage.",
+        "pt-BR": "Um set não exige espaço extra.",
+        "es": "Un set no requiere espacio adicional."
+      }
+    },
+    {
+      "id": "guaranteed",
+      "text": {
+        "en": "A set guarantees worst-case constant lookup.",
+        "pt-BR": "Um set garante consulta constante no pior caso.",
+        "es": "Un set garantiza consulta constante en el peor caso."
+      }
+    },
+    {
+      "id": "hash-set",
+      "text": {
+        "en": "Trade storage and setup work for expected faster lookup.",
+        "pt-BR": "Trocar espaço e custo inicial por consulta esperada mais rápida.",
+        "es": "Intercambiar espacio y coste inicial por consulta esperada más rápida."
+      }
+    }
+  ]
+}
