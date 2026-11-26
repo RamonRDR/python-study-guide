@@ -1,0 +1,86 @@
+{
+  "id": "behavioral.star-evidence",
+  "topic": "behavioral-international",
+  "level": "junior",
+  "prompt": {
+    "en": "Describe a bug or learning challenge using STAR. Use a truthful nonconfidential example (study or personal work is acceptable), or label a fictional rehearsal explicitly. Distinguish your own action, observable result, learning and limitation.",
+    "pt-BR": "Descreva um bug ou desafio de aprendizado usando STAR. Use exemplo verdadeiro não confidencial (estudo ou projeto pessoal é válido), ou identifique ensaio fictício explicitamente. Distinga sua ação, resultado observável, aprendizado e limitação.",
+    "es": "Describe un error o reto de aprendizaje con STAR. Usa ejemplo veraz no confidencial (estudio o proyecto personal es válido), o identifica explícitamente ensayo ficticio. Distingue tu acción, resultado observable, aprendizaje y limitación."
+  },
+  "expected_answer": {
+    "en": "State brief situation, your assigned task, specific actions you took and an observable result plus learning. Describe a limitation honestly; do not invent metrics, attribute others' work to yourself or expose confidential material.",
+    "pt-BR": "Declare situação breve, tarefa sob sua responsabilidade, ações específicas que realizou e resultado observável mais aprendizado. Descreva limitação honestamente; não invente métricas, atribua trabalho alheio a si ou exponha material confidencial.",
+    "es": "Indica situación breve, tarea bajo tu responsabilidad, acciones específicas realizadas y resultado observable más aprendizaje. Describe limitación con honestidad; no inventes métricas, atribuyas trabajo ajeno a ti ni expongas material confidencial."
+  },
+  "explanation": {
+    "en": "STAR organizes evidence rather than requiring professional tenure or numeric impact.",
+    "pt-BR": "STAR organiza evidências sem exigir experiência profissional ou impacto numérico.",
+    "es": "STAR organiza evidencias sin exigir experiencia profesional ni impacto numérico."
+  },
+  "intent": {
+    "en": "Assess ownership, concrete evidence and learning.",
+    "pt-BR": "Avaliar responsabilidade, evidência concreta e aprendizado.",
+    "es": "Evaluar responsabilidad, evidencia concreta y aprendizaje."
+  },
+  "common_errors": {
+    "en": [
+      "Present a fictional success as real employment or claim team outcomes as individual work."
+    ],
+    "pt-BR": [
+      "Apresentar sucesso fictício como emprego real ou atribuir resultado coletivo a trabalho individual."
+    ],
+    "es": [
+      "Presentar éxito ficticio como empleo real o atribuir resultados colectivos a trabajo individual."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What would you improve next and how would you verify it?"
+    ],
+    "pt-BR": [
+      "O que melhoraria depois e como verificaria?"
+    ],
+    "es": [
+      "¿Qué mejorarías después y cómo lo verificarías?"
+    ]
+  },
+  "examples": {
+    "en": "Fictional rehearsal: a study script counted duplicate IDs (S); I owned the counting rule (T); I clarified the requirement, wrote a regression test and corrected the rule (A); that test passed, while database integration remained unverified (R). I learned to distinguish unit and integration evidence.",
+    "pt-BR": "Ensaio fictício: script de estudos contava IDs duplicados (S); eu respondia pela regra (T); esclareci requisito, escrevi teste de regressão e corrigi regra (A); teste passou, integração com banco ficou sem verificação (R). Aprendi a distinguir evidência unitária de integração.",
+    "es": "Ensayo ficticio: script de estudio contaba IDs duplicados (S); era responsable de regla (T); aclaré requisito, escribí prueba de regresión y corregí regla (A); prueba pasó, integración con base quedó sin verificar (R). Aprendí a distinguir evidencia unitaria de integración."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Provides situation, task and personal concrete action, labeling fictional material.",
+        "pt-BR": "Apresenta situação, tarefa e ação pessoal concreta, identificando material fictício.",
+        "es": "Presenta situación, tarea y acción personal concreta, identificando material ficticio."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "States observable result, learning and limitation without unsupported claims or confidential data.",
+        "pt-BR": "Declara resultado observável, aprendizado e limitação sem alegações sem suporte ou dados confidenciais.",
+        "es": "Declara resultado observable, aprendizaje y limitación sin afirmaciones sin respaldo ni datos confidenciales."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/23-behavioral-and-international-interviews/README.md",
+        "pt-BR": "technical-interview-preparation/23-behavioral-and-international-interviews/README.pt-BR.md",
+        "es": "technical-interview-preparation/23-behavioral-and-international-interviews/README.es.md"
+      },
+      "sections": {
+        "en": "Behavioral evidence with STAR",
+        "pt-BR": "Evidências comportamentais com STAR",
+        "es": "Evidencias conductuales con STAR"
+      }
+    }
+  ]
+}

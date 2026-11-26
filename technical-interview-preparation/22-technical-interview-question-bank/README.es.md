@@ -3,10 +3,10 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Anterior](../21-software-engineering-and-technical-decisions/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../21-software-engineering-and-technical-decisions/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../23-behavioral-and-international-interviews/README.es.md)
 <!-- /chapter-navigation:top -->
 
-57 preguntas técnicas: 23 Junior, 23 Mid-level y 11 Senior, incluidas nueve preguntas piloto originales. Navega por tema y nivel; IDs permanecen estables al reordenar. Nivel indica profundidad esperada, no estándar universal de contratación. Estudia primero la sección de requisito previo, responde en voz alta sin revelar referencia y luego abre respuesta. Asigna a cada criterio sus puntos solo si tu respuesta lo demuestra; si no, cero. Usa puntuación para identificar carencias, no como certificación ni evaluación semántica automática. Preguntas de seguimiento son práctica opcional, sin puntuación separada. Registros JSON canónicos e índice en [interviews](../../interviews/README.es.md); esta sección se genera a partir de ellos. Tres preguntas conductuales/internacionales y simulaciones cronometradas siguen previstas.
+60 preguntas de entrevista: 24 Junior, 24 Mid-level y 12 Senior, incluidas nueve preguntas piloto originales y tres conductuales/internacionales. Navega por tema y nivel; IDs permanecen estables al reordenar. Nivel indica profundidad esperada, no estándar universal de contratación. Estudia primero la sección de requisito previo, responde en voz alta sin revelar referencia y luego abre respuesta. Asigna a cada criterio sus puntos solo si tu respuesta lo demuestra; si no, cero. Usa puntuación para identificar carencias, no como certificación ni evaluación semántica automática. Preguntas de seguimiento son práctica opcional, sin puntuación separada. Registros JSON canónicos e índice en [interviews](../../interviews/README.es.md); esta sección se genera a partir de ellos. Estudia [entrevistas conductuales e internacionales](../23-behavioral-and-international-interviews/README.es.md) antes de esas preguntas y luego intenta las [simulaciones cronometradas](../24-mock-interviews-and-self-assessment/README.es.md).
 
 <!-- interview-questions:start -->
 ## Distribución
@@ -22,6 +22,7 @@
 | Backend y APIs | 2 | 2 | 1 | 5 |
 | Bases de datos y SQL | 2 | 2 | 1 | 5 |
 | Ingeniería de software | 1 | 1 | 1 | 3 |
+| Entrevistas conductuales e internacionales | 1 | 1 | 1 | 3 |
 
 ## Fundamentos de entrevistas
 
@@ -2384,8 +2385,130 @@ Máximo: 3
 - [Compromisos y operación](../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md)
 - [Decisiones empiezan en el requisito](../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md)
 
+## Entrevistas conductuales e internacionales
+
+### behavioral.star-evidence
+
+`junior` · `behavioral-international`
+
+Describe un error o reto de aprendizaje con STAR. Usa ejemplo veraz no confidencial (estudio o proyecto personal es válido), o identifica explícitamente ensayo ficticio. Distingue tu acción, resultado observable, aprendizaje y limitación.
+
+<details>
+<summary>Respuesta esperada</summary>
+
+Indica situación breve, tarea bajo tu responsabilidad, acciones específicas realizadas y resultado observable más aprendizaje. Describe limitación con honestidad; no inventes métricas, atribuyas trabajo ajeno a ti ni expongas material confidencial.
+
+**Explicación:** STAR organiza evidencias sin exigir experiencia profesional ni impacto numérico.
+
+**Intención del entrevistador:** Evaluar responsabilidad, evidencia concreta y aprendizaje.
+
+**Errores comunes**
+
+- Presentar éxito ficticio como empleo real o atribuir resultados colectivos a trabajo individual.
+
+**Preguntas de seguimiento**
+
+- ¿Qué mejorarías después y cómo lo verificarías?
+
+**Ejemplo**
+
+Ensayo ficticio: script de estudio contaba IDs duplicados (S); era responsable de regla (T); aclaré requisito, escribí prueba de regresión y corregí regla (A); prueba pasó, integración con base quedó sin verificar (R). Aprendí a distinguir evidencia unitaria de integración.
+
+**Rúbrica de autoevaluación**
+
+- 1 — Presenta situación, tarea y acción personal concreta, identificando material ficticio.
+- 1 — Declara resultado observable, aprendizaje y limitación sin afirmaciones sin respaldo ni datos confidenciales.
+
+Máximo: 2
+
+</details>
+
+**Requisitos previos**
+
+- [Evidencias conductuales con STAR](../../technical-interview-preparation/23-behavioral-and-international-interviews/README.es.md)
+
+### behavioral.international-clarification
+
+`mid` · `behavioral-international`
+
+En entrevista en inglés, requisito cambia de devolver primera aparición del objetivo (o -1) a primera posición de inserción en lista ordenada. Da aclaración breve en inglés, ejemplo discriminante y actualización honesta con prueba que añadirías.
+
+<details>
+<summary>Respuesta esperada</summary>
+
+Reconoce cambio de contrato, aclara si iguales se insertan antes del primero igual y reformula requisito. Para [2,4,7], objetivo 5, resultado antiguo -1 e índice de inserción 2. Propón prueba de ese caso y duplicados; distingue pruebas previstas de ejecutadas. Usa inglés comprensible, no jerga memorizada.
+
+**Explicación:** Ejemplo concreto hace observable contrato cambiado; calidad comunicativa es comprensión compartida, no acento.
+
+**Intención del entrevistador:** Evaluar aclaración, inglés técnico y respuesta a comentarios.
+
+**Errores comunes**
+
+- Seguir implementando contrato antiguo o afirmar que pruebas no ejecutadas pasaron.
+
+**Preguntas de seguimiento**
+
+- ¿Cómo pedirías al entrevistador repetir frase desconocida?
+
+**Ejemplo**
+
+Ensayo en inglés: "Let me restate the requirement. Should the insertion position be before equal values? For [2,4,7] and 5, I expect index 2. I would add this test; I have not run it yet."
+
+**Rúbrica de autoevaluación**
+
+- 1 — Usa inglés comprensible para aclarar y reformular contrato cambiado.
+- 1 — Da ejemplo discriminante y actualización honesta de prueba/estado.
+
+Máximo: 2
+
+</details>
+
+**Requisitos previos**
+
+- [Entrevistas internacionales e inglés técnico](../../technical-interview-preparation/23-behavioral-and-international-interviews/README.es.md)
+
+### behavioral.evidence-disagreement
+
+`senior` · `behavioral-international`
+
+Compañero prefiere dividir servicio lento de informes; prefieres investigar caché. En este escenario ficticio, explica cómo resolverías desacuerdo usando objetivo compartido, evidencias, compromisos, decisión documentada y comunicación de riesgos. Distingue trabajo propuesto de resultados reales.
+
+<details>
+<summary>Respuesta esperada</summary>
+
+Acuerda objetivo de latencia/fiabilidad e investiga evidencias de base antes de elegir. Escucha restricciones del compañero; compara desfase, invalidación y memoria de caché con despliegue/escala independientes y coste de red. Acuerda experimento pequeño y registro de decisión con criterios, riesgos y rollback. Declara tu función y decisión del equipo por separado; sin resultados, informa experimento como previsto, no ganancia verificada.
+
+**Explicación:** Objetivo es decisión fundamentada y seguimiento colaborativo, no ganar discusión.
+
+**Intención del entrevistador:** Evaluar liderazgo técnico, responsabilidad y comunicación transparente de riesgos.
+
+**Errores comunes**
+
+- Desestimar compañero o inventar mejoras antes de medición.
+
+**Preguntas de seguimiento**
+
+- Si equipo elige otra opción, ¿cómo apoyarías y vigilarías plan acordado?
+
+**Ejemplo**
+
+Plan ficticio: mide costes de lecturas repetidas, acuerda desfase aceptable, prueba caché limitada frente a base y documenta cuándo rechazarla. No se afirma mejora hasta medir.
+
+**Rúbrica de autoevaluación**
+
+- 1 — Declara objetivo común, escucha alternativas y compara compromisos medibles.
+- 1 — Propone experimento/decisión documentado con criterios, riesgo y rollback, distinguiendo roles individual/equipo y resultados previstos/verificados.
+
+Máximo: 2
+
+</details>
+
+**Requisitos previos**
+
+- [Desacuerdos, responsabilidad y compromisos](../../technical-interview-preparation/23-behavioral-and-international-interviews/README.es.md)
+
 <!-- interview-questions:end -->
 
 <!-- chapter-navigation:bottom -->
-[← Anterior](../21-software-engineering-and-technical-decisions/README.es.md) · [Índice del módulo](../README.es.md)
+[← Anterior](../21-software-engineering-and-technical-decisions/README.es.md) · [Índice del módulo](../README.es.md) · [Siguiente →](../23-behavioral-and-international-interviews/README.es.md)
 <!-- /chapter-navigation:bottom -->

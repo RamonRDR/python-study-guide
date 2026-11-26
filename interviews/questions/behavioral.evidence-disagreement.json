@@ -1,0 +1,86 @@
+{
+  "id": "behavioral.evidence-disagreement",
+  "topic": "behavioral-international",
+  "level": "senior",
+  "prompt": {
+    "en": "A teammate favors splitting a slow reporting service; you favor investigating a cache. In this fictional scenario, explain how you would resolve the disagreement using a shared goal, evidence, trade-offs, a documented decision and risk communication. Distinguish proposed work from actual outcomes.",
+    "pt-BR": "Colega prefere dividir serviço lento de relatórios; você prefere investigar cache. Neste cenário fictício, explique como resolveria divergência usando objetivo comum, evidências, trade-offs, decisão documentada e comunicação de riscos. Distinga trabalho proposto de resultados reais.",
+    "es": "Compañero prefiere dividir servicio lento de informes; prefieres investigar caché. En este escenario ficticio, explica cómo resolverías desacuerdo usando objetivo compartido, evidencias, compromisos, decisión documentada y comunicación de riesgos. Distingue trabajo propuesto de resultados reales."
+  },
+  "expected_answer": {
+    "en": "Agree on a latency/reliability target and investigate baseline evidence before choosing. Hear the colleague's constraints; compare cache staleness, invalidation and memory with independent deployment/scaling and network cost. Agree a small experiment and decision record with success criteria, risks and rollback. State your role and team decision separately; without results, report the experiment as planned, not a verified gain.",
+    "pt-BR": "Acorde meta de latência/confiabilidade e investigue evidências de baseline antes de escolher. Ouça restrições do colega; compare defasagem, invalidação e memória de cache com deploy/escala independentes e custo de rede. Acorde experimento pequeno e registro de decisão com critérios, riscos e rollback. Declare sua função e decisão da equipe separadamente; sem resultados, relate experimento como planejado, não ganho verificado.",
+    "es": "Acuerda objetivo de latencia/fiabilidad e investiga evidencias de base antes de elegir. Escucha restricciones del compañero; compara desfase, invalidación y memoria de caché con despliegue/escala independientes y coste de red. Acuerda experimento pequeño y registro de decisión con criterios, riesgos y rollback. Declara tu función y decisión del equipo por separado; sin resultados, informa experimento como previsto, no ganancia verificada."
+  },
+  "explanation": {
+    "en": "The goal is a supported decision and collaborative follow-through, not winning an argument.",
+    "pt-BR": "Objetivo é decisão fundamentada e acompanhamento colaborativo, não vencer discussão.",
+    "es": "Objetivo es decisión fundamentada y seguimiento colaborativo, no ganar discusión."
+  },
+  "intent": {
+    "en": "Assess technical leadership, ownership and transparent risk communication.",
+    "pt-BR": "Avaliar liderança técnica, responsabilidade e comunicação transparente de riscos.",
+    "es": "Evaluar liderazgo técnico, responsabilidad y comunicación transparente de riesgos."
+  },
+  "common_errors": {
+    "en": [
+      "Dismiss a teammate or invent performance improvements before measurement."
+    ],
+    "pt-BR": [
+      "Desconsiderar colega ou inventar melhorias antes da medição."
+    ],
+    "es": [
+      "Desestimar compañero o inventar mejoras antes de medición."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "If the team chooses the other option, how would you support and monitor the agreed plan?"
+    ],
+    "pt-BR": [
+      "Se equipe escolher outra opção, como apoiaria e monitoraria plano acordado?"
+    ],
+    "es": [
+      "Si equipo elige otra opción, ¿cómo apoyarías y vigilarías plan acordado?"
+    ]
+  },
+  "examples": {
+    "en": "Fictional plan: measure repeated read costs, agree acceptable staleness, test a bounded cache against baseline and document when to reject it. No improvement is claimed until measured.",
+    "pt-BR": "Plano fictício: meça custos de leituras repetidas, acorde defasagem aceitável, teste cache limitado contra baseline e documente quando rejeitá-lo. Nenhuma melhoria é alegada até medição.",
+    "es": "Plan ficticio: mide costes de lecturas repetidas, acuerda desfase aceptable, prueba caché limitada frente a base y documenta cuándo rechazarla. No se afirma mejora hasta medir."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "States shared goal, listens to alternatives and compares measurable trade-offs.",
+        "pt-BR": "Declara objetivo comum, ouve alternativas e compara trade-offs mensuráveis.",
+        "es": "Declara objetivo común, escucha alternativas y compara compromisos medibles."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes documented experiment/decision with criteria, risk and rollback, distinguishing individual/team roles and planned/verified outcomes.",
+        "pt-BR": "Propõe experimento/decisão documentado com critérios, risco e rollback, distinguindo papéis individual/equipe e resultados planejados/verificados.",
+        "es": "Propone experimento/decisión documentado con criterios, riesgo y rollback, distinguiendo roles individual/equipo y resultados previstos/verificados."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/23-behavioral-and-international-interviews/README.md",
+        "pt-BR": "technical-interview-preparation/23-behavioral-and-international-interviews/README.pt-BR.md",
+        "es": "technical-interview-preparation/23-behavioral-and-international-interviews/README.es.md"
+      },
+      "sections": {
+        "en": "Disagreement, ownership and trade-offs",
+        "pt-BR": "Divergências, responsabilidade e trade-offs",
+        "es": "Desacuerdos, responsabilidad y compromisos"
+      }
+    }
+  ]
+}

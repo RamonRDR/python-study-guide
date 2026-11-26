@@ -1,0 +1,86 @@
+{
+  "id": "behavioral.international-clarification",
+  "topic": "behavioral-international",
+  "level": "mid",
+  "prompt": {
+    "en": "In an English-language interview, the requirement changes from returning the first occurrence of a target (or -1) to returning its first insertion position in a sorted list. Give a short English clarification, a discriminating example and an honest status update including a test you would add.",
+    "pt-BR": "Em entrevista em inglês, requisito muda de retornar primeira ocorrência do alvo (ou -1) para primeira posição de inserção em lista ordenada. Dê esclarecimento curto em inglês, exemplo discriminante e atualização honesta incluindo teste que adicionaria.",
+    "es": "En entrevista en inglés, requisito cambia de devolver primera aparición del objetivo (o -1) a primera posición de inserción en lista ordenada. Da aclaración breve en inglés, ejemplo discriminante y actualización honesta con prueba que añadirías."
+  },
+  "expected_answer": {
+    "en": "Acknowledge the changed contract, clarify whether equal values insert before the first equal, and restate the new requirement. For [2,4,7], target 5, the old result is -1 and the insertion index is 2. Propose a test for that case and duplicates; distinguish planned tests from executed ones. Use understandable English, not memorized jargon.",
+    "pt-BR": "Reconheça mudança de contrato, esclareça se iguais inserem antes do primeiro igual e reformule requisito. Para [2,4,7], alvo 5, resultado antigo -1 e índice de inserção 2. Proponha teste desse caso e duplicados; distinga testes planejados de executados. Use inglês compreensível, não jargão decorado.",
+    "es": "Reconoce cambio de contrato, aclara si iguales se insertan antes del primero igual y reformula requisito. Para [2,4,7], objetivo 5, resultado antiguo -1 e índice de inserción 2. Propón prueba de ese caso y duplicados; distingue pruebas previstas de ejecutadas. Usa inglés comprensible, no jerga memorizada."
+  },
+  "explanation": {
+    "en": "A concrete example makes the changed contract observable; communication quality is about shared understanding, not accent.",
+    "pt-BR": "Exemplo concreto torna contrato alterado observável; qualidade da comunicação é compreensão compartilhada, não sotaque.",
+    "es": "Ejemplo concreto hace observable contrato cambiado; calidad comunicativa es comprensión compartida, no acento."
+  },
+  "intent": {
+    "en": "Assess clarification, technical English and response to feedback.",
+    "pt-BR": "Avaliar esclarecimento, inglês técnico e resposta a feedback.",
+    "es": "Evaluar aclaración, inglés técnico y respuesta a comentarios."
+  },
+  "common_errors": {
+    "en": [
+      "Continue implementing the old contract or assert unexecuted tests passed."
+    ],
+    "pt-BR": [
+      "Continuar implementando contrato antigo ou afirmar que testes não executados passaram."
+    ],
+    "es": [
+      "Seguir implementando contrato antiguo o afirmar que pruebas no ejecutadas pasaron."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you ask the interviewer to repeat an unfamiliar phrase?"
+    ],
+    "pt-BR": [
+      "Como pediria ao entrevistador que repetisse frase desconhecida?"
+    ],
+    "es": [
+      "¿Cómo pedirías al entrevistador repetir frase desconocida?"
+    ]
+  },
+  "examples": {
+    "en": "English rehearsal: \"Let me restate the requirement. Should the insertion position be before equal values? For [2,4,7] and 5, I expect index 2. I would add this test; I have not run it yet.\"",
+    "pt-BR": "Ensaio em inglês: \"Let me restate the requirement. Should the insertion position be before equal values? For [2,4,7] and 5, I expect index 2. I would add this test; I have not run it yet.\"",
+    "es": "Ensayo en inglés: \"Let me restate the requirement. Should the insertion position be before equal values? For [2,4,7] and 5, I expect index 2. I would add this test; I have not run it yet.\""
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Uses understandable English to clarify and restate the changed contract.",
+        "pt-BR": "Usa inglês compreensível para esclarecer e reformular contrato alterado.",
+        "es": "Usa inglés comprensible para aclarar y reformular contrato cambiado."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Gives a discriminating example and an honest test/status update.",
+        "pt-BR": "Dá exemplo discriminante e atualização honesta de teste/status.",
+        "es": "Da ejemplo discriminante y actualización honesta de prueba/estado."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/23-behavioral-and-international-interviews/README.md",
+        "pt-BR": "technical-interview-preparation/23-behavioral-and-international-interviews/README.pt-BR.md",
+        "es": "technical-interview-preparation/23-behavioral-and-international-interviews/README.es.md"
+      },
+      "sections": {
+        "en": "International interviews and technical English",
+        "pt-BR": "Entrevistas internacionais e inglês técnico",
+        "es": "Entrevistas internacionales e inglés técnico"
+      }
+    }
+  ]
+}
