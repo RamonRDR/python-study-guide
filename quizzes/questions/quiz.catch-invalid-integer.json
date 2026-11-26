@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.catch-invalid-integer",
+  "chapter_id": "errors-files-and-modules.try-except-else-finally",
+  "difficulty": "easy",
+  "type": "error_identification",
+  "prompt": {
+    "en": "Which exception should the handler catch for int(\"oak\")?",
+    "pt-BR": "Qual exceção o handler deve capturar para int(\"oak\")?",
+    "es": "¿Qué excepción debe capturar el handler para int(\"oak\")?"
+  },
+  "explanation": {
+    "en": "The input is text of an invalid numeric value, so int raises ValueError.",
+    "pt-BR": "A entrada é texto com valor numérico inválido, então int gera ValueError.",
+    "es": "La entrada es texto de valor numérico inválido, por lo que int lanza ValueError."
+  },
+  "hints": {
+    "en": [
+      "The argument type is supported, but its contents are not."
+    ],
+    "pt-BR": [
+      "O tipo do argumento é aceito, mas seu conteúdo não."
+    ],
+    "es": [
+      "El tipo del argumento es admitido, pero su contenido no."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/01-try-except-else-finally/README.md",
+        "pt-BR": "errors-files-and-modules/01-try-except-else-finally/README.pt-BR.md",
+        "es": "errors-files-and-modules/01-try-except-else-finally/README.es.md"
+      },
+      "sections": {
+        "en": "4. The smallest useful `try` and `except`",
+        "pt-BR": "4. O menor `try` e `except` útil",
+        "es": "4. El `try` y `except` útil más pequeño"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "value-error"
+  },
+  "choices": [
+    {
+      "id": "type-error",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    },
+    {
+      "id": "value-error",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    },
+    {
+      "id": "name-error",
+      "text": {
+        "en": "NameError",
+        "pt-BR": "NameError",
+        "es": "NameError"
+      }
+    },
+    {
+      "id": "index-error",
+      "text": {
+        "en": "IndexError",
+        "pt-BR": "IndexError",
+        "es": "IndexError"
+      }
+    }
+  ]
+}

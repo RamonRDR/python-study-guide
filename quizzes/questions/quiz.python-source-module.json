@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.python-source-module",
+  "chapter_id": "errors-files-and-modules.imports-modules-and-packages",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "An ordinary .py file containing definitions and statements can serve as a Python module.",
+    "pt-BR": "Um arquivo .py comum contendo definições e instruções pode servir como módulo Python.",
+    "es": "Un archivo .py ordinario con definiciones y sentencias puede servir como módulo Python."
+  },
+  "explanation": {
+    "en": "A source module is a file containing Python statements and definitions.",
+    "pt-BR": "Um módulo fonte é um arquivo contendo instruções e definições Python.",
+    "es": "Un módulo fuente es un archivo con sentencias y definiciones Python."
+  },
+  "hints": {
+    "en": [
+      "Consider a reusable file containing functions."
+    ],
+    "pt-BR": [
+      "Considere um arquivo reutilizável com funções."
+    ],
+    "es": [
+      "Considera un archivo reutilizable con funciones."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/05-imports-modules-and-packages/README.md",
+        "pt-BR": "errors-files-and-modules/05-imports-modules-and-packages/README.pt-BR.md",
+        "es": "errors-files-and-modules/05-imports-modules-and-packages/README.es.md"
+      },
+      "sections": {
+        "en": "2. In ordinary Python source code, a `.py` file can be a module",
+        "pt-BR": "2. Em código-fonte Python comum, um arquivo `.py` pode ser um módulo",
+        "es": "2. En código fuente Python común, un archivo `.py` puede ser un módulo"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

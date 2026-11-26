@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.import-initialization-side-effect",
+  "chapter_id": "errors-files-and-modules.imports-modules-and-packages",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A reusable module contains an unguarded top-level print. What can happen when it is imported for the first time in a fresh interpreter?",
+    "pt-BR": "Um módulo reutilizável contém print no nível superior sem proteção. O que pode ocorrer quando ele é importado pela primeira vez em um interpretador novo?",
+    "es": "Un módulo reutilizable contiene print a nivel superior sin protección. ¿Qué puede ocurrir al importarlo por primera vez en un intérprete nuevo?"
+  },
+  "explanation": {
+    "en": "Import initializes the module by executing top-level code when needed; it can print before any explicit function call.",
+    "pt-BR": "Import inicializa o módulo executando código de nível superior quando necessário; pode imprimir antes de chamada explícita de função.",
+    "es": "Import inicializa el módulo ejecutando código de nivel superior cuando es necesario; puede imprimir antes de una llamada explícita a una función."
+  },
+  "hints": {
+    "en": [
+      "An import is an executable statement, not a text copy."
+    ],
+    "pt-BR": [
+      "Import é instrução executável, não cópia de texto."
+    ],
+    "es": [
+      "Import es una sentencia ejecutable, no copia de texto."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "errors-files-and-modules/05-imports-modules-and-packages/README.md",
+        "pt-BR": "errors-files-and-modules/05-imports-modules-and-packages/README.pt-BR.md",
+        "es": "errors-files-and-modules/05-imports-modules-and-packages/README.es.md"
+      },
+      "sections": {
+        "en": "8. Imports are executable statements",
+        "pt-BR": "8. Imports são instruções executáveis",
+        "es": "8. Los imports son instrucciones ejecutables"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "initializes"
+  },
+  "choices": [
+    {
+      "id": "never-runs",
+      "text": {
+        "en": "Top-level code never runs.",
+        "pt-BR": "Código de nível superior nunca executa.",
+        "es": "El código de nivel superior nunca se ejecuta."
+      }
+    },
+    {
+      "id": "initializes",
+      "text": {
+        "en": "The print can run during module initialization.",
+        "pt-BR": "O print pode executar na inicialização do módulo.",
+        "es": "El print puede ejecutarse durante la inicialización del módulo."
+      }
+    },
+    {
+      "id": "every-function",
+      "text": {
+        "en": "All function bodies run automatically.",
+        "pt-BR": "Todos os corpos de funções executam automaticamente.",
+        "es": "Todos los cuerpos de funciones se ejecutan automáticamente."
+      }
+    },
+    {
+      "id": "syntax-only",
+      "text": {
+        "en": "Only syntax is checked; no code runs.",
+        "pt-BR": "Apenas sintaxe é conferida; nenhum código executa.",
+        "es": "Solo se comprueba la sintaxis; no se ejecuta código."
+      }
+    }
+  ]
+}
