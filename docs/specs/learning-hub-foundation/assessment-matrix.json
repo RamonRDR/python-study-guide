@@ -1,0 +1,1685 @@
+{
+  "baseline_revision": "bf56305f42d10ab7c5b31c2b70f6c38140353db4",
+  "modules": [
+    {
+      "module": "getting-started",
+      "chapters": [
+        {
+          "chapter_id": "getting-started.install-python",
+          "paths": {
+            "en": "getting-started/01-install-python/README.md",
+            "pt-BR": "getting-started/01-install-python/README.pt-BR.md",
+            "es": "getting-started/01-install-python/README.es.md"
+          },
+          "concept": "interpreter",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "getting-started.configure-vscode",
+          "paths": {
+            "en": "getting-started/02-configure-vscode/README.md",
+            "pt-BR": "getting-started/02-configure-vscode/README.pt-BR.md",
+            "es": "getting-started/02-configure-vscode/README.es.md"
+          },
+          "concept": "editor",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "getting-started.run-your-first-program",
+          "paths": {
+            "en": "getting-started/03-run-your-first-program/README.md",
+            "pt-BR": "getting-started/03-run-your-first-program/README.pt-BR.md",
+            "es": "getting-started/03-run-your-first-program/README.es.md"
+          },
+          "concept": "save-run",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "getting-started.virtual-environments",
+          "paths": {
+            "en": "getting-started/04-virtual-environments/README.md",
+            "pt-BR": "getting-started/04-virtual-environments/README.pt-BR.md",
+            "es": "getting-started/04-virtual-environments/README.es.md"
+          },
+          "concept": "venv",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "getting-started.packages-and-dependencies",
+          "paths": {
+            "en": "getting-started/05-packages-and-dependencies/README.md",
+            "pt-BR": "getting-started/05-packages-and-dependencies/README.pt-BR.md",
+            "es": "getting-started/05-packages-and-dependencies/README.es.md"
+          },
+          "concept": "pip",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "getting-started.git-and-version-control",
+          "paths": {
+            "en": "getting-started/06-git-and-version-control/README.md",
+            "pt-BR": "getting-started/06-git-and-version-control/README.pt-BR.md",
+            "es": "getting-started/06-git-and-version-control/README.es.md"
+          },
+          "concept": "git",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        }
+      ]
+    },
+    {
+      "module": "fundamentals",
+      "chapters": [
+        {
+          "chapter_id": "fundamentals.how-python-runs-a-program",
+          "paths": {
+            "en": "fundamentals/01-how-python-runs-a-program/README.md",
+            "pt-BR": "fundamentals/01-how-python-runs-a-program/README.pt-BR.md",
+            "es": "fundamentals/01-how-python-runs-a-program/README.es.md"
+          },
+          "concept": "execution",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "fundamentals.print-and-input",
+          "paths": {
+            "en": "fundamentals/02-print-and-input/README.md",
+            "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+            "es": "fundamentals/02-print-and-input/README.es.md"
+          },
+          "concept": "print-input",
+          "allocation": {
+            "easy": 2,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "fundamentals.variables-and-naming",
+          "paths": {
+            "en": "fundamentals/03-variables-and-naming/README.md",
+            "pt-BR": "fundamentals/03-variables-and-naming/README.pt-BR.md",
+            "es": "fundamentals/03-variables-and-naming/README.es.md"
+          },
+          "concept": "assignment",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "fundamentals.built-in-data-types",
+          "paths": {
+            "en": "fundamentals/04-built-in-data-types/README.md",
+            "pt-BR": "fundamentals/04-built-in-data-types/README.pt-BR.md",
+            "es": "fundamentals/04-built-in-data-types/README.es.md"
+          },
+          "concept": "types",
+          "allocation": {
+            "easy": 2,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "fundamentals.type-and-isinstance",
+          "paths": {
+            "en": "fundamentals/05-type-and-isinstance/README.md",
+            "pt-BR": "fundamentals/05-type-and-isinstance/README.pt-BR.md",
+            "es": "fundamentals/05-type-and-isinstance/README.es.md"
+          },
+          "concept": "type-isinstance",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "fundamentals.type-conversion",
+          "paths": {
+            "en": "fundamentals/06-type-conversion/README.md",
+            "pt-BR": "fundamentals/06-type-conversion/README.pt-BR.md",
+            "es": "fundamentals/06-type-conversion/README.es.md"
+          },
+          "concept": "conversion",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        }
+      ]
+    },
+    {
+      "module": "strings-and-numbers",
+      "chapters": [
+        {
+          "chapter_id": "strings-and-numbers.string-creation-and-indexing",
+          "paths": {
+            "en": "strings-and-numbers/01-string-creation-and-indexing/README.md",
+            "pt-BR": "strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md",
+            "es": "strings-and-numbers/01-string-creation-and-indexing/README.es.md"
+          },
+          "concept": "index-slice",
+          "allocation": {
+            "easy": 2,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "strings-and-numbers.common-string-methods",
+          "paths": {
+            "en": "strings-and-numbers/02-common-string-methods/README.md",
+            "pt-BR": "strings-and-numbers/02-common-string-methods/README.pt-BR.md",
+            "es": "strings-and-numbers/02-common-string-methods/README.es.md"
+          },
+          "concept": "methods",
+          "allocation": {
+            "easy": 1,
+            "medium": 2,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "strings-and-numbers.int-float-and-bool",
+          "paths": {
+            "en": "strings-and-numbers/03-int-float-and-bool/README.md",
+            "pt-BR": "strings-and-numbers/03-int-float-and-bool/README.pt-BR.md",
+            "es": "strings-and-numbers/03-int-float-and-bool/README.es.md"
+          },
+          "concept": "numeric-operations",
+          "allocation": {
+            "easy": 2,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "strings-and-numbers.numeric-builtins",
+          "paths": {
+            "en": "strings-and-numbers/04-numeric-builtins/README.md",
+            "pt-BR": "strings-and-numbers/04-numeric-builtins/README.pt-BR.md",
+            "es": "strings-and-numbers/04-numeric-builtins/README.es.md"
+          },
+          "concept": "numeric-builtins",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        }
+      ]
+    },
+    {
+      "module": "collections",
+      "chapters": [
+        {
+          "chapter_id": "collections.list-creation-and-indexing",
+          "paths": {
+            "en": "collections/01-list-creation-and-indexing/README.md",
+            "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+            "es": "collections/01-list-creation-and-indexing/README.es.md"
+          },
+          "concept": "list-index",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "collections.modifying-lists-and-methods",
+          "paths": {
+            "en": "collections/02-modifying-lists-and-methods/README.md",
+            "pt-BR": "collections/02-modifying-lists-and-methods/README.pt-BR.md",
+            "es": "collections/02-modifying-lists-and-methods/README.es.md"
+          },
+          "concept": "list-mutation",
+          "allocation": {
+            "easy": 1,
+            "medium": 2,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "collections.tuples-and-immutability",
+          "paths": {
+            "en": "collections/03-tuples-and-immutability/README.md",
+            "pt-BR": "collections/03-tuples-and-immutability/README.pt-BR.md",
+            "es": "collections/03-tuples-and-immutability/README.es.md"
+          },
+          "concept": "tuple",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "collections.dictionaries-keys-and-values",
+          "paths": {
+            "en": "collections/04-dictionaries-keys-and-values/README.md",
+            "pt-BR": "collections/04-dictionaries-keys-and-values/README.pt-BR.md",
+            "es": "collections/04-dictionaries-keys-and-values/README.es.md"
+          },
+          "concept": "dictionary",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "collections.sets-and-unique-values",
+          "paths": {
+            "en": "collections/05-sets-and-unique-values/README.md",
+            "pt-BR": "collections/05-sets-and-unique-values/README.pt-BR.md",
+            "es": "collections/05-sets-and-unique-values/README.es.md"
+          },
+          "concept": "set",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "collections.choosing-the-right-collection",
+          "paths": {
+            "en": "collections/06-choosing-the-right-collection/README.md",
+            "pt-BR": "collections/06-choosing-the-right-collection/README.pt-BR.md",
+            "es": "collections/06-choosing-the-right-collection/README.es.md"
+          },
+          "concept": "collection-choice",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        }
+      ]
+    },
+    {
+      "module": "program-flow",
+      "chapters": [
+        {
+          "chapter_id": "program-flow.conditions-comparisons-and-boolean-logic",
+          "paths": {
+            "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+            "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+            "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+          },
+          "concept": "boolean-logic",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "program-flow.if-elif-and-else",
+          "paths": {
+            "en": "program-flow/02-if-elif-and-else/README.md",
+            "pt-BR": "program-flow/02-if-elif-and-else/README.pt-BR.md",
+            "es": "program-flow/02-if-elif-and-else/README.es.md"
+          },
+          "concept": "conditional",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "program-flow.match-and-case",
+          "paths": {
+            "en": "program-flow/03-match-and-case/README.md",
+            "pt-BR": "program-flow/03-match-and-case/README.pt-BR.md",
+            "es": "program-flow/03-match-and-case/README.es.md"
+          },
+          "concept": "match",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "program-flow.for-loops-and-iteration",
+          "paths": {
+            "en": "program-flow/04-for-loops-and-iteration/README.md",
+            "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+            "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+          },
+          "concept": "iteration",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "program-flow.range-enumerate-and-zip",
+          "paths": {
+            "en": "program-flow/05-range-enumerate-and-zip/README.md",
+            "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+            "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+          },
+          "concept": "iteration-helpers",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "program-flow.while-loops-and-state-driven-repetition",
+          "paths": {
+            "en": "program-flow/06-while-loops-and-state-driven-repetition/README.md",
+            "pt-BR": "program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md",
+            "es": "program-flow/06-while-loops-and-state-driven-repetition/README.es.md"
+          },
+          "concept": "while",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "program-flow.break-continue-and-loop-else",
+          "paths": {
+            "en": "program-flow/07-break-continue-and-loop-else/README.md",
+            "pt-BR": "program-flow/07-break-continue-and-loop-else/README.pt-BR.md",
+            "es": "program-flow/07-break-continue-and-loop-else/README.es.md"
+          },
+          "concept": "loop-control",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "program-flow.choosing-and-combining-program-flow",
+          "paths": {
+            "en": "program-flow/08-choosing-and-combining-program-flow/README.md",
+            "pt-BR": "program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md",
+            "es": "program-flow/08-choosing-and-combining-program-flow/README.es.md"
+          },
+          "concept": "combined-flow",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        }
+      ]
+    },
+    {
+      "module": "functions",
+      "chapters": [
+        {
+          "chapter_id": "functions.defining-and-calling-functions",
+          "paths": {
+            "en": "functions/01-defining-and-calling-functions/README.md",
+            "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+            "es": "functions/01-defining-and-calling-functions/README.es.md"
+          },
+          "concept": "definition",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "functions.parameters-and-arguments",
+          "paths": {
+            "en": "functions/02-parameters-and-arguments/README.md",
+            "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+            "es": "functions/02-parameters-and-arguments/README.es.md"
+          },
+          "concept": "arguments",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "functions.return-values",
+          "paths": {
+            "en": "functions/03-return-values/README.md",
+            "pt-BR": "functions/03-return-values/README.pt-BR.md",
+            "es": "functions/03-return-values/README.es.md"
+          },
+          "concept": "return",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "functions.scope",
+          "paths": {
+            "en": "functions/04-scope/README.md",
+            "pt-BR": "functions/04-scope/README.pt-BR.md",
+            "es": "functions/04-scope/README.es.md"
+          },
+          "concept": "scope",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "functions.type-hints",
+          "paths": {
+            "en": "functions/05-type-hints/README.md",
+            "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+            "es": "functions/05-type-hints/README.es.md"
+          },
+          "concept": "type-hints",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "functions.default-values",
+          "paths": {
+            "en": "functions/06-default-values/README.md",
+            "pt-BR": "functions/06-default-values/README.pt-BR.md",
+            "es": "functions/06-default-values/README.es.md"
+          },
+          "concept": "defaults",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "functions.args-and-kwargs",
+          "paths": {
+            "en": "functions/07-args-and-kwargs/README.md",
+            "pt-BR": "functions/07-args-and-kwargs/README.pt-BR.md",
+            "es": "functions/07-args-and-kwargs/README.es.md"
+          },
+          "concept": "variadic",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "functions.functions-working-together",
+          "paths": {
+            "en": "functions/08-functions-working-together/README.md",
+            "pt-BR": "functions/08-functions-working-together/README.pt-BR.md",
+            "es": "functions/08-functions-working-together/README.es.md"
+          },
+          "concept": "composition",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "functions.data-flow-between-functions",
+          "paths": {
+            "en": "functions/09-data-flow-between-functions/README.md",
+            "pt-BR": "functions/09-data-flow-between-functions/README.pt-BR.md",
+            "es": "functions/09-data-flow-between-functions/README.es.md"
+          },
+          "concept": "data-flow",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 1
+          }
+        }
+      ]
+    },
+    {
+      "module": "comments-and-documentation",
+      "chapters": [
+        {
+          "chapter_id": "comments-and-documentation.comments",
+          "paths": {
+            "en": "comments-and-documentation/01-comments/README.md",
+            "pt-BR": "comments-and-documentation/01-comments/README.pt-BR.md",
+            "es": "comments-and-documentation/01-comments/README.es.md"
+          },
+          "concept": "comments",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "comments-and-documentation.docstrings",
+          "paths": {
+            "en": "comments-and-documentation/02-docstrings/README.md",
+            "pt-BR": "comments-and-documentation/02-docstrings/README.pt-BR.md",
+            "es": "comments-and-documentation/02-docstrings/README.es.md"
+          },
+          "concept": "docstrings",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "comments-and-documentation.meaningful-names",
+          "paths": {
+            "en": "comments-and-documentation/03-meaningful-names/README.md",
+            "pt-BR": "comments-and-documentation/03-meaningful-names/README.pt-BR.md",
+            "es": "comments-and-documentation/03-meaningful-names/README.es.md"
+          },
+          "concept": "names",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "comments-and-documentation.task-markers",
+          "paths": {
+            "en": "comments-and-documentation/04-task-markers/README.md",
+            "pt-BR": "comments-and-documentation/04-task-markers/README.pt-BR.md",
+            "es": "comments-and-documentation/04-task-markers/README.es.md"
+          },
+          "concept": "markers",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "comments-and-documentation.comments-vs-logging",
+          "paths": {
+            "en": "comments-and-documentation/05-comments-vs-logging/README.md",
+            "pt-BR": "comments-and-documentation/05-comments-vs-logging/README.pt-BR.md",
+            "es": "comments-and-documentation/05-comments-vs-logging/README.es.md"
+          },
+          "concept": "logging",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "comments-and-documentation.pep8-and-readability",
+          "paths": {
+            "en": "comments-and-documentation/06-pep8-and-readability/README.md",
+            "pt-BR": "comments-and-documentation/06-pep8-and-readability/README.pt-BR.md",
+            "es": "comments-and-documentation/06-pep8-and-readability/README.es.md"
+          },
+          "concept": "readability",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 1
+          }
+        }
+      ]
+    },
+    {
+      "module": "errors-files-and-modules",
+      "chapters": [
+        {
+          "chapter_id": "errors-files-and-modules.try-except-else-finally",
+          "paths": {
+            "en": "errors-files-and-modules/01-try-except-else-finally/README.md",
+            "pt-BR": "errors-files-and-modules/01-try-except-else-finally/README.pt-BR.md",
+            "es": "errors-files-and-modules/01-try-except-else-finally/README.es.md"
+          },
+          "concept": "exception-flow",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "errors-files-and-modules.raise-and-custom-exceptions",
+          "paths": {
+            "en": "errors-files-and-modules/02-raise-and-custom-exceptions/README.md",
+            "pt-BR": "errors-files-and-modules/02-raise-and-custom-exceptions/README.pt-BR.md",
+            "es": "errors-files-and-modules/02-raise-and-custom-exceptions/README.es.md"
+          },
+          "concept": "raise",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "errors-files-and-modules.open-and-with",
+          "paths": {
+            "en": "errors-files-and-modules/03-open-and-with/README.md",
+            "pt-BR": "errors-files-and-modules/03-open-and-with/README.pt-BR.md",
+            "es": "errors-files-and-modules/03-open-and-with/README.es.md"
+          },
+          "concept": "files",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "errors-files-and-modules.txt-csv-and-json",
+          "paths": {
+            "en": "errors-files-and-modules/04-txt-csv-and-json/README.md",
+            "pt-BR": "errors-files-and-modules/04-txt-csv-and-json/README.pt-BR.md",
+            "es": "errors-files-and-modules/04-txt-csv-and-json/README.es.md"
+          },
+          "concept": "formats",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "errors-files-and-modules.imports-modules-and-packages",
+          "paths": {
+            "en": "errors-files-and-modules/05-imports-modules-and-packages/README.md",
+            "pt-BR": "errors-files-and-modules/05-imports-modules-and-packages/README.pt-BR.md",
+            "es": "errors-files-and-modules/05-imports-modules-and-packages/README.es.md"
+          },
+          "concept": "imports",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 1
+          }
+        }
+      ]
+    },
+    {
+      "module": "standard-library",
+      "chapters": [
+        {
+          "chapter_id": "standard-library.pathlib",
+          "paths": {
+            "en": "standard-library/01-pathlib/README.md",
+            "pt-BR": "standard-library/01-pathlib/README.pt-BR.md",
+            "es": "standard-library/01-pathlib/README.es.md"
+          },
+          "concept": "pathlib",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "standard-library.datetime",
+          "paths": {
+            "en": "standard-library/02-datetime/README.md",
+            "pt-BR": "standard-library/02-datetime/README.pt-BR.md",
+            "es": "standard-library/02-datetime/README.es.md"
+          },
+          "concept": "datetime",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "standard-library.json",
+          "paths": {
+            "en": "standard-library/03-json/README.md",
+            "pt-BR": "standard-library/03-json/README.pt-BR.md",
+            "es": "standard-library/03-json/README.es.md"
+          },
+          "concept": "json",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "standard-library.csv",
+          "paths": {
+            "en": "standard-library/04-csv/README.md",
+            "pt-BR": "standard-library/04-csv/README.pt-BR.md",
+            "es": "standard-library/04-csv/README.es.md"
+          },
+          "concept": "csv",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "standard-library.logging",
+          "paths": {
+            "en": "standard-library/05-logging/README.md",
+            "pt-BR": "standard-library/05-logging/README.pt-BR.md",
+            "es": "standard-library/05-logging/README.es.md"
+          },
+          "concept": "logging",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "standard-library.collections",
+          "paths": {
+            "en": "standard-library/06-collections/README.md",
+            "pt-BR": "standard-library/06-collections/README.pt-BR.md",
+            "es": "standard-library/06-collections/README.es.md"
+          },
+          "concept": "collections",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "standard-library.itertools",
+          "paths": {
+            "en": "standard-library/07-itertools/README.md",
+            "pt-BR": "standard-library/07-itertools/README.pt-BR.md",
+            "es": "standard-library/07-itertools/README.es.md"
+          },
+          "concept": "itertools",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "standard-library.decimal",
+          "paths": {
+            "en": "standard-library/08-decimal/README.md",
+            "pt-BR": "standard-library/08-decimal/README.pt-BR.md",
+            "es": "standard-library/08-decimal/README.es.md"
+          },
+          "concept": "decimal",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "standard-library.os-shutil",
+          "paths": {
+            "en": "standard-library/09-os-shutil/README.md",
+            "pt-BR": "standard-library/09-os-shutil/README.pt-BR.md",
+            "es": "standard-library/09-os-shutil/README.es.md"
+          },
+          "concept": "os-shutil",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        }
+      ]
+    },
+    {
+      "module": "external-libraries",
+      "chapters": [
+        {
+          "chapter_id": "external-libraries.pandas",
+          "paths": {
+            "en": "external-libraries/01-pandas/README.md",
+            "pt-BR": "external-libraries/01-pandas/README.pt-BR.md",
+            "es": "external-libraries/01-pandas/README.es.md"
+          },
+          "concept": "pandas",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "external-libraries.openpyxl",
+          "paths": {
+            "en": "external-libraries/02-openpyxl/README.md",
+            "pt-BR": "external-libraries/02-openpyxl/README.pt-BR.md",
+            "es": "external-libraries/02-openpyxl/README.es.md"
+          },
+          "concept": "openpyxl",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "external-libraries.requests",
+          "paths": {
+            "en": "external-libraries/03-requests/README.md",
+            "pt-BR": "external-libraries/03-requests/README.pt-BR.md",
+            "es": "external-libraries/03-requests/README.es.md"
+          },
+          "concept": "requests",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "external-libraries.pytest",
+          "paths": {
+            "en": "external-libraries/04-pytest/README.md",
+            "pt-BR": "external-libraries/04-pytest/README.pt-BR.md",
+            "es": "external-libraries/04-pytest/README.es.md"
+          },
+          "concept": "pytest",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        }
+      ]
+    },
+    {
+      "module": "practical-projects",
+      "chapters": [
+        {
+          "chapter_id": "practical-projects.expense-tracker",
+          "paths": {
+            "en": "practical-projects/01-expense-tracker/README.md",
+            "pt-BR": "practical-projects/01-expense-tracker/README.pt-BR.md",
+            "es": "practical-projects/01-expense-tracker/README.es.md"
+          },
+          "concept": "expense",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "practical-projects.grade-calculator",
+          "paths": {
+            "en": "practical-projects/02-grade-calculator/README.md",
+            "pt-BR": "practical-projects/02-grade-calculator/README.pt-BR.md",
+            "es": "practical-projects/02-grade-calculator/README.es.md"
+          },
+          "concept": "grades",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "practical-projects.user-registration",
+          "paths": {
+            "en": "practical-projects/03-user-registration/README.md",
+            "pt-BR": "practical-projects/03-user-registration/README.pt-BR.md",
+            "es": "practical-projects/03-user-registration/README.es.md"
+          },
+          "concept": "registration",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "practical-projects.csv-analyzer",
+          "paths": {
+            "en": "practical-projects/04-csv-analyzer/README.md",
+            "pt-BR": "practical-projects/04-csv-analyzer/README.pt-BR.md",
+            "es": "practical-projects/04-csv-analyzer/README.es.md"
+          },
+          "concept": "csv-analysis",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "practical-projects.report-generator",
+          "paths": {
+            "en": "practical-projects/05-report-generator/README.md",
+            "pt-BR": "practical-projects/05-report-generator/README.pt-BR.md",
+            "es": "practical-projects/05-report-generator/README.es.md"
+          },
+          "concept": "report",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "practical-projects.file-organizer",
+          "paths": {
+            "en": "practical-projects/06-file-organizer/README.md",
+            "pt-BR": "practical-projects/06-file-organizer/README.pt-BR.md",
+            "es": "practical-projects/06-file-organizer/README.es.md"
+          },
+          "concept": "file-organizer",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "practical-projects.fictional-reconciliation-workflow",
+          "paths": {
+            "en": "practical-projects/07-fictional-reconciliation-workflow/README.md",
+            "pt-BR": "practical-projects/07-fictional-reconciliation-workflow/README.pt-BR.md",
+            "es": "practical-projects/07-fictional-reconciliation-workflow/README.es.md"
+          },
+          "concept": "reconciliation",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "practical-projects.simulated-automation-flow",
+          "paths": {
+            "en": "practical-projects/08-simulated-automation-flow/README.md",
+            "pt-BR": "practical-projects/08-simulated-automation-flow/README.pt-BR.md",
+            "es": "practical-projects/08-simulated-automation-flow/README.es.md"
+          },
+          "concept": "automation",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        }
+      ]
+    },
+    {
+      "module": "manual-programming-practices",
+      "chapters": [
+        {
+          "chapter_id": "manual-programming-practices.manual-coding-and-debugging",
+          "paths": {
+            "en": "manual-programming-practices/01-manual-coding-and-debugging/README.md",
+            "pt-BR": "manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md",
+            "es": "manual-programming-practices/01-manual-coding-and-debugging/README.es.md"
+          },
+          "concept": "debugging",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "manual-programming-practices.specification-driven-development",
+          "paths": {
+            "en": "manual-programming-practices/02-specification-driven-development/README.md",
+            "pt-BR": "manual-programming-practices/02-specification-driven-development/README.pt-BR.md",
+            "es": "manual-programming-practices/02-specification-driven-development/README.es.md"
+          },
+          "concept": "specification",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "manual-programming-practices.test-driven-development",
+          "paths": {
+            "en": "manual-programming-practices/03-test-driven-development/README.md",
+            "pt-BR": "manual-programming-practices/03-test-driven-development/README.pt-BR.md",
+            "es": "manual-programming-practices/03-test-driven-development/README.es.md"
+          },
+          "concept": "tdd",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "manual-programming-practices.professional-workflow",
+          "paths": {
+            "en": "manual-programming-practices/04-professional-workflow/README.md",
+            "pt-BR": "manual-programming-practices/04-professional-workflow/README.pt-BR.md",
+            "es": "manual-programming-practices/04-professional-workflow/README.es.md"
+          },
+          "concept": "workflow",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        }
+      ]
+    },
+    {
+      "module": "problem-solving-and-live-coding",
+      "chapters": [
+        {
+          "chapter_id": "problem-solving.problem-solving-fundamentals",
+          "paths": {
+            "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+            "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+          },
+          "concept": "decomposition",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.constraints-and-edge-cases",
+          "paths": {
+            "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+            "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+          },
+          "concept": "boundaries",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.algorithmic-complexity",
+          "paths": {
+            "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+            "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+          },
+          "concept": "complexity",
+          "allocation": {
+            "easy": 1,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.recursion",
+          "paths": {
+            "en": "problem-solving-and-live-coding/04-recursion/README.md",
+            "pt-BR": "problem-solving-and-live-coding/04-recursion/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/04-recursion/README.es.md"
+          },
+          "concept": "recursion",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.searching-algorithms",
+          "paths": {
+            "en": "problem-solving-and-live-coding/05-searching-algorithms/README.md",
+            "pt-BR": "problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/05-searching-algorithms/README.es.md"
+          },
+          "concept": "search",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.sorting-algorithms",
+          "paths": {
+            "en": "problem-solving-and-live-coding/06-sorting-algorithms/README.md",
+            "pt-BR": "problem-solving-and-live-coding/06-sorting-algorithms/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/06-sorting-algorithms/README.es.md"
+          },
+          "concept": "sort",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.problem-solving-patterns",
+          "paths": {
+            "en": "problem-solving-and-live-coding/07-problem-solving-patterns/README.md",
+            "pt-BR": "problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md"
+          },
+          "concept": "patterns",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.strings-and-numbers",
+          "paths": {
+            "en": "problem-solving-and-live-coding/08-strings-and-numbers/README.md",
+            "pt-BR": "problem-solving-and-live-coding/08-strings-and-numbers/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/08-strings-and-numbers/README.es.md"
+          },
+          "concept": "variable-window",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "problem-solving.collections",
+          "paths": {
+            "en": "problem-solving-and-live-coding/09-collections/README.md",
+            "pt-BR": "problem-solving-and-live-coding/09-collections/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/09-collections/README.es.md"
+          },
+          "concept": "manual-collections",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.functions-and-recursion",
+          "paths": {
+            "en": "problem-solving-and-live-coding/10-functions-and-recursion/README.md",
+            "pt-BR": "problem-solving-and-live-coding/10-functions-and-recursion/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/10-functions-and-recursion/README.es.md"
+          },
+          "concept": "nested-recursion",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "problem-solving.searching-and-sorting",
+          "paths": {
+            "en": "problem-solving-and-live-coding/11-searching-and-sorting/README.md",
+            "pt-BR": "problem-solving-and-live-coding/11-searching-and-sorting/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/11-searching-and-sorting/README.es.md"
+          },
+          "concept": "binary-bounds",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "problem-solving.algorithms-and-complexity",
+          "paths": {
+            "en": "problem-solving-and-live-coding/12-algorithms-and-complexity/README.md",
+            "pt-BR": "problem-solving-and-live-coding/12-algorithms-and-complexity/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/12-algorithms-and-complexity/README.es.md"
+          },
+          "concept": "pair-multiplicity",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "problem-solving.debugging",
+          "paths": {
+            "en": "problem-solving-and-live-coding/13-debugging-challenges/README.md",
+            "pt-BR": "problem-solving-and-live-coding/13-debugging-challenges/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/13-debugging-challenges/README.es.md"
+          },
+          "concept": "debugging",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.refactoring",
+          "paths": {
+            "en": "problem-solving-and-live-coding/14-refactoring-challenges/README.md",
+            "pt-BR": "problem-solving-and-live-coding/14-refactoring-challenges/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/14-refactoring-challenges/README.es.md"
+          },
+          "concept": "manual-refactoring",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "problem-solving.mixed",
+          "paths": {
+            "en": "problem-solving-and-live-coding/15-mixed-challenges/README.md",
+            "pt-BR": "problem-solving-and-live-coding/15-mixed-challenges/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/15-mixed-challenges/README.es.md"
+          },
+          "concept": "algorithm-composition",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "problem-solving.timed-live-coding",
+          "paths": {
+            "en": "problem-solving-and-live-coding/16-timed-live-coding/README.md",
+            "pt-BR": "problem-solving-and-live-coding/16-timed-live-coding/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/16-timed-live-coding/README.es.md"
+          },
+          "concept": "manual-timed",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        }
+      ]
+    },
+    {
+      "module": "technical-interview-preparation",
+      "chapters": [
+        {
+          "chapter_id": "technical-interview-preparation.understanding-technical-interviews",
+          "paths": {
+            "en": "technical-interview-preparation/01-understanding-technical-interviews/README.md",
+            "pt-BR": "technical-interview-preparation/01-understanding-technical-interviews/README.pt-BR.md",
+            "es": "technical-interview-preparation/01-understanding-technical-interviews/README.es.md"
+          },
+          "concept": "manual-interviews",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.live-coding-and-take-home",
+          "paths": {
+            "en": "technical-interview-preparation/02-live-coding-and-take-home/README.md",
+            "pt-BR": "technical-interview-preparation/02-live-coding-and-take-home/README.pt-BR.md",
+            "es": "technical-interview-preparation/02-live-coding-and-take-home/README.es.md"
+          },
+          "concept": "manual-live-coding",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.python-fundamentals-review",
+          "paths": {
+            "en": "technical-interview-preparation/03-python-fundamentals-review/README.md",
+            "pt-BR": "technical-interview-preparation/03-python-fundamentals-review/README.pt-BR.md",
+            "es": "technical-interview-preparation/03-python-fundamentals-review/README.es.md"
+          },
+          "concept": "review-fundamentals",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.data-structures-and-algorithms-review",
+          "paths": {
+            "en": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.md",
+            "pt-BR": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.pt-BR.md",
+            "es": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md"
+          },
+          "concept": "review-algorithms",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.classes-and-objects",
+          "paths": {
+            "en": "technical-interview-preparation/05-classes-and-objects/README.md",
+            "pt-BR": "technical-interview-preparation/05-classes-and-objects/README.pt-BR.md",
+            "es": "technical-interview-preparation/05-classes-and-objects/README.es.md"
+          },
+          "concept": "classes",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.attributes-methods-and-object-behavior",
+          "paths": {
+            "en": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.md",
+            "pt-BR": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.pt-BR.md",
+            "es": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.es.md"
+          },
+          "concept": "attributes",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.inheritance-polymorphism-and-composition",
+          "paths": {
+            "en": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.md",
+            "pt-BR": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.pt-BR.md",
+            "es": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.es.md"
+          },
+          "concept": "inheritance",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.encapsulation-abstraction-and-solid",
+          "paths": {
+            "en": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.md",
+            "pt-BR": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.pt-BR.md",
+            "es": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.es.md"
+          },
+          "concept": "design",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.object-identity-references-and-copying",
+          "paths": {
+            "en": "technical-interview-preparation/09-object-identity-references-and-copying/README.md",
+            "pt-BR": "technical-interview-preparation/09-object-identity-references-and-copying/README.pt-BR.md",
+            "es": "technical-interview-preparation/09-object-identity-references-and-copying/README.es.md"
+          },
+          "concept": "identity",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.python-memory-management",
+          "paths": {
+            "en": "technical-interview-preparation/10-python-memory-management/README.md",
+            "pt-BR": "technical-interview-preparation/10-python-memory-management/README.pt-BR.md",
+            "es": "technical-interview-preparation/10-python-memory-management/README.es.md"
+          },
+          "concept": "memory",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.iterators-generators-and-comprehensions",
+          "paths": {
+            "en": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.md",
+            "pt-BR": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.pt-BR.md",
+            "es": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.es.md"
+          },
+          "concept": "generators",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.closures-and-decorators",
+          "paths": {
+            "en": "technical-interview-preparation/12-closures-and-decorators/README.md",
+            "pt-BR": "technical-interview-preparation/12-closures-and-decorators/README.pt-BR.md",
+            "es": "technical-interview-preparation/12-closures-and-decorators/README.es.md"
+          },
+          "concept": "closures",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.context-managers",
+          "paths": {
+            "en": "technical-interview-preparation/13-context-managers/README.md",
+            "pt-BR": "technical-interview-preparation/13-context-managers/README.pt-BR.md",
+            "es": "technical-interview-preparation/13-context-managers/README.es.md"
+          },
+          "concept": "context-managers",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.concurrency-parallelism-and-the-gil",
+          "paths": {
+            "en": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md",
+            "pt-BR": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.pt-BR.md",
+            "es": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md"
+          },
+          "concept": "concurrency",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.exceptions-testing-and-debugging-review",
+          "paths": {
+            "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+            "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+            "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+          },
+          "concept": "review-debugging",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.http-rest-and-backend-fundamentals",
+          "paths": {
+            "en": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.md",
+            "pt-BR": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.pt-BR.md",
+            "es": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.es.md"
+          },
+          "concept": "http",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.api-contracts-authentication-and-authorization",
+          "paths": {
+            "en": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.md",
+            "pt-BR": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.pt-BR.md",
+            "es": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.es.md"
+          },
+          "concept": "authorization",
+          "allocation": {
+            "easy": 1,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.relational-databases-and-sql",
+          "paths": {
+            "en": "technical-interview-preparation/18-relational-databases-and-sql/README.md",
+            "pt-BR": "technical-interview-preparation/18-relational-databases-and-sql/README.pt-BR.md",
+            "es": "technical-interview-preparation/18-relational-databases-and-sql/README.es.md"
+          },
+          "concept": "sql",
+          "allocation": {
+            "easy": 0,
+            "medium": 1,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.joins-aggregations-and-data-relationships",
+          "paths": {
+            "en": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.md",
+            "pt-BR": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.pt-BR.md",
+            "es": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.es.md"
+          },
+          "concept": "joins",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.transactions-indexes-and-sql-safety",
+          "paths": {
+            "en": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.md",
+            "pt-BR": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.pt-BR.md",
+            "es": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md"
+          },
+          "concept": "transactions",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 1
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.software-engineering-and-technical-decisions",
+          "paths": {
+            "en": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md",
+            "pt-BR": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.pt-BR.md",
+            "es": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md"
+          },
+          "concept": "engineering",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.technical-interview-question-bank",
+          "paths": {
+            "en": "technical-interview-preparation/22-technical-interview-question-bank/README.md",
+            "pt-BR": "technical-interview-preparation/22-technical-interview-question-bank/README.pt-BR.md",
+            "es": "technical-interview-preparation/22-technical-interview-question-bank/README.es.md"
+          },
+          "concept": "manual-bank",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.behavioral-and-international-interviews",
+          "paths": {
+            "en": "technical-interview-preparation/23-behavioral-and-international-interviews/README.md",
+            "pt-BR": "technical-interview-preparation/23-behavioral-and-international-interviews/README.pt-BR.md",
+            "es": "technical-interview-preparation/23-behavioral-and-international-interviews/README.es.md"
+          },
+          "concept": "manual-behavioral",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        },
+        {
+          "chapter_id": "technical-interview-preparation.mock-interviews-and-self-assessment",
+          "paths": {
+            "en": "technical-interview-preparation/24-mock-interviews-and-self-assessment/README.md",
+            "pt-BR": "technical-interview-preparation/24-mock-interviews-and-self-assessment/README.pt-BR.md",
+            "es": "technical-interview-preparation/24-mock-interviews-and-self-assessment/README.es.md"
+          },
+          "concept": "manual-mocks",
+          "allocation": {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+          }
+        }
+      ]
+    }
+  ]
+}
