@@ -224,6 +224,6 @@ Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 pr
 - [Página principal del repositorio](../README.md)
 - [Roadmap completo](roadmap.es.md)
 - [Estructura del proyecto](project-structure.es.md)
-- [Banco de cuestionarios de fundamentos](../quizzes/README.es.md)
+- [Banco completo de cuestionarios](../quizzes/README.es.md)
 
 A medida que se publiquen nuevos capítulos, esta página debe actualizarse en el mismo pull request para que el curso siempre tenga una única ruta de navegación fiable y accesible con un clic.

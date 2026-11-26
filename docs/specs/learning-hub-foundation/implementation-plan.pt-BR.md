@@ -23,7 +23,7 @@ Status: proposta para revisão. Executar somente após aprovação e merge do PR
 | 07A | feat/assessment-contract | Contratos versionados, matriz, validadores e testes; sincronizar encerramento da Sprint 06. |
 | 07B | feat/assessment-pilot | Dez quizzes e três exercícios existentes, com evidência de pré-requisitos. |
 | 07C1 | feat/quiz-bank-foundations | Completar 78 quizzes de fundamentos. |
-| 07C2 | feat/quiz-bank-advanced | Completar banco de 160 quizzes. |
+| 07C2 | feat/quiz-bank-expansion | Completar banco de 160 quizzes. |
 | 07D | feat/exercise-contract-migration | Migrar os 27 exercícios restantes. |
 | 07E | feat/assessment-bank-acceptance | Verificação consolidada de AC-07 e encerramento. |
 | 08 | feat/learning-hub-content-contract | Finalizar manifesto, validação do consumidor, fixtures, versionamento e compatibilidade. |

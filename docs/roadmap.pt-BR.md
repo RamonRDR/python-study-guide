@@ -230,7 +230,7 @@ Todo conteúdo planejado da Fase 12 está implementado: 24 aulas, 60 perguntas (
 
 ## Phase II: Learning Hub Foundation (roadmap de engenharia)
 
-Esta fase de engenharia não renumera o currículo original. Sprints 00–06 e 07A–B integradas. Sprint 07C1 implementa os [78 quizzes de fundamentos](../quizzes/README.pt-BR.md); restam 82 quizzes para C2 e 27 migrações de exercícios para D. O manifesto do consumidor segue planejado. O repositório segue independente da futura plataforma web.
+Esta fase de engenharia não renumera o currículo original. Sprints 00–06 e 07A–C1 integradas. Sprint 07C2 completa o [banco de 160 quizzes](../quizzes/README.pt-BR.md); restam 27 migrações de exercícios para D. O manifesto do consumidor segue planejado. O repositório segue independente da futura plataforma web.
 
 | Currículo futuro | Status |
 | --- | --- |
