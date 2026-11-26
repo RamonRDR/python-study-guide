@@ -13,3 +13,5 @@ Las pruebas protegen el procesamiento de enlaces Markdown y la validación de es
 La documentación histórica preveía contenido educativo de pruebas, empezando por aserciones simples y después introduciendo `pytest` para ejemplos ejecutables y proyectos prácticos.
 
 Las pruebas de regresión de navegación exigen el mismo orden de la ruta principal en los tres idiomas, enlaces exactos anterior/índice/siguiente al inicio y al final, transiciones entre módulos y cobertura de los README versionados de capítulos/proyectos. Ejecuta `python scripts/check_chapter_navigation.py` desde la raíz del repositorio para comprobar todo el currículo.
+
+Las pruebas de fundamentos exigen asignación aprobada por lección/dificultad, cobertura exacta del índice y calificación determinista; ejecutan fixtures literales confiables, nunca código arbitrario cargado de los registros. Las regresiones del piloto siguen cubiertas.

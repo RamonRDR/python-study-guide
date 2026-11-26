@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprint 07A merged and post-merge CI passed ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45871235887)). Sprint 07B is the approved pilot: ten quizzes and three existing exercises, no additional bank expansion or browser runtime.
+Sprint 07A and 07B merged and post-merge CI passed ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [B CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45872609920)). C1 implements 78 foundation quizzes; exercise migration beyond the pilot and browser runtime are out of scope.
  
 ## Scope and acceptance
 - Inventory: 115 entries, 345 localized paths, 64 easy / 67 medium / 29 hard quizzes (2,850 XP at 10/20/30). The [allocation matrix](assessment-matrix.json) is engineering planning metadata, not a consumer manifest. Zero allocations preserve manual practice or avoid repeated assessment.
@@ -17,7 +17,7 @@ Sprint 07A merged and post-merge CI passed ([PR #102](https://github.com/RamonRD
 A: contract, matrix and fixture validators; B: ten quizzes (two per type) and three existing exercises (vowel-counter, binary-insertion-index, inventory-reconciliation); C1: complete 78 foundation quizzes; C2: complete 160; D: remaining 27 exercises; E: AC-07 closure. The ten pilots count toward 160. No later PR until its predecessor is merged and CI passes.
  
 ## Evidence and limitations
-Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. See [Sprint 06 closure](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Existing 30 exercises have 192 cases and no declared external dependencies; all browser execution is unverified. The older vowel pilot lacks practice_mode and complexity assumptions; normalize these explicitly during migration. Preserve the legacy 29-entry expansion index until migration is approved. Review per-question teaching evidence and per-exercise solutions in the corresponding PR. All exact-head CI, Codex Review, Final Pre-Merge Audit and maintainer authorization gates remain mandatory.
+Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. See [Sprint 06 closure](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Existing 30 exercises have 192 cases and no declared external dependencies; all browser execution is unverified. The older vowel pilot lacked practice_mode and complexity assumptions; these were normalized in B. Preserve the legacy 29-entry expansion index until migration is approved. Review per-question teaching evidence and per-exercise solutions in the corresponding PR. All exact-head CI, Codex Review, Final Pre-Merge Audit and maintainer authorization gates remain mandatory.
 
 ## Pilot acceptance (07B)
 

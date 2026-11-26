@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprint 07A integrada e CI pós-merge aprovado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45871235887)). Sprint 07B é o piloto aprovado: dez quizzes e três exercícios existentes, sem expansão adicional do banco nem runtime no navegador.
+Sprints 07A e 07B integradas e CI pós-merge aprovado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [CI de B](https://github.com/RamonRDR/python-study-guide/actions/runs/45872609920)). C1 implementa 78 quizzes de fundamentos; migração além do piloto e runtime no navegador estão fora do escopo.
 
 ## Escopo e aceite
 - Inventário: 115 entradas, 345 caminhos localizados, 64 quizzes easy / 67 medium / 29 hard (2.850 XP a 10/20/30). A [matriz de distribuição](assessment-matrix.json) é metadado de planejamento de engenharia, não manifesto do consumidor. Alocações zero preservam prática manual ou evitam avaliação repetida.
@@ -17,7 +17,7 @@ Sprint 07A integrada e CI pós-merge aprovado ([PR #102](https://github.com/Ramo
 A: contrato, matriz e validadores de fixtures; B: dez quizzes (dois por tipo) e três exercícios existentes (vowel-counter, binary-insertion-index, inventory-reconciliation); C1: completar 78 quizzes de fundamentos; C2: completar 160; D: outros 27 exercícios; E: encerramento AC-07. Dez pilotos contam nos 160. Nenhum PR posterior antes de integração e CI aprovado do anterior.
 
 ## Evidências e limitações
-Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [encerramento da Sprint 06](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Os 30 exercícios existentes têm 192 casos e nenhuma dependência externa declarada; execução no navegador não verificada. Piloto de vogais antigo não possui practice_mode e assumptions de complexidade; normalizar explicitamente na migração. Preservar índice legado de 29 entradas até migração aprovada. Revisar evidência pedagógica por questão e soluções por exercício nos PRs correspondentes. CI no head exato, Codex Review, Final Pre-Merge Audit e autorização do mantenedor seguem obrigatórios.
+Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [encerramento da Sprint 06](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Os 30 exercícios existentes têm 192 casos e nenhuma dependência externa declarada; execução no navegador não verificada. O piloto antigo de vogais não possuía practice_mode e assumptions de complexidade; foram normalizados em B. Preservar índice legado de 29 entradas até migração aprovada. Revisar evidência pedagógica por questão e soluções por exercício nos PRs correspondentes. CI no head exato, Codex Review, Final Pre-Merge Audit e autorização do mantenedor seguem obrigatórios.
 
 ## Aceite do piloto (07B)
 

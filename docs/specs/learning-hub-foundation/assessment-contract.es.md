@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprint 07A fusionado y CI posterior aprobado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45871235887)). Sprint 07B es el piloto aprobado: diez quizzes y tres ejercicios existentes, sin ampliar más el banco ni ejecutar en navegador.
+Sprints 07A y 07B fusionados y CI posterior aprobado ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [CI de B](https://github.com/RamonRDR/python-study-guide/actions/runs/45872609920)). C1 implementa 78 cuestionarios de fundamentos; migración más allá del piloto y ejecución en navegador quedan fuera del alcance.
 
 ## Alcance y aceptación
 - Inventario: 115 entradas, 345 rutas localizadas, 64 quizzes easy / 67 medium / 29 hard (2.850 XP a 10/20/30). La [matriz de distribución](assessment-matrix.json) es metadato de planificación de ingeniería, no manifiesto del consumidor. Las asignaciones cero preservan práctica manual o evitan evaluaciones repetidas.
@@ -17,7 +17,7 @@ Sprint 07A fusionado y CI posterior aprobado ([PR #102](https://github.com/Ramon
 A: contrato, matriz y validadores de fixtures; B: diez quizzes (dos por tipo) y tres ejercicios existentes (vowel-counter, binary-insertion-index, inventory-reconciliation); C1: completar 78 quizzes de fundamentos; C2: completar 160; D: otros 27 ejercicios; E: cierre AC-07. Los diez pilotos cuentan dentro de 160. Ningún PR posterior antes de fusión y CI aprobado del anterior.
 
 ## Evidencias y limitaciones
-Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [cierre de Sprint 06](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Los 30 ejercicios existentes tienen 192 casos y ninguna dependencia externa declarada; ejecución en navegador no verificada. El piloto antiguo de vocales carece de practice_mode y assumptions de complejidad; normalizarlos explícitamente durante la migración. Preservar índice legado de 29 entradas hasta migración aprobada. Revisar evidencia didáctica por pregunta y soluciones por ejercicio en PR correspondientes. CI en head exacto, Codex Review, Final Pre-Merge Audit y autorización del mantenedor siguen obligatorios.
+Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [cierre de Sprint 06](https://github.com/RamonRDR/python-study-guide/pull/101#issuecomment-7193467128). Los 30 ejercicios existentes tienen 192 casos y ninguna dependencia externa declarada; ejecución en navegador no verificada. El piloto antiguo de vocales carecía de practice_mode y assumptions de complejidad; se normalizaron en B. Preservar índice legado de 29 entradas hasta migración aprobada. Revisar evidencia didáctica por pregunta y soluciones por ejercicio en PR correspondientes. CI en head exacto, Codex Review, Final Pre-Merge Audit y autorización del mantenedor siguen obligatorios.
 
 ## Aceptación del piloto (07B)
 

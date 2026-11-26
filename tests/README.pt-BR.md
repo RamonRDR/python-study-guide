@@ -13,3 +13,5 @@ Os testes protegem o processamento de links Markdown e a validação da estrutur
 A documentação histórica previa conteúdo educacional de testes, começando com assertions simples e depois introduzindo `pytest` para exemplos executáveis e projetos práticos.
 
 Os testes de regressão de navegação exigem a mesma ordem da trilha principal nos três idiomas, links exatos de anterior/índice/próximo no início e no final, transições entre módulos e cobertura dos READMEs versionados de capítulos/projetos. Execute `python scripts/check_chapter_navigation.py` na raiz do repositório para verificar todo o currículo.
+
+Os testes de fundamentos exigem alocação aprovada por aula/dificuldade, cobertura exata do índice e correção determinística; executam fixtures literais confiáveis, nunca código arbitrário carregado dos registros. Regressões do piloto continuam cobertas.
