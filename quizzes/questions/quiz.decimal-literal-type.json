@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.decimal-literal-type",
+  "chapter_id": "fundamentals.built-in-data-types",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "The literal 2.5 creates a value of type float.",
+    "pt-BR": "O literal 2.5 cria um valor do tipo float.",
+    "es": "El literal 2.5 crea un valor de tipo float."
+  },
+  "explanation": {
+    "en": "A decimal-point numeric literal such as 2.5 is a floating-point value.",
+    "pt-BR": "Um literal numérico com ponto decimal, como 2.5, é um valor de ponto flutuante.",
+    "es": "Un literal numérico con punto decimal como 2.5 es un valor de punto flotante."
+  },
+  "hints": {
+    "en": [
+      "Contrast decimal-point notation with a whole-number literal."
+    ],
+    "pt-BR": [
+      "Compare a notação com ponto decimal com um literal inteiro."
+    ],
+    "es": [
+      "Compara la notación con punto decimal con un literal entero."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/04-built-in-data-types/README.md",
+        "pt-BR": "fundamentals/04-built-in-data-types/README.pt-BR.md",
+        "es": "fundamentals/04-built-in-data-types/README.es.md"
+      },
+      "sections": {
+        "en": "7. Floating-point numbers use `float`",
+        "pt-BR": "7. Números de ponto flutuante usam `float`",
+        "es": "7. Los números de punto flotante usan `float`"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

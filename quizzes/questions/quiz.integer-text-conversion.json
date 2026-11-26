@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.integer-text-conversion",
+  "chapter_id": "fundamentals.type-conversion",
+  "difficulty": "easy",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "int converts the string to the integer 14, so the addition produces 15.",
+    "pt-BR": "int converte a string no inteiro 14, portanto a soma produz 15.",
+    "es": "int convierte la cadena en el entero 14, por lo que la suma produce 15."
+  },
+  "hints": {
+    "en": [
+      "Follow the conversion before performing addition."
+    ],
+    "pt-BR": [
+      "Acompanhe a conversão antes de somar."
+    ],
+    "es": [
+      "Sigue la conversión antes de sumar."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/06-type-conversion/README.md",
+        "pt-BR": "fundamentals/06-type-conversion/README.pt-BR.md",
+        "es": "fundamentals/06-type-conversion/README.es.md"
+      },
+      "sections": {
+        "en": "3. Convert integer text with `int()`",
+        "pt-BR": "3. Converta texto inteiro com `int()`",
+        "es": "3. Convierte texto entero con `int()`"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "15\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(int(\"14\") + 1)"
+}

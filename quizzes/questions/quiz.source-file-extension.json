@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.source-file-extension",
+  "chapter_id": "fundamentals.how-python-runs-a-program",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "A .py file commonly stores Python source code.",
+    "pt-BR": "Um arquivo .py normalmente armazena código-fonte Python.",
+    "es": "Un archivo .py suele almacenar código fuente de Python."
+  },
+  "explanation": {
+    "en": "The extension identifies the usual source-file format; the interpreter executes its contents.",
+    "pt-BR": "A extensão identifica o formato usual do arquivo-fonte; o interpretador executa seu conteúdo.",
+    "es": "La extensión identifica el formato habitual del archivo fuente; el intérprete ejecuta su contenido."
+  },
+  "hints": {
+    "en": [
+      "Consider what you save in a code editor."
+    ],
+    "pt-BR": [
+      "Considere o que você salva em um editor de código."
+    ],
+    "es": [
+      "Considera qué guardas en un editor de código."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/01-how-python-runs-a-program/README.md",
+        "pt-BR": "fundamentals/01-how-python-runs-a-program/README.pt-BR.md",
+        "es": "fundamentals/01-how-python-runs-a-program/README.es.md"
+      },
+      "sections": {
+        "en": "3. What is a `.py` file?",
+        "pt-BR": "3. O que é um arquivo `.py`?",
+        "es": "3. ¿Qué es un archivo `.py`?"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

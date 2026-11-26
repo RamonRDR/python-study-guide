@@ -2,8 +2,20 @@
   "schema_version": "1.0.0",
   "records": [
     {
+      "id": "quiz.assignment-symbol",
+      "path": "quizzes/questions/quiz.assignment-symbol.json"
+    },
+    {
+      "id": "quiz.bool-int-exact-versus-compatible",
+      "path": "quizzes/questions/quiz.bool-int-exact-versus-compatible.json"
+    },
+    {
       "id": "quiz.collection-membership",
       "path": "quizzes/questions/quiz.collection-membership.json"
+    },
+    {
+      "id": "quiz.decimal-literal-type",
+      "path": "quizzes/questions/quiz.decimal-literal-type.json"
     },
     {
       "id": "quiz.dictionary-fallback",
@@ -14,12 +26,24 @@
       "path": "quizzes/questions/quiz.editor-replaces-interpreter.json"
     },
     {
+      "id": "quiz.exact-type-function",
+      "path": "quizzes/questions/quiz.exact-type-function.json"
+    },
+    {
       "id": "quiz.git-inspect-staged",
       "path": "quizzes/questions/quiz.git-inspect-staged.json"
     },
     {
+      "id": "quiz.input-digits-text",
+      "path": "quizzes/questions/quiz.input-digits-text.json"
+    },
+    {
       "id": "quiz.install-declared-requirements",
       "path": "quizzes/questions/quiz.install-declared-requirements.json"
+    },
+    {
+      "id": "quiz.integer-text-conversion",
+      "path": "quizzes/questions/quiz.integer-text-conversion.json"
     },
     {
       "id": "quiz.interpreter-purpose",
@@ -30,16 +54,36 @@
       "path": "quizzes/questions/quiz.missing-required-argument.json"
     },
     {
+      "id": "quiz.nonempty-false-text",
+      "path": "quizzes/questions/quiz.nonempty-false-text.json"
+    },
+    {
+      "id": "quiz.print-custom-separator",
+      "path": "quizzes/questions/quiz.print-custom-separator.json"
+    },
+    {
       "id": "quiz.print-literal",
       "path": "quizzes/questions/quiz.print-literal.json"
+    },
+    {
+      "id": "quiz.quoted-digits-type",
+      "path": "quizzes/questions/quiz.quoted-digits-type.json"
     },
     {
       "id": "quiz.range-stop",
       "path": "quizzes/questions/quiz.range-stop.json"
     },
     {
+      "id": "quiz.reassignment-order",
+      "path": "quizzes/questions/quiz.reassignment-order.json"
+    },
+    {
       "id": "quiz.return-keyword",
       "path": "quizzes/questions/quiz.return-keyword.json"
+    },
+    {
+      "id": "quiz.source-file-extension",
+      "path": "quizzes/questions/quiz.source-file-extension.json"
     },
     {
       "id": "quiz.type-hints-runtime",

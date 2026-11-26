@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.nonempty-false-text",
+  "chapter_id": "fundamentals.type-conversion",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "bool(\"False\") returns False because it interprets the English word.",
+    "pt-BR": "bool(\"False\") retorna False porque interpreta a palavra inglesa.",
+    "es": "bool(\"False\") devuelve False porque interpreta la palabra inglesa."
+  },
+  "explanation": {
+    "en": "bool tests truthiness rather than parsing words. A nonempty string is truthy.",
+    "pt-BR": "bool testa valor-verdade em vez de interpretar palavras. Uma string não vazia é verdadeira nesse teste.",
+    "es": "bool comprueba el valor de verdad en lugar de interpretar palabras. Una cadena no vacía es verdadera en esa prueba."
+  },
+  "hints": {
+    "en": [
+      "Consider the presence of characters, not their meaning."
+    ],
+    "pt-BR": [
+      "Considere a presença de caracteres, não seu significado."
+    ],
+    "es": [
+      "Considera la presencia de caracteres, no su significado."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/06-type-conversion/README.md",
+        "pt-BR": "fundamentals/06-type-conversion/README.pt-BR.md",
+        "es": "fundamentals/06-type-conversion/README.es.md"
+      },
+      "sections": {
+        "en": "12. `bool(\"False\")` is still `True`",
+        "pt-BR": "12. `bool(\"False\")` continua sendo `True`",
+        "es": "12. `bool(\"False\")` sigue siendo `True`"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

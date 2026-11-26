@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.exact-type-function",
+  "chapter_id": "fundamentals.type-and-isinstance",
+  "difficulty": "easy",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Replace only ____ with the built-in function that reports the exact runtime type of value. Enter its name without parentheses or spaces.",
+    "pt-BR": "Substitua apenas ____ pela função embutida que informa o tipo exato de value em runtime. Digite seu nome sem parênteses ou espaços.",
+    "es": "Sustituye solo ____ por la función incorporada que informa del tipo exacto de value en runtime. Introduce su nombre sin paréntesis ni espacios."
+  },
+  "explanation": {
+    "en": "type(value) returns its exact type object; isinstance() instead tests compatibility with a supplied type.",
+    "pt-BR": "type(value) retorna seu objeto de tipo exato; isinstance() testa compatibilidade com um tipo fornecido.",
+    "es": "type(value) devuelve su objeto de tipo exacto; isinstance() comprueba compatibilidad con un tipo proporcionado."
+  },
+  "hints": {
+    "en": [
+      "The function takes one value here, not a second type argument."
+    ],
+    "pt-BR": [
+      "A função recebe um valor aqui, não um segundo argumento de tipo."
+    ],
+    "es": [
+      "La función recibe un valor aquí, no un segundo argumento de tipo."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "fundamentals/05-type-and-isinstance/README.md",
+        "pt-BR": "fundamentals/05-type-and-isinstance/README.pt-BR.md",
+        "es": "fundamentals/05-type-and-isinstance/README.es.md"
+      },
+      "sections": {
+        "en": "2. `type()` reveals the exact type",
+        "pt-BR": "2. `type()` revela o tipo exato",
+        "es": "2. `type()` revela el tipo exacto"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "type"
+    ],
+    "comparison": "exact"
+  },
+  "code": "value = 9\nkind = ____(value)"
+}
