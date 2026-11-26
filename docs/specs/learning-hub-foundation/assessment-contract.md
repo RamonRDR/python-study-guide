@@ -25,3 +25,10 @@ Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. See [Sprint 06 closure](ht
 - Migrate only vowel-counter, binary-insertion-index and inventory-reconciliation to 1.0.0, preserving all 24 canonical cases and existing implementations. Keep the other 27 legacy records and expansion index unchanged. A versioned partial exercise index identifies the three migrated records.
 - Run both new indexes in CI, reject unindexed or unexpected versioned records, test allocation ceilings and verify the trusted solutions and representative wrong candidates. Reject contradictory expected results for equal typed inputs. When a new result container is required, reject aliases to nested mutable input containers as well as direct aliases. Mutation detection compares final input state, not every intermediate operation.
 - Use no learner-code execution, new paid dependency or runtime claim. The remaining 150 quizzes and 27 migrations belong to C1/C2/D; AC-07 closes only in E.
+
+## Foundations acceptance (07C1)
+
+- Complete all approved allocations for modules 00–05, including the ten pilot questions: 78 total (37 easy, 30 medium, 11 hard; 1,300 XP). Add 68 records only. Keep the three versioned exercise records and legacy bank unchanged. C2 covers the remaining 82 quizzes.
+- Read the teaching sections in EN/PT-BR/ES before drafting; retain exact localized heading references, stable IDs, original examples, single shared code and explicit accepted answers. Refine the two pilot output questions with precise newline prerequisites; retain their answers. Balance true/false answers across the expanded bank and vary choice positions.
+- Preserve pilot regression checks while enforcing exact per-chapter difficulty allocation, index coverage, locale parity and deterministic grading. Test trusted literal examples, not arbitrary source read from question records. Review ambiguity, edge cases, difficulty, navigation and privacy before asking for merge approval.
+- No runtime, paid dependency, exercise migration or AC-07 closure in C1. All exact-head gates remain mandatory.

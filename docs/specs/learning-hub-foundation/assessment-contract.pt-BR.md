@@ -25,3 +25,10 @@ Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. Ver [encerramento da Sprin
 - Migrar somente vowel-counter, binary-insertion-index e inventory-reconciliation para 1.0.0, preservando os 24 casos canônicos e implementações existentes. Manter os outros 27 registros legados e índice de expansão intactos. Índice parcial versionado identifica os três registros migrados.
 - Executar ambos os novos índices no CI, rejeitar registros versionados não indexados ou inesperados, testar limites de alocação e verificar soluções confiáveis e candidatos incorretos representativos. Rejeitar resultados esperados contraditórios para entradas de tipos e valores iguais. Quando novo contêiner for exigido, rejeitar aliases a contêineres mutáveis internos das entradas e aliases diretos. Detecção de mutação compara estado final, não cada operação intermediária.
 - Sem execução de código do aluno, nova dependência paga ou alegação de runtime. Os 150 quizzes e 27 migrações restantes pertencem a C1/C2/D; AC-07 encerra somente em E.
+
+## Aceite dos fundamentos (07C1)
+
+- Completar todas as alocações aprovadas dos módulos 00–05, incluindo os dez quizzes piloto: 78 no total (37 easy, 30 medium, 11 hard; 1.300 XP). Adicionar somente 68 registros. Preservar os três exercícios versionados e banco legado. C2 cobre os outros 82 quizzes.
+- Ler as seções de ensino em EN/PT-BR/ES antes de redigir; manter títulos localizados exatos, IDs estáveis, exemplos originais, código único compartilhado e respostas aceitas explícitas. Refinar os pré-requisitos de quebra de linha nas duas questões piloto de saída; preservar respostas. Equilibrar verdadeiro/falso no banco ampliado e variar posições das alternativas.
+- Preservar regressões do piloto e exigir alocação exata por aula/dificuldade, cobertura do índice, paridade de idiomas e correção determinística. Testar exemplos literais confiáveis, não código arbitrário lido dos registros. Revisar ambiguidades, casos-limite, dificuldade, navegação e privacidade antes de solicitar aprovação do merge.
+- Sem runtime, dependência paga, migração de exercícios ou encerramento AC-07 em C1. Todos os gates no head exato permanecem obrigatórios.
