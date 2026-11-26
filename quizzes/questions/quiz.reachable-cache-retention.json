@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.reachable-cache-retention",
+  "chapter_id": "technical-interview-preparation.python-memory-management",
+  "difficulty": "hard",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A reachable global cache keeps growing; gc.collect() does not reduce its retained entries. What is the best first correction?",
+    "pt-BR": "Um cache global alcançável cresce continuamente; gc.collect() não reduz as entradas retidas. Qual primeira correção é mais adequada?",
+    "es": "Una caché global alcanzable crece continuamente; gc.collect() no reduce entradas retenidas. ¿Cuál primera corrección es más adecuada?"
+  },
+  "explanation": {
+    "en": "Reachable objects are not garbage. Define an eviction/resource budget, remove unnecessary references and measure allocations; collection does not guarantee lower RSS.",
+    "pt-BR": "Objetos alcançáveis não são lixo. Defina expulsão/orçamento de recursos, remova referências desnecessárias e meça alocações; coleta não garante RSS menor.",
+    "es": "Los objetos alcanzables no son basura. Define expulsión/presupuesto de recursos, elimina referencias innecesarias y mide asignaciones; recolección no garantiza menor RSS."
+  },
+  "hints": {
+    "en": [
+      "Investigate ownership and reachability before collector timing."
+    ],
+    "pt-BR": [
+      "Investigue ownership e alcançabilidade antes do momento da coleta."
+    ],
+    "es": [
+      "Investiga propiedad y alcanzabilidad antes del momento de recolección."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/10-python-memory-management/README.md",
+        "pt-BR": "technical-interview-preparation/10-python-memory-management/README.pt-BR.md",
+        "es": "technical-interview-preparation/10-python-memory-management/README.es.md"
+      },
+      "sections": {
+        "en": "Retention and measurement",
+        "pt-BR": "Retenção e medição",
+        "es": "Retención y medición"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "bound"
+  },
+  "choices": [
+    {
+      "id": "force",
+      "text": {
+        "en": "Force collection after every access.",
+        "pt-BR": "Force coleta após cada acesso.",
+        "es": "Fuerza recolección tras cada acceso."
+      }
+    },
+    {
+      "id": "disable",
+      "text": {
+        "en": "Disable all cyclic collection.",
+        "pt-BR": "Desative toda coleta de ciclos.",
+        "es": "Desactiva toda recolección cíclica."
+      }
+    },
+    {
+      "id": "bound",
+      "text": {
+        "en": "Bound retention and measure allocation growth.",
+        "pt-BR": "Limite retenção e meça crescimento das alocações.",
+        "es": "Limita retención y mide crecimiento de asignaciones."
+      }
+    },
+    {
+      "id": "rss",
+      "text": {
+        "en": "Assume stable RSS proves no retention.",
+        "pt-BR": "Suponha RSS estável como prova de ausência de retenção.",
+        "es": "Supón RSS estable como prueba de ausencia de retención."
+      }
+    }
+  ]
+}

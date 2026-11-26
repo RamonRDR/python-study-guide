@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.authentication-not-object-authorization",
+  "chapter_id": "technical-interview-preparation.api-contracts-authentication-and-authorization",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "A verified login alone authorizes reading every other user's protected note.",
+    "pt-BR": "Um login verificado por si só autoriza ler toda nota protegida de outro usuário.",
+    "es": "Un login verificado por sí solo autoriza leer toda nota protegida de otro usuario."
+  },
+  "explanation": {
+    "en": "Authentication establishes identity; object-level authorization must also check access to that specific note.",
+    "pt-BR": "Autenticação estabelece identidade; autorização em nível de objeto também verifica acesso à nota específica.",
+    "es": "Autenticación establece identidad; autorización a nivel de objeto también comprueba acceso a esa nota específica."
+  },
+  "hints": {
+    "en": [
+      "Identity is different from permission."
+    ],
+    "pt-BR": [
+      "Identidade é diferente de permissão."
+    ],
+    "es": [
+      "Identidad es diferente de permiso."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.md",
+        "pt-BR": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.pt-BR.md",
+        "es": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.es.md"
+      },
+      "sections": {
+        "en": "Authentication versus authorization",
+        "pt-BR": "Autenticação versus autorização",
+        "es": "Autenticación frente a autorización"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

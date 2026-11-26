@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.http-get-retrieval",
+  "chapter_id": "technical-interview-preparation.http-rest-and-backend-fundamentals",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Which HTTP method expresses retrieving a resource representation without requesting a state change?",
+    "pt-BR": "Qual método HTTP expressa recuperar representação de recurso sem solicitar mudança de estado?",
+    "es": "¿Qué método HTTP expresa recuperar representación de recurso sin solicitar cambio de estado?"
+  },
+  "explanation": {
+    "en": "GET is intended for retrieval and is safe and idempotent.",
+    "pt-BR": "GET destina-se à recuperação e é seguro e idempotente.",
+    "es": "GET se destina a recuperación y es seguro e idempotente."
+  },
+  "hints": {
+    "en": [
+      "Select the retrieval method."
+    ],
+    "pt-BR": [
+      "Selecione método de leitura."
+    ],
+    "es": [
+      "Selecciona método de lectura."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.md",
+        "pt-BR": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.pt-BR.md",
+        "es": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.es.md"
+      },
+      "sections": {
+        "en": "Client, server and resource contracts",
+        "pt-BR": "Contratos cliente, servidor e recurso",
+        "es": "Contratos cliente, servidor y recurso"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "get"
+  },
+  "choices": [
+    {
+      "id": "post",
+      "text": {
+        "en": "POST",
+        "pt-BR": "POST",
+        "es": "POST"
+      }
+    },
+    {
+      "id": "put",
+      "text": {
+        "en": "PUT",
+        "pt-BR": "PUT",
+        "es": "PUT"
+      }
+    },
+    {
+      "id": "delete",
+      "text": {
+        "en": "DELETE",
+        "pt-BR": "DELETE",
+        "es": "DELETE"
+      }
+    },
+    {
+      "id": "get",
+      "text": {
+        "en": "GET",
+        "pt-BR": "GET",
+        "es": "GET"
+      }
+    }
+  ]
+}

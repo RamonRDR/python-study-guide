@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.exhausted-generator-next",
+  "chapter_id": "technical-interview-preparation.iterators-generators-and-comprehensions",
+  "difficulty": "medium",
+  "type": "error_identification",
+  "prompt": {
+    "en": "Which exception is raised by the final next() call?",
+    "pt-BR": "Qual exceção é levantada pela última chamada next()?",
+    "es": "¿Qué excepción lanza la última llamada next()?"
+  },
+  "explanation": {
+    "en": "The generator is exhausted after the first value; next() signals exhaustion with StopIteration.",
+    "pt-BR": "O gerador está esgotado após o primeiro valor; next() sinaliza esgotamento com StopIteration.",
+    "es": "El generador se agota tras el primer valor; next() señala agotamiento con StopIteration."
+  },
+  "hints": {
+    "en": [
+      "An iterator is consumed, not reset by next()."
+    ],
+    "pt-BR": [
+      "Um iterador é consumido, não reiniciado por next()."
+    ],
+    "es": [
+      "Un iterador se consume, no se reinicia mediante next()."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.md",
+        "pt-BR": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.pt-BR.md",
+        "es": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.es.md"
+      },
+      "sections": {
+        "en": "Iteration protocol",
+        "pt-BR": "Protocolo de iteração",
+        "es": "Protocolo de iteración"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "stop"
+  },
+  "choices": [
+    {
+      "id": "index",
+      "text": {
+        "en": "IndexError",
+        "pt-BR": "IndexError",
+        "es": "IndexError"
+      }
+    },
+    {
+      "id": "stop",
+      "text": {
+        "en": "StopIteration",
+        "pt-BR": "StopIteration",
+        "es": "StopIteration"
+      }
+    },
+    {
+      "id": "value",
+      "text": {
+        "en": "ValueError",
+        "pt-BR": "ValueError",
+        "es": "ValueError"
+      }
+    },
+    {
+      "id": "type",
+      "text": {
+        "en": "TypeError",
+        "pt-BR": "TypeError",
+        "es": "TypeError"
+      }
+    }
+  ],
+  "code": "stream = (x for x in [7])\nnext(stream)\nnext(stream)"
+}

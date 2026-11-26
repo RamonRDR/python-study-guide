@@ -18,6 +18,10 @@
       "path": "quizzes/questions/quiz.assignment-symbol.json"
     },
     {
+      "id": "quiz.authentication-not-object-authorization",
+      "path": "quizzes/questions/quiz.authentication-not-object-authorization.json"
+    },
+    {
       "id": "quiz.automation-failure-publication",
       "path": "quizzes/questions/quiz.automation-failure-publication.json"
     },
@@ -58,6 +62,14 @@
       "path": "quizzes/questions/quiz.chained-comparison-boundary.json"
     },
     {
+      "id": "quiz.classmethod-subclass-factory",
+      "path": "quizzes/questions/quiz.classmethod-subclass-factory.json"
+    },
+    {
+      "id": "quiz.closure-late-binding-snapshot",
+      "path": "quizzes/questions/quiz.closure-late-binding-snapshot.json"
+    },
+    {
       "id": "quiz.collection-keyed-quantities",
       "path": "quizzes/questions/quiz.collection-keyed-quantities.json"
     },
@@ -70,8 +82,16 @@
       "path": "quizzes/questions/quiz.combined-classification-loop.json"
     },
     {
+      "id": "quiz.composition-replaceable-collaborator",
+      "path": "quizzes/questions/quiz.composition-replaceable-collaborator.json"
+    },
+    {
       "id": "quiz.conditional-chain-one-branch",
       "path": "quizzes/questions/quiz.conditional-chain-one-branch.json"
+    },
+    {
+      "id": "quiz.context-exit-false-propagation",
+      "path": "quizzes/questions/quiz.context-exit-false-propagation.json"
     },
     {
       "id": "quiz.counter-tally-purpose",
@@ -104,6 +124,10 @@
     {
       "id": "quiz.decimal-literal-type",
       "path": "quizzes/questions/quiz.decimal-literal-type.json"
+    },
+    {
+      "id": "quiz.deepcopy-preserves-internal-alias",
+      "path": "quizzes/questions/quiz.deepcopy-preserves-internal-alias.json"
     },
     {
       "id": "quiz.default-argument-omission",
@@ -162,6 +186,10 @@
       "path": "quizzes/questions/quiz.exact-type-function.json"
     },
     {
+      "id": "quiz.exhausted-generator-next",
+      "path": "quizzes/questions/quiz.exhausted-generator-next.json"
+    },
+    {
       "id": "quiz.expense-reject-zero",
       "path": "quizzes/questions/quiz.expense-reject-zero.json"
     },
@@ -190,6 +218,10 @@
       "path": "quizzes/questions/quiz.function-result-pipeline.json"
     },
     {
+      "id": "quiz.gil-compound-invariant",
+      "path": "quizzes/questions/quiz.gil-compound-invariant.json"
+    },
+    {
       "id": "quiz.git-inspect-staged",
       "path": "quizzes/questions/quiz.git-inspect-staged.json"
     },
@@ -204,6 +236,10 @@
     {
       "id": "quiz.hash-inside-string",
       "path": "quizzes/questions/quiz.hash-inside-string.json"
+    },
+    {
+      "id": "quiz.http-get-retrieval",
+      "path": "quizzes/questions/quiz.http-get-retrieval.json"
     },
     {
       "id": "quiz.implicit-none-return",
@@ -230,6 +266,10 @@
       "path": "quizzes/questions/quiz.install-declared-requirements.json"
     },
     {
+      "id": "quiz.instance-initialization-role",
+      "path": "quizzes/questions/quiz.instance-initialization-role.json"
+    },
+    {
       "id": "quiz.integer-text-conversion",
       "path": "quizzes/questions/quiz.integer-text-conversion.json"
     },
@@ -244,6 +284,10 @@
     {
       "id": "quiz.json-dumps-text-not-bytes",
       "path": "quizzes/questions/quiz.json-dumps-text-not-bytes.json"
+    },
+    {
+      "id": "quiz.left-join-zero-child-count",
+      "path": "quizzes/questions/quiz.left-join-zero-child-count.json"
     },
     {
       "id": "quiz.list-add-one",
@@ -414,6 +458,10 @@
       "path": "quizzes/questions/quiz.range-stop.json"
     },
     {
+      "id": "quiz.reachable-cache-retention",
+      "path": "quizzes/questions/quiz.reachable-cache-retention.json"
+    },
+    {
       "id": "quiz.reassignment-order",
       "path": "quizzes/questions/quiz.reassignment-order.json"
     },
@@ -502,6 +550,10 @@
       "path": "quizzes/questions/quiz.split-preserves-empty-fields.json"
     },
     {
+      "id": "quiz.sql-check-null-constraint",
+      "path": "quizzes/questions/quiz.sql-check-null-constraint.json"
+    },
+    {
       "id": "quiz.string-negative-index",
       "path": "quizzes/questions/quiz.string-negative-index.json"
     },
@@ -536,6 +588,10 @@
     {
       "id": "quiz.traceback-diagnosis-first",
       "path": "quizzes/questions/quiz.traceback-diagnosis-first.json"
+    },
+    {
+      "id": "quiz.transaction-failed-credit-rollback",
+      "path": "quizzes/questions/quiz.transaction-failed-credit-rollback.json"
     },
     {
       "id": "quiz.true-division-integers",

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.context-exit-false-propagation",
+  "chapter_id": "technical-interview-preparation.context-managers",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "After successful entry, returning False from __exit__ automatically suppresses an exception raised by the with body.",
+    "pt-BR": "Após entrada bem-sucedida, retornar False de __exit__ suprime automaticamente exceção levantada pelo corpo with.",
+    "es": "Tras entrada exitosa, devolver False desde __exit__ suprime automáticamente una excepción del cuerpo with."
+  },
+  "explanation": {
+    "en": "False or None allows the body exception to propagate, provided exit itself does not raise.",
+    "pt-BR": "False ou None deixa a exceção do corpo propagar, desde que exit não levante outra.",
+    "es": "False o None deja propagar la excepción del cuerpo, siempre que exit no lance otra."
+  },
+  "hints": {
+    "en": [
+      "Suppression depends on a truthy exit return."
+    ],
+    "pt-BR": [
+      "Supressão depende de retorno truthy de exit."
+    ],
+    "es": [
+      "La supresión depende de retorno truthy de exit."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/13-context-managers/README.md",
+        "pt-BR": "technical-interview-preparation/13-context-managers/README.pt-BR.md",
+        "es": "technical-interview-preparation/13-context-managers/README.es.md"
+      },
+      "sections": {
+        "en": "The with protocol",
+        "pt-BR": "Protocolo with",
+        "es": "Protocolo with"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}

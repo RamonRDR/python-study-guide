@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.composition-replaceable-collaborator",
+  "chapter_id": "technical-interview-preparation.inheritance-polymorphism-and-composition",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A notifier must use different channels, including a fake in tests, all honoring the same send contract. Which design directly supports replacement?",
+    "pt-BR": "Um notificador deve usar canais diferentes, incluindo fake em testes, todos respeitando o contrato send. Qual desenho facilita substituição diretamente?",
+    "es": "Un notificador debe usar canales diferentes, incluido un doble en pruebas, todos respetando el contrato send. ¿Qué diseño facilita sustitución directamente?"
+  },
+  "explanation": {
+    "en": "Composition receives a compatible collaborator and delegates send to it; a shared base class is not required by duck typing.",
+    "pt-BR": "Composição recebe colaborador compatível e delega send; classe base compartilhada não é exigida por duck typing.",
+    "es": "Composición recibe colaborador compatible y delega send; duck typing no exige clase base compartida."
+  },
+  "hints": {
+    "en": [
+      "Separate notification orchestration from its channel."
+    ],
+    "pt-BR": [
+      "Separe orquestração da notificação de seu canal."
+    ],
+    "es": [
+      "Separa orquestación de notificación de su canal."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.md",
+        "pt-BR": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.pt-BR.md",
+        "es": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.es.md"
+      },
+      "sections": {
+        "en": "Polymorphism and composition",
+        "pt-BR": "Polimorfismo e composição",
+        "es": "Polimorfismo y composición"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "compose"
+  },
+  "choices": [
+    {
+      "id": "inherit",
+      "text": {
+        "en": "Inherit separately from every concrete channel.",
+        "pt-BR": "Herde separadamente de todo canal concreto.",
+        "es": "Hereda por separado de cada canal concreto."
+      }
+    },
+    {
+      "id": "compose",
+      "text": {
+        "en": "Receive a compatible channel object and delegate.",
+        "pt-BR": "Receba objeto de canal compatível e delegue.",
+        "es": "Recibe objeto de canal compatible y delega."
+      }
+    },
+    {
+      "id": "hardcode",
+      "text": {
+        "en": "Hardcode one channel inside every method.",
+        "pt-BR": "Fixe um canal dentro de cada método.",
+        "es": "Fija un canal dentro de cada método."
+      }
+    }
+  ]
+}

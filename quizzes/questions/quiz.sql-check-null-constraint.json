@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.sql-check-null-constraint",
+  "chapter_id": "technical-interview-preparation.relational-databases-and-sql",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A required SQL column minutes must have a positive value and may not be NULL. Which constraints express both rules?",
+    "pt-BR": "Uma coluna SQL obrigatória minutes deve ter valor positivo e não pode ser NULL. Quais restrições expressam ambas regras?",
+    "es": "Una columna SQL obligatoria minutes debe tener valor positivo y no puede ser NULL. ¿Qué restricciones expresan ambas reglas?"
+  },
+  "explanation": {
+    "en": "CHECK(minutes > 0) checks the positive predicate but does not itself exclude NULL; add NOT NULL.",
+    "pt-BR": "CHECK(minutes > 0) verifica o predicado positivo mas não exclui NULL sozinho; acrescente NOT NULL.",
+    "es": "CHECK(minutes > 0) comprueba el predicado positivo pero no excluye NULL por sí solo; añade NOT NULL."
+  },
+  "hints": {
+    "en": [
+      "SQL comparisons with NULL are generally unknown."
+    ],
+    "pt-BR": [
+      "Comparações SQL com NULL geralmente são desconhecidas."
+    ],
+    "es": [
+      "Las comparaciones SQL con NULL generalmente son desconocidas."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/18-relational-databases-and-sql/README.md",
+        "pt-BR": "technical-interview-preparation/18-relational-databases-and-sql/README.pt-BR.md",
+        "es": "technical-interview-preparation/18-relational-databases-and-sql/README.es.md"
+      },
+      "sections": {
+        "en": "Relational model and constraints",
+        "pt-BR": "Modelo relacional e restrições",
+        "es": "Modelo relacional y restricciones"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "both"
+  },
+  "choices": [
+    {
+      "id": "check",
+      "text": {
+        "en": "CHECK (minutes > 0)",
+        "pt-BR": "CHECK (minutes > 0)",
+        "es": "CHECK (minutes > 0)"
+      }
+    },
+    {
+      "id": "notnull",
+      "text": {
+        "en": "NOT NULL",
+        "pt-BR": "NOT NULL",
+        "es": "NOT NULL"
+      }
+    },
+    {
+      "id": "both",
+      "text": {
+        "en": "NOT NULL CHECK (minutes > 0)",
+        "pt-BR": "NOT NULL CHECK (minutes > 0)",
+        "es": "NOT NULL CHECK (minutes > 0)"
+      }
+    },
+    {
+      "id": "unique",
+      "text": {
+        "en": "UNIQUE",
+        "pt-BR": "UNIQUE",
+        "es": "UNIQUE"
+      }
+    }
+  ]
+}

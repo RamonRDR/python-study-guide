@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.deepcopy-preserves-internal-alias",
+  "chapter_id": "technical-interview-preparation.object-identity-references-and-copying",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Two dictionary keys refer to the same ordinary list. After deepcopy of the dictionary, what is true of the copied lists?",
+    "pt-BR": "Duas chaves de dicionário referem-se à mesma lista comum. Após deepcopy do dicionário, o que vale para as listas copiadas?",
+    "es": "Dos claves de diccionario refieren a la misma lista ordinaria. Tras deepcopy del diccionario, ¿qué vale para las listas copiadas?"
+  },
+  "explanation": {
+    "en": "The deep-copy memo preserves the internal alias: both copied keys refer to one new list, separate from the original.",
+    "pt-BR": "O memo de deepcopy preserva o alias interno: ambas chaves copiadas referem-se a uma nova lista, separada da original.",
+    "es": "El memo de deepcopy conserva el alias interno: ambas claves copiadas refieren a una lista nueva, separada de la original."
+  },
+  "hints": {
+    "en": [
+      "Repeated references are tracked by the memo."
+    ],
+    "pt-BR": [
+      "Referências repetidas são rastreadas pelo memo."
+    ],
+    "es": [
+      "Las referencias repetidas son rastreadas por el memo."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/09-object-identity-references-and-copying/README.md",
+        "pt-BR": "technical-interview-preparation/09-object-identity-references-and-copying/README.pt-BR.md",
+        "es": "technical-interview-preparation/09-object-identity-references-and-copying/README.es.md"
+      },
+      "sections": {
+        "en": "Identity, equality and binding",
+        "pt-BR": "Identidade, igualdade e vinculação",
+        "es": "Identidad, igualdad y enlace"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "alias-copy"
+  },
+  "choices": [
+    {
+      "id": "two",
+      "text": {
+        "en": "Each copied key gets a different list.",
+        "pt-BR": "Cada chave copiada recebe lista diferente.",
+        "es": "Cada clave copiada recibe lista distinta."
+      }
+    },
+    {
+      "id": "original",
+      "text": {
+        "en": "Both keys still reference the original list.",
+        "pt-BR": "Ambas chaves ainda referenciam a lista original.",
+        "es": "Ambas claves aún refieren a la lista original."
+      }
+    },
+    {
+      "id": "alias-copy",
+      "text": {
+        "en": "Both keys share one copied list, not the original.",
+        "pt-BR": "Ambas chaves compartilham uma lista copiada, não a original.",
+        "es": "Ambas claves comparten una lista copiada, no la original."
+      }
+    }
+  ]
+}

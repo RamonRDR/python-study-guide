@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.classmethod-subclass-factory",
+  "chapter_id": "technical-interview-preparation.attributes-methods-and-object-behavior",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "An inherited classmethod should create an instance of the calling subclass. What should it call?",
+    "pt-BR": "Um classmethod herdado deve criar instância da subclasse chamadora. O que deve chamar?",
+    "es": "Un classmethod heredado debe crear instancia de la subclase llamadora. ¿Qué debe llamar?"
+  },
+  "explanation": {
+    "en": "cls is the class bound to the method call; cls(label) respects the calling subclass if its constructor is compatible.",
+    "pt-BR": "cls é a classe vinculada à chamada; cls(label) respeita a subclasse chamadora se o construtor for compatível.",
+    "es": "cls es la clase enlazada a la llamada; cls(label) respeta la subclase llamadora si su constructor es compatible."
+  },
+  "hints": {
+    "en": [
+      "The class method receives the class implicitly."
+    ],
+    "pt-BR": [
+      "Método de classe recebe a classe implicitamente."
+    ],
+    "es": [
+      "El método de clase recibe la clase implícitamente."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.md",
+        "pt-BR": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.pt-BR.md",
+        "es": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.es.md"
+      },
+      "sections": {
+        "en": "Attributes and binding",
+        "pt-BR": "Atributos e vinculação",
+        "es": "Atributos y enlace"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "cls"
+  },
+  "choices": [
+    {
+      "id": "base",
+      "text": {
+        "en": "Base(label)",
+        "pt-BR": "Base(label)",
+        "es": "Base(label)"
+      }
+    },
+    {
+      "id": "self",
+      "text": {
+        "en": "self(label)",
+        "pt-BR": "self(label)",
+        "es": "self(label)"
+      }
+    },
+    {
+      "id": "cls",
+      "text": {
+        "en": "cls(label)",
+        "pt-BR": "cls(label)",
+        "es": "cls(label)"
+      }
+    }
+  ]
+}
