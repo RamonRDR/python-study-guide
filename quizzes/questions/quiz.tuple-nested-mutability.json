@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.tuple-nested-mutability",
+  "chapter_id": "collections.tuples-and-immutability",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "A tuple may contain a list whose contents can change without replacing a tuple position.",
+    "pt-BR": "Uma tupla pode conter uma lista cujo conteúdo pode mudar sem substituir uma posição da tupla.",
+    "es": "Una tupla puede contener una lista cuyo contenido puede cambiar sin reemplazar una posición de la tupla."
+  },
+  "explanation": {
+    "en": "Tuple immutability protects its references, not every object reached through them.",
+    "pt-BR": "A imutabilidade da tupla protege suas referências, não todo objeto alcançado por elas.",
+    "es": "La inmutabilidad de la tupla protege sus referencias, no todo objeto alcanzado por ellas."
+  },
+  "hints": {
+    "en": [
+      "Distinguish the outer structure from the inner list."
+    ],
+    "pt-BR": [
+      "Distinga a estrutura externa da lista interna."
+    ],
+    "es": [
+      "Distingue la estructura externa de la lista interna."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/03-tuples-and-immutability/README.md",
+        "pt-BR": "collections/03-tuples-and-immutability/README.pt-BR.md",
+        "es": "collections/03-tuples-and-immutability/README.es.md"
+      },
+      "sections": {
+        "en": "23. Immutability is about the tuple's positions",
+        "pt-BR": "23. Imutabilidade trata das posições da tupla",
+        "es": "23. La inmutabilidad trata de las posiciones de la tupla"
+      }
+    }
+  ],
+  "answer": {
+    "value": true
+  }
+}

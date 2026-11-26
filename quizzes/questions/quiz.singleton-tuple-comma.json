@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.singleton-tuple-comma",
+  "chapter_id": "collections.tuples-and-immutability",
+  "difficulty": "easy",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "Which expression creates a tuple containing exactly one integer 7?",
+    "pt-BR": "Qual expressão cria uma tupla contendo exatamente um inteiro 7?",
+    "es": "¿Qué expresión crea una tupla con exactamente un entero 7?"
+  },
+  "explanation": {
+    "en": "The comma creates the singleton tuple; parentheses alone group the expression.",
+    "pt-BR": "A vírgula cria a tupla de um item; parênteses sozinhos agrupam a expressão.",
+    "es": "La coma crea la tupla de un elemento; los paréntesis solos agrupan la expresión."
+  },
+  "hints": {
+    "en": [
+      "Inspect the punctuation inside the parentheses."
+    ],
+    "pt-BR": [
+      "Examine a pontuação dentro dos parênteses."
+    ],
+    "es": [
+      "Inspecciona la puntuación dentro de los paréntesis."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/03-tuples-and-immutability/README.md",
+        "pt-BR": "collections/03-tuples-and-immutability/README.pt-BR.md",
+        "es": "collections/03-tuples-and-immutability/README.es.md"
+      },
+      "sections": {
+        "en": "4. The comma matters",
+        "pt-BR": "4. A vírgula importa",
+        "es": "4. La coma importa"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "singleton"
+  },
+  "choices": [
+    {
+      "id": "list",
+      "text": {
+        "en": "[7]",
+        "pt-BR": "[7]",
+        "es": "[7]"
+      }
+    },
+    {
+      "id": "group",
+      "text": {
+        "en": "(7)",
+        "pt-BR": "(7)",
+        "es": "(7)"
+      }
+    },
+    {
+      "id": "singleton",
+      "text": {
+        "en": "(7,)",
+        "pt-BR": "(7,)",
+        "es": "(7,)"
+      }
+    },
+    {
+      "id": "set",
+      "text": {
+        "en": "{7}",
+        "pt-BR": "{7}",
+        "es": "{7}"
+      }
+    }
+  ]
+}

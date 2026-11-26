@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.list-slice-last-two",
+  "chapter_id": "collections.list-creation-and-indexing",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "The omitted stop extends to the end; -2 starts at the second-last item.",
+    "pt-BR": "O limite final omitido vai até o fim; -2 começa no penúltimo item.",
+    "es": "El límite final omitido llega al final; -2 empieza en el penúltimo elemento."
+  },
+  "hints": {
+    "en": [
+      "Count backward from the last item."
+    ],
+    "pt-BR": [
+      "Conte de trás para frente a partir do último item."
+    ],
+    "es": [
+      "Cuenta hacia atrás desde el último elemento."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/01-list-creation-and-indexing/README.md",
+        "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+        "es": "collections/01-list-creation-and-indexing/README.es.md"
+      },
+      "sections": {
+        "en": "14. Negative indexes also work in slices",
+        "pt-BR": "14. Índices negativos também funcionam em fatias",
+        "es": "14. Los índices negativos también funcionan en slices"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "[30, 40]\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print([10, 20, 30, 40][-2:])"
+}

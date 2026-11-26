@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.list-pop-result",
+  "chapter_id": "collections.modifying-lists-and-methods",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "pop() removes and returns 9; 4 and 6 remain.",
+    "pt-BR": "pop() remove e retorna 9; 4 e 6 permanecem.",
+    "es": "pop() elimina y devuelve 9; quedan 4 y 6."
+  },
+  "hints": {
+    "en": [
+      "Track the return value separately from the list."
+    ],
+    "pt-BR": [
+      "Acompanhe o retorno separadamente da lista."
+    ],
+    "es": [
+      "Sigue el retorno por separado de la lista."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/02-modifying-lists-and-methods/README.md",
+        "pt-BR": "collections/02-modifying-lists-and-methods/README.pt-BR.md",
+        "es": "collections/02-modifying-lists-and-methods/README.es.md"
+      },
+      "sections": {
+        "en": "11. Removing and retrieving with `pop()`",
+        "pt-BR": "11. Removendo e recuperando com `pop()`",
+        "es": "11. Eliminar y recuperar con `pop()`"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "9\n[4, 6]\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "values = [4, 6, 9]\nremoved = values.pop()\nprint(removed)\nprint(values)"
+}

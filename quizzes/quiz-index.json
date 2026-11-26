@@ -14,6 +14,10 @@
       "path": "quizzes/questions/quiz.bool-int-exact-versus-compatible.json"
     },
     {
+      "id": "quiz.collection-keyed-quantities",
+      "path": "quizzes/questions/quiz.collection-keyed-quantities.json"
+    },
+    {
       "id": "quiz.collection-membership",
       "path": "quizzes/questions/quiz.collection-membership.json"
     },
@@ -26,12 +30,24 @@
       "path": "quizzes/questions/quiz.dictionary-fallback.json"
     },
     {
+      "id": "quiz.dictionary-membership-keys",
+      "path": "quizzes/questions/quiz.dictionary-membership-keys.json"
+    },
+    {
+      "id": "quiz.dictionary-none-versus-absent",
+      "path": "quizzes/questions/quiz.dictionary-none-versus-absent.json"
+    },
+    {
       "id": "quiz.division-zero-error",
       "path": "quizzes/questions/quiz.division-zero-error.json"
     },
     {
       "id": "quiz.editor-replaces-interpreter",
       "path": "quizzes/questions/quiz.editor-replaces-interpreter.json"
+    },
+    {
+      "id": "quiz.empty-braces-not-set",
+      "path": "quizzes/questions/quiz.empty-braces-not-set.json"
     },
     {
       "id": "quiz.exact-type-function",
@@ -56,6 +72,26 @@
     {
       "id": "quiz.interpreter-purpose",
       "path": "quizzes/questions/quiz.interpreter-purpose.json"
+    },
+    {
+      "id": "quiz.list-add-one",
+      "path": "quizzes/questions/quiz.list-add-one.json"
+    },
+    {
+      "id": "quiz.list-extend-not-nest",
+      "path": "quizzes/questions/quiz.list-extend-not-nest.json"
+    },
+    {
+      "id": "quiz.list-pop-result",
+      "path": "quizzes/questions/quiz.list-pop-result.json"
+    },
+    {
+      "id": "quiz.list-slice-last-two",
+      "path": "quizzes/questions/quiz.list-slice-last-two.json"
+    },
+    {
+      "id": "quiz.list-stored-item-type",
+      "path": "quizzes/questions/quiz.list-stored-item-type.json"
     },
     {
       "id": "quiz.missing-required-argument",
@@ -106,6 +142,22 @@
       "path": "quizzes/questions/quiz.round-ties-to-even.json"
     },
     {
+      "id": "quiz.set-directional-difference",
+      "path": "quizzes/questions/quiz.set-directional-difference.json"
+    },
+    {
+      "id": "quiz.set-shared-members",
+      "path": "quizzes/questions/quiz.set-shared-members.json"
+    },
+    {
+      "id": "quiz.shallow-list-copy-nested",
+      "path": "quizzes/questions/quiz.shallow-list-copy-nested.json"
+    },
+    {
+      "id": "quiz.singleton-tuple-comma",
+      "path": "quizzes/questions/quiz.singleton-tuple-comma.json"
+    },
+    {
       "id": "quiz.source-file-extension",
       "path": "quizzes/questions/quiz.source-file-extension.json"
     },
@@ -132,6 +184,10 @@
     {
       "id": "quiz.true-division-integers",
       "path": "quizzes/questions/quiz.true-division-integers.json"
+    },
+    {
+      "id": "quiz.tuple-nested-mutability",
+      "path": "quizzes/questions/quiz.tuple-nested-mutability.json"
     },
     {
       "id": "quiz.type-hints-runtime",

@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.collection-keyed-quantities",
+  "chapter_id": "collections.choosing-the-right-collection",
+  "difficulty": "medium",
+  "type": "multiple_choice",
+  "prompt": {
+    "en": "A catalog stores one current quantity per product code and updates quantities by code. Which collection directly models this?",
+    "pt-BR": "Um catálogo armazena uma quantidade atual por código de produto e atualiza quantidades pelo código. Qual coleção modela isso diretamente?",
+    "es": "Un catálogo almacena una cantidad actual por código de producto y actualiza cantidades por código. ¿Qué colección modela esto directamente?"
+  },
+  "explanation": {
+    "en": "A dict maps meaningful unique keys to values, unlike positional collections and sets.",
+    "pt-BR": "Um dict associa chaves significativas únicas a valores, ao contrário de coleções posicionais e conjuntos.",
+    "es": "Un dict asocia claves significativas únicas con valores, a diferencia de colecciones posicionales y conjuntos."
+  },
+  "hints": {
+    "en": [
+      "Consider what identifies each quantity."
+    ],
+    "pt-BR": [
+      "Considere o que identifica cada quantidade."
+    ],
+    "es": [
+      "Considera qué identifica cada cantidad."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/06-choosing-the-right-collection/README.md",
+        "pt-BR": "collections/06-choosing-the-right-collection/README.pt-BR.md",
+        "es": "collections/06-choosing-the-right-collection/README.es.md"
+      },
+      "sections": {
+        "en": "3. A first decision map",
+        "pt-BR": "3. Um primeiro mapa de decisão",
+        "es": "3. Un primer mapa de decisión"
+      }
+    }
+  ],
+  "answer": {
+    "choice_id": "dict"
+  },
+  "choices": [
+    {
+      "id": "tuple",
+      "text": {
+        "en": "tuple",
+        "pt-BR": "tuple",
+        "es": "tuple"
+      }
+    },
+    {
+      "id": "dict",
+      "text": {
+        "en": "dict",
+        "pt-BR": "dict",
+        "es": "dict"
+      }
+    },
+    {
+      "id": "set",
+      "text": {
+        "en": "set",
+        "pt-BR": "set",
+        "es": "set"
+      }
+    },
+    {
+      "id": "list",
+      "text": {
+        "en": "list",
+        "pt-BR": "list",
+        "es": "list"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.dictionary-none-versus-absent",
+  "chapter_id": "collections.dictionaries-keys-and-values",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "get returns None for both a stored None and a missing key. Membership distinguishes their presence.",
+    "pt-BR": "get retorna None tanto para None armazenado quanto para chave ausente. Pertencimento distingue sua presença.",
+    "es": "get devuelve None tanto para un None almacenado como para una clave ausente. La pertenencia distingue su presencia."
+  },
+  "hints": {
+    "en": [
+      "Distinguish the retrieved value from entry existence."
+    ],
+    "pt-BR": [
+      "Distinga o valor recuperado da existência da entrada."
+    ],
+    "es": [
+      "Distingue el valor recuperado de la existencia de la entrada."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/04-dictionaries-keys-and-values/README.md",
+        "pt-BR": "collections/04-dictionaries-keys-and-values/README.pt-BR.md",
+        "es": "collections/04-dictionaries-keys-and-values/README.es.md"
+      },
+      "sections": {
+        "en": "11. A stored `None` and a missing key can look the same",
+        "pt-BR": "11. Um `None` armazenado e uma chave ausente podem parecer iguais",
+        "es": "11. Un `None` almacenado y una clave ausente pueden verse iguales"
+      }
+    },
+    {
+      "paths": {
+        "en": "collections/04-dictionaries-keys-and-values/README.md",
+        "pt-BR": "collections/04-dictionaries-keys-and-values/README.pt-BR.md",
+        "es": "collections/04-dictionaries-keys-and-values/README.es.md"
+      },
+      "sections": {
+        "en": "13. Membership checks keys by default",
+        "pt-BR": "13. Pertencimento verifica chaves por padrão",
+        "es": "13. La pertenencia comprueba claves de forma predeterminada"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "None None\nTrue False\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "data = {\"note\": None}\nprint(data.get(\"note\"), data.get(\"tag\"))\nprint(\"note\" in data, \"tag\" in data)"
+}

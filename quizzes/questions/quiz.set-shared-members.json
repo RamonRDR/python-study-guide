@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.set-shared-members",
+  "chapter_id": "collections.sets-and-unique-values",
+  "difficulty": "medium",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Replace ____ with the set method returning only members shared by both sets. Enter only its name.",
+    "pt-BR": "Substitua ____ pelo método de conjunto que retorna apenas membros compartilhados pelos dois conjuntos. Digite somente seu nome.",
+    "es": "Sustituye ____ por el método de conjunto que devuelve solo miembros compartidos por ambos conjuntos. Introduce solo su nombre."
+  },
+  "explanation": {
+    "en": "intersection returns the members in both inputs.",
+    "pt-BR": "intersection retorna membros nas duas entradas.",
+    "es": "intersection devuelve miembros de ambas entradas."
+  },
+  "hints": {
+    "en": [
+      "Select the overlap, not the combined membership."
+    ],
+    "pt-BR": [
+      "Selecione a sobreposição, não a combinação de membros."
+    ],
+    "es": [
+      "Selecciona la parte común, no la combinación de miembros."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/05-sets-and-unique-values/README.md",
+        "pt-BR": "collections/05-sets-and-unique-values/README.pt-BR.md",
+        "es": "collections/05-sets-and-unique-values/README.es.md"
+      },
+      "sections": {
+        "en": "25. Intersection keeps shared members",
+        "pt-BR": "25. Interseção mantém membros compartilhados",
+        "es": "25. La intersección conserva miembros compartidos"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "intersection"
+    ],
+    "comparison": "exact"
+  },
+  "code": "common = {1, 2}.____({2, 3})"
+}

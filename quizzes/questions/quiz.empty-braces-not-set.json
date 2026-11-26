@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.empty-braces-not-set",
+  "chapter_id": "collections.sets-and-unique-values",
+  "difficulty": "easy",
+  "type": "true_false",
+  "prompt": {
+    "en": "The expression {} creates an empty set.",
+    "pt-BR": "A expressão {} cria um conjunto vazio.",
+    "es": "La expresión {} crea un conjunto vacío."
+  },
+  "explanation": {
+    "en": "Empty braces create a dictionary; set() creates an empty set.",
+    "pt-BR": "Chaves vazias criam um dicionário; set() cria um conjunto vazio.",
+    "es": "Las llaves vacías crean un diccionario; set() crea un conjunto vacío."
+  },
+  "hints": {
+    "en": [
+      "Recall the other collection that uses braces."
+    ],
+    "pt-BR": [
+      "Lembre a outra coleção que usa chaves."
+    ],
+    "es": [
+      "Recuerda la otra colección que usa llaves."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "collections/05-sets-and-unique-values/README.md",
+        "pt-BR": "collections/05-sets-and-unique-values/README.pt-BR.md",
+        "es": "collections/05-sets-and-unique-values/README.es.md"
+      },
+      "sections": {
+        "en": "4. An empty set uses `set()`",
+        "pt-BR": "4. Um conjunto vazio usa `set()`",
+        "es": "4. Un conjunto vacío usa `set()`"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}
