@@ -175,11 +175,43 @@ LABELS = {
 }
 
 
+TOPIC_LABELS = {
+    "interview-fundamentals": {"en": "Interview fundamentals", "pt-BR": "Fundamentos de entrevistas", "es": "Fundamentos de entrevistas"},
+    "python-fundamentals": {"en": "Python fundamentals", "pt-BR": "Fundamentos de Python", "es": "Fundamentos de Python"},
+    "data-structures-algorithms": {"en": "Data structures and algorithms", "pt-BR": "Estruturas de dados e algoritmos", "es": "Estructuras de datos y algoritmos"},
+    "oop": {"en": "Object-oriented programming", "pt-BR": "Programação orientada a objetos", "es": "Programación orientada a objetos"},
+    "python-internals": {"en": "Python internals", "pt-BR": "Internals de Python", "es": "Internals de Python"},
+    "testing-debugging": {"en": "Testing and debugging", "pt-BR": "Testes e debugging", "es": "Pruebas y depuración"},
+    "backend-apis": {"en": "Backend and APIs", "pt-BR": "Backend e APIs", "es": "Backend y APIs"},
+    "databases-sql": {"en": "Databases and SQL", "pt-BR": "Bancos de dados e SQL", "es": "Bases de datos y SQL"},
+    "software-engineering": {"en": "Software engineering", "pt-BR": "Engenharia de software", "es": "Ingeniería de software"},
+    "behavioral-international": {"en": "Behavioral and international interviews", "pt-BR": "Entrevistas comportamentais e internacionais", "es": "Entrevistas conductuales e internacionales"},
+}
+COVERAGE_LABELS = {
+    "en": ("Coverage", "Topic", "Total"),
+    "pt-BR": ("Distribuição", "Tema", "Total"),
+    "es": ("Distribución", "Tema", "Total"),
+}
+
+
 def render_questions(records, locale):
     """Generate learner-visible sections from the single canonical JSON source."""
     labels = LABELS[locale]
-    lines = []
+    coverage, topic_label, total_label = COVERAGE_LABELS[locale]
+    lines = [f"## {coverage}", "",
+             f"| {topic_label} | Junior | Mid-level | Senior | {total_label} |",
+             "| --- | ---: | ---: | ---: | ---: |"]
+    for topic, names in TOPIC_LABELS.items():
+        counts = [sum(q["topic"] == topic and q["level"] == level for q in records)
+                  for level in ("junior", "mid", "senior")]
+        if sum(counts):
+            lines.append(f"| {names[locale]} | {counts[0]} | {counts[1]} | {counts[2]} | {sum(counts)} |")
+    lines.append("")
+    previous_topic = None
     for q in records:
+        if q["topic"] != previous_topic:
+            lines.extend([f"## {TOPIC_LABELS[q['topic']][locale]}", ""])
+            previous_topic = q["topic"]
         lines.extend([f"### {q['id']}", "", f"`{q['level']}` · `{q['topic']}`", "",
                       q["prompt"][locale], "", "<details>", "<summary>" + labels[0] + "</summary>", "",
                       q["expected_answer"][locale], "", f"**{labels[1]}:** {q['explanation'][locale]}",
