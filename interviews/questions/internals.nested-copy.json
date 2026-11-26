@@ -1,0 +1,98 @@
+{
+  "id": "internals.nested-copy",
+  "topic": "python-internals",
+  "level": "mid",
+  "prompt": {
+    "en": "A dictionary contains two keys referencing the same mutable list. You need an independent graph while preserving the alias relationship inside the copy. Compare assignment, shallow copy and deep copy.",
+    "pt-BR": "Dicionário contém duas chaves referenciando mesma lista mutável. Você precisa de grafo independente preservando relação de alias dentro da cópia. Compare atribuição, cópia rasa e profunda.",
+    "es": "Diccionario contiene dos claves referenciando misma lista mutable. Necesitas grafo independiente conservando relación de alias dentro de copia. Compara asignación, copia superficial y profunda."
+  },
+  "expected_answer": {
+    "en": "Assignment shares the original dictionary; shallow copy creates a new outer dictionary but shares the list. For these built-in containers, deepcopy copies the nested list once and reuses that copy for both keys via its memo.",
+    "pt-BR": "Atribuição compartilha dicionário original; cópia rasa cria dicionário externo novo mas compartilha lista. Para esses contêineres nativos, deepcopy copia lista aninhada uma vez e reutiliza cópia para duas chaves via memo.",
+    "es": "Asignación comparte diccionario original; copia superficial crea diccionario externo nuevo pero comparte lista. Para estos contenedores incorporados, deepcopy copia lista anidada una vez y reutiliza copia para ambas claves mediante memo."
+  },
+  "explanation": {
+    "en": "Deep copying can preserve repeated references and cycles; it does not guarantee cloning every object or external resource. Choose by ownership and cost.",
+    "pt-BR": "Cópia profunda pode preservar referências repetidas e ciclos; não garante clonar cada objeto ou recurso externo. Escolha por ownership e custo.",
+    "es": "Copia profunda puede preservar referencias repetidas y ciclos; no garantiza clonar cada objeto o recurso externo. Elige por propiedad y coste."
+  },
+  "intent": {
+    "en": "Assess identity, nested aliasing and copy semantics.",
+    "pt-BR": "Avaliar identidade, aliases aninhados e semântica de cópia.",
+    "es": "Evaluar identidad, alias anidados y semántica de copia."
+  },
+  "common_errors": {
+    "en": [
+      "Assume a shallow copy isolates nested mutable values.",
+      "Claim deepcopy creates a new object for every reference."
+    ],
+    "pt-BR": [
+      "Supor cópia rasa isolando valores mutáveis internos.",
+      "Afirmar deepcopy criando objeto novo para cada referência."
+    ],
+    "es": [
+      "Suponer copia superficial aislando valores mutables internos.",
+      "Afirmar deepcopy creando objeto nuevo por referencia."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "How would you test that mutating the copied list does not affect the original?"
+    ],
+    "pt-BR": [
+      "Como testaria que mutar lista copiada não afeta original?"
+    ],
+    "es": [
+      "¿Cómo probarías que mutar lista copiada no afecta original?"
+    ]
+  },
+  "examples": {
+    "en": "```python\nfrom copy import deepcopy\nshared = [1]\noriginal = {\"a\": shared, \"b\": shared}\ncloned = deepcopy(original)\nassert cloned[\"a\"] is cloned[\"b\"]\nassert cloned[\"a\"] is not shared\n```",
+    "pt-BR": "```python\nfrom copy import deepcopy\nshared = [1]\noriginal = {\"a\": shared, \"b\": shared}\ncloned = deepcopy(original)\nassert cloned[\"a\"] is cloned[\"b\"]\nassert cloned[\"a\"] is not shared\n```",
+    "es": "```python\nfrom copy import deepcopy\nshared = [1]\noriginal = {\"a\": shared, \"b\": shared}\ncloned = deepcopy(original)\nassert cloned[\"a\"] is cloned[\"b\"]\nassert cloned[\"a\"] is not shared\n```"
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Correctly contrasts assignment and shallow copy.",
+        "pt-BR": "Contrasta corretamente atribuição e cópia rasa.",
+        "es": "Contrasta correctamente asignación y copia superficial."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains deepcopy memo and preserved alias identity.",
+        "pt-BR": "Explica memo de deepcopy e identidade de alias preservada.",
+        "es": "Explica memo de deepcopy e identidad de alias conservada."
+      }
+    },
+    {
+      "id": "criterion-3",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes identity/mutation checks and states copying limitations.",
+        "pt-BR": "Propõe testes de identidade/mutação e declara limites de cópia.",
+        "es": "Propone comprobaciones de identidad/mutación y declara límites de copia."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/09-object-identity-references-and-copying/README.md",
+        "pt-BR": "technical-interview-preparation/09-object-identity-references-and-copying/README.pt-BR.md",
+        "es": "technical-interview-preparation/09-object-identity-references-and-copying/README.es.md"
+      },
+      "sections": {
+        "en": "Identity, equality and binding",
+        "pt-BR": "Identidade, igualdade e vinculação",
+        "es": "Identidad, igualdad y enlace"
+      }
+    }
+  ]
+}

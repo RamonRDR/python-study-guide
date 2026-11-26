@@ -1,0 +1,98 @@
+{
+  "id": "python.mutable-default",
+  "topic": "python-fundamentals",
+  "level": "junior",
+  "prompt": {
+    "en": "Given `def add(x, items=[]): items.append(x); return items`, what do `print(add(1)); print(add(2))` display on consecutive calls? Fix the omitted-list behavior.",
+    "pt-BR": "Dado `def add(x, items=[]): items.append(x); return items`, o que `print(add(1)); print(add(2))` exibem em chamadas consecutivas? Corrija o comportamento quando a lista é omitida.",
+    "es": "Dado `def add(x, items=[]): items.append(x); return items`, ¿qué muestran `print(add(1)); print(add(2))` en llamadas consecutivas? Corrige el comportamiento cuando se omite la lista."
+  },
+  "expected_answer": {
+    "en": "The prints are `[1]` and `[1, 2]`. The default list is created when the function is defined and reused. Default to None, then create a new list only when items is None.",
+    "pt-BR": "As impressões são `[1]` e `[1, 2]`. A lista padrão é criada na definição da função e reutilizada. Use None como padrão e crie lista nova somente quando items for None.",
+    "es": "Las impresiones son `[1]` y `[1, 2]`. La lista predeterminada se crea al definir la función y se reutiliza. Usa None por defecto y crea lista nueva solo cuando items sea None."
+  },
+  "explanation": {
+    "en": "Assignment binds objects; the shared default is mutated. Explicitly supplied lists still mutate under this contract.",
+    "pt-BR": "Atribuição vincula objetos; padrão compartilhado é mutado. Listas fornecidas explicitamente ainda são mutadas nesse contrato.",
+    "es": "Asignación enlaza objetos; el valor predeterminado compartido se muta. Listas suministradas explícitamente siguen mutándose bajo este contrato."
+  },
+  "intent": {
+    "en": "Assess evaluation time, mutability and intended ownership.",
+    "pt-BR": "Avaliar momento de avaliação, mutabilidade e ownership pretendido.",
+    "es": "Evaluar momento de evaluación, mutabilidad y propiedad pretendida."
+  },
+  "common_errors": {
+    "en": [
+      "Assume a fresh list is created on every call.",
+      "Use `if not items` and replace an explicitly supplied empty list."
+    ],
+    "pt-BR": [
+      "Supor lista nova a cada chamada.",
+      "Usar `if not items` e substituir lista vazia fornecida."
+    ],
+    "es": [
+      "Suponer lista nueva en cada llamada.",
+      "Usar `if not items` y sustituir lista vacía suministrada."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What changes if the caller supplies an empty list?"
+    ],
+    "pt-BR": [
+      "O que muda se o chamador fornece lista vazia?"
+    ],
+    "es": [
+      "¿Qué cambia si el llamador suministra una lista vacía?"
+    ]
+  },
+  "examples": {
+    "en": "```python\ndef add(x, items=None):\n    if items is None:\n        items = []\n    items.append(x)\n    return items\n```",
+    "pt-BR": "```python\ndef add(x, items=None):\n    if items is None:\n        items = []\n    items.append(x)\n    return items\n```",
+    "es": "```python\ndef add(x, items=None):\n    if items is None:\n        items = []\n    items.append(x)\n    return items\n```"
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Predicts both printed lists correctly.",
+        "pt-BR": "Prevê corretamente as duas listas impressas.",
+        "es": "Predice correctamente ambas listas impresas."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Explains one-time default evaluation and shared mutation.",
+        "pt-BR": "Explica avaliação única do padrão e mutação compartilhada.",
+        "es": "Explica evaluación única y mutación compartida."
+      }
+    },
+    {
+      "id": "criterion-3",
+      "points": 1,
+      "criterion": {
+        "en": "Uses None and an identity check without replacing a supplied empty list.",
+        "pt-BR": "Usa None e teste de identidade sem substituir lista vazia fornecida.",
+        "es": "Usa None y comprobación de identidad sin sustituir lista vacía suministrada."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/03-python-fundamentals-review/README.md",
+        "pt-BR": "technical-interview-preparation/03-python-fundamentals-review/README.pt-BR.md",
+        "es": "technical-interview-preparation/03-python-fundamentals-review/README.es.md"
+      },
+      "sections": {
+        "en": "Review by reasoning",
+        "pt-BR": "Revisão pelo raciocínio",
+        "es": "Repaso mediante razonamiento"
+      }
+    }
+  ]
+}

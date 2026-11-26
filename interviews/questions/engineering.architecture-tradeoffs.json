@@ -1,0 +1,98 @@
+{
+  "id": "engineering.architecture-tradeoffs",
+  "topic": "software-engineering",
+  "level": "senior",
+  "prompt": {
+    "en": "A small reporting service has slow requests. A colleague proposes splitting it into services and adding a cache. How would you decide, measure and roll out changes safely?",
+    "pt-BR": "Serviço pequeno de relatórios tem requisições lentas. Colega propõe dividir em serviços e adicionar cache. Como decidiria, mediria e implantaria mudanças com segurança?",
+    "es": "Servicio pequeño de informes tiene solicitudes lentas. Un colega propone dividir en servicios y añadir caché. ¿Cómo decidirías, medirías y desplegarías cambios de forma segura?"
+  },
+  "expected_answer": {
+    "en": "Define latency/reliability targets and measure a baseline with logs, metrics and traces to locate the bottleneck. Compare a modular monolith and services against independent scaling/deployment and network/operational cost. Consider cache only with explicit staleness, invalidation and memory constraints. Record alternatives and consequences in an ADR, test acceptance criteria, use focused reviewed changes and plan measured rollout and rollback, including data compatibility.",
+    "pt-BR": "Defina metas de latência/confiabilidade e meça baseline com logs, métricas e traces para localizar gargalo. Compare monólito modular e serviços por escala/deploy independentes e custo de rede/operação. Considere cache só com restrições explícitas de defasagem, invalidação e memória. Registre alternativas e consequências em ADR, teste critérios de aceite, use mudanças focadas revisadas e planeje implantação medida e rollback, incluindo compatibilidade de dados.",
+    "es": "Define metas de latencia/fiabilidad y mide base con logs, métricas y trazas para localizar cuello de botella. Compara monolito modular y servicios por escala/deploy independientes y coste de red/operación. Considera caché solo con restricciones explícitas de desfase, invalidación y memoria. Registra alternativas y consecuencias en ADR, prueba criterios de aceptación, usa cambios enfocados revisados y planifica despliegue medido y rollback, incluida compatibilidad de datos."
+  },
+  "explanation": {
+    "en": "Architecture labels do not establish performance. Evidence and quality constraints determine whether additional complexity is justified.",
+    "pt-BR": "Rótulos de arquitetura não estabelecem desempenho. Evidências e restrições de qualidade determinam se complexidade adicional se justifica.",
+    "es": "Etiquetas de arquitectura no establecen rendimiento. Evidencias y restricciones de calidad determinan si complejidad adicional se justifica."
+  },
+  "intent": {
+    "en": "Assess technical judgment, measurable decisions and operational risk.",
+    "pt-BR": "Avaliar julgamento técnico, decisões mensuráveis e risco operacional.",
+    "es": "Evaluar juicio técnico, decisiones medibles y riesgo operacional."
+  },
+  "common_errors": {
+    "en": [
+      "Assume microservices or caches automatically improve latency.",
+      "Ignore cache staleness or assume code rollback reverses data migrations."
+    ],
+    "pt-BR": [
+      "Supor microsserviços ou caches melhorarem latência automaticamente.",
+      "Ignorar defasagem do cache ou supor rollback de código desfaz migrações."
+    ],
+    "es": [
+      "Suponer microservicios o cachés mejoran latencia automáticamente.",
+      "Ignorar desfase de caché o suponer rollback de código revierte migraciones."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What evidence would justify keeping the current design instead?"
+    ],
+    "pt-BR": [
+      "Que evidência justificaria manter design atual?"
+    ],
+    "es": [
+      "¿Qué evidencia justificaría conservar diseño actual?"
+    ]
+  },
+  "examples": {
+    "en": "If measurements locate repeated expensive reads and the contract permits bounded staleness, evaluate a small cache against the baseline; reject it if invalidation or memory cost exceeds the agreed budget.",
+    "pt-BR": "Se medição localiza leituras caras repetidas e contrato permite defasagem limitada, avalie cache pequeno contra baseline; rejeite se invalidação ou custo de memória exceder orçamento acordado.",
+    "es": "Si mediciones localizan lecturas costosas repetidas y contrato permite desfase limitado, evalúa caché pequeña contra base; recházala si invalidación o coste de memoria supera presupuesto acordado."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Defines measurable baseline and investigates bottleneck before choosing.",
+        "pt-BR": "Define baseline mensurável e investiga gargalo antes de escolher.",
+        "es": "Define base medible e investiga cuello de botella antes de elegir."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Compares service and cache trade-offs against constraints.",
+        "pt-BR": "Compara trade-offs de serviços e cache frente a restrições.",
+        "es": "Compara compromisos de servicios y caché frente a restricciones."
+      }
+    },
+    {
+      "id": "criterion-3",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes documented decision, acceptance tests and rollback including data concerns.",
+        "pt-BR": "Propõe decisão documentada, testes de aceite e rollback incluindo dados.",
+        "es": "Propone decisión documentada, pruebas de aceptación y rollback incluyendo datos."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md",
+        "pt-BR": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.pt-BR.md",
+        "es": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md"
+      },
+      "sections": {
+        "en": "Trade-offs and operation",
+        "pt-BR": "Trade-offs e operação",
+        "es": "Compromisos y operación"
+      }
+    }
+  ]
+}

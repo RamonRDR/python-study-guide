@@ -1,0 +1,98 @@
+{
+  "id": "oop.replaceable-collaborator",
+  "topic": "oop",
+  "level": "mid",
+  "prompt": {
+    "en": "A report notifier must support text and email channels, then a fake channel in tests. Compare inheritance and composition; propose a design without changing the notifier for each channel.",
+    "pt-BR": "Um notificador de relatórios deve suportar canais de texto e email, depois canal fake em testes. Compare herança e composição; proponha design sem alterar notificador a cada canal.",
+    "es": "Un notificador de informes debe admitir canales de texto y email, luego canal falso en pruebas. Compara herencia y composición; propone diseño sin cambiar notificador por canal."
+  },
+  "expected_answer": {
+    "en": "Inject a collaborator with a defined send contract; the notifier delegates to it. Compatible channels may subclass a base or satisfy the behavior through duck typing. Inheritance is useful for genuine subtypes that honor the base contract, not merely reuse.",
+    "pt-BR": "Injete colaborador com contrato send definido; notificador delega a ele. Canais compatíveis podem herdar base ou atender comportamento via duck typing. Herança serve a subtipos reais que respeitam contrato base, não só reutilização.",
+    "es": "Inyecta colaborador con contrato send definido; notificador delega. Canales compatibles pueden heredar base o cumplir comportamiento mediante duck typing. Herencia sirve a subtipos reales que respetan contrato base, no solo reutilización."
+  },
+  "explanation": {
+    "en": "Composition makes dependencies explicit and replaceable, at the cost of indirection. Method names alone do not ensure substitutability.",
+    "pt-BR": "Composição torna dependências explícitas e substituíveis, ao custo de indireção. Nomes de métodos sozinhos não asseguram substituição.",
+    "es": "Composición hace dependencias explícitas y sustituibles, al coste de indirección. Nombres de métodos solos no aseguran sustitución."
+  },
+  "intent": {
+    "en": "Assess behavioral contracts and testable design decisions.",
+    "pt-BR": "Avaliar contratos comportamentais e decisões de design testável.",
+    "es": "Evaluar contratos de comportamiento y decisiones de diseño comprobable."
+  },
+  "common_errors": {
+    "en": [
+      "Require a deep inheritance tree just to reuse code.",
+      "Assume every method named send has the same semantics."
+    ],
+    "pt-BR": [
+      "Exigir hierarquia profunda só para reutilizar código.",
+      "Supor que todo método send tem mesma semântica."
+    ],
+    "es": [
+      "Exigir jerarquía profunda solo para reutilizar código.",
+      "Suponer que todo método send tiene misma semántica."
+    ]
+  },
+  "follow_ups": {
+    "en": [
+      "What should a fake channel demonstrate about the contract?"
+    ],
+    "pt-BR": [
+      "O que canal fake deve demonstrar sobre contrato?"
+    ],
+    "es": [
+      "¿Qué debe demostrar un canal falso sobre el contrato?"
+    ]
+  },
+  "examples": {
+    "en": "`Notifier(channel)` delegates `send('Ready')` to a fake returning `test: Ready`, without contacting a network.",
+    "pt-BR": "`Notifier(channel)` delega `send('Ready')` a fake que retorna `test: Ready`, sem acessar rede.",
+    "es": "`Notifier(channel)` delega `send('Ready')` a doble que devuelve `test: Ready`, sin acceder a red."
+  },
+  "rubric": [
+    {
+      "id": "criterion-1",
+      "points": 1,
+      "criterion": {
+        "en": "Proposes explicit collaborator injection and delegation.",
+        "pt-BR": "Propõe injeção explícita de colaborador e delegação.",
+        "es": "Propone inyección explícita de colaborador y delegación."
+      }
+    },
+    {
+      "id": "criterion-2",
+      "points": 1,
+      "criterion": {
+        "en": "Distinguishes subtype contract from composition and duck typing.",
+        "pt-BR": "Distingue contrato de subtipo de composição e duck typing.",
+        "es": "Distingue contrato de subtipo de composición y duck typing."
+      }
+    },
+    {
+      "id": "criterion-3",
+      "points": 1,
+      "criterion": {
+        "en": "Explains a fake-based test and at least one trade-off.",
+        "pt-BR": "Explica teste com fake e ao menos um trade-off.",
+        "es": "Explica prueba con doble y al menos un compromiso."
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.md",
+        "pt-BR": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.pt-BR.md",
+        "es": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.es.md"
+      },
+      "sections": {
+        "en": "Polymorphism and composition",
+        "pt-BR": "Polimorfismo e composição",
+        "es": "Polimorfismo y composición"
+      }
+    }
+  ]
+}
