@@ -6,7 +6,7 @@ Usa esta página como el **índice general del curso**. Todos los capítulos de 
 
 Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores pueden estar completadas antes que fases anteriores todavía planificadas, pero la numeración sigue representando la secuencia de aprendizaje recomendada.
 
-Currículo publicado: 97 lecciones y ocho proyectos prácticos (105 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
+Currículo publicado: 104 lecciones y ocho proyectos prácticos (112 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
 
 ## Leyenda de estado
 
@@ -192,7 +192,7 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 
 ## Fase 12: Preparación para entrevistas técnicas
 
-En curso: catorce lecciones cubren fundamentos de entrevistas, repaso, OOP e internals de Python. Backend, SQL, banco de preguntas y simulaciones siguen previstos; aún no se publica un banco de entrevistas.
+En curso: veintiuna lecciones cubren fundamentos de entrevistas, Python, OOP, internals, backend, SQL e ingeniería. Banco de preguntas, práctica conductual/internacional ampliada y simulaciones siguen previstos; aún no se publica un banco.
 
 1. [Entender las entrevistas técnicas](../technical-interview-preparation/01-understanding-technical-interviews/README.es.md)
 2. [Live coding y tareas take-home](../technical-interview-preparation/02-live-coding-and-take-home/README.es.md)
@@ -208,6 +208,13 @@ En curso: catorce lecciones cubren fundamentos de entrevistas, repaso, OOP e int
 12. [Cierres y decoradores](../technical-interview-preparation/12-closures-and-decorators/README.es.md)
 13. [Gestores de contexto](../technical-interview-preparation/13-context-managers/README.es.md)
 14. [Concurrencia, paralelismo y GIL](../technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md)
+15. [Repaso de excepciones, pruebas y depuración](../technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md)
+16. [HTTP, REST y fundamentos de backend](../technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.es.md)
+17. [Contratos de API, autenticación y autorización](../technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.es.md)
+18. [Bases de datos relacionales y SQL](../technical-interview-preparation/18-relational-databases-and-sql/README.es.md)
+19. [Joins, agregaciones y relaciones de datos](../technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.es.md)
+20. [Transacciones, índices y seguridad en SQL](../technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md)
+21. [Ingeniería de software y decisiones técnicas](../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md)
 
 ## Navegación útil
 
