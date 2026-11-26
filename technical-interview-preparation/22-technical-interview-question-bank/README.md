@@ -2466,6 +2466,7 @@ Maximum: 2
 **Prerequisites**
 
 - [International interviews and technical English](../../technical-interview-preparation/23-behavioral-and-international-interviews/README.md)
+- [2. Binary search](../../problem-solving-and-live-coding/05-searching-algorithms/README.md)
 
 ### behavioral.evidence-disagreement
 

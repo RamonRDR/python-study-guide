@@ -81,6 +81,18 @@
         "pt-BR": "Entrevistas internacionais e inglês técnico",
         "es": "Entrevistas internacionales e inglés técnico"
       }
+    },
+    {
+      "paths": {
+        "en": "problem-solving-and-live-coding/05-searching-algorithms/README.md",
+        "pt-BR": "problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/05-searching-algorithms/README.es.md"
+      },
+      "sections": {
+        "en": "2. Binary search",
+        "pt-BR": "2. Busca binária",
+        "es": "2. Búsqueda binaria"
+      }
     }
   ]
 }

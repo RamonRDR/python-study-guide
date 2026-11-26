@@ -48,7 +48,7 @@ def validate_mock(record, questions, root):
         if not locale_map(record[field], nonblank):
             errors.append(f"invalid localized field: {field}")
     ids = record["question_ids"]
-    if (not isinstance(ids, list) or len(ids) < 2
+    if (not isinstance(ids, list) or len(ids) != 4
             or not all(valid_id(x) for x in ids)
             or len(set(ids)) != len(ids)
             or any(x not in questions or questions[x]["level"] != level for x in ids)):

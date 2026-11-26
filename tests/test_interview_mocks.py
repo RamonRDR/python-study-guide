@@ -2,6 +2,8 @@
 from collections import Counter
 import copy
 from pathlib import Path
+from tempfile import TemporaryDirectory
+import json
 import unittest
 
 from scripts.interview_records import load_bank, SUFFIXES
@@ -32,6 +34,7 @@ class InterviewMocksTests(unittest.TestCase):
             self.assertEqual(validate_mock(m, self.by_id, ROOT), [], m["id"])
             self.assertEqual(sum(m["time_allocation"].values()), m["duration_minutes"])
             self.assertEqual(sum(r["points"] for r in m["rubric"]), 100)
+            self.assertEqual(len(m["question_ids"]), 4)
             self.assertEqual(len(m["question_ids"]), len(set(m["question_ids"])))
             self.assertTrue(all(self.by_id[q]["level"] == m["level"] for q in m["question_ids"]))
 
@@ -42,6 +45,8 @@ class InterviewMocksTests(unittest.TestCase):
             lambda m: m["time_allocation"].update(coding=12),
             lambda m: m["time_allocation"].update(extra=1),
             lambda m: m["question_ids"].append(m["question_ids"][0]),
+            lambda m: m["question_ids"].pop(),
+            lambda m: m["question_ids"].reverse(),
             lambda m: m["question_ids"].__setitem__(0, "missing.question"),
             lambda m: m.update(question_ids=["api.object-authorization"]),
             lambda m: m.update(exercise_id="problem-solving.missing"),
@@ -62,6 +67,23 @@ class InterviewMocksTests(unittest.TestCase):
                 m = copy.deepcopy(self.mocks[0])
                 mutate(m)
                 self.assertTrue(validate_mock(m, self.by_id, ROOT))
+
+    def test_invalid_mock_index(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            mock_dir = root / "interviews/mocks"
+            mock_dir.mkdir(parents=True)
+            index = mock_dir / "mock-index.json"
+            ids = [m["id"] for m in self.mocks]
+            for invalid in ([],
+                            {"schema_version": "9.0.0", "mock_ids": ids},
+                            {"schema_version": "0.1.0", "mock_ids": [ids[0]] * 3},
+                            {"schema_version": "0.1.0", "mock_ids": ["../escape", *ids[1:]]},
+                            {"schema_version": "0.1.0", "mock_ids": ids}):
+                with self.subTest(index=invalid):
+                    index.write_text(json.dumps(invalid), encoding="utf-8")
+                    with self.assertRaises(ValueError):
+                        load_mocks(root)
 
     def test_generated_views(self):
         for locale, filename in SUFFIXES.items():
