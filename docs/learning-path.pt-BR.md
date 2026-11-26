@@ -224,6 +224,6 @@ Todo conteúdo planejado da Fase 12 está implementado: 24 aulas, 60 perguntas (
 - [Página inicial do repositório](../README.md)
 - [Roadmap completo](roadmap.pt-BR.md)
 - [Estrutura do projeto](project-structure.pt-BR.md)
-- [Piloto do banco de quizzes](../quizzes/README.pt-BR.md)
+- [Banco de quizzes de fundamentos](../quizzes/README.pt-BR.md)
 
 À medida que novos capítulos forem publicados, esta página deve ser atualizada no mesmo pull request para que o curso sempre tenha uma única trilha de navegação confiável e acessível em um clique.

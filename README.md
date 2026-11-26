@@ -143,7 +143,7 @@ Detailed explanations:
 
 ## Current status
 
-**Phase II: Learning Hub Foundation** is in progress. Sprints 00–06 and 07A are merged; Phase 11 and Phase 12 are complete (24 Phase 12 lessons, 60 questions and three mocks). Sprint 07B introduces the [ten-question pilot](quizzes/README.md) and three versioned exercise records; the full bank and consumer manifest remain in progress. The guide remains independent of the future web Learning Hub and Git Study Guide.
+**Phase II: Learning Hub Foundation** is in progress. Sprints 00–06 and 07A–B are merged; Phase 11 and Phase 12 are complete (24 Phase 12 lessons, 60 questions and three mocks). Sprint 07C1 implements the [78 foundation quizzes](quizzes/README.md); three exercises are versioned. The remaining quizzes, exercise migrations and consumer manifest remain planned. The guide remains independent of the future web Learning Hub and Git Study Guide.
 
 [Phase II implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md)
 

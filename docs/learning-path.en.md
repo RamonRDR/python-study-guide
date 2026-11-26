@@ -224,6 +224,6 @@ All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior
 - [Repository home](../README.md)
 - [Full roadmap](roadmap.en.md)
 - [Project structure](project-structure.en.md)
-- [Quiz bank pilot](../quizzes/README.md)
+- [Foundation quiz bank](../quizzes/README.md)
 
 As new chapters are published, this page should be updated in the same pull request so the course always has one reliable, one-click navigation path.

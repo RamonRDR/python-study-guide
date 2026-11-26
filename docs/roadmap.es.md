@@ -230,7 +230,7 @@ Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 pr
 
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 
-Esta fase de ingeniería no renumera el currículo original. Sprints 00–06 y 07A fusionados. Sprint 07B introduce el [piloto de diez preguntas](../quizzes/README.es.md) y tres ejercicios versionados; el resto del banco y el manifiesto del consumidor están previstos. El repositorio permanece independiente de la futura plataforma web.
+Esta fase de ingeniería no renumera el currículo original. Sprints 00–06 y 07A–B fusionados. Sprint 07C1 implementa los [78 cuestionarios de fundamentos](../quizzes/README.es.md); quedan 82 cuestionarios para C2 y 27 migraciones de ejercicios para D. El manifiesto del consumidor sigue previsto. El repositorio permanece independiente de la futura plataforma web.
 
 | Currículo futuro | Estado |
 | --- | --- |
