@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.strip-surrounding-whitespace",
+  "chapter_id": "strings-and-numbers.common-string-methods",
+  "difficulty": "easy",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Replace ____ with the string method that removes whitespace from both ends by default. Enter only the method name.",
+    "pt-BR": "Substitua ____ pelo método de string que remove espaços em branco de ambas as extremidades por padrão. Digite apenas o nome do método.",
+    "es": "Sustituye ____ por el método de cadena que elimina espacios en blanco de ambos extremos por defecto. Introduce solo el nombre del método."
+  },
+  "explanation": {
+    "en": "strip() removes surrounding whitespace, not the interior space.",
+    "pt-BR": "strip() remove espaços em branco ao redor, não o espaço interno.",
+    "es": "strip() elimina espacios en blanco de alrededor, no el espacio interior."
+  },
+  "hints": {
+    "en": [
+      "The middle of the text must stay unchanged."
+    ],
+    "pt-BR": [
+      "O meio do texto deve permanecer inalterado."
+    ],
+    "es": [
+      "El centro del texto debe permanecer intacto."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/02-common-string-methods/README.md",
+        "pt-BR": "strings-and-numbers/02-common-string-methods/README.pt-BR.md",
+        "es": "strings-and-numbers/02-common-string-methods/README.es.md"
+      },
+      "sections": {
+        "en": "6. `strip()` removes surrounding whitespace by default",
+        "es": "6. `strip()` elimina espacios en blanco alrededor por defecto",
+        "pt-BR": "6. `strip()` remove espaços em branco ao redor por padrão"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "strip"
+    ],
+    "comparison": "exact"
+  },
+  "code": "clean = \"  blue sky  \".____()"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.string-zero-index",
+  "chapter_id": "strings-and-numbers.string-creation-and-indexing",
+  "difficulty": "easy",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "Index 0 reads the first character.",
+    "pt-BR": "O índice 0 lê o primeiro caractere.",
+    "es": "El índice 0 lee el primer carácter."
+  },
+  "hints": {
+    "en": [
+      "Count offsets from zero."
+    ],
+    "pt-BR": [
+      "Conte deslocamentos a partir de zero."
+    ],
+    "es": [
+      "Cuenta desplazamientos desde cero."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/01-string-creation-and-indexing/README.md",
+        "pt-BR": "strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md",
+        "es": "strings-and-numbers/01-string-creation-and-indexing/README.es.md"
+      },
+      "sections": {
+        "en": "7. Positive indexing starts at zero",
+        "pt-BR": "7. A indexação positiva começa em zero",
+        "es": "7. La indexación positiva comienza en cero"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "o\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(\"orbit\"[0])"
+}

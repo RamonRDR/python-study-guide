@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.string-slice-exclusive-stop",
+  "chapter_id": "strings-and-numbers.string-creation-and-indexing",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "Indexes 1 through 3 are selected; index 4 is excluded.",
+    "pt-BR": "Os índices 1 a 3 são selecionados; o índice 4 é excluído.",
+    "es": "Se seleccionan los índices 1 a 3; el índice 4 queda excluido."
+  },
+  "hints": {
+    "en": [
+      "Write the positions above the characters."
+    ],
+    "pt-BR": [
+      "Escreva as posições acima dos caracteres."
+    ],
+    "es": [
+      "Escribe las posiciones sobre los caracteres."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/01-string-creation-and-indexing/README.md",
+        "pt-BR": "strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md",
+        "es": "strings-and-numbers/01-string-creation-and-indexing/README.es.md"
+      },
+      "sections": {
+        "en": "12. Slicing reads a range",
+        "pt-BR": "12. Fatiamento lê um intervalo",
+        "es": "12. El slicing lee un intervalo"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "lan\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(\"planet\"[1:4])"
+}

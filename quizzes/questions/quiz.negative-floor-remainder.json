@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.negative-floor-remainder",
+  "chapter_id": "strings-and-numbers.int-float-and-bool",
+  "difficulty": "hard",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "Floor division rounds toward negative infinity: -8 // 3 is -3. The corresponding remainder is 1 because -8 = (-3) × 3 + 1.",
+    "pt-BR": "A divisão pelo piso arredonda em direção ao infinito negativo: -8 // 3 é -3. O resto correspondente é 1, pois -8 = (-3) × 3 + 1.",
+    "es": "La división por piso redondea hacia infinito negativo: -8 // 3 es -3. El resto correspondiente es 1, pues -8 = (-3) × 3 + 1."
+  },
+  "hints": {
+    "en": [
+      "Find the floor quotient first, then reconstruct the dividend."
+    ],
+    "pt-BR": [
+      "Encontre o quociente pelo piso primeiro e depois reconstrua o dividendo."
+    ],
+    "es": [
+      "Encuentra primero el cociente por piso y luego reconstruye el dividendo."
+    ]
+  },
+  "xp": 30,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/03-int-float-and-bool/README.md",
+        "pt-BR": "strings-and-numbers/03-int-float-and-bool/README.pt-BR.md",
+        "es": "strings-and-numbers/03-int-float-and-bool/README.es.md"
+      },
+      "sections": {
+        "en": "10. Negative floor division can surprise you",
+        "es": "10. La división por piso con números negativos puede sorprender",
+        "pt-BR": "10. Divisão pelo piso com números negativos pode surpreender"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "-3 1\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(-8 // 3, -8 % 3)"
+}

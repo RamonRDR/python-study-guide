@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.positive-remainder",
+  "chapter_id": "strings-and-numbers.int-float-and-bool",
+  "difficulty": "medium",
+  "type": "output_prediction",
+  "prompt": {
+    "en": "Predict the exact standard output, including the final newline. Line endings are normalized to LF.",
+    "pt-BR": "Preveja a saída padrão exata, incluindo a quebra de linha final. Finais de linha são normalizados para LF.",
+    "es": "Predice la salida estándar exacta, incluido el salto de línea final. Los finales de línea se normalizan a LF."
+  },
+  "explanation": {
+    "en": "17 = 5 × 3 + 2; % returns 2.",
+    "pt-BR": "17 = 5 × 3 + 2; % retorna 2.",
+    "es": "17 = 5 × 3 + 2; % devuelve 2."
+  },
+  "hints": {
+    "en": [
+      "Separate the quotient from the remainder."
+    ],
+    "pt-BR": [
+      "Separe quociente e resto."
+    ],
+    "es": [
+      "Separa el cociente del resto."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/03-int-float-and-bool/README.md",
+        "pt-BR": "strings-and-numbers/03-int-float-and-bool/README.pt-BR.md",
+        "es": "strings-and-numbers/03-int-float-and-bool/README.es.md"
+      },
+      "sections": {
+        "en": "9. `%` gives the remainder associated with floor division",
+        "es": "9. `%` da el resto asociado con la división por piso",
+        "pt-BR": "9. `%` fornece o resto associado à divisão pelo piso"
+      }
+    },
+    {
+      "paths": {
+        "en": "fundamentals/02-print-and-input/README.md",
+        "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+        "es": "fundamentals/02-print-and-input/README.es.md"
+      },
+      "sections": {
+        "en": "6. Change the line ending with `end`",
+        "pt-BR": "6. Altere o final da linha com `end`",
+        "es": "6. Cambia el final de línea con `end`"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "2\n"
+    ],
+    "comparison": "normalize_lf"
+  },
+  "code": "print(17 % 5)"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.absolute-distance-zero",
+  "chapter_id": "strings-and-numbers.numeric-builtins",
+  "difficulty": "easy",
+  "type": "objective_code_completion",
+  "prompt": {
+    "en": "Replace ____ with the built-in function that returns the magnitude of this negative integer. Enter only the function name.",
+    "pt-BR": "Substitua ____ pela função embutida que retorna a magnitude deste inteiro negativo. Digite apenas o nome da função.",
+    "es": "Sustituye ____ por la función incorporada que devuelve la magnitud de este entero negativo. Introduce solo el nombre de la función."
+  },
+  "explanation": {
+    "en": "abs(-11) returns 11, the distance from zero.",
+    "pt-BR": "abs(-11) retorna 11, a distância até zero.",
+    "es": "abs(-11) devuelve 11, la distancia a cero."
+  },
+  "hints": {
+    "en": [
+      "The result must be nonnegative regardless of the sign."
+    ],
+    "pt-BR": [
+      "O resultado deve ser não negativo independentemente do sinal."
+    ],
+    "es": [
+      "El resultado debe ser no negativo independientemente del signo."
+    ]
+  },
+  "xp": 10,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/04-numeric-builtins/README.md",
+        "pt-BR": "strings-and-numbers/04-numeric-builtins/README.pt-BR.md",
+        "es": "strings-and-numbers/04-numeric-builtins/README.es.md"
+      },
+      "sections": {
+        "en": "2. `abs()` returns an absolute value",
+        "pt-BR": "2. `abs()` retorna um valor absoluto",
+        "es": "2. `abs()` devuelve un valor absoluto"
+      }
+    }
+  ],
+  "answer": {
+    "accepted": [
+      "abs"
+    ],
+    "comparison": "exact"
+  },
+  "code": "magnitude = ____(-11)"
+}

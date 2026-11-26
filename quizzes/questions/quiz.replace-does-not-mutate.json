@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "quiz.replace-does-not-mutate",
+  "chapter_id": "strings-and-numbers.common-string-methods",
+  "difficulty": "medium",
+  "type": "true_false",
+  "prompt": {
+    "en": "Calling text.replace(\"a\", \"b\") without assigning its result changes the original string referenced by text.",
+    "pt-BR": "Chamar text.replace(\"a\", \"b\") sem atribuir seu resultado altera a string original referenciada por text.",
+    "es": "Llamar a text.replace(\"a\", \"b\") sin asignar su resultado cambia la cadena original referenciada por text."
+  },
+  "explanation": {
+    "en": "replace returns the transformed string; the original string is immutable.",
+    "pt-BR": "replace retorna a string transformada; a string original é imutável.",
+    "es": "replace devuelve la cadena transformada; la cadena original es inmutable."
+  },
+  "hints": {
+    "en": [
+      "Distinguish a returned result from a change to an existing object."
+    ],
+    "pt-BR": [
+      "Distinga um resultado retornado de uma alteração no objeto existente."
+    ],
+    "es": [
+      "Distingue un resultado devuelto de un cambio en el objeto existente."
+    ]
+  },
+  "xp": 20,
+  "prerequisites": [
+    {
+      "paths": {
+        "en": "strings-and-numbers/02-common-string-methods/README.md",
+        "pt-BR": "strings-and-numbers/02-common-string-methods/README.pt-BR.md",
+        "es": "strings-and-numbers/02-common-string-methods/README.es.md"
+      },
+      "sections": {
+        "en": "9. `replace()` substitutes occurrences",
+        "es": "9. `replace()` sustituye ocurrencias",
+        "pt-BR": "9. `replace()` substitui ocorrências"
+      }
+    }
+  ],
+  "answer": {
+    "value": false
+  }
+}
