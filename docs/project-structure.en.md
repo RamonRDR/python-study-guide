@@ -1340,6 +1340,7 @@ python-study-guide/
     ├── assessment_expansion_fixtures.py
     ├── assessment_foundation_fixtures.py
     ├── test_assessment_contract.py
+    ├── test_assessment_exercise_migration.py
     ├── test_assessment_expansion.py
     ├── test_assessment_foundations.py
     ├── test_assessment_pilot.py
@@ -1378,7 +1379,7 @@ python-study-guide/
 - `docs/`: master learning paths, roadmaps, project architecture, localized project documents, policies, and responsible AI-assisted development guidance.
 - `docs/adr/` and `docs/specs/`: trilingual architecture decisions, Phase II specifications, task register, acceptance criteria, integration contract and future related-guide references. The FR-05 prerequisite map is in the learning-hub-foundation directory.
 - `errors-files-and-modules/`: complete Phase 7 learning path. Chapters 01–05 cover runtime exception handling, deliberate raising and custom exceptions, safe text-file I/O with `open()` and `with`, TXT/CSV/JSON parsing and writing, and code organization through imports, modules, regular packages, execution context, and dependency design, in English, Brazilian Portuguese, and Spanish with deterministic executable examples.
-- `exercises/`: 30 focused exercises with localized instructions, shared starter and reference, and trusted tests. Three records use schema 1.0.0; 27 remain legacy. The expansion index still lists 29 records; the versioned partial index lists the three migrated exercises.
+- `exercises/`: 30 localized exercises with shared starters, references and 192 trusted cases. All records use schema 1.0.0; the canonical index lists all 30. The historical expansion index retains 29 entries for compatibility.
 - `quizzes/`: 160 localized questions and the versioned quiz index. Answers are public; no runtime is implemented.
 - `schemas/`: four versioned assessment schemas (Draft 2020-12).
 - `external-libraries/`: complete Phase 9 learning path for third-party packages. It contains reviewed multilingual chapters for pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x, and pytest 9.1.x, with twenty deterministic executable examples in total. The phase covers tabular transformations, Excel workbook automation, HTTP/API clients, and automated-testing contracts; Phase 10 practical projects are also complete.
