@@ -57,7 +57,10 @@
     "sql.atomic-transfer",
     "engineering.sdd-tdd",
     "engineering.dependency-boundary",
-    "engineering.architecture-tradeoffs"
+    "engineering.architecture-tradeoffs",
+    "behavioral.star-evidence",
+    "behavioral.international-clarification",
+    "behavioral.evidence-disagreement"
   ],
   "pilot_question_ids": [
     "interview.clarify-contract",

@@ -226,7 +226,7 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 
 ## Fase 12: Preparación para entrevistas técnicas
 
-En curso: veintidós lecciones incluyen fundamentos completados y 57 preguntas técnicas (23 Junior, 23 Mid-level, 11 Senior). Tres preguntas conductuales/internacionales y tres simulaciones cronometradas siguen previstas. [Preparación para entrevistas técnicas](../technical-interview-preparation/README.es.md).
+Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 preguntas (24 Junior, 24 Mid-level, 12 Senior) y tres simulaciones de 30/45/60 minutos. El cierre de Sprint 06 requiere integración aprobada y verificación posterior a la fusión del PR D. [Preparación para entrevistas técnicas](../technical-interview-preparation/README.es.md).
 
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 
@@ -235,7 +235,7 @@ Esta fase de ingeniería no renumera el currículo original. Sprints 00–05 fus
 | Currículo futuro | Estado |
 | --- | --- |
 | 11. Resolución de problemas y live coding | Completada; 30 retos |
-| 12. Preparación para entrevistas técnicas | En curso; veintidós lecciones |
+| 12. Preparación para entrevistas técnicas | Contenido implementado; 24 lecciones, 60 preguntas, tres simulaciones |
 
 [Plan de implementación](specs/learning-hub-foundation/implementation-plan.es.md) · [Registro de integración de guías relacionadas](specs/learning-hub-foundation/related-guides.es.md)
 

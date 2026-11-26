@@ -6,7 +6,7 @@ Use esta página como o **sumário geral do curso**. Todos os capítulos de apre
 
 Se você está começando do zero, siga a ordem das fases. Algumas fases posteriores podem já estar concluídas antes de fases anteriores planejadas, mas a numeração continua representando a sequência de aprendizagem recomendada.
 
-Currículo publicado: 105 aulas e oito projetos práticos (113 entradas). Comece por Primeiros passos se nunca programou. Capítulos futuros são registrados no roadmap, não vinculados como aulas publicadas.
+Currículo publicado: 107 aulas e oito projetos práticos (115 entradas). Comece por Primeiros passos se nunca programou. Capítulos futuros são registrados no roadmap, não vinculados como aulas publicadas.
 
 ## Legenda de status
 
@@ -192,7 +192,7 @@ Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 f
 
 ## Fase 12: Preparação para entrevistas técnicas
 
-Em andamento: vinte e duas aulas incluem fundamentos concluídos e 57 perguntas técnicas (23 Junior, 23 Mid-level, 11 Senior). Três perguntas comportamentais/internacionais e três simulados cronometrados permanecem planejados.
+Todo conteúdo planejado da Fase 12 está implementado: 24 aulas, 60 perguntas (24 Junior, 24 Mid-level, 12 Senior) e três simulados de 30/45/60 minutos. A conclusão da Sprint 06 exige integração aprovada e verificação pós-merge do PR D.
 
 1. [Entendendo entrevistas técnicas](../technical-interview-preparation/01-understanding-technical-interviews/README.pt-BR.md)
 2. [Live coding e tarefas take-home](../technical-interview-preparation/02-live-coding-and-take-home/README.pt-BR.md)
@@ -216,6 +216,8 @@ Em andamento: vinte e duas aulas incluem fundamentos concluídos e 57 perguntas 
 20. [Transações, índices e segurança em SQL](../technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.pt-BR.md)
 21. [Engenharia de software e decisões técnicas](../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.pt-BR.md)
 22. [Banco de perguntas de entrevistas técnicas](../technical-interview-preparation/22-technical-interview-question-bank/README.pt-BR.md)
+23. [Entrevistas comportamentais e internacionais](../technical-interview-preparation/23-behavioral-and-international-interviews/README.pt-BR.md)
+24. [Simulados de entrevistas e autoavaliação](../technical-interview-preparation/24-mock-interviews-and-self-assessment/README.pt-BR.md)
 
 ## Navegação útil
 

@@ -1,0 +1,165 @@
+{
+  "id": "mock.mid-45",
+  "level": "mid",
+  "duration_minutes": 45,
+  "title": {
+    "en": "Mid-level mock",
+    "pt-BR": "Simulado Mid-level",
+    "es": "Simulación Mid-level"
+  },
+  "question_ids": [
+    "behavioral.international-clarification",
+    "python.parameter-rebinding",
+    "sql.zero-child-count",
+    "api.idempotent-retry"
+  ],
+  "exercise_id": "problem-solving.binary-insertion-index",
+  "exercise_path": "exercises/problem-solving/binary-insertion-index/exercise.json",
+  "time_allocation": {
+    "introduction": 5,
+    "questions": 10,
+    "coding": 20,
+    "tests": 5,
+    "discussion": 5
+  },
+  "instructions": {
+    "en": "Start with question 1 in English, including the changed requirement and honest test status. Answer questions 2–4 in the technical slot. Implement the linked insertion-index exercise from its starter, keeping the original sorted-input contract; the 20-minute coding slot is shorter than its 22-minute standalone estimate. During tests, run your own assertions for empty input, duplicate values, absent targets below/between/above values and unchanged input. Discuss the half-open interval invariant, complexity assumptions, and unverified behavior. Stop at 45 minutes; no hints, solutions or reference answers during the attempt.",
+    "pt-BR": "Comece pergunta 1 em inglês, incluindo requisito alterado e status honesto de teste. Responda 2–4 no tempo técnico. Implemente exercício de índice de inserção pelo starter, mantendo contrato de entrada ordenada; 20 minutos de código são menos que estimativa individual de 22. Nos testes, execute assertions próprias para vazio, duplicados, alvos ausentes abaixo/entre/acima e entrada intacta. Discuta invariante do intervalo semiaberto, hipóteses de complexidade e comportamento não verificado. Pare aos 45 minutos; sem dicas, soluções ou respostas durante tentativa.",
+    "es": "Empieza pregunta 1 en inglés, con requisito cambiado y estado honesto de prueba. Responde 2–4 en tiempo técnico. Implementa ejercicio de índice de inserción desde starter, manteniendo contrato de entrada ordenada; 20 minutos de código son menos que estimación individual de 22. En pruebas, ejecuta aserciones propias para vacío, duplicados, objetivos ausentes por debajo/entre/encima y entrada intacta. Comenta invariante de intervalo semiabierto, supuestos de complejidad y comportamiento no verificado. Detente a los 45 minutos; sin pistas, soluciones ni respuestas durante intento."
+  },
+  "rubric": [
+    {
+      "id": "technical-knowledge",
+      "points": 25,
+      "partial_points": 12,
+      "label": {
+        "en": "Technical knowledge",
+        "pt-BR": "Conhecimento técnico",
+        "es": "Conocimiento técnico"
+      },
+      "indicators": {
+        "en": [
+          "Distinguishes parameter rebinding from shared mutation.",
+          "Explains LEFT JOIN filter/count semantics including zero and stable group identity.",
+          "Distinguishes POST retry risk from PUT/DELETE intended-effect idempotence and proposes bounded retry policy."
+        ],
+        "pt-BR": [
+          "Distingue reatribuição de parâmetro de mutação compartilhada.",
+          "Explica filtro/contagem de LEFT JOIN inclusive zero e identidade estável do grupo.",
+          "Distingue risco de retry POST de idempotência de efeito PUT/DELETE e propõe política limitada."
+        ],
+        "es": [
+          "Distingue reasignación de parámetro de mutación compartida.",
+          "Explica filtro/conteo de LEFT JOIN incluido cero e identidad estable de grupo.",
+          "Distingue riesgo de reintento POST de idempotencia de efecto PUT/DELETE y propone política acotada."
+        ]
+      }
+    },
+    {
+      "id": "problem-solving",
+      "points": 25,
+      "partial_points": 12,
+      "label": {
+        "en": "Problem solving",
+        "pt-BR": "Resolução de problemas",
+        "es": "Resolución de problemas"
+      },
+      "indicators": {
+        "en": [
+          "Restates first insertion position including duplicates and traces the half-open interval.",
+          "Implements logarithmic binary search with correct bounds and no input mutation or scanning validation."
+        ],
+        "pt-BR": [
+          "Reformula primeira posição de inserção inclusive duplicados e simula intervalo semiaberto.",
+          "Implementa busca binária logarítmica com limites corretos sem mutação ou validação por varredura."
+        ],
+        "es": [
+          "Reformula primera posición de inserción incluidos duplicados y traza intervalo semiabierto.",
+          "Implementa búsqueda binaria logarítmica con límites correctos sin mutación ni validación por recorrido."
+        ]
+      }
+    },
+    {
+      "id": "communication",
+      "points": 20,
+      "partial_points": 10,
+      "label": {
+        "en": "Communication",
+        "pt-BR": "Comunicação",
+        "es": "Comunicación"
+      },
+      "indicators": {
+        "en": [
+          "Clarifies changed requirement in understandable English and gives a discriminating example.",
+          "Narrates the invariant and communicates actual test status and limitations without claiming unrun tests."
+        ],
+        "pt-BR": [
+          "Esclarece requisito alterado em inglês compreensível e dá exemplo discriminante.",
+          "Narra invariante e comunica status real de testes e limitações sem alegar testes não executados."
+        ],
+        "es": [
+          "Aclara requisito cambiado en inglés comprensible y da ejemplo discriminante.",
+          "Narra invariante y comunica estado real de pruebas y limitaciones sin afirmar pruebas no ejecutadas."
+        ]
+      }
+    },
+    {
+      "id": "tests-and-edge-cases",
+      "points": 15,
+      "partial_points": 7,
+      "label": {
+        "en": "Tests and edge cases",
+        "pt-BR": "Testes e casos de borda",
+        "es": "Pruebas y casos límite"
+      },
+      "indicators": {
+        "en": [
+          "Runs exact-value assertions for empty and duplicate cases.",
+          "Runs missing-target cases below, between and above values and checks input preservation."
+        ],
+        "pt-BR": [
+          "Executa assertions de valores exatos para vazio e duplicados.",
+          "Executa casos ausentes abaixo, entre e acima e verifica preservação da entrada."
+        ],
+        "es": [
+          "Ejecuta aserciones de valores exactos para vacío y duplicados.",
+          "Ejecuta casos ausentes por debajo, entre y encima y comprueba conservación de entrada."
+        ]
+      }
+    },
+    {
+      "id": "engineering-judgment",
+      "points": 15,
+      "partial_points": 7,
+      "label": {
+        "en": "Engineering judgment",
+        "pt-BR": "Julgamento de engenharia",
+        "es": "Criterio de ingeniería"
+      },
+      "indicators": {
+        "en": [
+          "Justifies O(log n) comparisons and O(1) auxiliary space for sorted random-access input with bounded comparisons.",
+          "Explains sortedness as a caller precondition and identifies the cost of a validating scan or a next verification step."
+        ],
+        "pt-BR": [
+          "Justifica O(log n) comparações e O(1) extra para acesso aleatório ordenado e comparações limitadas.",
+          "Explica ordenação como pré-condição do chamador e identifica custo de varredura de validação ou próximo passo de verificação."
+        ],
+        "es": [
+          "Justifica O(log n) comparaciones y O(1) extra para acceso aleatorio ordenado y comparaciones acotadas.",
+          "Explica orden como precondición del llamador e identifica coste de recorrido de validación o siguiente paso de verificación."
+        ]
+      }
+    }
+  ],
+  "self_evaluation": {
+    "en": "After the timer, mark every demonstrated indicator with evidence (spoken explanation, code, or actual test output). Assign one band per dimension using the rule above; sum out of 100. Keep incomplete work visible. Record any hints separately. Question-bank points are diagnostic only and are not added to the mock score.",
+    "pt-BR": "Após cronômetro, marque cada indicador demonstrado com evidência (explicação falada, código ou saída real de teste). Atribua uma faixa por dimensão pela regra acima; some de 100. Mantenha trabalho incompleto visível. Registre dicas separadamente. Pontos do banco são apenas diagnósticos e não somam à nota do simulado.",
+    "es": "Tras cronómetro, marca cada indicador demostrado con evidencia (explicación oral, código o salida real de prueba). Asigna una banda por dimensión según regla anterior; suma sobre 100. Mantén visible trabajo incompleto. Registra pistas aparte. Puntos del banco son solo diagnósticos y no se suman a nota de simulación."
+  },
+  "improvement": {
+    "en": "Choose the weakest dimension; trace a half-open interval on duplicate and absent targets, write a failing regression case for the specific gap and repeat with a fresh sorted list. Rehearse your English clarification without memorizing the sample.",
+    "pt-BR": "Escolha dimensão mais fraca; simule intervalo semiaberto com alvos duplicados e ausentes, escreva caso de regressão que falhe pela lacuna e repita com lista ordenada nova. Ensaie esclarecimento em inglês sem decorar exemplo.",
+    "es": "Elige dimensión más débil; traza intervalo semiabierto con objetivos duplicados y ausentes, escribe caso de regresión que falle por carencia y repite con lista ordenada nueva. Ensaya aclaración en inglés sin memorizar ejemplo."
+  }
+}

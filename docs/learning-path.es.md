@@ -6,7 +6,7 @@ Usa esta página como el **índice general del curso**. Todos los capítulos de 
 
 Si empiezas desde cero, sigue el orden de las fases. Algunas fases posteriores pueden estar completadas antes que fases anteriores todavía planificadas, pero la numeración sigue representando la secuencia de aprendizaje recomendada.
 
-Currículo publicado: 105 lecciones y ocho proyectos prácticos (113 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
+Currículo publicado: 107 lecciones y ocho proyectos prácticos (115 entradas). Empieza por Primeros pasos si nunca has programado. Los capítulos futuros se registran en el roadmap, no se enlazan como lecciones publicadas.
 
 ## Leyenda de estado
 
@@ -192,7 +192,7 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 
 ## Fase 12: Preparación para entrevistas técnicas
 
-En curso: veintidós lecciones incluyen fundamentos completados y 57 preguntas técnicas (23 Junior, 23 Mid-level, 11 Senior). Tres preguntas conductuales/internacionales y tres simulaciones cronometradas siguen previstas.
+Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 preguntas (24 Junior, 24 Mid-level, 12 Senior) y tres simulaciones de 30/45/60 minutos. El cierre de Sprint 06 requiere integración aprobada y verificación posterior a la fusión del PR D.
 
 1. [Entender las entrevistas técnicas](../technical-interview-preparation/01-understanding-technical-interviews/README.es.md)
 2. [Live coding y tareas take-home](../technical-interview-preparation/02-live-coding-and-take-home/README.es.md)
@@ -216,6 +216,8 @@ En curso: veintidós lecciones incluyen fundamentos completados y 57 preguntas t
 20. [Transacciones, índices y seguridad en SQL](../technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md)
 21. [Ingeniería de software y decisiones técnicas](../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md)
 22. [Banco de preguntas de entrevistas técnicas](../technical-interview-preparation/22-technical-interview-question-bank/README.es.md)
+23. [Entrevistas conductuales e internacionales](../technical-interview-preparation/23-behavioral-and-international-interviews/README.es.md)
+24. [Simulaciones de entrevistas y autoevaluación](../technical-interview-preparation/24-mock-interviews-and-self-assessment/README.es.md)
 
 ## Navegación útil
 

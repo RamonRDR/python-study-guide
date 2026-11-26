@@ -3,10 +3,10 @@
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
 <!-- chapter-navigation:top -->
-[← Previous](../21-software-engineering-and-technical-decisions/README.md) · [Module index](../README.md)
+[← Previous](../21-software-engineering-and-technical-decisions/README.md) · [Module index](../README.md) · [Next →](../23-behavioral-and-international-interviews/README.md)
 <!-- /chapter-navigation:top -->
 
-57 technical questions: 23 junior, 23 mid-level and 11 senior, including the original nine pilot questions. Browse by topic and level; question IDs remain stable across ordering changes. Level indicates expected depth, not a universal hiring standard. Study the linked prerequisite section first, answer aloud without revealing the reference, then open the answer. Award each criterion its stated points only if your response demonstrates it; otherwise award zero. Use the score to identify study gaps, not as certification or automatic semantic evaluation. Follow-ups are optional practice, not separately scored. The canonical JSON records and index are in [interviews](../../interviews/README.md); this section is generated from them. Three behavioral/international questions and timed mocks remain planned.
+60 interview questions: 24 junior, 24 mid-level and 12 senior, including the original nine pilot questions and three behavioral/international questions. Browse by topic and level; question IDs remain stable across ordering changes. Level indicates expected depth, not a universal hiring standard. Study the linked prerequisite section first, answer aloud without revealing the reference, then open the answer. Award each criterion its stated points only if your response demonstrates it; otherwise award zero. Use the score to identify study gaps, not as certification or automatic semantic evaluation. Follow-ups are optional practice, not separately scored. The canonical JSON records and index are in [interviews](../../interviews/README.md); this section is generated from them. Study [behavioral and international interviews](../23-behavioral-and-international-interviews/README.md) before those questions, and then try the [timed mocks](../24-mock-interviews-and-self-assessment/README.md).
 
 <!-- interview-questions:start -->
 ## Coverage
@@ -22,6 +22,7 @@
 | Backend and APIs | 2 | 2 | 1 | 5 |
 | Databases and SQL | 2 | 2 | 1 | 5 |
 | Software engineering | 1 | 1 | 1 | 3 |
+| Behavioral and international interviews | 1 | 1 | 1 | 3 |
 
 ## Interview fundamentals
 
@@ -2384,8 +2385,131 @@ Maximum: 3
 - [Trade-offs and operation](../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md)
 - [Decisions start with a requirement](../../technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md)
 
+## Behavioral and international interviews
+
+### behavioral.star-evidence
+
+`junior` · `behavioral-international`
+
+Describe a bug or learning challenge using STAR. Use a truthful nonconfidential example (study or personal work is acceptable), or label a fictional rehearsal explicitly. Distinguish your own action, observable result, learning and limitation.
+
+<details>
+<summary>Expected answer</summary>
+
+State brief situation, your assigned task, specific actions you took and an observable result plus learning. Describe a limitation honestly; do not invent metrics, attribute others' work to yourself or expose confidential material.
+
+**Explanation:** STAR organizes evidence rather than requiring professional tenure or numeric impact.
+
+**Interviewer intent:** Assess ownership, concrete evidence and learning.
+
+**Common errors**
+
+- Present a fictional success as real employment or claim team outcomes as individual work.
+
+**Follow-ups**
+
+- What would you improve next and how would you verify it?
+
+**Example**
+
+Fictional rehearsal: a study script counted duplicate IDs (S); I owned the counting rule (T); I clarified the requirement, wrote a regression test and corrected the rule (A); that test passed, while database integration remained unverified (R). I learned to distinguish unit and integration evidence.
+
+**Self-assessment rubric**
+
+- 1 — Provides situation, task and personal concrete action, labeling fictional material.
+- 1 — States observable result, learning and limitation without unsupported claims or confidential data.
+
+Maximum: 2
+
+</details>
+
+**Prerequisites**
+
+- [Behavioral evidence with STAR](../../technical-interview-preparation/23-behavioral-and-international-interviews/README.md)
+
+### behavioral.international-clarification
+
+`mid` · `behavioral-international`
+
+In an English-language interview, the requirement changes from returning the first occurrence of a target (or -1) to returning its first insertion position in a sorted list. Give a short English clarification, a discriminating example and an honest status update including a test you would add.
+
+<details>
+<summary>Expected answer</summary>
+
+Acknowledge the changed contract, clarify whether equal values insert before the first equal, and restate the new requirement. For [2,4,7], target 5, the old result is -1 and the insertion index is 2. Propose a test for that case and duplicates; distinguish planned tests from executed ones. Use understandable English, not memorized jargon.
+
+**Explanation:** A concrete example makes the changed contract observable; communication quality is about shared understanding, not accent.
+
+**Interviewer intent:** Assess clarification, technical English and response to feedback.
+
+**Common errors**
+
+- Continue implementing the old contract or assert unexecuted tests passed.
+
+**Follow-ups**
+
+- How would you ask the interviewer to repeat an unfamiliar phrase?
+
+**Example**
+
+English rehearsal: "Let me restate the requirement. Should the insertion position be before equal values? For [2,4,7] and 5, I expect index 2. I would add this test; I have not run it yet."
+
+**Self-assessment rubric**
+
+- 1 — Uses understandable English to clarify and restate the changed contract.
+- 1 — Gives a discriminating example and an honest test/status update.
+
+Maximum: 2
+
+</details>
+
+**Prerequisites**
+
+- [International interviews and technical English](../../technical-interview-preparation/23-behavioral-and-international-interviews/README.md)
+- [2. Binary search](../../problem-solving-and-live-coding/05-searching-algorithms/README.md)
+
+### behavioral.evidence-disagreement
+
+`senior` · `behavioral-international`
+
+A teammate favors splitting a slow reporting service; you favor investigating a cache. In this fictional scenario, explain how you would resolve the disagreement using a shared goal, evidence, trade-offs, a documented decision and risk communication. Distinguish proposed work from actual outcomes.
+
+<details>
+<summary>Expected answer</summary>
+
+Agree on a latency/reliability target and investigate baseline evidence before choosing. Hear the colleague's constraints; compare cache staleness, invalidation and memory with independent deployment/scaling and network cost. Agree a small experiment and decision record with success criteria, risks and rollback. State your role and team decision separately; without results, report the experiment as planned, not a verified gain.
+
+**Explanation:** The goal is a supported decision and collaborative follow-through, not winning an argument.
+
+**Interviewer intent:** Assess technical leadership, ownership and transparent risk communication.
+
+**Common errors**
+
+- Dismiss a teammate or invent performance improvements before measurement.
+
+**Follow-ups**
+
+- If the team chooses the other option, how would you support and monitor the agreed plan?
+
+**Example**
+
+Fictional plan: measure repeated read costs, agree acceptable staleness, test a bounded cache against baseline and document when to reject it. No improvement is claimed until measured.
+
+**Self-assessment rubric**
+
+- 1 — States shared goal, listens to alternatives and compares measurable trade-offs.
+- 1 — Proposes documented experiment/decision with criteria, risk and rollback, distinguishing individual/team roles and planned/verified outcomes.
+
+Maximum: 2
+
+</details>
+
+**Prerequisites**
+
+- [Disagreement, ownership and trade-offs](../../technical-interview-preparation/23-behavioral-and-international-interviews/README.md)
+
 <!-- interview-questions:end -->
 
 <!-- chapter-navigation:bottom -->
-[← Previous](../21-software-engineering-and-technical-decisions/README.md) · [Module index](../README.md)
+[← Previous](../21-software-engineering-and-technical-decisions/README.md) · [Module index](../README.md) · [Next →](../23-behavioral-and-international-interviews/README.md)
 <!-- /chapter-navigation:bottom -->

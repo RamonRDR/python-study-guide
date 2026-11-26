@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Em andamento: vinte e duas aulas incluem fundamentos concluídos e 57 perguntas técnicas (23 Junior, 23 Mid-level, 11 Senior). Três perguntas comportamentais/internacionais e três simulados cronometrados permanecem planejados.
+Todo conteúdo planejado da Fase 12 está implementado: 24 aulas, 60 perguntas (24 Junior, 24 Mid-level, 12 Senior) e três simulados de 30/45/60 minutos. A conclusão da Sprint 06 exige integração aprovada e verificação pós-merge do PR D.
 
 1. [Entendendo entrevistas técnicas](01-understanding-technical-interviews/README.pt-BR.md)
 2. [Live coding e tarefas take-home](02-live-coding-and-take-home/README.pt-BR.md)
@@ -26,5 +26,7 @@ Em andamento: vinte e duas aulas incluem fundamentos concluídos e 57 perguntas 
 20. [Transações, índices e segurança em SQL](20-transactions-indexes-and-sql-safety/README.pt-BR.md)
 21. [Engenharia de software e decisões técnicas](21-software-engineering-and-technical-decisions/README.pt-BR.md)
 22. [Banco de perguntas de entrevistas técnicas](22-technical-interview-question-bank/README.pt-BR.md)
+23. [Entrevistas comportamentais e internacionais](23-behavioral-and-international-interviews/README.pt-BR.md)
+24. [Simulados de entrevistas e autoavaliação](24-mock-interviews-and-self-assessment/README.pt-BR.md)
 
 [Trilha de aprendizado](../docs/learning-path.pt-BR.md) · [Mapa de pré-requisitos](../docs/specs/learning-hub-foundation/interview-prerequisite-map.pt-BR.md)

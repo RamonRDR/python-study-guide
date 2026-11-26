@@ -226,7 +226,7 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 
 ## Phase 12: Technical Interview Preparation
 
-In progress: twenty-two lessons include completed foundations and 57 technical questions (23 junior, 23 mid-level, 11 senior). Three behavioral/international questions and three timed mocks remain planned. [Technical Interview Preparation](../technical-interview-preparation/README.md).
+All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior, 24 mid-level, 12 senior), and three 30/45/60-minute mocks. Completion of Sprint 06 requires the approved integration and post-merge verification of PR D. [Technical Interview Preparation](../technical-interview-preparation/README.md).
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
@@ -235,7 +235,7 @@ This engineering phase does not renumber the original curriculum. Sprints 00–0
 | Future curriculum | Status |
 | --- | --- |
 | 11. Problem Solving & Live Coding | Complete; 30 challenges |
-| 12. Technical Interview Preparation | In progress; twenty-two lessons |
+| 12. Technical Interview Preparation | Content implemented; 24 lessons, 60 questions, three mocks |
 
 [Implementation plan](specs/learning-hub-foundation/implementation-plan.md) · [Related-guide integration register](specs/learning-hub-foundation/related-guides.md)
 
