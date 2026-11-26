@@ -110,10 +110,27 @@ def validate_question(record, root):
     return errors
 
 
+def read_json(path):
+    def unique_pairs(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f"duplicate JSON key: {key}")
+            result[key] = value
+        return result
+
+    return json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=unique_pairs)
+
+
 def load_bank(root):
     bank = root / "interviews"
-    index = json.loads((bank / "interview-index.json").read_text(encoding="utf-8"))
-    if set(index) != {"schema_version", "question_ids", "pilot_question_ids"} or index["schema_version"] != "0.1.0":
+    index_path = bank / "interview-index.json"
+    if not index_path.resolve().is_relative_to(root.resolve()):
+        raise ValueError("index path escapes repository")
+    index = read_json(index_path)
+    if (not isinstance(index, dict)
+            or set(index) != {"schema_version", "question_ids", "pilot_question_ids"}
+            or index["schema_version"] != "0.1.0"):
         raise ValueError("unsupported preliminary interview index")
     ids = index["question_ids"]
     pilot = index["pilot_question_ids"]
@@ -130,13 +147,16 @@ def load_bank(root):
         path = directory / f"{question_id}.json"
         if not path.resolve().is_relative_to(root.resolve()):
             raise ValueError("question path escapes repository")
-        q = json.loads(path.read_text(encoding="utf-8"))
+        q = read_json(path)
         if not isinstance(q, dict) or q.get("id") != question_id:
             raise ValueError(f"question id mismatch: {question_id}")
         errors = validate_question(q, root)
         if errors:
             raise ValueError(f"{question_id}: {errors}")
         records.append(q)
+    selected = [q for q in records if q["id"] in pilot]
+    if any(sum(q["level"] == level for q in selected) != 3 for level in LEVELS):
+        raise ValueError("pilot must contain three questions per level")
     return records
 
 

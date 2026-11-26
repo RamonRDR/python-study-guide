@@ -2,10 +2,11 @@
 import copy
 import json
 from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
 
 from scripts.interview_records import (
-    load_bank, render_questions, validate_question,
+    load_bank, read_json, render_questions, validate_question,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,6 +40,31 @@ class InterviewRecordsTests(unittest.TestCase):
         self.assertEqual(len(selected), 9)
         for level in ("junior", "mid", "senior"):
             self.assertEqual(sum(q["level"] == level for q in selected), 3)
+
+    def test_duplicate_json_keys_and_invalid_indexes_are_rejected(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            bank = root / "interviews"
+            bank.mkdir()
+            index_path = bank / "interview-index.json"
+            index_path.write_text('{"id":"first","id":"second"}', encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "duplicate JSON key"):
+                read_json(index_path)
+
+            index = json.loads((BANK / "interview-index.json").read_text(encoding="utf-8"))
+            invalid_indexes = [
+                [],
+                {**index, "schema_version": "9.0.0"},
+                {**index, "question_ids": [index["question_ids"][0]] * 9},
+                {**index, "pilot_question_ids": index["pilot_question_ids"][:-1]},
+                {**index, "question_ids": ["../escape"]},
+                index,  # No corresponding question files in the temporary bank.
+            ]
+            for value in invalid_indexes:
+                with self.subTest(value=value):
+                    index_path.write_text(json.dumps(value), encoding="utf-8")
+                    with self.assertRaises(ValueError):
+                        load_bank(root)
 
     def test_invalid_records_are_rejected(self):
         mutations = [
