@@ -296,7 +296,7 @@ Ambos são [1, 2]; a e b nomeiam a mesma lista mutável. Atribuição vincula no
 
 **Exemplo**
 
-a is b é True antes de reatribuir b.
+Após `a = [1]; b = a`, a expressão `a is b` resulta em `True` antes de reatribuir `b`.
 
 **Rubrica de autoavaliação**
 
@@ -465,7 +465,7 @@ Igualdade é True e identidade False. == compara semântica de igualdade; is com
 
 **Exemplo**
 
-x = [1]; y = [1]; x == y é True enquanto x is y é False.
+Dado `x = [1]; y = [1]`, a expressão `x == y` resulta em `True`, enquanto `x is y` resulta em `False`.
 
 **Rubrica de autoavaliação**
 

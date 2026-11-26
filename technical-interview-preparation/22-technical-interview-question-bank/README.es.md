@@ -296,7 +296,7 @@ Ambos son [1, 2]; a y b nombran la misma lista mutable. Asignación enlaza nombr
 
 **Ejemplo**
 
-a is b es True antes de reasignar b.
+Tras `a = [1]; b = a`, la expresión `a is b` da `True` antes de reasignar `b`.
 
 **Rúbrica de autoevaluación**
 
@@ -465,7 +465,7 @@ Igualdad es True e identidad False. == compara semántica de igualdad; is compar
 
 **Ejemplo**
 
-x = [1]; y = [1]; x == y es True mientras x is y es False.
+Dado `x = [1]; y = [1]`, la expresión `x == y` da `True`, mientras que `x is y` da `False`.
 
 **Rúbrica de autoevaluación**
 

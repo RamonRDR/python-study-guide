@@ -296,7 +296,7 @@ Both are [1, 2]; a and b name the same mutable list. Assignment binds a name and
 
 **Example**
 
-a is b is True before rebinding b.
+After `a = [1]; b = a`, the expression `a is b` evaluates to `True` before rebinding `b`.
 
 **Self-assessment rubric**
 
@@ -465,7 +465,7 @@ Equality is True and identity is False. == compares equality semantics; is compa
 
 **Example**
 
-x = [1]; y = [1]; x == y is True while x is y is False.
+Given `x = [1]; y = [1]`, the expression `x == y` evaluates to `True`, while `x is y` evaluates to `False`.
 
 **Self-assessment rubric**
 

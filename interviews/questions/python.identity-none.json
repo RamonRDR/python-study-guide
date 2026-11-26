@@ -45,9 +45,9 @@
     ]
   },
   "examples": {
-    "en": "x = [1]; y = [1]; x == y is True while x is y is False.",
-    "pt-BR": "x = [1]; y = [1]; x == y é True enquanto x is y é False.",
-    "es": "x = [1]; y = [1]; x == y es True mientras x is y es False."
+    "en": "Given `x = [1]; y = [1]`, the expression `x == y` evaluates to `True`, while `x is y` evaluates to `False`.",
+    "pt-BR": "Dado `x = [1]; y = [1]`, a expressão `x == y` resulta em `True`, enquanto `x is y` resulta em `False`.",
+    "es": "Dado `x = [1]; y = [1]`, la expresión `x == y` da `True`, mientras que `x is y` da `False`."
   },
   "rubric": [
     {

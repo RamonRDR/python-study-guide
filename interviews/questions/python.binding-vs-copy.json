@@ -45,9 +45,9 @@
     ]
   },
   "examples": {
-    "en": "a is b is True before rebinding b.",
-    "pt-BR": "a is b é True antes de reatribuir b.",
-    "es": "a is b es True antes de reasignar b."
+    "en": "After `a = [1]; b = a`, the expression `a is b` evaluates to `True` before rebinding `b`.",
+    "pt-BR": "Após `a = [1]; b = a`, a expressão `a is b` resulta em `True` antes de reatribuir `b`.",
+    "es": "Tras `a = [1]; b = a`, la expresión `a is b` da `True` antes de reasignar `b`."
   },
   "rubric": [
     {
