@@ -132,6 +132,8 @@ def load_matrix(root):
                     or not isinstance(item["concept"], str) or not item["concept"].strip()):
                 raise ValueError("invalid matrix chapter")
             paths = item["paths"]
+            if not all(isinstance(path, str) for path in paths.values()):
+                raise ValueError("invalid localized matrix path")
             folder = PurePosixPath(paths["en"]).parent.name
             if folder not in expected_dirs or folder in seen_dirs:
                 raise ValueError("unknown or duplicate matrix chapter path")
@@ -195,8 +197,6 @@ def validate_record(kind, record, root, chapters):
         if record["xp"] != XP[record["difficulty"]]:
             raise ValueError("XP does not match difficulty")
         primary = chapters[record["chapter_id"]]
-        if primary not in [p["paths"] for p in record["prerequisites"]]:
-            raise ValueError("primary chapter missing from prerequisites")
         for prerequisite in record["prerequisites"]:
             paths = prerequisite["paths"]
             validate_prerequisite(paths, root, chapters)
@@ -204,6 +204,8 @@ def validate_record(kind, record, root, chapters):
                 lines = safe_file(root, paths[locale]).read_text(encoding="utf-8").splitlines()
                 if not any(f"{'#' * level} {heading}" in lines for level in range(2, 7)):
                     raise ValueError(f"missing prerequisite heading: {locale}")
+        if primary not in [p["paths"] for p in record["prerequisites"]]:
+            raise ValueError("primary chapter missing from prerequisites")
         answer = record["answer"]
         if "choices" in record:
             ids = [c["id"] for c in record["choices"]]

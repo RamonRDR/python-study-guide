@@ -170,6 +170,48 @@ class AssessmentTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, diagnostic):
                 load_index("quiz", self.root, "index.json", self.chapters)
 
+    def test_exercise_index_and_large_integer(self):
+        record = copy.deepcopy(self.exercise)
+        big = 2432902008176640000
+        record["examples"][0].update(args=[big], expected=big)
+        record["tests"]["cases"][0].update(args=[big], expected=big)
+        self.validate("exercise", record)
+        self.assertTrue(case_passes(lambda n: n, record["tests"]["cases"][0]))
+        path = "exercises/problem-solving/fixture/exercise.json"
+        self.write(path, json.dumps(record))
+        index = {"schema_version": "1.0.0", "records": [
+            {"id": record["id"], "path": path}]}
+        self.write("exercise-index.json", json.dumps(index))
+        self.assertEqual(load_index("exercise", self.root, "exercise-index.json",
+                                    self.chapters), [record])
+
+    def test_symlink_escape_and_invalid_paths(self):
+        from assessment_records import safe_file
+        for path in ("../outside", "/tmp/outside", "C:/outside", "./index.json",
+                     "foo//bar", "foo\\bar"):
+            with self.subTest(path=path):
+                with self.assertRaisesRegex(ValueError, "path"):
+                    safe_file(self.root, path)
+        with tempfile.TemporaryDirectory() as outside:
+            target = Path(outside) / "outside.txt"
+            target.write_text("fixture", encoding="utf-8")
+            try:
+                (self.root / "escape.txt").symlink_to(target)
+            except (OSError, NotImplementedError):
+                self.skipTest("symlink creation unavailable")
+            with self.assertRaisesRegex(ValueError, "escaping path"):
+                safe_file(self.root, "escape.txt")
+
+    def test_normalized_duplicate_answers(self):
+        q = copy.deepcopy(self.quiz)
+        q["type"] = "output_prediction"
+        del q["choices"]
+        q["answer"] = {"accepted": ["x\ny"], "comparison": "normalize_lf"}
+        self.validate("quiz", q)
+        q["answer"]["accepted"].append("x\r\ny")
+        with self.assertRaisesRegex(ValueError, "duplicate normalized answer"):
+            self.validate("quiz", q)
+
     def test_exact_comparison_and_trusted_candidate(self):
         self.assertFalse(exact_equal({"a": [True]}, {"a": [1]}))
         self.assertFalse(exact_equal([1.0], [1]))

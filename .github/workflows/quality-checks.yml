@@ -35,11 +35,17 @@ jobs:
       - name: Install external-library dependencies
         run: python -m pip install --disable-pip-version-check -r requirements-external.txt
 
+      - name: Install assessment validator dependency
+        run: python -m pip install --disable-pip-version-check -r requirements-assessment.txt
+
       - name: Compile Python files
         run: python -m compileall -q -x '(^|/)\.git/' .
 
       - name: Run quality script tests
         run: python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Validate assessment planning inventory
+        run: python scripts/validate_assessments.py
 
       - name: Run engineering practice tests
         run: python -m unittest discover -s manual-programming-practices/03-test-driven-development/examples -p 'test_*.py'
