@@ -22,6 +22,7 @@ python-study-guide/
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
+├── requirements-assessment.txt
 ├── requirements-external.txt
 ├── SECURITY.md
 ├── SUPPORT.md
@@ -198,6 +199,7 @@ python-study-guide/
 │   ├── README.pt-BR.md
 │   ├── README.es.md
 │   └── problem-solving/
+│       ├── exercise-index.json
 │       ├── expansion-index.json
 │       ├── ascii-digit-counter/
 │       │   ├── README.md
@@ -897,7 +899,30 @@ python-study-guide/
 │           ├── search_with_position.py
 │           ├── select_and_classify.py
 │           └── state_driven_workflow.py
+├── quizzes/
+│   ├── README.md
+│   ├── README.pt-BR.md
+│   ├── README.es.md
+│   ├── quiz-index.json
+│   └── questions/
+│       ├── quiz.collection-membership.json
+│       ├── quiz.dictionary-fallback.json
+│       ├── quiz.editor-replaces-interpreter.json
+│       ├── quiz.interpreter-purpose.json
+│       ├── quiz.missing-required-argument.json
+│       ├── quiz.print-literal.json
+│       ├── quiz.range-stop.json
+│       ├── quiz.return-keyword.json
+│       ├── quiz.type-hints-runtime.json
+│       └── quiz.unclosed-print.json
+├── schemas/
+│   ├── exercise-index.schema.json
+│   ├── exercise.schema.json
+│   ├── quiz-index.schema.json
+│   └── quiz.schema.json
 ├── scripts/
+│   ├── assessment_grading.py
+│   ├── assessment_records.py
 │   ├── check_chapter_navigation.py
 │   ├── check_documentation_languages.py
 │   ├── check_internal_links.py
@@ -905,6 +930,7 @@ python-study-guide/
 │   ├── interview_records.py
 │   ├── interview_mocks.py
 │   ├── run_examples.py
+│   ├── validate_assessments.py
 │   └── validate_repository_structure.py
 ├── standard-library/
 │   ├── README.md
@@ -1161,6 +1187,8 @@ python-study-guide/
     ├── README.md
     ├── README.pt-BR.md
     ├── README.es.md
+    ├── test_assessment_contract.py
+    ├── test_assessment_pilot.py
     ├── test_chapter_navigation.py
     ├── test_check_internal_links.py
     ├── test_documentation_languages.py
@@ -1196,7 +1224,9 @@ python-study-guide/
 - `docs/`: rutas completas de aprendizaje, roadmaps, arquitectura del proyecto, documentos localizados, políticas y guía de desarrollo responsable asistido por IA.
 - `docs/adr/` y `docs/specs/`: decisiones de arquitectura trilingües, especificaciones de Phase II, registro de tareas, criterios de aceptación, contrato de integración y futuras referencias entre guías. El mapa de requisitos previos FR-05 está en el directorio learning-hub-foundation.
 - `errors-files-and-modules/`: ruta completa de la Fase 7. Los Capítulos 01–05 cubren manejo de excepciones en runtime, lanzamiento deliberado y excepciones personalizadas, I/O seguro de archivos de texto con `open()` y `with`, parsing y escritura de TXT/CSV/JSON y organización del código mediante imports, módulos, paquetes regulares, contexto de ejecución y diseño de dependencias, en inglés, portugués de Brasil y español con ejemplos ejecutables deterministas.
-- `exercises/`: 30 ejercicios con instrucciones localizadas, JSON preliminar, inicial y referencia compartidos y pruebas de confianza. El índice de expansión lista 29 registros; el piloto original sigue separado.
+- `exercises/`: 30 ejercicios con instrucciones localizadas, inicial y referencia compartidos y pruebas de confianza. Tres registros usan schema 1.0.0; 27 siguen legados. El índice de expansión mantiene 29 registros; el índice parcial versionado lista los tres ejercicios migrados.
+- `quizzes/`: diez preguntas piloto localizadas e índice versionado. Las respuestas son públicas; ningún runtime implementado.
+- `schemas/`: cuatro esquemas versionados de evaluación (Draft 2020-12).
 - `external-libraries/`: ruta completa de la Fase 9 para paquetes de terceros. Contiene capítulos multilingües revisados de pandas 3.0.x, openpyxl 3.1.x, Requests 2.34.x y pytest 9.1.x, con veinte ejemplos ejecutables deterministas en total. La fase cubre transformaciones tabulares, automatización de libros de Excel, clientes HTTP/API y contratos de pruebas automatizadas; la Fase 10 de proyectos prácticos también está completada.
 - `functions/`: ruta completa de la Fase 5. Los Capítulos 01–09 cubren definición y llamada de funciones, entradas obligatorias, valores retornados, alcance y búsqueda de nombres, type hints para interfaces de funciones, valores predeterminados incluida la evaluación al definir la función y la seguridad con valores mutables, recolección de argumentos posicionales y por palabra clave de cantidad variable con `*args` y `**kwargs`, composición mediante funciones auxiliares y coordinadoras con dependencias explícitas y grafos simples de llamadas, y seguimiento explícito del flujo de datos entre llamadas, incluidos vínculos de parámetros, reasignación frente a mutación, `None`, resultados en tupla y traspasos mediante `return`, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `getting-started/`: orden curricular introductorio 00, con instalación de Python, configuración del editor, primera ejecución manual de archivo, entornos virtuales por proyecto, gestión de dependencias y Git básico en los tres idiomas. La Fase 0 histórica sigue siendo Base del proyecto.
@@ -1204,7 +1234,7 @@ python-study-guide/
 - `manual-programming-practices/`: módulo complementario de ingeniería de cuatro lecciones tras la Fase 10, implementación y pruebas compartidas de progreso de lectura; sin nuevas dependencias.
 - `practical-projects/`: espacio completo de Proyectos Prácticos de la Fase 10. Los Proyectos 01–08 están completados, revisados e integrados. El Proyecto 07 añade modelos inmutables de conciliación, aritmética exacta en centavos enteros, matching y orden deterministas, rechazo de duplicados, estados explícitos de conciliación, invariantes validadas del informe, renderizado de texto estable y pruebas de regresión enfocadas en precisión y seguridad. El Proyecto 08 cierra la fase con solicitudes y resultados inmutables de automatización, un plan fijo de ejecución `prepare → process → verify → finalize`, logs deterministas de eventos, evidencia estructurada, inyección controlada de fallos, propagación fail-fast, verificación posterior al procesamiento, semántica de pasos omitidos, renderizado estable y pruebas de regresión centradas en invariantes sin integraciones externas.
 - `problem-solving-and-live-coding/`: Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fáciles, 12 medios, seis difíciles), incluidas dos prácticas cronometradas. Sprint 05 completado ([PR #95](https://github.com/RamonRDR/python-study-guide/pull/95)).
-- `technical-interview-preparation/`: Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 preguntas (24 Junior, 24 Mid-level, 12 Senior) y tres simulaciones de 30/45/60 minutos. El cierre de Sprint 06 requiere integración aprobada y verificación posterior a la fusión del PR D.
+- `technical-interview-preparation/`: Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 preguntas (24 Junior, 24 Mid-level, 12 Senior) y tres simulaciones de 30/45/60 minutos. Sprint 06 se completó en el [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101) y su CI posterior.
 - `program-flow/`: ruta completa de la Fase 4. Los Capítulos 01–08 enseñan condiciones, comparaciones, pruebas de valor de verdad, pertenencia, identidad, lógica booleana, ramificación condicional con `if`, `elif` y `else`, coincidencia de patrones estructurales, repetición guiada por iterables con `for`, progresiones numéricas con `range()`, iteración con posición usando `enumerate()`, iteración paralela con `zip()` incluida la validación explícita de longitudes iguales con `strict=True`, repetición guiada por estado con `while`, control deliberado de bucles con `break`, `continue` y `else` de bucle y cómo elegir y combinar herramientas de flujo del programa según la intención, en inglés, portugués de Brasil y español, con ejemplos ejecutables determinísticos.
 - `scripts/`: herramientas de mantenimiento sin dependencias externas utilizadas localmente y por GitHub Actions. Las herramientas de calidad verifican ejemplos aprobados, enlaces internos, paridad de familias de idiomas, navegación de capítulos y rutas obligatorias. El job Windows cubre pruebas de File Organizer; el job Linux ejecuta la suite completa de proyectos prácticos.
 - `standard-library/`: ruta completa de la Fase 8. Los Capítulos 01–09 cubren fronteras de filesystem con `pathlib`, modelado de fecha/hora con `datetime`, contratos avanzados de `json` y `csv`, `logging`, `collections` especializadas, `itertools`, `decimal` y contratos de `os`/`shutil` para estado del entorno, recorrido, metadatos, copia, movimiento, eliminación recursiva, capacidades de plataforma y seguridad de archives, en inglés, portugués de Brasil y español con ejemplos ejecutables deterministas.
