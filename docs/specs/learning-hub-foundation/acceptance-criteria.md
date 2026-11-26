@@ -24,3 +24,17 @@ All new or modified public documentation is available and conceptually aligned i
 ### AC-06 implementation evidence (Sprint 06D)
 
 The Phase 12 curriculum implements 24 lessons across the three languages, including the 60-question bank and international/behavioral lesson. [Prerequisite map](interview-prerequisite-map.md) records teaching evidence before practice. The [canonical question index](../../../interviews/interview-index.json) has 24 junior, 24 mid-level and 12 senior records, with expected answers, explanations, intent, errors, follow-ups, examples and observable manual rubrics; [mock index](../../../interviews/mocks/mock-index.json) has 30/45/60-minute mocks with five timing slots, ordered question IDs, existing exercise IDs and five explicit scoring dimensions totaling 100 each. Tests enforce counts, localized records, cross-references, generated views and rejection of malformed records. No AI interviewer, automatic semantic scoring or final schema is introduced. Acceptance and sprint closure require the exact-head gates, maintainer authorization, squash merge and post-merge CI; this section describes implementation evidence, not a claim that pending gates passed.
+
+### AC-07 implementation evidence (Sprint 07E)
+
+The canonical banks contain 160 quizzes (64 easy, 67 medium, 29 hard; 2,850 XP) and 30 exercises (12 easy, 12 medium, 6 hard; 192 existing cases), all on schema 1.0.0. Five quiz types and the function_call exercise interface use deterministic grading. D merged through [PR #106](https://github.com/RamonRDR/python-study-guide/pull/106), commit `1b6e26961116f67359d437297d69f896874b4f6f`; its post-merge [CI #45905339496](https://github.com/RamonRDR/python-study-guide/actions/runs/45905339496) passed both required jobs. Linux reported 118 quality tests, 115 planned curriculum entries, 160 quiz records, 30 exercise records and 345 localized navigation documents. These are predecessor results, not E results.
+
+| AC-07 requirement | Repository verification |
+| --- | --- |
+| Supported types, schema and exact index coverage | Canonical indexes, assessment_records validator, consolidated inventory and existing allocation/migration tests |
+| Invalid schema, duplicate ID, missing locale, invalid answer and dangling reference rejected | Contract tests, including negative cases through both index loaders |
+| Deterministic grading | Independent correct/incorrect response fixtures for all 160 quizzes and existing trusted literal code checks |
+| Wrong-solution discrimination | Existing migration suite tests 30 references and representative wrong implementations against 192 cases; starter-mode and legacy checks remain |
+| Shared code across locales | Consolidated inventory checks 90 shared starter, solution and test files and no standalone quiz Python files |
+
+The new consolidated tests require E's exact-head CI; no local run or isolated Red is claimed. No learner-supplied code is executed. Browser execution is unverified, timeout is declarative, final-state checks cannot detect every intermediate mutation, and functional tests do not certify complexity or refactoring quality. Closure requires exact-head CI, Codex Review, Final Pre-Merge Audit, explicit maintainer approval, squash merge and post-merge CI. Pending gates are not claimed as passed. Sprint 08 owns the consumer manifest.
