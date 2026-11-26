@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-En curso: veintidós lecciones incluyen fundamentos completados y 57 preguntas técnicas (23 Junior, 23 Mid-level, 11 Senior). Tres preguntas conductuales/internacionales y tres simulaciones cronometradas siguen previstas.
+Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 preguntas (24 Junior, 24 Mid-level, 12 Senior) y tres simulaciones de 30/45/60 minutos. El cierre de Sprint 06 requiere integración aprobada y verificación posterior a la fusión del PR D.
 
 1. [Entender las entrevistas técnicas](01-understanding-technical-interviews/README.es.md)
 2. [Live coding y tareas take-home](02-live-coding-and-take-home/README.es.md)
@@ -26,5 +26,7 @@ En curso: veintidós lecciones incluyen fundamentos completados y 57 preguntas t
 20. [Transacciones, índices y seguridad en SQL](20-transactions-indexes-and-sql-safety/README.es.md)
 21. [Ingeniería de software y decisiones técnicas](21-software-engineering-and-technical-decisions/README.es.md)
 22. [Banco de preguntas de entrevistas técnicas](22-technical-interview-question-bank/README.es.md)
+23. [Entrevistas conductuales e internacionales](23-behavioral-and-international-interviews/README.es.md)
+24. [Simulaciones de entrevistas y autoevaluación](24-mock-interviews-and-self-assessment/README.es.md)
 
 [Ruta de aprendizaje](../docs/learning-path.es.md) · [Mapa de requisitos previos](../docs/specs/learning-hub-foundation/interview-prerequisite-map.es.md)
