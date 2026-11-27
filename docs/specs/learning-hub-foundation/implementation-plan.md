@@ -26,7 +26,11 @@ Status: proposed for review. Execute only after specification PR approval and me
 | 07C2 | feat/quiz-bank-expansion | Complete the 160-quiz bank. |
 | 07D | feat/exercise-contract-migration | Migrate remaining 27 exercises. |
 | 07E | feat/assessment-bank-acceptance | Consolidated AC-07 verification and closure. |
-| 08 | feat/learning-hub-content-contract | Finalize curriculum manifest, consumer validation, reference fixtures, versioning and compatibility metadata. |
+| 08A | feat/curriculum-manifest-contract | Manifest specification and schema; fixture tests |
+| 08B | feat/curriculum-manifest-inventory | Complete curriculum inventory; pending associations |
+| 08C | feat/curriculum-assessment-relationships | Assessment and interview relationships |
+| 08D | feat/learning-hub-consumer-fixtures | Immutable-revision consumer fixtures and compatibility |
+| 08E | test/curriculum-manifest-acceptance | Consolidated AC-08 acceptance |
 | 09 | docs/learning-hub-handoff | Full QA, final review, evidence and approved revision handoff. |
 
 Split large sprints into focused PRs with descriptive suffixes. Each branch starts from current main after dependencies merge. Do not merge without maintainer approval. Use squash merging per AGENTS.md.

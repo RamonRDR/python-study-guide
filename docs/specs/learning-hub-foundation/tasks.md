@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Sprints 00–06 and 07A–D merged. D post-merge [CI #45905339496](https://github.com/RamonRDR/python-study-guide/actions/runs/45905339496) passed. 07E consolidates AC-07 acceptance; closure depends on its exact-head gates, maintainer approval and post-merge CI. The consumer manifest remains planned for Sprint 08.
+Sprints 00–07 closed. [PR #107](https://github.com/RamonRDR/python-study-guide/pull/107) squash commit `f5d963fbf6544a8d9932fff915360f9a129d59b5`; [post-merge CI #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654) passed both required jobs. [Closure evidence](https://github.com/RamonRDR/python-study-guide/pull/107#issuecomment-7221291775). Sprint 08A is in review; AC-08 remains open.
 
 | Task | Sprint | Dependency | Status |
 | --- | --- | --- | --- |
@@ -21,8 +21,8 @@ Sprints 00–06 and 07A–D merged. D post-merge [CI #45905339496](https://githu
 | T05-02 Expand challenges by topic/difficulty | 05 | T05-01 | Done ([PR #94](https://github.com/RamonRDR/python-study-guide/pull/94), [PR #95](https://github.com/RamonRDR/python-study-guide/pull/95), `21c00c32b91a0116c8a50e89687b91f8efa04cb5`, [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45720384626)) |
 | T06-01 Map remaining interview-specific prerequisite gaps and teach necessary concepts not covered in Sprint 05 | 06 | T05-02 | Done: lessons 01–21 merged in #98; post-merge CI passed ([#98](https://github.com/RamonRDR/python-study-guide/pull/98), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45730226049)) |
 | T06-02 Author question bank and timed mocks/rubrics | 06 | T06-01 | Done: 60 questions and three timed mocks; [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101), [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45829816717) |
-| T07-01 Finalize and validate quiz/exercise schemas and records | 07 | T06-02 | In progress: A and B merged ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103)); C1 merged ([PR #104](https://github.com/RamonRDR/python-study-guide/pull/104)); C2 merged ([PR #105](https://github.com/RamonRDR/python-study-guide/pull/105)); D merged ([PR #106](https://github.com/RamonRDR/python-study-guide/pull/106), [CI #45905339496](https://github.com/RamonRDR/python-study-guide/actions/runs/45905339496)); E consolidates AC-07 evidence, closure gates pending |
-| T08-01 Finalize curriculum manifest and integration fixtures | 08 | T07-01 | Pending |
+| T07-01 Finalize and validate quiz/exercise schemas and records | 07 | T06-02 | Done ([#102](https://github.com/RamonRDR/python-study-guide/pull/102), [#103](https://github.com/RamonRDR/python-study-guide/pull/103), [#104](https://github.com/RamonRDR/python-study-guide/pull/104), [#105](https://github.com/RamonRDR/python-study-guide/pull/105), [#106](https://github.com/RamonRDR/python-study-guide/pull/106), [#107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)) |
+| T08-01 Finalize curriculum manifest and integration fixtures | 08 | T07-01 | In progress: 08A under review; B–E pending |
 | T09-01 Execute QA and record actual evidence | 09 | T08-01 | Pending |
 | T09-02 Obtain final review and publish revision-pinned handoff | 09 | T09-01 | Pending |
 

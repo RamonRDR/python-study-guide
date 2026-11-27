@@ -37,4 +37,10 @@ The canonical banks contain 160 quizzes (64 easy, 67 medium, 29 hard; 2,850 XP) 
 | Wrong-solution discrimination | Existing migration suite tests 30 references and representative wrong implementations against 192 cases; starter-mode and legacy checks remain |
 | Shared code across locales | Consolidated inventory checks 90 shared starter, solution and test files and no standalone quiz Python files |
 
-The new consolidated tests require E's exact-head CI; no local run or isolated Red is claimed. No learner-supplied code is executed. Browser execution is unverified, timeout is declarative, final-state checks cannot detect every intermediate mutation, and functional tests do not certify complexity or refactoring quality. Closure requires exact-head CI, Codex Review, Final Pre-Merge Audit, explicit maintainer approval, squash merge and post-merge CI. Pending gates are not claimed as passed. Sprint 08 owns the consumer manifest.
+AC-07 closed via [PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), squash commit `f5d963fbf6544a8d9932fff915360f9a129d59b5`. [Post-merge CI #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654) passed Repository quality and File Organizer Windows; [closure record](https://github.com/RamonRDR/python-study-guide/pull/107#issuecomment-7221291775).
+
+The closure log records Linux 121 quality, 7 engineering, 406 practical tests passed / 1 skipped; Windows 63 passed / 17 skipped. No separate local run or isolated Red claimed. Browser execution, timeout enforcement, intermediate mutation and manual complexity/refactoring review remain outside AC-07.
+
+### Sprint 08A · AC-08
+
+Sprint 08A acceptance: a Draft 2020-12 schema and strict structural/path validation with synthetic positive and negative fixtures, including independent bank versions, localized paths, execution metadata and invalid JSON. Inventory and navigation (B), bank relationships (C), pinned consumer (D) and consolidated acceptance (E) remain pending. The structural validator alone does not certify a published snapshot. Exact-head CI and review are required; no new test result is asserted here.

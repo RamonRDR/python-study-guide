@@ -143,7 +143,7 @@ Explicações detalhadas:
 
 ## Status atual
 
-**Phase II: Learning Hub Foundation** está em andamento. Sprints 00–06 e 07A–D integradas; Fases 11 e 12 concluídas (24 aulas da Fase 12, 60 perguntas e três simulados). O [banco de 160 quizzes](../../quizzes/README.pt-BR.md) e os [30 exercícios versionados](../../exercises/README.pt-BR.md) estão completos. 07E consolida o aceite de AC-07; o encerramento depende dos gates no head exato, aprovação do mantenedor e CI pós-merge. O manifesto do consumidor segue planejado para a Sprint 08. O guia permanece independente do futuro Learning Hub web e do Git Study Guide.
+**Phase II: Learning Hub Foundation** está em andamento. Sprints 00–07 encerradas; Fases 11 e 12 concluídas (24 aulas da Fase 12, 60 perguntas e três simulados). O [banco de 160 quizzes](../../quizzes/README.pt-BR.md) e os [30 exercícios versionados](../../exercises/README.pt-BR.md) estão completos. AC-07 encerrado ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI pós-merge](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). Sprint 08A define o contrato do manifesto; manifesto completo e AC-08 permanecem pendentes. O guia permanece independente do futuro Learning Hub web e do Git Study Guide.
 
 [Plano de implementação da Phase II](../specs/learning-hub-foundation/implementation-plan.pt-BR.md)
 

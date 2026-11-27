@@ -1414,3 +1414,7 @@ O inglês utiliza arquivos canônicos reconhecidos automaticamente pelo GitHub. 
 ## Regra de manutenção
 
 Um pull request que mover, criar ou remover caminhos importantes deve atualizar esta estrutura na mesma alteração. Novos exemplos executáveis também devem ser revisados para execução automática e registrados em `scripts/example_manifest.txt` quando aprovados para o CI.
+
+## Contrato do manifesto curricular
+
+A Sprint 08A reserva o diretório [curriculum/](../curriculum/README.pt-BR.md). Schema e validador estrutural são introduzidos antes do inventário completo; aulas fonte permanecem nos diretórios existentes.

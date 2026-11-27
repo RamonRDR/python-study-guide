@@ -1414,3 +1414,7 @@ El inglés utiliza archivos canónicos reconocidos automáticamente por GitHub. 
 ## Regla de mantenimiento
 
 Un pull request que mueva, cree o elimine rutas importantes debe actualizar esta estructura en el mismo cambio. Los nuevos ejemplos ejecutables también deben revisarse para ejecución automática y registrarse en `scripts/example_manifest.txt` cuando se aprueben para CI.
+
+## Contrato del manifiesto curricular
+
+Sprint 08A reserva el directorio [curriculum/](../curriculum/README.es.md). El esquema y validador estructural se introducen antes del inventario completo; las lecciones fuente permanecen en sus directorios existentes.
