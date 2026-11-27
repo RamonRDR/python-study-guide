@@ -143,7 +143,7 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-**Phase II: Learning Hub Foundation** está en curso. Sprints 00–07 cerrados; Fases 11 y 12 completadas (24 lecciones de Fase 12, 60 preguntas y tres simulaciones). El [banco de 160 cuestionarios](../../quizzes/README.es.md) y los [30 ejercicios versionados](../../exercises/README.es.md) están completos. AC-07 cerrado ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). Sprints 08A–C cerrados; 08D implementa fixtures de verificación de consumidor fijada para los 253 registros canónicos y 115 entradas curriculares. AC-08 sigue abierto hasta aceptación consolidada. La guía permanece independiente del futuro Learning Hub web y de Git Study Guide.
+**Phase II: Learning Hub Foundation** está en curso. Sprints 00–07 cerrados; Fases 11 y 12 completadas (24 lecciones de Fase 12, 60 preguntas y tres simulaciones). El [banco de 160 cuestionarios](../../quizzes/README.es.md) y los [30 ejercicios versionados](../../exercises/README.es.md) están completos. AC-07 cerrado ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). Sprints 08A–D cerrados; 08E consolida aceptación AC-08 de 115 entradas curriculares y 253 registros canónicos. Cierre requiere revisión, squash y CI posterior; Sprint 09 es responsable de QA final y handoff del release. La guía permanece independiente del futuro Learning Hub web y de Git Study Guide.
 
 [Plan de implementación de Phase II](../specs/learning-hub-foundation/implementation-plan.es.md)
 

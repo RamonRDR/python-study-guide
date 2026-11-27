@@ -68,3 +68,13 @@ Aceite da Sprint 08A: schema Draft 2020-12 e validação estrutural/de caminhos 
 ### Sprint 08E · AC-08
 
 08E consolida AC-08 sem alterar conteúdo curricular ou dos bancos, schemas, lock do consumidor, dependências ou runtime. Verificar inventário de autoria, pin original do consumidor 08C e pin externo temporário da revisão squash aprovada da 08D; os três devem resolver o mesmo manifesto completo e registros canônicos. Verificar contagens fixadas de módulos/capítulos, cobertura localizada, IDs únicos, ordem, referências e metadados de execução. Adicionar fixtures negativas ponta a ponta: commit Git real com pin completo correspondente e versão de manifesto incompatível, caminho inseguro, conteúdo localizado ausente, associação incorreta ou registro canônico malformado deve passar verificação de identidade dos bytes mas falhar no aceite semântico. Testar decodificação estrita de inteiros e rejeição de caminhos; manter regressões anteriores. Registrar evidência pós-merge da 08D e mapear AC-08 a testes e validadores reais. E permanece em revisão até CI no HEAD exato, Codex, auditoria final distinta, aprovação explícita do mantenedor, squash e CI pós-merge. Sprint 09 é responsável por QA final, revisão de release aprovada e handoff. Sem alegação de prontidão de navegador ou produção.
+
+| Requisito AC-08 | Verificação |
+| --- | --- |
+| Ordem estável, IDs, idiomas, títulos, caminhos e navegação | Schema do manifesto, validadores de inventário e navegação; testes de inventário publicado; comparação consolidada de autoria/dois pins |
+| Associações tipadas e metadados de execução | Validadores de bancos canônicos, testes de relacionamentos e contagens consolidadas; 253 registros únicos, 268 vínculos, 114 capítulos unverified e File Organizer local_only |
+| Caminhos inseguros, conteúdo ausente, JSON malformado e versões incompatíveis | Fixtures estruturais, testes JSON estrito e candidatos negativos commitados com identidade Git correspondente |
+| Compatibilidade imutável do consumidor | Lock externo 08C, schemas confiáveis, verificações de árvore/blob, fixtures de atualização/rejeição/rollback e pin temporário independente 08D; sem scraping de HTML |
+| Evidência final e encerramento | CI no HEAD exato, Codex Review, Final Pre-Merge Audit, autorização do mantenedor, squash e CI pós-merge obrigatórios. Sprint 09 fornece handoff final do release. |
+
+[Suíte consolidada de regressão](../../../tests/test_curriculum_acceptance.py). Evidência de implementação, não alegação de que gates 08E já passaram.

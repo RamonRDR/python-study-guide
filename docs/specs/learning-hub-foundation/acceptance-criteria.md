@@ -68,3 +68,13 @@ Sprint 08A acceptance: a Draft 2020-12 schema and strict structural/path validat
 ### Sprint 08E · AC-08
 
 08E consolidates AC-08 without changing curriculum or bank content, schemas, consumer lock, dependencies, or runtime. Verify authoring inventory, the original 08C consumer pin and a temporary external pin of the approved 08D squash revision; all three must resolve the same complete manifest and canonical records. Verify the fixed module/chapter counts, localized coverage, unique IDs, order, references and execution metadata. Add end-to-end negative fixtures: a real Git commit and matching full pin with unsupported manifest version, unsafe path, missing localized content, wrong association or malformed canonical record must pass byte-identity verification but fail semantic acceptance. Test strict integer decoding and path rejection; keep previous regressions. Record 08D post-merge evidence and map AC-08 to actual tests and validators. E stays in review until exact-head CI, Codex, distinct final audit, explicit maintainer approval, squash and post-merge CI. Sprint 09 owns final QA, approved release revision and handoff. No browser or production readiness claim.
+
+| AC-08 requirement | Verification |
+| --- | --- |
+| Stable ordering, IDs, locales, titles, paths and navigation | Manifest schema, inventory and navigation validators; published inventory tests; consolidated authoring/two-pin comparison |
+| Typed associations and execution metadata | Canonical bank validators, relationship tests and consolidated counts; 253 unique records, 268 links, 114 unverified chapters and File Organizer local_only |
+| Unsafe paths, missing content, malformed JSON and unsupported versions | Structural fixtures, strict JSON tests and committed negative candidates with matching Git identity |
+| Immutable consumer compatibility | External 08C lock, trusted schemas, consumer tree/blob checks, update/rejection/rollback fixtures and independent temporary 08D pin; no HTML scraping |
+| Final evidence and closure | Exact-head CI, Codex Review, Final Pre-Merge Audit, maintainer authorization, squash and post-merge CI required. Sprint 09 provides final release handoff. |
+
+[Consolidated regression suite](../../../tests/test_curriculum_acceptance.py). Implementation evidence, not a claim that 08E gates have already passed.
