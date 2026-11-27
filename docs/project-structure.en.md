@@ -1420,3 +1420,5 @@ A pull request that moves, creates, or removes significant paths must update thi
 Sprint 08B adds [curriculum/manifest.json](../curriculum/manifest.json) and [curriculum inventory validation](../scripts/curriculum_inventory.py). See [curriculum documentation](../curriculum/README.md). Existing lesson paths are unchanged; assessment associations remain pending.
 
 Sprint 08C adds [curriculum relationship validation](../scripts/curriculum_relationships.py). Canonical bank relationships are complete; immutable consumer verification remains pending.
+
+Sprint 08D adds [curriculum consumer fixture](../scripts/curriculum_consumer.py) · [consumer lock](../tests/fixtures/learning-hub/consumer-lock.json). The trusted validator is outside the staged snapshot; no site or runtime.

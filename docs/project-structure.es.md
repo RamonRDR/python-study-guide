@@ -1420,3 +1420,5 @@ Un pull request que mueva, cree o elimine rutas importantes debe actualizar esta
 Sprint 08B añade [curriculum/manifest.json](../curriculum/manifest.json) y [validación del inventario curricular](../scripts/curriculum_inventory.py). Consulta la [documentación curricular](../curriculum/README.es.md). Las rutas de lecciones no cambian; asociaciones de evaluaciones siguen pendientes.
 
 Sprint 08C añade [curriculum relationship validation](../scripts/curriculum_relationships.py). Relaciones de bancos canónicos están completas; verificación inmutable del consumidor sigue pendiente.
+
+Sprint 08D añade [curriculum consumer fixture](../scripts/curriculum_consumer.py) · [consumer lock](../tests/fixtures/learning-hub/consumer-lock.json). Validador confiable queda fuera del snapshot preparado; sin sitio ni runtime.

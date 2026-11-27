@@ -47,7 +47,7 @@ def git_bytes(repository, *args):
 
 def canonical_path(value):
     path = PurePosixPath(value)
-    if (not value or path.is_absolute() or path.as_posix() != value
+    if (not value or value == "." or path.is_absolute() or path.as_posix() != value
             or any(part in {".", ".."} or part.casefold() == ".git" for part in path.parts)
             or any(c in value for c in ("\\", ":", "%"))
             or any(ord(c) < 32 or ord(c) == 127 for c in value)):
@@ -113,7 +113,10 @@ def verify_tree(snapshot, tree):
         raise ValueError("snapshot root must be a regular directory")
     actual = {}
     directories = set()
-    for folder, dirs, files in os.walk(snapshot, followlinks=False):
+    def fail_walk(error):
+        raise error
+
+    for folder, dirs, files in os.walk(snapshot, followlinks=False, onerror=fail_walk):
         for name in dirs:
             path = Path(folder) / name
             if not stat.S_ISDIR(path.lstat().st_mode):

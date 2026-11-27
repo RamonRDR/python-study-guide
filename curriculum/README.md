@@ -14,3 +14,13 @@ Run the structural check or the stronger tracked authoring inventory and relatio
 python scripts/validate_curriculum.py
 python scripts/validate_curriculum.py --inventory
 ```
+
+## Pinned consumer fixture (Sprint 08D)
+
+The external test-only [consumer lock](../tests/fixtures/learning-hub/consumer-lock.json) pins the reviewed 08C commit `ffb53c7b64a602f09f9943489ec7741d72843831` and exact supported versions. It is not a production release or a self-reference in the manifest. In a Git checkout with that commit available, run:
+
+```bash
+python scripts/curriculum_consumer.py
+```
+
+The trusted consumer code exports the pinned Git tree into isolated temporary staging, checks every regular file against its Git blob identity, rejects mixed revisions, missing/extra files and symlinks, compares the five schema files with trusted local copies, and validates exact versions, navigation and all assessment relationships using the consumer-side validators. Snapshot code is never executed; the authoring matrix and learning-path parsing are not required. The lock is outside the snapshot. A candidate must pass before selecting its pin; rollback means selecting and validating the prior approved pin. Synthetic update/rollback fixtures do not publish any revision. Trust in the local Git object database and trusted consumer code is assumed; this is not signature verification or a sandbox against concurrent filesystem mutation. Full Git history is obtained once by the Linux CI checkout; no visitor API requests, new dependencies, browser execution or site deployment. AC-08 remains open until 08E.

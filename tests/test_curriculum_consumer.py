@@ -163,7 +163,15 @@ class ConsumerFixtureTests(unittest.TestCase):
         git(repo, "config", "core.autocrlf", "false")
         chapter = repo / "getting-started/01-install-python/README.md"
         chapter.write_bytes(chapter.read_bytes() + b"\n<!-- fixture update -->\n")
-        git(repo, "add", str(chapter))
+        # A consumer does not need authoring plans or execute snapshot validators.
+        for path in ("docs/specs/learning-hub-foundation/assessment-matrix.json",
+                     "docs/learning-path.en.md", "docs/learning-path.pt-BR.md",
+                     "docs/learning-path.es.md"):
+            git(repo, "rm", path)
+        untrusted = repo / "scripts/curriculum_manifest.py"
+        untrusted.write_text('raise AssertionError("snapshot code must not run")\n',
+                             encoding="utf-8")
+        git(repo, "add", str(chapter), str(untrusted))
         git(repo, "commit", "-qm", "fixture: valid content update")
         revision = git(repo, "rev-parse", "HEAD")
         candidate = self.candidate_lock(revision)
@@ -183,6 +191,17 @@ class ConsumerFixtureTests(unittest.TestCase):
         with export_snapshot(repo, bad) as staged:
             with self.assertRaisesRegex(ValueError, "trusted schema"):
                 validate_snapshot(repo, bad, staged)
+        self.assertEqual(active["revision"], revision)
+
+        # Reject a committed symlink even before extracting the archive.
+        git(repo, "checkout", "--detach", revision)
+        (repo / "unexpected-link").symlink_to(chapter)
+        git(repo, "add", "unexpected-link")
+        git(repo, "commit", "-qm", "fixture: nonregular tree entry")
+        bad = self.candidate_lock(git(repo, "rev-parse", "HEAD"))
+        with self.assertRaisesRegex(ValueError, "nonregular Git tree"):
+            with export_snapshot(repo, bad):
+                self.fail("symlink tree accepted")
         self.assertEqual(active["revision"], revision)
         # Rollback reselects and validates the original explicit pin.
         with export_snapshot(repo, LOCK) as staged:

@@ -14,3 +14,13 @@ Ejecuta comprobación estructural o la comprobación más fuerte de inventario r
 python scripts/validate_curriculum.py
 python scripts/validate_curriculum.py --inventory
 ```
+
+## Fixture de consumidor fijada (Sprint 08D)
+
+El [lock del consumidor](../tests/fixtures/learning-hub/consumer-lock.json) externo, solo para pruebas, fija el commit revisado de 08C `ffb53c7b64a602f09f9943489ec7741d72843831` y versiones exactas admitidas. No es release de producción ni autorreferencia en manifiesto. En checkout Git con ese commit disponible, ejecuta:
+
+```bash
+python scripts/curriculum_consumer.py
+```
+
+Código confiable del consumidor exporta árbol Git fijado a staging temporal aislado, comprueba cada archivo regular con identidad de blob Git, rechaza revisiones mezcladas, archivos ausentes/extras y symlinks, compara cinco esquemas con copias locales confiables y valida versiones exactas, navegación y todas las relaciones de evaluaciones mediante validadores del consumidor. Nunca ejecuta código del snapshot; matriz de autoría y parsing de rutas no son necesarios. Lock queda fuera del snapshot. Candidato debe pasar antes de seleccionar su pin; rollback significa seleccionar y validar pin aprobado anterior. Fixtures sintéticas de actualización/rollback no publican revisiones. Se supone confianza en base de objetos Git local y código confiable del consumidor; no es verificación de firma ni sandbox contra mutación concurrente del filesystem. Historial Git completo se obtiene una vez en checkout Linux de CI; sin solicitudes por visitante, nuevas dependencias, ejecución en navegador ni despliegue del sitio. AC-08 sigue abierto hasta 08E.
