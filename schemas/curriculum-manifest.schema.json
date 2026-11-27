@@ -1,0 +1,436 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curriculum manifest 1.0.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "default_locale": {
+      "const": "en"
+    },
+    "supported_locales": {
+      "const": [
+        "en",
+        "pt-BR",
+        "es"
+      ]
+    },
+    "association_status": {
+      "enum": [
+        "pending",
+        "complete"
+      ]
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/path"
+      },
+      "uniqueItems": true,
+      "minItems": 0
+    },
+    "banks": {
+      "type": "object",
+      "properties": {
+        "quizzes": {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "const": "1.0.0"
+            },
+            "index": {
+              "const": "quizzes/quiz-index.json"
+            },
+            "index_schema": {
+              "const": "schemas/quiz-index.schema.json"
+            },
+            "record_schema": {
+              "const": "schemas/quiz.schema.json"
+            }
+          },
+          "required": [
+            "schema_version",
+            "index",
+            "index_schema",
+            "record_schema"
+          ],
+          "additionalProperties": false
+        },
+        "exercises": {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "const": "1.0.0"
+            },
+            "index": {
+              "const": "exercises/problem-solving/exercise-index.json"
+            },
+            "index_schema": {
+              "const": "schemas/exercise-index.schema.json"
+            },
+            "record_schema": {
+              "const": "schemas/exercise.schema.json"
+            }
+          },
+          "required": [
+            "schema_version",
+            "index",
+            "index_schema",
+            "record_schema"
+          ],
+          "additionalProperties": false
+        },
+        "interviews": {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "const": "0.1.0"
+            },
+            "index": {
+              "const": "interviews/interview-index.json"
+            }
+          },
+          "required": [
+            "schema_version",
+            "index"
+          ],
+          "additionalProperties": false
+        },
+        "mocks": {
+          "type": "object",
+          "properties": {
+            "schema_version": {
+              "const": "0.1.0"
+            },
+            "index": {
+              "const": "interviews/mocks/mock-index.json"
+            }
+          },
+          "required": [
+            "schema_version",
+            "index"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "quizzes",
+        "exercises",
+        "interviews",
+        "mocks"
+      ],
+      "additionalProperties": false
+    },
+    "modules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/module"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "default_locale",
+    "supported_locales",
+    "association_status",
+    "assets",
+    "banks",
+    "modules"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)+$"
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "localized_text": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "pt-BR": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "localized_path": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "$ref": "#/$defs/path"
+        },
+        "pt-BR": {
+          "$ref": "#/$defs/path"
+        },
+        "es": {
+          "$ref": "#/$defs/path"
+        }
+      },
+      "required": [
+        "en",
+        "pt-BR",
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "chapter": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "kind": {
+          "enum": [
+            "lesson",
+            "project"
+          ]
+        },
+        "title": {
+          "$ref": "#/$defs/localized_text"
+        },
+        "content": {
+          "$ref": "#/$defs/localized_path"
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "uniqueItems": true,
+          "minItems": 0
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "uniqueItems": true,
+          "minItems": 0
+        },
+        "previous_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "next_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "quiz_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true,
+          "minItems": 0
+        },
+        "exercise_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true,
+          "minItems": 0
+        },
+        "interview_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true,
+          "minItems": 0
+        },
+        "mock_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true,
+          "minItems": 0
+        },
+        "execution": {
+          "enum": [
+            "unverified",
+            "local_only"
+          ]
+        },
+        "execution_reason": {
+          "$ref": "#/$defs/localized_text"
+        },
+        "local_python": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+(?:\\.[0-9]+)?$"
+        },
+        "dependency_paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/path"
+          },
+          "uniqueItems": true,
+          "minItems": 0
+        }
+      },
+      "required": [
+        "id",
+        "order",
+        "slug",
+        "kind",
+        "title",
+        "content",
+        "assets",
+        "resources",
+        "previous_id",
+        "next_id",
+        "quiz_ids",
+        "exercise_ids",
+        "interview_ids",
+        "mock_ids",
+        "execution"
+      ],
+      "additionalProperties": false,
+      "if": {
+        "properties": {
+          "execution": {
+            "const": "local_only"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "execution_reason"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "execution_reason"
+          ]
+        }
+      }
+    },
+    "module": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "kind": {
+          "enum": [
+            "onboarding",
+            "phase",
+            "complementary"
+          ]
+        },
+        "educational_phase": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "title": {
+          "$ref": "#/$defs/localized_text"
+        },
+        "index": {
+          "$ref": "#/$defs/localized_path"
+        },
+        "chapters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/chapter"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "order",
+        "slug",
+        "kind",
+        "educational_phase",
+        "title",
+        "index",
+        "chapters"
+      ],
+      "additionalProperties": false,
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "phase"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "educational_phase": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "educational_phase": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  }
+}
