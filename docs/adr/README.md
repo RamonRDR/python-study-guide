@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Phase II records are proposed until the specification PR is reviewed and approved. Record changes in new ADRs or explicitly supersede old ones; preserve history.
+The Phase II architecture directions are accepted; browser execution remains unverified. Record changes in new ADRs or explicitly supersede old ones; preserve history.
 
 - [ADR 0001: Content source of truth](0001-content-source-of-truth.md)
 - [ADR 0002: Content contract](0002-content-contract.md)

@@ -2,11 +2,11 @@
 
 [🇺🇸 English](integration-contract.md) · [🇧🇷 Português](integration-contract.pt-BR.md) · [🇪🇸 Español](integration-contract.es.md)
 
-Status: preliminary for the consumer manifest and integration fixtures in Sprint 08. The versioned assessment schemas and records follow the [assessment contract](assessment-contract.md). No runtime integration is implemented here.
+Status: manifest 1.0.0 and quiz/exercise 1.0.0 contracts implemented; interview/mock indexes remain preliminary 0.1.0. AC-08 is closed. The Sprint 08A–E sections below supersede the historical preliminary model; 09B will validate and document the exact consumer revision. No site runtime is implemented.
 
 ## Version and transport
 
-The public repository is authoritative. Consumer imports content at build time using an approved immutable Git commit SHA (a release tag may identify that SHA). The consumer records both revision and schema_version, rejects unsupported major versions, and fails the build on invalid data rather than silently mixing revisions. Use UTF-8 JSON and Markdown, no GitHub HTML scraping. No per-visitor GitHub API requests or paid services are required.
+The public repository is authoritative. Consumer imports content at build time using an approved immutable Git commit SHA (a release tag may identify that SHA). The consumer records both revision and schema_version, rejects all unsupported exact versions (including unsupported minor or patch versions), and fails the build on invalid data rather than silently mixing revisions. Use UTF-8 JSON and Markdown, no GitHub HTML scraping. No per-visitor GitHub API requests or paid services are required.
 
 ## Shared conventions
 

@@ -2,7 +2,7 @@
 
 [🇺🇸 English](0002-content-contract.md) · [🇧🇷 Português](0002-content-contract.pt-BR.md) · [🇪🇸 Español](0002-content-contract.es.md)
 
-Estado: propuesto (dirección aprobada el 25/11/2026; revisión del PR pendiente).
+Estado: dirección arquitectónica aceptada ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)); ejecución en navegador sigue sin verificar.
 
 ## Contexto
 

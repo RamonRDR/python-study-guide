@@ -31,9 +31,12 @@ Status: proposed for review. Execute only after specification PR approval and me
 | 08C | feat/curriculum-assessment-relationships | Assessment and interview relationships |
 | 08D | feat/learning-hub-consumer-fixtures | Immutable-revision consumer fixtures and compatibility |
 | 08E | test/curriculum-manifest-acceptance | Consolidated AC-08 acceptance |
-| 09 | docs/learning-hub-handoff | Full QA, final review, evidence and approved revision handoff. |
+| 09A | test/final-qa-acceptance | Final QA, consolidated acceptance evidence and documentation corrections. |
+| 09B | docs/learning-hub-handoff | Revision-pinned handoff and final AC-09 acceptance after 09A post-merge CI. |
 
 Split large sprints into focused PRs with descriptive suffixes. Each branch starts from current main after dependencies merge. Do not merge without maintainer approval. Use squash merging per AGENTS.md.
+
+The maintainer approved the 09A/09B split. 09A records baseline QA and targeted trilingual review, corrects justified discrepancies and keeps AC-09 open. After 09A squash and successful push CI, 09B validates that exact full commit with an external lock and records it as the proposed consumer content revision, distinct from the handoff documentation revision. Retain the historical fixture; no self-reference, site, tag or release. Exact-head CI, Codex, final audit, explicit approval and post-merge CI are mandatory for each PR.
 
 ## Validation strategy
 

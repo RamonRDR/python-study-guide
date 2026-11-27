@@ -2,11 +2,11 @@
 
 [🇺🇸 English](integration-contract.md) · [🇧🇷 Português](integration-contract.pt-BR.md) · [🇪🇸 Español](integration-contract.es.md)
 
-Estado: preliminar para el manifiesto del consumidor y fixtures de integración en Sprint 08. Los esquemas y registros versionados de evaluación siguen el [contrato de evaluación](assessment-contract.es.md). Aquí no se implementa integración de ejecución.
+Estado: contratos de manifiesto 1.0.0 y cuestionario/ejercicio 1.0.0 implementados; índices de entrevista/simulacro siguen preliminares 0.1.0. AC-08 cerrado. Las secciones 08A–E de abajo prevalecen sobre el modelo preliminar histórico; 09B validará y documentará la revisión exacta del consumidor. No se implementa runtime del sitio.
 
 ## Versión y transporte
 
-El repositorio público es oficial. El consumidor importa contenido al compilar usando SHA de commit Git inmutable aprobado (una etiqueta puede identificar SHA). Registra revisión y schema_version, rechaza versiones major no admitidas y falla la compilación con datos inválidos en vez de mezclar revisiones silenciosamente. JSON y Markdown UTF-8, sin scraping HTML GitHub. Sin llamadas a API por visitante ni servicios de pago.
+El repositorio público es oficial. El consumidor importa contenido al compilar usando SHA de commit Git inmutable aprobado (una etiqueta puede identificar SHA). Registra revisión y schema_version, rechaza todas las versiones exactas no admitidas (incluidas minor o patch no admitidas) y falla la compilación con datos inválidos en vez de mezclar revisiones silenciosamente. JSON y Markdown UTF-8, sin scraping HTML GitHub. Sin llamadas a API por visitante ni servicios de pago.
 
 ## Convenciones compartidas
 

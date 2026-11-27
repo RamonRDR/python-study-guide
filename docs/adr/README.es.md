@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Los registros de Phase II son propuestas hasta la revisión y aprobación del PR de especificación. Registrar cambios en nuevos ADR o sustituir explícitamente los anteriores, preservando el historial.
+Las direcciones arquitectónicas de Phase II están aceptadas; la ejecución en navegador sigue sin verificar. Registrar cambios en nuevos ADR o sustituir explícitamente los anteriores, preservando el historial.
 
 - [ADR 0001: Fuente única de verdad del contenido](0001-content-source-of-truth.es.md)
 - [ADR 0002: Contrato de contenido](0002-content-contract.es.md)

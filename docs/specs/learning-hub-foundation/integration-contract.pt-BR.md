@@ -2,11 +2,11 @@
 
 [🇺🇸 English](integration-contract.md) · [🇧🇷 Português](integration-contract.pt-BR.md) · [🇪🇸 Español](integration-contract.es.md)
 
-Status: preliminar para manifesto do consumidor e fixtures de integração na Sprint 08. Os schemas e registros versionados de avaliação seguem o [contrato de avaliações](assessment-contract.pt-BR.md). Não há integração de runtime implementada aqui.
+Status: contratos de manifesto 1.0.0 e quiz/exercício 1.0.0 implementados; índices de entrevista/simulado permanecem preliminares 0.1.0. AC-08 encerrado. As seções 08A–E abaixo prevalecem sobre o modelo preliminar histórico; 09B validará e documentará a revisão exata do consumidor. Não há runtime do site implementado.
 
 ## Versão e transporte
 
-O repositório público é oficial. O consumidor importa conteúdo no build usando SHA de commit Git imutável aprovado (tag pode identificar SHA). Registra revisão e schema_version, rejeita versões major não suportadas e falha no build com dados inválidos em vez de misturar revisões silenciosamente. JSON e Markdown UTF-8, sem scraping HTML GitHub. Sem chamadas à API por visitante ou serviços pagos.
+O repositório público é oficial. O consumidor importa conteúdo no build usando SHA de commit Git imutável aprovado (tag pode identificar SHA). Registra revisão e schema_version, rejeita todas as versões exatas não suportadas (inclusive minor ou patch não suportadas) e falha no build com dados inválidos em vez de misturar revisões silenciosamente. JSON e Markdown UTF-8, sem scraping HTML GitHub. Sem chamadas à API por visitante ou serviços pagos.
 
 ## Convenções compartilhadas
 
