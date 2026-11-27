@@ -230,7 +230,7 @@ Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 pr
 
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 
-Esta fase de ingeniería no renumera el currículo original. Sprints 00–07 cerrados. El [banco de 160 cuestionarios](../quizzes/README.es.md) y los 30 ejercicios versionados están completos. AC-07 cerrado ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). Sprint 08A cerrado; Sprint 08B publica el inventario curricular completo (14 módulos, 115 entradas) con asociaciones de evaluaciones pendientes. AC-08 sigue abierto. El repositorio permanece independiente de la futura plataforma web.
+Esta fase de ingeniería no renumera el currículo original. Sprints 00–07 cerrados. El [banco de 160 cuestionarios](../quizzes/README.es.md) y los 30 ejercicios versionados están completos. AC-07 cerrado ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). Sprints 08A–B cerrados; 08C completa relaciones de 253 registros canónicos en 115 entradas curriculares. Verificación inmutable del consumidor y AC-08 siguen pendientes. El repositorio permanece independiente de la futura plataforma web.
 
 | Currículo futuro | Estado |
 | --- | --- |

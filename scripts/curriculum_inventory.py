@@ -6,6 +6,7 @@ import subprocess
 from assessment_records import load_matrix
 from check_chapter_navigation import CHAPTER_PATH, learning_order
 from curriculum_manifest import LOCALES, ROOT, load_manifest, manifest_file, validate_manifest
+from curriculum_relationships import validate_relationships
 
 HEADING = re.compile(
     r"## (?:(?:Curriculum order|Ordem curricular|Orden curricular) 00"
@@ -71,8 +72,8 @@ def require_equal(actual, expected, context):
         raise ValueError(f"inventory mismatch: {context}")
 
 
-def validate_inventory(data, root=ROOT, tracked=None):
-    """Validate B's pending inventory against the approved authoring baseline.
+def validate_inventory(data, root=ROOT, tracked=None, *, expected_status="complete"):
+    """Validate the inventory against the approved authoring baseline.
 
     This checks source inventory and navigation, not assessment associations,
     immutable snapshot identity, browser runtime or consumer readiness.
@@ -81,7 +82,9 @@ def validate_inventory(data, root=ROOT, tracked=None):
     validate_manifest(data, root)
     if tracked is None:
         tracked = tracked_paths(root)
-    require_equal(data["association_status"], "pending", "association status")
+    if expected_status not in {"pending", "complete"}:
+        raise ValueError("unknown inventory status")
+    require_equal(data["association_status"], expected_status, "association status")
     if "docs/specs/learning-hub-foundation/assessment-matrix.json" not in tracked:
         raise ValueError("untracked authoring baseline")
     baseline = load_matrix(root)
@@ -153,8 +156,9 @@ def validate_inventory(data, root=ROOT, tracked=None):
                           f"{identifier}: assets")
             require_equal(chapter["resources"], [p for p in files if not is_image(p)],
                           f"{identifier}: resources")
-            for field in ASSOCIATIONS:
-                require_equal(chapter[field], [], f"{identifier}: pending {field}")
+            if expected_status == "pending":
+                for field in ASSOCIATIONS:
+                    require_equal(chapter[field], [], f"{identifier}: pending {field}")
             if module_id == "external-libraries":
                 require_equal(chapter.get("dependency_paths"), ["requirements-external.txt"],
                               f"{identifier}: dependency paths")
@@ -180,9 +184,10 @@ def validate_inventory(data, root=ROOT, tracked=None):
 
 
 def load_inventory(root=ROOT, path="curriculum/manifest.json"):
-    """Load a tracked, pending authoring inventory from a Git checkout."""
+    """Load a tracked, complete authoring inventory and validate its banks."""
     root = Path(root)
     tracked = tracked_paths(root)
     if path not in tracked:
         raise ValueError(f"untracked manifest: {path}")
-    return validate_inventory(load_manifest(root, path), root, tracked)
+    data = validate_inventory(load_manifest(root, path), root, tracked)
+    return validate_relationships(data, root, tracked)

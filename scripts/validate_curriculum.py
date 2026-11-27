@@ -12,7 +12,7 @@ def main():
     parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--manifest", default="curriculum/manifest.json")
     parser.add_argument("--inventory", action="store_true",
-                        help="validate pending inventory against the tracked authoring baseline")
+                        help="validate complete inventory and bank relationships against the tracked baseline")
     args = parser.parse_args()
     try:
         loader = load_inventory if args.inventory else load_manifest
@@ -23,7 +23,7 @@ def main():
     if args.inventory:
         count = sum(len(module["chapters"]) for module in data["modules"])
         print(f"Validated {len(data['modules'])} modules, {count} curriculum entries "
-              "and pending authoring inventory; consumer acceptance is separate.")
+              "and complete assessment relationships; consumer acceptance is separate.")
     else:
         print(f"Manifest structure and paths valid ({data['association_status']}); "
               "full inventory and consumer acceptance are separate gates.")
