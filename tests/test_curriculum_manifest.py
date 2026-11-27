@@ -8,7 +8,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from curriculum_manifest import load_manifest, validate_manifest
+from curriculum_manifest import load_manifest, read_json, validate_manifest
 
 LOCALES = ("en", "pt-BR", "es")
 
@@ -174,7 +174,28 @@ class CurriculumManifestTests(unittest.TestCase):
             with self.subTest(raw=raw):
                 self.manifest.write_text(raw, encoding="utf-8")
                 with self.assertRaises(ValueError):
+                    read_json(self.manifest)
+                with self.assertRaises(ValueError):
                     load_manifest(self.root, "manifest.json")
+
+    def test_duplicate_key_in_valid_manifest(self):
+        raw = json.dumps(self.data)
+        self.manifest.write_text(raw.replace('"schema_version": "1.0.0"',
+                                             '"schema_version": "1.0.0", "schema_version": "1.0.0"', 1),
+                                 encoding="utf-8")
+        with self.assertRaises(ValueError):
+            load_manifest(self.root, "manifest.json")
+
+    def test_large_integer_decoding(self):
+        self.manifest.write_text('{"expected": 9007199254740993}', encoding="utf-8")
+        self.assertEqual(read_json(self.manifest)["expected"], 9007199254740993)
+
+    def test_identifier_boundaries(self):
+        for invalid in ("getting-started.install-python\n", "Getting-started.install-python", "single"):
+            with self.subTest(invalid=invalid):
+                self.chapter["id"] = invalid
+                with self.assertRaises(ValueError):
+                    validate_manifest(self.data, self.root)
 
     def test_duplicate_reference_and_blank_title(self):
         self.chapter["quiz_ids"] = ["quiz.example", "quiz.example"]

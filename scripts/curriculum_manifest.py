@@ -15,7 +15,8 @@ LOCALES = {"en": "README.md", "pt-BR": "README.pt-BR.md", "es": "README.es.md"}
 
 def manifest_file(root, value):
     """Require an unencoded canonical POSIX file path inside the snapshot."""
-    if not isinstance(value, str) or "%" in value or any(ord(c) < 32 or ord(c) == 127 for c in value):
+    if (not isinstance(value, str) or "%" in value
+            or any(ord(c) < 32 or ord(c) == 127 for c in value)):
         raise ValueError(f"invalid manifest path: {value!r}")
     return safe_file(root, value)
 

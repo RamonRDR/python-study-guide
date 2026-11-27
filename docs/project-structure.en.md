@@ -1414,3 +1414,7 @@ English uses canonical root files recognized automatically by GitHub. Brazilian 
 ## Maintenance rule
 
 A pull request that moves, creates, or removes significant paths must update this structure in the same change. New executable examples must also be reviewed for unattended execution and registered in `scripts/example_manifest.txt` when approved for CI.
+
+## Curriculum manifest contract
+
+Sprint 08A reserves the [curriculum/](../curriculum/README.md). The schema and structural validator are introduced before the full inventory; source lessons remain in their existing directories.
