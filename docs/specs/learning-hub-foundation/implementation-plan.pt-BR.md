@@ -31,9 +31,12 @@ Status: proposta para revisão. Executar somente após aprovação e merge do PR
 | 08C | feat/curriculum-assessment-relationships | Relações de avaliações e entrevistas |
 | 08D | feat/learning-hub-consumer-fixtures | Fixtures de consumidor por revisão imutável e compatibilidade |
 | 08E | test/curriculum-manifest-acceptance | Aceite consolidado AC-08 |
-| 09 | docs/learning-hub-handoff | QA completo, revisão final, evidências e handoff de revisão aprovada. |
+| 09A | test/final-qa-acceptance | QA final, evidências consolidadas de aceite e correções documentais. |
+| 09B | docs/learning-hub-handoff | Handoff com revisão fixada e aceite final AC-09 após CI pós-merge da 09A. |
 
 Dividir sprints grandes em PRs focados com sufixos descritivos. Criar cada branch da main atual após merge das dependências. Não fazer merge sem aprovação. Usar squash merge conforme AGENTS.md.
+
+O mantenedor aprovou a divisão 09A/09B. A 09A registra QA da baseline e revisão trilíngue direcionada, corrige divergências justificadas e mantém AC-09 aberto. Após squash da 09A e CI de push aprovado, a 09B valida esse commit completo exato com lock externo e o registra como revisão de conteúdo proposta para consumo, distinta da revisão documental do handoff. Preservar fixture histórica; sem autorreferência, site, tag ou release. CI no HEAD exato, Codex, auditoria final, aprovação explícita e CI pós-merge são obrigatórios em cada PR.
 
 ## Estratégia de validação
 
