@@ -1,4 +1,4 @@
-"""AC-08 end-to-end acceptance across authoring and immutable consumer gates."""
+"""AC-08 and AC-09 acceptance across authoring and immutable consumer gates."""
 from collections import Counter
 import copy
 import json
@@ -87,6 +87,30 @@ class CurriculumAcceptanceTests(unittest.TestCase):
                         expected = (ROOT / path).read_bytes()
                         self.assertEqual((original / path).read_bytes(), expected)
                         self.assertEqual((current / path).read_bytes(), expected)
+
+    def test_ac09_handoff_content_pin(self):
+        # This is the reviewed 09A squash, not the handoff commit or a moving ref.
+        fixture = ROOT / "tests/fixtures/learning-hub/handoff-lock.json"
+        lock = load_lock(fixture)
+        self.assertEqual(lock["revision"], "03e91ff9952f2b02293f16a11260d166eb00ea8a")
+        self.assertEqual(lock["versions"], load_lock(DEFAULT_LOCK)["versions"])
+        external = self.root / "handoff-lock.json"
+        write_json(external, lock)
+        with export_snapshot(ROOT, external) as candidate:
+            data = validate_snapshot(ROOT, external, candidate)
+            self.assertEqual(data["association_status"], "complete")
+            self.assertFalse((candidate / fixture.relative_to(ROOT)).exists())
+            with export_snapshot(ROOT, DEFAULT_LOCK) as historical:
+                previous = validate_snapshot(ROOT, DEFAULT_LOCK, historical)
+                self.assertEqual(data, previous)
+                paths = canonical_paths(data, candidate)
+                self.assertEqual(paths, canonical_paths(previous, historical))
+                for path in sorted(paths):
+                    with self.subTest(path=path):
+                        self.assertEqual((candidate / path).read_bytes(),
+                                         (historical / path).read_bytes())
+        print(f"AC-09 handoff pin validated: {lock['revision']}; "
+              f"{len(paths)} canonical paths match historical content.")
 
     def test_curriculum_and_execution_contract(self):
         manifest = read_json(ROOT / MANIFEST)

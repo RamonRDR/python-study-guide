@@ -230,7 +230,7 @@ Todo el contenido previsto de la Fase 12 está implementado: 24 lecciones, 60 pr
 
 ## Phase II: Learning Hub Foundation (hoja de ruta de ingeniería)
 
-Esta fase de ingeniería no renumera el currículo original. Sprints 00–08 cerrados. El [banco de 160 cuestionarios](../quizzes/README.es.md) y los 30 ejercicios versionados están completos. AC-07 cerrado ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). AC-08 cerrado ([cierre](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176)): 115 entradas curriculares y 253 registros canónicos. QA final de Sprint 09A en revisión; 09B se encarga del handoff con revisión fijada y aceptación final AC-09. El repositorio permanece independiente de la futura plataforma web.
+Esta fase de ingeniería no renumera el currículo original. Sprints 00–08 cerrados. El [banco de 160 cuestionarios](../quizzes/README.es.md) y los 30 ejercicios versionados están completos. AC-07 cerrado ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). AC-08 cerrado ([cierre](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176)): 115 entradas curriculares y 253 registros canónicos. Sprint 09A cerrado ([cierre](https://github.com/RamonRDR/python-study-guide/pull/113#issuecomment-7226902203)); handoff 09B en revisión, gates finales AC-09 pendientes. [Handoff](specs/learning-hub-foundation/handoff.es.md). El repositorio permanece independiente de la futura plataforma web.
 
 | Currículo futuro | Estado |
 | --- | --- |

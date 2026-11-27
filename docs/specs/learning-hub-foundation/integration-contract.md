@@ -2,7 +2,7 @@
 
 [🇺🇸 English](integration-contract.md) · [🇧🇷 Português](integration-contract.pt-BR.md) · [🇪🇸 Español](integration-contract.es.md)
 
-Status: manifest 1.0.0 and quiz/exercise 1.0.0 contracts implemented; interview/mock indexes remain preliminary 0.1.0. AC-08 is closed. The Sprint 08A–E sections below supersede the historical preliminary model; 09B will validate and document the exact consumer revision. No site runtime is implemented.
+Status: manifest 1.0.0 and quiz/exercise 1.0.0 contracts implemented; interview/mock indexes remain preliminary 0.1.0. AC-08 is closed. The Sprint 08A–E sections below supersede the historical preliminary model; 09B documents the exact 09A candidate pin and requires validation before AC-09 closure. No site runtime is implemented.
 
 ## Version and transport
 
@@ -66,7 +66,7 @@ Guide: Markdown, metadata, examples, reference solutions, tests, rubrics and sch
 
 ## Remaining decisions
 
-Finalize file layout, full schemas and versioning policy, exact scoring/comparison semantics, safe content rendering and browser runtime pin after pilots. Document compatibility and migration examples in the final handoff. See [ADR index](../../adr/README.md).
+The manifest, canonical quiz/exercise schemas, preliminary interview/mock contracts, versioning and deterministic grading are established by the later Sprint 07–08 decisions. Outstanding consumer work: safe rendering, pinned browser runtime and individual compatibility, progress/migration UI, and operational deployment/rollback. The 09B handoff supplies the proposed exact 09A content pin and validation procedure, not a production runtime. [Handoff](handoff.md).
 
 ## Sprint 08A · Curriculum manifest 1.0.0
 

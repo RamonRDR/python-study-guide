@@ -2,7 +2,7 @@
 
 [🇺🇸 English](integration-contract.md) · [🇧🇷 Português](integration-contract.pt-BR.md) · [🇪🇸 Español](integration-contract.es.md)
 
-Status: contratos de manifesto 1.0.0 e quiz/exercício 1.0.0 implementados; índices de entrevista/simulado permanecem preliminares 0.1.0. AC-08 encerrado. As seções 08A–E abaixo prevalecem sobre o modelo preliminar histórico; 09B validará e documentará a revisão exata do consumidor. Não há runtime do site implementado.
+Status: contratos de manifesto 1.0.0 e quiz/exercício 1.0.0 implementados; índices de entrevista/simulado permanecem preliminares 0.1.0. AC-08 encerrado. As seções 08A–E abaixo prevalecem sobre o modelo preliminar histórico; 09B documenta o pin candidato exato da 09A e exige validação antes do encerramento AC-09. Não há runtime do site implementado.
 
 ## Versão e transporte
 
@@ -66,7 +66,7 @@ Guia: Markdown, metadados, exemplos, soluções, testes, rubricas e validação 
 
 ## Decisões pendentes
 
-Finalizar layout, schemas completos, política de versões, semântica exata de pontuação/comparação, renderização segura e runtime fixado após pilotos. Documentar compatibilidade e exemplos de migração no handoff final. Ver [ADRs](../../adr/README.pt-BR.md).
+Manifesto, schemas canônicos de quiz/exercício, contratos preliminares de entrevista/simulado, versionamento e correção determinística foram estabelecidos pelas decisões posteriores 07–08. Trabalho pendente no consumidor: renderização segura, runtime de navegador fixado e compatibilidade individual, UI de progresso/migração e deploy/rollback operacional. Handoff 09B fornece pin exato de conteúdo 09A proposto e procedimento de validação, não runtime de produção. [Handoff](handoff.pt-BR.md).
 
 ## Sprint 08A · Manifesto curricular 1.0.0
 

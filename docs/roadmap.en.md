@@ -230,7 +230,7 @@ All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
-This engineering phase does not renumber the original curriculum. Sprints 00–08 are closed. The [160-quiz bank](../quizzes/README.md) and 30 versioned exercises are complete. AC-07 is closed ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). AC-08 is closed ([closure](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176)): 115 curriculum entries and 253 canonical records. Sprint 09A final QA is in review; 09B owns the revision-pinned handoff and final AC-09 acceptance. The repository stays independent of the future web platform.
+This engineering phase does not renumber the original curriculum. Sprints 00–08 are closed. The [160-quiz bank](../quizzes/README.md) and 30 versioned exercises are complete. AC-07 is closed ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). AC-08 is closed ([closure](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176)): 115 curriculum entries and 253 canonical records. Sprint 09A is closed ([closure](https://github.com/RamonRDR/python-study-guide/pull/113#issuecomment-7226902203)); Sprint 09B handoff is in review, pending final AC-09 gates. [Handoff](specs/learning-hub-foundation/handoff.md). The repository stays independent of the future web platform.
 
 | Future curriculum | Status |
 | --- | --- |

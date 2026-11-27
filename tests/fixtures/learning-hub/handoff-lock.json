@@ -1,0 +1,11 @@
+{
+  "lock_version": "1.0.0",
+  "revision": "03e91ff9952f2b02293f16a11260d166eb00ea8a",
+  "versions": {
+    "manifest": "1.0.0",
+    "quizzes": "1.0.0",
+    "exercises": "1.0.0",
+    "interviews": "0.1.0",
+    "mocks": "0.1.0"
+  }
+}
