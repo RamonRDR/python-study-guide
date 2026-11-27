@@ -84,3 +84,9 @@ Sprint 08A acceptance: a Draft 2020-12 schema and strict structural/path validat
 [PR #112](https://github.com/RamonRDR/python-study-guide/pull/112) · [CI #46053604048](https://github.com/RamonRDR/python-study-guide/actions/runs/46053604048) · [Linux job](https://github.com/RamonRDR/python-study-guide/actions/runs/46053604048/job/140690676913) · [Windows job](https://github.com/RamonRDR/python-study-guide/actions/runs/46053604048/job/140690677260) · [AC-08](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176) · `a8a264f9f36ec276f0ad8e35f10f2d76f82fe211`.
 
 AC-08 is formally closed on the exact baseline above. The 09A baseline evidence and residual review scope are in [Final QA](final-qa.md). AC-09 remains open until the 09B handoff, exact content pin validation, review, explicit maintainer approval, squash and push CI.
+
+## Sprint 09B · AC-09 handoff gate
+
+09A closed after exact push CI on `03e91ff9952f2b02293f16a11260d166eb00ea8a`. [PR #113](https://github.com/RamonRDR/python-study-guide/pull/113) · [CI #46059023528](https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528) · [closure](https://github.com/RamonRDR/python-study-guide/pull/113#issuecomment-7226902203).
+
+09B supplies the trilingual handoff and a distinct reference lock. The new acceptance test validates the actual 09A content commit with a temporary external lock against trusted schemas, verifies the entire Git tree and compares canonical paths/bytes with the original historical fixture. The test result, current-head CI and Codex, separate final audit, explicit approval and post-merge CI must be recorded in PR evidence before closing AC-09. Do not assume production readiness, exhaustive semantic review or browser verification. [Handoff](handoff.md).

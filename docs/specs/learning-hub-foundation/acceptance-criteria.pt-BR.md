@@ -84,3 +84,9 @@ Aceite da Sprint 08A: schema Draft 2020-12 e validação estrutural/de caminhos 
 [PR #112](https://github.com/RamonRDR/python-study-guide/pull/112) · [CI #46053604048](https://github.com/RamonRDR/python-study-guide/actions/runs/46053604048) · [Linux job](https://github.com/RamonRDR/python-study-guide/actions/runs/46053604048/job/140690676913) · [Windows job](https://github.com/RamonRDR/python-study-guide/actions/runs/46053604048/job/140690677260) · [AC-08](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176) · `a8a264f9f36ec276f0ad8e35f10f2d76f82fe211`.
 
 AC-08 formalmente encerrado na baseline exata acima. Evidências e escopo residual de revisão da 09A em [QA final](final-qa.pt-BR.md). AC-09 permanece aberto até handoff 09B, validação do pin exato de conteúdo, revisão, aprovação explícita, squash e CI de push.
+
+## Sprint 09B · Gate de handoff AC-09
+
+09A encerrada após CI de push exato em `03e91ff9952f2b02293f16a11260d166eb00ea8a`. [PR #113](https://github.com/RamonRDR/python-study-guide/pull/113) · [CI #46059023528](https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528) · [closure](https://github.com/RamonRDR/python-study-guide/pull/113#issuecomment-7226902203).
+
+09B fornece handoff trilíngue e lock de referência distinto. Novo teste de aceite valida commit real de conteúdo 09A com lock externo temporário contra schemas confiáveis, verifica toda árvore Git e compara caminhos/bytes canônicos com fixture histórica original. Resultado do teste, CI e Codex no HEAD atual, auditoria final distinta, aprovação explícita e CI pós-merge devem ser registrados nas evidências do PR antes do encerramento AC-09. Não presumir prontidão de produção, revisão semântica exaustiva ou verificação no navegador. [Handoff](handoff.pt-BR.md).
