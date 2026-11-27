@@ -1417,4 +1417,4 @@ A pull request that moves, creates, or removes significant paths must update thi
 
 ## Curriculum manifest contract
 
-Sprint 08A reserves the [curriculum/](../curriculum/README.md). The schema and structural validator are introduced before the full inventory; source lessons remain in their existing directories.
+Sprint 08B adds [curriculum/manifest.json](../curriculum/manifest.json) and [curriculum inventory validation](../scripts/curriculum_inventory.py). See [curriculum documentation](../curriculum/README.md). Existing lesson paths are unchanged; assessment associations remain pending.
