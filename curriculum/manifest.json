@@ -6,7 +6,7 @@
     "pt-BR",
     "es"
   ],
-  "association_status": "pending",
+  "association_status": "complete",
   "assets": [
     "assets/banner.png",
     "assets/banner.svg",
@@ -74,7 +74,9 @@
           "resources": [],
           "previous_id": null,
           "next_id": "getting-started.configure-vscode",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.interpreter-purpose"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -99,7 +101,9 @@
           "resources": [],
           "previous_id": "getting-started.install-python",
           "next_id": "getting-started.run-your-first-program",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.editor-replaces-interpreter"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -126,7 +130,10 @@
           ],
           "previous_id": "getting-started.configure-vscode",
           "next_id": "getting-started.virtual-environments",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.unclosed-print",
+            "quiz.unsaved-source-edit"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -151,7 +158,10 @@
           "resources": [],
           "previous_id": "getting-started.run-your-first-program",
           "next_id": "getting-started.packages-and-dependencies",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.venv-direct-executable",
+            "quiz.venv-recreate"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -176,7 +186,9 @@
           "resources": [],
           "previous_id": "getting-started.virtual-environments",
           "next_id": "getting-started.git-and-version-control",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.install-declared-requirements"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -201,7 +213,9 @@
           "resources": [],
           "previous_id": "getting-started.packages-and-dependencies",
           "next_id": "fundamentals.how-python-runs-a-program",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.git-inspect-staged"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -247,7 +261,9 @@
           ],
           "previous_id": "getting-started.git-and-version-control",
           "next_id": "fundamentals.print-and-input",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.source-file-extension"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -275,7 +291,11 @@
           ],
           "previous_id": "fundamentals.how-python-runs-a-program",
           "next_id": "fundamentals.variables-and-naming",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.input-digits-text",
+            "quiz.print-custom-separator",
+            "quiz.print-literal"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -303,7 +323,10 @@
           ],
           "previous_id": "fundamentals.print-and-input",
           "next_id": "fundamentals.built-in-data-types",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.assignment-symbol",
+            "quiz.reassignment-order"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -331,7 +354,10 @@
           ],
           "previous_id": "fundamentals.variables-and-naming",
           "next_id": "fundamentals.type-and-isinstance",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.decimal-literal-type",
+            "quiz.quoted-digits-type"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -359,7 +385,10 @@
           ],
           "previous_id": "fundamentals.built-in-data-types",
           "next_id": "fundamentals.type-conversion",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.bool-int-exact-versus-compatible",
+            "quiz.exact-type-function"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -387,7 +416,10 @@
           ],
           "previous_id": "fundamentals.type-and-isinstance",
           "next_id": "strings-and-numbers.string-creation-and-indexing",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.integer-text-conversion",
+            "quiz.nonempty-false-text"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -434,7 +466,11 @@
           ],
           "previous_id": "fundamentals.type-conversion",
           "next_id": "strings-and-numbers.common-string-methods",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.string-negative-index",
+            "quiz.string-slice-exclusive-stop",
+            "quiz.string-zero-index"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -462,7 +498,11 @@
           ],
           "previous_id": "strings-and-numbers.string-creation-and-indexing",
           "next_id": "strings-and-numbers.int-float-and-bool",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.replace-does-not-mutate",
+            "quiz.split-preserves-empty-fields",
+            "quiz.strip-surrounding-whitespace"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -490,7 +530,12 @@
           ],
           "previous_id": "strings-and-numbers.common-string-methods",
           "next_id": "strings-and-numbers.numeric-builtins",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.division-zero-error",
+            "quiz.negative-floor-remainder",
+            "quiz.positive-remainder",
+            "quiz.true-division-integers"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -518,7 +563,10 @@
           ],
           "previous_id": "strings-and-numbers.int-float-and-bool",
           "next_id": "collections.list-creation-and-indexing",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.absolute-distance-zero",
+            "quiz.round-ties-to-even"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -565,7 +613,10 @@
           ],
           "previous_id": "strings-and-numbers.numeric-builtins",
           "next_id": "collections.modifying-lists-and-methods",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.list-slice-last-two",
+            "quiz.list-stored-item-type"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -594,7 +645,12 @@
           ],
           "previous_id": "collections.list-creation-and-indexing",
           "next_id": "collections.tuples-and-immutability",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.list-add-one",
+            "quiz.list-extend-not-nest",
+            "quiz.list-pop-result",
+            "quiz.shallow-list-copy-nested"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -623,7 +679,10 @@
           ],
           "previous_id": "collections.modifying-lists-and-methods",
           "next_id": "collections.dictionaries-keys-and-values",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.singleton-tuple-comma",
+            "quiz.tuple-nested-mutability"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -652,7 +711,11 @@
           ],
           "previous_id": "collections.tuples-and-immutability",
           "next_id": "collections.sets-and-unique-values",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.dictionary-fallback",
+            "quiz.dictionary-membership-keys",
+            "quiz.dictionary-none-versus-absent"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -681,7 +744,11 @@
           ],
           "previous_id": "collections.dictionaries-keys-and-values",
           "next_id": "collections.choosing-the-right-collection",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.empty-braces-not-set",
+            "quiz.set-directional-difference",
+            "quiz.set-shared-members"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -710,7 +777,10 @@
           ],
           "previous_id": "collections.sets-and-unique-values",
           "next_id": "program-flow.conditions-comparisons-and-boolean-logic",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.collection-keyed-quantities",
+            "quiz.collection-membership"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -758,7 +828,11 @@
           ],
           "previous_id": "collections.choosing-the-right-collection",
           "next_id": "program-flow.if-elif-and-else",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.boolean-precedence",
+            "quiz.chained-comparison-boundary",
+            "quiz.short-circuit-operand-result"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -787,7 +861,10 @@
           ],
           "previous_id": "program-flow.conditions-comparisons-and-boolean-logic",
           "next_id": "program-flow.match-and-case",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.conditional-chain-one-branch",
+            "quiz.overlapping-threshold-order"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -816,7 +893,11 @@
           ],
           "previous_id": "program-flow.if-elif-and-else",
           "next_id": "program-flow.for-loops-and-iteration",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.match-guard-fallthrough",
+            "quiz.match-or-alternatives",
+            "quiz.match-wildcard"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -845,7 +926,10 @@
           ],
           "previous_id": "program-flow.match-and-case",
           "next_id": "program-flow.range-enumerate-and-zip",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.for-accumulator-initial-value",
+            "quiz.for-item-driven"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -874,7 +958,10 @@
           ],
           "previous_id": "program-flow.for-loops-and-iteration",
           "next_id": "program-flow.while-loops-and-state-driven-repetition",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.enumerate-default-start",
+            "quiz.range-stop"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -903,7 +990,10 @@
           ],
           "previous_id": "program-flow.range-enumerate-and-zip",
           "next_id": "program-flow.break-continue-and-loop-else",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.while-initial-false",
+            "quiz.while-state-overshoot"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -932,7 +1022,9 @@
           ],
           "previous_id": "program-flow.while-loops-and-state-driven-repetition",
           "next_id": "program-flow.choosing-and-combining-program-flow",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.loop-else-break-versus-continue"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -961,7 +1053,9 @@
           ],
           "previous_id": "program-flow.break-continue-and-loop-else",
           "next_id": "functions.defining-and-calling-functions",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.combined-classification-loop"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1009,7 +1103,9 @@
           ],
           "previous_id": "program-flow.choosing-and-combining-program-flow",
           "next_id": "functions.parameters-and-arguments",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.definition-body-delayed"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1038,7 +1134,10 @@
           ],
           "previous_id": "functions.defining-and-calling-functions",
           "next_id": "functions.return-values",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.missing-required-argument",
+            "quiz.positional-argument-binding"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1067,7 +1166,10 @@
           ],
           "previous_id": "functions.parameters-and-arguments",
           "next_id": "functions.scope",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.implicit-none-return",
+            "quiz.return-keyword"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1096,7 +1198,10 @@
           ],
           "previous_id": "functions.return-values",
           "next_id": "functions.type-hints",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.local-before-assignment",
+            "quiz.local-binding-shadow"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1125,7 +1230,9 @@
           ],
           "previous_id": "functions.scope",
           "next_id": "functions.default-values",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.type-hints-runtime"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1154,7 +1261,10 @@
           ],
           "previous_id": "functions.type-hints",
           "next_id": "functions.args-and-kwargs",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.default-argument-omission",
+            "quiz.mutable-default-reuse"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1183,7 +1293,9 @@
           ],
           "previous_id": "functions.default-values",
           "next_id": "functions.functions-working-together",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.variadic-collection-shapes"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1212,7 +1324,9 @@
           ],
           "previous_id": "functions.args-and-kwargs",
           "next_id": "functions.data-flow-between-functions",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.function-result-pipeline"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1241,7 +1355,10 @@
           ],
           "previous_id": "functions.functions-working-together",
           "next_id": "comments-and-documentation.comments",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.discarded-return-does-not-rebind",
+            "quiz.parameter-rebind-versus-mutation"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1289,7 +1406,9 @@
           ],
           "previous_id": "functions.data-flow-between-functions",
           "next_id": "comments-and-documentation.docstrings",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.hash-inside-string"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1318,7 +1437,10 @@
           ],
           "previous_id": "comments-and-documentation.comments",
           "next_id": "comments-and-documentation.meaningful-names",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.docstring-first-statement",
+            "quiz.docstring-runtime-attribute"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1347,7 +1469,9 @@
           ],
           "previous_id": "comments-and-documentation.docstrings",
           "next_id": "comments-and-documentation.task-markers",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.name-with-explicit-unit"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1376,7 +1500,9 @@
           ],
           "previous_id": "comments-and-documentation.meaningful-names",
           "next_id": "comments-and-documentation.comments-vs-logging",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.task-marker-no-runtime"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1405,7 +1531,9 @@
           ],
           "previous_id": "comments-and-documentation.task-markers",
           "next_id": "comments-and-documentation.pep8-and-readability",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.log-fallback-level"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1434,7 +1562,10 @@
           ],
           "previous_id": "comments-and-documentation.comments-vs-logging",
           "next_id": "errors-files-and-modules.try-except-else-finally",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.none-check-preserve-zero",
+            "quiz.pep8-guidance-not-syntax"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1482,7 +1613,11 @@
           ],
           "previous_id": "comments-and-documentation.pep8-and-readability",
           "next_id": "errors-files-and-modules.raise-and-custom-exceptions",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.catch-invalid-integer",
+            "quiz.finally-propagates-unhandled",
+            "quiz.try-else-success-only"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1511,7 +1646,10 @@
           ],
           "previous_id": "errors-files-and-modules.try-except-else-finally",
           "next_id": "errors-files-and-modules.open-and-with",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.raise-keyword",
+            "quiz.value-error-contract"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1540,7 +1678,10 @@
           ],
           "previous_id": "errors-files-and-modules.raise-and-custom-exceptions",
           "next_id": "errors-files-and-modules.txt-csv-and-json",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.append-preserve-existing-file",
+            "quiz.open-returns-file"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1570,7 +1711,10 @@
           ],
           "previous_id": "errors-files-and-modules.open-and-with",
           "next_id": "errors-files-and-modules.imports-modules-and-packages",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.csv-quoted-comma",
+            "quiz.extension-does-not-parse"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1603,7 +1747,11 @@
           ],
           "previous_id": "errors-files-and-modules.txt-csv-and-json",
           "next_id": "standard-library.pathlib",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.import-alias-keyword",
+            "quiz.import-initialization-side-effect",
+            "quiz.python-source-module"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1652,7 +1800,9 @@
           ],
           "previous_id": "errors-files-and-modules.imports-modules-and-packages",
           "next_id": "standard-library.datetime",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.relative-path-working-directory"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1682,7 +1832,9 @@
           ],
           "previous_id": "standard-library.pathlib",
           "next_id": "standard-library.json",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.timedelta-duration"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1712,7 +1864,9 @@
           ],
           "previous_id": "standard-library.datetime",
           "next_id": "standard-library.csv",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.json-dumps-text-not-bytes"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1742,7 +1896,9 @@
           ],
           "previous_id": "standard-library.json",
           "next_id": "standard-library.logging",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.csv-convert-before-validation"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1772,7 +1928,9 @@
           ],
           "previous_id": "standard-library.csv",
           "next_id": "standard-library.collections",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.logging-handler-threshold"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1802,7 +1960,9 @@
           ],
           "previous_id": "standard-library.logging",
           "next_id": "standard-library.itertools",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.counter-tally-purpose"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1832,7 +1992,9 @@
           ],
           "previous_id": "standard-library.collections",
           "next_id": "standard-library.decimal",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.chain-one-level"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1862,7 +2024,10 @@
           ],
           "previous_id": "standard-library.itertools",
           "next_id": "standard-library.os-shutil",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.decimal-exact-input-boundary",
+            "quiz.decimal-float-arithmetic-error"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1892,7 +2057,9 @@
           ],
           "previous_id": "standard-library.decimal",
           "next_id": "external-libraries.pandas",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.os-getcwd-process-state"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1942,7 +2109,11 @@
           ],
           "previous_id": "standard-library.os-shutil",
           "next_id": "external-libraries.openpyxl",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.dataframe-labeled-table",
+            "quiz.pandas-label-selection",
+            "quiz.pandas-merge-cardinality"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -1976,7 +2147,10 @@
           ],
           "previous_id": "external-libraries.pandas",
           "next_id": "external-libraries.requests",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.openpyxl-formula-not-engine",
+            "quiz.openpyxl-xlsx-format"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2010,7 +2184,10 @@
           ],
           "previous_id": "external-libraries.openpyxl",
           "next_id": "external-libraries.pytest",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.requests-explicit-timeout",
+            "quiz.requests-json-not-success"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2044,7 +2221,9 @@
           ],
           "previous_id": "external-libraries.requests",
           "next_id": "practical-projects.expense-tracker",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.pytest-collect-only"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2096,7 +2275,9 @@
           ],
           "previous_id": "external-libraries.pytest",
           "next_id": "practical-projects.grade-calculator",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.expense-reject-zero"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2126,7 +2307,9 @@
           ],
           "previous_id": "practical-projects.expense-tracker",
           "next_id": "practical-projects.user-registration",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.grade-weight-atomic-rejection"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2156,7 +2339,9 @@
           ],
           "previous_id": "practical-projects.grade-calculator",
           "next_id": "practical-projects.csv-analyzer",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.registration-canonical-uniqueness"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2186,7 +2371,9 @@
           ],
           "previous_id": "practical-projects.user-registration",
           "next_id": "practical-projects.report-generator",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.csv-row-rejection-isolated"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2216,7 +2403,9 @@
           ],
           "previous_id": "practical-projects.csv-analyzer",
           "next_id": "practical-projects.file-organizer",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.report-inclusive-boundaries"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2247,7 +2436,9 @@
           ],
           "previous_id": "practical-projects.report-generator",
           "next_id": "practical-projects.fictional-reconciliation-workflow",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.organizer-exact-name-atomic-boundary"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2284,7 +2475,9 @@
           ],
           "previous_id": "practical-projects.file-organizer",
           "next_id": "practical-projects.simulated-automation-flow",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.reconciliation-duplicate-source"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2314,7 +2507,9 @@
           ],
           "previous_id": "practical-projects.fictional-reconciliation-workflow",
           "next_id": "manual-programming-practices.manual-coding-and-debugging",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.automation-failure-publication"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2358,7 +2553,10 @@
           "resources": [],
           "previous_id": "practical-projects.simulated-automation-flow",
           "next_id": "manual-programming-practices.specification-driven-development",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.predict-before-execution",
+            "quiz.traceback-diagnosis-first"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2383,7 +2581,11 @@
           "resources": [],
           "previous_id": "manual-programming-practices.manual-coding-and-debugging",
           "next_id": "manual-programming-practices.test-driven-development",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.acceptance-observable-evidence",
+            "quiz.sdd-exact-int-contract",
+            "quiz.sdd-type-before-range"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2411,7 +2613,10 @@
           ],
           "previous_id": "manual-programming-practices.specification-driven-development",
           "next_id": "manual-programming-practices.professional-workflow",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.tdd-red-first",
+            "quiz.tdd-refactor-preserve-behavior"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2436,7 +2641,9 @@
           "resources": [],
           "previous_id": "manual-programming-practices.test-driven-development",
           "next_id": "problem-solving.problem-solving-fundamentals",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.green-ci-not-complete-proof"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2482,7 +2689,9 @@
           ],
           "previous_id": "manual-programming-practices.professional-workflow",
           "next_id": "problem-solving.constraints-and-edge-cases",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.qualifying-minute-sum"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2509,7 +2718,9 @@
           ],
           "previous_id": "problem-solving.problem-solving-fundamentals",
           "next_id": "problem-solving.algorithmic-complexity",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.capacity-inclusive-boundary"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2536,7 +2747,10 @@
           ],
           "previous_id": "problem-solving.constraints-and-edge-cases",
           "next_id": "problem-solving.recursion",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.big-o-not-seconds",
+            "quiz.repeated-lookup-tradeoff"
+          ],
           "exercise_ids": [],
           "interview_ids": [],
           "mock_ids": [],
@@ -2563,9 +2777,13 @@
           ],
           "previous_id": "problem-solving.algorithmic-complexity",
           "next_id": "problem-solving.searching-algorithms",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.recursive-sum-trace"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "algorithms.recursion-stack"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -2590,9 +2808,14 @@
           ],
           "previous_id": "problem-solving.recursion",
           "next_id": "problem-solving.sorting-algorithms",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.binary-first-match-boundary"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "algorithms.binary-precondition",
+            "behavioral.international-clarification"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -2617,9 +2840,13 @@
           ],
           "previous_id": "problem-solving.searching-algorithms",
           "next_id": "problem-solving.problem-solving-patterns",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.insertion-stable-shift"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "algorithms.stable-insertion"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -2644,9 +2871,15 @@
           ],
           "previous_id": "problem-solving.sorting-algorithms",
           "next_id": "problem-solving.strings-and-numbers",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.rolling-window-update"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "algorithms.frequency-map",
+            "algorithms.two-pointer-pair",
+            "algorithms.window-tradeoff"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -2669,8 +2902,16 @@
           "resources": [],
           "previous_id": "problem-solving.problem-solving-patterns",
           "next_id": "problem-solving.collections",
-          "quiz_ids": [],
-          "exercise_ids": [],
+          "quiz_ids": [
+            "quiz.distinct-window-monotonic"
+          ],
+          "exercise_ids": [
+            "problem-solving.ascii-digit-counter",
+            "problem-solving.literal-palindrome",
+            "problem-solving.longest-distinct-substring",
+            "problem-solving.sum-digits",
+            "problem-solving.vowel-counter"
+          ],
           "interview_ids": [],
           "mock_ids": [],
           "execution": "unverified"
@@ -2695,7 +2936,12 @@
           "previous_id": "problem-solving.strings-and-numbers",
           "next_id": "problem-solving.functions-and-recursion",
           "quiz_ids": [],
-          "exercise_ids": [],
+          "exercise_ids": [
+            "problem-solving.first-repeated-label",
+            "problem-solving.label-counts",
+            "problem-solving.merge-inventory",
+            "problem-solving.unique-in-order"
+          ],
           "interview_ids": [],
           "mock_ids": [],
           "execution": "unverified"
@@ -2719,8 +2965,15 @@
           "resources": [],
           "previous_id": "problem-solving.collections",
           "next_id": "problem-solving.searching-and-sorting",
-          "quiz_ids": [],
-          "exercise_ids": [],
+          "quiz_ids": [
+            "quiz.flatten-shared-accumulator"
+          ],
+          "exercise_ids": [
+            "problem-solving.clamp-value",
+            "problem-solving.recursive-factorial",
+            "problem-solving.recursive-flatten",
+            "problem-solving.recursive-power"
+          ],
           "interview_ids": [],
           "mock_ids": [],
           "execution": "unverified"
@@ -2744,8 +2997,16 @@
           "resources": [],
           "previous_id": "problem-solving.functions-and-recursion",
           "next_id": "problem-solving.algorithms-and-complexity",
-          "quiz_ids": [],
-          "exercise_ids": [],
+          "quiz_ids": [
+            "quiz.binary-target-exclusive-end"
+          ],
+          "exercise_ids": [
+            "problem-solving.binary-insertion-index",
+            "problem-solving.binary-target-range",
+            "problem-solving.descending-insertion-sort",
+            "problem-solving.linear-first-index",
+            "problem-solving.merge-sorted-lists"
+          ],
           "interview_ids": [],
           "mock_ids": [],
           "execution": "unverified"
@@ -2769,8 +3030,14 @@
           "resources": [],
           "previous_id": "problem-solving.searching-and-sorting",
           "next_id": "problem-solving.debugging",
-          "quiz_ids": [],
-          "exercise_ids": [],
+          "quiz_ids": [
+            "quiz.pair-duplicate-multiplicity"
+          ],
+          "exercise_ids": [
+            "problem-solving.has-duplicate",
+            "problem-solving.sorted-pair-multiplicity",
+            "problem-solving.unordered-pair-count"
+          ],
           "interview_ids": [],
           "mock_ids": [],
           "execution": "unverified"
@@ -2794,8 +3061,13 @@
           "resources": [],
           "previous_id": "problem-solving.algorithms-and-complexity",
           "next_id": "problem-solving.refactoring",
-          "quiz_ids": [],
-          "exercise_ids": [],
+          "quiz_ids": [
+            "quiz.negative-window-initialization"
+          ],
+          "exercise_ids": [
+            "problem-solving.debug-negative-window",
+            "problem-solving.debug-positive-count"
+          ],
           "interview_ids": [],
           "mock_ids": [],
           "execution": "unverified"
@@ -2820,7 +3092,10 @@
           "previous_id": "problem-solving.debugging",
           "next_id": "problem-solving.mixed",
           "quiz_ids": [],
-          "exercise_ids": [],
+          "exercise_ids": [
+            "problem-solving.refactor-score-summary",
+            "problem-solving.refactor-shipping-fee"
+          ],
           "interview_ids": [],
           "mock_ids": [],
           "execution": "unverified"
@@ -2844,8 +3119,14 @@
           "resources": [],
           "previous_id": "problem-solving.refactoring",
           "next_id": "problem-solving.timed-live-coding",
-          "quiz_ids": [],
-          "exercise_ids": [],
+          "quiz_ids": [
+            "quiz.inventory-order-and-delta"
+          ],
+          "exercise_ids": [
+            "problem-solving.inventory-reconciliation",
+            "problem-solving.most-frequent-label",
+            "problem-solving.total-short-lengths"
+          ],
           "interview_ids": [],
           "mock_ids": [],
           "execution": "unverified"
@@ -2870,7 +3151,10 @@
           "previous_id": "problem-solving.mixed",
           "next_id": "technical-interview-preparation.understanding-technical-interviews",
           "quiz_ids": [],
-          "exercise_ids": [],
+          "exercise_ids": [
+            "problem-solving.timed-longest-streak",
+            "problem-solving.timed-threshold-count"
+          ],
           "interview_ids": [],
           "mock_ids": [],
           "execution": "unverified"
@@ -2915,7 +3199,11 @@
           "next_id": "technical-interview-preparation.live-coding-and-take-home",
           "quiz_ids": [],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "interview.allowed-tools",
+            "interview.clarify-contract",
+            "interview.scope-prioritization"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -2940,7 +3228,13 @@
           "next_id": "technical-interview-preparation.python-fundamentals-review",
           "quiz_ids": [],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "interview.allowed-tools",
+            "interview.live-coding-start",
+            "interview.incomplete-live-task",
+            "interview.take-home-evidence",
+            "interview.scope-prioritization"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -2965,7 +3259,15 @@
           "next_id": "technical-interview-preparation.data-structures-and-algorithms-review",
           "quiz_ids": [],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "python.binding-vs-copy",
+            "python.conversion-contract",
+            "python.immutable-string",
+            "python.mutable-default",
+            "python.identity-none",
+            "python.parameter-rebinding",
+            "python.scope-lookup"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -2990,7 +3292,15 @@
           "next_id": "technical-interview-preparation.classes-and-objects",
           "quiz_ids": [],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "algorithms.binary-precondition",
+            "algorithms.duplicate-membership",
+            "algorithms.frequency-map",
+            "algorithms.recursion-stack",
+            "algorithms.stable-insertion",
+            "algorithms.two-pointer-pair",
+            "algorithms.window-tradeoff"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3015,9 +3325,14 @@
           ],
           "previous_id": "technical-interview-preparation.data-structures-and-algorithms-review",
           "next_id": "technical-interview-preparation.attributes-methods-and-object-behavior",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.instance-initialization-role"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "oop.independent-state",
+            "oop.initialization"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3042,9 +3357,15 @@
           ],
           "previous_id": "technical-interview-preparation.classes-and-objects",
           "next_id": "technical-interview-preparation.inheritance-polymorphism-and-composition",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.classmethod-subclass-factory"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "oop.class-list-sharing",
+            "oop.constructor-binding",
+            "oop.length-and-repr"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3069,9 +3390,13 @@
           ],
           "previous_id": "technical-interview-preparation.attributes-methods-and-object-behavior",
           "next_id": "technical-interview-preparation.encapsulation-abstraction-and-solid",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.composition-replaceable-collaborator"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "oop.replaceable-collaborator"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3098,7 +3423,10 @@
           "next_id": "technical-interview-preparation.object-identity-references-and-copying",
           "quiz_ids": [],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "oop.invariant-boundary",
+            "oop.solid-contracts"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3123,9 +3451,17 @@
           ],
           "previous_id": "technical-interview-preparation.encapsulation-abstraction-and-solid",
           "next_id": "technical-interview-preparation.python-memory-management",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.deepcopy-preserves-internal-alias"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "python.binding-vs-copy",
+            "python.identity-none",
+            "python.parameter-rebinding",
+            "python.hash-equality-contract",
+            "internals.nested-copy"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3150,9 +3486,14 @@
           ],
           "previous_id": "technical-interview-preparation.object-identity-references-and-copying",
           "next_id": "technical-interview-preparation.iterators-generators-and-comprehensions",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.reachable-cache-retention"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "internals.del-binding",
+            "internals.cache-retention"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3177,9 +3518,13 @@
           ],
           "previous_id": "technical-interview-preparation.python-memory-management",
           "next_id": "technical-interview-preparation.closures-and-decorators",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.exhausted-generator-next"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "internals.iterator-exhaustion"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3204,9 +3549,15 @@
           ],
           "previous_id": "technical-interview-preparation.iterators-generators-and-comprehensions",
           "next_id": "technical-interview-preparation.context-managers",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.closure-late-binding-snapshot"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "python.scope-lookup",
+            "internals.decorator-contract",
+            "internals.late-binding"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3231,9 +3582,13 @@
           ],
           "previous_id": "technical-interview-preparation.closures-and-decorators",
           "next_id": "technical-interview-preparation.concurrency-parallelism-and-the-gil",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.context-exit-false-propagation"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "internals.context-exit"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3258,9 +3613,13 @@
           ],
           "previous_id": "technical-interview-preparation.context-managers",
           "next_id": "technical-interview-preparation.exceptions-testing-and-debugging-review",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.gil-compound-invariant"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "internals.gil-workload"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3287,7 +3646,15 @@
           "next_id": "technical-interview-preparation.http-rest-and-backend-fundamentals",
           "quiz_ids": [],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "testing.else-finally",
+            "testing.specific-catch",
+            "testing.test-levels",
+            "testing.boundary-oracle",
+            "testing.debugging-evidence",
+            "testing.exception-cause",
+            "testing.coverage-vs-discrimination"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3312,9 +3679,15 @@
           ],
           "previous_id": "technical-interview-preparation.exceptions-testing-and-debugging-review",
           "next_id": "technical-interview-preparation.api-contracts-authentication-and-authorization",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.http-get-retrieval"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "api.http-request-response",
+            "api.status-contract",
+            "api.idempotent-retry"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3339,9 +3712,14 @@
           ],
           "previous_id": "technical-interview-preparation.http-rest-and-backend-fundamentals",
           "next_id": "technical-interview-preparation.relational-databases-and-sql",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.authentication-not-object-authorization"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "api.payload-boundary",
+            "api.object-authorization"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3366,9 +3744,15 @@
           ],
           "previous_id": "technical-interview-preparation.api-contracts-authentication-and-authorization",
           "next_id": "technical-interview-preparation.joins-aggregations-and-data-relationships",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.sql-check-null-constraint"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "sql.keys-and-constraints",
+            "sql.null-and-order",
+            "sql.bound-values"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3393,9 +3777,13 @@
           ],
           "previous_id": "technical-interview-preparation.relational-databases-and-sql",
           "next_id": "technical-interview-preparation.transactions-indexes-and-sql-safety",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.left-join-zero-child-count"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "sql.zero-child-count"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3420,9 +3808,14 @@
           ],
           "previous_id": "technical-interview-preparation.joins-aggregations-and-data-relationships",
           "next_id": "technical-interview-preparation.software-engineering-and-technical-decisions",
-          "quiz_ids": [],
+          "quiz_ids": [
+            "quiz.transaction-failed-credit-rollback"
+          ],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "sql.bound-values",
+            "sql.atomic-transfer"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3449,7 +3842,12 @@
           "next_id": "technical-interview-preparation.technical-interview-question-bank",
           "quiz_ids": [],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "testing.test-levels",
+            "engineering.sdd-tdd",
+            "engineering.dependency-boundary",
+            "engineering.architecture-tradeoffs"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3499,7 +3897,11 @@
           "next_id": "technical-interview-preparation.mock-interviews-and-self-assessment",
           "quiz_ids": [],
           "exercise_ids": [],
-          "interview_ids": [],
+          "interview_ids": [
+            "behavioral.star-evidence",
+            "behavioral.international-clarification",
+            "behavioral.evidence-disagreement"
+          ],
           "mock_ids": [],
           "execution": "unverified"
         },
@@ -3525,7 +3927,11 @@
           "quiz_ids": [],
           "exercise_ids": [],
           "interview_ids": [],
-          "mock_ids": [],
+          "mock_ids": [
+            "mock.junior-30",
+            "mock.mid-45",
+            "mock.senior-60"
+          ],
           "execution": "unverified"
         }
       ]

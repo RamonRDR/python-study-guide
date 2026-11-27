@@ -56,6 +56,10 @@ def versioned_bank(root, kind, descriptor, chapters, tracked):
                "exercises/problem-solving/*/exercise.json")
     check_coverage(root, pattern, paths, tracked)
     records = load_index(kind, root, descriptor["index"], chapters)
+    if kind == "exercise":
+        for record in records:
+            for field in ("starter_path", "solution_path"):
+                checked_path(root, record[field], tracked)
     if any(record["schema_version"] != descriptor["schema_version"] for record in records):
         raise ValueError("record version differs from declared bank version")
     return records

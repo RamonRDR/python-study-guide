@@ -118,3 +118,29 @@ class CurriculumRelationshipTests(unittest.TestCase):
                     preliminary_bank(root, descriptor, "question_ids",
                                      "interviews/questions",
                                      lambda _: self.fail("lenient loader must not run"), None)
+
+    def test_independent_record_ownership_and_prerequisite_coverage(self):
+        by_id = {c["id"]: c for c in self.chapters}
+        for bank, field in (("quizzes", "quiz_ids"), ("exercises", "exercise_ids")):
+            index = read_json(ROOT / self.data["banks"][bank]["index"])
+            for entry in index["records"]:
+                record = read_json(ROOT / entry["path"])
+                owners = [c["id"] for c in self.chapters if entry["id"] in c[field]]
+                self.assertEqual(owners, [record["chapter_id"]])
+                self.assertIn(record["chapter_id"], by_id)
+        index = read_json(ROOT / self.data["banks"]["interviews"]["index"])
+        for identifier in index["question_ids"]:
+            record = read_json(ROOT / "interviews/questions" / (identifier + ".json"))
+            expected = {p["paths"]["en"] for p in record["prerequisites"]}
+            actual = {c["content"]["en"] for c in self.chapters
+                      if identifier in c["interview_ids"]}
+            self.assertEqual(actual, expected)
+        index = read_json(ROOT / self.data["banks"]["mocks"]["index"])
+        self.assertEqual(self.chapters[-1]["mock_ids"], index["mock_ids"])
+        exercise_index = read_json(ROOT / self.data["banks"]["exercises"]["index"])
+        exercise_paths = {r["id"]: r["path"] for r in exercise_index["records"]}
+        question_index = read_json(ROOT / self.data["banks"]["interviews"]["index"])
+        for identifier in index["mock_ids"]:
+            mock = read_json(ROOT / "interviews/mocks" / (identifier + ".json"))
+            self.assertEqual(mock["exercise_path"], exercise_paths[mock["exercise_id"]])
+            self.assertTrue(set(mock["question_ids"]).issubset(question_index["question_ids"]))
