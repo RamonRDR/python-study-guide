@@ -143,7 +143,7 @@ Detailed explanations:
 
 ## Current status
 
-**Phase II: Learning Hub Foundation** is in progress. Sprints 00–07 are closed; Phase 11 and Phase 12 are complete (24 Phase 12 lessons, 60 questions and three mocks). The [160-quiz bank](quizzes/README.md) and [30 versioned exercises](exercises/README.md) are complete. AC-07 is closed ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). Sprints 08A–B are closed; 08C completes relationships for 253 canonical records across 115 curriculum entries. Immutable consumer verification and AC-08 remain pending. The guide remains independent of the future web Learning Hub and Git Study Guide.
+**Phase II: Learning Hub Foundation** is in progress. Sprints 00–07 are closed; Phase 11 and Phase 12 are complete (24 Phase 12 lessons, 60 questions and three mocks). The [160-quiz bank](quizzes/README.md) and [30 versioned exercises](exercises/README.md) are complete. AC-07 is closed ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). Sprints 08A–C are closed; 08D implements pinned consumer verification fixtures for the 253 canonical records and 115 curriculum entries. AC-08 remains open until consolidated acceptance. The guide remains independent of the future web Learning Hub and Git Study Guide.
 
 [Phase II implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md)
 
