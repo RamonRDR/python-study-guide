@@ -7,3 +7,4 @@ Los registros de Phase II son propuestas hasta la revisión y aprobación del PR
 - [ADR 0001: Fuente única de verdad del contenido](0001-content-source-of-truth.es.md)
 - [ADR 0002: Contrato de contenido](0002-content-contract.es.md)
 - [ADR 0003: Ejecución en el navegador](0003-browser-execution.es.md)
+- [ADR 0004: Manifiesto curricular](0004-curriculum-manifest.es.md)

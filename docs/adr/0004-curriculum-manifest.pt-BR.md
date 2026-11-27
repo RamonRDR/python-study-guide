@@ -1,0 +1,12 @@
+# ADR 0004: Manifesto curricular
+
+[EN](0004-curriculum-manifest.md) · [PT-BR](0004-curriculum-manifest.pt-BR.md) · [ES](0004-curriculum-manifest.es.md)
+
+Status: proposto para revisão do PR; mantenedor aprovou o plano da Sprint 08.
+
+## Decisão
+Publicar `curriculum/manifest.json` com `schemas/curriculum-manifest.schema.json` (Draft 2020-12, versão 1.0.0 do manifesto). Reutilizar a dependência jsonschema e os auxiliares estritos de JSON/caminhos das avaliações. O manifesto referencia arquivos fonte, sem duplicar aulas ou avaliações. Os 115 IDs estáveis vêm da matriz de avaliações; ordem e títulos vêm das três trilhas. Preservar a fundação histórica separada da ordem curricular 00, fases educacionais 1–12 e módulo complementar. As ordens de módulos e capítulos são inteiros a partir de zero, contíguos entre irmãos e independentes dos IDs; previous/next atravessa todo o currículo.
+
+O manifesto inclui títulos localizados, caminhos de índice/conteúdo, tipo de capítulo, recursos e assets, metadados de execução, referências tipadas de avaliação e descritores dos bancos canônicos. Os quatro bancos mantêm versões independentes: quiz/exercício 1.0.0, entrevista/simulado 0.1.0. Referências de entrevistas nos capítulos indicam pré-requisitos documentados, não propriedade; referências de simulados indicam a aula de simulados. Quiz/exercício usa chapter_id existente. Sem associações pedagógicas inferidas. Execução do capítulo é unverified ou local_only com motivo localizado; browser_compatible exige evidência real em runtime fixado no nível do exercício. Metadados opcionais de Python local/dependências significam não especificado quando ausentes, não irrestrito.
+
+Manifesto com association_status pending é artefato de desenvolvimento; consumidores exigem complete e validação referencial integral. A valida schema e arquivos confinados com fixtures sintéticas; B publica inventário com associações pendentes; C completa e valida associações; D demonstra consumo por revisão fixada; E encerra AC-08. Versões suportadas são explícitas (inicialmente exatas); dados desconhecidos ou incompatíveis falham explicitamente. Preservar tokens inteiros, rejeitar chaves duplicadas e números não finitos, sem arredondamento JavaScript. Consumidores registram SHA completo aprovado e versões suportadas fora do snapshot; verificam o commit e importam somente seus arquivos. Nunca inserir o próprio SHA ou consultar por estudante. Guias relacionados são opcionais e adiados até verificação. Sem implementação de site ou runtime aqui.

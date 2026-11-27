@@ -67,3 +67,15 @@ Guía: Markdown, metadatos, ejemplos, soluciones, pruebas, rúbricas y validaci�
 ## Decisiones pendientes
 
 Finalizar estructura, esquemas completos, política de versiones, semántica exacta de puntuación/comparación, renderizado seguro y entorno fijado tras pilotos. Documentar compatibilidad y ejemplos de migración en handoff final. Ver [ADR](../../adr/README.es.md).
+
+## Sprint 08A · Manifiesto curricular 1.0.0
+
+Las decisiones específicas del manifiesto abajo sustituyen el modelo preliminar anterior; los contratos de bancos no cambian.
+
+Publicar `curriculum/manifest.json` con `schemas/curriculum-manifest.schema.json` (Draft 2020-12, versión 1.0.0 del manifiesto). Reutilizar la dependencia jsonschema y las funciones estrictas de JSON/rutas de evaluaciones. El manifiesto referencia archivos fuente sin duplicar lecciones ni evaluaciones. Los 115 IDs estables proceden de la matriz de evaluación; orden y títulos de las tres rutas. Preservar la base histórica separada del orden curricular 00, fases educativas 1–12 y módulo complementario. Los órdenes de módulos y capítulos son enteros desde cero, contiguos entre hermanos e independientes de los IDs; previous/next recorre todo el currículo.
+
+El manifiesto incluye títulos localizados, rutas de índice/contenido, tipo de capítulo, recursos y assets, metadatos de ejecución, referencias tipadas de evaluación y descriptores de bancos canónicos. Los cuatro bancos mantienen versiones independientes: cuestionario/ejercicio 1.0.0, entrevista/simulacro 0.1.0. Referencias de entrevistas en capítulos indican prerrequisitos documentados, no propiedad; referencias de simulacros indican la lección de simulacros. Cuestionario/ejercicio usa chapter_id existente. Sin asociaciones pedagógicas inferidas. Ejecución del capítulo es unverified o local_only con motivo localizado; browser_compatible exige evidencia real en runtime fijado a nivel de ejercicio. Metadatos opcionales de Python local/dependencias significan no especificado si faltan, no irrestricto.
+
+Manifiesto con association_status pending es artefacto de desarrollo; consumidores exigen complete y validación referencial integral. A valida esquema y archivos confinados con fixtures sintéticas; B publica inventario con asociaciones pendientes; C completa y valida asociaciones; D demuestra consumo por revisión fijada; E cierra AC-08. Versiones soportadas explícitas (inicialmente exactas); datos desconocidos o incompatibles fallan explícitamente. Preservar tokens enteros, rechazar claves duplicadas y números no finitos, sin redondeo JavaScript. Consumidores registran SHA completo aprobado y versiones soportadas fuera del snapshot; verifican el commit e importan solo sus archivos. Nunca insertar el propio SHA ni consultar por estudiante. Guías relacionadas opcionales y aplazadas hasta verificación. Sin implementación de sitio o runtime aquí.
+
+[ADR 0004](../../adr/0004-curriculum-manifest.es.md).

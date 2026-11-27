@@ -67,3 +67,15 @@ Guide: Markdown, metadata, examples, reference solutions, tests, rubrics and sch
 ## Remaining decisions
 
 Finalize file layout, full schemas and versioning policy, exact scoring/comparison semantics, safe content rendering and browser runtime pin after pilots. Document compatibility and migration examples in the final handoff. See [ADR index](../../adr/README.md).
+
+## Sprint 08A · Curriculum manifest 1.0.0
+
+The manifest-specific decisions below supersede the preliminary manifest model above; bank contracts remain unchanged.
+
+Publish `curriculum/manifest.json` with `schemas/curriculum-manifest.schema.json` (Draft 2020-12, manifest version 1.0.0). Reuse the existing jsonschema dependency and strict assessment JSON/path helpers. The manifest references source files, never duplicates lesson or assessment bodies. The 115 stable chapter IDs come from the assessment matrix; order and titles come from the three learning paths. Preserve the historical project foundation separately from curriculum order 00, educational phases 1–12 and the complementary module. Module and chapter orders are zero-based or greater, contiguous within siblings, and independent of IDs; previous/next spans the complete curriculum.
+
+The manifest includes localized titles, index/content paths, chapter kind, resources and assets, execution metadata, typed assessment references and canonical bank descriptors. The four banks remain separately versioned: quiz/exercise 1.0.0, interview/mock 0.1.0. Interview references on chapters identify documented prerequisite relationships, not ownership; mock references identify the mock lesson. Quiz/exercise ownership uses existing chapter_id. No inferred pedagogical associations. Chapter execution is unverified or local_only with a localized reason; browser_compatible requires actual pinned-runtime evidence at exercise level. Optional local Python/dependency metadata means unspecified when absent, not unrestricted.
+
+A manifest with association_status pending is a development artifact only; consumers require complete and full reference validation. A validates schema and confined files on synthetic fixtures; B publishes inventory with pending associations; C completes and validates associations; D proves pinned-revision consumption; E closes AC-08. All supported versions are explicit (initially exact versions); unsupported or unknown data fails closed. Preserve integer tokens, reject duplicate keys/nonfinite values, no JavaScript numeric rounding. Consumers store an approved full commit SHA and supported versions outside the snapshot; verify the checked-out commit and import only files from it. Never self-embed the SHA or fetch per learner. Related guides are optional and deferred until verified. No site or runtime implementation here.
+
+[ADR 0004](../../adr/0004-curriculum-manifest.md).

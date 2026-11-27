@@ -26,7 +26,11 @@ Status: proposta para revisão. Executar somente após aprovação e merge do PR
 | 07C2 | feat/quiz-bank-expansion | Completar banco de 160 quizzes. |
 | 07D | feat/exercise-contract-migration | Migrar os 27 exercícios restantes. |
 | 07E | feat/assessment-bank-acceptance | Verificação consolidada de AC-07 e encerramento. |
-| 08 | feat/learning-hub-content-contract | Finalizar manifesto, validação do consumidor, fixtures, versionamento e compatibilidade. |
+| 08A | feat/curriculum-manifest-contract | Especificação e schema do manifesto; testes de fixtures |
+| 08B | feat/curriculum-manifest-inventory | Inventário curricular completo; associações pendentes |
+| 08C | feat/curriculum-assessment-relationships | Relações de avaliações e entrevistas |
+| 08D | feat/learning-hub-consumer-fixtures | Fixtures de consumidor por revisão imutável e compatibilidade |
+| 08E | test/curriculum-manifest-acceptance | Aceite consolidado AC-08 |
 | 09 | docs/learning-hub-handoff | QA completo, revisão final, evidências e handoff de revisão aprovada. |
 
 Dividir sprints grandes em PRs focados com sufixos descritivos. Criar cada branch da main atual após merge das dependências. Não fazer merge sem aprovação. Usar squash merge conforme AGENTS.md.

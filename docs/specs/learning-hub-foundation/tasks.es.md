@@ -2,7 +2,7 @@
 
 [🇺🇸 English](tasks.md) · [🇧🇷 Português](tasks.pt-BR.md) · [🇪🇸 Español](tasks.es.md)
 
-Sprints 00–06 y 07A–D fusionados. [CI #45905339496](https://github.com/RamonRDR/python-study-guide/actions/runs/45905339496) posterior de D aprobado. 07E consolida la aceptación de AC-07; el cierre depende de los gates del head exacto, aprobación del mantenedor y CI posterior. El manifiesto del consumidor sigue previsto para Sprint 08.
+Sprints 00–07 cerrados. [PR #107](https://github.com/RamonRDR/python-study-guide/pull/107) commit squash `f5d963fbf6544a8d9932fff915360f9a129d59b5`; [CI posterior #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654) aprobado en ambos jobs obligatorios. [Evidencia de cierre](https://github.com/RamonRDR/python-study-guide/pull/107#issuecomment-7221291775). Sprint 08A en revisión; AC-08 sigue abierto.
 
 | Tarea | Sprint | Dependencia | Estado |
 | --- | --- | --- | --- |
@@ -21,8 +21,8 @@ Sprints 00–06 y 07A–D fusionados. [CI #45905339496](https://github.com/Ramon
 | T05-02 Ampliar retos por tema/dificultad | 05 | T05-01 | Hecho ([PR #94](https://github.com/RamonRDR/python-study-guide/pull/94), [PR #95](https://github.com/RamonRDR/python-study-guide/pull/95), `21c00c32b91a0116c8a50e89687b91f8efa04cb5`, [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45720384626)) |
 | T06-01 Mapear carencias restantes específicas de entrevistas y enseñar conceptos necesarios no cubiertos en Sprint 05 | 06 | T05-02 | Completado: lecciones 01–21 fusionadas en #98; CI posterior aprobado ([#98](https://github.com/RamonRDR/python-study-guide/pull/98), [CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45730226049)) |
 | T06-02 Crear preguntas y simulaciones/rúbricas | 06 | T06-01 | Completado: 60 preguntas y tres simulaciones; [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101), [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/45829816717) |
-| T07-01 Finalizar y validar esquemas/registros de cuestionario/ejercicio | 07 | T06-02 | En curso: A y B fusionados ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103)); C1 fusionado ([PR #104](https://github.com/RamonRDR/python-study-guide/pull/104)); C2 fusionado ([PR #105](https://github.com/RamonRDR/python-study-guide/pull/105)); D fusionado ([PR #106](https://github.com/RamonRDR/python-study-guide/pull/106), [CI #45905339496](https://github.com/RamonRDR/python-study-guide/actions/runs/45905339496)); E consolida evidencias AC-07, gates de cierre pendientes |
-| T08-01 Finalizar manifiesto y fixtures de integración | 08 | T07-01 | Pendiente |
+| T07-01 Finalizar y validar esquemas/registros de cuestionario/ejercicio | 07 | T06-02 | Concluido ([#102](https://github.com/RamonRDR/python-study-guide/pull/102), [#103](https://github.com/RamonRDR/python-study-guide/pull/103), [#104](https://github.com/RamonRDR/python-study-guide/pull/104), [#105](https://github.com/RamonRDR/python-study-guide/pull/105), [#106](https://github.com/RamonRDR/python-study-guide/pull/106), [#107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)) |
+| T08-01 Finalizar manifiesto y fixtures de integración | 08 | T07-01 | En curso: 08A en revisión; B–E pendientes |
 | T09-01 Ejecutar QA y registrar evidencias reales | 09 | T08-01 | Pendiente |
 | T09-02 Obtener revisión final y publicar handoff con revisión fijada | 09 | T09-01 | Pendiente |
 
