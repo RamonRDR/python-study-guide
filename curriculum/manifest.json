@@ -1,0 +1,3534 @@
+{
+  "schema_version": "1.0.0",
+  "default_locale": "en",
+  "supported_locales": [
+    "en",
+    "pt-BR",
+    "es"
+  ],
+  "association_status": "pending",
+  "assets": [
+    "assets/banner.png",
+    "assets/banner.svg",
+    "assets/logo-mark.png",
+    "assets/logo.png",
+    "assets/repository-preview.png",
+    "assets/repository-preview.svg"
+  ],
+  "banks": {
+    "quizzes": {
+      "schema_version": "1.0.0",
+      "index": "quizzes/quiz-index.json",
+      "index_schema": "schemas/quiz-index.schema.json",
+      "record_schema": "schemas/quiz.schema.json"
+    },
+    "exercises": {
+      "schema_version": "1.0.0",
+      "index": "exercises/problem-solving/exercise-index.json",
+      "index_schema": "schemas/exercise-index.schema.json",
+      "record_schema": "schemas/exercise.schema.json"
+    },
+    "interviews": {
+      "schema_version": "0.1.0",
+      "index": "interviews/interview-index.json"
+    },
+    "mocks": {
+      "schema_version": "0.1.0",
+      "index": "interviews/mocks/mock-index.json"
+    }
+  },
+  "modules": [
+    {
+      "id": "getting-started",
+      "order": 0,
+      "slug": "getting-started",
+      "kind": "onboarding",
+      "educational_phase": null,
+      "title": {
+        "en": "Getting Started",
+        "pt-BR": "Primeiros passos",
+        "es": "Primeros pasos"
+      },
+      "index": {
+        "en": "getting-started/README.md",
+        "pt-BR": "getting-started/README.pt-BR.md",
+        "es": "getting-started/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "getting-started.install-python",
+          "order": 0,
+          "slug": "install-python",
+          "kind": "lesson",
+          "title": {
+            "en": "Install Python",
+            "pt-BR": "Instalar o Python",
+            "es": "Instalar Python"
+          },
+          "content": {
+            "en": "getting-started/01-install-python/README.md",
+            "pt-BR": "getting-started/01-install-python/README.pt-BR.md",
+            "es": "getting-started/01-install-python/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": null,
+          "next_id": "getting-started.configure-vscode",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "getting-started.configure-vscode",
+          "order": 1,
+          "slug": "configure-vscode",
+          "kind": "lesson",
+          "title": {
+            "en": "Configure VS Code",
+            "pt-BR": "Configurar o VS Code",
+            "es": "Configurar VS Code"
+          },
+          "content": {
+            "en": "getting-started/02-configure-vscode/README.md",
+            "pt-BR": "getting-started/02-configure-vscode/README.pt-BR.md",
+            "es": "getting-started/02-configure-vscode/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "getting-started.install-python",
+          "next_id": "getting-started.run-your-first-program",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "getting-started.run-your-first-program",
+          "order": 2,
+          "slug": "run-your-first-program",
+          "kind": "lesson",
+          "title": {
+            "en": "Run your first program",
+            "pt-BR": "Executar seu primeiro programa",
+            "es": "Ejecutar tu primer programa"
+          },
+          "content": {
+            "en": "getting-started/03-run-your-first-program/README.md",
+            "pt-BR": "getting-started/03-run-your-first-program/README.pt-BR.md",
+            "es": "getting-started/03-run-your-first-program/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "getting-started/03-run-your-first-program/examples/first_program.py"
+          ],
+          "previous_id": "getting-started.configure-vscode",
+          "next_id": "getting-started.virtual-environments",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "getting-started.virtual-environments",
+          "order": 3,
+          "slug": "virtual-environments",
+          "kind": "lesson",
+          "title": {
+            "en": "Virtual Environments",
+            "pt-BR": "Ambientes virtuais",
+            "es": "Entornos virtuales"
+          },
+          "content": {
+            "en": "getting-started/04-virtual-environments/README.md",
+            "pt-BR": "getting-started/04-virtual-environments/README.pt-BR.md",
+            "es": "getting-started/04-virtual-environments/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "getting-started.run-your-first-program",
+          "next_id": "getting-started.packages-and-dependencies",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "getting-started.packages-and-dependencies",
+          "order": 4,
+          "slug": "packages-and-dependencies",
+          "kind": "lesson",
+          "title": {
+            "en": "Packages and Dependency Management",
+            "pt-BR": "Pacotes e gerenciamento de dependências",
+            "es": "Paquetes y gestión de dependencias"
+          },
+          "content": {
+            "en": "getting-started/05-packages-and-dependencies/README.md",
+            "pt-BR": "getting-started/05-packages-and-dependencies/README.pt-BR.md",
+            "es": "getting-started/05-packages-and-dependencies/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "getting-started.virtual-environments",
+          "next_id": "getting-started.git-and-version-control",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "getting-started.git-and-version-control",
+          "order": 5,
+          "slug": "git-and-version-control",
+          "kind": "lesson",
+          "title": {
+            "en": "Git and Version Control Basics",
+            "pt-BR": "Git e fundamentos do controle de versão",
+            "es": "Git y fundamentos del control de versiones"
+          },
+          "content": {
+            "en": "getting-started/06-git-and-version-control/README.md",
+            "pt-BR": "getting-started/06-git-and-version-control/README.pt-BR.md",
+            "es": "getting-started/06-git-and-version-control/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "getting-started.packages-and-dependencies",
+          "next_id": "fundamentals.how-python-runs-a-program",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "fundamentals",
+      "order": 1,
+      "slug": "fundamentals",
+      "kind": "phase",
+      "educational_phase": 1,
+      "title": {
+        "en": "Fundamentals",
+        "pt-BR": "Fundamentos",
+        "es": "Fundamentos"
+      },
+      "index": {
+        "en": "fundamentals/README.md",
+        "pt-BR": "fundamentals/README.pt-BR.md",
+        "es": "fundamentals/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "fundamentals.how-python-runs-a-program",
+          "order": 0,
+          "slug": "how-python-runs-a-program",
+          "kind": "lesson",
+          "title": {
+            "en": "How Python runs a program",
+            "pt-BR": "Como o Python executa um programa",
+            "es": "Cómo Python ejecuta un programa"
+          },
+          "content": {
+            "en": "fundamentals/01-how-python-runs-a-program/README.md",
+            "pt-BR": "fundamentals/01-how-python-runs-a-program/README.pt-BR.md",
+            "es": "fundamentals/01-how-python-runs-a-program/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "fundamentals/01-how-python-runs-a-program/examples/hello_world.py"
+          ],
+          "previous_id": "getting-started.git-and-version-control",
+          "next_id": "fundamentals.print-and-input",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "fundamentals.print-and-input",
+          "order": 1,
+          "slug": "print-and-input",
+          "kind": "lesson",
+          "title": {
+            "en": "print() and input()",
+            "pt-BR": "print() e input()",
+            "es": "print() e input()"
+          },
+          "content": {
+            "en": "fundamentals/02-print-and-input/README.md",
+            "pt-BR": "fundamentals/02-print-and-input/README.pt-BR.md",
+            "es": "fundamentals/02-print-and-input/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "fundamentals/02-print-and-input/examples/interactive_greeting.py",
+            "fundamentals/02-print-and-input/examples/output_basics.py"
+          ],
+          "previous_id": "fundamentals.how-python-runs-a-program",
+          "next_id": "fundamentals.variables-and-naming",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "fundamentals.variables-and-naming",
+          "order": 2,
+          "slug": "variables-and-naming",
+          "kind": "lesson",
+          "title": {
+            "en": "Variables and naming",
+            "pt-BR": "Variáveis e nomenclatura",
+            "es": "Variables y nombres"
+          },
+          "content": {
+            "en": "fundamentals/03-variables-and-naming/README.md",
+            "pt-BR": "fundamentals/03-variables-and-naming/README.pt-BR.md",
+            "es": "fundamentals/03-variables-and-naming/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "fundamentals/03-variables-and-naming/examples/learning_profile.py",
+            "fundamentals/03-variables-and-naming/examples/variable_basics.py"
+          ],
+          "previous_id": "fundamentals.print-and-input",
+          "next_id": "fundamentals.built-in-data-types",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "fundamentals.built-in-data-types",
+          "order": 3,
+          "slug": "built-in-data-types",
+          "kind": "lesson",
+          "title": {
+            "en": "Built-in data types",
+            "pt-BR": "Tipos de dados embutidos",
+            "es": "Tipos de datos incorporados"
+          },
+          "content": {
+            "en": "fundamentals/04-built-in-data-types/README.md",
+            "pt-BR": "fundamentals/04-built-in-data-types/README.pt-BR.md",
+            "es": "fundamentals/04-built-in-data-types/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "fundamentals/04-built-in-data-types/examples/same_looking_values.py",
+            "fundamentals/04-built-in-data-types/examples/value_catalog.py"
+          ],
+          "previous_id": "fundamentals.variables-and-naming",
+          "next_id": "fundamentals.type-and-isinstance",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "fundamentals.type-and-isinstance",
+          "order": 4,
+          "slug": "type-and-isinstance",
+          "kind": "lesson",
+          "title": {
+            "en": "type() and isinstance()",
+            "pt-BR": "type() e isinstance()",
+            "es": "type() e isinstance()"
+          },
+          "content": {
+            "en": "fundamentals/05-type-and-isinstance/README.md",
+            "pt-BR": "fundamentals/05-type-and-isinstance/README.pt-BR.md",
+            "es": "fundamentals/05-type-and-isinstance/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "fundamentals/05-type-and-isinstance/examples/check_type_families.py",
+            "fundamentals/05-type-and-isinstance/examples/inspect_types.py"
+          ],
+          "previous_id": "fundamentals.built-in-data-types",
+          "next_id": "fundamentals.type-conversion",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "fundamentals.type-conversion",
+          "order": 5,
+          "slug": "type-conversion",
+          "kind": "lesson",
+          "title": {
+            "en": "Type conversion",
+            "pt-BR": "Conversão de tipos",
+            "es": "Conversión de tipos"
+          },
+          "content": {
+            "en": "fundamentals/06-type-conversion/README.md",
+            "pt-BR": "fundamentals/06-type-conversion/README.pt-BR.md",
+            "es": "fundamentals/06-type-conversion/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "fundamentals/06-type-conversion/examples/conversion_basics.py",
+            "fundamentals/06-type-conversion/examples/conversion_surprises.py"
+          ],
+          "previous_id": "fundamentals.type-and-isinstance",
+          "next_id": "strings-and-numbers.string-creation-and-indexing",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "strings-and-numbers",
+      "order": 2,
+      "slug": "strings-and-numbers",
+      "kind": "phase",
+      "educational_phase": 2,
+      "title": {
+        "en": "Strings and Numbers",
+        "pt-BR": "Textos e Números",
+        "es": "Textos y Números"
+      },
+      "index": {
+        "en": "strings-and-numbers/README.md",
+        "pt-BR": "strings-and-numbers/README.pt-BR.md",
+        "es": "strings-and-numbers/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "strings-and-numbers.string-creation-and-indexing",
+          "order": 0,
+          "slug": "string-creation-and-indexing",
+          "kind": "lesson",
+          "title": {
+            "en": "String creation and indexing",
+            "pt-BR": "Criação e indexação de strings",
+            "es": "Creación e indexación de strings"
+          },
+          "content": {
+            "en": "strings-and-numbers/01-string-creation-and-indexing/README.md",
+            "pt-BR": "strings-and-numbers/01-string-creation-and-indexing/README.pt-BR.md",
+            "es": "strings-and-numbers/01-string-creation-and-indexing/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "strings-and-numbers/01-string-creation-and-indexing/examples/fixed_position_text.py",
+            "strings-and-numbers/01-string-creation-and-indexing/examples/string_basics.py"
+          ],
+          "previous_id": "fundamentals.type-conversion",
+          "next_id": "strings-and-numbers.common-string-methods",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "strings-and-numbers.common-string-methods",
+          "order": 1,
+          "slug": "common-string-methods",
+          "kind": "lesson",
+          "title": {
+            "en": "Common string methods",
+            "pt-BR": "Métodos comuns de strings",
+            "es": "Métodos comunes de strings"
+          },
+          "content": {
+            "en": "strings-and-numbers/02-common-string-methods/README.md",
+            "pt-BR": "strings-and-numbers/02-common-string-methods/README.pt-BR.md",
+            "es": "strings-and-numbers/02-common-string-methods/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "strings-and-numbers/02-common-string-methods/examples/normalize_text.py",
+            "strings-and-numbers/02-common-string-methods/examples/split_and_join.py"
+          ],
+          "previous_id": "strings-and-numbers.string-creation-and-indexing",
+          "next_id": "strings-and-numbers.int-float-and-bool",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "strings-and-numbers.int-float-and-bool",
+          "order": 2,
+          "slug": "int-float-and-bool",
+          "kind": "lesson",
+          "title": {
+            "en": "int, float, and bool",
+            "pt-BR": "int, float e bool",
+            "es": "int, float y bool"
+          },
+          "content": {
+            "en": "strings-and-numbers/03-int-float-and-bool/README.md",
+            "pt-BR": "strings-and-numbers/03-int-float-and-bool/README.pt-BR.md",
+            "es": "strings-and-numbers/03-int-float-and-bool/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "strings-and-numbers/03-int-float-and-bool/examples/numeric_behavior.py",
+            "strings-and-numbers/03-int-float-and-bool/examples/truth_and_precision.py"
+          ],
+          "previous_id": "strings-and-numbers.common-string-methods",
+          "next_id": "strings-and-numbers.numeric-builtins",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "strings-and-numbers.numeric-builtins",
+          "order": 3,
+          "slug": "numeric-builtins",
+          "kind": "lesson",
+          "title": {
+            "en": "Numeric built-ins",
+            "pt-BR": "Funções numéricas embutidas",
+            "es": "Funciones numéricas incorporadas"
+          },
+          "content": {
+            "en": "strings-and-numbers/04-numeric-builtins/README.md",
+            "pt-BR": "strings-and-numbers/04-numeric-builtins/README.pt-BR.md",
+            "es": "strings-and-numbers/04-numeric-builtins/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "strings-and-numbers/04-numeric-builtins/examples/numeric_summary.py",
+            "strings-and-numbers/04-numeric-builtins/examples/rounding_behavior.py"
+          ],
+          "previous_id": "strings-and-numbers.int-float-and-bool",
+          "next_id": "collections.list-creation-and-indexing",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "collections",
+      "order": 3,
+      "slug": "collections",
+      "kind": "phase",
+      "educational_phase": 3,
+      "title": {
+        "en": "Collections",
+        "pt-BR": "Coleções",
+        "es": "Colecciones"
+      },
+      "index": {
+        "en": "collections/README.md",
+        "pt-BR": "collections/README.pt-BR.md",
+        "es": "collections/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "collections.list-creation-and-indexing",
+          "order": 0,
+          "slug": "list-creation-and-indexing",
+          "kind": "lesson",
+          "title": {
+            "en": "List creation, indexing, and slicing",
+            "pt-BR": "Criação, indexação e fatiamento de listas",
+            "es": "Creación, indexación y slicing de listas"
+          },
+          "content": {
+            "en": "collections/01-list-creation-and-indexing/README.md",
+            "pt-BR": "collections/01-list-creation-and-indexing/README.pt-BR.md",
+            "es": "collections/01-list-creation-and-indexing/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "collections/01-list-creation-and-indexing/examples/list_basics.py",
+            "collections/01-list-creation-and-indexing/examples/list_slicing.py"
+          ],
+          "previous_id": "strings-and-numbers.numeric-builtins",
+          "next_id": "collections.modifying-lists-and-methods",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "collections.modifying-lists-and-methods",
+          "order": 1,
+          "slug": "modifying-lists-and-methods",
+          "kind": "lesson",
+          "title": {
+            "en": "Modifying lists and common list methods",
+            "pt-BR": "Modificando listas e métodos comuns",
+            "es": "Modificar listas y métodos comunes"
+          },
+          "content": {
+            "en": "collections/02-modifying-lists-and-methods/README.md",
+            "pt-BR": "collections/02-modifying-lists-and-methods/README.pt-BR.md",
+            "es": "collections/02-modifying-lists-and-methods/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "collections/02-modifying-lists-and-methods/examples/list_copying.py",
+            "collections/02-modifying-lists-and-methods/examples/list_methods.py",
+            "collections/02-modifying-lists-and-methods/examples/list_mutation.py"
+          ],
+          "previous_id": "collections.list-creation-and-indexing",
+          "next_id": "collections.tuples-and-immutability",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "collections.tuples-and-immutability",
+          "order": 2,
+          "slug": "tuples-and-immutability",
+          "kind": "lesson",
+          "title": {
+            "en": "Tuples and immutability",
+            "pt-BR": "Tuplas e imutabilidade",
+            "es": "Tuplas e inmutabilidad"
+          },
+          "content": {
+            "en": "collections/03-tuples-and-immutability/README.md",
+            "pt-BR": "collections/03-tuples-and-immutability/README.pt-BR.md",
+            "es": "collections/03-tuples-and-immutability/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "collections/03-tuples-and-immutability/examples/tuple_basics.py",
+            "collections/03-tuples-and-immutability/examples/tuple_mutable_item.py",
+            "collections/03-tuples-and-immutability/examples/tuple_unpacking.py"
+          ],
+          "previous_id": "collections.modifying-lists-and-methods",
+          "next_id": "collections.dictionaries-keys-and-values",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "collections.dictionaries-keys-and-values",
+          "order": 3,
+          "slug": "dictionaries-keys-and-values",
+          "kind": "lesson",
+          "title": {
+            "en": "Dictionaries: keys and values",
+            "pt-BR": "Dicionários: chaves e valores",
+            "es": "Diccionarios: claves y valores"
+          },
+          "content": {
+            "en": "collections/04-dictionaries-keys-and-values/README.md",
+            "pt-BR": "collections/04-dictionaries-keys-and-values/README.pt-BR.md",
+            "es": "collections/04-dictionaries-keys-and-values/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "collections/04-dictionaries-keys-and-values/examples/dictionary_basics.py",
+            "collections/04-dictionaries-keys-and-values/examples/dictionary_mutation.py",
+            "collections/04-dictionaries-keys-and-values/examples/dictionary_views.py"
+          ],
+          "previous_id": "collections.tuples-and-immutability",
+          "next_id": "collections.sets-and-unique-values",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "collections.sets-and-unique-values",
+          "order": 4,
+          "slug": "sets-and-unique-values",
+          "kind": "lesson",
+          "title": {
+            "en": "Sets and unique values",
+            "pt-BR": "Conjuntos e valores únicos",
+            "es": "Conjuntos y valores únicos"
+          },
+          "content": {
+            "en": "collections/05-sets-and-unique-values/README.md",
+            "pt-BR": "collections/05-sets-and-unique-values/README.pt-BR.md",
+            "es": "collections/05-sets-and-unique-values/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "collections/05-sets-and-unique-values/examples/set_basics.py",
+            "collections/05-sets-and-unique-values/examples/set_mutation.py",
+            "collections/05-sets-and-unique-values/examples/set_operations.py"
+          ],
+          "previous_id": "collections.dictionaries-keys-and-values",
+          "next_id": "collections.choosing-the-right-collection",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "collections.choosing-the-right-collection",
+          "order": 5,
+          "slug": "choosing-the-right-collection",
+          "kind": "lesson",
+          "title": {
+            "en": "Choosing the right collection",
+            "pt-BR": "Escolhendo a coleção certa",
+            "es": "Elegir la colección adecuada"
+          },
+          "content": {
+            "en": "collections/06-choosing-the-right-collection/README.md",
+            "pt-BR": "collections/06-choosing-the-right-collection/README.pt-BR.md",
+            "es": "collections/06-choosing-the-right-collection/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "collections/06-choosing-the-right-collection/examples/collection_models.py",
+            "collections/06-choosing-the-right-collection/examples/collection_tradeoffs.py",
+            "collections/06-choosing-the-right-collection/examples/study_workspace.py"
+          ],
+          "previous_id": "collections.sets-and-unique-values",
+          "next_id": "program-flow.conditions-comparisons-and-boolean-logic",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "program-flow",
+      "order": 4,
+      "slug": "program-flow",
+      "kind": "phase",
+      "educational_phase": 4,
+      "title": {
+        "en": "Program Flow",
+        "pt-BR": "Fluxo do Programa",
+        "es": "Flujo del Programa"
+      },
+      "index": {
+        "en": "program-flow/README.md",
+        "pt-BR": "program-flow/README.pt-BR.md",
+        "es": "program-flow/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "program-flow.conditions-comparisons-and-boolean-logic",
+          "order": 0,
+          "slug": "conditions-comparisons-and-boolean-logic",
+          "kind": "lesson",
+          "title": {
+            "en": "Conditions, Comparisons, and Boolean Logic",
+            "pt-BR": "Condições, Comparações e Lógica Booleana",
+            "es": "Condiciones, Comparaciones y Lógica Booleana"
+          },
+          "content": {
+            "en": "program-flow/01-conditions-comparisons-and-boolean-logic/README.md",
+            "pt-BR": "program-flow/01-conditions-comparisons-and-boolean-logic/README.pt-BR.md",
+            "es": "program-flow/01-conditions-comparisons-and-boolean-logic/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "program-flow/01-conditions-comparisons-and-boolean-logic/examples/boolean_logic.py",
+            "program-flow/01-conditions-comparisons-and-boolean-logic/examples/comparison_results.py",
+            "program-flow/01-conditions-comparisons-and-boolean-logic/examples/truth_values.py"
+          ],
+          "previous_id": "collections.choosing-the-right-collection",
+          "next_id": "program-flow.if-elif-and-else",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "program-flow.if-elif-and-else",
+          "order": 1,
+          "slug": "if-elif-and-else",
+          "kind": "lesson",
+          "title": {
+            "en": "if, elif, and else",
+            "pt-BR": "if, elif e else",
+            "es": "if, elif y else"
+          },
+          "content": {
+            "en": "program-flow/02-if-elif-and-else/README.md",
+            "pt-BR": "program-flow/02-if-elif-and-else/README.pt-BR.md",
+            "es": "program-flow/02-if-elif-and-else/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "program-flow/02-if-elif-and-else/examples/basic_if.py",
+            "program-flow/02-if-elif-and-else/examples/if_elif_else.py",
+            "program-flow/02-if-elif-and-else/examples/independent_conditions.py"
+          ],
+          "previous_id": "program-flow.conditions-comparisons-and-boolean-logic",
+          "next_id": "program-flow.match-and-case",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "program-flow.match-and-case",
+          "order": 2,
+          "slug": "match-and-case",
+          "kind": "lesson",
+          "title": {
+            "en": "match and case: Structural Pattern Matching",
+            "pt-BR": "match e case: Correspondência de Padrões Estruturais",
+            "es": "match y case: Coincidencia de Patrones Estructurales"
+          },
+          "content": {
+            "en": "program-flow/03-match-and-case/README.md",
+            "pt-BR": "program-flow/03-match-and-case/README.pt-BR.md",
+            "es": "program-flow/03-match-and-case/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "program-flow/03-match-and-case/examples/literal_and_or_patterns.py",
+            "program-flow/03-match-and-case/examples/mapping_patterns_and_guards.py",
+            "program-flow/03-match-and-case/examples/sequence_patterns.py"
+          ],
+          "previous_id": "program-flow.if-elif-and-else",
+          "next_id": "program-flow.for-loops-and-iteration",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "program-flow.for-loops-and-iteration",
+          "order": 3,
+          "slug": "for-loops-and-iteration",
+          "kind": "lesson",
+          "title": {
+            "en": "for Loops and Iteration",
+            "pt-BR": "Loops for e Iteração",
+            "es": "Bucles for e Iteración"
+          },
+          "content": {
+            "en": "program-flow/04-for-loops-and-iteration/README.md",
+            "pt-BR": "program-flow/04-for-loops-and-iteration/README.pt-BR.md",
+            "es": "program-flow/04-for-loops-and-iteration/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "program-flow/04-for-loops-and-iteration/examples/collection_iteration.py",
+            "program-flow/04-for-loops-and-iteration/examples/dictionary_iteration.py",
+            "program-flow/04-for-loops-and-iteration/examples/filter_and_collect.py"
+          ],
+          "previous_id": "program-flow.match-and-case",
+          "next_id": "program-flow.range-enumerate-and-zip",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "program-flow.range-enumerate-and-zip",
+          "order": 4,
+          "slug": "range-enumerate-and-zip",
+          "kind": "lesson",
+          "title": {
+            "en": "range(), enumerate(), and zip()",
+            "pt-BR": "range(), enumerate() e zip()",
+            "es": "range(), enumerate() y zip()"
+          },
+          "content": {
+            "en": "program-flow/05-range-enumerate-and-zip/README.md",
+            "pt-BR": "program-flow/05-range-enumerate-and-zip/README.pt-BR.md",
+            "es": "program-flow/05-range-enumerate-and-zip/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "program-flow/05-range-enumerate-and-zip/examples/enumerate_positions.py",
+            "program-flow/05-range-enumerate-and-zip/examples/range_progressions.py",
+            "program-flow/05-range-enumerate-and-zip/examples/zip_parallel_iteration.py"
+          ],
+          "previous_id": "program-flow.for-loops-and-iteration",
+          "next_id": "program-flow.while-loops-and-state-driven-repetition",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "program-flow.while-loops-and-state-driven-repetition",
+          "order": 5,
+          "slug": "while-loops-and-state-driven-repetition",
+          "kind": "lesson",
+          "title": {
+            "en": "while Loops and State-Driven Repetition",
+            "pt-BR": "Loops while e Repetição Guiada por Estado",
+            "es": "Bucles while y Repetición Guiada por Estado"
+          },
+          "content": {
+            "en": "program-flow/06-while-loops-and-state-driven-repetition/README.md",
+            "pt-BR": "program-flow/06-while-loops-and-state-driven-repetition/README.pt-BR.md",
+            "es": "program-flow/06-while-loops-and-state-driven-repetition/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "program-flow/06-while-loops-and-state-driven-repetition/examples/countdown_state.py",
+            "program-flow/06-while-loops-and-state-driven-repetition/examples/doubling_until_limit.py",
+            "program-flow/06-while-loops-and-state-driven-repetition/examples/study_target.py"
+          ],
+          "previous_id": "program-flow.range-enumerate-and-zip",
+          "next_id": "program-flow.break-continue-and-loop-else",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "program-flow.break-continue-and-loop-else",
+          "order": 6,
+          "slug": "break-continue-and-loop-else",
+          "kind": "lesson",
+          "title": {
+            "en": "break, continue, and Loop else",
+            "pt-BR": "break, continue e else de Loops",
+            "es": "break, continue y else de Bucles"
+          },
+          "content": {
+            "en": "program-flow/07-break-continue-and-loop-else/README.md",
+            "pt-BR": "program-flow/07-break-continue-and-loop-else/README.pt-BR.md",
+            "es": "program-flow/07-break-continue-and-loop-else/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "program-flow/07-break-continue-and-loop-else/examples/break_search.py",
+            "program-flow/07-break-continue-and-loop-else/examples/continue_filtering.py",
+            "program-flow/07-break-continue-and-loop-else/examples/loop_else_search.py"
+          ],
+          "previous_id": "program-flow.while-loops-and-state-driven-repetition",
+          "next_id": "program-flow.choosing-and-combining-program-flow",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "program-flow.choosing-and-combining-program-flow",
+          "order": 7,
+          "slug": "choosing-and-combining-program-flow",
+          "kind": "lesson",
+          "title": {
+            "en": "Choosing and Combining Program Flow",
+            "pt-BR": "Escolhendo e Combinando o Fluxo do Programa",
+            "es": "Elegir y Combinar el Flujo del Programa"
+          },
+          "content": {
+            "en": "program-flow/08-choosing-and-combining-program-flow/README.md",
+            "pt-BR": "program-flow/08-choosing-and-combining-program-flow/README.pt-BR.md",
+            "es": "program-flow/08-choosing-and-combining-program-flow/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "program-flow/08-choosing-and-combining-program-flow/examples/search_with_position.py",
+            "program-flow/08-choosing-and-combining-program-flow/examples/select_and_classify.py",
+            "program-flow/08-choosing-and-combining-program-flow/examples/state_driven_workflow.py"
+          ],
+          "previous_id": "program-flow.break-continue-and-loop-else",
+          "next_id": "functions.defining-and-calling-functions",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "functions",
+      "order": 5,
+      "slug": "functions",
+      "kind": "phase",
+      "educational_phase": 5,
+      "title": {
+        "en": "Functions",
+        "pt-BR": "Funções",
+        "es": "Funciones"
+      },
+      "index": {
+        "en": "functions/README.md",
+        "pt-BR": "functions/README.pt-BR.md",
+        "es": "functions/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "functions.defining-and-calling-functions",
+          "order": 0,
+          "slug": "defining-and-calling-functions",
+          "kind": "lesson",
+          "title": {
+            "en": "Defining and Calling Functions",
+            "pt-BR": "Definindo e Chamando Funções",
+            "es": "Definir y Llamar Funciones"
+          },
+          "content": {
+            "en": "functions/01-defining-and-calling-functions/README.md",
+            "pt-BR": "functions/01-defining-and-calling-functions/README.pt-BR.md",
+            "es": "functions/01-defining-and-calling-functions/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "functions/01-defining-and-calling-functions/examples/define_and_call.py",
+            "functions/01-defining-and-calling-functions/examples/execution_order.py",
+            "functions/01-defining-and-calling-functions/examples/repeated_calls.py"
+          ],
+          "previous_id": "program-flow.choosing-and-combining-program-flow",
+          "next_id": "functions.parameters-and-arguments",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "functions.parameters-and-arguments",
+          "order": 1,
+          "slug": "parameters-and-arguments",
+          "kind": "lesson",
+          "title": {
+            "en": "Parameters and Arguments",
+            "pt-BR": "Parâmetros e Argumentos",
+            "es": "Parámetros y Argumentos"
+          },
+          "content": {
+            "en": "functions/02-parameters-and-arguments/README.md",
+            "pt-BR": "functions/02-parameters-and-arguments/README.pt-BR.md",
+            "es": "functions/02-parameters-and-arguments/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "functions/02-parameters-and-arguments/examples/book_details.py",
+            "functions/02-parameters-and-arguments/examples/greet_people.py",
+            "functions/02-parameters-and-arguments/examples/score_status.py"
+          ],
+          "previous_id": "functions.defining-and-calling-functions",
+          "next_id": "functions.return-values",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "functions.return-values",
+          "order": 2,
+          "slug": "return-values",
+          "kind": "lesson",
+          "title": {
+            "en": "Return Values",
+            "pt-BR": "Valores de Retorno",
+            "es": "Valores de Retorno"
+          },
+          "content": {
+            "en": "functions/03-return-values/README.md",
+            "pt-BR": "functions/03-return-values/README.pt-BR.md",
+            "es": "functions/03-return-values/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "functions/03-return-values/examples/calculate_total.py",
+            "functions/03-return-values/examples/classify_score.py",
+            "functions/03-return-values/examples/find_first_even.py"
+          ],
+          "previous_id": "functions.parameters-and-arguments",
+          "next_id": "functions.scope",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "functions.scope",
+          "order": 3,
+          "slug": "scope",
+          "kind": "lesson",
+          "title": {
+            "en": "Scope",
+            "pt-BR": "Escopo",
+            "es": "Alcance"
+          },
+          "content": {
+            "en": "functions/04-scope/README.md",
+            "pt-BR": "functions/04-scope/README.pt-BR.md",
+            "es": "functions/04-scope/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "functions/04-scope/examples/local_and_global_names.py",
+            "functions/04-scope/examples/separate_function_calls.py",
+            "functions/04-scope/examples/shadowing_names.py"
+          ],
+          "previous_id": "functions.return-values",
+          "next_id": "functions.type-hints",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "functions.type-hints",
+          "order": 4,
+          "slug": "type-hints",
+          "kind": "lesson",
+          "title": {
+            "en": "Type Hints",
+            "pt-BR": "Type Hints",
+            "es": "Type Hints"
+          },
+          "content": {
+            "en": "functions/05-type-hints/README.md",
+            "pt-BR": "functions/05-type-hints/README.pt-BR.md",
+            "es": "functions/05-type-hints/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "functions/05-type-hints/examples/annotated_greeting.py",
+            "functions/05-type-hints/examples/collection_summary.py",
+            "functions/05-type-hints/examples/runtime_does_not_enforce.py"
+          ],
+          "previous_id": "functions.scope",
+          "next_id": "functions.default-values",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "functions.default-values",
+          "order": 5,
+          "slug": "default-values",
+          "kind": "lesson",
+          "title": {
+            "en": "Default Values",
+            "pt-BR": "Valores Padrão",
+            "es": "Valores Predeterminados"
+          },
+          "content": {
+            "en": "functions/06-default-values/README.md",
+            "pt-BR": "functions/06-default-values/README.pt-BR.md",
+            "es": "functions/06-default-values/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "functions/06-default-values/examples/greet_with_style.py",
+            "functions/06-default-values/examples/safe_list_default.py",
+            "functions/06-default-values/examples/shipping_quote.py"
+          ],
+          "previous_id": "functions.type-hints",
+          "next_id": "functions.args-and-kwargs",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "functions.args-and-kwargs",
+          "order": 6,
+          "slug": "args-and-kwargs",
+          "kind": "lesson",
+          "title": {
+            "en": "*args and **kwargs",
+            "pt-BR": "*args e **kwargs",
+            "es": "*args y **kwargs"
+          },
+          "content": {
+            "en": "functions/07-args-and-kwargs/README.md",
+            "pt-BR": "functions/07-args-and-kwargs/README.pt-BR.md",
+            "es": "functions/07-args-and-kwargs/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "functions/07-args-and-kwargs/examples/calculate_average.py",
+            "functions/07-args-and-kwargs/examples/describe_session.py",
+            "functions/07-args-and-kwargs/examples/display_settings.py"
+          ],
+          "previous_id": "functions.default-values",
+          "next_id": "functions.functions-working-together",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "functions.functions-working-together",
+          "order": 7,
+          "slug": "functions-working-together",
+          "kind": "lesson",
+          "title": {
+            "en": "Functions Working Together",
+            "pt-BR": "Funções Trabalhando Juntas",
+            "es": "Funciones Trabajando Juntas"
+          },
+          "content": {
+            "en": "functions/08-functions-working-together/README.md",
+            "pt-BR": "functions/08-functions-working-together/README.pt-BR.md",
+            "es": "functions/08-functions-working-together/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "functions/08-functions-working-together/examples/build_score_report.py",
+            "functions/08-functions-working-together/examples/build_study_summary.py",
+            "functions/08-functions-working-together/examples/prepare_greeting.py"
+          ],
+          "previous_id": "functions.args-and-kwargs",
+          "next_id": "functions.data-flow-between-functions",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "functions.data-flow-between-functions",
+          "order": 8,
+          "slug": "data-flow-between-functions",
+          "kind": "lesson",
+          "title": {
+            "en": "Data Flow Between Functions",
+            "pt-BR": "Fluxo de Dados Entre Funções",
+            "es": "Flujo de Datos Entre Funciones"
+          },
+          "content": {
+            "en": "functions/09-data-flow-between-functions/README.md",
+            "pt-BR": "functions/09-data-flow-between-functions/README.pt-BR.md",
+            "es": "functions/09-data-flow-between-functions/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "functions/09-data-flow-between-functions/examples/build_learning_report.py",
+            "functions/09-data-flow-between-functions/examples/rebinding_and_mutation.py",
+            "functions/09-data-flow-between-functions/examples/trace_score_pipeline.py"
+          ],
+          "previous_id": "functions.functions-working-together",
+          "next_id": "comments-and-documentation.comments",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "comments-and-documentation",
+      "order": 6,
+      "slug": "comments-and-documentation",
+      "kind": "phase",
+      "educational_phase": 6,
+      "title": {
+        "en": "Comments, Documentation, and Clean Code",
+        "pt-BR": "Comentários, Documentação e Código Limpo",
+        "es": "Comentarios, Documentación y Código Limpio"
+      },
+      "index": {
+        "en": "comments-and-documentation/README.md",
+        "pt-BR": "comments-and-documentation/README.pt-BR.md",
+        "es": "comments-and-documentation/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "comments-and-documentation.comments",
+          "order": 0,
+          "slug": "comments",
+          "kind": "lesson",
+          "title": {
+            "en": "Comments in Python",
+            "pt-BR": "Comentários em Python",
+            "es": "Comentarios en Python"
+          },
+          "content": {
+            "en": "comments-and-documentation/01-comments/README.md",
+            "pt-BR": "comments-and-documentation/01-comments/README.pt-BR.md",
+            "es": "comments-and-documentation/01-comments/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "comments-and-documentation/01-comments/examples/business_rule_comments.py",
+            "comments-and-documentation/01-comments/examples/unnecessary_comments.py",
+            "comments-and-documentation/01-comments/examples/useful_comments.py"
+          ],
+          "previous_id": "functions.data-flow-between-functions",
+          "next_id": "comments-and-documentation.docstrings",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "comments-and-documentation.docstrings",
+          "order": 1,
+          "slug": "docstrings",
+          "kind": "lesson",
+          "title": {
+            "en": "Docstrings in Python",
+            "pt-BR": "Docstrings em Python",
+            "es": "Docstrings en Python"
+          },
+          "content": {
+            "en": "comments-and-documentation/02-docstrings/README.md",
+            "pt-BR": "comments-and-documentation/02-docstrings/README.pt-BR.md",
+            "es": "comments-and-documentation/02-docstrings/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "comments-and-documentation/02-docstrings/examples/class_docstrings.py",
+            "comments-and-documentation/02-docstrings/examples/function_docstrings.py",
+            "comments-and-documentation/02-docstrings/examples/inspect_docstrings.py"
+          ],
+          "previous_id": "comments-and-documentation.comments",
+          "next_id": "comments-and-documentation.meaningful-names",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "comments-and-documentation.meaningful-names",
+          "order": 2,
+          "slug": "meaningful-names",
+          "kind": "lesson",
+          "title": {
+            "en": "Meaningful Names and Self-Explanatory Code",
+            "pt-BR": "Nomes significativos e código autoexplicativo",
+            "es": "Nombres significativos y código autoexplicativo"
+          },
+          "content": {
+            "en": "comments-and-documentation/03-meaningful-names/README.md",
+            "pt-BR": "comments-and-documentation/03-meaningful-names/README.pt-BR.md",
+            "es": "comments-and-documentation/03-meaningful-names/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "comments-and-documentation/03-meaningful-names/examples/booleans_and_units.py",
+            "comments-and-documentation/03-meaningful-names/examples/refactor_for_intent.py",
+            "comments-and-documentation/03-meaningful-names/examples/vague_and_clear_names.py"
+          ],
+          "previous_id": "comments-and-documentation.docstrings",
+          "next_id": "comments-and-documentation.task-markers",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "comments-and-documentation.task-markers",
+          "order": 3,
+          "slug": "task-markers",
+          "kind": "lesson",
+          "title": {
+            "en": "Task Markers and Technical Follow-up",
+            "pt-BR": "Marcadores de tarefas e acompanhamento técnico",
+            "es": "Marcadores de tareas y seguimiento técnico"
+          },
+          "content": {
+            "en": "comments-and-documentation/04-task-markers/README.md",
+            "pt-BR": "comments-and-documentation/04-task-markers/README.pt-BR.md",
+            "es": "comments-and-documentation/04-task-markers/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "comments-and-documentation/04-task-markers/examples/actionable_markers.py",
+            "comments-and-documentation/04-task-markers/examples/scan_markers.py",
+            "comments-and-documentation/04-task-markers/examples/temporary_workaround.py"
+          ],
+          "previous_id": "comments-and-documentation.meaningful-names",
+          "next_id": "comments-and-documentation.comments-vs-logging",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "comments-and-documentation.comments-vs-logging",
+          "order": 4,
+          "slug": "comments-vs-logging",
+          "kind": "lesson",
+          "title": {
+            "en": "Comments versus Logging in Python",
+            "pt-BR": "Comentários versus Logging em Python",
+            "es": "Comentarios frente a Logging en Python"
+          },
+          "content": {
+            "en": "comments-and-documentation/05-comments-vs-logging/README.md",
+            "pt-BR": "comments-and-documentation/05-comments-vs-logging/README.pt-BR.md",
+            "es": "comments-and-documentation/05-comments-vs-logging/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "comments-and-documentation/05-comments-vs-logging/examples/application_and_library_logging.py",
+            "comments-and-documentation/05-comments-vs-logging/examples/comments_vs_logging.py",
+            "comments-and-documentation/05-comments-vs-logging/examples/logging_levels.py"
+          ],
+          "previous_id": "comments-and-documentation.task-markers",
+          "next_id": "comments-and-documentation.pep8-and-readability",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "comments-and-documentation.pep8-and-readability",
+          "order": 5,
+          "slug": "pep8-and-readability",
+          "kind": "lesson",
+          "title": {
+            "en": "PEP 8 and Readability in Python",
+            "pt-BR": "PEP 8 e legibilidade em Python",
+            "es": "PEP 8 y legibilidad en Python"
+          },
+          "content": {
+            "en": "comments-and-documentation/06-pep8-and-readability/README.md",
+            "pt-BR": "comments-and-documentation/06-pep8-and-readability/README.pt-BR.md",
+            "es": "comments-and-documentation/06-pep8-and-readability/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "comments-and-documentation/06-pep8-and-readability/examples/imports_and_names.py",
+            "comments-and-documentation/06-pep8-and-readability/examples/readable_layout.py",
+            "comments-and-documentation/06-pep8-and-readability/examples/refactor_for_readability.py"
+          ],
+          "previous_id": "comments-and-documentation.comments-vs-logging",
+          "next_id": "errors-files-and-modules.try-except-else-finally",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "errors-files-and-modules",
+      "order": 7,
+      "slug": "errors-files-and-modules",
+      "kind": "phase",
+      "educational_phase": 7,
+      "title": {
+        "en": "Errors, Files, and Modules",
+        "pt-BR": "Erros, Arquivos e Módulos",
+        "es": "Errores, Archivos y Módulos"
+      },
+      "index": {
+        "en": "errors-files-and-modules/README.md",
+        "pt-BR": "errors-files-and-modules/README.pt-BR.md",
+        "es": "errors-files-and-modules/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "errors-files-and-modules.try-except-else-finally",
+          "order": 0,
+          "slug": "try-except-else-finally",
+          "kind": "lesson",
+          "title": {
+            "en": "Handling Exceptions with try, except, else, and finally",
+            "pt-BR": "Tratando Exceções com try, except, else e finally",
+            "es": "Manejo de Excepciones con try, except, else y finally"
+          },
+          "content": {
+            "en": "errors-files-and-modules/01-try-except-else-finally/README.md",
+            "pt-BR": "errors-files-and-modules/01-try-except-else-finally/README.pt-BR.md",
+            "es": "errors-files-and-modules/01-try-except-else-finally/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "errors-files-and-modules/01-try-except-else-finally/examples/parse_integer.py",
+            "errors-files-and-modules/01-try-except-else-finally/examples/safe_divide.py",
+            "errors-files-and-modules/01-try-except-else-finally/examples/trace_try_else_finally.py"
+          ],
+          "previous_id": "comments-and-documentation.pep8-and-readability",
+          "next_id": "errors-files-and-modules.raise-and-custom-exceptions",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "errors-files-and-modules.raise-and-custom-exceptions",
+          "order": 1,
+          "slug": "raise-and-custom-exceptions",
+          "kind": "lesson",
+          "title": {
+            "en": "Raising and Custom Exceptions",
+            "pt-BR": "Levantando Exceções e Criando Exceções Personalizadas",
+            "es": "Lanzar Excepciones y Crear Excepciones Personalizadas"
+          },
+          "content": {
+            "en": "errors-files-and-modules/02-raise-and-custom-exceptions/README.md",
+            "pt-BR": "errors-files-and-modules/02-raise-and-custom-exceptions/README.pt-BR.md",
+            "es": "errors-files-and-modules/02-raise-and-custom-exceptions/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "errors-files-and-modules/02-raise-and-custom-exceptions/examples/custom_exception.py",
+            "errors-files-and-modules/02-raise-and-custom-exceptions/examples/exception_chaining.py",
+            "errors-files-and-modules/02-raise-and-custom-exceptions/examples/validate_score.py"
+          ],
+          "previous_id": "errors-files-and-modules.try-except-else-finally",
+          "next_id": "errors-files-and-modules.open-and-with",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "errors-files-and-modules.open-and-with",
+          "order": 2,
+          "slug": "open-and-with",
+          "kind": "lesson",
+          "title": {
+            "en": "Opening Files Safely with open() and with",
+            "pt-BR": "Abrindo Arquivos com Segurança com open() e with",
+            "es": "Abrir Archivos de Forma Segura con open() y with"
+          },
+          "content": {
+            "en": "errors-files-and-modules/03-open-and-with/README.md",
+            "pt-BR": "errors-files-and-modules/03-open-and-with/README.pt-BR.md",
+            "es": "errors-files-and-modules/03-open-and-with/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "errors-files-and-modules/03-open-and-with/examples/append_text.py",
+            "errors-files-and-modules/03-open-and-with/examples/handle_missing_file.py",
+            "errors-files-and-modules/03-open-and-with/examples/write_and_read_text.py"
+          ],
+          "previous_id": "errors-files-and-modules.raise-and-custom-exceptions",
+          "next_id": "errors-files-and-modules.txt-csv-and-json",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "errors-files-and-modules.txt-csv-and-json",
+          "order": 3,
+          "slug": "txt-csv-and-json",
+          "kind": "lesson",
+          "title": {
+            "en": "Working with TXT, CSV, and JSON",
+            "pt-BR": "Trabalhando com TXT, CSV e JSON",
+            "es": "Trabajar con TXT, CSV y JSON"
+          },
+          "content": {
+            "en": "errors-files-and-modules/04-txt-csv-and-json/README.md",
+            "pt-BR": "errors-files-and-modules/04-txt-csv-and-json/README.pt-BR.md",
+            "es": "errors-files-and-modules/04-txt-csv-and-json/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "errors-files-and-modules/04-txt-csv-and-json/examples/csv_records.py",
+            "errors-files-and-modules/04-txt-csv-and-json/examples/handle_invalid_json.py",
+            "errors-files-and-modules/04-txt-csv-and-json/examples/json_document.py",
+            "errors-files-and-modules/04-txt-csv-and-json/examples/text_records.py"
+          ],
+          "previous_id": "errors-files-and-modules.open-and-with",
+          "next_id": "errors-files-and-modules.imports-modules-and-packages",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "errors-files-and-modules.imports-modules-and-packages",
+          "order": 4,
+          "slug": "imports-modules-and-packages",
+          "kind": "lesson",
+          "title": {
+            "en": "Organizing Code with Imports, Modules, and Packages",
+            "pt-BR": "Organizando Código com Imports, Módulos e Pacotes",
+            "es": "Organizar Código con Imports, Módulos y Paquetes"
+          },
+          "content": {
+            "en": "errors-files-and-modules/05-imports-modules-and-packages/README.md",
+            "pt-BR": "errors-files-and-modules/05-imports-modules-and-packages/README.pt-BR.md",
+            "es": "errors-files-and-modules/05-imports-modules-and-packages/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "errors-files-and-modules/05-imports-modules-and-packages/examples/grade_tools.py",
+            "errors-files-and-modules/05-imports-modules-and-packages/examples/import_standard_library.py",
+            "errors-files-and-modules/05-imports-modules-and-packages/examples/main_guard.py",
+            "errors-files-and-modules/05-imports-modules-and-packages/examples/module_demo.py",
+            "errors-files-and-modules/05-imports-modules-and-packages/examples/package_demo.py",
+            "errors-files-and-modules/05-imports-modules-and-packages/examples/study_tools/__init__.py",
+            "errors-files-and-modules/05-imports-modules-and-packages/examples/study_tools/formatting.py"
+          ],
+          "previous_id": "errors-files-and-modules.txt-csv-and-json",
+          "next_id": "standard-library.pathlib",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "standard-library",
+      "order": 8,
+      "slug": "standard-library",
+      "kind": "phase",
+      "educational_phase": 8,
+      "title": {
+        "en": "Standard Library",
+        "pt-BR": "Biblioteca Padrão",
+        "es": "Biblioteca Estándar"
+      },
+      "index": {
+        "en": "standard-library/README.md",
+        "pt-BR": "standard-library/README.pt-BR.md",
+        "es": "standard-library/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "standard-library.pathlib",
+          "order": 0,
+          "slug": "pathlib",
+          "kind": "lesson",
+          "title": {
+            "en": "Working with Filesystem Paths Using pathlib",
+            "pt-BR": "Trabalhando com Caminhos do Sistema de Arquivos Usando pathlib",
+            "es": "Trabajar con Rutas del Sistema de Archivos Usando pathlib"
+          },
+          "content": {
+            "en": "standard-library/01-pathlib/README.md",
+            "pt-BR": "standard-library/01-pathlib/README.pt-BR.md",
+            "es": "standard-library/01-pathlib/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "standard-library/01-pathlib/examples/discover_python_files.py",
+            "standard-library/01-pathlib/examples/inspect_paths.py",
+            "standard-library/01-pathlib/examples/path_parts.py",
+            "standard-library/01-pathlib/examples/text_workspace.py"
+          ],
+          "previous_id": "errors-files-and-modules.imports-modules-and-packages",
+          "next_id": "standard-library.datetime",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "standard-library.datetime",
+          "order": 1,
+          "slug": "datetime",
+          "kind": "lesson",
+          "title": {
+            "en": "Working with Dates and Time Calculations Using datetime",
+            "pt-BR": "Trabalhando com Datas e Cálculos de Tempo Usando datetime",
+            "es": "Trabajar con Fechas y Cálculos de Tiempo Usando datetime"
+          },
+          "content": {
+            "en": "standard-library/02-datetime/README.md",
+            "pt-BR": "standard-library/02-datetime/README.pt-BR.md",
+            "es": "standard-library/02-datetime/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "standard-library/02-datetime/examples/date_arithmetic.py",
+            "standard-library/02-datetime/examples/duration_seconds.py",
+            "standard-library/02-datetime/examples/parse_and_format.py",
+            "standard-library/02-datetime/examples/utc_conversion.py"
+          ],
+          "previous_id": "standard-library.pathlib",
+          "next_id": "standard-library.json",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "standard-library.json",
+          "order": 2,
+          "slug": "json",
+          "kind": "lesson",
+          "title": {
+            "en": "Controlling JSON Serialization and Decoding Contracts",
+            "pt-BR": "Controlando Contratos de Serialização e Decodificação JSON",
+            "es": "Controlando Contratos de Serialización y Decodificación JSON"
+          },
+          "content": {
+            "en": "standard-library/03-json/README.md",
+            "pt-BR": "standard-library/03-json/README.pt-BR.md",
+            "es": "standard-library/03-json/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "standard-library/03-json/examples/decimal_decode.py",
+            "standard-library/03-json/examples/deterministic_json.py",
+            "standard-library/03-json/examples/reject_duplicate_keys.py",
+            "standard-library/03-json/examples/strict_numbers.py"
+          ],
+          "previous_id": "standard-library.datetime",
+          "next_id": "standard-library.csv",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "standard-library.csv",
+          "order": 3,
+          "slug": "csv",
+          "kind": "lesson",
+          "title": {
+            "en": "Controlling CSV Dialects and Tabular Text Contracts",
+            "pt-BR": "Controlando Dialetos CSV e Contratos de Texto Tabular",
+            "es": "Controlando Dialectos CSV y Contratos de Texto Tabular"
+          },
+          "content": {
+            "en": "standard-library/04-csv/README.md",
+            "pt-BR": "standard-library/04-csv/README.pt-BR.md",
+            "es": "standard-library/04-csv/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "standard-library/04-csv/examples/dialect_round_trip.py",
+            "standard-library/04-csv/examples/quote_none_escape.py",
+            "standard-library/04-csv/examples/sniff_delimiter.py",
+            "standard-library/04-csv/examples/validate_dict_rows.py"
+          ],
+          "previous_id": "standard-library.json",
+          "next_id": "standard-library.logging",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "standard-library.logging",
+          "order": 4,
+          "slug": "logging",
+          "kind": "lesson",
+          "title": {
+            "en": "Engineering Logging Pipelines and Runtime Context Contracts",
+            "pt-BR": "Projetando Pipelines de Logging e Contratos de Contexto em Runtime",
+            "es": "Diseñando Pipelines de Logging y Contratos de Contexto en Runtime"
+          },
+          "content": {
+            "en": "standard-library/05-logging/README.md",
+            "pt-BR": "standard-library/05-logging/README.pt-BR.md",
+            "es": "standard-library/05-logging/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "standard-library/05-logging/examples/context_filter.py",
+            "standard-library/05-logging/examples/dict_config_routing.py",
+            "standard-library/05-logging/examples/queue_listener.py",
+            "standard-library/05-logging/examples/stacklevel_helper.py"
+          ],
+          "previous_id": "standard-library.csv",
+          "next_id": "standard-library.collections",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "standard-library.collections",
+          "order": 5,
+          "slug": "collections",
+          "kind": "lesson",
+          "title": {
+            "en": "Specialized Containers and Collection Contracts",
+            "pt-BR": "Contêineres Especializados e Contratos de Coleções",
+            "es": "Contenedores Especializados y Contratos de Colecciones"
+          },
+          "content": {
+            "en": "standard-library/06-collections/README.md",
+            "pt-BR": "standard-library/06-collections/README.pt-BR.md",
+            "es": "standard-library/06-collections/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "standard-library/06-collections/examples/bounded_deque.py",
+            "standard-library/06-collections/examples/chainmap_config.py",
+            "standard-library/06-collections/examples/counter_inventory.py",
+            "standard-library/06-collections/examples/defaultdict_grouping.py"
+          ],
+          "previous_id": "standard-library.logging",
+          "next_id": "standard-library.itertools",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "standard-library.itertools",
+          "order": 6,
+          "slug": "itertools",
+          "kind": "lesson",
+          "title": {
+            "en": "Engineering Lazy Iterator Pipelines with itertools",
+            "pt-BR": "Projetando Pipelines Lazy de Iteradores com itertools",
+            "es": "Diseñando Pipelines Lazy de Iteradores con itertools"
+          },
+          "content": {
+            "en": "standard-library/07-itertools/README.md",
+            "pt-BR": "standard-library/07-itertools/README.pt-BR.md",
+            "es": "standard-library/07-itertools/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "standard-library/07-itertools/examples/combinatoric_options.py",
+            "standard-library/07-itertools/examples/groupby_runs.py",
+            "standard-library/07-itertools/examples/lazy_pipeline.py",
+            "standard-library/07-itertools/examples/pairwise_deltas.py"
+          ],
+          "previous_id": "standard-library.collections",
+          "next_id": "standard-library.decimal",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "standard-library.decimal",
+          "order": 7,
+          "slug": "decimal",
+          "kind": "lesson",
+          "title": {
+            "en": "Engineering Decimal Precision and Rounding Contracts",
+            "pt-BR": "Projetando Contratos de Precisão e Arredondamento Decimal",
+            "es": "Diseñando Contratos de Precisión y Redondeo Decimal"
+          },
+          "content": {
+            "en": "standard-library/08-decimal/README.md",
+            "pt-BR": "standard-library/08-decimal/README.pt-BR.md",
+            "es": "standard-library/08-decimal/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "standard-library/08-decimal/examples/exact_amounts.py",
+            "standard-library/08-decimal/examples/local_context_precision.py",
+            "standard-library/08-decimal/examples/monitor_rounding.py",
+            "standard-library/08-decimal/examples/validate_scale.py"
+          ],
+          "previous_id": "standard-library.itertools",
+          "next_id": "standard-library.os-shutil",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "standard-library.os-shutil",
+          "order": 8,
+          "slug": "os-shutil",
+          "kind": "lesson",
+          "title": {
+            "en": "Engineering OS and Filesystem Operations with os and shutil",
+            "pt-BR": "Projetando Operações de Sistema Operacional e Arquivos com os e shutil",
+            "es": "Diseñando Operaciones de Sistema Operativo y Archivos con os y shutil"
+          },
+          "content": {
+            "en": "standard-library/09-os-shutil/README.md",
+            "pt-BR": "standard-library/09-os-shutil/README.pt-BR.md",
+            "es": "standard-library/09-os-shutil/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "standard-library/09-os-shutil/examples/copy_tree_and_move.py",
+            "standard-library/09-os-shutil/examples/environment_contract.py",
+            "standard-library/09-os-shutil/examples/scan_directory.py",
+            "standard-library/09-os-shutil/examples/walk_with_pruning.py"
+          ],
+          "previous_id": "standard-library.decimal",
+          "next_id": "external-libraries.pandas",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "external-libraries",
+      "order": 9,
+      "slug": "external-libraries",
+      "kind": "phase",
+      "educational_phase": 9,
+      "title": {
+        "en": "External Libraries",
+        "pt-BR": "Bibliotecas Externas",
+        "es": "Bibliotecas Externas"
+      },
+      "index": {
+        "en": "external-libraries/README.md",
+        "pt-BR": "external-libraries/README.pt-BR.md",
+        "es": "external-libraries/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "external-libraries.pandas",
+          "order": 0,
+          "slug": "pandas",
+          "kind": "lesson",
+          "title": {
+            "en": "pandas: Working with Tabular Data",
+            "pt-BR": "pandas: Trabalhando com Dados Tabulares",
+            "es": "pandas: Trabajando con Datos Tabulares"
+          },
+          "content": {
+            "en": "external-libraries/01-pandas/README.md",
+            "pt-BR": "external-libraries/01-pandas/README.pt-BR.md",
+            "es": "external-libraries/01-pandas/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "external-libraries/01-pandas/examples/csv_pipeline.py",
+            "external-libraries/01-pandas/examples/dataframe_basics.py",
+            "external-libraries/01-pandas/examples/filter_and_assign.py",
+            "external-libraries/01-pandas/examples/groupby_summary.py",
+            "external-libraries/01-pandas/examples/merge_tables.py"
+          ],
+          "previous_id": "standard-library.os-shutil",
+          "next_id": "external-libraries.openpyxl",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified",
+          "dependency_paths": [
+            "requirements-external.txt"
+          ]
+        },
+        {
+          "id": "external-libraries.openpyxl",
+          "order": 1,
+          "slug": "openpyxl",
+          "kind": "lesson",
+          "title": {
+            "en": "openpyxl: Automating Excel Workbooks",
+            "pt-BR": "openpyxl: Automatizando Workbooks do Excel",
+            "es": "openpyxl: Automatizando Libros de Excel"
+          },
+          "content": {
+            "en": "external-libraries/02-openpyxl/README.md",
+            "pt-BR": "external-libraries/02-openpyxl/README.pt-BR.md",
+            "es": "external-libraries/02-openpyxl/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "external-libraries/02-openpyxl/examples/load_and_iterate.py",
+            "external-libraries/02-openpyxl/examples/styled_report.py",
+            "external-libraries/02-openpyxl/examples/table_and_validation.py",
+            "external-libraries/02-openpyxl/examples/workbook_basics.py",
+            "external-libraries/02-openpyxl/examples/write_only_export.py"
+          ],
+          "previous_id": "external-libraries.pandas",
+          "next_id": "external-libraries.requests",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified",
+          "dependency_paths": [
+            "requirements-external.txt"
+          ]
+        },
+        {
+          "id": "external-libraries.requests",
+          "order": 2,
+          "slug": "requests",
+          "kind": "lesson",
+          "title": {
+            "en": "requests: Consuming HTTP APIs",
+            "pt-BR": "requests: Consumindo APIs HTTP",
+            "es": "requests: Consumiendo APIs HTTP"
+          },
+          "content": {
+            "en": "external-libraries/03-requests/README.md",
+            "pt-BR": "external-libraries/03-requests/README.pt-BR.md",
+            "es": "external-libraries/03-requests/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "external-libraries/03-requests/examples/get_with_query.py",
+            "external-libraries/03-requests/examples/http_error_handling.py",
+            "external-libraries/03-requests/examples/post_json.py",
+            "external-libraries/03-requests/examples/session_defaults.py",
+            "external-libraries/03-requests/examples/stream_download.py"
+          ],
+          "previous_id": "external-libraries.openpyxl",
+          "next_id": "external-libraries.pytest",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified",
+          "dependency_paths": [
+            "requirements-external.txt"
+          ]
+        },
+        {
+          "id": "external-libraries.pytest",
+          "order": 3,
+          "slug": "pytest",
+          "kind": "lesson",
+          "title": {
+            "en": "pytest: Engineering Automated Tests",
+            "pt-BR": "pytest: Engenharia de Testes Automatizados",
+            "es": "pytest: Ingeniería de Pruebas Automatizadas"
+          },
+          "content": {
+            "en": "external-libraries/04-pytest/README.md",
+            "pt-BR": "external-libraries/04-pytest/README.pt-BR.md",
+            "es": "external-libraries/04-pytest/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "external-libraries/04-pytest/examples/assertions_and_parametrize.py",
+            "external-libraries/04-pytest/examples/capture_output_and_logs.py",
+            "external-libraries/04-pytest/examples/exceptions_and_warnings.py",
+            "external-libraries/04-pytest/examples/fixtures_and_tmp_path.py",
+            "external-libraries/04-pytest/examples/monkeypatch_environment.py"
+          ],
+          "previous_id": "external-libraries.requests",
+          "next_id": "practical-projects.expense-tracker",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified",
+          "dependency_paths": [
+            "requirements-external.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practical-projects",
+      "order": 10,
+      "slug": "practical-projects",
+      "kind": "phase",
+      "educational_phase": 10,
+      "title": {
+        "en": "Practical Projects",
+        "pt-BR": "Projetos Práticos",
+        "es": "Proyectos Prácticos"
+      },
+      "index": {
+        "en": "practical-projects/README.md",
+        "pt-BR": "practical-projects/README.pt-BR.md",
+        "es": "practical-projects/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "practical-projects.expense-tracker",
+          "order": 0,
+          "slug": "expense-tracker",
+          "kind": "project",
+          "title": {
+            "en": "Expense Tracker",
+            "pt-BR": "Controle de Despesas",
+            "es": "Control de Gastos"
+          },
+          "content": {
+            "en": "practical-projects/01-expense-tracker/README.md",
+            "pt-BR": "practical-projects/01-expense-tracker/README.pt-BR.md",
+            "es": "practical-projects/01-expense-tracker/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "practical-projects/01-expense-tracker/demo.py",
+            "practical-projects/01-expense-tracker/expense_tracker.py",
+            "practical-projects/01-expense-tracker/tests/conftest.py",
+            "practical-projects/01-expense-tracker/tests/test_expense_tracker.py"
+          ],
+          "previous_id": "external-libraries.pytest",
+          "next_id": "practical-projects.grade-calculator",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "practical-projects.grade-calculator",
+          "order": 1,
+          "slug": "grade-calculator",
+          "kind": "project",
+          "title": {
+            "en": "Grade Calculator",
+            "pt-BR": "Calculadora de Notas",
+            "es": "Calculadora de Notas"
+          },
+          "content": {
+            "en": "practical-projects/02-grade-calculator/README.md",
+            "pt-BR": "practical-projects/02-grade-calculator/README.pt-BR.md",
+            "es": "practical-projects/02-grade-calculator/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "practical-projects/02-grade-calculator/demo.py",
+            "practical-projects/02-grade-calculator/grade_calculator.py",
+            "practical-projects/02-grade-calculator/tests/conftest.py",
+            "practical-projects/02-grade-calculator/tests/test_grade_calculator.py"
+          ],
+          "previous_id": "practical-projects.expense-tracker",
+          "next_id": "practical-projects.user-registration",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "practical-projects.user-registration",
+          "order": 2,
+          "slug": "user-registration",
+          "kind": "project",
+          "title": {
+            "en": "User Registration",
+            "pt-BR": "Cadastro de Usuários",
+            "es": "Registro de Usuarios"
+          },
+          "content": {
+            "en": "practical-projects/03-user-registration/README.md",
+            "pt-BR": "practical-projects/03-user-registration/README.pt-BR.md",
+            "es": "practical-projects/03-user-registration/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "practical-projects/03-user-registration/demo.py",
+            "practical-projects/03-user-registration/tests/conftest.py",
+            "practical-projects/03-user-registration/tests/test_user_registration.py",
+            "practical-projects/03-user-registration/user_registration.py"
+          ],
+          "previous_id": "practical-projects.grade-calculator",
+          "next_id": "practical-projects.csv-analyzer",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "practical-projects.csv-analyzer",
+          "order": 3,
+          "slug": "csv-analyzer",
+          "kind": "project",
+          "title": {
+            "en": "CSV Analyzer",
+            "pt-BR": "Analisador CSV",
+            "es": "Analizador CSV"
+          },
+          "content": {
+            "en": "practical-projects/04-csv-analyzer/README.md",
+            "pt-BR": "practical-projects/04-csv-analyzer/README.pt-BR.md",
+            "es": "practical-projects/04-csv-analyzer/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "practical-projects/04-csv-analyzer/csv_analyzer.py",
+            "practical-projects/04-csv-analyzer/demo.py",
+            "practical-projects/04-csv-analyzer/tests/conftest.py",
+            "practical-projects/04-csv-analyzer/tests/test_csv_analyzer.py"
+          ],
+          "previous_id": "practical-projects.user-registration",
+          "next_id": "practical-projects.report-generator",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "practical-projects.report-generator",
+          "order": 4,
+          "slug": "report-generator",
+          "kind": "project",
+          "title": {
+            "en": "Report Generator",
+            "pt-BR": "Gerador de Relatórios",
+            "es": "Generador de Informes"
+          },
+          "content": {
+            "en": "practical-projects/05-report-generator/README.md",
+            "pt-BR": "practical-projects/05-report-generator/README.pt-BR.md",
+            "es": "practical-projects/05-report-generator/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "practical-projects/05-report-generator/demo.py",
+            "practical-projects/05-report-generator/report_generator.py",
+            "practical-projects/05-report-generator/tests/conftest.py",
+            "practical-projects/05-report-generator/tests/test_report_generator.py"
+          ],
+          "previous_id": "practical-projects.csv-analyzer",
+          "next_id": "practical-projects.file-organizer",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "practical-projects.file-organizer",
+          "order": 5,
+          "slug": "file-organizer",
+          "kind": "project",
+          "title": {
+            "en": "File Organizer",
+            "pt-BR": "Organizador de Arquivos",
+            "es": "Organizador de Archivos"
+          },
+          "content": {
+            "en": "practical-projects/06-file-organizer/README.md",
+            "pt-BR": "practical-projects/06-file-organizer/README.pt-BR.md",
+            "es": "practical-projects/06-file-organizer/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "practical-projects/06-file-organizer/demo.py",
+            "practical-projects/06-file-organizer/file_organizer.py",
+            "practical-projects/06-file-organizer/tests/conftest.py",
+            "practical-projects/06-file-organizer/tests/test_atomic_move.py",
+            "practical-projects/06-file-organizer/tests/test_file_organizer.py"
+          ],
+          "previous_id": "practical-projects.report-generator",
+          "next_id": "practical-projects.fictional-reconciliation-workflow",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "local_only",
+          "execution_reason": {
+            "en": "Requires local Python for platform-specific filesystem operations.",
+            "pt-BR": "Requer Python local para operações de sistema de arquivos específicas da plataforma.",
+            "es": "Requiere Python local para operaciones del sistema de archivos específicas de la plataforma."
+          }
+        },
+        {
+          "id": "practical-projects.fictional-reconciliation-workflow",
+          "order": 6,
+          "slug": "fictional-reconciliation-workflow",
+          "kind": "project",
+          "title": {
+            "en": "Fictional Reconciliation Workflow",
+            "pt-BR": "Fluxo Fictício de Conciliação",
+            "es": "Flujo Ficticio de Conciliación"
+          },
+          "content": {
+            "en": "practical-projects/07-fictional-reconciliation-workflow/README.md",
+            "pt-BR": "practical-projects/07-fictional-reconciliation-workflow/README.pt-BR.md",
+            "es": "practical-projects/07-fictional-reconciliation-workflow/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "practical-projects/07-fictional-reconciliation-workflow/demo.py",
+            "practical-projects/07-fictional-reconciliation-workflow/reconciliation.py",
+            "practical-projects/07-fictional-reconciliation-workflow/tests/conftest.py",
+            "practical-projects/07-fictional-reconciliation-workflow/tests/test_decimal_precision.py",
+            "practical-projects/07-fictional-reconciliation-workflow/tests/test_reconciliation.py",
+            "practical-projects/07-fictional-reconciliation-workflow/tests/test_text_safety.py"
+          ],
+          "previous_id": "practical-projects.file-organizer",
+          "next_id": "practical-projects.simulated-automation-flow",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "practical-projects.simulated-automation-flow",
+          "order": 7,
+          "slug": "simulated-automation-flow",
+          "kind": "project",
+          "title": {
+            "en": "Simulated Automation Flow",
+            "pt-BR": "Fluxo Simulado de Automação",
+            "es": "Flujo Simulado de Automatización"
+          },
+          "content": {
+            "en": "practical-projects/08-simulated-automation-flow/README.md",
+            "pt-BR": "practical-projects/08-simulated-automation-flow/README.pt-BR.md",
+            "es": "practical-projects/08-simulated-automation-flow/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "practical-projects/08-simulated-automation-flow/automation_flow.py",
+            "practical-projects/08-simulated-automation-flow/demo.py",
+            "practical-projects/08-simulated-automation-flow/tests/conftest.py",
+            "practical-projects/08-simulated-automation-flow/tests/test_automation_flow.py"
+          ],
+          "previous_id": "practical-projects.fictional-reconciliation-workflow",
+          "next_id": "manual-programming-practices.manual-coding-and-debugging",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "manual-programming-practices",
+      "order": 11,
+      "slug": "manual-programming-practices",
+      "kind": "complementary",
+      "educational_phase": null,
+      "title": {
+        "en": "Manual Programming & Engineering Practices",
+        "pt-BR": "Prática manual e engenharia de software",
+        "es": "Práctica manual e ingeniería de software"
+      },
+      "index": {
+        "en": "manual-programming-practices/README.md",
+        "pt-BR": "manual-programming-practices/README.pt-BR.md",
+        "es": "manual-programming-practices/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "manual-programming-practices.manual-coding-and-debugging",
+          "order": 0,
+          "slug": "manual-coding-and-debugging",
+          "kind": "lesson",
+          "title": {
+            "en": "Manual Coding and Debugging",
+            "pt-BR": "Programação manual e depuração",
+            "es": "Programación manual y depuración"
+          },
+          "content": {
+            "en": "manual-programming-practices/01-manual-coding-and-debugging/README.md",
+            "pt-BR": "manual-programming-practices/01-manual-coding-and-debugging/README.pt-BR.md",
+            "es": "manual-programming-practices/01-manual-coding-and-debugging/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "practical-projects.simulated-automation-flow",
+          "next_id": "manual-programming-practices.specification-driven-development",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "manual-programming-practices.specification-driven-development",
+          "order": 1,
+          "slug": "specification-driven-development",
+          "kind": "lesson",
+          "title": {
+            "en": "Specification-Driven Development",
+            "pt-BR": "Desenvolvimento orientado por especificações",
+            "es": "Desarrollo guiado por especificaciones"
+          },
+          "content": {
+            "en": "manual-programming-practices/02-specification-driven-development/README.md",
+            "pt-BR": "manual-programming-practices/02-specification-driven-development/README.pt-BR.md",
+            "es": "manual-programming-practices/02-specification-driven-development/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "manual-programming-practices.manual-coding-and-debugging",
+          "next_id": "manual-programming-practices.test-driven-development",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "manual-programming-practices.test-driven-development",
+          "order": 2,
+          "slug": "test-driven-development",
+          "kind": "lesson",
+          "title": {
+            "en": "Test-Driven Development",
+            "pt-BR": "Desenvolvimento orientado por testes",
+            "es": "Desarrollo guiado por pruebas"
+          },
+          "content": {
+            "en": "manual-programming-practices/03-test-driven-development/README.md",
+            "pt-BR": "manual-programming-practices/03-test-driven-development/README.pt-BR.md",
+            "es": "manual-programming-practices/03-test-driven-development/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "manual-programming-practices/03-test-driven-development/examples/reading_progress.py",
+            "manual-programming-practices/03-test-driven-development/examples/test_reading_progress.py"
+          ],
+          "previous_id": "manual-programming-practices.specification-driven-development",
+          "next_id": "manual-programming-practices.professional-workflow",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "manual-programming-practices.professional-workflow",
+          "order": 3,
+          "slug": "professional-workflow",
+          "kind": "lesson",
+          "title": {
+            "en": "Professional Python Workflow",
+            "pt-BR": "Fluxo profissional de Python",
+            "es": "Flujo profesional de Python"
+          },
+          "content": {
+            "en": "manual-programming-practices/04-professional-workflow/README.md",
+            "pt-BR": "manual-programming-practices/04-professional-workflow/README.pt-BR.md",
+            "es": "manual-programming-practices/04-professional-workflow/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "manual-programming-practices.test-driven-development",
+          "next_id": "problem-solving.problem-solving-fundamentals",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "problem-solving-and-live-coding",
+      "order": 12,
+      "slug": "problem-solving-and-live-coding",
+      "kind": "phase",
+      "educational_phase": 11,
+      "title": {
+        "en": "Problem Solving & Live Coding",
+        "pt-BR": "Resolução de problemas e live coding",
+        "es": "Resolución de problemas y live coding"
+      },
+      "index": {
+        "en": "problem-solving-and-live-coding/README.md",
+        "pt-BR": "problem-solving-and-live-coding/README.pt-BR.md",
+        "es": "problem-solving-and-live-coding/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "problem-solving.problem-solving-fundamentals",
+          "order": 0,
+          "slug": "problem-solving-fundamentals",
+          "kind": "lesson",
+          "title": {
+            "en": "Problem-Solving Fundamentals",
+            "pt-BR": "Fundamentos de resolução de problemas",
+            "es": "Fundamentos de resolución de problemas"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.md",
+            "pt-BR": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/01-problem-solving-fundamentals/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "problem-solving-and-live-coding/01-problem-solving-fundamentals/examples/study_minutes.py"
+          ],
+          "previous_id": "manual-programming-practices.professional-workflow",
+          "next_id": "problem-solving.constraints-and-edge-cases",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.constraints-and-edge-cases",
+          "order": 1,
+          "slug": "constraints-and-edge-cases",
+          "kind": "lesson",
+          "title": {
+            "en": "Constraints and Edge Cases",
+            "pt-BR": "Restrições e casos de borda",
+            "es": "Restricciones y casos límite"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.md",
+            "pt-BR": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/02-constraints-and-edge-cases/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "problem-solving-and-live-coding/02-constraints-and-edge-cases/examples/capacity.py"
+          ],
+          "previous_id": "problem-solving.problem-solving-fundamentals",
+          "next_id": "problem-solving.algorithmic-complexity",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.algorithmic-complexity",
+          "order": 2,
+          "slug": "algorithmic-complexity",
+          "kind": "lesson",
+          "title": {
+            "en": "Algorithmic Complexity",
+            "pt-BR": "Complexidade algorítmica",
+            "es": "Complejidad algorítmica"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/03-algorithmic-complexity/README.md",
+            "pt-BR": "problem-solving-and-live-coding/03-algorithmic-complexity/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/03-algorithmic-complexity/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "problem-solving-and-live-coding/03-algorithmic-complexity/examples/operation_counts.py"
+          ],
+          "previous_id": "problem-solving.constraints-and-edge-cases",
+          "next_id": "problem-solving.recursion",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.recursion",
+          "order": 3,
+          "slug": "recursion",
+          "kind": "lesson",
+          "title": {
+            "en": "Recursion",
+            "pt-BR": "Recursividade",
+            "es": "Recursividad"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/04-recursion/README.md",
+            "pt-BR": "problem-solving-and-live-coding/04-recursion/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/04-recursion/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "problem-solving-and-live-coding/04-recursion/examples/recursive_sum.py"
+          ],
+          "previous_id": "problem-solving.algorithmic-complexity",
+          "next_id": "problem-solving.searching-algorithms",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.searching-algorithms",
+          "order": 4,
+          "slug": "searching-algorithms",
+          "kind": "lesson",
+          "title": {
+            "en": "Searching Algorithms",
+            "pt-BR": "Algoritmos de busca",
+            "es": "Algoritmos de búsqueda"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/05-searching-algorithms/README.md",
+            "pt-BR": "problem-solving-and-live-coding/05-searching-algorithms/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/05-searching-algorithms/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "problem-solving-and-live-coding/05-searching-algorithms/examples/search.py"
+          ],
+          "previous_id": "problem-solving.recursion",
+          "next_id": "problem-solving.sorting-algorithms",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.sorting-algorithms",
+          "order": 5,
+          "slug": "sorting-algorithms",
+          "kind": "lesson",
+          "title": {
+            "en": "Sorting Algorithms",
+            "pt-BR": "Algoritmos de ordenação",
+            "es": "Algoritmos de ordenación"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/06-sorting-algorithms/README.md",
+            "pt-BR": "problem-solving-and-live-coding/06-sorting-algorithms/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/06-sorting-algorithms/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "problem-solving-and-live-coding/06-sorting-algorithms/examples/sort.py"
+          ],
+          "previous_id": "problem-solving.searching-algorithms",
+          "next_id": "problem-solving.problem-solving-patterns",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.problem-solving-patterns",
+          "order": 6,
+          "slug": "problem-solving-patterns",
+          "kind": "lesson",
+          "title": {
+            "en": "Problem-Solving Patterns",
+            "pt-BR": "Padrões de resolução de problemas",
+            "es": "Patrones de resolución de problemas"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/07-problem-solving-patterns/README.md",
+            "pt-BR": "problem-solving-and-live-coding/07-problem-solving-patterns/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/07-problem-solving-patterns/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "problem-solving-and-live-coding/07-problem-solving-patterns/examples/patterns.py"
+          ],
+          "previous_id": "problem-solving.sorting-algorithms",
+          "next_id": "problem-solving.strings-and-numbers",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.strings-and-numbers",
+          "order": 7,
+          "slug": "strings-and-numbers",
+          "kind": "lesson",
+          "title": {
+            "en": "Strings and Numbers Challenges",
+            "pt-BR": "Desafios de strings e números",
+            "es": "Retos de cadenas y números"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/08-strings-and-numbers/README.md",
+            "pt-BR": "problem-solving-and-live-coding/08-strings-and-numbers/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/08-strings-and-numbers/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.problem-solving-patterns",
+          "next_id": "problem-solving.collections",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.collections",
+          "order": 8,
+          "slug": "collections",
+          "kind": "lesson",
+          "title": {
+            "en": "Collections Challenges",
+            "pt-BR": "Desafios de coleções",
+            "es": "Retos de colecciones"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/09-collections/README.md",
+            "pt-BR": "problem-solving-and-live-coding/09-collections/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/09-collections/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.strings-and-numbers",
+          "next_id": "problem-solving.functions-and-recursion",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.functions-and-recursion",
+          "order": 9,
+          "slug": "functions-and-recursion",
+          "kind": "lesson",
+          "title": {
+            "en": "Functions and Recursion Challenges",
+            "pt-BR": "Desafios de funções e recursividade",
+            "es": "Retos de funciones y recursividad"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/10-functions-and-recursion/README.md",
+            "pt-BR": "problem-solving-and-live-coding/10-functions-and-recursion/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/10-functions-and-recursion/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.collections",
+          "next_id": "problem-solving.searching-and-sorting",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.searching-and-sorting",
+          "order": 10,
+          "slug": "searching-and-sorting",
+          "kind": "lesson",
+          "title": {
+            "en": "Searching and Sorting Challenges",
+            "pt-BR": "Desafios de busca e ordenação",
+            "es": "Retos de búsqueda y ordenación"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/11-searching-and-sorting/README.md",
+            "pt-BR": "problem-solving-and-live-coding/11-searching-and-sorting/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/11-searching-and-sorting/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.functions-and-recursion",
+          "next_id": "problem-solving.algorithms-and-complexity",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.algorithms-and-complexity",
+          "order": 11,
+          "slug": "algorithms-and-complexity",
+          "kind": "lesson",
+          "title": {
+            "en": "Algorithms and Complexity Challenges",
+            "pt-BR": "Desafios de algoritmos e complexidade",
+            "es": "Retos de algoritmos y complejidad"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/12-algorithms-and-complexity/README.md",
+            "pt-BR": "problem-solving-and-live-coding/12-algorithms-and-complexity/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/12-algorithms-and-complexity/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.searching-and-sorting",
+          "next_id": "problem-solving.debugging",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.debugging",
+          "order": 12,
+          "slug": "debugging-challenges",
+          "kind": "lesson",
+          "title": {
+            "en": "Debugging Challenges",
+            "pt-BR": "Desafios de depuração",
+            "es": "Retos de depuración"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/13-debugging-challenges/README.md",
+            "pt-BR": "problem-solving-and-live-coding/13-debugging-challenges/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/13-debugging-challenges/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.algorithms-and-complexity",
+          "next_id": "problem-solving.refactoring",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.refactoring",
+          "order": 13,
+          "slug": "refactoring-challenges",
+          "kind": "lesson",
+          "title": {
+            "en": "Refactoring Challenges",
+            "pt-BR": "Desafios de refatoração",
+            "es": "Retos de refactorización"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/14-refactoring-challenges/README.md",
+            "pt-BR": "problem-solving-and-live-coding/14-refactoring-challenges/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/14-refactoring-challenges/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.debugging",
+          "next_id": "problem-solving.mixed",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.mixed",
+          "order": 14,
+          "slug": "mixed-challenges",
+          "kind": "lesson",
+          "title": {
+            "en": "Mixed Challenges",
+            "pt-BR": "Desafios mistos",
+            "es": "Retos mixtos"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/15-mixed-challenges/README.md",
+            "pt-BR": "problem-solving-and-live-coding/15-mixed-challenges/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/15-mixed-challenges/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.refactoring",
+          "next_id": "problem-solving.timed-live-coding",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "problem-solving.timed-live-coding",
+          "order": 15,
+          "slug": "timed-live-coding",
+          "kind": "lesson",
+          "title": {
+            "en": "Timed Live Coding",
+            "pt-BR": "Live coding cronometrado",
+            "es": "Live coding cronometrado"
+          },
+          "content": {
+            "en": "problem-solving-and-live-coding/16-timed-live-coding/README.md",
+            "pt-BR": "problem-solving-and-live-coding/16-timed-live-coding/README.pt-BR.md",
+            "es": "problem-solving-and-live-coding/16-timed-live-coding/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.mixed",
+          "next_id": "technical-interview-preparation.understanding-technical-interviews",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "technical-interview-preparation",
+      "order": 13,
+      "slug": "technical-interview-preparation",
+      "kind": "phase",
+      "educational_phase": 12,
+      "title": {
+        "en": "Technical Interview Preparation",
+        "pt-BR": "Preparação para entrevistas técnicas",
+        "es": "Preparación para entrevistas técnicas"
+      },
+      "index": {
+        "en": "technical-interview-preparation/README.md",
+        "pt-BR": "technical-interview-preparation/README.pt-BR.md",
+        "es": "technical-interview-preparation/README.es.md"
+      },
+      "chapters": [
+        {
+          "id": "technical-interview-preparation.understanding-technical-interviews",
+          "order": 0,
+          "slug": "understanding-technical-interviews",
+          "kind": "lesson",
+          "title": {
+            "en": "Understanding Technical Interviews",
+            "pt-BR": "Entendendo entrevistas técnicas",
+            "es": "Entender las entrevistas técnicas"
+          },
+          "content": {
+            "en": "technical-interview-preparation/01-understanding-technical-interviews/README.md",
+            "pt-BR": "technical-interview-preparation/01-understanding-technical-interviews/README.pt-BR.md",
+            "es": "technical-interview-preparation/01-understanding-technical-interviews/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "problem-solving.timed-live-coding",
+          "next_id": "technical-interview-preparation.live-coding-and-take-home",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.live-coding-and-take-home",
+          "order": 1,
+          "slug": "live-coding-and-take-home",
+          "kind": "lesson",
+          "title": {
+            "en": "Live Coding and Take-Home Assignments",
+            "pt-BR": "Live coding e tarefas take-home",
+            "es": "Live coding y tareas take-home"
+          },
+          "content": {
+            "en": "technical-interview-preparation/02-live-coding-and-take-home/README.md",
+            "pt-BR": "technical-interview-preparation/02-live-coding-and-take-home/README.pt-BR.md",
+            "es": "technical-interview-preparation/02-live-coding-and-take-home/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "technical-interview-preparation.understanding-technical-interviews",
+          "next_id": "technical-interview-preparation.python-fundamentals-review",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.python-fundamentals-review",
+          "order": 2,
+          "slug": "python-fundamentals-review",
+          "kind": "lesson",
+          "title": {
+            "en": "Python Fundamentals Review",
+            "pt-BR": "Revisão dos fundamentos de Python",
+            "es": "Repaso de fundamentos de Python"
+          },
+          "content": {
+            "en": "technical-interview-preparation/03-python-fundamentals-review/README.md",
+            "pt-BR": "technical-interview-preparation/03-python-fundamentals-review/README.pt-BR.md",
+            "es": "technical-interview-preparation/03-python-fundamentals-review/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "technical-interview-preparation.live-coding-and-take-home",
+          "next_id": "technical-interview-preparation.data-structures-and-algorithms-review",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.data-structures-and-algorithms-review",
+          "order": 3,
+          "slug": "data-structures-and-algorithms-review",
+          "kind": "lesson",
+          "title": {
+            "en": "Data Structures and Algorithms Review",
+            "pt-BR": "Revisão de estruturas de dados e algoritmos",
+            "es": "Repaso de estructuras de datos y algoritmos"
+          },
+          "content": {
+            "en": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.md",
+            "pt-BR": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.pt-BR.md",
+            "es": "technical-interview-preparation/04-data-structures-and-algorithms-review/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "technical-interview-preparation.python-fundamentals-review",
+          "next_id": "technical-interview-preparation.classes-and-objects",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.classes-and-objects",
+          "order": 4,
+          "slug": "classes-and-objects",
+          "kind": "lesson",
+          "title": {
+            "en": "Classes and Objects",
+            "pt-BR": "Classes e objetos",
+            "es": "Clases y objetos"
+          },
+          "content": {
+            "en": "technical-interview-preparation/05-classes-and-objects/README.md",
+            "pt-BR": "technical-interview-preparation/05-classes-and-objects/README.pt-BR.md",
+            "es": "technical-interview-preparation/05-classes-and-objects/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/05-classes-and-objects/examples/reading_session.py"
+          ],
+          "previous_id": "technical-interview-preparation.data-structures-and-algorithms-review",
+          "next_id": "technical-interview-preparation.attributes-methods-and-object-behavior",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.attributes-methods-and-object-behavior",
+          "order": 5,
+          "slug": "attributes-methods-and-object-behavior",
+          "kind": "lesson",
+          "title": {
+            "en": "Attributes, Methods and Object Behavior",
+            "pt-BR": "Atributos, métodos e comportamento de objetos",
+            "es": "Atributos, métodos y comportamiento de objetos"
+          },
+          "content": {
+            "en": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.md",
+            "pt-BR": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.pt-BR.md",
+            "es": "technical-interview-preparation/06-attributes-methods-and-object-behavior/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/06-attributes-methods-and-object-behavior/examples/study_group.py"
+          ],
+          "previous_id": "technical-interview-preparation.classes-and-objects",
+          "next_id": "technical-interview-preparation.inheritance-polymorphism-and-composition",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.inheritance-polymorphism-and-composition",
+          "order": 6,
+          "slug": "inheritance-polymorphism-and-composition",
+          "kind": "lesson",
+          "title": {
+            "en": "Inheritance, Polymorphism and Composition",
+            "pt-BR": "Herança, polimorfismo e composição",
+            "es": "Herencia, polimorfismo y composición"
+          },
+          "content": {
+            "en": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.md",
+            "pt-BR": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.pt-BR.md",
+            "es": "technical-interview-preparation/07-inheritance-polymorphism-and-composition/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/07-inheritance-polymorphism-and-composition/examples/notifications.py"
+          ],
+          "previous_id": "technical-interview-preparation.attributes-methods-and-object-behavior",
+          "next_id": "technical-interview-preparation.encapsulation-abstraction-and-solid",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.encapsulation-abstraction-and-solid",
+          "order": 7,
+          "slug": "encapsulation-abstraction-and-solid",
+          "kind": "lesson",
+          "title": {
+            "en": "Encapsulation, Abstraction and SOLID",
+            "pt-BR": "Encapsulamento, abstração e SOLID",
+            "es": "Encapsulación, abstracción y SOLID"
+          },
+          "content": {
+            "en": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.md",
+            "pt-BR": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.pt-BR.md",
+            "es": "technical-interview-preparation/08-encapsulation-abstraction-and-solid/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/08-encapsulation-abstraction-and-solid/examples/stock.py"
+          ],
+          "previous_id": "technical-interview-preparation.inheritance-polymorphism-and-composition",
+          "next_id": "technical-interview-preparation.object-identity-references-and-copying",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.object-identity-references-and-copying",
+          "order": 8,
+          "slug": "object-identity-references-and-copying",
+          "kind": "lesson",
+          "title": {
+            "en": "Object Identity, References and Copying",
+            "pt-BR": "Identidade de objetos, referências e cópias",
+            "es": "Identidad de objetos, referencias y copias"
+          },
+          "content": {
+            "en": "technical-interview-preparation/09-object-identity-references-and-copying/README.md",
+            "pt-BR": "technical-interview-preparation/09-object-identity-references-and-copying/README.pt-BR.md",
+            "es": "technical-interview-preparation/09-object-identity-references-and-copying/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/09-object-identity-references-and-copying/examples/copy_plan.py"
+          ],
+          "previous_id": "technical-interview-preparation.encapsulation-abstraction-and-solid",
+          "next_id": "technical-interview-preparation.python-memory-management",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.python-memory-management",
+          "order": 9,
+          "slug": "python-memory-management",
+          "kind": "lesson",
+          "title": {
+            "en": "Python Memory Management",
+            "pt-BR": "Gerenciamento de memória em Python",
+            "es": "Gestión de memoria en Python"
+          },
+          "content": {
+            "en": "technical-interview-preparation/10-python-memory-management/README.md",
+            "pt-BR": "technical-interview-preparation/10-python-memory-management/README.pt-BR.md",
+            "es": "technical-interview-preparation/10-python-memory-management/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/10-python-memory-management/examples/bounded_cache.py"
+          ],
+          "previous_id": "technical-interview-preparation.object-identity-references-and-copying",
+          "next_id": "technical-interview-preparation.iterators-generators-and-comprehensions",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.iterators-generators-and-comprehensions",
+          "order": 10,
+          "slug": "iterators-generators-and-comprehensions",
+          "kind": "lesson",
+          "title": {
+            "en": "Iterators, Generators and Comprehensions",
+            "pt-BR": "Iteradores, geradores e comprehensions",
+            "es": "Iteradores, generadores y comprensiones"
+          },
+          "content": {
+            "en": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.md",
+            "pt-BR": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.pt-BR.md",
+            "es": "technical-interview-preparation/11-iterators-generators-and-comprehensions/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/11-iterators-generators-and-comprehensions/examples/eligible_rows.py"
+          ],
+          "previous_id": "technical-interview-preparation.python-memory-management",
+          "next_id": "technical-interview-preparation.closures-and-decorators",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.closures-and-decorators",
+          "order": 11,
+          "slug": "closures-and-decorators",
+          "kind": "lesson",
+          "title": {
+            "en": "Closures and Decorators",
+            "pt-BR": "Closures e decorators",
+            "es": "Cierres y decoradores"
+          },
+          "content": {
+            "en": "technical-interview-preparation/12-closures-and-decorators/README.md",
+            "pt-BR": "technical-interview-preparation/12-closures-and-decorators/README.pt-BR.md",
+            "es": "technical-interview-preparation/12-closures-and-decorators/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/12-closures-and-decorators/examples/call_counter.py"
+          ],
+          "previous_id": "technical-interview-preparation.iterators-generators-and-comprehensions",
+          "next_id": "technical-interview-preparation.context-managers",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.context-managers",
+          "order": 12,
+          "slug": "context-managers",
+          "kind": "lesson",
+          "title": {
+            "en": "Context Managers",
+            "pt-BR": "Gerenciadores de contexto",
+            "es": "Gestores de contexto"
+          },
+          "content": {
+            "en": "technical-interview-preparation/13-context-managers/README.md",
+            "pt-BR": "technical-interview-preparation/13-context-managers/README.pt-BR.md",
+            "es": "technical-interview-preparation/13-context-managers/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/13-context-managers/examples/managed_session.py"
+          ],
+          "previous_id": "technical-interview-preparation.closures-and-decorators",
+          "next_id": "technical-interview-preparation.concurrency-parallelism-and-the-gil",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.concurrency-parallelism-and-the-gil",
+          "order": 13,
+          "slug": "concurrency-parallelism-and-the-gil",
+          "kind": "lesson",
+          "title": {
+            "en": "Concurrency, Parallelism and the GIL",
+            "pt-BR": "Concorrência, paralelismo e GIL",
+            "es": "Concurrencia, paralelismo y GIL"
+          },
+          "content": {
+            "en": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.md",
+            "pt-BR": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.pt-BR.md",
+            "es": "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/14-concurrency-parallelism-and-the-gil/examples/safe_counter.py"
+          ],
+          "previous_id": "technical-interview-preparation.context-managers",
+          "next_id": "technical-interview-preparation.exceptions-testing-and-debugging-review",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.exceptions-testing-and-debugging-review",
+          "order": 14,
+          "slug": "exceptions-testing-and-debugging-review",
+          "kind": "lesson",
+          "title": {
+            "en": "Exceptions, Testing and Debugging Review",
+            "pt-BR": "Revisão de exceções, testes e debugging",
+            "es": "Repaso de excepciones, pruebas y depuración"
+          },
+          "content": {
+            "en": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.md",
+            "pt-BR": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.pt-BR.md",
+            "es": "technical-interview-preparation/15-exceptions-testing-and-debugging-review/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/15-exceptions-testing-and-debugging-review/examples/parse_quantity.py"
+          ],
+          "previous_id": "technical-interview-preparation.concurrency-parallelism-and-the-gil",
+          "next_id": "technical-interview-preparation.http-rest-and-backend-fundamentals",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.http-rest-and-backend-fundamentals",
+          "order": 15,
+          "slug": "http-rest-and-backend-fundamentals",
+          "kind": "lesson",
+          "title": {
+            "en": "HTTP, REST and Backend Fundamentals",
+            "pt-BR": "HTTP, REST e fundamentos de backend",
+            "es": "HTTP, REST y fundamentos de backend"
+          },
+          "content": {
+            "en": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.md",
+            "pt-BR": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.pt-BR.md",
+            "es": "technical-interview-preparation/16-http-rest-and-backend-fundamentals/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/16-http-rest-and-backend-fundamentals/examples/route_catalog.py"
+          ],
+          "previous_id": "technical-interview-preparation.exceptions-testing-and-debugging-review",
+          "next_id": "technical-interview-preparation.api-contracts-authentication-and-authorization",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.api-contracts-authentication-and-authorization",
+          "order": 16,
+          "slug": "api-contracts-authentication-and-authorization",
+          "kind": "lesson",
+          "title": {
+            "en": "API Contracts, Authentication and Authorization",
+            "pt-BR": "Contratos de API, autenticação e autorização",
+            "es": "Contratos de API, autenticación y autorización"
+          },
+          "content": {
+            "en": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.md",
+            "pt-BR": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.pt-BR.md",
+            "es": "technical-interview-preparation/17-api-contracts-authentication-and-authorization/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/17-api-contracts-authentication-and-authorization/examples/note_access.py"
+          ],
+          "previous_id": "technical-interview-preparation.http-rest-and-backend-fundamentals",
+          "next_id": "technical-interview-preparation.relational-databases-and-sql",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.relational-databases-and-sql",
+          "order": 17,
+          "slug": "relational-databases-and-sql",
+          "kind": "lesson",
+          "title": {
+            "en": "Relational Databases and SQL",
+            "pt-BR": "Bancos de dados relacionais e SQL",
+            "es": "Bases de datos relacionales y SQL"
+          },
+          "content": {
+            "en": "technical-interview-preparation/18-relational-databases-and-sql/README.md",
+            "pt-BR": "technical-interview-preparation/18-relational-databases-and-sql/README.pt-BR.md",
+            "es": "technical-interview-preparation/18-relational-databases-and-sql/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/18-relational-databases-and-sql/examples/lesson_catalog.py"
+          ],
+          "previous_id": "technical-interview-preparation.api-contracts-authentication-and-authorization",
+          "next_id": "technical-interview-preparation.joins-aggregations-and-data-relationships",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.joins-aggregations-and-data-relationships",
+          "order": 18,
+          "slug": "joins-aggregations-and-data-relationships",
+          "kind": "lesson",
+          "title": {
+            "en": "Joins, Aggregations and Data Relationships",
+            "pt-BR": "Joins, agregações e relacionamentos de dados",
+            "es": "Joins, agregaciones y relaciones de datos"
+          },
+          "content": {
+            "en": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.md",
+            "pt-BR": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.pt-BR.md",
+            "es": "technical-interview-preparation/19-joins-aggregations-and-data-relationships/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/19-joins-aggregations-and-data-relationships/examples/group_progress.py"
+          ],
+          "previous_id": "technical-interview-preparation.relational-databases-and-sql",
+          "next_id": "technical-interview-preparation.transactions-indexes-and-sql-safety",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.transactions-indexes-and-sql-safety",
+          "order": 19,
+          "slug": "transactions-indexes-and-sql-safety",
+          "kind": "lesson",
+          "title": {
+            "en": "Transactions, Indexes and SQL Safety",
+            "pt-BR": "Transações, índices e segurança em SQL",
+            "es": "Transacciones, índices y seguridad en SQL"
+          },
+          "content": {
+            "en": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.md",
+            "pt-BR": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.pt-BR.md",
+            "es": "technical-interview-preparation/20-transactions-indexes-and-sql-safety/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/20-transactions-indexes-and-sql-safety/examples/credit_transfer.py"
+          ],
+          "previous_id": "technical-interview-preparation.joins-aggregations-and-data-relationships",
+          "next_id": "technical-interview-preparation.software-engineering-and-technical-decisions",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.software-engineering-and-technical-decisions",
+          "order": 20,
+          "slug": "software-engineering-and-technical-decisions",
+          "kind": "lesson",
+          "title": {
+            "en": "Software Engineering and Technical Decisions",
+            "pt-BR": "Engenharia de software e decisões técnicas",
+            "es": "Ingeniería de software y decisiones técnicas"
+          },
+          "content": {
+            "en": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.md",
+            "pt-BR": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.pt-BR.md",
+            "es": "technical-interview-preparation/21-software-engineering-and-technical-decisions/README.es.md"
+          },
+          "assets": [],
+          "resources": [
+            "technical-interview-preparation/21-software-engineering-and-technical-decisions/examples/progress_report.py"
+          ],
+          "previous_id": "technical-interview-preparation.transactions-indexes-and-sql-safety",
+          "next_id": "technical-interview-preparation.technical-interview-question-bank",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.technical-interview-question-bank",
+          "order": 21,
+          "slug": "technical-interview-question-bank",
+          "kind": "lesson",
+          "title": {
+            "en": "Technical Interview Question Bank",
+            "pt-BR": "Banco de perguntas de entrevistas técnicas",
+            "es": "Banco de preguntas de entrevistas técnicas"
+          },
+          "content": {
+            "en": "technical-interview-preparation/22-technical-interview-question-bank/README.md",
+            "pt-BR": "technical-interview-preparation/22-technical-interview-question-bank/README.pt-BR.md",
+            "es": "technical-interview-preparation/22-technical-interview-question-bank/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "technical-interview-preparation.software-engineering-and-technical-decisions",
+          "next_id": "technical-interview-preparation.behavioral-and-international-interviews",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.behavioral-and-international-interviews",
+          "order": 22,
+          "slug": "behavioral-and-international-interviews",
+          "kind": "lesson",
+          "title": {
+            "en": "Behavioral and International Interviews",
+            "pt-BR": "Entrevistas comportamentais e internacionais",
+            "es": "Entrevistas conductuales e internacionales"
+          },
+          "content": {
+            "en": "technical-interview-preparation/23-behavioral-and-international-interviews/README.md",
+            "pt-BR": "technical-interview-preparation/23-behavioral-and-international-interviews/README.pt-BR.md",
+            "es": "technical-interview-preparation/23-behavioral-and-international-interviews/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "technical-interview-preparation.technical-interview-question-bank",
+          "next_id": "technical-interview-preparation.mock-interviews-and-self-assessment",
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        },
+        {
+          "id": "technical-interview-preparation.mock-interviews-and-self-assessment",
+          "order": 23,
+          "slug": "mock-interviews-and-self-assessment",
+          "kind": "lesson",
+          "title": {
+            "en": "Mock Interviews and Self-Assessment",
+            "pt-BR": "Simulados de entrevistas e autoavaliação",
+            "es": "Simulaciones de entrevistas y autoevaluación"
+          },
+          "content": {
+            "en": "technical-interview-preparation/24-mock-interviews-and-self-assessment/README.md",
+            "pt-BR": "technical-interview-preparation/24-mock-interviews-and-self-assessment/README.pt-BR.md",
+            "es": "technical-interview-preparation/24-mock-interviews-and-self-assessment/README.es.md"
+          },
+          "assets": [],
+          "resources": [],
+          "previous_id": "technical-interview-preparation.behavioral-and-international-interviews",
+          "next_id": null,
+          "quiz_ids": [],
+          "exercise_ids": [],
+          "interview_ids": [],
+          "mock_ids": [],
+          "execution": "unverified"
+        }
+      ]
+    }
+  ]
+}

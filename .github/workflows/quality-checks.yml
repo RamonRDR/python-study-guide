@@ -50,6 +50,9 @@ jobs:
           --quiz-index quizzes/quiz-index.json
           --exercise-index exercises/problem-solving/exercise-index.json
 
+      - name: Validate curriculum manifest inventory
+        run: python scripts/validate_curriculum.py --inventory
+
       - name: Run engineering practice tests
         run: python -m unittest discover -s manual-programming-practices/03-test-driven-development/examples -p 'test_*.py'
 

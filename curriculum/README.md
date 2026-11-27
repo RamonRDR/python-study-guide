@@ -2,16 +2,15 @@
 
 [EN](README.md) · [PT-BR](README.pt-BR.md) · [ES](README.es.md)
 
-This directory is reserved for manifest.json. No published manifest exists in Sprint 08A.
+The versioned [manifest.json](manifest.json) contains the complete Sprint 08B inventory: 14 modules, 107 lessons, eight practical projects, 345 localized chapter/project paths, 42 localized module indexes, 243 shared chapter resources and six global images. It references existing files and preserves the approved stable IDs. Ordering, display titles and localized paths follow the three learning paths; the historical assessment matrix is used only for authoring baseline verification. No content is duplicated.
 
-Sprint 08A acceptance: a Draft 2020-12 schema and strict structural/path validation with synthetic positive and negative fixtures, including independent bank versions, localized paths, execution metadata and invalid JSON. Inventory and navigation (B), bank relationships (C), pinned consumer (D) and consolidated acceptance (E) remain pending. The structural validator alone does not certify a published snapshot. Exact-head CI and review are required; no new test result is asserted here.
+**Development snapshot only:** association_status is pending; all quiz/exercise/interview/mock reference arrays are empty until 08C. Consumers must not import this as an approved complete snapshot. Chapters are unverified except File Organizer (local_only with a reason); external-library lessons reference the existing shared requirements file. No browser execution or exact minimum Python version is asserted.
+
+Run the structural check or the stronger tracked authoring inventory check below from the repository root, after installing the existing assessment validation dependency. The latter compares the manifest with the source learning paths, baseline stable IDs, tracked resources, assets and global navigation. It requires a Git checkout. Neither command verifies consumer revision integrity or completed assessment associations.
 
 [Schema](../schemas/curriculum-manifest.schema.json) · [ADR 0004](../docs/adr/0004-curriculum-manifest.md) · [Integration contract](../docs/specs/learning-hub-foundation/integration-contract.md)
 
-Run structural checks on an existing snapshot (not full consumer validation):
-
 ```bash
-python scripts/validate_curriculum.py --root . --manifest curriculum/manifest.json
+python scripts/validate_curriculum.py
+python scripts/validate_curriculum.py --inventory
 ```
-
-The command requires the manifest introduced in B. A uses synthetic unit fixtures and the existing quality workflow.

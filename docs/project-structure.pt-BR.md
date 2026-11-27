@@ -1417,4 +1417,4 @@ Um pull request que mover, criar ou remover caminhos importantes deve atualizar 
 
 ## Contrato do manifesto curricular
 
-A Sprint 08A reserva o diretório [curriculum/](../curriculum/README.pt-BR.md). Schema e validador estrutural são introduzidos antes do inventário completo; aulas fonte permanecem nos diretórios existentes.
+Sprint 08B adiciona [curriculum/manifest.json](../curriculum/manifest.json) e [validação do inventário curricular](../scripts/curriculum_inventory.py). Veja a [documentação curricular](../curriculum/README.pt-BR.md). Caminhos de aulas permanecem inalterados; associações de avaliações seguem pendentes.
