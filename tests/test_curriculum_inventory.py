@@ -116,11 +116,17 @@ class CurriculumInventoryTests(unittest.TestCase):
             })
 
     def test_pending_associations_only(self):
-        self.manifest["association_status"] = "complete"
+        self.manifest["association_status"] = "pending"
         self.reject()
-        self.manifest = copy.deepcopy(self.data)
+        # Preserve the original pending-inventory contract as an explicit historical fixture.
+        for module in self.manifest["modules"]:
+            for chapter in module["chapters"]:
+                for field in ("quiz_ids", "exercise_ids", "interview_ids", "mock_ids"):
+                    chapter[field] = []
+        validate_inventory(self.manifest, ROOT, self.tracked, expected_status="pending")
         self.manifest["modules"][0]["chapters"][0]["quiz_ids"] = ["quiz.example"]
-        self.reject()
+        with self.assertRaises(ValueError):
+            validate_inventory(self.manifest, ROOT, self.tracked, expected_status="pending")
 
     def test_execution_metadata(self):
         module = next(m for m in self.manifest["modules"] if m["id"] == "external-libraries")
