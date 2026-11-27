@@ -23,7 +23,7 @@ Sprints 00–07 encerradas. [PR #107](https://github.com/RamonRDR/python-study-g
 | T06-02 Criar perguntas e simulações/rubricas | 06 | T06-01 | Concluído: 60 perguntas e três simulados; [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101), [CI pós-merge](https://github.com/RamonRDR/python-study-guide/actions/runs/45829816717) |
 | T07-01 Finalizar e validar schemas/registros de quiz/exercício | 07 | T06-02 | Concluído ([#102](https://github.com/RamonRDR/python-study-guide/pull/102), [#103](https://github.com/RamonRDR/python-study-guide/pull/103), [#104](https://github.com/RamonRDR/python-study-guide/pull/104), [#105](https://github.com/RamonRDR/python-study-guide/pull/105), [#106](https://github.com/RamonRDR/python-study-guide/pull/106), [#107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)) |
 | T08-01 Finalizar manifesto e fixtures de integração | 08 | T07-01 | Concluído: AC-08 encerrado |
-| T09-01 Executar QA e registrar evidências reais | 09A | T08-01 | Em revisão: evidências de QA 09A; gates pendentes |
-| T09-02 Obter revisão final e publicar handoff com revisão fixada | 09B | T09-01 | Pendente |
+| T09-01 Executar QA e registrar evidências reais | 09A | T08-01 | Concluído ([PR #113](https://github.com/RamonRDR/python-study-guide/pull/113), [CI de push](https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528), [encerramento](https://github.com/RamonRDR/python-study-guide/pull/113#issuecomment-7226902203)) |
+| T09-02 Obter revisão final e publicar handoff com revisão fixada | 09B | T09-01 | Em revisão: handoff e teste do pin exato; gates pendentes |
 
 Atualizar status com links de evidência em PRs focados posteriores. Concluído significa critérios satisfeitos; conclusão da sprint requer revisão e aprovação. Não inferir conclusão a partir deste plano.

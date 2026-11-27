@@ -23,8 +23,8 @@ The guide is the single source of truth; the external site consumes one validate
 | `curriculum/manifest.json` | 1.0.0 | `schemas/curriculum-manifest.schema.json` | 14 / 115 |
 | `quizzes/quiz-index.json` | 1.0.0 | `schemas/quiz-index.schema.json`, `schemas/quiz.schema.json` | 160 |
 | `exercises/problem-solving/exercise-index.json` | 1.0.0 | `schemas/exercise-index.schema.json`, `schemas/exercise.schema.json` | 30 |
-| `interviews/interview-index.json` | 0.1.0 | `scripts/validate_interviews.py` | 60 |
-| `interviews/mocks/mock-index.json` | 0.1.0 | `scripts/validate_interviews.py` | 3 |
+| `interviews/interview-index.json` | 0.1.0 | `scripts/interview_records.py` | 60 |
+| `interviews/mocks/mock-index.json` | 0.1.0 | `scripts/interview_mocks.py` | 3 |
 
 All five JSON schemas use Draft 2020-12; interview/mock records remain preliminary and use trusted Python validators, not invented JSON schemas. Manifest association_status must be complete. Inventory: 107 lessons + eight projects = 115 entries, 345 localized content paths, 42 module indexes, 243 chapter resources, six global assets. 253 canonical records; 268 associations (160 quiz, 30 exercise, 75 interview prerequisite links, three mock links). Quiz difficulty easy/medium/hard: 64/67/29, 2,850 XP; exercise difficulty 12/12/6, 192 cases; interview junior/mid/senior 24/24/12; mocks 30/45/60 minutes. Existing tests support the counts; see QA report.
 

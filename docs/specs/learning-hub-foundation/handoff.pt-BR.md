@@ -23,8 +23,8 @@ O guia é a fonte única da verdade; site externo consome um commit validado no 
 | `curriculum/manifest.json` | 1.0.0 | `schemas/curriculum-manifest.schema.json` | 14 / 115 |
 | `quizzes/quiz-index.json` | 1.0.0 | `schemas/quiz-index.schema.json`, `schemas/quiz.schema.json` | 160 |
 | `exercises/problem-solving/exercise-index.json` | 1.0.0 | `schemas/exercise-index.schema.json`, `schemas/exercise.schema.json` | 30 |
-| `interviews/interview-index.json` | 0.1.0 | `scripts/validate_interviews.py` | 60 |
-| `interviews/mocks/mock-index.json` | 0.1.0 | `scripts/validate_interviews.py` | 3 |
+| `interviews/interview-index.json` | 0.1.0 | `scripts/interview_records.py` | 60 |
+| `interviews/mocks/mock-index.json` | 0.1.0 | `scripts/interview_mocks.py` | 3 |
 
 Cinco schemas JSON usam Draft 2020-12; registros de entrevista/simulado permanecem preliminares e usam validadores Python confiáveis, sem inventar schemas JSON. association_status deve ser complete. Inventário: 107 aulas + oito projetos = 115 entradas, 345 caminhos de conteúdo localizado, 42 índices de módulo, 243 recursos de capítulo, seis assets globais. 253 registros canônicos; 268 associações (160 quiz, 30 exercício, 75 links de pré-requisitos de entrevistas, três de simulados). Dificuldade easy/medium/hard: quizzes 64/67/29, 2.850 XP; exercícios 12/12/6, 192 casos; entrevistas junior/mid/senior 24/24/12; simulados 30/45/60 minutos. Testes existentes sustentam contagens; consultar QA.
 

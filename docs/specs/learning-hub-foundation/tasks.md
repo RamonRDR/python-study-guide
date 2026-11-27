@@ -23,7 +23,7 @@ Sprints 00–07 closed. [PR #107](https://github.com/RamonRDR/python-study-guide
 | T06-02 Author question bank and timed mocks/rubrics | 06 | T06-01 | Done: 60 questions and three timed mocks; [PR #101](https://github.com/RamonRDR/python-study-guide/pull/101), [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45829816717) |
 | T07-01 Finalize and validate quiz/exercise schemas and records | 07 | T06-02 | Done ([#102](https://github.com/RamonRDR/python-study-guide/pull/102), [#103](https://github.com/RamonRDR/python-study-guide/pull/103), [#104](https://github.com/RamonRDR/python-study-guide/pull/104), [#105](https://github.com/RamonRDR/python-study-guide/pull/105), [#106](https://github.com/RamonRDR/python-study-guide/pull/106), [#107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)) |
 | T08-01 Finalize curriculum manifest and integration fixtures | 08 | T07-01 | Done: AC-08 closed |
-| T09-01 Execute QA and record actual evidence | 09A | T08-01 | In review: 09A QA evidence; gates pending |
-| T09-02 Obtain final review and publish revision-pinned handoff | 09B | T09-01 | Pending |
+| T09-01 Execute QA and record actual evidence | 09A | T08-01 | Done ([PR #113](https://github.com/RamonRDR/python-study-guide/pull/113), [push CI](https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528), [closure](https://github.com/RamonRDR/python-study-guide/pull/113#issuecomment-7226902203)) |
+| T09-02 Obtain final review and publish revision-pinned handoff | 09B | T09-01 | In review: handoff and exact content-pin test; gates pending |
 
 Update statuses with evidence links in subsequent focused PRs. Done means the associated acceptance criteria are satisfied; sprint completion requires review and maintainer approval. Do not infer completion from this plan.
