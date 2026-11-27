@@ -1418,3 +1418,5 @@ Um pull request que mover, criar ou remover caminhos importantes deve atualizar 
 ## Contrato do manifesto curricular
 
 Sprint 08B adiciona [curriculum/manifest.json](../curriculum/manifest.json) e [validação do inventário curricular](../scripts/curriculum_inventory.py). Veja a [documentação curricular](../curriculum/README.pt-BR.md). Caminhos de aulas permanecem inalterados; associações de avaliações seguem pendentes.
+
+Sprint 08C adiciona [curriculum relationship validation](../scripts/curriculum_relationships.py). Relacionamentos dos bancos canônicos estão completos; verificação imutável do consumidor permanece pendente.

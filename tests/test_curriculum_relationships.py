@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from curriculum_manifest import read_json
 from curriculum_relationships import (
-    association_map, read_index, validate_associations, validate_relationships,
+    association_map, preliminary_bank, read_index, validate_associations, validate_relationships,
 )
 
 
@@ -98,3 +98,23 @@ class CurriculumRelationshipTests(unittest.TestCase):
             self.assertEqual(read_index(root, {"index": "index.json",
                                               "schema_version": "1.0.0"})["x"],
                              9007199254740993)
+
+    def test_preliminary_records_use_strict_json(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            questions = root / "interviews/questions"
+            questions.mkdir(parents=True)
+            (root / "interviews/interview-index.json").write_text(
+                '{"schema_version":"0.1.0","question_ids":["python.example"]}',
+                encoding="utf-8",
+            )
+            path = questions / "python.example.json"
+            descriptor = {"schema_version": "0.1.0", "index": "interviews/interview-index.json"}
+            for raw in ('{"id":"python.example","x":Infinity}',
+                        '{"id":"python.example","x":1e999}',
+                        '{"id":"python.example","id":"python.example"}'):
+                path.write_text(raw, encoding="utf-8")
+                with self.subTest(raw=raw), self.assertRaises(ValueError):
+                    preliminary_bank(root, descriptor, "question_ids",
+                                     "interviews/questions",
+                                     lambda _: self.fail("lenient loader must not run"), None)

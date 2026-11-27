@@ -4,9 +4,13 @@ No learner code is executed. Authoring/consumer identity is a separate gate.
 """
 from pathlib import Path
 import json
+import sys
 
 from assessment_records import ID, canonical_record_path, load_index, schema_validate
 from curriculum_manifest import ROOT, manifest_file, read_json, validate_manifest
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from scripts.interview_records import load_bank
 from scripts.interview_mocks import load_mocks
 

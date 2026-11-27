@@ -230,7 +230,7 @@ All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
-This engineering phase does not renumber the original curriculum. Sprints 00–07 are closed. The [160-quiz bank](../quizzes/README.md) and 30 versioned exercises are complete. AC-07 is closed ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). Sprint 08A is closed; Sprint 08B publishes the complete curriculum inventory (14 modules, 115 entries) with pending assessment associations. AC-08 remains open. The repository stays independent of the future web platform.
+This engineering phase does not renumber the original curriculum. Sprints 00–07 are closed. The [160-quiz bank](../quizzes/README.md) and 30 versioned exercises are complete. AC-07 is closed ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [post-merge CI](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). Sprints 08A–B are closed; 08C completes relationships for 253 canonical records across 115 curriculum entries. Immutable consumer verification and AC-08 remain pending. The repository stays independent of the future web platform.
 
 | Future curriculum | Status |
 | --- | --- |
