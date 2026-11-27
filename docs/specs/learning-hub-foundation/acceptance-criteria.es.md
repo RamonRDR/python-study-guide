@@ -78,3 +78,9 @@ Aceptación de Sprint 08A: esquema Draft 2020-12 y validación estructural/de ru
 | Evidencia final y cierre | CI en HEAD exacto, Codex Review, Final Pre-Merge Audit, autorización del mantenedor, squash y CI posterior obligatorios. Sprint 09 proporciona handoff final del release. |
 
 [Suite consolidada de regresión](../../../tests/test_curriculum_acceptance.py). Evidencia de implementación, no afirmación de que gates 08E ya pasaron.
+
+### Sprint 09A · AC-08 / AC-09
+
+[PR #112](https://github.com/RamonRDR/python-study-guide/pull/112) · [CI #46053604048](https://github.com/RamonRDR/python-study-guide/actions/runs/46053604048) · [Linux job](https://github.com/RamonRDR/python-study-guide/actions/runs/46053604048/job/140690676913) · [Windows job](https://github.com/RamonRDR/python-study-guide/actions/runs/46053604048/job/140690677260) · [AC-08](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176) · `a8a264f9f36ec276f0ad8e35f10f2d76f82fe211`.
+
+AC-08 formalmente cerrado en la base exacta anterior. Evidencias y alcance residual de revisión de 09A en [QA final](final-qa.es.md). AC-09 sigue abierto hasta handoff 09B, validación del pin exacto de contenido, revisión, aprobación explícita, squash y CI de push.
