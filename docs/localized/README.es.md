@@ -6,7 +6,12 @@
 
 <img src="../../assets/banner.png" alt="Identidad visual de Python Study Guide con una serpiente geométrica, llaves de código, un libro abierto y nodos de aprendizaje conectados." width="100%">
 
-[🇺🇸 English](../../README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
+<p align="center"><strong>🌐 Elige tu idioma</strong><br/><sub>Disponible en 3 idiomas</sub></p>
+<p align="center">
+  <a href="../../README.md" title="English (default)"><img src="../assets/language-badges/language-en-v2.svg" alt="English (EN), US flag colors" width="207" height="34" /></a>
+  <a href="README.pt-BR.md" title="Português (Brasil)"><img src="../assets/language-badges/language-pt-br-v2.svg" alt="Português do Brasil (PT-BR), Brazilian flag colors" width="207" height="34" /></a>
+  <a href="README.es.md" title="Español"><img src="../assets/language-badges/language-es-v2.svg" alt="Español (ES), Spanish flag colors" width="207" height="34" /></a>
+</p>
 
 <p>
   <img alt="Python 3.13 CI" src="https://img.shields.io/badge/Python-3.13%20CI-3776AB?logo=python&amp;logoColor=white" />
@@ -24,18 +29,18 @@
 </p>
 
 <p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="Quality unittest 180 passing" src="https://img.shields.io/badge/Quality%20unittest-180%20passing-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="pytest Linux 406 passing" src="https://img.shields.io/badge/pytest%20Linux-406%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="pytest Linux 1 skipped" src="https://img.shields.io/badge/pytest%20Linux-1%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="pytest Windows 63 passing" src="https://img.shields.io/badge/pytest%20Windows-63%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="pytest Windows 17 skipped" src="https://img.shields.io/badge/pytest%20Windows-17%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Quality unittest 181 passing" src="https://img.shields.io/badge/Quality%20unittest-181%20passing-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Linux 406 passing" src="https://img.shields.io/badge/pytest%20Linux-406%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Linux 1 skipped" src="https://img.shields.io/badge/pytest%20Linux-1%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Windows 63 passing" src="https://img.shields.io/badge/pytest%20Windows-63%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Windows 17 skipped" src="https://img.shields.io/badge/pytest%20Windows-17%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
 </p>
 
 <p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="Examples 210 passed" src="https://img.shields.io/badge/Examples-210%20passed-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="Markdown links 9282 checked" src="https://img.shields.io/badge/Markdown%20links-9282%20checked-2486C4" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="Repository structure valid" src="https://img.shields.io/badge/Repository%20structure-valid-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="compileall passed" src="https://img.shields.io/badge/compileall-passed-2E7D32?logo=python&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Examples 210 passed" src="https://img.shields.io/badge/Examples-210%20passed-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Markdown links 9306 checked" src="https://img.shields.io/badge/Markdown%20links-9306%20checked-2486C4" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Repository structure valid" src="https://img.shields.io/badge/Repository%20structure-valid-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="compileall passed" src="https://img.shields.io/badge/compileall-passed-2E7D32?logo=python&amp;logoColor=white" /></a>
   <a href="https://github.com/RamonRDR/python-study-guide/tree/main/practical-projects"><img alt="Practical projects 8 complete" src="https://img.shields.io/badge/Practical%20projects-8%20complete-7057FF" /></a>
 </p>
 
@@ -44,11 +49,11 @@
 </p>
 
 <p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="Chapter navigation 345 documents" src="https://img.shields.io/badge/Chapter%20navigation-345%20documents-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528"><img alt="Documentation language check passed" src="https://img.shields.io/badge/Documentation%20parity-passed-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Chapter navigation 345 documents" src="https://img.shields.io/badge/Chapter%20navigation-345%20documents-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Documentation language check passed" src="https://img.shields.io/badge/Documentation%20parity-passed-2E7D32" /></a>
 </p>
 
-<sub>Resultados verificados: <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46059023528">GitHub Actions ejecución 46059023528 (27/11/2026 UTC)</a>, main posterior al merge <code>03e91ff</code>. Los recuentos no son en tiempo real. Windows corresponde al subconjunto File Organizer de la suite Linux de proyectos; no sumes los resultados. Los enlaces internos los comprueba el script del repositorio, no la disponibilidad de URL externas. Las insignias de dependencias representan rangos compatibles, no un lockfile.</sub>
+<sub>Resultados verificados: <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182">GitHub Actions ejecución 46060408182 (27/11/2026 UTC)</a>, main posterior al merge <code>ae9f191</code>. Los recuentos no son en tiempo real. Windows corresponde al subconjunto File Organizer de la suite Linux de proyectos; no sumes los resultados. Los enlaces internos los comprueba el script del repositorio, no la disponibilidad de URL externas. Las insignias de dependencias representan rangos compatibles, no un lockfile.</sub>
 
 </div>
 
@@ -143,7 +148,7 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-**Phase II: Learning Hub Foundation** está en curso. Sprints 00–08 cerrados; Fases 11 y 12 completadas (24 lecciones de Fase 12, 60 preguntas y tres simulaciones). El [banco de 160 cuestionarios](../../quizzes/README.es.md) y los [30 ejercicios versionados](../../exercises/README.es.md) están completos. AC-07 cerrado ([PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), [CI posterior](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654)). AC-08 cerrado ([cierre](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176)): 115 entradas curriculares y 253 registros canónicos. Sprint 09A cerrado ([cierre](https://github.com/RamonRDR/python-study-guide/pull/113#issuecomment-7226902203)); handoff 09B en revisión, gates finales AC-09 pendientes. [Handoff](../specs/learning-hub-foundation/handoff.es.md). La guía permanece independiente del futuro Learning Hub web y de Git Study Guide.
+**Python Study Guide 2.0 · Phase II: Learning Hub Foundation completada.** Sprints 00–09 (incluidos 09A y 09B) y AC-00–09 cerrados ([cierre oficial](https://github.com/RamonRDR/python-study-guide/pull/114#issuecomment-7227229546), [CI final](https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182)). El currículo contiene 14 módulos, 115 entradas, 160 cuestionarios, 30 ejercicios, 60 preguntas de entrevista y tres simulacros. El [handoff para Learning Hub](../specs/learning-hub-foundation/handoff.es.md) y la revisión inmutable de contenido están aprobados dentro del alcance del repositorio; ejecución en navegador y sitio externo siguen siendo trabajos separados. La guía permanece independiente del futuro Learning Hub y Git Study Guide.
 
 [Plan de implementación de Phase II](../specs/learning-hub-foundation/implementation-plan.es.md)
 
