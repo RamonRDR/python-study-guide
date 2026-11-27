@@ -82,6 +82,8 @@ def validate_inventory(data, root=ROOT, tracked=None):
     if tracked is None:
         tracked = tracked_paths(root)
     require_equal(data["association_status"], "pending", "association status")
+    if "docs/specs/learning-hub-foundation/assessment-matrix.json" not in tracked:
+        raise ValueError("untracked authoring baseline")
     baseline = load_matrix(root)
     by_content = {paths["en"]: (identifier, paths)
                   for identifier, paths in baseline.items()}
