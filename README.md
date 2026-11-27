@@ -143,7 +143,7 @@ Detailed explanations:
 
 ## Current status
 
-**Phase II: Learning Hub Foundation** is in progress. Sprints 00–06 and 07A–C2 are merged; Phase 11 and Phase 12 are complete (24 Phase 12 lessons, 60 questions and three mocks). The [160-quiz bank](quizzes/README.md) is complete; Sprint 07D migrates all 30 exercises to schema 1.0.0. AC-07 closure and the consumer manifest remain planned. The guide remains independent of the future web Learning Hub and Git Study Guide.
+**Phase II: Learning Hub Foundation** is in progress. Sprints 00–06 and 07A–D are merged; Phase 11 and Phase 12 are complete (24 Phase 12 lessons, 60 questions and three mocks). The [160-quiz bank](quizzes/README.md) and [30 versioned exercises](exercises/README.md) are complete. 07E consolidates AC-07 acceptance; closure depends on its exact-head gates, maintainer approval and post-merge CI. The consumer manifest remains planned for Sprint 08. The guide remains independent of the future web Learning Hub and Git Study Guide.
 
 [Phase II implementation plan](docs/specs/learning-hub-foundation/implementation-plan.md)
 

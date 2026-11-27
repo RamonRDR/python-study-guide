@@ -143,7 +143,7 @@ Explicaciones detalladas:
 
 ## Estado actual
 
-**Phase II: Learning Hub Foundation** está en curso. Sprints 00–06 y 07A–C2 fusionados; Fases 11 y 12 completadas (24 lecciones de Fase 12, 60 preguntas y tres simulaciones). El [banco de 160 cuestionarios](../../quizzes/README.es.md) está completo; Sprint 07D migra los 30 ejercicios al esquema 1.0.0. El cierre AC-07 y el manifiesto del consumidor siguen previstos. La guía permanece independiente del futuro Learning Hub web y de Git Study Guide.
+**Phase II: Learning Hub Foundation** está en curso. Sprints 00–06 y 07A–D fusionados; Fases 11 y 12 completadas (24 lecciones de Fase 12, 60 preguntas y tres simulaciones). El [banco de 160 cuestionarios](../../quizzes/README.es.md) y los [30 ejercicios versionados](../../exercises/README.es.md) están completos. 07E consolida la aceptación de AC-07; el cierre depende de los gates del head exacto, aprobación del mantenedor y CI posterior. El manifiesto del consumidor sigue previsto para Sprint 08. La guía permanece independiente del futuro Learning Hub web y de Git Study Guide.
 
 [Plan de implementación de Phase II](../specs/learning-hub-foundation/implementation-plan.es.md)
 

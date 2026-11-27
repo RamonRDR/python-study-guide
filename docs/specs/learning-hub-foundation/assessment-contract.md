@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprints 07A–C2 merged and post-merge CI passed ([PR #102](https://github.com/RamonRDR/python-study-guide/pull/102), [PR #103](https://github.com/RamonRDR/python-study-guide/pull/103), [PR #104](https://github.com/RamonRDR/python-study-guide/pull/104), [PR #105](https://github.com/RamonRDR/python-study-guide/pull/105), [C2 CI](https://github.com/RamonRDR/python-study-guide/actions/runs/45901661393)). D completes the 30-exercise versioned index; AC-07 closure and browser runtime remain outside D.
+Sprint 07A–D merged. D [PR #106](https://github.com/RamonRDR/python-study-guide/pull/106) post-merge [CI #45905339496](https://github.com/RamonRDR/python-study-guide/actions/runs/45905339496) passed. E consolidates AC-07 acceptance; closure requires exact-head CI, Codex Review, Final Pre-Merge Audit, explicit maintainer approval, squash merge and post-merge CI. Browser runtime and the Sprint 08 consumer manifest remain outside E.
  
 ## Scope and acceptance
 - Inventory: 115 entries, 345 localized paths, 64 easy / 67 medium / 29 hard quizzes (2,850 XP at 10/20/30). The [allocation matrix](assessment-matrix.json) is engineering planning metadata, not a consumer manifest. Zero allocations preserve manual practice or avoid repeated assessment.
@@ -46,3 +46,9 @@ Baseline: `bf56305f42d10ab7c5b31c2b70f6c38140353db4`. See [Sprint 06 closure](ht
 - Add only schema_version and tests.new_container to legacy records. Set the latter true for the eight migrated records returning a new list or dictionary, consistent with their contracts and the existing expansion test's no-alias rule; false for scalar results. The existing pilot inventory has one true flag. Preserve the legacy 29-entry expansion index as a compatibility view, not the canonical versioned index.
 - Check all 30 canonical records against schema and relationship validation; use explicit repository-owned fixture paths to test every existing reference and representative wrong implementation, exact type/value, input preservation, silence and nested aliases. Preserve starter-mode checks and independent oracles. Verify large integer tokens with Python exact integer semantics. No learner source execution, new runtime, dependencies or exercise content expansion.
 - All execution remains unverified for browsers, declared timeouts are not enforced here, and functional tests do not certify complexity or refactoring quality. AC-07 closes only in E after all exact-head gates and maintainer approval.
+
+## Consolidated acceptance (07E)
+
+- Confirm the complete canonical banks together: 160 quizzes (64 easy, 67 medium, 29 hard; 2,850 XP), 30 exercises (12 easy, 12 medium, 6 hard; 192 existing cases), all schema 1.0.0, five quiz types and function_call exercises. Check exact index coverage, globally distinct record IDs and a shared implementation per exercise.
+- Consolidate positive and negative acceptance evidence for AC-07. Exercise both index validators with duplicate IDs and dangling references, reject missing locales, unsupported versions and invalid quiz answers. Use only existing trusted fixtures for deterministic grading and representative wrong implementations; preserve previous regression suites.
+- Record D's merge and post-merge CI, mapping each AC-07 requirement to actual verification. Do not claim E is closed before exact-head CI, Codex Review, Final Pre-Merge Audit, explicit maintainer approval, squash merge and post-merge CI. No new learner content, runtime, dependencies or consumer manifest. Browser execution, timeout enforcement and manual complexity/refactoring review remain outside this acceptance.

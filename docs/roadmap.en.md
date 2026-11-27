@@ -230,7 +230,7 @@ All planned Phase 12 content is implemented: 24 lessons, 60 questions (24 junior
 
 ## Phase II: Learning Hub Foundation (engineering roadmap)
 
-This engineering phase does not renumber the original curriculum. Sprints 00–06 and 07A–C2 are merged. The [160-quiz bank](../quizzes/README.md) is complete; Sprint 07D versions all 30 exercises. AC-07 closure in E and the consumer manifest remain planned. The repository stays independent of the future web platform.
+This engineering phase does not renumber the original curriculum. Sprints 00–06 and 07A–D are merged. The [160-quiz bank](../quizzes/README.md) and 30 versioned exercises are complete. 07E consolidates AC-07 acceptance; closure depends on its exact-head gates, maintainer approval and post-merge CI. The consumer manifest remains planned for Sprint 08. The repository stays independent of the future web platform.
 
 | Future curriculum | Status |
 | --- | --- |
