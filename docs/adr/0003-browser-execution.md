@@ -2,7 +2,7 @@
 
 [🇺🇸 English](0003-browser-execution.md) · [🇧🇷 Português](0003-browser-execution.pt-BR.md) · [🇪🇸 Español](0003-browser-execution.es.md)
 
-Status: proposed (direction approved 2026-11-25; pending PR review).
+Status: accepted architecture direction ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)); browser execution remains unverified.
 
 ## Context
 

@@ -2,7 +2,7 @@
 
 [🇺🇸 English](0001-content-source-of-truth.md) · [🇧🇷 Português](0001-content-source-of-truth.pt-BR.md) · [🇪🇸 Español](0001-content-source-of-truth.es.md)
 
-Status: proposed (direction approved 2026-11-25; pending PR review).
+Status: accepted architecture direction ([PR #87](https://github.com/RamonRDR/python-study-guide/pull/87)); browser execution remains unverified.
 
 ## Context
 

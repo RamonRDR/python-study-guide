@@ -2,7 +2,7 @@
 
 [EN](0004-curriculum-manifest.md) · [PT-BR](0004-curriculum-manifest.pt-BR.md) · [ES](0004-curriculum-manifest.es.md)
 
-Status: proposed for PR review; maintainer approved the Sprint 08 plan.
+Status: accepted manifest contract ([PR #108](https://github.com/RamonRDR/python-study-guide/pull/108), [AC-08 closure](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176)).
 
 ## Decision
 Publish `curriculum/manifest.json` with `schemas/curriculum-manifest.schema.json` (Draft 2020-12, manifest version 1.0.0). Reuse the existing jsonschema dependency and strict assessment JSON/path helpers. The manifest references source files, never duplicates lesson or assessment bodies. The 115 stable chapter IDs come from the assessment matrix; order and titles come from the three learning paths. Preserve the historical project foundation separately from curriculum order 00, educational phases 1–12 and the complementary module. Module and chapter orders are zero-based or greater, contiguous within siblings, and independent of IDs; previous/next spans the complete curriculum.

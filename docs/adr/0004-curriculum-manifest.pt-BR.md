@@ -2,7 +2,7 @@
 
 [EN](0004-curriculum-manifest.md) · [PT-BR](0004-curriculum-manifest.pt-BR.md) · [ES](0004-curriculum-manifest.es.md)
 
-Status: proposto para revisão do PR; mantenedor aprovou o plano da Sprint 08.
+Status: contrato de manifesto aceito ([PR #108](https://github.com/RamonRDR/python-study-guide/pull/108), [encerramento AC-08](https://github.com/RamonRDR/python-study-guide/pull/112#issuecomment-7226219176)).
 
 ## Decisão
 Publicar `curriculum/manifest.json` com `schemas/curriculum-manifest.schema.json` (Draft 2020-12, versão 1.0.0 do manifesto). Reutilizar a dependência jsonschema e os auxiliares estritos de JSON/caminhos das avaliações. O manifesto referencia arquivos fonte, sem duplicar aulas ou avaliações. Os 115 IDs estáveis vêm da matriz de avaliações; ordem e títulos vêm das três trilhas. Preservar a fundação histórica separada da ordem curricular 00, fases educacionais 1–12 e módulo complementar. As ordens de módulos e capítulos são inteiros a partir de zero, contíguos entre irmãos e independentes dos IDs; previous/next atravessa todo o currículo.
