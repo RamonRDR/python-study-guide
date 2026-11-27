@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprint 07A–D merged. D [PR #106](https://github.com/RamonRDR/python-study-guide/pull/106) post-merge [CI #45905339496](https://github.com/RamonRDR/python-study-guide/actions/runs/45905339496) passed. E consolidates AC-07 acceptance; closure requires exact-head CI, Codex Review, Final Pre-Merge Audit, explicit maintainer approval, squash merge and post-merge CI. Browser runtime and the Sprint 08 consumer manifest remain outside E.
+AC-07 closed via [PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), squash commit `f5d963fbf6544a8d9932fff915360f9a129d59b5`. [Post-merge CI #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654) passed Repository quality and File Organizer Windows; [closure record](https://github.com/RamonRDR/python-study-guide/pull/107#issuecomment-7221291775). Browser runtime and Sprint 08 manifest remain outside AC-07.
  
 ## Scope and acceptance
 - Inventory: 115 entries, 345 localized paths, 64 easy / 67 medium / 29 hard quizzes (2,850 XP at 10/20/30). The [allocation matrix](assessment-matrix.json) is engineering planning metadata, not a consumer manifest. Zero allocations preserve manual practice or avoid repeated assessment.

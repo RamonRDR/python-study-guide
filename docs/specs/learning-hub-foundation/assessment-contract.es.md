@@ -2,7 +2,7 @@
 
 [EN](assessment-contract.md) · [PT-BR](assessment-contract.pt-BR.md) · [ES](assessment-contract.es.md)
 
-Sprint 07A–D fusionados. [CI #45905339496](https://github.com/RamonRDR/python-study-guide/actions/runs/45905339496) posterior de D ([PR #106](https://github.com/RamonRDR/python-study-guide/pull/106)) aprobado. E consolida la aceptación AC-07; el cierre requiere CI del head exacto, Codex Review, Final Pre-Merge Audit, autorización expresa del mantenedor, squash merge y CI posterior. Runtime del navegador y manifiesto del consumidor de Sprint 08 quedan fuera de E.
+AC-07 cerrado mediante [PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), commit squash `f5d963fbf6544a8d9932fff915360f9a129d59b5`. [CI posterior #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654) aprobó Repository quality y File Organizer Windows; [registro de cierre](https://github.com/RamonRDR/python-study-guide/pull/107#issuecomment-7221291775). Runtime del navegador y manifiesto de Sprint 08 quedan fuera de AC-07.
 
 ## Alcance y aceptación
 - Inventario: 115 entradas, 345 rutas localizadas, 64 quizzes easy / 67 medium / 29 hard (2.850 XP a 10/20/30). La [matriz de distribución](assessment-matrix.json) es metadato de planificación de ingeniería, no manifiesto del consumidor. Las asignaciones cero preservan práctica manual o evitan evaluaciones repetidas.

@@ -37,4 +37,10 @@ Os bancos canônicos contêm 160 quizzes (64 easy, 67 medium, 29 hard; 2.850 XP)
 | Discriminação de soluções incorretas | Suíte existente de migração testa 30 referências e implementações incorretas representativas nos 192 casos; testes de modalidades de starter e legados permanecem |
 | Código compartilhado entre idiomas | Inventário consolidado verifica 90 arquivos compartilhados de starter, solução e teste e ausência de arquivos Python isolados de quiz |
 
-Os novos testes consolidados exigem CI no head exato de E; não se alega execução local nem Red isolado. Nenhum código fornecido pelo aluno é executado. Execução no navegador não verificada, timeout declarativo, verificações de estado final não detectam toda mutação intermediária e testes funcionais não certificam complexidade ou qualidade da refatoração. Encerramento exige CI no head exato, Codex Review, Final Pre-Merge Audit, autorização expressa do mantenedor, squash merge e CI pós-merge. Gates pendentes não são declarados aprovados. O manifesto do consumidor pertence à Sprint 08.
+AC-07 encerrado via [PR #107](https://github.com/RamonRDR/python-study-guide/pull/107), commit squash `f5d963fbf6544a8d9932fff915360f9a129d59b5`. [CI pós-merge #46019251654](https://github.com/RamonRDR/python-study-guide/actions/runs/46019251654) aprovou Repository quality e File Organizer Windows; [registro de encerramento](https://github.com/RamonRDR/python-study-guide/pull/107#issuecomment-7221291775).
+
+O registro de encerramento indica Linux 121 testes de qualidade, 7 de engenharia, 406 práticos aprovados / 1 skipped; Windows 63 aprovados / 17 skipped. Sem alegação de execução local separada ou Red isolado. Execução no navegador, aplicação de timeout, mutação intermediária e revisão manual de complexidade/refatoração permanecem fora de AC-07.
+
+### Sprint 08A · AC-08
+
+Aceite da Sprint 08A: schema Draft 2020-12 e validação estrutural/de caminhos estrita com fixtures sintéticas positivas e negativas, incluindo versões independentes dos bancos, caminhos localizados, metadados de execução e JSON inválido. Inventário e navegação (B), relações dos bancos (C), consumidor fixado (D) e aceite consolidado (E) permanecem pendentes. Validador estrutural sozinho não certifica snapshot publicado. CI e review no head exato são obrigatórios; nenhum novo resultado de teste é alegado aqui.
