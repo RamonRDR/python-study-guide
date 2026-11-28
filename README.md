@@ -29,6 +29,8 @@
   <a href="https://github.com/RamonRDR"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-24292F?style=flat&amp;logo=github&amp;logoColor=white" /></a>
 </p>
 
+<hr />
+
 <p>
   <img alt="Python 3.13 CI" src="https://img.shields.io/badge/Python-3.13%20CI-3776AB?logo=python&amp;logoColor=white" />
   <a href="LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-2E7D32" /></a>
@@ -107,22 +109,87 @@ A computer with a supported Python installation and a text editor is enough for 
 
 ## Learning roadmap
 
-| Order | Module | Lessons/projects |
-| --- | --- | ---: |
-| 00 | [Getting Started](getting-started/README.md) | 6 |
-| 01 | [Fundamentals](fundamentals/README.md) | 6 |
-| 02 | [Strings and Numbers](strings-and-numbers/README.md) | 4 |
-| 03 | [Collections](collections/README.md) | 6 |
-| 04 | [Program Flow](program-flow/README.md) | 8 |
-| 05 | [Functions](functions/README.md) | 9 |
-| 06 | [Comments and Documentation](comments-and-documentation/README.md) | 6 |
-| 07 | [Errors, Files and Modules](errors-files-and-modules/README.md) | 5 |
-| 08 | [Standard Library](standard-library/README.md) | 9 |
-| 09 | [External Libraries](external-libraries/README.md) | 4 |
-| 10 | [Practical Projects](practical-projects/README.md) | 8 |
-| Supplement | [Manual Programming & Engineering Practices](manual-programming-practices/README.md) | 4 |
-| 11 | [Problem Solving & Live Coding](problem-solving-and-live-coding/README.md) | 16 |
-| 12 | [Technical Interview Preparation](technical-interview-preparation/README.md) | 24 |
+<table align="center">
+  <thead>
+    <tr>
+      <th scope="col">Order</th>
+      <th scope="col">Module</th>
+      <th scope="col">Lessons/projects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>00</td>
+      <td><a href="getting-started/README.md">Getting Started</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>01</td>
+      <td><a href="fundamentals/README.md">Fundamentals</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td><a href="strings-and-numbers/README.md">Strings and Numbers</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td><a href="collections/README.md">Collections</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td><a href="program-flow/README.md">Program Flow</a></td>
+      <td align="right">8</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td><a href="functions/README.md">Functions</a></td>
+      <td align="right">9</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td><a href="comments-and-documentation/README.md">Comments and Documentation</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td><a href="errors-files-and-modules/README.md">Errors, Files and Modules</a></td>
+      <td align="right">5</td>
+    </tr>
+    <tr>
+      <td>08</td>
+      <td><a href="standard-library/README.md">Standard Library</a></td>
+      <td align="right">9</td>
+    </tr>
+    <tr>
+      <td>09</td>
+      <td><a href="external-libraries/README.md">External Libraries</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><a href="practical-projects/README.md">Practical Projects</a></td>
+      <td align="right">8</td>
+    </tr>
+    <tr>
+      <td>Supplement</td>
+      <td><a href="manual-programming-practices/README.md">Manual Programming &amp; Engineering Practices</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><a href="problem-solving-and-live-coding/README.md">Problem Solving &amp; Live Coding</a></td>
+      <td align="right">16</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><a href="technical-interview-preparation/README.md">Technical Interview Preparation</a></td>
+      <td align="right">24</td>
+    </tr>
+  </tbody>
+</table>
 
 - [Full learning path: direct links to every published chapter](docs/learning-path.en.md)
 - [Roadmap in English](docs/roadmap.en.md)

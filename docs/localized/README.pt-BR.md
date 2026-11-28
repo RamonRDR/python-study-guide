@@ -29,6 +29,8 @@
   <a href="https://github.com/RamonRDR"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-24292F?style=flat&amp;logo=github&amp;logoColor=white" /></a>
 </p>
 
+<hr />
+
 <p>
   <img alt="Python 3.13 CI" src="https://img.shields.io/badge/Python-3.13%20CI-3776AB?logo=python&amp;logoColor=white" />
   <a href="../../LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-2E7D32" /></a>
@@ -107,22 +109,87 @@ Um computador com instalação Python suportada e editor de texto basta para est
 
 ## Roadmap de aprendizagem
 
-| Ordem | Módulo | Aulas/projetos |
-| --- | --- | ---: |
-| 00 | [Primeiros passos](../../getting-started/README.pt-BR.md) | 6 |
-| 01 | [Fundamentos](../../fundamentals/README.pt-BR.md) | 6 |
-| 02 | [Textos e números](../../strings-and-numbers/README.pt-BR.md) | 4 |
-| 03 | [Coleções](../../collections/README.pt-BR.md) | 6 |
-| 04 | [Fluxo do programa](../../program-flow/README.pt-BR.md) | 8 |
-| 05 | [Funções](../../functions/README.pt-BR.md) | 9 |
-| 06 | [Comentários e documentação](../../comments-and-documentation/README.pt-BR.md) | 6 |
-| 07 | [Erros, arquivos e módulos](../../errors-files-and-modules/README.pt-BR.md) | 5 |
-| 08 | [Biblioteca padrão](../../standard-library/README.pt-BR.md) | 9 |
-| 09 | [Bibliotecas externas](../../external-libraries/README.pt-BR.md) | 4 |
-| 10 | [Projetos práticos](../../practical-projects/README.pt-BR.md) | 8 |
-| Complemento | [Prática manual e engenharia de software](../../manual-programming-practices/README.pt-BR.md) | 4 |
-| 11 | [Resolução de problemas e live coding](../../problem-solving-and-live-coding/README.pt-BR.md) | 16 |
-| 12 | [Preparação para entrevistas técnicas](../../technical-interview-preparation/README.pt-BR.md) | 24 |
+<table align="center">
+  <thead>
+    <tr>
+      <th scope="col">Ordem</th>
+      <th scope="col">Módulo</th>
+      <th scope="col">Aulas/projetos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>00</td>
+      <td><a href="../../getting-started/README.pt-BR.md">Primeiros passos</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>01</td>
+      <td><a href="../../fundamentals/README.pt-BR.md">Fundamentos</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td><a href="../../strings-and-numbers/README.pt-BR.md">Textos e números</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td><a href="../../collections/README.pt-BR.md">Coleções</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td><a href="../../program-flow/README.pt-BR.md">Fluxo do programa</a></td>
+      <td align="right">8</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td><a href="../../functions/README.pt-BR.md">Funções</a></td>
+      <td align="right">9</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td><a href="../../comments-and-documentation/README.pt-BR.md">Comentários e documentação</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td><a href="../../errors-files-and-modules/README.pt-BR.md">Erros, arquivos e módulos</a></td>
+      <td align="right">5</td>
+    </tr>
+    <tr>
+      <td>08</td>
+      <td><a href="../../standard-library/README.pt-BR.md">Biblioteca padrão</a></td>
+      <td align="right">9</td>
+    </tr>
+    <tr>
+      <td>09</td>
+      <td><a href="../../external-libraries/README.pt-BR.md">Bibliotecas externas</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><a href="../../practical-projects/README.pt-BR.md">Projetos práticos</a></td>
+      <td align="right">8</td>
+    </tr>
+    <tr>
+      <td>Complemento</td>
+      <td><a href="../../manual-programming-practices/README.pt-BR.md">Prática manual e engenharia de software</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><a href="../../problem-solving-and-live-coding/README.pt-BR.md">Resolução de problemas e live coding</a></td>
+      <td align="right">16</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><a href="../../technical-interview-preparation/README.pt-BR.md">Preparação para entrevistas técnicas</a></td>
+      <td align="right">24</td>
+    </tr>
+  </tbody>
+</table>
 
 - [Trilha completa de estudos: links diretos para todos os capítulos publicados](../learning-path.pt-BR.md)
 - [Roadmap em Português](../roadmap.pt-BR.md)
