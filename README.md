@@ -31,14 +31,21 @@
 
 <hr />
 
-<p>
+<!-- technical-badges:start -->
+<p align="center"><strong>Technology &amp; Continuous Integration</strong></p>
+
+<p align="center">
   <img alt="Python 3.13 CI" src="https://img.shields.io/badge/Python-3.13%20CI-3776AB?logo=python&amp;logoColor=white" />
   <a href="LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-2E7D32" /></a>
   <img alt="Documentation EN · PT-BR · ES" src="https://img.shields.io/badge/Documentation-EN%20%C2%B7%20PT--BR%20%C2%B7%20ES-4169E1" />
   <a href="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml"><img alt="GitHub Actions Repository quality" src="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml/badge.svg?branch=main" /></a>
 </p>
 
-<p>
+<hr />
+
+<p align="center"><strong>Libraries &amp; Dependencies</strong></p>
+
+<p align="center">
   <img alt="Python stdlib examples" src="https://img.shields.io/badge/Python%20stdlib-examples-3776AB?logo=python&amp;logoColor=white" />
   <img alt="pandas 3.0.x" src="https://img.shields.io/badge/pandas-3.0.x-150458?logo=pandas&amp;logoColor=white" />
   <img alt="openpyxl 3.1.x" src="https://img.shields.io/badge/openpyxl-3.1.x-227245" />
@@ -46,32 +53,53 @@
   <img alt="pytest 9.1.x" src="https://img.shields.io/badge/pytest-9.1.x-0A9EDC?logo=pytest&amp;logoColor=white" />
 </p>
 
-<p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Quality unittest 181 passing" src="https://img.shields.io/badge/Quality%20unittest-181%20passing-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Linux 406 passing" src="https://img.shields.io/badge/pytest%20Linux-406%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Linux 1 skipped" src="https://img.shields.io/badge/pytest%20Linux-1%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Windows 63 passing" src="https://img.shields.io/badge/pytest%20Windows-63%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Windows 17 skipped" src="https://img.shields.io/badge/pytest%20Windows-17%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
+<hr />
+
+<p align="center"><strong>Testing &amp; Execution</strong></p>
+
+<p align="center">
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Quality unittest 183 passing" src="https://img.shields.io/badge/Quality%20unittest-183%20passing-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Engineering tests 7 passing" src="https://img.shields.io/badge/Engineering%20tests-7%20passing-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="pytest Linux 406 passing" src="https://img.shields.io/badge/pytest%20Linux-406%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Linux 1 skipped" src="https://img.shields.io/badge/Linux-1%20skipped-6C757D" /></a>
 </p>
 
-<p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Examples 210 passed" src="https://img.shields.io/badge/Examples-210%20passed-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Markdown links 9306 checked" src="https://img.shields.io/badge/Markdown%20links-9306%20checked-2486C4" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Repository structure valid" src="https://img.shields.io/badge/Repository%20structure-valid-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="compileall passed" src="https://img.shields.io/badge/compileall-passed-2E7D32?logo=python&amp;logoColor=white" /></a>
+<p align="center">
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="File Organizer Windows 63 passing" src="https://img.shields.io/badge/File%20Organizer%20Windows-63%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="File Organizer Windows 17 skipped" src="https://img.shields.io/badge/File%20Organizer%20Windows-17%20skipped-6C757D" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Examples 210 passed" src="https://img.shields.io/badge/Examples-210%20passed-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="compileall passed" src="https://img.shields.io/badge/compileall-passed-2E7D32?logo=python&amp;logoColor=white" /></a>
+</p>
+
+<hr />
+
+<p align="center"><strong>Documentation &amp; Repository Integrity</strong></p>
+
+<p align="center">
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Markdown links 9318 checked" src="https://img.shields.io/badge/Markdown%20links-9318%20checked-2486C4" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Markdown docs 583 checked" src="https://img.shields.io/badge/Markdown%20docs-583%20checked-2486C4" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Chapter navigation 345 documents" src="https://img.shields.io/badge/Chapter%20navigation-345%20documents-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Documentation parity passed" src="https://img.shields.io/badge/Documentation%20parity-passed-2E7D32" /></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Repository structure valid" src="https://img.shields.io/badge/Repository%20structure-valid-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Curriculum manifest validated" src="https://img.shields.io/badge/Curriculum%20manifest-validated-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Assessment inventory validated" src="https://img.shields.io/badge/Assessment%20inventory-validated-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Immutable content 959 paths" src="https://img.shields.io/badge/Immutable%20content-959%20paths-2E7D32" /></a>
+</p>
+
+<hr />
+
+<p align="center"><strong>Engineering &amp; Development</strong></p>
+
+<p align="center">
   <a href="https://github.com/RamonRDR/python-study-guide/tree/main/practical-projects"><img alt="Practical projects 8 complete" src="https://img.shields.io/badge/Practical%20projects-8%20complete-7057FF" /></a>
-</p>
-
-<p>
   <a href="https://github.com/RamonRDR/python-study-guide/tree/main/docs/ai-assisted-development"><img alt="ChatGPT / Codex AI-assisted" src="https://img.shields.io/badge/ChatGPT%20%2F%20Codex-AI--assisted-412991?logo=openai&amp;logoColor=white" /></a>
 </p>
 
-<p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Chapter navigation 345 documents" src="https://img.shields.io/badge/Chapter%20navigation-345%20documents-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Documentation language check passed" src="https://img.shields.io/badge/Documentation%20parity-passed-2E7D32" /></a>
-</p>
-
-<sub>Verified quality snapshot: <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182">GitHub Actions run 46060408182 (2026-11-27 UTC)</a>, post-merge main <code>ae9f191</code>. Counts are not live. Windows is the File Organizer subset of the Linux project suite; do not add the results. Internal links are checked by the repository script, not external URL availability. Dependency badges describe supported ranges, not a lockfile.</sub>
+<sub>Verified quality snapshot: <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698">GitHub Actions run 46093278698 (2026-11-28 UTC)</a>, post-merge main <code>55e9ea1</code>. Counts are not live. Windows is the File Organizer subset of the Linux project suite; do not add the results. Internal links and Markdown document counts refer to the link checker, not external URL availability. Dependency badges describe supported ranges, not a lockfile. The immutable-content badge refers to 959 canonical paths matched against historical content.</sub>
+<!-- technical-badges:end -->
 
 </div>
 
