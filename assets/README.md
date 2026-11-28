@@ -2,15 +2,16 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-This directory contains the Python Study Guide visual identity assets. The approved Learning Hub V1 banner is the current README banner (1280 × 400 PNG, with the original 3:1 artwork fitted without stretching). The other logo, preview and SVG files are legacy assets from the original identity and are retained for compatibility until their dedicated replacements are approved. The legacy SVG is not the source of the new banner.
+This directory preserves the six original canonical assets referenced by the immutable curriculum manifest. Do not overwrite or relocate those files during a presentation-only update. The approved Learning Hub V1 README banner is a separate 1280 × 400 PNG in `docs/assets/learning-hub/`, fitted without stretching. The original banner SVG remains paired with the original PNG; it is not the source of the new banner.
 
-![Python Study Guide banner](banner.png)
+![Python Study Guide banner](../docs/assets/learning-hub/banner.png)
 
 ## Available assets
 
 | File | Purpose | Recommended use |
 |---|---|---|
-| `banner.png` | Current project banner with the name and motto | Main README and project pages |
+| [`docs/assets/learning-hub/banner.png`](../docs/assets/learning-hub/banner.png) | Current presentation banner, 1280 × 400 | Main README and localized READMEs |
+| `banner.png` | Original canonical banner, 1200 × 400 | Immutable curriculum and historical presentation |
 | `logo.png` | Primary logo with emblem and wordmark on a transparent background | Light backgrounds and presentations |
 | `logo-mark.png` | Compact emblem on a transparent background | Avatars, icons, diagrams, and small spaces |
 | `repository-preview.png` | Legacy social preview image | GitHub repository sharing preview |
@@ -52,7 +53,7 @@ The exported artwork may include smooth transitions between these colors.
 - Preserve the original proportions.
 - Do not stretch, rotate, recolor, or redraw the emblem.
 - Keep enough clear space around the mark and wordmark.
-- Prefer `logo.png` on light backgrounds and `banner.png` on dark presentation surfaces.
+- Use the Learning Hub presentation banner for README headers; the original logo and banner are historical assets.
 - Use meaningful alternative text whenever an asset appears in documentation.
 - Check readability at the final display size before publishing.
 - Do not enlarge new raster placements beyond the resolution of their source images.

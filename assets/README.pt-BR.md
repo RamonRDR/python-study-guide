@@ -2,15 +2,16 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-Este diretório contém os recursos de identidade visual do Python Study Guide. O banner Learning Hub V1 aprovado é o banner atual dos READMEs (PNG 1280 × 400, arte original 3:1 ajustada sem distorção). Os demais logotipos, prévias e SVGs são recursos legados da identidade original, mantidos por compatibilidade até a aprovação de substitutos. O SVG legado não é a fonte do novo banner.
+Este diretório preserva os seis recursos canônicos originais referenciados pelo manifesto imutável do currículo. Não sobrescrever nem mover esses arquivos durante atualizações exclusivamente de apresentação. O banner Learning Hub V1 aprovado dos READMEs é um PNG separado de 1280 × 400 em `docs/assets/learning-hub/`, ajustado sem distorção. O SVG original permanece associado ao PNG original; não é a fonte do novo banner.
 
-![Banner Python Study Guide](banner.png)
+![Banner Python Study Guide](../docs/assets/learning-hub/banner.png)
 
 ## Recursos disponíveis
 
 | Arquivo | Finalidade | Uso recomendado |
 | --- | --- | --- |
-| banner.png | Banner atual com nome e slogan | README principal e páginas |
+| [docs/assets/learning-hub/banner.png](../docs/assets/learning-hub/banner.png) | Banner atual de apresentação, 1280 × 400 | README principal e localizados |
+| banner.png | Banner canônico original, 1200 × 400 | Currículo imutável e apresentação histórica |
 | logo.png | Logotipo principal com emblema e nome, fundo transparente | Fundos claros e apresentações |
 | logo-mark.png | Emblema compacto transparente | Avatares, ícones, diagramas e espaços pequenos |
 | repository-preview.png | Imagem social legada | Prévia de compartilhamento GitHub |
@@ -42,7 +43,7 @@ As exportações podem incluir transições suaves entre cores.
 
 ## Orientações
 
-Preservar proporções; não esticar, rotacionar, recolorir ou redesenhar; manter espaço livre ao redor do emblema/nome; preferir logo.png em fundo claro e banner.png em superfícies escuras; usar texto alternativo significativo; conferir legibilidade no tamanho final; não ampliar rasters além da origem; não inserir informações privadas, pessoais, proprietárias ou confidenciais.
+Preservar proporções; não esticar, rotacionar, recolorir ou redesenhar; manter espaço livre ao redor do emblema/nome; usar o novo banner de apresentação nos cabeçalhos dos READMEs; os logotipos e banner originais são históricos; usar texto alternativo significativo; conferir legibilidade no tamanho final; não ampliar rasters além da origem; não inserir informações privadas, pessoais, proprietárias ou confidenciais.
 
 ## Limitação conhecida não bloqueante
 

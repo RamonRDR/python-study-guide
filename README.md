@@ -4,7 +4,7 @@
 
 ### Study. Understand. Practice.
 
-<img src="assets/banner.png" alt="Ramon Rodriguez Learning Hub, Python Study Guide. Blue and yellow geometric serpent, code braces and an open book. Study. Understand. Practice." width="100%">
+<img src="docs/assets/learning-hub/banner.png" alt="Ramon Rodriguez Learning Hub, Python Study Guide. Blue and yellow geometric serpent, code braces and an open book. Study. Understand. Practice." width="100%">
 
 <p align="center"><strong>🌐 Choose your language</strong><br/><sub>Available in 3 languages</sub></p>
 <p align="center">
@@ -180,7 +180,7 @@ Seven foundation lessons and nine challenge chapters provide 30 exercises (12 ea
 
 ## Visual identity
 
-The project emblem connects Python, code, learning, and relationships between concepts through a geometric serpent, braces, an open book, and connected nodes.
+The current presentation banner combines a blue and yellow serpent, code braces, an open book and the Learning Hub identity. The original emblem and canonical assets remain preserved.
 
 See the [visual identity guide](assets/README.md) for available assets, palette, meaning, accessibility guidance, and usage rules.
 

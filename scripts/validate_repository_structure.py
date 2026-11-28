@@ -310,6 +310,10 @@ REQUIRED_FILES = (
     "AGENTS.md", "AUTHORS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md",
     "LICENSE", "README.md", "SECURITY.md", "SUPPORT.md", "assets/README.md",
     "assets/banner.png", "assets/banner.svg", "assets/logo-mark.png",
+    "docs/assets/learning-hub/banner.png",
+    "docs/assets/learning-hub/study-python-en.svg",
+    "docs/assets/learning-hub/study-python-pt-br.svg",
+    "docs/assets/learning-hub/study-python-es.svg",
     "assets/logo.png", "assets/repository-preview.png",
     "assets/repository-preview.svg", "comments-and-documentation/README.md",
     "comments-and-documentation/README.pt-BR.md",
@@ -382,17 +386,15 @@ LOCALIZED_DOCUMENT_GROUPS = {
     "SUPPORT.md": ("docs/localized/SUPPORT.pt-BR.md", "docs/localized/SUPPORT.es.md"),
 }
 PNG_ASSET_DIMENSIONS = {
-    "assets/banner.png": (1280, 400),
+    "assets/banner.png": (1200, 400),
+    # README presentation is independent of the frozen curriculum assets.
+    "docs/assets/learning-hub/banner.png": (1280, 400),
     "assets/logo-mark.png": (384, 384),
     "assets/logo.png": (650, 283),
     "assets/repository-preview.png": (1280, 640),
 }
-# The approved Learning Hub PNG is independent of the retained legacy SVG.
-# Validate the legacy canvas and references without treating it as the new PNG source.
-STANDALONE_SVG_DIMENSIONS = {
-    "assets/banner.svg": (1200, 400),
-}
 SVG_PNG_PAIRS = (
+    ("assets/banner.svg", "assets/banner.png"),
     ("assets/repository-preview.svg", "assets/repository-preview.png"),
 )
 
@@ -501,12 +503,7 @@ def validate_visual_assets() -> list[str]:
             errors.append(f"Unexpected PNG dimensions for {relative_path}: expected {expected[0]}x{expected[1]}, found {actual[0]}x{actual[1]}")
 
     repository_root = REPOSITORY_ROOT.resolve()
-    svg_expectations = dict(STANDALONE_SVG_DIMENSIONS)
-    svg_expectations.update(
-        (svg_relative, png_dimensions.get(png_relative))
-        for svg_relative, png_relative in SVG_PNG_PAIRS
-    )
-    for svg_relative, expected_canvas in svg_expectations.items():
+    for svg_relative, png_relative in SVG_PNG_PAIRS:
         svg_path = REPOSITORY_ROOT / svg_relative
         if not svg_path.is_file():
             continue
@@ -520,8 +517,8 @@ def validate_visual_assets() -> list[str]:
         except ValueError as error:
             errors.append(f"Invalid SVG canvas for {svg_relative}: {error}")
             canvas = None
-        if canvas and expected_canvas and canvas != expected_canvas:
-            errors.append(f"SVG canvas mismatch for {svg_relative}: expected {expected_canvas}, found {canvas}")
+        if canvas and png_dimensions.get(png_relative) and canvas != png_dimensions[png_relative]:
+            errors.append(f"SVG canvas mismatch for {svg_relative}: expected {png_dimensions[png_relative]}, found {canvas}")
         view_box = root.get("viewBox", "").split()
         if len(view_box) != 4:
             errors.append(f"{svg_relative} must include a four-value viewBox.")

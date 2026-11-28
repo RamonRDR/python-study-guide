@@ -4,7 +4,7 @@
 
 ### Estudia. Comprende. Practica.
 
-<img src="../../assets/banner.png" alt="Ramon Rodriguez Learning Hub, Python Study Guide. Serpiente geométrica azul y amarilla, llaves de código y libro abierto. Estudia. Comprende. Practica." width="100%">
+<img src="../assets/learning-hub/banner.png" alt="Ramon Rodriguez Learning Hub, Python Study Guide. Serpiente geométrica azul y amarilla, llaves de código y libro abierto. Estudia. Comprende. Practica." width="100%">
 
 <p align="center"><strong>🌐 Elige tu idioma</strong><br/><sub>Disponible en 3 idiomas</sub></p>
 <p align="center">
@@ -180,7 +180,7 @@ Siete lecciones de fundamentos y nueve de retos ofrecen 30 ejercicios (12 fácil
 
 ## Identidad visual
 
-El símbolo del proyecto conecta Python, código, aprendizaje y relaciones entre conceptos mediante una serpiente geométrica, llaves, un libro abierto y nodos conectados.
+El banner de presentación actual combina serpiente azul y amarilla, llaves, libro abierto e identidad del Learning Hub. Se conservan el emblema original y los recursos canónicos.
 
 Consulta la [guía de identidad visual](../../assets/README.es.md) para conocer los archivos, la paleta, los significados, las orientaciones de accesibilidad y las reglas de uso.
 
