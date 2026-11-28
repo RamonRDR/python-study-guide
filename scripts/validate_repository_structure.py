@@ -310,6 +310,10 @@ REQUIRED_FILES = (
     "AGENTS.md", "AUTHORS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md",
     "LICENSE", "README.md", "SECURITY.md", "SUPPORT.md", "assets/README.md",
     "assets/banner.png", "assets/banner.svg", "assets/logo-mark.png",
+    "docs/assets/learning-hub/banner.png",
+    "docs/assets/learning-hub/study-python-en.svg",
+    "docs/assets/learning-hub/study-python-pt-br.svg",
+    "docs/assets/learning-hub/study-python-es.svg",
     "assets/logo.png", "assets/repository-preview.png",
     "assets/repository-preview.svg", "comments-and-documentation/README.md",
     "comments-and-documentation/README.pt-BR.md",
@@ -383,6 +387,8 @@ LOCALIZED_DOCUMENT_GROUPS = {
 }
 PNG_ASSET_DIMENSIONS = {
     "assets/banner.png": (1200, 400),
+    # README presentation is independent of the frozen curriculum assets.
+    "docs/assets/learning-hub/banner.png": (1280, 400),
     "assets/logo-mark.png": (384, 384),
     "assets/logo.png": (650, 283),
     "assets/repository-preview.png": (1280, 640),

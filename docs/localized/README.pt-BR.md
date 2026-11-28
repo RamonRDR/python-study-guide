@@ -4,13 +4,29 @@
 
 ### Estude. Entenda. Pratique.
 
-<img src="../../assets/banner.png" alt="Identidade visual do Python Study Guide com serpente geométrica, chaves de código, livro aberto e nós de aprendizagem conectados." width="100%">
+<img src="../assets/learning-hub/banner.png" alt="Ramon Rodriguez Learning Hub, Python Study Guide. Serpente geométrica azul e amarela, chaves de código e livro aberto. Estude. Entenda. Pratique." width="100%">
 
 <p align="center"><strong>🌐 Escolha seu idioma</strong><br/><sub>Disponível em 3 idiomas</sub></p>
 <p align="center">
   <a href="../../README.md" title="English (default)"><img src="../assets/language-badges/language-en-v2.svg" alt="English (EN), US flag colors" width="207" height="34" /></a>
   <a href="README.pt-BR.md" title="Português (Brasil)"><img src="../assets/language-badges/language-pt-br-v2.svg" alt="Português do Brasil (PT-BR), Brazilian flag colors" width="207" height="34" /></a>
   <a href="README.es.md" title="Español"><img src="../assets/language-badges/language-es-v2.svg" alt="Español (ES), Spanish flag colors" width="207" height="34" /></a>
+</p>
+
+<!-- learning-hub:start -->
+<p align="center"><strong>Ramon Rodriguez Learning Hub</strong><br/><sub>Explore. Aprenda. Construa.</sub></p>
+<p align="center">
+  <a href="README.pt-BR.md" title="Guia atual"><img src="../assets/learning-hub/study-python-pt-br.svg" alt="Estude Python (Guia atual)" width="207" height="34" /></a>
+  <br/><sub>Guia atual: Python</sub>
+</p>
+<!-- learning-hub:end -->
+
+<p align="center"><sub>Criado e mantido por Ramon Rodriguez</sub></p>
+<p align="center">
+  <a href="https://www.linkedin.com/in/ramon-e-rodriguez/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&amp;logo=linkedin&amp;logoColor=white" /></a>
+  <a href="https://ramonrodriguez.com.br/"><img alt="Portfólio" src="https://img.shields.io/badge/Portf%C3%B3lio-334155?style=flat" /></a>
+  <a href="https://rdrlabs.com.br/"><img alt="RDR Labs" src="https://img.shields.io/badge/RDR%20Labs-0F766E?style=flat" /></a>
+  <a href="https://github.com/RamonRDR"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-24292F?style=flat&amp;logo=github&amp;logoColor=white" /></a>
 </p>
 
 <p>
@@ -164,9 +180,9 @@ Sete aulas de fundamentos e nove aulas de desafios oferecem 30 exercícios (12 f
 
 ## Identidade visual
 
-O símbolo do projeto conecta Python, código, aprendizagem e relações entre conceitos por meio de uma serpente geométrica, chaves, um livro aberto e nós conectados.
+O banner de apresentação atual combina serpente azul e amarela, chaves, livro aberto e identidade do Learning Hub. O emblema original e os recursos canônicos permanecem preservados.
 
-Consulte o [guia da identidade visual](../../assets/README.md) para conhecer os arquivos, a paleta, os significados, as orientações de acessibilidade e as regras de uso.
+Consulte o [guia da identidade visual](../../assets/README.pt-BR.md) para conhecer os arquivos, a paleta, os significados, as orientações de acessibilidade e as regras de uso.
 
 ## Desenvolvimento assistido por IA
 

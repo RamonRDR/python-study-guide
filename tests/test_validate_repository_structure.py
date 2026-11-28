@@ -31,6 +31,7 @@ def write_svg(path: Path, width: int, height: int, reference: str) -> None:
 class VisualAssetValidationTests(unittest.TestCase):
     def create_valid_assets(self, root: Path) -> None:
         write_png(root / "assets/banner.png", 1200, 400)
+        write_png(root / "docs/assets/learning-hub/banner.png", 1280, 400)
         write_png(root / "assets/logo-mark.png", 384, 384)
         write_png(root / "assets/logo.png", 650, 283)
         write_png(root / "assets/repository-preview.png", 1280, 640)
@@ -52,6 +53,20 @@ class VisualAssetValidationTests(unittest.TestCase):
             path = Path(temporary_directory) / "image.png"
             write_png(path, 321, 123)
             self.assertEqual(validate_repository_structure.read_png_dimensions(path), (321, 123))
+
+    def test_presentation_banner_rejects_legacy_dimensions(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            self.create_valid_assets(root)
+            write_png(root / "docs/assets/learning-hub/banner.png", 1200, 400)
+            self.assertTrue(any("Unexpected PNG dimensions for docs/assets/learning-hub/banner.png" in error for error in self.validate(root)))
+
+    def test_canonical_banner_rejects_presentation_dimensions(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            self.create_valid_assets(root)
+            write_png(root / "assets/banner.png", 1280, 400)
+            self.assertTrue(any("Unexpected PNG dimensions for assets/banner.png" in error for error in self.validate(root)))
 
     def test_svg_canvas_must_match_rendered_png(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:

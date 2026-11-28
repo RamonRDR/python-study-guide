@@ -2,24 +2,29 @@
 
 [🇺🇸 English](README.md) · [🇧🇷 Português](README.pt-BR.md) · [🇪🇸 Español](README.es.md)
 
-This directory contains the original visual identity created for Python Study Guide.
+This directory preserves the six original canonical assets referenced by the immutable curriculum manifest. Do not overwrite or relocate those files during a presentation-only update. The approved Learning Hub V1 README banner is a separate 1280 × 400 PNG in `docs/assets/learning-hub/`, fitted without stretching. The original banner SVG remains paired with the original PNG; it is not the source of the new banner.
 
-![Python Study Guide banner](banner.png)
+![Python Study Guide banner](../docs/assets/learning-hub/banner.png)
 
 ## Available assets
 
 | File | Purpose | Recommended use |
 |---|---|---|
-| `banner.png` | Current project banner with the name and motto | Main README and project pages |
+| [`docs/assets/learning-hub/banner.png`](../docs/assets/learning-hub/banner.png) | Current presentation banner, 1280 × 400 | Main README and localized READMEs |
+| `banner.png` | Original canonical banner, 1200 × 400 | Immutable curriculum and historical presentation |
 | `logo.png` | Primary logo with emblem and wordmark on a transparent background | Light backgrounds and presentations |
 | `logo-mark.png` | Compact emblem on a transparent background | Avatars, icons, diagrams, and small spaces |
-| `repository-preview.png` | Current social preview image | GitHub repository sharing preview |
-| `banner.svg` | Editable banner composition that embeds the raster emblem as Base64 data | Layout adjustments at the original design size |
+| `repository-preview.png` | Legacy social preview image | GitHub repository sharing preview |
+| `banner.svg` | Legacy editable banner composition that embeds the raster emblem as Base64 data | Layout adjustments at the original design size |
 | `repository-preview.svg` | Editable social-preview composition that references `logo-mark.png` as a local file | Layout adjustments at the original design size |
 
 The SVG compositions are not fully vector artwork. `banner.svg` embeds a PNG copy of the emblem, while `repository-preview.svg` links to the local `logo-mark.png` file. They should not be treated as infinitely scalable sources. Use the current PNG exports at their intended dimensions and avoid enlarging new raster placements beyond their source resolution.
 
-## Meaning of the identity
+## Current banner identity
+
+The approved banner uses the shared Learning Hub navy `#06111F`, cyan `#00D0C9` and off-white `#F1F5F9`, with Python-specific blue `#3776AB` and yellow `#FFD343` as design tokens. The geometric serpent, braces and book identify the guide; the hexagonal frame is part of the approved banner. The PNG is raster, not a vector master. The legacy palette, meanings and export limitations below describe the original assets only.
+
+## Meaning of the legacy identity
 
 The visual system combines four ideas:
 
@@ -30,7 +35,7 @@ The visual system combines four ideas:
 
 The emblem is an original project mark. It does not reproduce the official Python logo and must not be used to imply affiliation, sponsorship, or endorsement by the Python Software Foundation or another organization.
 
-## Color palette
+## Legacy color palette
 
 | Color | Hex | Role |
 |---|---|---|
@@ -48,7 +53,7 @@ The exported artwork may include smooth transitions between these colors.
 - Preserve the original proportions.
 - Do not stretch, rotate, recolor, or redraw the emblem.
 - Keep enough clear space around the mark and wordmark.
-- Prefer `logo.png` on light backgrounds and `banner.png` on dark presentation surfaces.
+- Use the Learning Hub presentation banner for README headers; the original logo and banner are historical assets.
 - Use meaningful alternative text whenever an asset appears in documentation.
 - Check readability at the final display size before publishing.
 - Do not enlarge new raster placements beyond the resolution of their source images.
