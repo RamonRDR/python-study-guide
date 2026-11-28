@@ -6,6 +6,19 @@ Este diretório preserva os seis recursos canônicos originais referenciados pel
 
 ![Banner Python Study Guide](../docs/assets/learning-hub/banner.png)
 
+## Exports de apresentação aprovados do Learning Hub
+
+Os arquivos V1 aprovados abaixo ficam separados do currículo imutável. O banner raster dos READMEs continua sendo a arte original aprovada; o banner vetorial é uma adaptação simplificada, não sua fonte exata. Os SVGs usam formas autônomas, sem imagens raster incorporadas nem recursos externos. Use o símbolo claro ou escuro conforme o fundo previsto. O card destina-se ao catálogo do Learning Hub; a prévia social está pronta para envio nas configurações do repositório, mas adicionar o arquivo aqui não altera essas configurações. Todos os arquivos seguem a licença MIT do repositório.
+
+| Recurso | Fonte SVG | Export PNG | Dimensão |
+| --- | --- | --- | --- |
+| Adaptação vetorial do banner | [banner-vector.svg](../docs/assets/learning-hub/banner-vector.svg) | [banner-vector-preview.png](../docs/assets/learning-hub/banner-vector-preview.png) | 1280 × 400 |
+| Símbolo para fundos claros | [logo-mark-light.svg](../docs/assets/learning-hub/logo-mark-light.svg) | [logo-mark-light.png](../docs/assets/learning-hub/logo-mark-light.png) | 512 × 512 |
+| Símbolo para fundos escuros | [logo-mark.svg](../docs/assets/learning-hub/logo-mark.svg) | [logo-mark.png](../docs/assets/learning-hub/logo-mark.png) | 512 × 512 |
+| Logotipo horizontal | [logo.svg](../docs/assets/learning-hub/logo.svg) | [logo.png](../docs/assets/learning-hub/logo.png) | 1000 × 300 |
+| Prévia social | [repository-preview.svg](../docs/assets/learning-hub/repository-preview.svg) | [repository-preview.png](../docs/assets/learning-hub/repository-preview.png) | 1280 × 640 |
+| Card do Study Guide | [study-guide-card.svg](../docs/assets/learning-hub/study-guide-card.svg) | [study-guide-card.png](../docs/assets/learning-hub/study-guide-card.png) | 640 × 400 |
+
 ## Recursos disponíveis
 
 | Arquivo | Finalidade | Uso recomendado |

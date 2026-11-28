@@ -314,6 +314,18 @@ REQUIRED_FILES = (
     "docs/assets/learning-hub/study-python-en.svg",
     "docs/assets/learning-hub/study-python-pt-br.svg",
     "docs/assets/learning-hub/study-python-es.svg",
+    "docs/assets/learning-hub/banner-vector.svg",
+    "docs/assets/learning-hub/logo-mark-light.svg",
+    "docs/assets/learning-hub/logo-mark.svg",
+    "docs/assets/learning-hub/logo.svg",
+    "docs/assets/learning-hub/repository-preview.svg",
+    "docs/assets/learning-hub/study-guide-card.svg",
+    "docs/assets/learning-hub/banner-vector-preview.png",
+    "docs/assets/learning-hub/logo-mark-light.png",
+    "docs/assets/learning-hub/logo-mark.png",
+    "docs/assets/learning-hub/logo.png",
+    "docs/assets/learning-hub/repository-preview.png",
+    "docs/assets/learning-hub/study-guide-card.png",
     "assets/logo.png", "assets/repository-preview.png",
     "assets/repository-preview.svg", "comments-and-documentation/README.md",
     "comments-and-documentation/README.pt-BR.md",
@@ -389,14 +401,36 @@ PNG_ASSET_DIMENSIONS = {
     "assets/banner.png": (1200, 400),
     # README presentation is independent of the frozen curriculum assets.
     "docs/assets/learning-hub/banner.png": (1280, 400),
+    "docs/assets/learning-hub/banner-vector-preview.png": (1280, 400),
+    "docs/assets/learning-hub/logo-mark-light.png": (512, 512),
+    "docs/assets/learning-hub/logo-mark.png": (512, 512),
+    "docs/assets/learning-hub/logo.png": (1000, 300),
+    "docs/assets/learning-hub/repository-preview.png": (1280, 640),
+    "docs/assets/learning-hub/study-guide-card.png": (640, 400),
     "assets/logo-mark.png": (384, 384),
     "assets/logo.png": (650, 283),
     "assets/repository-preview.png": (1280, 640),
 }
+PRESENTATION_SVG_PNG_PAIRS = (
+    ("docs/assets/learning-hub/banner-vector.svg", "docs/assets/learning-hub/banner-vector-preview.png"),
+    ("docs/assets/learning-hub/logo-mark-light.svg", "docs/assets/learning-hub/logo-mark-light.png"),
+    ("docs/assets/learning-hub/logo-mark.svg", "docs/assets/learning-hub/logo-mark.png"),
+    ("docs/assets/learning-hub/logo.svg", "docs/assets/learning-hub/logo.png"),
+    ("docs/assets/learning-hub/repository-preview.svg", "docs/assets/learning-hub/repository-preview.png"),
+    ("docs/assets/learning-hub/study-guide-card.svg", "docs/assets/learning-hub/study-guide-card.png"),
+)
 SVG_PNG_PAIRS = (
     ("assets/banner.svg", "assets/banner.png"),
     ("assets/repository-preview.svg", "assets/repository-preview.png"),
+    *PRESENTATION_SVG_PNG_PAIRS,
 )
+# The approved exports use a deliberately small, self-contained SVG vocabulary.
+PRESENTATION_SVG_TAGS = {"svg", "title", "desc", "g", "path", "rect", "circle"}
+PRESENTATION_SVG_ATTRIBUTES = {
+    "width", "height", "viewBox", "role", "aria-labelledby", "aria-hidden",
+    "id", "fill", "stroke", "stroke-width", "fill-rule", "transform",
+    "d", "x", "y", "rx", "cx", "cy", "r",
+}
 
 
 def relative_link(source: Path, target: Path) -> str:
@@ -508,7 +542,20 @@ def validate_visual_assets() -> list[str]:
         if not svg_path.is_file():
             continue
         try:
-            root = ET.parse(svg_path).getroot()
+            if (svg_relative, png_relative) in PRESENTATION_SVG_PNG_PAIRS:
+                raw = svg_path.read_bytes()
+                if re.search(rb"<!\s*(?:DOCTYPE|ENTITY)|<\?", raw, re.IGNORECASE):
+                    errors.append(f"{svg_relative} contains a forbidden XML declaration or processing instruction.")
+                    continue
+                root = ET.fromstring(raw)
+                for element in root.iter():
+                    if element.tag not in {f"{{http://www.w3.org/2000/svg}}{tag}" for tag in PRESENTATION_SVG_TAGS}:
+                        errors.append(f"{svg_relative} contains a forbidden presentation SVG element: {element.tag}")
+                    for attribute, value in element.attrib.items():
+                        if attribute not in PRESENTATION_SVG_ATTRIBUTES or re.search(r"url\s*\(", value, re.IGNORECASE):
+                            errors.append(f"{svg_relative} contains a forbidden presentation SVG attribute: {attribute}")
+            else:
+                root = ET.parse(svg_path).getroot()
         except (OSError, ET.ParseError) as error:
             errors.append(f"Invalid SVG asset {svg_relative}: {error}")
             continue
