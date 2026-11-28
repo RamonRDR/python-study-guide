@@ -29,14 +29,23 @@
   <a href="https://github.com/RamonRDR"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-24292F?style=flat&amp;logo=github&amp;logoColor=white" /></a>
 </p>
 
-<p>
+<hr />
+
+<!-- technical-badges:start -->
+<p align="center"><strong>Tecnología e integración continua</strong></p>
+
+<p align="center">
   <img alt="Python 3.13 CI" src="https://img.shields.io/badge/Python-3.13%20CI-3776AB?logo=python&amp;logoColor=white" />
   <a href="../../LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-2E7D32" /></a>
   <img alt="Documentation EN · PT-BR · ES" src="https://img.shields.io/badge/Documentation-EN%20%C2%B7%20PT--BR%20%C2%B7%20ES-4169E1" />
   <a href="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml"><img alt="GitHub Actions Repository quality" src="https://github.com/RamonRDR/python-study-guide/actions/workflows/quality-checks.yml/badge.svg?branch=main" /></a>
 </p>
 
-<p>
+<hr />
+
+<p align="center"><strong>Bibliotecas y dependencias</strong></p>
+
+<p align="center">
   <img alt="Python stdlib examples" src="https://img.shields.io/badge/Python%20stdlib-examples-3776AB?logo=python&amp;logoColor=white" />
   <img alt="pandas 3.0.x" src="https://img.shields.io/badge/pandas-3.0.x-150458?logo=pandas&amp;logoColor=white" />
   <img alt="openpyxl 3.1.x" src="https://img.shields.io/badge/openpyxl-3.1.x-227245" />
@@ -44,32 +53,53 @@
   <img alt="pytest 9.1.x" src="https://img.shields.io/badge/pytest-9.1.x-0A9EDC?logo=pytest&amp;logoColor=white" />
 </p>
 
-<p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Quality unittest 181 passing" src="https://img.shields.io/badge/Quality%20unittest-181%20passing-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Linux 406 passing" src="https://img.shields.io/badge/pytest%20Linux-406%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Linux 1 skipped" src="https://img.shields.io/badge/pytest%20Linux-1%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Windows 63 passing" src="https://img.shields.io/badge/pytest%20Windows-63%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="pytest Windows 17 skipped" src="https://img.shields.io/badge/pytest%20Windows-17%20skipped-6C757D?logo=pytest&amp;logoColor=white" /></a>
+<hr />
+
+<p align="center"><strong>Pruebas y ejecución</strong></p>
+
+<p align="center">
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Quality unittest 183 passing" src="https://img.shields.io/badge/Quality%20unittest-183%20passing-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Engineering tests 7 passing" src="https://img.shields.io/badge/Engineering%20tests-7%20passing-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="pytest Linux 406 passing" src="https://img.shields.io/badge/pytest%20Linux-406%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Linux 1 skipped" src="https://img.shields.io/badge/Linux-1%20skipped-6C757D" /></a>
 </p>
 
-<p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Examples 210 passed" src="https://img.shields.io/badge/Examples-210%20passed-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Markdown links 9306 checked" src="https://img.shields.io/badge/Markdown%20links-9306%20checked-2486C4" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Repository structure valid" src="https://img.shields.io/badge/Repository%20structure-valid-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="compileall passed" src="https://img.shields.io/badge/compileall-passed-2E7D32?logo=python&amp;logoColor=white" /></a>
+<p align="center">
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="File Organizer Windows 63 passing" src="https://img.shields.io/badge/File%20Organizer%20Windows-63%20passing-2E7D32?logo=pytest&amp;logoColor=white" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="File Organizer Windows 17 skipped" src="https://img.shields.io/badge/File%20Organizer%20Windows-17%20skipped-6C757D" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Examples 210 passed" src="https://img.shields.io/badge/Examples-210%20passed-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="compileall passed" src="https://img.shields.io/badge/compileall-passed-2E7D32?logo=python&amp;logoColor=white" /></a>
+</p>
+
+<hr />
+
+<p align="center"><strong>Documentación e integridad del repositorio</strong></p>
+
+<p align="center">
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Markdown links 9318 checked" src="https://img.shields.io/badge/Markdown%20links-9318%20checked-2486C4" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Markdown docs 583 checked" src="https://img.shields.io/badge/Markdown%20docs-583%20checked-2486C4" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Chapter navigation 345 documents" src="https://img.shields.io/badge/Chapter%20navigation-345%20documents-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Documentation parity passed" src="https://img.shields.io/badge/Documentation%20parity-passed-2E7D32" /></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Repository structure valid" src="https://img.shields.io/badge/Repository%20structure-valid-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Curriculum manifest validated" src="https://img.shields.io/badge/Curriculum%20manifest-validated-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Assessment inventory validated" src="https://img.shields.io/badge/Assessment%20inventory-validated-2E7D32" /></a>
+  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698"><img alt="Immutable content 959 paths" src="https://img.shields.io/badge/Immutable%20content-959%20paths-2E7D32" /></a>
+</p>
+
+<hr />
+
+<p align="center"><strong>Ingeniería y desarrollo</strong></p>
+
+<p align="center">
   <a href="https://github.com/RamonRDR/python-study-guide/tree/main/practical-projects"><img alt="Practical projects 8 complete" src="https://img.shields.io/badge/Practical%20projects-8%20complete-7057FF" /></a>
-</p>
-
-<p>
   <a href="https://github.com/RamonRDR/python-study-guide/tree/main/docs/ai-assisted-development"><img alt="ChatGPT / Codex AI-assisted" src="https://img.shields.io/badge/ChatGPT%20%2F%20Codex-AI--assisted-412991?logo=openai&amp;logoColor=white" /></a>
 </p>
 
-<p>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Chapter navigation 345 documents" src="https://img.shields.io/badge/Chapter%20navigation-345%20documents-2E7D32" /></a>
-  <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182"><img alt="Documentation language check passed" src="https://img.shields.io/badge/Documentation%20parity-passed-2E7D32" /></a>
-</p>
-
-<sub>Resultados verificados: <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46060408182">GitHub Actions ejecución 46060408182 (27/11/2026 UTC)</a>, main posterior al merge <code>ae9f191</code>. Los recuentos no son en tiempo real. Windows corresponde al subconjunto File Organizer de la suite Linux de proyectos; no sumes los resultados. Los enlaces internos los comprueba el script del repositorio, no la disponibilidad de URL externas. Las insignias de dependencias representan rangos compatibles, no un lockfile.</sub>
+<sub>Resultados verificados: <a href="https://github.com/RamonRDR/python-study-guide/actions/runs/46093278698">GitHub Actions ejecución 46093278698 (28/11/2026 UTC)</a>, main posterior al merge <code>55e9ea1</code>. Los recuentos no son en tiempo real. Windows corresponde al subconjunto File Organizer de la suite Linux de proyectos; no sumes los resultados. Las cifras de enlaces internos y documentos Markdown corresponden al verificador de enlaces, no a la disponibilidad de URLs externas. Las insignias de dependencias representan rangos compatibles, no un lockfile. La insignia de contenido inmutable se refiere a 959 rutas canónicas comparadas con el contenido histórico.</sub>
+<!-- technical-badges:end -->
 
 </div>
 
@@ -107,22 +137,87 @@ Una computadora con una instalación Python compatible y un editor de texto bast
 
 ## Ruta de aprendizaje
 
-| Orden | Módulo | Lecciones/proyectos |
-| --- | --- | ---: |
-| 00 | [Primeros pasos](../../getting-started/README.es.md) | 6 |
-| 01 | [Fundamentos](../../fundamentals/README.es.md) | 6 |
-| 02 | [Textos y números](../../strings-and-numbers/README.es.md) | 4 |
-| 03 | [Colecciones](../../collections/README.es.md) | 6 |
-| 04 | [Flujo del programa](../../program-flow/README.es.md) | 8 |
-| 05 | [Funciones](../../functions/README.es.md) | 9 |
-| 06 | [Comentarios y documentación](../../comments-and-documentation/README.es.md) | 6 |
-| 07 | [Errores, archivos y módulos](../../errors-files-and-modules/README.es.md) | 5 |
-| 08 | [Biblioteca estándar](../../standard-library/README.es.md) | 9 |
-| 09 | [Bibliotecas externas](../../external-libraries/README.es.md) | 4 |
-| 10 | [Proyectos prácticos](../../practical-projects/README.es.md) | 8 |
-| Complemento | [Práctica manual e ingeniería de software](../../manual-programming-practices/README.es.md) | 4 |
-| 11 | [Resolución de problemas y live coding](../../problem-solving-and-live-coding/README.es.md) | 16 |
-| 12 | [Preparación para entrevistas técnicas](../../technical-interview-preparation/README.es.md) | 24 |
+<table align="center">
+  <thead>
+    <tr>
+      <th scope="col">Orden</th>
+      <th scope="col">Módulo</th>
+      <th scope="col">Lecciones/proyectos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>00</td>
+      <td><a href="../../getting-started/README.es.md">Primeros pasos</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>01</td>
+      <td><a href="../../fundamentals/README.es.md">Fundamentos</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td><a href="../../strings-and-numbers/README.es.md">Textos y números</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td><a href="../../collections/README.es.md">Colecciones</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td><a href="../../program-flow/README.es.md">Flujo del programa</a></td>
+      <td align="right">8</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td><a href="../../functions/README.es.md">Funciones</a></td>
+      <td align="right">9</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td><a href="../../comments-and-documentation/README.es.md">Comentarios y documentación</a></td>
+      <td align="right">6</td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td><a href="../../errors-files-and-modules/README.es.md">Errores, archivos y módulos</a></td>
+      <td align="right">5</td>
+    </tr>
+    <tr>
+      <td>08</td>
+      <td><a href="../../standard-library/README.es.md">Biblioteca estándar</a></td>
+      <td align="right">9</td>
+    </tr>
+    <tr>
+      <td>09</td>
+      <td><a href="../../external-libraries/README.es.md">Bibliotecas externas</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><a href="../../practical-projects/README.es.md">Proyectos prácticos</a></td>
+      <td align="right">8</td>
+    </tr>
+    <tr>
+      <td>Complemento</td>
+      <td><a href="../../manual-programming-practices/README.es.md">Práctica manual e ingeniería de software</a></td>
+      <td align="right">4</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><a href="../../problem-solving-and-live-coding/README.es.md">Resolución de problemas y live coding</a></td>
+      <td align="right">16</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><a href="../../technical-interview-preparation/README.es.md">Preparación para entrevistas técnicas</a></td>
+      <td align="right">24</td>
+    </tr>
+  </tbody>
+</table>
 
 - [Ruta completa de aprendizaje: enlaces directos a todos los capítulos publicados](../learning-path.es.md)
 - [Roadmap en Español](../roadmap.es.md)
