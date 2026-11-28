@@ -6,6 +6,19 @@ This directory preserves the six original canonical assets referenced by the imm
 
 ![Python Study Guide banner](../docs/assets/learning-hub/banner.png)
 
+## Approved Learning Hub presentation exports
+
+The following approved V1 files are stored separately from the immutable curriculum. The raster README banner remains the original approved artwork; the vector banner is a simplified adaptation, not its exact source. Vector exports use self-contained shapes, with no embedded raster images or external resources. Use the dark or light mark on its intended background. The card is for the Learning Hub catalogue; the social preview file is ready for upload in repository settings, but adding it here does not change those settings. All files follow the repository MIT license.
+
+| Asset | SVG source | PNG export | Size |
+| --- | --- | --- | --- |
+| Vector banner adaptation | [banner-vector.svg](../docs/assets/learning-hub/banner-vector.svg) | [banner-vector-preview.png](../docs/assets/learning-hub/banner-vector-preview.png) | 1280 × 400 |
+| Mark for light backgrounds | [logo-mark-light.svg](../docs/assets/learning-hub/logo-mark-light.svg) | [logo-mark-light.png](../docs/assets/learning-hub/logo-mark-light.png) | 512 × 512 |
+| Mark for dark backgrounds | [logo-mark.svg](../docs/assets/learning-hub/logo-mark.svg) | [logo-mark.png](../docs/assets/learning-hub/logo-mark.png) | 512 × 512 |
+| Horizontal logo | [logo.svg](../docs/assets/learning-hub/logo.svg) | [logo.png](../docs/assets/learning-hub/logo.png) | 1000 × 300 |
+| Social preview | [repository-preview.svg](../docs/assets/learning-hub/repository-preview.svg) | [repository-preview.png](../docs/assets/learning-hub/repository-preview.png) | 1280 × 640 |
+| Study Guide card | [study-guide-card.svg](../docs/assets/learning-hub/study-guide-card.svg) | [study-guide-card.png](../docs/assets/learning-hub/study-guide-card.png) | 640 × 400 |
+
 ## Available assets
 
 | File | Purpose | Recommended use |

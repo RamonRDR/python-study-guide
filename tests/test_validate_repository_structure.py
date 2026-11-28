@@ -37,6 +37,14 @@ class VisualAssetValidationTests(unittest.TestCase):
         write_png(root / "assets/repository-preview.png", 1280, 640)
         write_svg(root / "assets/banner.svg", 1200, 400, "data:image/png;base64,AAAA")
         write_svg(root / "assets/repository-preview.svg", 1280, 640, "logo-mark.png")
+        for svg, png in validate_repository_structure.PRESENTATION_SVG_PNG_PAIRS:
+            width, height = validate_repository_structure.PNG_ASSET_DIMENSIONS[png]
+            write_png(root / png, width, height)
+            path = root / svg
+            path.write_text(
+                f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc"><title id="title">Title</title><desc id="desc">Description</desc><path d="M0 0 L1 1" fill="#000"/></svg>',
+                encoding="utf-8",
+            )
 
     def validate(self, root: Path) -> list[str]:
         with patch.object(validate_repository_structure, "REPOSITORY_ROOT", root):
@@ -67,6 +75,25 @@ class VisualAssetValidationTests(unittest.TestCase):
             self.create_valid_assets(root)
             write_png(root / "assets/banner.png", 1280, 400)
             self.assertTrue(any("Unexpected PNG dimensions for assets/banner.png" in error for error in self.validate(root)))
+
+    def test_presentation_vector_rejects_raster_and_active_content(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            self.create_valid_assets(root)
+            path = root / "docs/assets/learning-hub/logo-mark.svg"
+            original = path.read_text(encoding="utf-8")
+            for payload in ('<image href="data:image/png;base64,AAAA"/>', '<script/>', '<path d="M0 0" onload="x()"/>', '<path d="M0 0" fill="url(https://example.invalid/a)"/>'):
+                with self.subTest(payload=payload):
+                    path.write_text(original.replace("</svg>", payload + "</svg>"), encoding="utf-8")
+                    self.assertTrue(any("forbidden presentation SVG" in error for error in self.validate(root)))
+
+    def test_presentation_vector_rejects_dimension_mismatch(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            self.create_valid_assets(root)
+            path = root / "docs/assets/learning-hub/logo-mark.svg"
+            path.write_text(path.read_text(encoding="utf-8").replace('width="512"', 'width="511"'), encoding="utf-8")
+            self.assertTrue(any("SVG canvas mismatch" in error for error in self.validate(root)))
 
     def test_svg_canvas_must_match_rendered_png(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:

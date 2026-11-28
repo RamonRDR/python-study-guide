@@ -6,6 +6,19 @@ Este directorio conserva los seis recursos canónicos originales referenciados p
 
 ![Banner Python Study Guide](../docs/assets/learning-hub/banner.png)
 
+## Exportaciones de presentación aprobadas del Learning Hub
+
+Los archivos V1 aprobados se conservan separados del currículo inmutable. El banner rasterizado de los README sigue siendo el arte original aprobado; el banner vectorial es una adaptación simplificada, no su fuente exacta. Los SVG utilizan formas autónomas, sin imágenes rasterizadas incorporadas ni recursos externos. Utilice el símbolo claro u oscuro según el fondo previsto. La tarjeta se destina al catálogo del Learning Hub; la vista previa social está lista para cargar en la configuración del repositorio, pero añadir el archivo aquí no cambia esa configuración. Todos los archivos siguen la licencia MIT del repositorio.
+
+| Recurso | Fuente SVG | Exportación PNG | Dimensión |
+| --- | --- | --- | --- |
+| Adaptación vectorial del banner | [banner-vector.svg](../docs/assets/learning-hub/banner-vector.svg) | [banner-vector-preview.png](../docs/assets/learning-hub/banner-vector-preview.png) | 1280 × 400 |
+| Símbolo para fondos claros | [logo-mark-light.svg](../docs/assets/learning-hub/logo-mark-light.svg) | [logo-mark-light.png](../docs/assets/learning-hub/logo-mark-light.png) | 512 × 512 |
+| Símbolo para fondos oscuros | [logo-mark.svg](../docs/assets/learning-hub/logo-mark.svg) | [logo-mark.png](../docs/assets/learning-hub/logo-mark.png) | 512 × 512 |
+| Logotipo horizontal | [logo.svg](../docs/assets/learning-hub/logo.svg) | [logo.png](../docs/assets/learning-hub/logo.png) | 1000 × 300 |
+| Vista previa social | [repository-preview.svg](../docs/assets/learning-hub/repository-preview.svg) | [repository-preview.png](../docs/assets/learning-hub/repository-preview.png) | 1280 × 640 |
+| Tarjeta del Study Guide | [study-guide-card.svg](../docs/assets/learning-hub/study-guide-card.svg) | [study-guide-card.png](../docs/assets/learning-hub/study-guide-card.png) | 640 × 400 |
+
 ## Recursos disponibles
 
 | Archivo | Propósito | Uso recomendado |
